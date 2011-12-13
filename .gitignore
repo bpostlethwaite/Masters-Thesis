@@ -2,6 +2,9 @@
 ####################
 Data/*
 
+# Matlab Backups
+###################
+*~
 
 # Compiled source #
 ###################
@@ -25,7 +28,7 @@ Data/*
 *.tar
 *.zip
 
-# Logs and databases #
+# Logs, databases    #
 ######################
 *.log
 *.sql
