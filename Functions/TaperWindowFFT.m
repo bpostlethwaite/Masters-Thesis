@@ -12,7 +12,7 @@ function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper,viewwindo
 % VIEWWINDOW is the boolean value which switches on/off windowed trace
 
 a = adj;
-pad = 0.25;    % make taper x% wider so we don't cut out source function signal
+pad = 0.1;    % make taper x% wider so we don't cut out source function signal
 for ii = 1:length(ptrace)
     
     dt = header{ii,1}.DELTA;
@@ -47,18 +47,11 @@ for ii = 1:length(ptrace)
     
     N = 2^14;
     % Only use 1st half of fft for deconvolution in future
-    %wft(ii,:) = fft((ptrace{ii}(1,:).*WIN),N);
-    w = fft((ptrace{ii}(1,:).*WIN),N);
-    wft(ii,:) = w(1:2^13 + 1);
-    %vft(ii,:) = fft(strace{ii}(1,:),N);
-    v = fft(strace{ii}(1,:),N);
-    vft(ii,:) = v(1:2^13 + 1);
-    
-    if viewwindow > 0
-        figure(256)
-        plot(ptrace{ii}.*WIN)
-        pause(1)
-    end
-   
+    wft(ii,:) = fft((ptrace{ii}(1,:).*WIN),N);
+    %w = fft((ptrace{ii}(1,:).*WIN),N);
+    %wft(ii,:) = w(1:2^13 + 1);
+    vft(ii,:) = fft(strace{ii}(1,:),N);
+    %v = fft(ptrace{ii}(1,:),N);
+    %vft(ii,:) = v(1:2^13 + 1);
     
 end

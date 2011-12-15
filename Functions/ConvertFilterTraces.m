@@ -1,4 +1,4 @@
-function [ptrace,strace,header,pslows,tps] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
+function [ptrace,strace,header,pslows] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -44,7 +44,6 @@ for ii = 1:length(Dlist)
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
         ptrace{ind1} = [p;rtime'];
         strace{ind1} = [s;ztime'];
-        tps(ind1)    = S1.T3 - S1.T1;
         ind1 = ind1 + 1;
     end
     
@@ -55,7 +54,6 @@ end
 header = header(I);
 ptrace = ptrace(I);
 strace = strace(I);
-tps    = tps(I);
 
 if saveflag > 0
     save([datadir,'/',station,'.mat'],'ptrace','strace','header','pslows','poorpicks')

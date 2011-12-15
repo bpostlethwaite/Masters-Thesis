@@ -32,6 +32,16 @@ ysplicenew = real(ifft(Yjoin));
 X = 1:length(ynew);
 figure(80)
 %plot(f,abs(Y),f,abs(Yjoin))
-plot(X,ynew,X,ysplicenew)
+%plot(X,ynew,X,ysplicenew)
 
 
+
+time = t;
+% Data vector
+x = cos(2*pi*60*time)+sin(2*pi*120*time)+randn(size(time));
+d=fdesign.lowpass('N,F3dB',5,20,Fs); %lowpass filter specification object
+% Invoke Butterworth design method
+Hd=design(d,'butter');
+y=filter(Hd,x);
+
+plot(t,x,t,y)

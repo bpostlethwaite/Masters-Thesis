@@ -3,6 +3,10 @@ close all
 
 iflag=0;
 
+addpath('../sac')
+addpath('../Data')
+addpath('../Functions')
+
 if iflag == 0
   load HYBrx.mat
   i1=[3:6,9:11,13:89];
@@ -37,6 +41,8 @@ else
   dt=0.05;
 end
 
+
+
 % Filter NB - I PRODUCED THE TIMING ESTIMATES 
 % FROM DATA FILTERED AS BELOW
 brv=fbpfilt(rv,dt,0.03,3.0,2,0);
@@ -45,6 +51,10 @@ for iv=1:size(brv,1);
    brv(iv,:)=brv(iv,:)/pslow(iv)^.2;
 end
 
+for ii = 1:size(brv,1)
+    plot(brv(ii,:))
+    pause(1)
+end
 
 % Grid search. 
 [vbest,rbest,hbest]=crust(brv,dt,pslow,3.7,4.2);

@@ -32,16 +32,22 @@ Processing Chain
     the fft algorithm into 'wft' with fft'd s trace vectors 
     going into 'vft'.
 
-
-6.  Stack and Deconvolve
+6.  Impulse Response: Stack and Deconvolve
 
     The sorted fourier transformed signals are sent into simdecf.m
     to be deconvolved into what should be something like a greens
     function. These are saved in 'rft' which is passed through the
     inverse fourier transform to recover 'Rtrace'.
 
-7.  Newtons Method to find prelim alpha, beta and H
+7.  Filter Impulse Response, aquire tps
 
+    Filter with lowpass filter and use filtered response to select tps as
+    max values within a certain range (here from 3ish to 5ish seconds).
+
+8.  Newtons Method to find prelim alpha, beta and H
+
+    Need to implement an L1 solver for the linear equation step. Right now
+    it is biased to extreme values and coming out with complex numbers.
 
 ### Tuning and Testing
 *   Run testing on pbin logical index array [COMPLETE].
@@ -54,3 +60,5 @@ Processing Chain
 *   Changed function names
 *   Working on Newton solver.
 *   Added function pbinIndexer and tested it on known data
+*   Tried a few filters
+*   Began implementing newtons method.

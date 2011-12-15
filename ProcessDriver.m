@@ -38,81 +38,120 @@ workingdir = fullfile(['/home/',user,'/Dropbox/School/'],station);
 %    
     picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
     saveflag = 0;
-    [ptrace,strace,header,pslows,tps] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
+    [ptrace,strace,header,pslows] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
 %}
 
 %% 4) Bin by p value (build pIndex)
 %    
-    pbinLimits = linspace(.035,.08,100);
+    pbinLimits = linspace(.035,.08,60);
     [pIndex,pbin] = pbinIndexer(pbinLimits,pslows,1);
 %}
 
 %% 5)  Window with Taper and fourier transform signal.
 %
-    viewtaper  = 1;
+    viewtaper  = 0;
     viewwindow = 0;
-    [wft,vft] = TaperWindowFFT(ptrace,strace,header,0.5,viewtaper,viewwindow);
+    adj = 0.2;
+    [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper,viewwindow);
 %}
-%% 6) Stack and Deconvolve
+%% 6) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 
-%{
+%
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 ind = 1;
-for ii = 1:length(pbin)
+h = waitbar(0,'Deconvolving...');
+steps = length(pbin);
+for ii = 1:steps
     if any(pIndex(:,ii))
-        [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,-1);
+        [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,0);
         
         % Take complex conjugate and reverse 1st half to recomplete fft
-        Rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
+        %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
+        rtrace(ind,:) = real(ifft(r));
         pslow(ind) = pbin(ii);
         ind = ind + 1;
     end
+    waitbar(ii/steps,h)
 end
+close(h)
 %}
 
-figure(243)
-plot(pslows,tps)
 
+%% 7) Filter Impulse Response
+%
+t1 = 3.8;
+t2 = 5;
+dt = header{1}.DELTA;
+d=fdesign.lowpass('N,F3dB',3,1,1/dt); %lowpass filter specification object
+% Invoke Butterworth design method
+Hd=design(d,'butter');
+brtrace = fbpfilt(rtrace,dt,0.01,1,3,0);
+
+for ii=1:size(rtrace,1);
+   %brtrace(ii,:)=filter(h2,rtrace(ii,:));
+   brtrace(ii,:)=brtrace(ii,:)/max(abs(brtrace(ii,1:800)));
+   %brtrace(ii,:)=brtrace(ii,:)/pslow(ii)^.2;
+end
+
+%[~,it] = max(rtrace(:,round(t1/dt)+1 : round(t2/dt)+1)');
+%tps = (it + round(t1/dt)-1)*dt;
+
+[~,it] = max(brtrace(:,round(t1/dt)+1 : round(t2/dt)+1),[],2);
+tps = (it + round(t1/dt)-1)*dt;
+
+figure(63)
+imagesc(pslow,[1:800]*dt,brtrace(:,1:800)')
+colorbar
+%}
 %% Newtons Method to find tps
-%{
-H = 35;
-alpha = 6;
-beta = 3.5;
+%
+H = 43;
+alpha = 3;
+beta = 5;
 iter = 0;
-while iter < 8
-    %f = H*sqrt(1/beta^2 - pslows.^2) - sqrt(1/alpha^2 - pslows.^2);
-    r = tps - f;
-    dfdH = f/H;
-    dfda = H/alpha^3 * sqrt(1/alpha^2 - pslows.^2);
-    dfdb = -H/beta^3 * sqrt(1/beta^2 - pslows.^2);
-    J = [dfdH(:),dfda(:),dfdb(:)];
-    
+
+while iter < 10
+    f = H*(sqrt(1/beta^2 - pslow.^2) - sqrt(1/alpha^2 - pslow.^2));
+    r = (f - tps');
+    drdH = f/H;
+    drda = (H/alpha^3) ./ (sqrt(1/alpha^2 - pslow.^2));
+    drdb = (-H/beta^3) ./ (sqrt(1/beta^2 - pslow.^2));
+    J = [drdH(:),drda(:),drdb(:)];
+    norm(r)
     delm = -J\r(:);
-    H = H + delm(1); beta = beta + delm(2); alpha = alpha + delm(3);
+    H = (H + delm(1)); alpha = (alpha + delm(2)); beta = (beta + delm(3));
     iter = iter + 1
 end
 
-Tps = H*sqrt(1/beta^2 - pslows.^2) - sqrt(1/alpha^2 - pslows.^2);
+Tps = H*(sqrt(1/beta^2 - pslow.^2) - sqrt(1/alpha^2 - pslow.^2));
 
-plot(pslows,Tps)
+
+figure(547)
+plot(pslow,tps,'*',pslow,Tps)
+
+%}
 
 %% Viewers
-%
+%{
     
     figure(567)
     hist(pslow(:))
     title(sprintf('pvalue histogram from station %s',station))
 %}
-
+%%
 % View Earth Response
 %{
-    for ii = 1:length(Rtrace)
-        plot(Rtrace(ii,:))        
-        pause(4)
+t = [1:size(brtrace,2)] * dt;
+    for ii = 1:size(brtrace,1)
+        figure(5)
+        plot(t,brtrace(ii,:))
+        %hold on
+        %plot(brtrace(ii,:))
+        pause(1)
     end
 %}
 

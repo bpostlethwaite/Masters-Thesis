@@ -1,4 +1,4 @@
-function [y]=fbpfilt_vec(x,dt,lf,hf,n,type);
+function [y]=fbpfilt(x,dt,lf,hf,n,type)
 % FUNCTION [Y]=FBPFILT(X,DT,LF,HF,N,TYPE);
 %  FBPFILT Bandpass Butterworth filter.
 %         FBPFILT(X,DT,FC,N,TYPE) takes a time series sampled at DT
