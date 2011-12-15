@@ -9,99 +9,111 @@ addpath sac
 addpath Data
 addpath Functions
 
-
 viewtraces = false;
-viewtaper = true;
-viewwindow = false;
 %% Variables
 
 sacfolder = '/media/TerraS/CNSN';
-%sacfolder = '/home/ben/Dropbox/School';
-datadir = '/home/bpostlet/Dropbox/ComLinks/programming/matlab/thesis/Data';
+
+user = getenv('USER');
+datadir = ['/home/',user,'/Dropbox/ComLinks/programming/matlab/thesis/Data'];
 
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 
 % Set Station to process
 station = 'ULM';
-workingdir = fullfile(sacfolder,station);
+%workingdir = fullfile(sacfolder,station);
+workingdir = fullfile(['/home/',user,'/Dropbox/School/'],station);
 
-%% SortEventDirs
-%{
-    SortEventDirs(workingdir,'Dlist',1)
+%load(sprintf('%s/%s.mat',datadir,station))
+
+%% FilterEventDirs
+%   
+    printinfo = 1; % On and off flag to print out processing results
+    savelist  = 0;
+    listname  = [station,'_Dlist'];
+    Dlist = filterEventDirs(workingdir,printinfo,savelist,listname);
+%}
 %% rotate coordinates of traces, and collect header info in all station events
-    
-    load Dlist
-    ConvertTraces(Dlist,station,rfile,zfile,datadir)
-%% bin by p value
-    load(sprintf('%s/%s.mat',datadir,station))
+%    
+    picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
+    saveflag = 0;
+    [ptrace,strace,header,pslows,tps] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
+%}
+
+%% bin by p value (build pIndex)
+%    
+    pbinLimits = linspace(.035,.08,100);
+    [pIndex,pbin] = pbinIndexer(pbinLimits,pslows,1);
 %}
 
 %% Taper Window and FFT
-
-load(sprintf('%s/%s.mat',datadir,station))
-[wft,vft] = TaperWindowFFT(ptrace,strace,header,0.5,viewtaper,viewwindow);
-
-%% pbins
-pbins = linspace(0.035,0.08,40);
-pbinshift = pbins(2:end); pbinshift(end+1) = 1;
-for ii = 1:length(pslows)
-    binarray(ii,:) =  (pbinshift >= pslows(ii)) == (pbins <= pslows(ii)) ;
-end
-
+%
+    viewtaper  = 1;
+    viewwindow = 0;
+    [wft,vft] = TaperWindowFFT(ptrace,strace,header,0.5,viewtaper,viewwindow);
+%}
 %% STACK
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 
-
+%{
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
-
-for ii = 1:length(pbins)
-    if any(binarray(:,ii))
-        figure(13)
-        %fprintf('pbin %f has p values\n',pbins(ii))
-        %[rft(ii,:),xft(ii,:),betax(ii)] = simdecf(wft(binarray(:,ii),1:(2^13)+1),vft(binarray(:,ii),1:(2^13)+1),-1,1);
-        [rft(ii,:),xft(ii,:),betax(ii)] = simdecf(wft(binarray(:,ii),:),vft(binarray(:,ii),:),-1,-1);
-        Rtrace(ii,:) = real(ifft(rft(ii,:)));
-        pslow = pbins(ii);
-        %plot(Rtrace(ii,:))
-        %pause(3)
+ind = 1;
+for ii = 1:length(pbin)
+    if any(pIndex(:,ii))
+        [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,-1);
+        
+        % Take complex conjugate and reverse 1st half to recomplete fft
+        Rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
+        pslow(ind) = pbin(ii);
+        ind = ind + 1;
     end
 end
-%plot(f,real((rft)))
+%}
 
+figure(243)
+plot(pslows,tps)
 
+%% Newtons Method to find tps
+%{
+H = 35;
+alpha = 6;
+beta = 3.5;
+iter = 0;
+while iter < 8
+    %f = H*sqrt(1/beta^2 - pslows.^2) - sqrt(1/alpha^2 - pslows.^2);
+    r = tps - f;
+    dfdH = f/H;
+    dfda = H/alpha^3 * sqrt(1/alpha^2 - pslows.^2);
+    dfdb = -H/beta^3 * sqrt(1/beta^2 - pslows.^2);
+    J = [dfdH(:),dfda(:),dfdb(:)];
+    
+    delm = -J\r(:);
+    H = H + delm(1); beta = beta + delm(2); alpha = alpha + delm(3);
+    iter = iter + 1
+end
+
+Tps = H*sqrt(1/beta^2 - pslows.^2) - sqrt(1/alpha^2 - pslows.^2);
+
+plot(pslows,Tps)
 
 %% Viewers
 %
-    load(sprintf('%s/%s.mat',datadir,station))
+    
     figure(567)
-    hist(pslows(:))
+    hist(pslow(:))
     title(sprintf('pvalue histogram from station %s',station))
 %}
 
-% View traces in a slideshow, lines added where windows have been defined
-if viewtraces == true
-    figure(23)
-    load([station,'.mat']);
-    for ii = 1:length(ptrace)
-        
-        plot(ptrace{ii}(:,1),ptrace{ii}(:,2),'b--',strace{ii}(:,1),strace{ii}(:,2),'r--')
-        h1 = line([header{ii,1}.T1; header{ii,1}.T1],[min(ptrace{ii}(:,2)); max(ptrace{ii}(:,2))],...
-            'LineWidth',4,'Color',[.4 .9 .8]);
-        
-        h2 = line([header{ii,1}.T3;header{ii,1}.T3],[min(ptrace{ii}(:,2)),max(ptrace{ii}(:,2))],...
-            'LineWidth',4,'Color',[.4 .9 .8]);
-        
+% View Earth Response
+%{
+    for ii = 1:length(Rtrace)
+        plot(Rtrace(ii,:))        
         pause(4)
     end
-end
-
-
-
-
 %}
 
 

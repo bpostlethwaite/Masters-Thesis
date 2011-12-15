@@ -31,11 +31,12 @@ for ii = 1:length(ptrace)
     rtaper = 0.5 * (1 + cos(pi * (2*n(n >= (N-1)*(1-a/2) & n <= (N-1)) / (a*(N-1)) - 2/a + 1 ))); % Tukey Rside
     taper = [ltaper,ctaper,rtaper]; % FUll taper
     
-    WIN = zeros(1,length(ptrace{ii}(:,2)));  % splice taper into a window of zeros to multiply with trace
+    WIN = zeros(1,length(ptrace{ii}));  % splice taper into a window of zeros to multiply with trace
     WIN( nbegintaper : nbegintaper + length(taper) - 1) = taper;
     
-    if viewtaper == true
-        plot(ptrace{ii}(:,1),WIN,ptrace{ii}(:,1),ptrace{ii}(:,2)./max(ptrace{ii}(:,2)))
+    if viewtaper > 0
+        figure(34)
+        plot(ptrace{ii}(2,:),WIN,ptrace{ii}(2,:),ptrace{ii}(1,:)./max(ptrace{ii}(1,:)))
         h1 = line([header{ii,1}.T1; header{ii,1}.T1],[-1; 1],...
             'LineWidth',2,'Color',[.8 .8 .2]);
         h2 = line([header{ii,1}.T3;header{ii,1}.T3],[-1,1],...
@@ -45,11 +46,17 @@ for ii = 1:length(ptrace)
     end
     
     N = 2^14;
-    wft(ii,:) = fft((ptrace{ii}(:,2)'.*WIN),N);
-    vft(ii,:) = fft(strace{ii}(:,2),N);
+    % Only use 1st half of fft for deconvolution in future
+    %wft(ii,:) = fft((ptrace{ii}(1,:).*WIN),N);
+    w = fft((ptrace{ii}(1,:).*WIN),N);
+    wft(ii,:) = w(1:2^13 + 1);
+    %vft(ii,:) = fft(strace{ii}(1,:),N);
+    v = fft(strace{ii}(1,:),N);
+    vft(ii,:) = v(1:2^13 + 1);
     
-    if viewwindow == true
-        plot(ptrace{ii}(:,2)'.*WIN)
+    if viewwindow > 0
+        figure(256)
+        plot(ptrace{ii}.*WIN)
         pause(1)
     end
    

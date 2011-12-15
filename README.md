@@ -40,8 +40,13 @@ Processing Chain
     inverse fourier transform to recover 'Rtrace'.
 
 ### Tuning and Testing
-*   Run testing on pbin logical index array.
-*   Filter out and flag poorly picked traces.
+*   Run testing on pbin logical index array [COMPLETE].
+*   Filter out and flag poorly picked traces [COMPLETE].
 *   Streamline workflow.
+*   Build Newton solver, figure out where tps is.
 *   Move on to next stage in project.
     
+### Change Log
+*   Changed function names
+*   Working on Newton solver.
+*   Added function pbinIndexer and tested it on known data
