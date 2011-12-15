@@ -20,40 +20,40 @@ datadir = ['/home/',user,'/Dropbox/ComLinks/programming/matlab/thesis/Data'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 
-% Set Station to process
+%% 1) Select Station folder to process
 station = 'ULM';
 %workingdir = fullfile(sacfolder,station);
 workingdir = fullfile(['/home/',user,'/Dropbox/School/'],station);
 
 %load(sprintf('%s/%s.mat',datadir,station))
 
-%% FilterEventDirs
+%% 2) Filter Event Diretories
 %   
     printinfo = 1; % On and off flag to print out processing results
     savelist  = 0;
     listname  = [station,'_Dlist'];
     Dlist = filterEventDirs(workingdir,printinfo,savelist,listname);
 %}
-%% rotate coordinates of traces, and collect header info in all station events
+%% 3)  Convert sac file format, filter bad picks
 %    
     picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
     saveflag = 0;
     [ptrace,strace,header,pslows,tps] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
 %}
 
-%% bin by p value (build pIndex)
+%% 4) Bin by p value (build pIndex)
 %    
     pbinLimits = linspace(.035,.08,100);
     [pIndex,pbin] = pbinIndexer(pbinLimits,pslows,1);
 %}
 
-%% Taper Window and FFT
+%% 5)  Window with Taper and fourier transform signal.
 %
     viewtaper  = 1;
     viewwindow = 0;
     [wft,vft] = TaperWindowFFT(ptrace,strace,header,0.5,viewtaper,viewwindow);
 %}
-%% STACK
+%% 6) Stack and Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 
