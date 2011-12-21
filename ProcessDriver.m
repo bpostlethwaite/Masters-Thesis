@@ -12,9 +12,10 @@ addpath Functions
 viewtraces = false;
 %% Variables
 
+user = getenv('USER');
+
 sacfolder = '/media/TerraS/CNSN';
 
-user = getenv('USER');
 datadir = ['/home/',user,'/Dropbox/ComLinks/programming/matlab/thesis/Data'];
 
 rfile = 'STACK_R.sac';
@@ -23,7 +24,7 @@ zfile = 'STACK_Z.sac';
 %% 1) Select Station folder to process
 station = 'ULM';
 %workingdir = fullfile(sacfolder,station);
-workingdir = fullfile(['/home/',user,'/Dropbox/School/'],station);
+workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 
 %load(sprintf('%s/%s.mat',datadir,station))
 
@@ -43,7 +44,7 @@ workingdir = fullfile(['/home/',user,'/Dropbox/School/'],station);
 
 %% 4) Bin by p value (build pIndex)
 %    
-    pbinLimits = linspace(.035,.08,60);
+    pbinLimits = linspace(.035,.08,100);
     [pIndex,pbin] = pbinIndexer(pbinLimits,pslows,1);
 %}
 
@@ -71,7 +72,7 @@ for ii = 1:steps
         
         % Take complex conjugate and reverse 1st half to recomplete fft
         %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
-        rtrace(ind,:) = real(ifft(r));
+        rec(ind,:) = real(ifft(r));
         pslow(ind) = pbin(ii);
         ind = ind + 1;
     end
@@ -83,57 +84,59 @@ close(h)
 
 %% 7) Filter Impulse Response
 %
-t1 = 3.8;
+t1 = 3.5; % Search max between these two windows (in secs after p arrival)
 t2 = 5;
 dt = header{1}.DELTA;
-d=fdesign.lowpass('N,F3dB',3,1,1/dt); %lowpass filter specification object
-% Invoke Butterworth design method
-Hd=design(d,'butter');
-brtrace = fbpfilt(rtrace,dt,0.01,1,3,0);
+brec = fbpfilt(rec,dt,0.01,1,3,0);
 
-for ii=1:size(rtrace,1);
+for ii=1:size(rec,1);
    %brtrace(ii,:)=filter(h2,rtrace(ii,:));
-   brtrace(ii,:)=brtrace(ii,:)/max(abs(brtrace(ii,1:800)));
-   %brtrace(ii,:)=brtrace(ii,:)/pslow(ii)^.2;
+   brec(ii,:)=brec(ii,:)/max(abs(brec(ii,1:800)));
+   brec(ii,:)=brec(ii,:)/pslow(ii)^.2;
 end
 
-%[~,it] = max(rtrace(:,round(t1/dt)+1 : round(t2/dt)+1)');
-%tps = (it + round(t1/dt)-1)*dt;
-
-[~,it] = max(brtrace(:,round(t1/dt)+1 : round(t2/dt)+1),[],2);
+[~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 
-figure(63)
-imagesc(pslow,[1:800]*dt,brtrace(:,1:800)')
-colorbar
 %}
-%% Newtons Method to find tps
+%% 8) IRLS Newtons Method to find regression Tps
 %
-H = 43;
-alpha = 3;
-beta = 5;
-iter = 0;
 
-while iter < 10
-    f = H*(sqrt(1/beta^2 - pslow.^2) - sqrt(1/alpha^2 - pslow.^2));
-    r = (f - tps');
-    drdH = f/H;
-    drda = (H/alpha^3) ./ (sqrt(1/alpha^2 - pslow.^2));
-    drdb = (-H/beta^3) ./ (sqrt(1/beta^2 - pslow.^2));
-    J = [drdH(:),drda(:),drdb(:)];
-    norm(r)
-    delm = -J\r(:);
-    H = (H + delm(1)); alpha = (alpha + delm(2)); beta = (beta + delm(3));
-    iter = iter + 1
-end
+thickness = 35; % Starting guesses for physical paramaters  
+alpha = 6;
+beta = 3.5;
+tol = 0.001;  % Tolerance on interior linear solve is 10x of Newton solution
+itermax = 60; % Stop if we go beyond this iteration number
 
-Tps = H*(sqrt(1/beta^2 - pslow.^2) - sqrt(1/alpha^2 - pslow.^2));
+[ Tps,thickness,alpha,beta ] = newtonFit(thickness,alpha,beta,pslow,tps,itermax,tol);
+
+
+
+
+%% 9) Grid and Line Search
+[ vbest,rbest,hbest ] = GridSearch(brec,Tps,dt,pslow);
+
+%% Plots
 
 
 figure(547)
-plot(pslow,tps,'*',pslow,Tps)
+    plot(pslow,tps,'*',pslow,Tps)
+    title('residual vector and Minimum norm solution')
+    xlabel('pslow')
+    ylabel('tps residual')
 
+t1 = 0;
+t2 = 20;
+figure(63)
+%imagesc(pslow,[1:800]*dt,brtrace(:,1:800)')
+    csection(brec(:,round(t1/dt)+1 : round(t2/dt)+1),dt*(round(t1/dt)),dt)
+    %xlabel('pslow')
+    %ylabel('time (s)')
+    hold on
+    plot(Tps,'k+')
+    
 %}
+
 
 %% Viewers
 %{

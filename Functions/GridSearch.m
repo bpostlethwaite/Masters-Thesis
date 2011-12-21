@@ -1,9 +1,10 @@
-function [vbest,rbest,hbest] = crust(gv,dt,pslow,t1,t2);
-
-% FUNCTION [vbest,rbest,hbest] = CRUST(GV,DT,PSLOW,T1,T2);
+function [ vbest,rbest,hbest ] = GridSearch(rec,tps,dt,pslow)
+%GRIDSEARCH Summary of this function goes here
+%   
+% FUNCTION [vbest,rbest,hbest] = GRIDSEARCH(REC,DT,PSLOW,T1,T2);
 %
 % Function computes best homogeneous crustal model for 
-% a suite of receiver functions GV of dimensions NTRACE
+% a suite of receiver functions REC of dimensions NTRACE
 % by NTIMES, given the sample interval DT, the corresponding
 % slownesses PSLOW (of dimension NTRACE) and a window 
 % defined by T1 and T2. This window is specified by user
@@ -16,15 +17,7 @@ function [vbest,rbest,hbest] = crust(gv,dt,pslow,t1,t2);
 
 % First find arrival of direct conversions.
 % Find timing of direct conversion.
-[dum,it]=max(gv(:,round(t1/dt)+1:round(t2/dt)+1)');
-tps=(it+round(t1/dt)-1)*dt;
-tps0=tps;
 
-figure(1)
-csection(gv(:,round(t1/dt)+1:round(t2/dt)+1),dt*round(t1/dt),dt);
-hold on
-plot(tps,'k+')
-hold off
 
 % Grid parameters.
 % P-velocity
@@ -32,22 +25,22 @@ nv=200;
 v1=5;
 v2=8;
 dv=(v2-v1)/(nv-1);
-v=[v1:dv:v2];
+v=v1:dv:v2;
 
 % Vp/Vs Ratio.
 nr=200;
 r1=1.6;
 r2=1.9;
 dr=(r2-r1)/(nr-1);
-r=[r1:dr:r2];
+r=r1:dr:r2;
 
 % Miscellaneous.
 p2=pslow.^2;
 np=length(pslow);
-nt=length(gv);
+nt=length(rec);
 
 % Reshape for fast element removal.
-gvr=reshape(gv',1,numel(gv));
+gvr=reshape(rec',1,numel(rec));
 %gvr = gv(:)';
 
 % Grid search for Vp,R.
@@ -64,15 +57,17 @@ end
 stackvr=(stpps+stpss)/2;
 
 % Gauge errors and plot results.
+figure(23)
 subplot(2,1,1)
 set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
 imagesc(r,v,stackvr);
 axis xy
+axis square
 colorbar
 hold on
 smax=max(max(stackvr));
 disp('best points')
-[iv,ir]=find(stackvr == smax)
+[iv,ir]=find(stackvr == smax);
 
 iv1=iv(1);
 ir1=ir(1);
@@ -103,7 +98,7 @@ set(xlab,'FontName','Helvetica','FontSize',16);
 set(ylab,'FontName','Helvetica','FontSize',16);
 title(['R = ',num2str(rbest),'  Vp = ',num2str(vbest),' km/s']);
 
-% Grid search for H.
+% Line search for H.
 nh=200;
 h1=25;
 h2=50;
@@ -148,14 +143,14 @@ set(ylab,'FontName','Helvetica','FontSize',16);
 tlab=text(35,0.6,['H = ',num2str(hbest),' km']);
 set(tlab,'FontName','Helvetica','FontSize',16);
 
-figure(2)
+figure(29)
 f1=hbest*sqrt((rbest/vbest)^2-p2);
 f2=hbest*sqrt((1/vbest)^2-p2);
 f3=hbest*sqrt((1/vbest)^2-p2);
 tps=f1-f2;
 tpps=f1+f2;
 tpss=2*f1;
-csection(gv(:,1:round(22/dt)),0,dt);
+csection(rec(:,1:round(22/dt)),0,dt);
 hold on
 plot(tps,'k+')
 plot(tpps,'k+')
@@ -164,4 +159,5 @@ hold off
 
 
 
-return
+end
+

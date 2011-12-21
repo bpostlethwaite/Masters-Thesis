@@ -39,26 +39,41 @@ Processing Chain
     function. These are saved in 'rft' which is passed through the
     inverse fourier transform to recover 'Rtrace'.
 
-7.  Filter Impulse Response, aquire tps
+7.  Filter Impulse Response, aquire data tps
 
-    Filter with lowpass filter and use filtered response to select tps as
+    Filter with bandpass filter [0.01 1]hz and use filtered response to select tps as
     max values within a certain range (here from 3ish to 5ish seconds).
 
-8.  Newtons Method to find prelim alpha, beta and H
+8.  IRLS Newtons Method to find regression Tps
 
-    Need to implement an L1 solver for the linear equation step. Right now
-    it is biased to extreme values and coming out with complex numbers.
+    Newtons method for non-linear regression with three variables.
+    Linear solution solving with IRLS solver (homemade but tested and working).
+    IRLS solver to downweight high residuals, to get a pseudo L1 solution.
+    Solution is an L1-like non-linear regression fit for the tps data.
+
+9.  Grid and Line Search
+
+    With the Tps found above, solve the tpps and tpss ratios for each
+    Vp and R in a range of choices. Use the tpps and tpss times to index
+    into receiver functions, and sum and average all the values in the range
+    of reciever functions for this Vp and R. This is Gridded out and the
+    maximum is selected. The best Vp and R are then used to find H in a 
+    line search. These are plotted over the reviever functions.
 
 ### Tuning and Testing
 *   Run testing on pbin logical index array [COMPLETE].
 *   Filter out and flag poorly picked traces [COMPLETE].
 *   Streamline workflow.
-*   Build Newton solver, figure out where tps is.
-*   Move on to next stage in project.
+*   Add L1 linear solve into Newton solver, figure out where tps is. [COMPLETE]
+*   Test different filters, compare outcome.
+*   Reproduce results using cross-validation, and similar azimuth station data.
     
 ### Change Log
-*   Changed function names
-*   Working on Newton solver.
-*   Added function pbinIndexer and tested it on known data
-*   Tried a few filters
-*   Began implementing newtons method.
+#### December 20th 2011
+*   Finished IRLS Newton Solver
+*   Encapsulate Newton Solver in a Function.
+*   Tried a few filters, need to try more.
+*   Using similar plots to Paper. - compares well.
+*   Added step 9) Grid Search.
+
+
