@@ -58,15 +58,16 @@ stackvr=(stpps+stpss)/2;
 
 % Gauge errors and plot results.
 figure(23)
-subplot(2,1,1)
-set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
-imagesc(r,v,stackvr);
-axis xy
-axis square
-colorbar
-hold on
+    subplot(2,1,1)
+    set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
+    imagesc(r,v,stackvr);
+    axis xy
+    axis square
+    colorbar
+    hold on
+
 smax=max(max(stackvr));
-disp('best points')
+    disp('best points')
 [iv,ir]=find(stackvr == smax);
 
 iv1=iv(1);

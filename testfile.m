@@ -49,7 +49,7 @@ plot(t,x,t,y)
 %}
 
 %% L1 Solver Test
-%
+%{
 t = linspace(0,1,100)';
 x = [3,2,1.2]';
 e = ones(length(t),1);
@@ -78,3 +78,25 @@ plot(t,y,t,yn,'*',t,yL2,'r',t,yL1,'g')
 legend('actual curve','data','L2 solution','L1 solution')
 
 %}
+
+%% Math tests
+%{
+n = 10;
+t = 4 + randn(n,1);
+p = linspace(0.03,0.08,n)';
+h = 30;
+b = 3.5;
+a = 6;
+%}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

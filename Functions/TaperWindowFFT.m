@@ -13,7 +13,9 @@ function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper,viewwindo
 
 a = adj;
 pad = 0.1;    % make taper x% wider so we don't cut out source function signal
-for ii = 1:length(ptrace)
+h = waitbar(0,'Windowing Traces');
+steps = length(ptrace);
+for ii = 1:steps
     
     dt = header{ii,1}.DELTA;
     begintrace = header{ii,1}.B;
@@ -42,16 +44,22 @@ for ii = 1:length(ptrace)
         h2 = line([header{ii,1}.T3;header{ii,1}.T3],[-1,1],...
             'LineWidth',2,'Color',[.8 .2 .8]);
         legend('Window','normalized trace','T1','T3')
+        title(sprintf('Trace # %i',ii))
         pause(3)
     end
     
     N = 2^14;
     % Only use 1st half of fft for deconvolution in future
     wft(ii,:) = fft((ptrace{ii}(1,:).*WIN),N);
+    if (any(isnan(wft(ii,:))))
+        fprintf('NaN values in wft at index %i. You should remove\n',ii)
+    end
     %w = fft((ptrace{ii}(1,:).*WIN),N);
     %wft(ii,:) = w(1:2^13 + 1);
     vft(ii,:) = fft(strace{ii}(1,:),N);
     %v = fft(ptrace{ii}(1,:),N);
     %vft(ii,:) = v(1:2^13 + 1);
-    
+    waitbar(ii/steps,h)
 end
+
+close(h)

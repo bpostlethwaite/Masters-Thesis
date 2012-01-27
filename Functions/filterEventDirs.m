@@ -29,6 +29,8 @@ for ii = 1:length(DIRitems)
     end
 end
 
+assert(size(Dlist,1) > 1,'No Directories accumulated in Dlist!')
+
 if savelist > 0
     save(['Data/',listname],'Dlist')
 end

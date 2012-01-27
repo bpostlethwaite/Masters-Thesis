@@ -1,4 +1,4 @@
-function [ptrace,strace,header,pslows] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
+function [ptrace,strace,header,pslows,badpicks] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -18,25 +18,51 @@ function [ptrace,strace,header,pslows] = ConvertFilterTraces(Dlist,station,rfile
 
 ind1 = 1;
 ind2 = 1;
+bad = false;
 
 for ii = 1:length(Dlist)
     % Read info from sac files sacfiles
-    S1  = readsac(fullfile(Dlist(ii,:),rfile));
+    try
+        S1  = readsac(fullfile(Dlist(ii,:),rfile));
+    catch exception
+        fprintf('found error: %s\n',exception.identifier)
+        continue
+    end
     [rtime,rcomp] = readsac(fullfile(Dlist(ii,:),rfile));
     [ztime,zcomp] = readsac(fullfile(Dlist(ii,:),zfile));
     % Convert Each trace (rotate coordinates)
     [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
-    % Check to make sure picked time interval greater than picktol
+    % Check to make sure picked time interval greater than picktol and
+    % That the starting time in the record header matches the picks (make
+    % sure it makes sense (Both T1 and T3 must be greater that record
+    % beginning), and of course that T1 and T3 are numbers.
     gap = S1.T1 - S1.T3;
-    if gap > -picktol
-        if printinfo
-            fprintf('filtering out data as gap is %f\n',gap)
+    
+    if gap > -picktol 
+        bad = true;
+        if printinfo   % Print related message
+            fprintf('filtering out data as gap is %f\n',gap)   
         end
+        
+    elseif S1.T1 < S1.B || S1.T3 < S1.B
+        bad = true;
+        if printinfo   % Print related message      
+            fprintf(['Picked times T1=%s or T3=%s less than beginning of'...
+                'trace record %s. Filtering.\n'],S1,T1,S1.T3,S1.B)
+        end     
+    elseif isnan(S1.T1) || isnan(S1.T3)
+        bad = true;
+        if printinfo % print related message
+            fprintf('One or both of T1 and T3 is not numeric\n')
+        end
+    end
+    
+    if bad
         % Put all filtered info into super cell poorpicks
-        poorpicks{1,ind2} = S1;
-        poorpicks{2,ind2} = S1.USER0; %#ok<*AGROW>
-        poorpicks{3,ind2} = [p;rtime'];
-        poorpicks{4,ind2} = [s;ztime'];
+        badpicks{1,ind2} = S1;
+        badpicks{2,ind2} = S1.USER0; %#ok<*AGROW>
+        badpicks{3,ind2} = [p;rtime'];
+        badpicks{4,ind2} = [s;ztime'];
         ind2 = ind2 + 1;
     else
         % Good files go in the respective arrays and cells.
@@ -46,6 +72,7 @@ for ii = 1:length(Dlist)
         strace{ind1} = [s;ztime'];
         ind1 = ind1 + 1;
     end
+    bad = false;  % Reset our bad/good trace flag.
     
 end
 
@@ -56,7 +83,7 @@ ptrace = ptrace(I);
 strace = strace(I);
 
 if saveflag > 0
-    save([datadir,'/',station,'.mat'],'ptrace','strace','header','pslows','poorpicks')
+    save([datadir,'/',station,'.mat'],'ptrace','strace','header','pslows','badpicks')
 end
 
 
