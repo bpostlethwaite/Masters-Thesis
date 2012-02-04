@@ -13,7 +13,7 @@ datadir = ['/home/',user,'/Dropbox/ComLinks/programming/matlab/thesis/Data'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %% 1) Select Station folder to process
-station = 'ULM';
+station = 'DLBC';
 workingdir = fullfile(sacfolder,station);
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 
@@ -30,7 +30,8 @@ workingdir = fullfile(sacfolder,station);
 %    
     picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
     saveflag = 0;
-    [ptrace,strace,header,pslows,badpicks] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
+    [ptrace,strace,header,pslows,badpicks] = ...
+        ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
 %}
 %% 4)  Window with Taper and fourier transform signal.
 %
@@ -73,8 +74,8 @@ close(h)
 %}
 %% 7) Filter Impulse Response
 %
-t1 = 3.5; % Search max between these two windows (in secs after p arrival)
-t2 = 5;
+t1 = 2; % Search max between these two windows (in secs after p arrival)
+t2 = 5.2;
 dt = header{1}.DELTA;
 brec = fbpfilt(rec,dt,0.01,1,2,0);
 
@@ -90,43 +91,26 @@ tps = (it + round(t1/dt)-1)*dt;
 %}
 %% 8) IRLS Newtons Method to find regression Tps
 %
-
+viewfit = 1; %View newton fit (0 is off)
 H = 32; % Starting guesses for physical paramaters  
 alpha = 6;
 beta = 3.5;
-tol = 0.01;  % Tolerance on interior linear solve is 10x of Newton solution
-itermax = 50; % Stop if we go beyond this iteration number
+tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
+itermax = 500; % Stop if we go beyond this iteration number
  
-[ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol);
+[ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,viewfit);
 
 %% 9) Grid and Line Search
-[ vbest,rbest,hbest ] = GridSearch(brec,Tps,dt,pslow);
+[ vbest,rbest,hbest ] = GridSearch(brec,Tps',dt,pslow);
 
-%% Plots
-
-figure(547)
-    plot(pslow,tps,'*',pslow,Tps)
-    title('residual vector and Minimum norm solution')
-    xlabel('pslow')
-    ylabel('tps residual')
-
-t1 = 0;
-t2 = 20;
-figure(63)
-%imagesc(pslow,[1:800]*dt,brtrace(:,1:800)')
-    csection(brec(:,round(t1/dt)+1 : round(t2/dt)+1),dt*(round(t1/dt)),dt)
-    %xlabel('pslow')
-    %ylabel('time (s)')
-    hold on
-    plot(Tps,'k+')
-    
-%}
 %% Viewers
 %{
     
     figure(567)
-    hist(pslow(:))
+    bar(pbin,sum(pIndex,1))
     title(sprintf('pvalue histogram from station %s',station))
+    xlabel('pvalue')
+    ylabel('number of traces in pbin')
 %}
 %%
 % View Earth Response
@@ -142,6 +126,6 @@ t = [1:size(brec,2)] * dt;
     end
 %}
 
-
+fclose('all');
 
 

@@ -1,10 +1,13 @@
-function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol)
+function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol,viewfit)
 %NEWTONFIT Newton solver to solve for a non-linear regression
 %   Uses starting guesses and IRLS solver to find solution.
 
 iter = 1;
-s = 0.2;
-while (iter < round(itermax));
+s = 0.1;
+TpsP = 0;
+deltaTps = 100;
+
+while (iter < round(itermax)) && (deltaTps > tol);
     
     % Partials %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     sqrtA = sqrt(1/a^2 - p.^2);
@@ -24,32 +27,22 @@ while (iter < round(itermax));
         b^2.*t.*sqrtB.*(3*b^2 .*p.^2 - 2))' * (1./(b^4 * (b^2*p.^2 - 1).^2));   
     dfab = sum( -2*h^2 ./ ( a^2 * b^2 * sqrt(1-a^2*p.^2).*sqrt(1-b^2*p.^2)));   
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   %
     J = [dfda; dfdb; dfdh]; % Jacobian
     H = [dfaa, dfab, dfah
          dfab, dfbb, dfbh
          dfah, dfbh, dfhh]; % Hessian
-    %} 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %{
-    J = [dfda; dfdb]; % Jacobian
-    H = [dfaa, dfab
-         dfab, dfbb];
-    %}     
-     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    delm = (IRLSsolver(-H,J,round(itermax),tol)); % Linear reweighted solution with 10x tolerance of Newton
+    delm = (IRLSsolver(-H,J,round(itermax),0.1*tol)); % Linear reweighted solution with 10x tolerance of Newton
     %delm = -H\J(:) %L2 Solver
     a = (a + s*delm(1));
     b = (b + s*delm(2)); % move in direction of residual
     h = (h + s*delm(3));
     % STOPPING CRITEREA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % 
-fprintf('Convergence of Newton: %f at iteration %i\n',norm(delm,2),iter)
-iter = iter+1;
-
-Tps = h*(sqrt(1/b^2 - p.^2) -  sqrt(1/a^2 - p.^2));
-figure(369)
+    Tps = h*(sqrt(1/b^2 - p.^2) -  sqrt(1/a^2 - p.^2));
+    deltaTps = norm(Tps - TpsP)
+    TpsP = Tps;
+    iter = iter+1;
+    figure(369)
     plot(p,t,'*',p,Tps)
     title('residual vector and Minimum norm solution')
     xlabel('pslow')
@@ -57,4 +50,16 @@ figure(369)
     pause(0.1)
 end
 
-Tps = h*(sqrt(1/b^2 - p.^2) -  sqrt(1/a^2 - p.^2));
+% Check if iter hit itermax, if so issue warning
+if iter == itermax
+    fprintf(['Newton''s Method reached Max Iteration of %i!\n',...
+        'Convergence norm at: %f \n'],iter,deltaTps)
+end
+
+if viewfit > 0
+figure(369)
+    plot(p,t,'*',p,Tps)
+    title('residual vector and Minimum norm solution')
+    xlabel('pslow')
+    ylabel('tps residual')
+end

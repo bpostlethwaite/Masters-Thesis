@@ -1,4 +1,5 @@
-function [ptrace,strace,header,pslows,badpicks] = ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
+function [ptrace,strace,header,pslows,badpicks] = ...
+    ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -24,7 +25,10 @@ for ii = 1:length(Dlist)
     % Read info from sac files sacfiles
     try
         S1  = readsac(fullfile(Dlist(ii,:),rfile));
-    catch exception
+        if isempty(S1) % Skip if we get nothing
+            continue
+        end
+    catch exception % Skip if we had problems opening it.
         fprintf('found error: %s\n',exception.identifier)
         continue
     end
