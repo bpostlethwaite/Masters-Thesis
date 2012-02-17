@@ -1,4 +1,4 @@
-function [ vbest,rbest,hbest ] = GridSearch(rec,tps,dt,pslow)
+function [ results ] = GridSearch(rec,tps,dt,pslow)
 %GRIDSEARCH Summary of this function goes here
 %   
 % FUNCTION [vbest,rbest,hbest] = GRIDSEARCH(REC,DT,PSLOW,T1,T2);
@@ -19,10 +19,10 @@ function [ vbest,rbest,hbest ] = GridSearch(rec,tps,dt,pslow)
 % Find timing of direct conversion.
 
 
-% Grid parameters.
+%% Grid parameters.
 % P-velocity
 nv=200; %num  pvelocity paramters
-v1=5;
+v1=5;   % Range of v searched
 v2=8;
 dv=(v2-v1)/(nv-1);
 v=v1:dv:v2;
@@ -34,16 +34,23 @@ r2=1.9;
 dr=(r2-r1)/(nr-1);
 r=r1:dr:r2;
 
+% thickness h
+nh=200;
+h1=25;
+h2=50;
+dh=(h2-h1)/(nh-1);
+h=[h1:dh:h2];
+
 % Miscellaneous.
 p2=pslow.^2;
 np=length(pslow);
 nt=length(rec);
 
 % Reshape for fast element removal.
-gvr=reshape(rec',1,numel(rec));
-%gvr = rec(:)';
+gvr = rec'; %rotate
+gvr = gvr(:); %vectorize
 
-% Grid search for Vp,R.
+%% Grid search for Vp,R.
 for iv=1:nv
   for ir=1:nr
      f1=sqrt((r(ir)/v(iv))^2-p2);
@@ -56,55 +63,13 @@ for iv=1:nv
 end
 stackvr=(stpps+stpss)/2;
 
-% Gauge errors and plot results.
-figure(23)
-    subplot(2,1,1)
-    set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
-    imagesc(r,v,stackvr);
-    axis xy
-    axis square
-    colorbar
-    hold on
-
+% Find max values indices
 smax=max(max(stackvr));
-    disp('best points')
 [iv,ir]=find(stackvr == smax);
+vbest=v(iv);
+rbest=r(ir);
 
-iv1=iv(1);
-ir1=ir(1);
-vbest=v(iv1);
-rbest=r(ir1);
-
-% Error limits.
-%vbest=6.6;
-%rbest=1.75;
-%vbest=5.8;
-%rbest=1.766;
-
-% Error computation after Eaton et al.
-f1=sqrt((rbest/vbest)^2-p2);
-f2=sqrt((1/vbest)^2-p2);
-tpps=(f1+f2)./(f1-f2).*tps;
-tpss=2*f1./(f1-f2).*tps;
-sterr1=sqrt(var([gvr(round(tpps/dt)+1+[0:np-1]*nt),gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(2*np));
-
-plot(rbest,vbest,'w+')
-plot(rbest,vbest,'ko')
-contour(r,v,stackvr,[smax-sterr1,smax-sterr1],'k-')
-
-hold off
-xlab=xlabel('R');
-ylab=ylabel('V_P [km/s]');
-set(xlab,'FontName','Helvetica','FontSize',16);
-set(ylab,'FontName','Helvetica','FontSize',16);
-title(['R = ',num2str(rbest),'  Vp = ',num2str(vbest),' km/s']);
-
-% Line search for H.
-nh=200;
-h1=25;
-h2=50;
-dh=(h2-h1)/(nh-1);
-h=[h1:dh:h2];
+%% Line search for H.
 
 f1=sqrt((rbest/vbest)^2-p2);
 f2=sqrt((1/vbest)^2-p2);
@@ -116,49 +81,88 @@ for ih=1:nh
   htpps(ih)=mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
   htpss(ih)=-mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
 end
-stackh=(htps+htpps+htpss)/3;
 
-% Error computation and plot results.
-subplot(2,1,2)
-set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
+% Find max values indices
+stackh=(htps+htpps+htpss)/3;
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 
-tps=hbest*(f1-f2);
-tpps=hbest*(f1+f2);
-sterr2=sqrt(var([gvr(round(tps/dt)+1+[0:np-1]*nt),...
+%% Results & Errors
+% See Paper by Eaton et al.
+tps = hbest*(f1-f2);
+tpps = hbest*(f1+f2);
+tpss = 2*hbest*f1;
+sterr1=sqrt( mean(var([gvr(round(tpps/dt)+1+[0:np-1]*nt),...
+    gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(2*np)));
+
+sterr2 = sqrt(mean(var([gvr(round(tps/dt)+1+[0:np-1]*nt),...
                  gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-                 -gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np));
+                 -gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np)));
 
-plot(h,stackh)
-hold on
-hlim=axis;
-plot([hbest,hbest],[hlim(3),hlim(4)],'k')
-%plot([hlim(1),hlim(2)],[hmax-sterr2,hmax-sterr2],'k')
-hold off
-xlab=xlabel('H [km]');
-ylab=ylabel('Stack Ampltitude');
-set(xlab,'FontName','Helvetica','FontSize',16);
-set(ylab,'FontName','Helvetica','FontSize',16);
-%title(['H = ',num2str(hbest),' km']);
-tlab=text(35,0.6,['H = ',num2str(hbest),' km']);
-set(tlab,'FontName','Helvetica','FontSize',16);
+%% Plots Results
+%{
+figure(23)
+  subplot(2,1,1)
+    set(gca,'FontName','Helvetica','FontSize',16,...
+        'Clipping','off','layer','top');
+    imagesc(r,v,stackvr);
+    axis xy
+    axis square
+    colorbar
+    hold on
+    plot(rbest,vbest,'w+')
+    plot(rbest,vbest,'ko')
+    contour(r,v,stackvr,[smax-sterr1,smax-sterr1],'k-')
+    hold off
+    xlab=xlabel('R');
+    ylab=ylabel('V_P [km/s]');
+    set(xlab,'FontName','Helvetica','FontSize',16);
+    set(ylab,'FontName','Helvetica','FontSize',16);
+    title(sprintf('R = %1.3f  Vp = %1.3f km/s',rbest,vbest));
 
+  subplot(2,1,2)
+    set(gca,'FontName','Helvetica','FontSize',16,...
+    'Clipping','off','layer','top');
+    plot(h,stackh)
+    hold on
+    hlim=axis;
+    plot([hbest,hbest],[hlim(3),hlim(4)],'g')
+    plot([hlim(1),hlim(2)],[hmax-sterr2,hmax-sterr2],'r')
+    hold off
+    xlab=xlabel('H [km]');
+    ylab=ylabel('Stack Ampltitude');
+    set(xlab,'FontName','Helvetica','FontSize',16);
+    set(ylab,'FontName','Helvetica','FontSize',16);
+    title(sprintf('H = %3.2f km',hbest));
+    
 figure(29)
-f1=hbest*sqrt((rbest/vbest)^2-p2);
-f2=hbest*sqrt((1/vbest)^2-p2);
-f3=hbest*sqrt((1/vbest)^2-p2);
-tps=f1-f2;
-tpps=f1+f2;
-tpss=2*f1;
-csection(rec(:,1:round(26/dt)),0,dt);
-hold on
-plot(tps,'k+')
-plot(tpps,'k+')
-plot(tpss,'k+')
-hold off
+    csection(rec(:,1:round(26/dt)),0,dt);   
+    hold on
+    plot(tps,'k+')
+    plot(tpps,'k+')
+    plot(tpss,'k+')
+    hold off
 
-
+%}
+%% Pack results into struct    
+results.rbest = rbest;
+results.vbest = vbest;
+results.hbest = hbest;
+results.stackvr = stackvr;
+results.stackh = stackh;
+results.rRange = r;
+results.vRange = v;
+results.hRange = h;
+results.stderr1 = sterr1;
+results.stderr2 = sterr2;
+results.smax = smax;
+results.hmax = hmax;
+results.tps = tps;
+results.tpps = tpps;
+results.tpss = tpss;
 
 end
+
+
+
 

@@ -1,4 +1,4 @@
-function [ptrace,strace,header,pslows,badpicks] = ...
+function [ptrace,strace,header,pslows,badpick] = ...
     ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
@@ -30,39 +30,40 @@ for ii = 1:length(Dlist)
         % Convert Each trace (rotate coordinates)
         [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
         
-    catch exception % Skip if we had problems opening it.
-        fprintf('found error: %s\n',exception.identifier)
-        continue
-    end
-    
-    % Check to make sure picked time interval greater than picktol and
-    % That the starting time in the record header matches the picks (make
-    % sure it makes sense (Both T1 and T3 must be greater that record
-    % beginning), and of course that T1 and T3 are numbers.
-    
-    if isempty(S1) % Skip if we get nothing
-        bad = true;
-        esmg = sprintf('Headers and possibly data containers empty\n');
-    else
-        gap = S1.T1 - S1.T3;  
-        
-        if gap > -picktol
+        % Check to make sure picked time interval greater than picktol and
+        % That the starting time in the record header matches the picks (make
+        % sure it makes sense (Both T1 and T3 must be greater that record
+        % beginning), and of course that T1 and T3 are numbers.        
+        if isempty(S1) % Skip if we get nothing
             bad = true;
-            emsg = sprintf('filtering out data as gap is %f\n',gap);          
-        
-        elseif S1.T1 < S1.B || S1.T3 < S1.B
-            bad = true;
-            emsg = sprintf(['Picked times T1=%s or T3=%s less than beginning of'...
-                'trace record %s. Filtering.\n'],S1,T1,S1.T3,S1.B);   
-        
-        elseif isnan(S1.T1) || isnan(S1.T3)
-            bad = true;
-            esmg = sprintf('One or both of T1 and T3 is not numeric\n');
+            emsg = sprintf('Headers and possibly data containers empty\n');
+        else
+            gap = S1.T1 - S1.T3;
+            
+            if gap > -picktol
+                bad = true;
+                emsg = sprintf('filtering out data as gap is %f\n',gap);
+                
+            elseif S1.T1 < S1.B || S1.T3 < S1.B
+                bad = true;
+                emsg = sprintf(['Picked times T1=%s or T3=%s less than beginning of'...
+                    'trace record %s. Filtering.\n'],S1,T1,S1.T3,S1.B);
+                
+            elseif isnan(S1.T1) || isnan(S1.T3)
+                bad = true;
+                emsg = sprintf('One or both of T1 and T3 is not numeric\n');
+            end
         end
+        
+        
+    catch exception % Skip if we had problems opening it.
+        bad = true;
+        emsg = exception.identifier;
     end
     
+
     if bad
-        % Put all filtered info into super cell badpicks
+        % Put all filtered info into struct array badpicks
         badpick.event(ind2) = {Dlist(ii,:)};
         badpick.errmsg(ind2) = {emsg};
         % Badpick index
@@ -81,7 +82,7 @@ for ii = 1:length(Dlist)
         ind1 = ind1 + 1;
     end
     
-    bad = false;  % Reset our bad/good trace flag.   
+    bad = false;  % Reset our bad/good trace flag.
 end
 
 % Sort by ascending pslows

@@ -49,7 +49,7 @@ plot(t,x,t,y)
 %}
 
 %% L1 Solver Test
-%{
+%
 t = linspace(0,1,100)';
 x = [3,2,1.2]';
 e = ones(length(t),1);
@@ -69,12 +69,12 @@ yn([3,9]) = 10;
 
 xL2 = A\yn;
 yL2 = A*xL2;
-xL1 = IRLSsolver(A,yn,30,0.01);
+xL1 = IRLSsolver(A,yn,30,0.001);
 yL1 = A*xL1;
 
 fprintf('norm yL2: %f   norm yL1: %f \n',norm(y - yL2), norm(y - yL1))
 
-plot(t,y,t,yn,'*',t,yL2,'r',t,yL1,'g')
+plot(t,y,'g',t,yn,'k*',t,yL2,'r',t,yL1,'b')
 legend('actual curve','data','L2 solution','L1 solution')
 
 %}
