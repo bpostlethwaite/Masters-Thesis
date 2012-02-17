@@ -21,7 +21,7 @@ function [ vbest,rbest,hbest ] = GridSearch(rec,tps,dt,pslow)
 
 % Grid parameters.
 % P-velocity
-nv=200;
+nv=200; %num  pvelocity paramters
 v1=5;
 v2=8;
 dv=(v2-v1)/(nv-1);
@@ -41,7 +41,7 @@ nt=length(rec);
 
 % Reshape for fast element removal.
 gvr=reshape(rec',1,numel(rec));
-%gvr = gv(:)';
+%gvr = rec(:)';
 
 % Grid search for Vp,R.
 for iv=1:nv
@@ -151,7 +151,7 @@ f3=hbest*sqrt((1/vbest)^2-p2);
 tps=f1-f2;
 tpps=f1+f2;
 tpss=2*f1;
-csection(rec(:,1:round(22/dt)),0,dt);
+csection(rec(:,1:round(26/dt)),0,dt);
 hold on
 plot(tps,'k+')
 plot(tpps,'k+')

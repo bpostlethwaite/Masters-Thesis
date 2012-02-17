@@ -13,7 +13,7 @@ datadir = ['/home/',user,'/Dropbox/ComLinks/programming/matlab/thesis/Data'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %% 1) Select Station folder to process
-station = 'DLBC';
+station = 'WHY';
 workingdir = fullfile(sacfolder,station);
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 
@@ -74,10 +74,10 @@ close(h)
 %}
 %% 7) Filter Impulse Response
 %
-t1 = 2; % Search max between these two windows (in secs after p arrival)
-t2 = 5.2;
+t1 = 4.2; % Search max between these two windows (in secs after p arrival)
+t2 = 5;
 dt = header{1}.DELTA;
-brec = fbpfilt(rec,dt,0.01,1,2,0);
+brec = fbpfilt(rec,dt,0.03,0.5,2,0);
 
 for ii=1:size(rec,1);
    %brtrace(ii,:)=filter(h2,rtrace(ii,:));
@@ -96,7 +96,7 @@ H = 32; % Starting guesses for physical paramaters
 alpha = 6;
 beta = 3.5;
 tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
-itermax = 500; % Stop if we go beyond this iteration number
+itermax = 1000; % Stop if we go beyond this iteration number
  
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,viewfit);
 
@@ -104,7 +104,7 @@ itermax = 500; % Stop if we go beyond this iteration number
 [ vbest,rbest,hbest ] = GridSearch(brec,Tps',dt,pslow);
 
 %% Viewers
-%{
+%
     
     figure(567)
     bar(pbin,sum(pIndex,1))

@@ -3,7 +3,7 @@ function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol,viewfit)
 %   Uses starting guesses and IRLS solver to find solution.
 
 iter = 1;
-s = 0.1;
+s = 0.05;
 TpsP = 0;
 deltaTps = 100;
 
@@ -31,6 +31,14 @@ while (iter < round(itermax)) && (deltaTps > tol);
     H = [dfaa, dfab, dfah
          dfab, dfbb, dfbh
          dfah, dfbh, dfhh]; % Hessian
+    if iter == 1
+        fprintf('----prerun-----\n')
+        fprintf('J Matrix\n')
+        full(J)
+        fprintf('Eig(H)\n')
+        eig(H)
+    end
+        
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     delm = (IRLSsolver(-H,J,round(itermax),0.1*tol)); % Linear reweighted solution with 10x tolerance of Newton
     %delm = -H\J(:) %L2 Solver
@@ -39,7 +47,7 @@ while (iter < round(itermax)) && (deltaTps > tol);
     h = (h + s*delm(3));
     % STOPPING CRITEREA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     Tps = h*(sqrt(1/b^2 - p.^2) -  sqrt(1/a^2 - p.^2));
-    deltaTps = norm(Tps - TpsP)
+    deltaTps = norm(Tps - TpsP);
     TpsP = Tps;
     iter = iter+1;
     figure(369)
@@ -47,8 +55,14 @@ while (iter < round(itermax)) && (deltaTps > tol);
     title('residual vector and Minimum norm solution')
     xlabel('pslow')
     ylabel('tps residual')
-    pause(0.1)
+    pause(0.01)
 end
+        fprintf('----postrun-----\n')
+        fprintf('J Matrix\n')
+        full(J)
+        fprintf('Eig(H)\n')
+        eig(H)
+
 
 % Check if iter hit itermax, if so issue warning
 if iter == itermax

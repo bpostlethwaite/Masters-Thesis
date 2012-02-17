@@ -19,18 +19,18 @@ Processing Chain
     header file infor is saved into cell array 'header' and
     slowness p values are sent to vector 'pslows'
 
-4.  Bin by p value (build pIndex)
+4.  Window with Taper and fourier transform signal.
+
+    p data is windowed with a tukey taper and passed through 
+    the fft algorithm into 'wft' with fft'd s trace vectors 
+    going into 'vft'.
+
+5.  Bin by p value (build pIndex)
 
     Right now an logical index array is created. Each line in the
     array is associated with a pbin, and it's columns are the 
     zeros and ones which select the appropriate trace that corrisponds
     to this bin.
-
-5.  Window with Taper and fourier transform signal.
-
-    p data is windowed with a tukey taper and passed through 
-    the fft algorithm into 'wft' with fft'd s trace vectors 
-    going into 'vft'.
 
 6.  Impulse Response: Stack and Deconvolve
 
@@ -60,13 +60,22 @@ Processing Chain
     maximum is selected. The best Vp and R are then used to find H in a 
     line search. These are plotted over the reviever functions.
 
-### Tuning and Testing
+### Still to Complete
+*   Keep track of which traces are removed, and for what reason
+*   Build in some feature that modifies the tps window we do the automatic picks.
+This has an impact on the convergence of the Newton Iterations.
+*   Develop a database which will store information regarding each stations
+processed data, possible errors, needed repicks, date of processing, headers etc. 
+
+    * This Database will probably be a cell-array of structures, as described on diagram (not shown here)
+
+### Tuning, testing
+*   Associate particular event and station with bad event
 *   Run testing on pbin logical index array [COMPLETE].
 *   Filter out and flag poorly picked traces [COMPLETE].
-*   Streamline workflow.
-*   Add L1 linear solve into Newton solver, figure out where tps is. [COMPLETE]
-*   Test different filters, compare outcome.
+*   Test different filters, compare outcome. 
 *   Reproduce results using cross-validation, and similar azimuth station data.
+*   Eigenvalues of Hessian
     
 ### Change Log
 #### December 20th 2011
