@@ -60,12 +60,12 @@ Processing Chain
     line search. These are plotted over the reviever functions.
 
 ### Still to Complete
-*   Keep track of which traces are removed, and for what reason
+*   Keep track of which traces are removed, and for what reason [Complete]
 *   Build in some feature that modifies the tps window we do the automatic picks.
 This has an impact on the convergence of the Newton Iterations.
 *   Re-order the datastructure so name is on top, etc.
 ### Tuning, testing
-*   Associate particular event and station with bad event
+*   Associate particular event and station with bad event.
 *   Run testing on pbin logical index array [COMPLETE].
 *   Filter out and flag poorly picked traces [COMPLETE].
 *   Test different filters, compare outcome. 
@@ -73,6 +73,12 @@ This has an impact on the convergence of the Newton Iterations.
 *   Eigenvalues of Hessian
     
 ### Change Log
+#### February 17th 2012
+*   Built database structure and tools for adding new station data and removing data.
+*   Changed several data types in functions
+*   Reworked error message system.
+*   Removed unnecessary steps and info in functions and drivers.
+
 #### February 16th 2012
 *   Refactored Code
     * Created meta-program DataDriver which now runs ProcessTraces and attempts to collect error messages on failure.

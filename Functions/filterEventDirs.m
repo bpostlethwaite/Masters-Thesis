@@ -1,4 +1,4 @@
-function Dlist = filterEventDirs(workingdir,printinfo,savelist,listname)
+function dlist = filterEventDirs(workingdir,printinfo)
 
 % FUNCTION FILTEREVENTDIRS(workingdir,savelist,view)
 % A crude directory filter, to ensure we process proper event dirs.
@@ -13,12 +13,12 @@ function Dlist = filterEventDirs(workingdir,printinfo,savelist,listname)
 
 
 DIRitems = dir(workingdir);
-Dlist = char();
+dlist = {};
 
 for ii = 1:length(DIRitems)
     d = DIRitems(ii).name;
     if ~isnan(str2double(d))
-        Dlist(end+1,:) = fullfile(workingdir,d); 
+        dlist{end+1} = fullfile(workingdir,d); 
         if printinfo > 0
             fprintf('added %s \n',d)
         end
@@ -29,8 +29,5 @@ for ii = 1:length(DIRitems)
     end
 end
 
-assert(size(Dlist,1) > 1,'No Directories accumulated in Dlist!')
+assert(length(dlist) > 1,'No Directories accumulated in Dlist!')
 
-if savelist > 0
-    save(['Data/',listname],'Dlist')
-end

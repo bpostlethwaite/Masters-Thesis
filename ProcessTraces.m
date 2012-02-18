@@ -8,26 +8,25 @@
 printinfo = 1; % On and off flag to print out processing results
 savelist  = 0;
 listname  = [station,'_Dlist'];
-Dlist = filterEventDirs(workingdir,printinfo,savelist,listname);
+dlist = filterEventDirs(workingdir,printinfo);
 %}
 %% 2)  Convert sac file format, filter bad picks
 %
 picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
-saveflag = 0;
 [ptrace,strace,header,pslows,badpicks] = ...
-    ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag);
+    ConvertFilterTraces(dlist,rfile,zfile,picktol,printinfo);
 fclose('all'); % Close all open files from reading
 %}
 %% 3)  Window with Taper and fourier transform signal.
 %
 viewtaper  = 0;
 viewwindow = 0;
-adj = 0.2;
+adj = 0.2; % This adjusts the Tukey window used.
 [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper,viewwindow);
 %}
 %% 4) Bin by p value (build pIndex)
 %
-npb = 3; % Average number of traces per bin
+npb = 2; % Average number of traces per bin
 numbin = round((1/npb)*size(wft,1));
 pbinLimits = linspace(.035,.08,numbin);
 checkind = 1;
@@ -41,27 +40,24 @@ checkind = 1;
 % Now fft windowed traces
 ind = 1;
 viewFncs = 0;
+pslow = pbin(any(pIndex)); % Strip out pbins with no traces
+pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 h = waitbar(0,'Deconvolving...');
-steps = length(pbin);
-for ii = 1:steps
-    if any(pIndex(:,ii))
-        
-        [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
-        
-        % Take complex conjugate and reverse 1st half to recomplete fft
-        %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
-        rec(ind,:) = real(ifft(r));
-        pslow(ind) = pbin(ii);
-        ind = ind + 1;
-    end
-    waitbar(ii/steps,h)
+nbins = length(pslow);
+rec = zeros(nbins,size(wft,2));
+for ii = 1:nbins
+    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
+    % Take complex conjugate and reverse 1st half to recomplete fft
+    %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
+    rec(ii,:) = real(ifft(r));
+    waitbar(ii/nbins,h)
 end
 close(h)
 %}
 %% 6) Filter Impulse Response
 %
-t1 = 3.8; % Search max between these two windows (in secs after p arrival)
-t2 = 4.4;
+t1 = 2.4; % Search max between these two windows (in secs after p arrival)
+t2 = 5;
 dt = header{1}.DELTA;
 fLow = 0.03;
 fHigh = 1;
@@ -82,21 +78,17 @@ tps = (it + round(t1/dt)-1)*dt;
 %% 7) IRLS Newtons Method to find regression Tps
 %
 viewfit = 1; %View newton fit (0 is off)
-H = 36; % Starting guesses for physical paramaters
-alpha = 6;
+H = 30; % Starting guesses for physical paramaters
+alpha = 7;
 beta = 3.5;
 tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 100; % Stop if we go beyond this iteration number
-damp = 0.25;
+damp = 0.5;
 
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec,Tps',dt,pslow);
-
-%% Scan Status
-% If we made it this far we consider it success
-scanstatus = true;
 
 %% Viewers
 %{

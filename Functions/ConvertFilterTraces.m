@@ -1,5 +1,5 @@
 function [ptrace,strace,header,pslows,badpick] = ...
-    ConvertFilterTraces(Dlist,station,rfile,zfile,datadir,picktol,printinfo,saveflag)
+    ConvertFilterTraces(dlist,rfile,zfile,picktol,printinfo)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -20,13 +20,15 @@ function [ptrace,strace,header,pslows,badpick] = ...
 ind1 = 1;
 ind2 = 1;
 bad = false;
+badpick.event = [];
+badpick.errmsg = [];
 
-for ii = 1:length(Dlist)
+for ii = 1:length(dlist)
     % TRY I/O: Read info from sac files
     try
-        S1  = readsac(fullfile(Dlist(ii,:),rfile));
-        [rtime,rcomp] = readsac(fullfile(Dlist(ii,:),rfile));
-        [ztime,zcomp] = readsac(fullfile(Dlist(ii,:),zfile));
+        S1  = readsac(fullfile(dlist{ii},rfile));
+        [rtime,rcomp] = readsac(fullfile(dlist{ii},rfile));
+        [ztime,zcomp] = readsac(fullfile(dlist{ii},zfile));
         % Convert Each trace (rotate coordinates)
         [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
         
@@ -58,14 +60,15 @@ for ii = 1:length(Dlist)
         
     catch exception % Skip if we had problems opening it.
         bad = true;
-        emsg = exception.identifier;
+        emsg = sprintf('Identifier: { %s }\nMessage: { %s } ',...
+            exception.identifier,exception.message);
     end
     
 
     if bad
         % Put all filtered info into struct array badpicks
-        badpick.event(ind2) = {Dlist(ii,:)};
-        badpick.errmsg(ind2) = {emsg};
+        badpick.event{ind2} = dlist{ii};
+        badpick.errmsg{ind2} = emsg;
         % Badpick index
         ind2 = ind2 + 1;
         % Print error message to screen if printinfo = true

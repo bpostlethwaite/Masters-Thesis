@@ -1,0 +1,30 @@
+% Create Processed Data Structure - Data Description.
+
+s.station = [];      % Station name
+s.processnotes = []; % Notes made during processing run
+s.scanstatus = [];   % Create some method to update these
+s.failmessage = [];  % Creat some method to update these
+s.badpicks = [];     %Bad picks which come from ConvertFilterTraces.m
+s.rbest = [];
+s.vbest = [];
+s.hbest = [];
+s.stackvr = [];
+s.stackh = [];
+s.rRange = [];
+s.vRange = [];
+s.hRange = [];
+s.stderr1 = [];
+s.stderr2 = [];
+s.smax = [];
+s.hmax = [];
+s.tps = [];
+s.tpps = [];
+s.tpss = [];
+s.rec = [];          % Filtered traces
+s.pslow = [];        % Binned slowness values used
+s.dt = [];           % dt for station
+s.npb = [];          % average number of traces per pbin
+s.filterLow = [];    % Low frequency cut-off
+s.filterHigh = [];   %High Frequency cut-off
+s.t1 = [];           % These are the time windows constraining the 
+s.t2 = [];           % automatic pick of reciever function impulses

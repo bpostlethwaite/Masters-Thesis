@@ -23,8 +23,8 @@ figure(230)
     ylab=ylabel('V_P [km/s]');
     set(xlab,'FontName','Helvetica','FontSize',16);
     set(ylab,'FontName','Helvetica','FontSize',16);
-    title(sprintf('Station ''%s''  R = %1.3f  Vp = %1.3f km/s',...
-        db.station,db.rbest,db.vbest));
+    title(sprintf(['Station ''%s''  R = %1.3f  Vp = %1.3f km/s',...
+        '\n%s'],db.station,db.rbest,db.vbest,db.processnotes));
 
   subplot(2,1,2)
     set(gca,'FontName','Helvetica','FontSize',16,...
