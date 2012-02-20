@@ -19,17 +19,28 @@ datadir = ['/home/',user,'/Dropbox/ComLinks/Programming/matlab/thesis/Data'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %%  Select Station, Load Database
-station = 'INK';
-notes = 'May need to partition data into two sets based on tps picks';
+station = 'YKW4';
 workingdir = fullfile(sacfolder,station);
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 load(sprintf('%s/database.mat',datadir))
-
+%% Compare database stations to station folder
+% Tests if folder looks like a station folder than tests if the station is
+% in the database station, returns those that are not.
+runcompare = true;
+if runcompare
+    sts = dir(sacfolder);
+    fprintf('Stations left unprocessed:\n')
+    for ii = 1:length(sts)
+        st = sts(ii).name;
+        if strcmp(upper(st),st) && length(st) > 2 && ~any(strcmp(st,{db.station}))
+            fprintf('%s\n',st)
+        end
+    end     
+end
 %% Select next Index, Entry Mode
 append = false;     % Appends new station entry (multiple same stations OK)
 overwrite = true; % Overwrites 1st station entry
 remove = false;    % Removes all entries associated with particular station
-
 if ~append
     k = strcmp(station, {db.station});
     if overwrite && any(k)
@@ -47,15 +58,13 @@ if ~append
 else
     new = length(db)+1; % Get next entry in database for appending
 end
-
 %% Run ProcessTraces
 % Run ProcessTraces then collect results into structure
-
 try
     ProcessTraces
     % For a description of data see DataDescription.m
     db(new).station = station;    
-    db(new).processnotes = notes;
+    db(new).processnotes = [];
     db(new).scanstatus = true; 
     db(new).failmessage = 'None'; 
     db(new).badpicks = badpicks;  
@@ -92,20 +101,18 @@ catch e
     fprintf('Encountered error during processing:\n%s\n',...
         db(new).failmessage)
 end
-
-
-% Plot the results if we completed the processing
+%% Plot the results if we completed the processing
 if db(new).scanstatus
     plotStack(db(new));
 end
-
+%% Enter Processing Notes:
+notes = inputdlg('Enter Notes','Processing Notes',[3 80]);
+db(new).processnotes = notes;
 %% Sort new entry by station and save
 [tmp ind]=sort({db.station});
 db=db(ind);
-
 % Save the database.
-save(sprintf('%s/database.mat',datadir),'db')
-
+save(sprintf('%s/database.mat',datadir),'db','-v6')
 %% Show database info:
 
 

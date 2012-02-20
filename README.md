@@ -60,19 +60,20 @@ Processing Chain
     line search. These are plotted over the reviever functions.
 
 ### Still to Complete
-*   Keep track of which traces are removed, and for what reason [Complete]
-*   Build in some feature that modifies the tps window we do the automatic picks.
-This has an impact on the convergence of the Newton Iterations.
-*   Re-order the datastructure so name is on top, etc.
+*   Increase efficiency of Database. It loads into memory for each change right now and is heading towards a Gig in size. This is unwieldy.
+
 ### Tuning, testing
-*   Associate particular event and station with bad event.
-*   Run testing on pbin logical index array [COMPLETE].
-*   Filter out and flag poorly picked traces [COMPLETE].
 *   Test different filters, compare outcome. 
 *   Reproduce results using cross-validation, and similar azimuth station data.
 *   Eigenvalues of Hessian
     
 ### Change Log
+#### February 19th 2012
+*   Using -v6 .mat files to avoid compression and speed up saves and loads.
+*   Processed all stations from Micheals server
+*   Collected in Database. Database is loaded into memory for each addition
+*   Have many bad results, various reasons. Notes have been made for each station entry.
+
 #### February 17th 2012
 *   Built database structure and tools for adding new station data and removing data.
 *   Changed several data types in functions
@@ -84,6 +85,7 @@ This has an impact on the convergence of the Newton Iterations.
     * Created meta-program DataDriver which now runs ProcessTraces and attempts to collect error messages on failure.
     * DataDriver collects all results into a db structure saved as database.mat.
     * db has each entry as station name plus a prefix, so we can have multiple vversions of each station, as to try out different parameters.
+
 #### December 20th 2011
 *   Finished IRLS Newton Solver
 *   Encapsulate Newton Solver in a Function.

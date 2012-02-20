@@ -56,10 +56,10 @@ close(h)
 %}
 %% 6) Filter Impulse Response
 %
-t1 = 2.4; % Search max between these two windows (in secs after p arrival)
-t2 = 5;
+t1 = 4; % Search max between these two windows (in secs after p arrival)
+t2 = 4.8;
 dt = header{1}.DELTA;
-fLow = 0.03;
+fLow = 0.04;
 fHigh = 1;
 numPoles = 2;
 
@@ -79,7 +79,7 @@ tps = (it + round(t1/dt)-1)*dt;
 %
 viewfit = 1; %View newton fit (0 is off)
 H = 30; % Starting guesses for physical paramaters
-alpha = 7;
+alpha = 6.5;
 beta = 3.5;
 tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 100; % Stop if we go beyond this iteration number
