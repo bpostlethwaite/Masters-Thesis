@@ -14,7 +14,7 @@ function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper)
 a = adj;
 pad = 0.1;    % make taper x% wider so we don't cut out source function signal
 h = waitbar(0,'Windowing Traces');
-steps = length(ptrace);
+steps = size(ptrace,1);
 for ii = 1:steps
     
     dt = header{ii,1}.DELTA;
@@ -33,9 +33,10 @@ for ii = 1:steps
     rtaper = 0.5 * (1 + cos(pi * (2*n(n >= (N-1)*(1-a/2) & n <= (N-1)) / (a*(N-1)) - 2/a + 1 ))); % Tukey Rside
     taper = [ltaper,ctaper,rtaper]; % FUll taper
     
-    WIN = zeros(1,length(ptrace{ii}));  % splice taper into a window of zeros to multiply with trace
+    WIN = zeros(1,length(ptrace(1,:)));  % splice taper into a window of zeros to multiply with trace
     WIN( nbegintaper : nbegintaper + length(taper) - 1) = taper;
     
+    %{
     if viewtaper > 0
         figure(34)
         plot(ptrace{ii}(2,:),WIN,ptrace{ii}(2,:),ptrace{ii}(1,:)./max(ptrace{ii}(1,:)))
@@ -47,16 +48,17 @@ for ii = 1:steps
         title(sprintf('Trace # %i',ii))
         pause(3)
     end
+    %}
     
-    N = 2^14;
+
     % Only use 1st half of fft for deconvolution in future
-    wft(ii,:) = fft((ptrace{ii}(1,:).*WIN),N);
+    wft(ii,:) = fft((ptrace(ii,:).*WIN));
     if (any(isnan(wft(ii,:))))
         fprintf('NaN values in wft at index %i. You should remove\n',ii)
     end
     %w = fft((ptrace{ii}(1,:).*WIN),N);
     %wft(ii,:) = w(1:2^13 + 1);
-    vft(ii,:) = fft(strace{ii}(1,:),N);
+    vft(ii,:) = fft(strace(ii,:));
     %v = fft(ptrace{ii}(1,:),N);
     %vft(ii,:) = v(1:2^13 + 1);
     waitbar(ii/steps,h)

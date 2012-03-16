@@ -5,7 +5,7 @@
 
 user = getenv('USER');
 sacfolder = '/media/TerraS/CNSN';
-datadir = ['/home/',user,'/Dropbox/ComLinks/Programming/matlab/thesis/Data'];
+datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
 all = 1;
 

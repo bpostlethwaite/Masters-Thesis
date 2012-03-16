@@ -6,17 +6,17 @@
 clear all
 close all
 addpath sac
-addpath Data
-addpath Functions
+addpath data
+addpath functions
 
 %% Variables
 user = getenv('USER');
 sacfolder = '/media/TerraS/CNSN';
-datadir = ['/home/',user,'/Dropbox/ComLinks/Programming/matlab/thesis/Data'];
+datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
-%%  Select Station to Process
+%%  Select Station to Process and load station data.
 station = 'ULM';
 workingdir = fullfile(sacfolder,station);
 load(fullfile(databasedir,[station,'.mat']))

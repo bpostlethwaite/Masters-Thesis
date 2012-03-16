@@ -58,7 +58,7 @@ while (iter < round(itermax)) && (deltaTps > tol);
     title('residual vector and Minimum norm solution')
     xlabel('pslow')
     ylabel('tps residual')
-    pause(0.5)
+    pause(0.05)
     %}
 
 end

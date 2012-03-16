@@ -22,13 +22,13 @@ ind2 = 1;
 bad = false;
 badpick.event = [];
 badpick.errmsg = [];
-
+N = 2^14;            % Extend all traces evenly. 
 for ii = 1:length(dlist)
     % TRY I/O: Read info from sac files
     try
         S1  = readsac(fullfile(dlist{ii},rfile));
-        [rtime,rcomp] = readsac(fullfile(dlist{ii},rfile));
-        [ztime,zcomp] = readsac(fullfile(dlist{ii},zfile));
+        [~,rcomp] = readsac(fullfile(dlist{ii},rfile));
+        [~,zcomp] = readsac(fullfile(dlist{ii},zfile));
         % Convert Each trace (rotate coordinates)
         [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
         
@@ -80,8 +80,10 @@ for ii = 1:length(dlist)
         % Good files go in the respective arrays and cells.
         header{ind1,1} = S1;
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
-        ptrace{ind1} = [p;rtime'];
-        strace{ind1} = [s;ztime'];
+        p(end+1:N) = 0; % Pad with zeros
+        s(end+1:N) = 0; % Pad with zeros
+        ptrace(ind1,:) = p;
+        strace(ind1,:) = s;
         ind1 = ind1 + 1;
     end
     
@@ -91,7 +93,7 @@ end
 % Sort by ascending pslows
 [pslows,I] = sort(pslows);
 header = header(I);
-ptrace = ptrace(I);
-strace = strace(I);
+ptrace = ptrace(I,:);
+strace = strace(I,:);
 
 end

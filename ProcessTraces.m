@@ -32,8 +32,9 @@ nbins = length(pslow); % Number of bins we now have.
 dt = header{1,1}.DELTA;
 n1 = round(100/dt);
 %rms = zeros(length(ptrace),2);
-for ii = 1:length(ptrace)
-    rms(ii,1) = norm(ptrace{ii}(1,1:n1))/sqrt(n1);
+%{
+for ii = 1:size(ptrace,1)
+    rms(ii,1) = norm(ptrace(ii,1:n1))/sqrt(n1);
     %rms(ii,2) = norm(ptrace{ii}(1,end-n1-1:end))/sqrt(n1);
 end
 sfact = 0.5; % Rescale spread between magnitudes between sfact->1
@@ -46,11 +47,11 @@ for ii = 1:nbins
     scale = [scale; max(rmsN)*(sc./rmsN) ]; % Find multiplier that will rescale traces
 end
 
-for ii = 1:length(ptrace)
-    ptrace{ii}(1,:) = ptrace{ii}(1,:) * scale(ii);
-    strace{ii}(1,:) = strace{ii}(1,:) * scale(ii);
+for ii = 1:size(ptrace,1)
+    ptrace(ii,:) = ptrace(ii,:) * scale(ii);
+    strace(ii,:) = strace(ii,:) * scale(ii);
 end
-
+%}
 
 %rmsR = rms(:,1)./rms(:,2);
 %figure(2222)
@@ -113,7 +114,7 @@ alpha = 6.5;
 beta = 3.5;
 tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 100; % Stop if we go beyond this iteration number
-damp = 0.5;
+damp = 0.2;
 
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
