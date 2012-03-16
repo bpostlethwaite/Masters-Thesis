@@ -1,4 +1,4 @@
-function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper,viewwindow)
+function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper)
 
 % FUNCTION TAPERWINDOW(PTRACE,STRACE,HEADER)
 % Windows traces with a tukey window, basically an adjustable cosine window

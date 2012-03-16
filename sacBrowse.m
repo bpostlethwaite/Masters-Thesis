@@ -4,7 +4,7 @@ close all
 
 % Location of Sac files
 sacfolder = '/media/TerraS/CNSN';
-sacfolder =  '/home/ben/Dropbox/School';
+%sacfolder =  '/home/ben/Dropbox/School';
 flag = true;
 % Ask user for event folder
 directory = uigetdir(sacfolder,'Choose Event Folder');

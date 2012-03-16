@@ -1,11 +1,11 @@
 function plotStack(db)
 
 
-try %#ok<*TRYNC>
-    close(230)
-end
+%try %#ok<*TRYNC>
+%    close(230)
+%end
 
-figure(230) 
+figure(randi(1000,1)) 
   subplot(2,1,1)
     set(gca,'FontName','Helvetica','FontSize',16,...
         'Clipping','off','layer','top');
@@ -24,7 +24,7 @@ figure(230)
     set(xlab,'FontName','Helvetica','FontSize',16);
     set(ylab,'FontName','Helvetica','FontSize',16);
     title(sprintf(['Station ''%s''  R = %1.3f  Vp = %1.3f km/s',...
-        '\n%s'],db.station,db.rbest,db.vbest,db.processnotes));
+        '\n%s'],db.station,db.rbest,db.vbest,cell2mat(db.processnotes)));
 
   subplot(2,1,2)
     set(gca,'FontName','Helvetica','FontSize',16,...
@@ -42,11 +42,11 @@ figure(230)
     set(ylab,'FontName','Helvetica','FontSize',16);
     title(sprintf('H = %3.2f km',db.hbest));
 
-try
-    close(231)
-end
+%try
+%    close(231)
+%end
 
-figure(231)
+figure(randi(1000,1))
     csection(db.rec(:,1:round(26/db.dt)),0,db.dt);   
     hold on
     plot(db.tps,'k+')
