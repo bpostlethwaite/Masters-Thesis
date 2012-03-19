@@ -19,7 +19,7 @@ fclose('all'); % Close all open files from reading
 %}
 %% 3) Bin by p value (build pIndex)
 %
-npb = 2; % Average number of traces per bin
+npb = 5; % Average number of traces per bin
 numbin = round((1/npb)*size(ptrace,2));
 pbinLimits = linspace(.035,.08,numbin);
 checkind = 1;

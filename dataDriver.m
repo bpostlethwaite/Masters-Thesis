@@ -1,4 +1,4 @@
-% This program when run will suck up the Process Driver parameters into a
+% This program when run will suck up the ProcessTraces parameters into a
 % Structure and add the entry into the database.
 % Parameters will turn on various functionality.
 % Read about function getfield, setfield, rmfield, isfield,

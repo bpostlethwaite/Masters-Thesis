@@ -1,11 +1,8 @@
 function plotStack(db)
+% PLOTSTACK plots the station structure data db.
 
 
-%try %#ok<*TRYNC>
-%    close(230)
-%end
-
-figure(randi(1000,1)) 
+figure(23)
   subplot(2,1,1)
     set(gca,'FontName','Helvetica','FontSize',16,...
         'Clipping','off','layer','top');
@@ -23,8 +20,7 @@ figure(randi(1000,1))
     ylab=ylabel('V_P [km/s]');
     set(xlab,'FontName','Helvetica','FontSize',16);
     set(ylab,'FontName','Helvetica','FontSize',16);
-    title(sprintf(['Station ''%s''  R = %1.3f  Vp = %1.3f km/s',...
-        '\n%s'],db.station,db.rbest,db.vbest,cell2mat(db.processnotes)));
+    title(sprintf('R = %1.3f  Vp = %1.3f km/s',db.rbest,db.vbest));
 
   subplot(2,1,2)
     set(gca,'FontName','Helvetica','FontSize',16,...
@@ -41,17 +37,13 @@ figure(randi(1000,1))
     set(xlab,'FontName','Helvetica','FontSize',16);
     set(ylab,'FontName','Helvetica','FontSize',16);
     title(sprintf('H = %3.2f km',db.hbest));
-
-%try
-%    close(231)
-%end
-
-figure(randi(1000,1))
+    
+figure(29)
     csection(db.rec(:,1:round(26/db.dt)),0,db.dt);   
     hold on
     plot(db.tps,'k+')
     plot(db.tpps,'k+')
     plot(db.tpss,'k+')
-    title(sprintf('Station ''%s''  Cross-Section with computed travel times',...
-        db.station))
     hold off
+    
+end
