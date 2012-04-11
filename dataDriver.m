@@ -36,7 +36,8 @@ try
     dbn.processnotes = [];
     dbn.scanstatus = true; 
     dbn.failmessage = 'None'; 
-    dbn.badpicks = badpicks;  
+    dbn.badpicks = badpicks;
+    dbn.method = results.method;
     dbn.rbest = results.rbest;
     dbn.vbest = results.vbest;
     dbn.hbest = results.hbest;
@@ -73,7 +74,7 @@ end
 %% Plot the results if we completed the processing
 if dbn.scanstatus
     plotStack(dbn);
-    plotStack(db(2));
+    %plotStack(db(2));
 end
 %% Enter Processing Notes:
 notes = inputdlg('Enter Notes','Processing Notes',[3 80]);

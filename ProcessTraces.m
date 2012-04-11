@@ -119,8 +119,8 @@ damp = 0.2;
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% 8) Grid and Line Search
-[ results ] = GridSearch(brec,Tps',dt,pslow);
-
+%[ results ] = GridSearch(brec,Tps',dt,pslow);
+[ results ] = GsearchKanamori(brec,dt,pslow);
 %% Viewers
 %{
     

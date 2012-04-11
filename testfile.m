@@ -49,7 +49,7 @@ plot(t,x,t,y)
 %}
 
 %% L1 Solver Test
-%
+%{
 t = linspace(0,1,100)';
 x = [3,2,1.2]';
 e = ones(length(t),1);
@@ -88,6 +88,10 @@ h = 30;
 b = 3.5;
 a = 6;
 %}
+
+for h = 2.1:0.1:3.2
+    h
+end
 
  
  
