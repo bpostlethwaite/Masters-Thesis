@@ -1,9 +1,10 @@
 %sac test
 clear all
 close all
+addpath sac
 
 % Location of Sac files
-sacfolder = '/media/TerraS/CNSN';
+sacfolder = '/media/TerraS';
 %sacfolder =  '/home/ben/Dropbox/School';
 flag = true;
 % Ask user for event folder
