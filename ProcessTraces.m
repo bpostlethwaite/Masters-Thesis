@@ -62,7 +62,7 @@ end
 %% 5)  Window with Taper and fourier transform signal.
 %
 viewtaper  = 0;
-adj = 0.2; % This adjusts the Tukey window used.
+adj = 0.1; % This adjusts the Tukey window used.
 [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %}
 
@@ -119,8 +119,8 @@ damp = 0.2;
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% 8) Grid and Line Search
-%[ results ] = GridSearch(brec,Tps',dt,pslow);
-[ results ] = GsearchKanamori(brec,dt,pslow);
+[ results ] = GridSearch(brec,Tps',dt,pslow);
+%[ results ] = GsearchKanamori(brec,dt,pslow);
 %% Viewers
 %{
     
