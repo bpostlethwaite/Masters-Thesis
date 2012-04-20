@@ -12,23 +12,64 @@ from obspy.core import read
 from obspy.signal.rotate import rotate_NE_RT as rotate 
 from scipy.signal.signaltools import detrend
 from obspy.signal.invsim import cosTaper
+import subprocess 
 import numpy as np
-import os.path
+import os.path, math
 
 ###########################################################################
-#  SET UTILS, VARS
+#  CREATE CUSTOM ERRORS
 ###########################################################################
-
-
+class NoSlownessError(Exception):
+    pass
 
 ###########################################################################
-# preprocess function to be imported by program which walks through
+#  SET UTILS, VARS & REFS
+###########################################################################
+sh = subprocess.Popen
+pipe = subprocess.PIPE
+earthradius = 6371
+deg2rkm = 180/(math.pi * earthradius)
+###########################################################################
+# CALCULATE_SLOWNESS function takes the great circle arc and the
+# depth of the event and adds slowness into the header information
+# in user0 and set kuser0 as "pslow"
+###########################################################################
+def calculate_slowness(eventdir, sacfiles):
+    """CALCULATE_SLOWNESS function takes the great circle arc and the
+    depth of the event and adds slowness into the header information
+    in user0 and set kuser0 as 'pslow' """
+
+    slowness = None
+    # READ 3 Component SAC files into object array.
+    for i in range(3):
+        ff = os.path.join(eventdir, sacfiles[i])
+        st = read(ff)
+        if i == 0:
+            evdp = st[0].stats.sac['evdp']
+            gcarc = st[0].stats.sac['gcarc']
+            process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+               shell=True, executable = "/bin/bash", stdout = pipe )
+            results =  process.communicate()[0].rstrip().split('\n')
+            for result in results:
+                result = result.split()
+                if result[1] == 'P':
+                    slowness = float(result[3])
+                    break
+                elif result[1] == 'Pg':
+                    slowness = float(result[3])
+                    break
+                else:
+                    print results
+                    raise NoSlownessError
+        
+###########################################################################
+# detrend_taper_rotate function to be imported by program which walks through
 # directories and applies this function.
 # This does Demean, Detrend, taper, and rotation.
 # It expects 3 SAC files in component order: E,N,Z. (passed as tuple)
 # It saves the rotated files into eventdir
 ###########################################################################
-def preprocess(eventdir, sacfiles):
+def detrend_taper_rotate(eventdir, sacfiles):
     """preprocess performs the demean,detrend,taper and rotation into radial and
     transverse components. It saves these at STACK_R.sac and STACK_T.sac"""
     

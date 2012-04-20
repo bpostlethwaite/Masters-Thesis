@@ -1,4 +1,4 @@
-function [wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper)
+function [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper)
 
 % FUNCTION TAPERWINDOW(PTRACE,STRACE,HEADER)
 % Windows traces with a tukey window, basically an adjustable cosine window
@@ -56,7 +56,10 @@ for ii = 1:steps
     end
     vft(ii,:) = fft(strace(ii,:));
     waitbar(ii/steps,h)
-end    
+end 
+
+    
+
     % Only use 1st half of fft for deconvolution in future
     %wft = fft((ptrace.*WIN)');
     %if (any(isnan(wft)))

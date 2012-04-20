@@ -9,7 +9,8 @@
 # IMPORTS
 ###########################################################################
 import os, re
-from preprocessor import preprocess
+from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError
+
 ###########################################################################
 # SET DIRECTORIES, FILES
 ###########################################################################
@@ -17,10 +18,12 @@ from preprocessor import preprocess
 networks = ['TEST']
 datadir = '/media/TerraS' 
 logfile = open(datadir + '/log', 'w')
+
 ###########################################################################
-#  SET UTILS, VARS
+#  SET regex matches
 ###########################################################################
 reg = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
+
 ###########################################################################
 #  Walk through Networks supplied above. These are the root folders in 
 #  main directory folder
@@ -35,6 +38,7 @@ for network in networks:
         logfile.write('Problems working in network ' + network + ' --skipping \n')
         print e
         continue
+
 ###########################################################################
 # Walk through all stations found in network folder
 ###########################################################################
@@ -48,6 +52,7 @@ for network in networks:
             logfile.write("Encountered Error: " + repr(e) + " --Skipping \n")
             print e
             continue
+
 ###########################################################################
 # Walk through all events found in station folder
 ###########################################################################
@@ -60,7 +65,9 @@ for network in networks:
                     m1 = reg.match(fs)
                     comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
                 except AttributeError as e:
-                    print "No match on file:",fs
+                    #print "No match on file:",fs
+                    pass
+
 ###########################################################################
 # Check if three components have been found
 # If yes, sort alphebetically and call processor function
@@ -76,12 +83,15 @@ for network in networks:
 
             # Run Processing function
             try:
-                preprocess(eventdir, sacfiles)
-                print "successfully processed event:", eventdir
+                calculate_slowness(eventdir, sacfiles)
+                #print "successfully added slowness to headers in event:", event
+                #detrend_taper_rotate(eventdir, sacfiles)
+                #print "successfully processed event:", eventdir
             except IOError as e:
                 print "error processing: "
                 logfile.write('Error Processing: ' + eventdir + "\n")
-
+            except NoSlownessError:
+                print "did not find a good slowness in event folder:", eventdir
 
 
 logfile.close()

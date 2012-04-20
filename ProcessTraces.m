@@ -63,7 +63,7 @@ end
 %
 viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
-[wft,vft] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
+[wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %}
 
 %% 5) Impulse Response: Stack & Deconvolve
