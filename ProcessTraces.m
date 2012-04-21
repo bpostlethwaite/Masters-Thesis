@@ -12,15 +12,15 @@ dlist = filterEventDirs(workingdir,printinfo);
 %}
 %% 2)  Convert sac file format, filter bad picks
 %
-picktol  = 10; % The picks should be more than PICKTOL seconds apart, or something may be wrong
+picktol  = 2; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 [ptrace,strace,header,pslows,badpicks] = ...
     ConvertFilterTraces(dlist,rfile,zfile,picktol,printinfo);
 fclose('all'); % Close all open files from reading
 %}
 %% 3) Bin by p value (build pIndex)
 %
-npb = 5; % Average number of traces per bin
-numbin = round((1/npb)*size(ptrace,2));
+npb = 3; % Average number of traces per bin
+numbin = round((1/npb)*size(ptrace,1));
 pbinLimits = linspace(.035,.08,numbin);
 checkind = 1;
 [pIndex,pbin] = pbinIndexer(pbinLimits,pslows,checkind);
@@ -66,6 +66,19 @@ adj = 0.1; % This adjusts the Tukey window used.
 [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %}
 
+%{
+eos513 = false;
+if eos513
+    % Temp Cell obj construction for EOS 513 project
+    pcoda = ptrace .* WIN;
+    for ii = 1:nbins
+        D1{ii} = { { strace(pIndex(:,ii),:) } , { pcoda(pIndex(:,ii),:) } , {pslow(ii)} };
+    end
+  
+end
+%}    
+
+
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
@@ -87,8 +100,13 @@ close(h)
 %}
 %% 6) Filter Impulse Response
 %
-t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
-t2 = db(1).t2;
+if exist('db','var')
+    t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
+    t2 = db(1).t2;
+else
+    t1 = 3;
+    t2 = 5;
+end
 dt = header{1}.DELTA;
 fLow = 0.04;
 fHigh = 1;

@@ -8,16 +8,24 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import os, re
+import os, re, time, shutil
 from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError
+
+###########################################################################
+# HELPER FUNCTIONS
+###########################################################################
+def renameEvent(eventdir,error):
+    shutil.move(eventdir,eventdir + "_" + error)
 
 ###########################################################################
 # SET DIRECTORIES, FILES
 ###########################################################################
 # networks = ['CN','NE','X5']
-networks = ['TEST']
+networks = ['CN','NE','X5']
 datadir = '/media/TerraS' 
-logfile = open(datadir + '/log', 'w')
+d = time.localtime(time.time())
+logname = "/log_{}_{}_{}_{}".format(d.tm_year,d.tm_mon,d.tm_mday,d.tm_hour)
+logfile = open(datadir + logname, 'w')
 
 ###########################################################################
 #  SET regex matches
@@ -49,7 +57,7 @@ for network in networks:
             stdir = os.path.join(netdir,station)
             events = os.listdir(stdir)
         except OSError as e:
-            logfile.write("Encountered Error: " + repr(e) + " --Skipping \n")
+            logfile.write("Encountered Error: " + repr(e) + " --Skipping station: " + station + "\n")
             print e
             continue
 
@@ -74,8 +82,8 @@ for network in networks:
 ###########################################################################
             if len(comps) != 3:
                 print "Did not register 3 components in directory:", eventdir
-                logfile.write(eventdir + ": Did not register 3 components --skipping\n")
-
+                logfile.write('Error Processing: ' + eventdir +  ' Did not register 3 components\n')
+                continue
                 # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
                 # Pull out sacfiles from zipped sorted list.
             comps.sort()
@@ -84,14 +92,21 @@ for network in networks:
             # Run Processing function
             try:
                 calculate_slowness(eventdir, sacfiles)
-                #print "successfully added slowness to headers in event:", event
-                #detrend_taper_rotate(eventdir, sacfiles)
-                #print "successfully processed event:", eventdir
-            except IOError as e:
-                print "error processing: "
-                logfile.write('Error Processing: ' + eventdir + "\n")
-            except NoSlownessError:
-                print "did not find a good slowness in event folder:", eventdir
-
+                detrend_taper_rotate(eventdir, sacfiles)
+            except IOError:
+                print "IOERROR in event:", eventdir
+                logfile.write("Error Processing: " + eventdir + " IOError\n")
+                renameEvent(eventdir,"IOERROR")
+                continue
+            except NoSlownessError, err:
+                print err.parameter
+                logfile.write('Error Processing: ' + eventdir + err.parameter + "\n")
+                renameEvent(eventdir,err.parameter)
+                continue
+            except ValueError:
+                print "ValueError in event:", eventdir
+                logfile.write("Error Processing: " + eventdir + " ValueError\n")
+                renameEvent(eventdir,"ValueError")
+                continue
 
 logfile.close()

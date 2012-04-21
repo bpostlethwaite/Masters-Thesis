@@ -22,7 +22,6 @@ ind2 = 1;
 bad = false;
 badpick.event = [];
 badpick.errmsg = [];
-N = 2^14;            % Extend all traces evenly. 
 for ii = 1:length(dlist)
     % TRY I/O: Read info from sac files
     try
@@ -32,6 +31,10 @@ for ii = 1:length(dlist)
         % Convert Each trace (rotate coordinates)
         [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
         
+        % On first pass set N
+        if ii == 1
+            N = 2^nextpow2(length(p));
+        end
         % Check to make sure picked time interval greater than picktol and
         % That the starting time in the record header matches the picks (make
         % sure it makes sense (Both T1 and T3 must be greater that record

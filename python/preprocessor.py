@@ -20,7 +20,10 @@ import os.path, math
 #  CREATE CUSTOM ERRORS
 ###########################################################################
 class NoSlownessError(Exception):
-    pass
+    def __init__(self, value):
+        self.parameter = value
+        def __str__(self):
+            return repr(self.parameter)
 
 ###########################################################################
 #  SET UTILS, VARS & REFS
@@ -43,7 +46,10 @@ def calculate_slowness(eventdir, sacfiles):
     # READ 3 Component SAC files into object array.
     for i in range(3):
         ff = os.path.join(eventdir, sacfiles[i])
-        st = read(ff)
+        try:
+            st = read(ff)
+        except Exception, err:
+            raise IOError
         if i == 0:
             evdp = st[0].stats.sac['evdp']
             gcarc = st[0].stats.sac['gcarc']
@@ -55,13 +61,11 @@ def calculate_slowness(eventdir, sacfiles):
                 if result[1] == 'P':
                     slowness = float(result[3])
                     break
-                elif result[1] == 'Pg':
-                    slowness = float(result[3])
-                    break
                 else:
-                    print results
-                    raise NoSlownessError
-        
+                    raise NoSlownessError('No_slowness_GARC_is:{}'.format(gcarc))
+        st[0].stats.sac['kuser0'] = "P-slow"
+        st[0].stats.sac['user0'] = round(slowness * deg2rkm,4)
+        st[0].write(ff, format = 'SAC')
 ###########################################################################
 # detrend_taper_rotate function to be imported by program which walks through
 # directories and applies this function.
@@ -80,11 +84,15 @@ def detrend_taper_rotate(eventdir, sacfiles):
         ff = os.path.join(eventdir, sacfiles[i])
         st = read(ff)
         ev.append(st[0]) 
-
-    # Detrend and taper all three components
+    
+    dt = ev[1].stats.delta
+    # window, detrend, taper all three components
     for i in range(3):
+        ev[i].stats.sac['b'] = ev[i].stats.sac['t1'] - 70
+        n1 = round(ev[i].stats.sac['b']/dt)
+        ev[i].data = ev[i].data[n1:n1+16384] # window 70s before pick, extend to a pwr of 2
         ev[i].data = detrend(ev[i].data) # Detrend all components
-        ctap = cosTaper(len(ev[i].data))
+        ctap = cosTaper(16384)
         ev[i].data = ev[i].data * ctap
 
     # Rotate to E and N to R and T

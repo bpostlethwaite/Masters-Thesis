@@ -12,14 +12,16 @@ addpath functions
 %% Variables
 user = getenv('USER');
 sacfolder = '/media/TerraS/CNSN';
+%sacfolder = '/media/TerraS/CNSN';
 datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
 rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %%  Select Station to Process and load station data.
+%station = 'VTIN';
 station = 'ULM';
 workingdir = fullfile(sacfolder,station);
-load(fullfile(databasedir,[station,'.mat']))
+%load(fullfile(databasedir,[station,'.mat']))
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 %% Select Mode
 append = false;    % Appends new station entry (multiple same stations OK)

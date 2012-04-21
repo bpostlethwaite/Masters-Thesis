@@ -34,18 +34,21 @@ for ii = 1:steps
     WIN( ii, nbegintaper : nbegintaper + Ntaper - 1) = tukeywin(Ntaper,adj);
     %
     if viewtaper > 0
-        t1 = begintaper;
-        t3 = endtaper;
-        t4 = round( (header{ii}.T4 - header{ii}.B)/dt );
+        t0 = round( (header{ii}.T0 - header{ii}.B) /dt );
+        t1 = round( (header{ii}.T1 - header{ii}.B) /dt );
+        t2 = round( (header{ii}.T2 - header{ii}.B)/dt );
+        t3 = round( (header{ii}.T3 - header{ii}.B) /dt );
         figure(34)
         plot(t,WIN(ii,:),t,ptrace(ii,:)./max(ptrace(ii,:)))
-        line([ t1; t1], [-1; 1], ...
+        line([ t0; t0], [-1; 1], ...
             'LineWidth', 2, 'Color', [.8 .8 .2]);
-        line([ t3; t3], [ -1, 1], ...
+        line([ t1; t1], [ -1, 1], ...
             'LineWidth', 2, 'Color', [.8 .2 .8]);
-        line([ t4; t4], [ -1, 1], ...
+        line([ t2; t2], [ -1, 1], ...
             'LineWidth', 2, 'Color', [.8 .4 .4]);
-        legend('Window','normalized trace','T1','T3','T4')
+        line([ t3; t3], [ -1, 1], ...
+            'LineWidth', 2, 'Color', [.4 .4 .4]);
+        legend('Window','normalized trace','T0','T1','T2','T3')
         title(sprintf('Trace # %i\nPress Enter to Continue',ii))
         input('Press Enter to Continue\n')
     end

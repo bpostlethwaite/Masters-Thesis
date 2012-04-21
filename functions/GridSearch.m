@@ -144,7 +144,8 @@ figure(29)
     hold off
 
 %}
-%% Pack results into struct    
+%% Pack results into struct  
+results.method = 'bostock';
 results.rbest = rbest;
 results.vbest = vbest;
 results.hbest = hbest;
