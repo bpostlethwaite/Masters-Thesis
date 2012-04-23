@@ -32,7 +32,7 @@ remove = false;    % Removes all entries associated with particular station
 %% Run ProcessTraces
 % Run ProcessTraces then collect results into structure
 try
-    ProcessTraces
+    %ProcessTraces
     % For a description of data see DataDescription.m
     dbn.station = station;    
     dbn.processnotes = [];

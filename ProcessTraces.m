@@ -97,6 +97,9 @@ for ii = 1:nbins
     waitbar(ii/nbins,h)
 end
 close(h)
+
+
+
 %}
 %% 6) Filter Impulse Response
 %
@@ -104,8 +107,8 @@ if exist('db','var')
     t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
     t2 = db(1).t2;
 else
-    t1 = 3;
-    t2 = 5;
+    t1 = 3.81;
+    t2 = 4.5;
 end
 dt = header{1}.DELTA;
 fLow = 0.04;
@@ -114,9 +117,14 @@ numPoles = 2;
 
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 
+%load Rec_50_it
+%load Rec_100_it_splines
+%brec = REC;
+%brec = fbpfilt(brec,dt,fLow,fHigh,numPoles,0);
+
 for ii=1:size(rec,1);
     %brtrace(ii,:)=filter(h2,rtrace(ii,:));
-    brec(ii,:)=brec(ii,:)/max(abs(brec(ii,1:800)));
+    brec(ii,:)=brec(ii,:)/(max(abs(brec(ii,1:800))) + 0.001);
     brec(ii,:)=brec(ii,:)/pslow(ii)^.2;
 end
 
@@ -126,12 +134,13 @@ tps = (it + round(t1/dt)-1)*dt;
 %}
 %% 7) IRLS Newtons Method to find regression Tps
 %
+
 viewfit = 1; %View newton fit (0 is off)
 H = 35; % Starting guesses for physical paramaters
 alpha = 6.5;
 beta = 3.5;
-tol = 1e-2;  % Tolerance on interior linear solve is 10x of Newton solution
-itermax = 100; % Stop if we go beyond this iteration number
+tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
+itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
 
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
