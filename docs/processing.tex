@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+\begin{document}
+
+\section{Iterative Solvers}
+
+To minimize the error produced in the grid search for improperly chosen
+$tps$ we find optimal $\alpha$, $\beta$ and crustal thickness $h$ which
+define the minimal residual curve. 
+\begin{equation}
+Tps = h \left( \sqrt{ \frac{1}{\beta^2} - p^2} - \sqrt{ \frac{1}{\alpha^2} - p^2} \right)
+\end{equation}
+
+\subsection{Newton's Method}
+To find the minimum we seek to minize the sum of the squares of the residual $r=(t_i - f(\mathbf{x}))$ 
+where $f(\mathbf{x}) = Tps$ as in \emph{1)} and $\mathbf{x} = \lbrack \alpha,\beta,h \rbrack^T$.
+Thus we seek 
+\begin{equation}
+\mbox{min}\; \vert r^Tr \vert = \mbox{min}\; \vert \phi \vert
+\end{equation}
+which is true when $\frac{d\phi}{d\mathbf{x}} = g(\mathbf{x}^*) = 0 $. The solution 
+$\mathbf{x}^*$ is the initial guess $\mathbf{x}_0 +$ the vector $\mathbf{m} $ which 
+finds the minimum $g(\mathbf{x}^*) = 0$. Taking the Taylor approximation gives,
+\begin{equation}
+g(\mathbf{x}+\mathbf{m}) = g(\mathbf{x}) + \mathbf{Hm} + O(\|mathbf{m}\|)
+\end{equation}
+The hessian $\mathbf{H}$ is equal to $\nabla^2\phi$ which is given by
+$\sum_{i,j=1}^{n} \frac{\partial^2 \phi}{\partial x_i \partial x_j}$. As 
+$g(\mathbf{x}+\mathbf{m})=0$ we can rewrite \emph{3)} as
+\begin{equation}
+\mathbf{m}=-\mathbf{H}^-1g(mathbf{x})
+\end{equation}
+and iterate until convergence with
+\begin{equation}
+\mathbf{x}_{k+1} = \mathbf{x}_k + \mathbf{m}
+\end{equation}
+
+
+
+
+\end{document}

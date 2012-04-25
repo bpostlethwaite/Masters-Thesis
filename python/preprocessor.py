@@ -53,6 +53,18 @@ def calculate_slowness(eventdir, sacfiles):
         if i == 0:
             evdp = st[0].stats.sac['evdp']
             gcarc = st[0].stats.sac['gcarc']
+            # Get slowness P
+            process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+               shell=True, executable = "/bin/bash", stdout = pipe )
+            results =  process.communicate()[0].rstrip().split('\n')
+            for result in results:
+                result = result.split()
+                if result[1] == 'P':
+                    slowness = float(result[3])
+                    break
+                else:
+                    raise NoSlownessError('No_slowness_GARC_is:{}'.format(gcarc))
+            # Get PP time and set in headers
             process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
                shell=True, executable = "/bin/bash", stdout = pipe )
             results =  process.communicate()[0].rstrip().split('\n')
@@ -77,6 +89,7 @@ def detrend_taper_rotate(eventdir, sacfiles):
     """preprocess performs the demean,detrend,taper and rotation into radial and
     transverse components. It saves these at STACK_R.sac and STACK_T.sac"""
     
+    N = 16384  #Max length of seismic array, truncate for speed
     ev = []
     
     # READ 3 Component SAC files into object array.
@@ -86,11 +99,13 @@ def detrend_taper_rotate(eventdir, sacfiles):
         ev.append(st[0]) 
     
     dt = ev[1].stats.delta
+    pslow = ev[1].stats.sac['user0']
+
     # window, detrend, taper all three components
     for i in range(3):
-        ev[i].stats.sac['b'] = ev[i].stats.sac['t1'] - 70
-        n1 = round(ev[i].stats.sac['b']/dt)
-        ev[i].data = ev[i].data[n1:n1+16384] # window 70s before pick, extend to a pwr of 2
+        ev[i].stats.sac['b'] = ev[i].stats.sac['t0'] - 70 # start seismogram 70 seconds before P arrival, adjust beginning time in header.
+        n1 = round(ev[i].stats.sac['b']/dt) # Get array number of new beginning
+        ev[i].data = ev[i].data[n1:n1+N] # truncate from 70s before pick to
         ev[i].data = detrend(ev[i].data) # Detrend all components
         ctap = cosTaper(16384)
         ev[i].data = ev[i].data * ctap
@@ -99,15 +114,35 @@ def detrend_taper_rotate(eventdir, sacfiles):
     baz = ev[0].stats.sac['baz']
     # Note R, T = rotate(N, E) 
     ev[1].data, ev[0].data = rotate(ev[1].data, ev[0].data,baz)
-
-
+    # Call freetran and rotate into P and S space
+    ev[1].data, ev[2].data = freetran(
+        ev[1].data, ev[2].data, pslow, 6.06, 3.5)
     # Save transformed data objects
-    ev[0].write(os.path.join(eventdir,'STACK_T.sac'), format='SAC')
-    ev[1].write(os.path.join(eventdir,'STACK_R.sac'), format='SAC')
-    ev[2].write(os.path.join(eventdir,'STACK_Z.sac'), format='SAC')
+    ev[1].write(os.path.join(eventdir,'STACK_P.sac'), format='SAC')
+    ev[2].write(os.path.join(eventdir,'STACK_S.sac'), format='SAC')
 
     
 
+def freetran(rcomp, zcomp, pslow, alpha, beta):
+    """ Function FREETRAN converts radial and vertical component 
+    displacement seismograms to P and S components assuming 
+    a given slowness PSLOW, and surface velocities alpha, beta.
+    (Using 6.06 and 3.5 for A0 and B0)
+    Usage: pcomp, scomp = freetran(rcomp,zcomp,pslow,alpha,beta)
+    See: 'Bostock, M. Mantle Stratigraphy and Evolution of the
+    Slave Province, 1998' for formulation"""
 
-
+    alpha2 = alpha*alpha
+    beta2 = beta*beta
+    p2 = pslow*pslow
+    qalpha = math.sqrt(1/alpha2 - p2)
+    qbeta = sqrt( 1/beta2 - p2)
+    vpz = -(1 - 2 * beta2 * p2) / (2 * alpha * qalpha);
+    vpr = pslow * beta2 / alpha;
+    vsr = (1 - 2 * beta2 * p2)/( 2 * beta * qbeta);
+    vsz = pslow * beta;
+    trn = np.array([ [-vpr,vpz] , [-vsr,vsz] ]);
+    dum = np.dot( trn, np.vstack( (Ur, Ut) ) )
+    
+    return dum[0,], dum[1,]
 

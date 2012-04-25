@@ -10,7 +10,8 @@
 ###########################################################################
 import os, re, time, shutil
 from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError
-
+import subprocess
+sh = subprocess.Popen
 ###########################################################################
 # HELPER FUNCTIONS
 ###########################################################################
@@ -91,8 +92,10 @@ for network in networks:
 
             # Run Processing function
             try:
-                calculate_slowness(eventdir, sacfiles)
-                detrend_taper_rotate(eventdir, sacfiles)
+                # calculate_slowness(eventdir, sacfiles)
+                # detrend_taper_rotate(eventdir, sacfiles)
+                
+                # sh("rm {}/*STACK*".format(eventdir), shell=True, executable = "/bin/bash")
             except IOError:
                 print "IOERROR in event:", eventdir
                 logfile.write("Error Processing: " + eventdir + " IOError\n")

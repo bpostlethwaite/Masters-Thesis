@@ -115,12 +115,13 @@ fLow = 0.04;
 fHigh = 1;
 numPoles = 2;
 
-brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 
 %load Rec_50_it
 %load Rec_100_it_splines
-%brec = REC;
-%brec = fbpfilt(brec,dt,fLow,fHigh,numPoles,0);
+load Rec_100_it_bsplines
+brec = REC;
+brec = fbpfilt(brec,dt,fLow,fHigh,numPoles,0);
 
 for ii=1:size(rec,1);
     %brtrace(ii,:)=filter(h2,rtrace(ii,:));
@@ -147,6 +148,7 @@ damp = 0.2;
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec,Tps',dt,pslow);
+
 %[ results ] = GsearchKanamori(brec,dt,pslow);
 %% Viewers
 %{
