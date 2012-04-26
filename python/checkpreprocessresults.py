@@ -14,93 +14,72 @@ from scipy.signal.signaltools import detrend
 import random, os, os.path, re
 import matplotlib.pyplot as plt
 from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError
+from loopApplyDRIVER import is_number
 
+###########################################################################
+# Some variables and stuff
+###########################################################################
+reOld = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
+reNew = re.compile(r'^stack_(\w)\.sac')
+newfs = []
+oldfs = []
 
 ###########################################################################
 # Get random event directory
 ###########################################################################
-checkdir = '/media/TerraS/TEST'
+checkdir = '/media/TerraS/X5'
 stations = os.listdir(checkdir)
 station = stations[random.randint(0,len(stations)-1)]
 events = os.listdir(checkdir + '/' + station)
-event = events[random.randint(0,len(events)-1)]
-eventdir = os.path.join(checkdir,station,event)
-print "Going to compare data in event directory: ", eventdir
+while True:
+    event = events[random.randint(0,len(events)-1)]
+    if not is_number(event): # Make sure event dir is right format, skip those not in number format
+        print "skipping event", event
+        continue
+    eventdir = os.path.join(checkdir,station,event)
+    print "Going to compare data in event directory: ", eventdir
 ###########################################################################
 # Read in files
 ###########################################################################
-
-reOld = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
-reNew = re.compile(r'^STACK_(\w)\.sac')
-
-fs = os.listdir(eventdir)
-newfs = []
-oldfs = []
-comps = []
-
+    files = os.listdir(eventdir)
+    comps = []
+    for fs in files:
+        try:
+            m1 = reNew.match(fs)
+            comps.append((m1.group(1),fs)) # Save the component extension, see Regex above.
+        except AttributeError as e:
+            pass
 ###########################################################################
-# Checking processing function on random directories:
+# Check if three components have been found
+# If yes, sort alphebetically and call processor function
 ###########################################################################
-for f in fs:
+    if len(comps) != 2:
+        print "Did not register 2 components in directory:", eventdir
+        continue
+        # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
+        # Pull out sacfiles from zipped sorted list.
+    comps.sort()
+    _ , sacfiles = zip(*comps)
+
     try:
-        m1 = reOld.match(f)
-        comps.append((m1.group(4),f)) # Save the component extension, see Regex above.
-    except AttributeError as e:
-        print "No match on file:",f
-if len(comps) != 3:
-    print "Did not register 3 components in directory:", eventdir
-    # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
-    # Pull out sacfiles from zipped sorted list.
-comps.sort()
-_ , sacfiles = zip(*comps)
-try:
-    calculate_slowness(eventdir, sacfiles)
-except NoSlownessError:
-    print "did not find a good slowness in event folder:", eventdir
-#detrend_taper_rotate(eventdir,sacfiles)
+        pt = read(os.path.join(eventdir,sacfiles[0]))
+        pt = pt[0]
+        st = read(os.path.join(eventdir,sacfiles[1]))
+        st = st[0]
+    except IOError:
+        print "some error opening SAC files"
+        continue
 
-
-
-
-# for f in fs:
-#     try:
-#         m1 = reOld.match(f)
-#         if m1 is not None:
-#             oldfs.append(eventdir + '/' + m1.group(0))
-#         m2 = reNew.match(f)
-#         if m2 is not None:
-#             newfs.append(eventdir + '/' + m2.group(0))
-#         #comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
-#     except AttributeError:
-#         pass
-
-# trOld = []
-# trNew = []
-
-# for f in sorted(oldfs):
-#     st = read(f)
-#     st[0].data = detrend(st[0].data)
-#     ctap = cosTaper(len(st[0].data))
-#     st[0].data = st[0].data * ctap
-#     trOld.append(st[0]) 
     
-# for f in sorted(oldfs):
-#     st = read(f)
-#     trNew.append(st[0]) 
+    plt.subplot(2,1,1)
+    plt.plot(pt.data)
+    plt.title('P-trace')
+    plt.subplot(2,1,2)
+    plt.plot(st.data)
+    plt.title('S-trace')
+    plt.show()
 
-# # Plot and compare
-# N = len(trNew[1].data)
-# t = range(N)
-# dt = trNew[0].stats.delta
-
- 
-#plt.subplot(2,1,1)
-#
-#plt.title('Frequency comparison')
-#plt.subplot(2,1,2)
-#
-#plt.show()
-
+    
 
 
 

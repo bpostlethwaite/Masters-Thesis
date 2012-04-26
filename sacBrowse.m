@@ -37,7 +37,13 @@ while flag
 end
 
 if sacfile
-    [t1, d] = readsac(sacfile);
-    S = readsac(sacfile);        
-    plot(t1,d);
+    [~, d] = readsac(sacfile);
+    d = d./max(d);
+    S = readsac(sacfile);
+    dt = S.DELTA;
+    t0 = (S.T0 - S.B) / dt;
+    plot(d)
+    line([ t0; t0], [ -1, 1], ...
+            'LineWidth', 2, 'Color', [.4 .4 .4]);
+    %plot(d(round(70/0.05):round(52/0.05)+5000));
 end
