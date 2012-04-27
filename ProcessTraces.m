@@ -75,35 +75,32 @@ close(h)
 
 %}
 %% 6) Filter Impulse Response
-%
+fLow = 0.04;
+fHigh = 1.3;
+numPoles = 2;
+
+%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+% Scale by increasing p value
+%pscale = max(1./pslow) - 1./pslow + 5;
+%pscale = pscale./max(pscale);
+pscale = (pslow + min(pslow)).^2;
+pscale = pscale/max(pscale);
+brec = rec;
+
+for ii=1:size(brec,1);
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
+    %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
+end
+
+
+%% Select tps
 if exist('db','var')
     t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
     t2 = db(1).t2;
 else
-    t1 = 4.5;
-    t2 = 5.4;
+    t1 = 4.4;
+    t2 = 5.1;
 end
-
-fLow = 0.04;
-fHigh = 1.0;
-numPoles = 2;
-
-brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
-% Scale by increasing p value
-pscale = max(1./pslow) - 1./pslow;
-
-
-for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:800))) + 0.0001) ;%* (pscale(ii));
-    %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
-end
-%% Curvelet Denoise
-thresh = 0.3;
-% Set curvelet options
-
-brec = performCurveletDenoise(brec,dt,thresh);
-
-%% Select tps
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 
@@ -120,6 +117,11 @@ itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
 
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
+
+%% Curvelet Denoise
+thresh = 0.01;
+% Set curvelet options
+brec = performCurveletDenoise(brec,dt,thresh);
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec,Tps',dt,pslow);

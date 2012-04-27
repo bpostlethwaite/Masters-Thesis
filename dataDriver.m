@@ -19,7 +19,7 @@ rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %%  Select Station to Process and load station data.
 %station = 'VTIN';
-station = 'GAC';
+station = 'EDM';
 workingdir = fullfile(sacfolder,station);
 %load(fullfile(databasedir,[station,'.mat']))
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);

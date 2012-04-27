@@ -62,7 +62,7 @@ for iv=1:nv
   end
 end
 %stackvr=(stpps+stpss)/2;
-stackvr=(.9*stpps + .1*stpss);
+stackvr=(1*stpps + .0*stpss);
 % Find max values indices
 smax=max(max(stackvr));
 [iv,ir]=find(stackvr == smax);
