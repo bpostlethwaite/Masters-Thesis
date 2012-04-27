@@ -11,17 +11,16 @@ addpath functions
 
 %% Variables
 user = getenv('USER');
-sacfolder = '/media/TerraS/CNSN';
+sacfolder = '/media/TerraS/X5';
 %sacfolder = '/media/TerraS/CNSN';
 datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
-rfile = 'STACK_R.sac';
-zfile = 'STACK_Z.sac';
+rfile = 'stack_R.sac';
+zfile = 'stack_Z.sac';
 %%  Select Station to Process and load station data.
 %station = 'VTIN';
-station = 'EDM';
+station = 'CTSN';
 workingdir = fullfile(sacfolder,station);
-%load(fullfile(databasedir,[station,'.mat']))
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 %% Select Mode
 append = false;    % Appends new station entry (multiple same stations OK)
@@ -38,7 +37,6 @@ try
     dbn.processnotes = [];
     dbn.scanstatus = true; 
     dbn.failmessage = 'None'; 
-    dbn.badpicks = badpicks;
     dbn.method = results.method;
     dbn.rbest = results.rbest;
     dbn.vbest = results.vbest;
@@ -48,22 +46,24 @@ try
     dbn.rRange = results.rRange;
     dbn.vRange = results.vRange;
     dbn.hRange = results.hRange;
-    dbn.stderr1 = results.stderr1;
-    dbn.stderr2 = results.stderr2;
+    dbn.stderr1 = results.sterr1;
+    dbn.stderr2 = results.sterr2;
+    dbn.errV = results.errV;
+    dbn.errR = results.errR;
+    dbn.errH = results.errH;
     dbn.smax = results.smax;
     dbn.hmax = results.hmax;
     dbn.tps = results.tps;
     dbn.tpps = results.tpps;
     dbn.tpss = results.tpss;
-    dbn.rec = brec;
-    dbn.pslow = pslow;  
     dbn.dt = dt;   
     dbn.npb = npb;   
     dbn.filterLow = fLow; 
     dbn.filterHigh = fHigh; 
+    dbn.thresh = thresh;
     dbn.t1 = t1;        
     dbn.t2 = t2;        
-    dbn.dlist = dlist;
+    dbn.processnotes = [];
     
 catch e
     dbn.station = station;  
@@ -77,18 +77,16 @@ end
 close all
 if dbn.scanstatus
     plotStack(dbn);
-    err = results.smax - results.stderr1;
-    %number of indices inside contour range for Vp
-    errNs = sum(any(results.stackvr > err,2)); 
-    dv = results.vRange(2) - results.vRange(1);
-    errV = 0.5 * dv * errNs;
-    fprintf('Vp is +/- %1.2f km/s\n',errV)
+    fprintf('Vp is +/- %1.3f km/s\n',results.errV)
+    fprintf('R is +/- %1.3f \n',results.errR)    
+    fprintf('H is +/- %1.3f \n',results.errH)    
+    
 end
 %% Enter Processing Notes:
-notes = inputdlg('Enter Notes','Processing Notes',[3 80]);
-dbn.processnotes = notes; 
-%% Save the database.
-%% Select next Index, Entry Mode
+%notes = inputdlg('Enter Notes','Processing Notes',[3 80]);
+%dbn.processnotes = notes; 
+
+%% Load Database and Save entry
 %{
 if ~append
     k = strcmp(station, {db.station});
@@ -107,10 +105,18 @@ if ~append
 else
     new = length(db)+1; % Get next entry in database for appending
 end
-%save(sprintf('%s/database.mat',datadir),'db','-v6')
 %}
-%% Show database info:
 
+load(fullfile(datadir,'database.mat'))
+db(end + 1) = dbn; %#ok<NASGU>
+save(sprintf('%s/database.mat',datadir),'db','-v6')
+clear db
+
+%}
+%% Load and Plot
+load(fullfile(datadir,'database.mat'))
+dbn = db(x);
+plotStack(dbn);
 
 %% Compare database stations to station folder
 %{

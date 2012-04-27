@@ -210,7 +210,7 @@ def ppicker(eventdir,rname,zname):
 
     while True:
     #plt.subplot(2,1,1)
-        print "Pick 3 Arrivals on event:", eventdir
+        print "Pick P-coda. Begin then End on event:", eventdir
         plt.figure( num = None, figsize = (22,6) )
         plt.plot(p, label = 'Pcomp')
         plt.xticks(nn[::200],t[::200])
@@ -222,11 +222,10 @@ def ppicker(eventdir,rname,zname):
         plt.xlabel('Time \n P arrival is zero seconds')
         plt.legend()
         # GINPUT b1 = add point |  b2 = STOP |  b3 = delete point
-        x = plt.ginput(n = 3, timeout = 0, show_clicks = True)
+        x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
         try:
             T1 = x[0][0]*dt + b
-            T2 = x[1][0]*dt + b
-            T3 = x[2][0]*dt + b
+            T3 = x[1][0]*dt + b
         except IndexError:
             print "Not all picks made in", eventdir
             print "Please retry the picks"
@@ -238,11 +237,9 @@ def ppicker(eventdir,rname,zname):
             continue
         if 'y' in inp:
             rt.stats.sac['t1'] = T1
-            rt.stats.sac['t2'] = T2
             rt.stats.sac['t3'] = T3
             rt.write(rf, format='SAC')
             zt.stats.sac['t1'] = T1
-            zt.stats.sac['t2'] = T2
             zt.stats.sac['t3'] = T3
             zt.write(zf, format='SAC')
             return

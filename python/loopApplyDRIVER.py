@@ -62,7 +62,7 @@ if __name__== '__main__' :
     ###########################################################################
     # Walk through all stations found in network folder
     ###########################################################################
-        stations = ['CRLN']
+        stations = ['CTSN']
         for station in stations:
             try: 
                 logfile.write("operating on station: " + station + "\n")

@@ -20,6 +20,9 @@ function [ results ] = GridSearch(rec,tps,dt,pslow)
 
 
 %% Grid parameters.
+adjtpps = 0.7;
+adjtpss = 0.3;
+
 % P-velocity
 nv=200; %num  pvelocity paramters
 v1=5;   % Range of v searched
@@ -62,7 +65,7 @@ for iv=1:nv
   end
 end
 %stackvr=(stpps+stpss)/2;
-stackvr=(1*stpps + .0*stpss);
+stackvr=(adjtpps*stpps + adjtpss*stpss);
 % Find max values indices
 smax=max(max(stackvr));
 [iv,ir]=find(stackvr == smax);
@@ -84,7 +87,7 @@ end
 
 % Find max values indices
 %stackh=(htps+htpps+htpss)/3;
-stackh = (0.6*htps + 0.3*htpps + 0.1*htpss);
+stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 
@@ -93,12 +96,22 @@ hbest=h(ih);
 tps = hbest*(f1-f2);
 tpps = hbest*(f1+f2);
 tpss = 2*hbest*f1;
-sterr1=sqrt( mean( var([gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-    gvr(round(tpss/dt)+1+[0:np-1]*nt)]) /(2*np) ));
+sterr1=sqrt( mean( var([adjtpps*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
+    -adjtpss*gvr(round(tpss/dt)+1+[0:np-1]*nt)]) /(2*np) ));
 
-sterr2 = sqrt(mean(var([gvr(round(tps/dt)+1+[0:np-1]*nt),...
-                 gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-                 -gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np)));
+sterr2 = sqrt(mean(var([0.5*gvr(round(tps/dt)+1+[0:np-1]*nt),...
+                 0.3*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
+                 -0.2*gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np)));
+             
+    err = smax - sterr1;
+    % Calculate +/- for Vp
+    errVpn = sum(any(stackvr > err,2)); 
+    errV = 0.5 * dv * errVpn;
+    % Calculate +/- for R
+    errRn = sum(any(stackvr > err,1)); 
+    errR = 0.5 * dr * errRn; 
+    % Calculate +/- for H
+    errH = 0.5 * dh * sum( (stackh > (hmax - sterr2)) ~= 0);
 
 %% Plots Results
 %{
@@ -152,11 +165,14 @@ results.vbest = vbest;
 results.hbest = hbest;
 results.stackvr = stackvr;
 results.stackh = stackh;
+results.errV = errV;
+results.errR = errR;
+results.errH = errH;
 results.rRange = r;
 results.vRange = v;
 results.hRange = h;
-results.stderr1 = sterr1;
-results.stderr2 = sterr2;
+results.sterr1 = sterr1;
+results.sterr2 = sterr2;
 results.smax = smax;
 results.hmax = hmax;
 results.tps = tps;
