@@ -11,7 +11,6 @@
 import os, re, time, shutil
 from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError, ppicker
 from preprocessor import poorDataError
-from obspy.core import read
 import subprocess
 sh = subprocess.Popen
 ###########################################################################
@@ -63,6 +62,7 @@ if __name__== '__main__' :
     ###########################################################################
     # Walk through all stations found in network folder
     ###########################################################################
+        stations = ['CRLN']
         for station in stations:
             try: 
                 logfile.write("operating on station: " + station + "\n")
@@ -111,20 +111,7 @@ if __name__== '__main__' :
                 try:
                 # calculate_slowness(eventdir, sacfiles)
                     ppicker(eventdir,sacfiles[0],sacfiles[1])
-                    rf = os.path.join(eventdir, sacfiles[0])
-                    zf = os.path.join(eventdir, sacfiles[1])
-                    rt = read(rf)
-                    zt = read(zf)
-                    rt = rt[0]
-                    zt = zt[0]
-                    print rt.stats.sac['t0']
-                    print rt.stats.sac['t1']        
-                    print rt.stats.sac['t2']
-                    print rt.stats.sac['t3']
-                    print zt.stats.sac['t2']
-                    print zt.stats.sac['t2']
-                    print zt.stats.sac['t2']
-#detrend_taper_rotate(eventdir, sacfiles)
+                    #detrend_taper_rotate(eventdir, sacfiles)
                     #sh("rm {}/*stack*".format(eventdir), shell=True, executable = "/bin/bash")
                 #except IOError:
                     #print "IOERROR in event:", eventdir

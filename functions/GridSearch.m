@@ -57,12 +57,12 @@ for iv=1:nv
      f2=sqrt((1/v(iv))^2-p2);
      tpps=(f1+f2)./(f1-f2).*tps;
      tpss=2*f1./(f1-f2).*tps;
-     stpps(iv,ir)=mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
-     stpss(iv,ir)=-mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
+     stpps(iv,ir) = mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
+     stpss(iv,ir) = -mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
   end
 end
-stackvr=(stpps+stpss)/2;
-
+%stackvr=(stpps+stpss)/2;
+stackvr=(.9*stpps + .1*stpss);
 % Find max values indices
 smax=max(max(stackvr));
 [iv,ir]=find(stackvr == smax);
@@ -83,7 +83,8 @@ for ih=1:nh
 end
 
 % Find max values indices
-stackh=(htps+htpps+htpss)/3;
+%stackh=(htps+htpps+htpss)/3;
+stackh = (0.6*htps + 0.3*htpps + 0.1*htpss);
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 
@@ -92,8 +93,8 @@ hbest=h(ih);
 tps = hbest*(f1-f2);
 tpps = hbest*(f1+f2);
 tpss = 2*hbest*f1;
-sterr1=sqrt( mean(var([gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-    gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(2*np)));
+sterr1=sqrt( mean( var([gvr(round(tpps/dt)+1+[0:np-1]*nt),...
+    gvr(round(tpss/dt)+1+[0:np-1]*nt)]) /(2*np) ));
 
 sterr2 = sqrt(mean(var([gvr(round(tps/dt)+1+[0:np-1]*nt),...
                  gvr(round(tpps/dt)+1+[0:np-1]*nt),...

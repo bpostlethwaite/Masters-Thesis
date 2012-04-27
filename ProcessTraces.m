@@ -2,6 +2,7 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 
+loadtools;
 
 %% 1) Filter Event Directories
 %
@@ -29,54 +30,26 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %}
 %% 4) Normalize
-dt = header{1,1}.DELTA;
-n1 = round(100/dt);
-%rms = zeros(length(ptrace),2);
+dt = header{1}.DELTA;
+ext = round(20/dt);
 %{
 for ii = 1:size(ptrace,1)
-    rms(ii,1) = norm(ptrace(ii,1:n1))/sqrt(n1);
-    %rms(ii,2) = norm(ptrace{ii}(1,end-n1-1:end))/sqrt(n1);
+    T1 = round((header{1}.T1 - header{1}.B)/dt);
+    normnoise = norm(ptrace(ii, 1 : ext));
+    normP = norm(ptrace(ii, T1 : T1 + ext ));
+    nr = (normP/normnoise);
+    P(ii,:) = detrend(ptrace(ii,:)) ; %.* nr;
+    S(ii,:) = detrend(strace(ii,:)) ; %.* nr;
 end
-sfact = 0.5; % Rescale spread between magnitudes between sfact->1
-range = 1-sfact;
-scale = [];
-for ii = 1:nbins
-    rmsN = rms(pIndex(:,ii));
-    rmsR = rmsN/max(rmsN);
-    sc = rmsR*range/max(rmsR) + sfact; % Project into new range
-    scale = [scale; max(rmsN)*(sc./rmsN) ]; % Find multiplier that will rescale traces
-end
-
-for ii = 1:size(ptrace,1)
-    ptrace(ii,:) = ptrace(ii,:) * scale(ii);
-    strace(ii,:) = strace(ii,:) * scale(ii);
-end
+ptrace = P;
+strace = S;
 %}
-
-%rmsR = rms(:,1)./rms(:,2);
-%figure(2222)
-%plot(rms)
-%figure(1111)
-%plot(rmsR)
-
 %% 5)  Window with Taper and fourier transform signal.
 %
 viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
 [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %}
-
-%{
-eos513 = false;
-if eos513
-    % Temp Cell obj construction for EOS 513 project
-    pcoda = ptrace .* WIN;
-    for ii = 1:nbins
-        D1{ii} = { { strace(pIndex(:,ii),:) } , { pcoda(pIndex(:,ii),:) } , {pslow(ii)} };
-    end
-  
-end
-%}    
 
 
 %% 5) Impulse Response: Stack & Deconvolve
@@ -107,28 +80,30 @@ if exist('db','var')
     t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
     t2 = db(1).t2;
 else
-    t1 = 3.81;
-    t2 = 4.5;
+    t1 = 4.5;
+    t2 = 5.4;
 end
-dt = header{1}.DELTA;
+
 fLow = 0.04;
-fHigh = 1;
+fHigh = 1.0;
 numPoles = 2;
 
-%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+% Scale by increasing p value
+pscale = max(1./pslow) - 1./pslow;
 
-%load Rec_50_it
-%load Rec_100_it_splines
-load Rec_100_it_bsplines
-brec = REC;
-brec = fbpfilt(brec,dt,fLow,fHigh,numPoles,0);
 
-for ii=1:size(rec,1);
-    %brtrace(ii,:)=filter(h2,rtrace(ii,:));
-    brec(ii,:)=brec(ii,:)/(max(abs(brec(ii,1:800))) + 0.001);
-    brec(ii,:)=brec(ii,:)/pslow(ii)^.2;
+for ii=1:size(brec,1);
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:800))) + 0.0001) ;%* (pscale(ii));
+    %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
+%% Curvelet Denoise
+thresh = 0.3;
+% Set curvelet options
 
+brec = performCurveletDenoise(brec,dt,thresh);
+
+%% Select tps
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 

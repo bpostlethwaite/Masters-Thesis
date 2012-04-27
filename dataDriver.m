@@ -11,7 +11,7 @@ addpath functions
 
 %% Variables
 user = getenv('USER');
-sacfolder = '/media/TerraS/X5';
+sacfolder = '/media/TerraS/CNSN';
 %sacfolder = '/media/TerraS/CNSN';
 datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
@@ -19,7 +19,7 @@ rfile = 'STACK_R.sac';
 zfile = 'STACK_Z.sac';
 %%  Select Station to Process and load station data.
 %station = 'VTIN';
-station = 'CRLN';
+station = 'GAC';
 workingdir = fullfile(sacfolder,station);
 %load(fullfile(databasedir,[station,'.mat']))
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
@@ -32,7 +32,7 @@ remove = false;    % Removes all entries associated with particular station
 %% Run ProcessTraces
 % Run ProcessTraces then collect results into structure
 try
-    ProcessTraces
+    % ProcessTraces
     % For a description of data see DataDescription.m
     dbn.station = station;    
     dbn.processnotes = [];
@@ -74,9 +74,15 @@ catch e
         dbn.failmessage)
 end
 %% Plot the results if we completed the processing
+close all
 if dbn.scanstatus
     plotStack(dbn);
-    %plotStack(db(2));
+    err = results.smax - results.stderr1;
+    %number of indices inside contour range for Vp
+    errNs = sum(any(results.stackvr > err,2)); 
+    dv = results.vRange(2) - results.vRange(1);
+    errV = 0.5 * dv * errNs;
+    fprintf('Vp is +/- %1.2f km/s\n',errV)
 end
 %% Enter Processing Notes:
 notes = inputdlg('Enter Notes','Processing Notes',[3 80]);

@@ -32,13 +32,13 @@ while (iter < round(itermax)) && (deltaTps > tol);
     H = [dfaa, dfab, dfah
          dfab, dfbb, dfbh
          dfah, dfbh, dfhh]; % Hessian
-    if iter == 1
-        fprintf('----prerun-----\n')
-        fprintf('J Matrix\n')
-        full(J)
-        fprintf('Eig(H)\n')
-        eig(H)
-    end
+    %if iter == 1
+    %    fprintf('----prerun-----\n')
+    %    fprintf('J Matrix\n')
+    %    full(J)
+    %    fprintf('Eig(H)\n')
+    %    eig(H)
+    %end
         
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     delm = (IRLSsolver(-H,J,40,0.001*tol)); % Linear reweighted solution with 10x tolerance of Newton
@@ -63,11 +63,11 @@ while (iter < round(itermax)) && (deltaTps > tol);
 
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        fprintf('----postrun-----\n')
-        fprintf('J Matrix\n')
-        full(J)
-        fprintf('Eig(H)\n')
-        eig(H)
+        %fprintf('----postrun-----\n')
+        %fprintf('J Matrix\n')
+        %full(J)
+        %fprintf('Eig(H)\n')
+        %eig(H)
 
 
 % Check if iter hit itermax, if so issue warning %%%%%%%%

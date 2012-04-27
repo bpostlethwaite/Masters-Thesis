@@ -35,6 +35,11 @@ for ii = 1:length(dlist)
         if ii == 1
             N = 2^nextpow2(length(p));
         end
+        % Truncate if longer
+        if length(p) > N
+            p = p(1:N);
+            s = s(1:N);
+        end
         % Check to make sure picked time interval greater than picktol and
         % That the starting time in the record header matches the picks (make
         % sure it makes sense (Both T1 and T3 must be greater that record
