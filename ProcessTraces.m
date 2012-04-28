@@ -32,14 +32,14 @@ nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
 dt = header{1}.DELTA;
 ext = round(20/dt);
-%
+%{
 for ii = 1:size(ptrace,1)
     T1 = round((header{1}.T1 - header{1}.B)/dt);
     normnoise = norm(ptrace(ii, 1 : ext));
     normP = norm(ptrace(ii, T1 : T1 + ext ));
     nr = (normP/normnoise) *sqrt(normP);
-    P(ii,:) = detrend(ptrace(ii,:)) .* nr;
-    S(ii,:) = detrend(strace(ii,:)) .* nr;
+    P(ii,:) = (ptrace(ii,:)) .* nr;
+    S(ii,:) = (strace(ii,:)) .* nr;
 end
 ptrace = P;
 strace = S;
@@ -70,8 +70,7 @@ for ii = 1:nbins
     waitbar(ii/nbins,h)
 end
 close(h)
-REC = rec;
-PSLOW = pslow;
+
 %% Delete bad entries
 %{
 while true
@@ -98,29 +97,27 @@ close(fig)
 fLow = 0.04;
 fHigh = 1.4;
 numPoles = 2;
-
 %brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 brec = rec;
 % Scale by increasing p value
-
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) ;%* (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 
 
 %% Select tps
-if exist('db','var')
-    t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
-    t2 = db(1).t2;
-else
-    t1 = 3.8;
+%if exist('db','var')
+%    t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
+%    t2 = db(1).t2;
+%else
+    t1 = 3.9;
     t2 = 4.7;
-end
+%end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 

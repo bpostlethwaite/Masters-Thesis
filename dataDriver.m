@@ -23,9 +23,9 @@ station = 'CTSN';
 workingdir = fullfile(sacfolder,station);
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 %% Select Mode
-append = false;    % Appends new station entry (multiple same stations OK)
-overwrite = true;  % Overwrites 1st station entry
-remove = false;    % Removes all entries associated with particular station
+%append = false;    % Appends new station entry (multiple same stations OK)
+%overwrite = true;  % Overwrites 1st station entry
+%remove = false;    % Removes all entries associated with particular station
 %% Tag on solved window times.
 
 %% Run ProcessTraces
@@ -56,6 +56,7 @@ try
     dbn.tps = results.tps;
     dbn.tpps = results.tpps;
     dbn.tpss = results.tpss;
+    dbn.rec = brec(:,1:round(26/dt));
     dbn.dt = dt;   
     dbn.npb = npb;   
     dbn.filterLow = fLow; 
@@ -63,7 +64,6 @@ try
     dbn.thresh = thresh;
     dbn.t1 = t1;        
     dbn.t2 = t2;        
-    dbn.processnotes = [];
     
 catch e
     dbn.station = station;  
@@ -106,7 +106,7 @@ else
     new = length(db)+1; % Get next entry in database for appending
 end
 %}
-
+%{
 load(fullfile(datadir,'database.mat'))
 db(end + 1) = dbn; %#ok<NASGU>
 save(sprintf('%s/database.mat',datadir),'db','-v6')
@@ -114,10 +114,11 @@ clear db
 
 %}
 %% Load and Plot
+%{
 load(fullfile(datadir,'database.mat'))
-dbn = db(x);
+dbn = db(1);
 plotStack(dbn);
-
+%}
 %% Compare database stations to station folder
 %{
 % Tests if folder looks like a station folder than tests if the station is

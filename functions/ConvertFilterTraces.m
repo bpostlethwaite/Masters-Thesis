@@ -86,7 +86,7 @@ for ii = 1:length(dlist)
         
     else
         % Good files go in the respective arrays and cells.
-        header{ind1,1} = S1;
+        header{ind1} = S1;
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
         p(end+1:N) = 0; % Pad with zeros
         s(end+1:N) = 0; % Pad with zeros

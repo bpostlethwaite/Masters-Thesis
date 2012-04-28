@@ -15,13 +15,13 @@ pad = 0.1;    % make taper x% wider so we don't cut out source function signal
 h = waitbar(0,'Windowing Traces');
 steps = size(ptrace,1);
 n = size(ptrace(1,:),2);
-numtr = size(ptrace(1,:),1);
+numtr = size(ptrace,1);
 WIN = zeros(numtr,n);  % splice taper into a window of zeros to multiply with trace
 dt = header{1}.DELTA;
 t = 1:n;
 
 for ii = 1:steps
- 
+
     begintaper = round( (header{ii}.T1 - header{ii}.B)/dt );
     endtaper   = round( (header{ii}.T3 - header{ii}.B)/dt );
     Ntaper = endtaper - begintaper;
