@@ -1,13 +1,13 @@
 % New plotter
-addpath data
-addpath functions
-close all; clear all
+%addpath data
+%addpath functions
+%close all; clear all
 
-user = getenv('USER');
-datadir = ['/home/',user,'/programming/matlab/thesis/data'];
+%user = getenv('USER');
+%datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 
-load(fullfile(datadir,'database.mat'))
-dbn = db(1);
+%load(fullfile(datadir,'database.mat'))
+%dbn = db(1);
 
 figure(342)
 set(gca,'FontName','Helvetica','FontSize',16,...
@@ -26,12 +26,13 @@ set(gca,'FontName','Helvetica','FontSize',16,...
         ylab=ylabel('V_P [km/s]');
         set(xlab,'FontName','Helvetica','FontSize',16);
         set(ylab,'FontName','Helvetica','FontSize',16);
-        title(sprintf('R = %1.3f +/- %1.3f \nVp = %1.3f +/- %1.3f km/s',...
-            dbn.rbest,dbn.errR,dbn.vbest,dbn.errV));
+        title(sprintf('Station: %s \n R = %1.3f +/- %1.3f \nVp = %1.3f +/- %1.3f km/s',...
+            dbn.station, dbn.rbest ,dbn.errR, dbn.vbest, dbn.errV));
         
         
 figure(1197)
     csection(dbn.rec(:,1:round(26/dbn.dt)),0,dbn.dt);
+    title(sprintf('Receiver Function Stack,  station: %s',dbn.station))
     hold on
     plot(dbn.tps,'k+')
     plot(dbn.tpps,'k+')

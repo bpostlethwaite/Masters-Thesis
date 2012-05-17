@@ -65,6 +65,11 @@ tpss = 2 * hbest * f1;
 sterr1 = sqrt(mean(var([gvr(round(tps/dt)+1+[0:np-1]*nt),...
                  gvr(round(tpps/dt)+1+[0:np-1]*nt),...
                  -gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np)));
+             
+err = smax - sterr1;
+    % Calculate +/- for R
+errRpn = sum(any(grid > err,2)); 
+errR = 0.5 * dr * errRpn;
 
 %% Pack results into struct 
 results.method = 'kanamori';
@@ -73,11 +78,14 @@ results.vbest = v;
 results.hbest = hbest;
 results.stackvr = grid;
 results.stackh = NaN;
+results.errV = NaN;
+results.errR = errR;
+results.errH = NaN;
 results.rRange = r;
 results.vRange = v;
 results.hRange = h;
-results.stderr1 = sterr1;
-results.stderr2 = NaN;
+results.sterr1 = sterr1;
+results.sterr2 = NaN;
 results.smax = smax;
 results.hmax = NaN;
 results.tps = tps;

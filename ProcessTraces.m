@@ -95,17 +95,17 @@ close(fig)
 %}
 %% 6) Filter Impulse Response
 fLow = 0.04;
-fHigh = 1.4;
+fHigh = 1.2;
 numPoles = 2;
-%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
-brec = rec;
+brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+%brec = rec;
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) ;%* (pscale(ii));
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001);% * (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 
@@ -115,8 +115,8 @@ end
 %    t1 = db(1).t1; % Search max between these two windows (in secs after p arrival)
 %    t2 = db(1).t2;
 %else
-    t1 = 3.9;
-    t2 = 4.7;
+    t1 = 3.8;
+    t2 = 4.4;
 %end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
@@ -136,14 +136,14 @@ damp = 0.2;
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% Curvelet Denoise
-thresh = 0.6;
+thresh = 1;
 % Set curvelet options
 brec = performCurveletDenoise(brec,dt,thresh);
 
 %% 8) Grid and Line Search
-[ results ] = GridSearch(brec,Tps',dt,pslow);
+%[ results ] = GridSearch(brec,Tps',dt,pslow);
 
-%[ results ] = GsearchKanamori(brec,dt,pslow);
+[ results ] = GsearchKanamori(brec,dt,pslow);
 %% Viewers
 %{
     
@@ -166,7 +166,5 @@ t = [1:size(brec,2)] * dt;
         pause(1)
     end
 %}
-
-
 
 
