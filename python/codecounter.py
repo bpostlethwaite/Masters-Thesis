@@ -11,7 +11,7 @@ def countLinesOfCode(directory):
     for fname in listing:
         subtotal = 0
         Fname = os.path.join(directory,fname)
-        if fname[-2:] == "py" or fname[-1:] == "m":
+        if fname[-2:] == "py" or fname[-1:] == "m" or fname[-2:] == "sh":
             with open(Fname) as f:
                 for i, l in enumerate(f):
                     pass

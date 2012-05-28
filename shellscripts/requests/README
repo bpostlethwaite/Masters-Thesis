@@ -4,19 +4,21 @@ TO REQUEST DATA
 2. Choose time limits,  minimum magnitude threshld >= 6.0 (?), and specify view  WEED file.
 3. Cut and paste contents of WEED file into e.g. dum.weed
 4. Run following command to generate a file showing azimuths and epicentral distances to S Vancouver Island
+5. Use UNIX awk to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees distance)
     
-    weed2spyder.sh dum.weed | rdneic -s -125 48.5 > event.list
+   weed2spyder.sh dum.weed | rdneic -s -80 48 | sort -nk8 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
 
-5. Use UNIX sort to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees)
-   notes: last field is back azimuth. Want anything within the 30->100 & 260->330 range.
-
-      cat event.list | sort -nk8 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}'
-
-6. Paste desired events into evmail.sh and run to request data from CNSN/GSC/ETS/POLARIS stations (you may 
+6. Stream desired events into evmail.sh and run to request data from CNSN/GSC/ETS/POLARIS stations (you may 
 want to restrict what stations are requested. File cnsn.list contains an up-to-date listing of stations and 
 for what periods data are available for.
-7. Paste desired events into breq_usa.sh and run to request data from IRIS/US stations.
+7. Stream desired events into breq_usa.sh and run to request data from IRIS/US stations.
+
+   cat event.list | cut -d' ' -f2 | evmail.sh
+
 8. Run events through getFTP.sh to aquire data from server.
+ 
+   cat event.list | cut -d' ' -f2 | getFTP.sh	
+
 9. Transform SEED to SAC and move into network/station/event/component.sac file structure. 
    
    rdseed -df <seedfile.seed>

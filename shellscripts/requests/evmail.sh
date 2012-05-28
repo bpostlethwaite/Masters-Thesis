@@ -58,8 +58,9 @@ while read event; do
   echo "DURATION 600" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
-  #mail autodrm@seismo.nrcan.gc.ca < $event"_request"
-  
+  mail autodrm@seismo.nrcan.gc.ca < $event"_request"
+
   rm $event"_request"
+  sleep 15
 
 done
