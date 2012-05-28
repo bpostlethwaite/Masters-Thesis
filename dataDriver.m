@@ -11,15 +11,15 @@ addpath functions
 
 %% Variables
 user = getenv('USER');
-sacfolder = '/media/TerraS/X5';
+sacfolder = '/media/TerraS/CNSN';
 %sacfolder = '/media/TerraS/CNSN';
 datadir = ['/home/',user,'/programming/matlab/thesis/data'];
 databasedir = [datadir,'/database'];
-rfile = 'stack_R.sac';
-zfile = 'stack_Z.sac';
+rfile = 'STACK_R.sac';
+zfile = 'STACK_Z.sac';
 %%  Select Station to Process and load station data.
-%station = 'VTIN';
-station = 'CTSN';
+station = 'ULM';
+%station = 'CTSN';
 workingdir = fullfile(sacfolder,station);
 %workingdir = fullfile(['/home/',user,'/Programming/data/'],station);
 %% Select Mode
@@ -31,7 +31,7 @@ workingdir = fullfile(sacfolder,station);
 %% Run ProcessTraces
 % Run ProcessTraces then collect results into structure
 try
-    % ProcessTraces
+    %ProcessTraces
     % For a description of data see DataDescription.m
     dbn.station = station;    
     dbn.processnotes = [];
