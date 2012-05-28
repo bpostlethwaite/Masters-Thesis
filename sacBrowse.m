@@ -8,7 +8,8 @@ sacfolder = '/media/TerraS';
 %sacfolder =  '/home/ben/Dropbox/School';
 flag = true;
 % Ask user for event folder
-directory = uigetdir(sacfolder,'Choose Event Folder');
+%directory = uigetdir(sacfolder,'Choose Event Folder');
+directory = '/media/TerraS/seed' ;
 % get list of folders or files from chosen folder
 
 
@@ -39,9 +40,9 @@ end
 if sacfile
     [~, d] = readsac(sacfile);
     d = d./max(d);
-    S = readsac(sacfile);
-    dt = S.DELTA;
-    t0 = (S.T0 - S.B) / dt;
+    hd = readsac(sacfile);
+    dt = hd.DELTA;
+    t0 = (hd.T0 - hd.B) / dt;
     plot(d)
     line([ t0; t0], [ -1, 1], ...
             'LineWidth', 2, 'Color', [.4 .4 .4]);

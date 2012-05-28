@@ -1,0 +1,37 @@
+Read 'doc' and 'tau.man' and 'amessage.txt' for documentation on the tau/p 
+software that makes tau/p tables once and then interpolates them using 
+the program ttimes or the MATLAB MEX file get_tt.mex4.
+
+INSTALLATION INSTRUCTIONS
+
+type :  
+
+grep -n 'data modnam' *.f 
+
+which returns:
+
+emiasp91.f:13:      data modnam/'/u4/seis/MATLAB/tau_p/iasp91'/
+emsp6.f:13:      data modnam/'mdsp6'/
+get_tt.f:194:      data modnam/'/u4/seis/MATLAB/tau_p/iasp91'/,in/1/,
+ttimes.f:9:      data modnam/'/u4/seis/MATLAB/tau_p/iasp91'/
+
+Edit these three files and change the directory name to point
+to the absolute directory name for your computer.  
+
+make the four programs remodl, setbrn, ttimes and get_tt.mex4
+by typing:  (you will need to have matlab installed to build get_tt.f)
+
+make all
+
+run remodl and setbrn in that order (neither program requires any arguments)
+these programs build the tau/p tables for the iasp91 model.
+
+remodl
+setbrn
+ 
+clean up unnecessary files: 
+
+make clean
+
+You are done!
+

@@ -1,0 +1,37 @@
+matlab
+phase='P';delta=(30:40)';depth=100;azim=45;eqcolat=60;
+[a,b]=elpcor(phase,delta,depth,azim,eqcolat);
+phase='PcP'
+
+ USAGE: [ecorr,ierr] = elpcor(phase,delta,depth,azim,eqcolat);
+
+     .' USAGE: [ecorr,ier] = elpcor(phase,delta,depth,azim,eqcolat);',
+     .' Calculate ellipticity travel time corrections',
+     .' ',
+     .'INPUT:',
+     .'  phase   - Phase names ( P PcP PKPab PKPbc PKPdf S ScS ',
+     .'                          SKSac SKSdf Scp SKP )',
+     .'  delta   - Epicenter to receiver, distances in degrees.',
+     .'  depth   - Source depths, in km.',
+     .'  azim    - Epicenter to receiver azimuths, in degrees.',
+     .'  eq_colat- Epicenter colatitudes, in degrees.',
+     .'',
+     .'delta, depth, azim, and eq_colat can be column vectors or ',
+     .'scalars.  If they are vectors they must have the same number ',
+     .'of rows, or be scalars phase may be either one phase name, ',
+     .'or a series of phase names separated by blank spaces and ',
+     .'contained in a row vector:  eg. ',
+     .'phase = ''P PcP PKPab P P PcP''; delta=(70:75)'';',
+     .'depth=645;azim=(180:10:230)'';eq_colat=134;',
+     .'',
+     .'OUTPUT:',
+     .'  ecorr   - ellipticity correction (s) to be added to travel ',
+     .'            time calculated for spherically symmetric model',
+     .'  ier     = 0 if no error',
+     .'            1 if corrections do not exist for desired phase',
+     .'            2 if corrections do not exist for desired distance',
+     .'            3 if corrections do not exist for desired depth',
+     .' ',
+     .'ecorr and ier are column vectors',
+     .' '
+

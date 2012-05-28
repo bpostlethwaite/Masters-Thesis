@@ -105,7 +105,7 @@ pscale = pscale/max(pscale);
 
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) ;%* (pscale(ii));
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 
