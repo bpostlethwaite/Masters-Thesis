@@ -15,7 +15,7 @@ dlist = filterEventDirs(workingdir,printinfo);
 %
 picktol  = 2; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 [ptrace,strace,header,pslows,badpicks] = ...
-    ConvertFilterTraces(dlist,rfile,zfile,picktol,printinfo);
+    ConvertFilterTraces(dlist,pfile,sfile,picktol,printinfo);
 fclose('all'); % Close all open files from reading
 %}
 %% 3) Bin by p value (build pIndex)
@@ -105,11 +105,8 @@ pscale = pscale/max(pscale);
 
 
 for ii=1:size(brec,1);
-<<<<<<< HEAD
     brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
-=======
     brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001);% * (pscale(ii));
->>>>>>> 8631e3e9ba0b00611dbd4cd0eb91863bc805cc12
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 
@@ -140,9 +137,9 @@ damp = 0.2;
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% Curvelet Denoise
-thresh = 1;
+%thresh = 1;
 % Set curvelet options
-brec = performCurveletDenoise(brec,dt,thresh);
+%brec = performCurveletDenoise(brec,dt,thresh);
 
 %% 8) Grid and Line Search
 %[ results ] = GridSearch(brec,Tps',dt,pslow);

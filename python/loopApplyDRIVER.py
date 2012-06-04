@@ -9,8 +9,7 @@
 # IMPORTS
 ###########################################################################
 import os, re, time, shutil
-from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError, ppicker
-from preprocessor import poorDataError
+from preprocessor import setHeaders, detrend_taper_rotate, SeisDataError
 import subprocess
 sh = subprocess.Popen
 ###########################################################################
@@ -18,7 +17,7 @@ sh = subprocess.Popen
 ###########################################################################
 def renameEvent(eventdir,error):
     shutil.move(eventdir,eventdir + "_" + error)
-
+    
 def is_number(s):
     try:
         float(s)
@@ -30,20 +29,31 @@ def is_number(s):
 
 if __name__== '__main__' :
     ###########################################################################
-    # SET DIRECTORIES, FILES
+    # SET DIRECTORIES, FILES, VARS
     ###########################################################################
-    # networks = ['CN','NE','X5']
-    networks = ['X5']
+    networks = ['TEST']
     datadir = '/media/TerraS' 
     d = time.localtime(time.time())
     logname = "/log_{}_{}_{}_{}".format(d.tm_year,d.tm_mon,d.tm_mday,d.tm_hour)
     logfile = open(datadir + logname, 'w')
-
+    eventdict = {}
     ###########################################################################
     #  SET regex matches
     ###########################################################################
-    reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
+    reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
     reg2 = re.compile(r'^stack_(\w)\.sac')
+
+    ###########################################################################
+    # Build a dictionary from file event.list from Request system
+    # fields[0] -> event name     fields[2] -> lat
+    # fields[3] -> lon            fields[4] -> depth
+    # fields[5] -> mag     
+     ###########################################################################
+    with open("/home/bpostlet/thesis/shellscripts/requests/event.list", 'r') as f:
+        for line in f:
+            fields = line.split()
+            eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[5])
+
     ###########################################################################
     #  Walk through Networks supplied above. These are the root folders in 
     #  main directory folder
@@ -62,7 +72,6 @@ if __name__== '__main__' :
     ###########################################################################
     # Walk through all stations found in network folder
     ###########################################################################
-        stations = ['CTSN']
         for station in stations:
             try: 
                 logfile.write("operating on station: " + station + "\n")
@@ -86,10 +95,10 @@ if __name__== '__main__' :
                 files = os.listdir(eventdir)
                 for fs in files:
                     try:
-                        #m1 = reg1.match(fs)
-                        #comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
-                        m2 = reg2.match(fs)
-                        comps.append((m2.group(1),fs))
+                        m1 = reg1.match(fs)
+                        comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
+                        #m2 = reg2.match(fs)
+                        #comps.append((m2.group(1),fs))
                     except AttributeError as e:
                         #print "No match on file:",fs
                         pass
@@ -98,9 +107,10 @@ if __name__== '__main__' :
     # Check if three components have been found
     # If yes, sort alphebetically and call processor function
     ###########################################################################
-                if len(comps) != 2:
-                    print "Did not register 2 components in directory:", eventdir
+                if len(comps) != 3:
+                    print "Did not register 3 components in directory:", eventdir
                     logfile.write('Error Processing: ' + eventdir +  ' Did not register 3 components\n')
+                    renameEvent(eventdir,"MissingComponents")
                     continue
                     # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
                     # Pull out sacfiles from zipped sorted list.
@@ -109,26 +119,22 @@ if __name__== '__main__' :
 
                 # Run Processing function
                 try:
-                # calculate_slowness(eventdir, sacfiles)
-                    ppicker(eventdir,sacfiles[0],sacfiles[1])
-                    #detrend_taper_rotate(eventdir, sacfiles)
+                    setHeaders(eventdir, sacfiles, eventdict)
+                    detrend_taper_rotate(eventdir, sacfiles)                    
                     #sh("rm {}/*stack*".format(eventdir), shell=True, executable = "/bin/bash")
-                #except IOError:
-                    #print "IOERROR in event:", eventdir
-                    #logfile.write("Error Processing: " + eventdir + " IOError\n")
-                    #renameEvent(eventdir,"IOERROR")
-                    #continue
-                #except NoSlownessError, err:
-                    #print err.parameter
-                    #logfile.write('Error Processing: ' + eventdir + err.parameter + "\n")
-                    #renameEvent(eventdir,err.parameter)
-                    #continue
-                #except ValueError:
-                    #print "ValueError in event:", eventdir
-                    #logfile.write("Error Processing: " + eventdir + " ValueError\n")
-                    #renameEvent(eventdir,"ValueError")
-                    #continue
-                except poorDataError:
-                    renameEvent(eventdir,"PoorData")
+                except IOError:
+                    print "IOError in event:", eventdir
+                    logfile.write("Error Processing: " + eventdir + " IOError\n")
+                    renameEvent(eventdir,"IOError")
+                    continue
+                except SeisDataError as e:
+                    print e.msg + " in event:", eventdir
+                    logfile.write("Error Processing: " + eventdir + ": " + e.msg + "\n")
+                    renameEvent(eventdir, e.msg)
+                    continue
+                except ValueError:
+                    print "ValueError in event:", eventdir
+                    logfile.write("Error Processing: " + eventdir + " ValueError\n")
+                    renameEvent(eventdir,"ValueError")
                     continue
     logfile.close()

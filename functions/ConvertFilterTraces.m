@@ -1,5 +1,5 @@
 function [ptrace,strace,header,pslows,badpick] = ...
-    ConvertFilterTraces(dlist,rfile,zfile,picktol,printinfo)
+    ConvertFilterTraces(dlist,pfile,sfile,picktol,printinfo)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -25,11 +25,11 @@ badpick.errmsg = [];
 for ii = 1:length(dlist)
     % TRY I/O: Read info from sac files
     try
-        S1  = readsac(fullfile(dlist{ii},rfile));
-        [~,rcomp] = readsac(fullfile(dlist{ii},rfile));
-        [~,zcomp] = readsac(fullfile(dlist{ii},zfile));
+        S1  = readsac(fullfile(dlist{ii}, pfile));
+        [~,p] = readsac(fullfile(dlist{ii}, pfile));
+        [~,s] = readsac(fullfile(dlist{ii}, sfile));
         % Convert Each trace (rotate coordinates)
-        [p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
+        %[p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
         
         % On first pass set N
         if ii == 1

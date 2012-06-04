@@ -8,11 +8,12 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
+import matplotlib
+matplotlib.__version__ = "1.1.0"
 from obspy.core import read
 from obspy.signal.rotate import rotate_NE_RT as rotate 
 from scipy.signal.signaltools import detrend
 from obspy.signal.invsim import cosTaper
-import matplotlib.pyplot as plt
 import subprocess 
 import numpy as np
 import os.path, math
@@ -20,17 +21,11 @@ import os.path, math
 ###########################################################################
 #  CREATE CUSTOM ERRORS
 ###########################################################################
-class NoSlownessError(Exception):
+class SeisDataError(Exception):
     def __init__(self, value):
-        self.parameter = value
-        def __str__(self):
-            return repr(self.parameter)
-
-class poorDataError(Exception):
-    def __init__(self, value):
-        self.parameter = value
-        def __str__(self):
-            return repr(self.parameter)
+        self.msg = value
+    def __str__(self):
+        return repr(self.msg)
 
 ###########################################################################
 #  SET UTILS, VARS & REFS
@@ -39,62 +34,106 @@ sh = subprocess.Popen
 pipe = subprocess.PIPE
 earthradius = 6371
 deg2rkm = 180/(math.pi * earthradius)
+
 ###########################################################################
-# CALCULATE_SLOWNESS function takes the great circle arc and the
-# depth of the event and adds slowness into the header information
-# in user0 and set kuser0 as "pslow"
+# SETHEADERS function sets various headers using get_tt & event.list info
 ###########################################################################
-def calculate_slowness(eventdir, sacfiles):
+def setHeaders(eventdir, sacfiles, eventdict):
     """CALCULATE_SLOWNESS function takes the great circle arc and the
     depth of the event and adds slowness into the header information
-    in user0 and set kuser0 as 'pslow' """
+    in user0 and set kuser0 as 'pslow'. It also adds various travel time
+    information into the headers."""
 
-    slowness = None
-    PP = None
-    # READ 3 Component SAC files into object array.
-    for i in range(3):
-        ff = os.path.join(eventdir, sacfiles[i])
+    slowness = -12345
+    P  = -12345
+    PP = -12345
+    pP = -12345
+    evla, evlo, evdp, mag = eventdict[ os.path.basename(eventdir) ]
+    st = read( os.path.join(eventdir, sacfiles[0]) )
+    stla = st[0].stats.sac['stla'] 
+    stlo = st[0].stats.sac['stlo']
+    dt = st[0].stats.delta
+    ##### Get BAZ & GCARC #####################
+    azim = "/home/bpostlet/thesis/shellscripts/requests/azim"
+    try:
+        process = sh("{} -s {} {} -e {} {}".format(azim, stlo, stla, evlo, evla),
+                     shell=True, executable = "/bin/bash", stdout = pipe )
+        result =  process.communicate()[0].rstrip().split('\n')
+        gcarc = float( result[0].split(":")[1] ) 
+        baz = float(result[2].split(":")[1] )
+    except ValueError as e:
+        raise SeisDataError("NoAzim")
+
+    ##### Get P & Pslow #####################
+    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+                 shell=True, executable = "/bin/bash", stdout = pipe )
+    results =  process.communicate()[0].rstrip().split('\n')
+    for result in results:
+        result = result.split()
+        if result[1] == 'P':
+            slowness = float(result[3]) 
+            P = float(result[2])
+            break
+        else:
+            raise SeisDataError('noPslow')
+
+    ##### Get PP ###########################
+    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p PP".format(evdp,gcarc),
+                 shell=True, executable = "/bin/bash", stdout = pipe )
+    results =  process.communicate()[0].rstrip().split('\n')
+    for result in results:
+        result = result.split()
+        if result:
+            if result[1] == 'PP':
+                PP = float(result[2])
+                break
+    ##### Get pP ###########################
+    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p pP".format(evdp,gcarc),
+                 shell=True, executable = "/bin/bash", stdout = pipe )
+    results =  process.communicate()[0].rstrip().split('\n')
+    for result in results:
+        result = result.split()
+        if result:
+            if result[1] == 'pP':
+                pP = float(result[2])
+                break
+
+    N = 16384 
+    begin = math.ceil(P) - 60
+    end = begin + N*dt
+
+    for sacfile in sacfiles:
+        ff = os.path.join(eventdir, sacfile)
         try:
             st = read(ff)
-        except Exception, err:
+            ####### SET HEADERS #################
+            st[0].stats.sac['evla'] = evla
+            st[0].stats.sac['evlo'] = evlo
+            st[0].stats.sac['mag'] = mag
+            st[0].stats.sac['baz'] = baz
+            st[0].stats.sac['gcarc'] = gcarc
+            st[0].stats.sac['evdp'] = evdp
+            st[0].stats.sac['kuser0'] = "P-slow"
+            st[0].stats.sac['user0'] = round(slowness * deg2rkm, 4)
+            st[0].stats.sac['kt0'] = "P"
+            st[0].stats.sac['t0'] = P
+            st[0].stats.sac['kt7'] = "PP"
+            st[0].stats.sac['t7'] = PP
+            st[0].stats.sac['kt4'] = "pP"
+            st[0].stats.sac['t4'] = pP
+            ####### TRUNCATE #################
+            ev[i].data = ev[i].data[ begin/dt : end/dt ] # truncate
+            len(ev[i].data)
+            exit()
+            st[0].stats.sac['b'] = begin
+            st[0].stats.sac['e'] = end
+            ####### WRITE #################
+            st[0].write(ff, format = 'SAC')        
+        except IOError:
+            print "problem reading and writing in setHeaders func"
             raise IOError
-        if i == 0:
-            evdp = st[0].stats.sac['evdp']
-            gcarc = st[0].stats.sac['gcarc']
-           #  ##### Get slowness P ###########################
-        #     process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
-        #        shell=True, executable = "/bin/bash", stdout = pipe )
-        #     results =  process.communicate()[0].rstrip().split('\n')
-        #     for result in results:
-        #         result = result.split()
-        #         if result[1] == 'P':
-        #             slowness = float(result[3])
-        #             break
-        #         else:
-        #             raise NoSlownessError('No_slowness_GARC_is:{}'.format(gcarc))
-        
-        # st[0].stats.sac['kuser0'] = "P-slow"
-        # st[0].stats.sac['user0'] = round(slowness * deg2rkm,4)        
-        # st[0].write(ff, format = 'SAC')
-    # Get PP time and set in headers ############################################
-            process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
-               shell=True, executable = "/bin/bash", stdout = pipe )
-            results =  process.communicate()[0].rstrip().split('\n')
-            for result in results:
-                result = result.split()
-                if result[1] == 'P':
-                    P = float(result[2])
-                    break
-                else:
-                    P = None
-                    print "NO P!"
-        
-        st[0].stats.sac['kt0'] = "P"
-        st[0].stats.sac['t0'] = P
-        #try:
-        st[0].write(ff, format = 'SAC')
-        #except Exception:
-            #raise IOError
+
+
 ###########################################################################
 # detrend_taper_rotate function to be imported by program which walks through
 # directories and applies this function.
@@ -105,10 +144,8 @@ def calculate_slowness(eventdir, sacfiles):
 def detrend_taper_rotate(eventdir, sacfiles):
     """preprocess performs the demean,detrend,taper and rotation into radial and
     transverse components. It saves these at STACK_R.sac and STACK_T.sac"""
-    
-    N = 16384  #Max length of seismic array, truncate for speed
-    ev = []
-    
+
+    ev = []    
     # READ 3 Component SAC files into object array.
     for i in range(3):
         ff = os.path.join(eventdir, sacfiles[i])
@@ -121,46 +158,31 @@ def detrend_taper_rotate(eventdir, sacfiles):
     baz = ev[1].stats.sac['baz']
     PP = ev[1].stats.sac['t7']
 
-    #if ev[1].stats.sac['b'] < (ev[i].stats.sac['t0'] - 50):
-    #    begin = ev[1].stats.sac['t0'] - 50 # start seismogram 50 seconds before P arrival.
-    #else:
-    begin = ev[1].stats.sac['b']
-
-    n1 = round(begin/dt) # Get array number of new beginning
-    end = begin + N*dt     
-     
+    # Begin seismogram 50 seconds before P arrival
     # Here we either a full size taper, or a short taper padded with zeros
     if PP and (PP < end):
-        #nend = (PP - begin - 0.5)/dt # Window out 1/2 second before PP
-        #ctap = np.append(cosTaper(nend),np.zeros(N-nend + 1))
-        ctap = cosTaper(N)
+        nend = (PP - begin - 0.5)/dt # Window out 1/2 second before PP
+        ctap = np.append(cosTaper(nend),np.zeros(N-nend + 1))
     else:
         ctap = cosTaper(N)
-        
-    # window, detrend, taper all three components
+
+    # detrend, taper all three components
     for i in range(3):
-        ####### TRUNCATE #################
-        ev[i].stats.sac['e'] = end
-        ev[i].data = ev[i].data[ : N] # truncate
-        ####### DETREND #################
-        ev[i].data = detrend(ev[i].data) # Detrend all components
-        ###### TAPER ###################
-        ev[i].data = ev[i].data * ctap
+        ####### DETREND & TAPER #################
+        ev[i].data = detrend(ev[i].data) * ctap
     
     # R, T = rotate(N, E) 
-    ev[1].data, ev[0].data = rotate(ev[1].data, ev[0].data,baz)
+    ev[1].data, ev[0].data = rotate(ev[1].data, ev[0].data, baz)
     # Call freetran and rotate into P and S space
-    #ev[1].data, ev[2].data = freetran(
-    #    ev[1].data, ev[2].data, pslow, 6.06, 3.5)
-    # Save freetran transformed data objects
-    #ev[1].write(os.path.join(eventdir,'stack_P.sac'), format='SAC')
-    #ev[2].write(os.path.join(eventdir,'stack_S.sac'), format='SAC')
+    ev[1].data, ev[2].data = freetran(
+        ev[1].data, ev[2].data, pslow, 6.06, 3.5)
     # save only rotated data
-    ev[1].write(os.path.join(eventdir,'stack_R.sac'), format='SAC')
-    ev[2].write(os.path.join(eventdir,'stack_Z.sac'), format='SAC')
-
+#    ev[1].write(os.path.join(eventdir,'stack_R.sac'), format='SAC')
+#    ev[2].write(os.path.join(eventdir,'stack_Z.sac'), format='SAC')
+    # Save freetran transformed data objects
+    ev[1].write(os.path.join(eventdir,'stack_P.sac'), format='SAC')
+    ev[2].write(os.path.join(eventdir,'stack_S.sac'), format='SAC')
     
-
 def freetran(rcomp, zcomp, pslow, alpha, beta):
     """ Function FREETRAN converts radial and vertical component 
     displacement seismograms to P and S components assuming 
@@ -181,73 +203,7 @@ def freetran(rcomp, zcomp, pslow, alpha, beta):
     vsz = pslow * beta;
     trn = np.array([ [-vpr,vpz] , [-vsr,vsz] ]);
     dum = np.dot( trn, np.vstack( (rcomp, zcomp) ) )
-    
+
     return dum[0,], dum[1,]
-
-def ppicker(eventdir,rname,zname):
-    """ Function ppicker is a ginput based arrival picker
-    allowing for 3 time picks which are saved in SAC data headers"""
-    
-    rf = os.path.join(eventdir, rname)
-    zf = os.path.join(eventdir, zname)
-    rt = read(rf)
-    zt = read(zf)
-    rt = rt[0]
-    zt = zt[0]
-    pslow = rt.stats.sac['user0']        
-    depth = rt.stats.sac['evdp']
-    dt = rt.stats.delta
-    N = len(rt.data)
-    b = rt.stats.sac['b']        
-    t0 = (rt.stats.sac['t0'] - b ) / dt       
-    t4 = (rt.stats.sac['t4'] - b ) / dt   
-    t7 = (rt.stats.sac['t7'] - b ) / dt
-    left = round(t0 - 20/dt)
-    right = round(t0 + 240/dt)
-    t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
-    nn = np.arange(0,N)
-    p, s = freetran(rt.data,zt.data,pslow,6.06,3.5)
-
-    while True:
-    #plt.subplot(2,1,1)
-        print "Pick P-coda. Begin then End on event:", eventdir
-        plt.figure( num = None, figsize = (22,6) )
-        plt.plot(p, label = 'Pcomp')
-        plt.xticks(nn[::200],t[::200])
-        plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
-        plt.axvline(x = t0, color = 'y', label = 'gett P')
-        plt.axvline(x = t4, color = 'g', label = 'gett pP')
-        plt.axvline(x = t7, color = 'r', label = 'gett PP')
-        plt.xlim(left, right)
-        plt.xlabel('Time \n P arrival is zero seconds')
-        plt.legend()
-        # GINPUT b1 = add point |  b2 = STOP |  b3 = delete point
-        x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
-        try:
-            T1 = x[0][0]*dt + b
-            T3 = x[1][0]*dt + b
-        except IndexError:
-            print "Not all picks made in", eventdir
-            print "Please retry the picks"
-            continue
-        plt.close()
-
-        inp = raw_input("Keep trace? 'y' for yes, 'n' for no, 'r' for redo: ")
-        if 'r' in inp:
-            continue
-        if 'y' in inp:
-            rt.stats.sac['t1'] = T1
-            rt.stats.sac['t3'] = T3
-            rt.write(rf, format='SAC')
-            zt.stats.sac['t1'] = T1
-            zt.stats.sac['t3'] = T3
-            zt.write(zf, format='SAC')
-            return
-        elif 'n' in inp:
-            raise poorDataError('Data was discarded as poor')
-    #plt.subplot(2,1,2)
-    #plt.plot(s)
-    #plt.title('S-trace')
-    #plt.show()
 
 

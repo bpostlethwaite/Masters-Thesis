@@ -11,12 +11,12 @@ addpath functions
 
 %% Variables
 user = getenv('USER');
-sacfolder = '/media/TerraS/CNSN';
+sacfolder = '/media/TerraS/TEST';
 %sacfolder = '/media/TerraS/CNSN';
-datadir = ['/home/',user,'/programming/matlab/thesis/data'];
+datadir = ['/home/',user,'/thesis/data'];
 databasedir = [datadir,'/database'];
-rfile = 'STACK_R.sac';
-zfile = 'STACK_Z.sac';
+pfile = 'stack_P.sac';
+sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data.
 station = 'ULM';
 %station = 'CTSN';
@@ -31,7 +31,7 @@ workingdir = fullfile(sacfolder,station);
 %% Run ProcessTraces
 % Run ProcessTraces then collect results into structure
 try
-    %ProcessTraces
+    ProcessTraces
     % For a description of data see DataDescription.m
     dbn.station = station;    
     dbn.processnotes = [];
