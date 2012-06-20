@@ -48,7 +48,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
     P  = -12345
     PP = -12345
     pP = -12345
-    evla, evlo, evdp, mag = eventdict[ os.path.basename(eventdir) ]
+    evla, evlo, evdp, gcarcOLD = eventdict[ os.path.basename(eventdir) ]
     st = read( os.path.join(eventdir, sacfiles[0]) )
     stla = st[0].stats.sac['stla'] 
     stlo = st[0].stats.sac['stlo']
@@ -62,7 +62,19 @@ def setHeaders(eventdir, sacfiles, eventdict):
         gcarc = float( result[0].split(":")[1] ) 
         baz = float(result[2].split(":")[1] )
     except ValueError as e:
-        raise SeisDataError("NoAzim")
+        raise SeisDataError("noAzim")
+
+    ##### Get OLD P  #####################
+    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarcOLD),
+                 shell=True, executable = "/bin/bash", stdout = pipe )
+    results =  process.communicate()[0].rstrip().split('\n')
+    for result in results:
+        result = result.split()
+        if result[1] == 'P':
+            beginOLD = math.ceil( float(result[2]) ) - 120
+            break
+        else:
+            raise SeisDataError('noPOld')
 
     ##### Get P & Pslow #####################
     process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
@@ -98,18 +110,20 @@ def setHeaders(eventdir, sacfiles, eventdict):
                 pP = float(result[2])
                 break
 
+    ##### CALCULATE BEGINNING AND END #####
     N = 16384 
     begin = math.ceil(P) - 60
+    if begin < beginOLD:
+        begin = beginOLD
     end = begin + N*dt
 
+    ####### SET HEADERS #################
     for sacfile in sacfiles:
         ff = os.path.join(eventdir, sacfile)
         try:
             st = read(ff)
-            ####### SET HEADERS #################
             st[0].stats.sac['evla'] = evla
             st[0].stats.sac['evlo'] = evlo
-            st[0].stats.sac['mag'] = mag
             st[0].stats.sac['baz'] = baz
             st[0].stats.sac['gcarc'] = gcarc
             st[0].stats.sac['evdp'] = evdp
@@ -121,18 +135,19 @@ def setHeaders(eventdir, sacfiles, eventdict):
             st[0].stats.sac['t7'] = PP
             st[0].stats.sac['kt4'] = "pP"
             st[0].stats.sac['t4'] = pP
-            ####### TRUNCATE #################
-            ev[i].data = ev[i].data[ begin/dt : end/dt ] # truncate
-            len(ev[i].data)
-            exit()
-            st[0].stats.sac['b'] = begin
-            st[0].stats.sac['e'] = end
+
+            ####### TRUNCATE if not truncated############
+            if begin != st[0].stats.sac['b']:
+                st[0].data = st[0].data[ (begin - beginOLD)/dt 
+                                         : (end - beginOLD)/dt + 1 ] # truncate
+                st[0].stats.sac['b'] = begin
+                st[0].stats.sac['e'] = end
+
             ####### WRITE #################
             st[0].write(ff, format = 'SAC')        
         except IOError:
             print "problem reading and writing in setHeaders func"
             raise IOError
-
 
 ###########################################################################
 # detrend_taper_rotate function to be imported by program which walks through
@@ -157,12 +172,12 @@ def detrend_taper_rotate(eventdir, sacfiles):
     pslow = ev[1].stats.sac['user0']
     baz = ev[1].stats.sac['baz']
     PP = ev[1].stats.sac['t7']
-
+    N = ev[1].stats.npts
     # Begin seismogram 50 seconds before P arrival
     # Here we either a full size taper, or a short taper padded with zeros
-    if PP and (PP < end):
-        nend = (PP - begin - 0.5)/dt # Window out 1/2 second before PP
-        ctap = np.append(cosTaper(nend),np.zeros(N-nend + 1))
+    if PP and (PP < ev[1].stats.sac['e'] ):
+        nend = (PP - ev[1].stats.sac['b'] - 0.5)/dt # Window out 1/2 second before PP
+        ctap = np.append( cosTaper(nend), np.zeros(N-nend + 1) )
     else:
         ctap = cosTaper(N)
 

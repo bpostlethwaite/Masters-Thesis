@@ -67,7 +67,7 @@ else:
 
 # window, detrend, taper all three components
 
-i = 2
+i = 1
     ####### SET NEW INFO #################
 ev[i].stats.sac['e'] = end
 

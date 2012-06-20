@@ -2,14 +2,14 @@
 clear all
 close all
 addpath sac
-
+addpath functions
 % Location of Sac files
 sacfolder = '/media/TerraS';
 %sacfolder =  '/home/ben/Dropbox/School';
 flag = true;
 % Ask user for event folder
 %directory = uigetdir(sacfolder,'Choose Event Folder');
-directory = '/media/TerraS/TEST/ULM' ;
+directory = '/media/TerraS/CN' ;
 % get list of folders or files from chosen folder
 
 
@@ -45,7 +45,8 @@ if sacfile
     t0 = (hd.T0 - hd.B) / dt;
     t4 = (hd.T4 - hd.B) / dt;
     t7 = (hd.T7 - hd.B) / dt;
-    plot(d)
+    %d = fbpfilt(d, dt, 0.5, 2, 2, 0)
+    plot( d )
     line([ t0; t0], [ -1, 1], ...
          'LineWidth', 2, 'Color', [.8 .4 .4]);
     line([ t4; t4], [ -1, 1], ...       

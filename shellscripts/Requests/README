@@ -1,0 +1,12 @@
+TO REQUEST DATA
+
+1. Go to IRIS event catalogue: http://www.iris.edu/SeismiQuery/sq-events.htm
+2. Choose time limits,  minimum magnitude threshld >= 6.0 (?), and specify view  WEED file.
+3. Cut and paste contents of WEED file into e.g. dum.weed
+4. Run following command to generate a file showing azimuths and epicentral distances to S Vancouver Island
+    weed2spyder.sh dum.weed | rdneic -s -125 48.5 > event.list
+5. Use UNIX sort to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees)
+6. Paste desired events into evmail.sh and run to request data from CNSN/GSC/ETS/POLARIS stations (you may 
+want to restrict what stations are requested. File cnsn.list contains an up-to-date listing of stations and 
+for what periods data are available for.
+7. Paste desired events into breq_usa.sh and run to request data from IRIS/US stations.

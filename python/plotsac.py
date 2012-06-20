@@ -6,6 +6,8 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
+import matplotlib
+matplotlib.__version__ = "1.1.0"
 from obspy.core import read
 from obspy.signal.invsim import cosTaper
 import numpy as np
@@ -13,7 +15,6 @@ import scipy.fftpack as fft
 from scipy.signal.signaltools import detrend
 import random, os, os.path, re
 import matplotlib.pyplot as plt
-from preprocessor import calculate_slowness, detrend_taper_rotate, NoSlownessError
 from loopApplyDRIVER import is_number
 
 ###########################################################################
@@ -27,11 +28,11 @@ oldfs = []
 ###########################################################################
 # Get random event directory
 ###########################################################################
-checkdir = '/media/TerraS/X5'
+checkdir = '/media/TerraS/TEST'
 stations = os.listdir(checkdir)
-station = stations[random.randint(0,len(stations)-1)]
-events = os.listdir(checkdir + '/' + station)
 while True:
+    station = stations[random.randint(0,len(stations)-1)]
+    events = os.listdir(checkdir + '/' + station)
     event = events[random.randint(0,len(events)-1)]
     if not is_number(event): # Make sure event dir is right format, skip those not in number format
         print "skipping event", event
@@ -70,13 +71,34 @@ while True:
         print "some error opening SAC files"
         continue
 
-    
+    dt = pt.stats.delta
+    b = pt.stats.sac['b']
+    N = len(pt.data)
+    depth = pt.stats.sac['evdp']
+    t0 = (pt.stats.sac['t0'] - b ) / dt       
+    t4 = (pt.stats.sac['t4'] - b ) / dt   
+    t7 = (pt.stats.sac['t7'] - b ) / dt
+    left = round(t0 - 60/dt)
+    #right = round(t0 + 220/dt)
+    right = len(pt.data)
+    t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
+    nn = np.arange(0,N)
+
+    plt.figure( num = None, figsize = (22,6) )
     plt.subplot(2,1,1)
-    plt.plot(pt.data)
-    plt.title('P-trace')
+    plt.plot(pt.data, label = 'Pcomp')
+    plt.xticks(nn[::200],t[::200])
+    plt.title(station + ": " + event + "\n" + 'P-Trace.  Source depth = {}'.format( depth) )
+    plt.axvline(x = t0, color = 'y', label = 'gett P')
+    plt.axvline(x = t4, color = 'g', label = 'gett pP')
+    plt.axvline(x = t7, color = 'r', label = 'gett PP')
+    plt.xlim(left, right)
+    plt.xlabel('Time \n P arrival is zero seconds')
+    plt.legend()
     plt.subplot(2,1,2)
     plt.plot(st.data)
     plt.title('S-trace')
+    plt.xlim(left, right)
     plt.show()
 
     

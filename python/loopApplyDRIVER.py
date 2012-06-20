@@ -47,12 +47,12 @@ if __name__== '__main__' :
     # Build a dictionary from file event.list from Request system
     # fields[0] -> event name     fields[2] -> lat
     # fields[3] -> lon            fields[4] -> depth
-    # fields[5] -> mag     
+    # fields[6] -> GCARC
      ###########################################################################
     with open("/home/bpostlet/thesis/shellscripts/requests/event.list", 'r') as f:
         for line in f:
             fields = line.split()
-            eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[5])
+            eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
 
     ###########################################################################
     #  Walk through Networks supplied above. These are the root folders in 
@@ -137,4 +137,7 @@ if __name__== '__main__' :
                     logfile.write("Error Processing: " + eventdir + " ValueError\n")
                     renameEvent(eventdir,"ValueError")
                     continue
+               
+
+                
     logfile.close()
