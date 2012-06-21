@@ -12,6 +12,7 @@
 
 import os, os.path, re, shutil, sys
 import subprocess
+from time import sleep
 
 sh = subprocess.Popen
 pipe = subprocess.PIPE
@@ -34,39 +35,44 @@ os.chdir(deseedDir)
 
 # Define Matching criteria
 reg = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
-seedfiles = os.listdir(seedDir)
+
 count = 0
+seedfiles = os.listdir(seedDir)
 nfiles = len(seedfiles)
-for s in seedfiles:
-    try:
-        count += 1
-        event = s[:-5]
-        s2 = os.path.join(deseedDir, s)
-        shutil.copy( os.path.join(seedDir, s), s2) 
-        subprocess.check_call(rdseed + " " + s2, shell=True, stdout = pipe)
-        os.unlink(s2)
-        sacfiles = os.listdir(deseedDir)
 
-        for f in sacfiles:
-            m1 = reg.match(f)
-            station = m1.group(3)                      
-            evDir = os.path.join(baseDir, station, event)
-            if not os.path.exists(evDir):
-                os.makedirs(evDir)
-            shutil.move( os.path.join(deseedDir, f), os.path.join(evDir, f) )
-                
-        left = os.listdir(deseedDir)
-        if len(left) != 0:
-            print "remaining files, abort"
-            exit()
+if seedfiles:
+    for s in seedfiles:
+        try:
+            count += 1
+            event = s[:-5]
+            s2 = os.path.join(deseedDir, s)
+            shutil.move( os.path.join(seedDir, s), s2)
+            subprocess.check_call(rdseed + " " + s2, shell=True, stdout = pipe)
+            os.unlink(s2)
+            sacfiles = os.listdir(deseedDir)
 
-        sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
-        sys.stdout.flush()
+            for f in sacfiles:
+                m1 = reg.match(f)
+                station = m1.group(3)                      
+                evDir = os.path.join(baseDir, station, event)
+                if not os.path.exists(evDir):
+                    os.makedirs(evDir)
+                shutil.move( os.path.join(deseedDir, f), os.path.join(evDir, f) )
+
+            left = os.listdir(deseedDir)
+            if len(left) != 0:
+                print "remaining files, abort"
+                exit()
 
 
-    except AttributeError as e:
-        print e
+            #sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
+            sys.stdout.write(event+"\n")
+            sys.stdout.flush()
+
+        except AttributeError as e:
+            sys.stderr.write(repr(e) + "\n")
+
     
-print "finished"
+    
 
 

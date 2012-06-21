@@ -8,12 +8,27 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import os, re, time, shutil, sys
+import os, re, time, shutil, sys, tty
 from preprocessor import SeisDataError
 from loopApplyDRIVER import renameEvent, is_number
 import matplotlib.pyplot as plt
 from obspy.core import read
 import numpy as np
+
+class Getch:
+    def __init__(self):
+        import tty, sys
+
+    def __call__(self):
+        import sys, tty, termios
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        try:
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        return ch
 
 def ppicker(eventdir,pname,sname):
     """ Function ppicker is a ginput based arrival picker
@@ -36,6 +51,8 @@ def ppicker(eventdir,pname,sname):
     right = round(t0 + 240/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
     nn = np.arange(0,N)
+
+    get = Getch()
 
     while True:
     #plt.subplot(2,1,1)
@@ -61,7 +78,9 @@ def ppicker(eventdir,pname,sname):
             continue
         plt.close()
 
-        inp = raw_input("Keep trace? 'y' for yes, 'n' for no, 'r' for redo: ")
+        print "Keep trace? 'y' for yes, 'n' for no, 'r' for redo: "
+        inp = get()
+
         if 'r' in inp:
             continue
         if 'y' in inp:
@@ -73,7 +92,7 @@ def ppicker(eventdir,pname,sname):
             st.write(sf, format='SAC')
             return
         elif 'n' in inp:
-            raise poorDataError('Data was discarded as poor')
+            raise SeisDataError('poorData')
     #plt.subplot(2,1,2)
     #plt.plot(s)
     #plt.title('S-trace')
@@ -83,17 +102,17 @@ if __name__== '__main__' :
     
 
     if (len(sys.argv) != 2):
-        print "Send a absolute directory"
+        print "Send a absolute Station directory"
         exit()
         
-    evdir = sys.argv[1]
+    stdir = sys.argv[1]
     reg2 = re.compile(r'^stack_(\w)\.sac')
-    events = os.listdir(evdir)
+    events = os.listdir(stdir)
     for event in events:
         if not is_number(event): # Make sure event dir is right format, skip those not in number format
             continue
         comps = []
-        eventdir = os.path.join(evdir,event)
+        eventdir = os.path.join(stdir,event)
         files = os.listdir(eventdir)
         for fs in files:
             m = reg2.match(fs)

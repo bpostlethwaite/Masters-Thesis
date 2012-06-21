@@ -22,20 +22,18 @@ for what periods data are available for.
  
     cat event.list | cut -d' ' -f1 | uniq | getFTP.sh	
 
-If getFTP.sh stops then compare the event.list with the downloaded seedfiles
-and go after only the remaining events with:
+	
+If things get confusing as to what has and has not been downloaded do list comparisons with:
 
-	comm -13  <(ls /tmp/seed | cut -c1-9) <(cat event.list \
-	| cut -d' ' -f2 | uniq)  
+	comm -13  <(cat deseeded.log | sort | uniq) <(cat event.list | cut -d' ' -f1 | sort | uniq)  
 
 (just add a `| getFTP.sh` command at the end to try and download the remaining files)
-
-9. Verify that the email responses match the event.list. If using gmail with special inbox for repsonses use the `emailresponse.py` script and pipe it into the compare one-liner above.
 
 10. Transform SEED to SAC and move into network/station/event/component.sac file structure. 
    
     rdseed -df <seedfile.seed>
 
-or run `deseed.py` which also builds out the directory structure in given root folder.
+or run `deseed.py >> deseeded.log` which also builds out the directory structure in given root folder.
+Changing deseed.py to incrementally sweep directory and perform actions.
 
 11. Roll through SAC files, and run `rdneic` for each event within each station directory using station lat and lon to get a new `BAZ` and `GCARC` for use with get_tt.  This is included in `preprocessor.py` which can be run with `loopApplyDRIVER.py` with the rest of the preprocessing.
