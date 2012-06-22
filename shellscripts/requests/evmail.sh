@@ -2,6 +2,7 @@
 
 STATIONS='CHEG DRLN FCC GBN HAL SCHQ SJNN ULM ICQ NATG A11 A16 A21 A54 A61 A64 LMQ BATG GGN LMN KGNO OTT SADO GAC MNTQ VABQ VLDQ ATKO EPLO KAPO KILO MALO PKLO PNPO SILO SUNO VIMO '
 
+
 while read event; do
 
   echo  "Processing event" $event
@@ -45,7 +46,7 @@ while read event; do
   mi1=`echo $t1 $jd1 $hr1 | awk '{print substr(100+int(($1-$2*86400-$3*3600)/60),2,2)}'`
   se1=`echo $t1 $jd1 $hr1 $mi1 | awk '{print substr(100+$1-$2*86400-$3*3600-$4*60,2,2)}'`
 ################################
-  #echo $tp | awk '{print int($1 + 0.5) - 120}'
+  
   echo "START_TIME "$cn$yr"/"$mo1"/"$dy1"."$hr1":"$mi1":"$se1  >> $event"_request"
   #echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"  
   echo "DURATION 600" >> $event"_request"
@@ -53,7 +54,7 @@ while read event; do
   echo "STOP" >> $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
-  sleep 10
+  sleep 2
   
 
 done
