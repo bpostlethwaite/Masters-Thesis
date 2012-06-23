@@ -1,0 +1,23 @@
+../snglinv > test.log <<end
+initial_model
+5
+0.1
+01
+0.01
+n
+1
+target.eqr
+0.06
+5.
+2.5
+end
+#
+# initial model
+# maximum # of iterations per inversion
+# smoothness trade-off parameter
+# inversion ID #
+# SVD truncation fraction
+# # waveforms
+# sac file name(s)
+# slowness
+# waveform delay

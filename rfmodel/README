@@ -1,0 +1,72 @@
+Tools for receiver function (RF) processing and modelling.
+    G. Helffrich/U. Bristol
+    last updated 1 Mar. 2012
+
+    These require a functioning SAC and i/o library, and the Buland and Kennett
+    tau-P tables and their subroutine interface library.  They also require
+    versions of the Numerical Recipes (NR) routines four1.f and realft.f.  Note
+    that NR version 2 of realft.f is required.
+
+    Users are requested to cite (as appropriate):
+       Helffrich, G. Extended-time multi-taper frequency domain
+       cross-correlation receiver function estimation. Bull. Seismo. Soc. Am.,
+       v. 96, 344-347, 2006.
+
+       Lodge, A., Helffrich, G. Grid-search Inversion of Teleseismic Receiver
+       Functions Geophys. J. Int., v. 178, 513-523, 2009.
+
+Major components:
+
+mtrf:  SAC macro to run the mtdecon program to estimate receiver functions
+    using the multitaper method of Park and Levin.
+
+mtdecon:  Program invoked by mtrf to do the heavy lifting.
+
+hk: Program to do RF Moho analysis using Zhu and Kanamori stacking.
+
+sacrfmigrate: Program to migrate a collection of RFs to a common slowness
+    for modelling and/or interpretation
+
+ss-stack, ss-stack.sh:  SAC macro to display slowness-based record section
+    for receiver functions.
+
+sacxymag:  Utility used by ss-stack macro to amplify parts of SAC XYZ file.
+
+sacslantstack:  Utility program used by ss-stack for picture-based
+    slowness analysis of RFs.
+
+sachdrinfo:  Utility program used by ss-stack for picture-based slowness
+    analysis (picture annotation; this is also distributed with MacSAC in
+    sacio.a).
+
+Pstimes:  Utility program used by ss-stack for picture-based slowness
+    analysis (picture annotation) and moveout curves on record sections.
+
+rfxsect:  SAC macro to calculate and display a group of stacked and migrated RFs
+    on a geographic cross section.  Uses sacrfmigrate.
+
+vsfromrfamp:  Shell script to estimate station Vs from amplitude of zero-lag
+    RF peak.
+
+setrfslow:  Utility program to calculate RF slownesses from the event
+    information in the SAC file header.
+
+RForward:  Directory containing modified versions of Chuck Ammon's RF forward
+    modelling tools.
+
+RInversion:  Directory containing modified versions of Chuck Ammon's RF
+    inversion tools.  snglinv and manyinv are the most useful.
+    exhsearch - build grid search input over models given constraints from a
+       target RF.
+
+RForward/RespKennett:
+    rfksyn -  calculate fast synthetics from a structural model
+    rfmisfit -  calculate RF misfit compared to a target
+    makemodel - a basic upper mantle model for transition zone RF synthetics
+    runsyn - run a suite of synthetic RFs and calculate a misfit to a target
+       RF, given a list of model input files.
+
+Misc. subroutines:
+
+    rsach.f:  Return header information in SAC files (this is distributed in
+    MacSAC in sacio.a).

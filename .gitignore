@@ -1,7 +1,5 @@
 # Ignore directories
 ####################
-data/*
-BostockCode/*
 
 # Matlab Backups
 ###################

@@ -1,0 +1,38 @@
+#
+# Runs the inversion
+#
+../manyinv > test.log <<end
+input_model
+0.75
+7.8
+20.
+4
+0.1
+2
+0.01
+n
+1
+target.eqr
+0.06
+5.
+2.5
+end
+#
+# initial model
+# maximum cubic perturbation
+# stop perturbing at this velocity
+# maximum random perturbation (in % of cubic perturbation)
+# number of iterations per inversion
+# smoothness trade-off parameter
+# number of inversions (x 4) 6 => 24 inversions
+# singular value truncation fraction
+# high-pass filter the waveforms (y or n)
+#   if(yes)
+#       Enter fmin
+#       Enter npasses (1 or 2)
+# number of waveforms
+# sac file name(s)
+# horizontal slowness (ray parameter)
+# waveform delay
+# gaussian wdith factor
+#

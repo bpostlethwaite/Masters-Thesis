@@ -136,8 +136,10 @@ def setHeaders(eventdir, sacfiles, eventdict):
             st[0].stats.sac['kt4'] = "pP"
             st[0].stats.sac['t4'] = pP
 
+            
             ####### TRUNCATE if not truncated############
             if begin != st[0].stats.sac['b']:
+                print "truncating"
                 st[0].data = st[0].data[ (begin - beginOLD)/dt 
                                          : (end - beginOLD)/dt + 1 ] # truncate
                 st[0].stats.sac['b'] = begin

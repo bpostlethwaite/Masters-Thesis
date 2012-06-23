@@ -28,7 +28,7 @@ oldfs = []
 ###########################################################################
 # Get random event directory
 ###########################################################################
-checkdir = '/media/TerraS/TEST'
+checkdir = '/media/TerraS/CN'
 stations = os.listdir(checkdir)
 while True:
     station = stations[random.randint(0,len(stations)-1)]

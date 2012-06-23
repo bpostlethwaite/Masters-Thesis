@@ -1,0 +1,46 @@
+xlim 0 35
+qdp 1200
+fileid t n
+color on inc on list r b
+ 
+r wvfrm01
+sqr
+int
+setbb spwr &1,depmax
+  
+do file wild syn01.010??
+xvp .1 .6
+yvp 0.15 0.9
+r wvfrm01
+subf $file
+sqr
+int
+setbb misfit &1,depmax
+   
+evaluate to c0 %misfit / %spwr
+evaluate to c1 100 * %c0
+evaluate to fracmis 100 - %c1
+setbb sfracmis ' ( BEFORE '.' ' %fracmis ' ) '
+title on   
+title '(CONC 'This Model Fits ' ' ( BEFORE '.' ' %fracmis ' ) ' ' percent of the signal power.' )'
+r $file wvfrm01
+ch b 0
+begfr
+p2
+
+xvp .7 .9
+setbb suf (AFTER '.' $file )
+r inv.mdl.%suf%.vp target_model.vp
+xlim 3 9
+ylim -60 1
+title off
+fileid l ll
+p2
+xlim off
+ylim off
+xvp 0.15 0.9
+yvp 0.15 0.9
+fileid l ur
+endfr
+pause
+enddo

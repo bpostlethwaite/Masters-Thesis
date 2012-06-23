@@ -1,0 +1,14 @@
+#!/bin/sh
+# Run a suite of exhaustive search synthetics in a specified directory.
+# G. Helffrich/U. Bristol 1 Aug. 2006
+#
+# Emits pipe to generate list of file names without creating potentially large
+# file patterns (glob strings), fiters out non-synthetic file names.
+
+dir=${1:-none}
+[ $dir = none ] && { echo **$0: No synthetics directory given ; exit 1 ; }
+#ls -f $dir | 
+#   egrep '[0-9]$' |
+#   awk 'BEGIN{dir="'"${dir}"'"}{printf "%s%s\n",dir,$1}'
+find $dir -type f -print |
+   egrep '[0-9]$'

@@ -1,0 +1,32 @@
+ ray tracer for dipping structures
+
+ structure file: test.mod   model  simple     2 layers
+ layer     vp    vs     dens     strike     dip     z
+    1    6.00   3.46     2.69       0.00     0.0      0.0
+    2    8.00   4.62     3.33       0.00     5.0     35.0
+
+
+
+
+
+ incident p-wave, back azimuth:  20.00 ray parameter:  0.0500
+ direct arrival spends   0.000 secs in layering
+ all times relative to direct ray
+
+ wave type   layer    time     azimuth     ray param.   angle
+     pp     direct    0.000     15.67        0.0488      17.03
+
+ layer  2
+ wave type   layer    time     azimuth     ray param.   angle
+   pppmp       2     11.151    -17.36        0.0492      17.18
+   pppms       2     15.506    -28.56        0.0535      10.68
+   ppsmp       2     15.483    -28.51        0.0535      18.71
+   ppsms       2     19.845    -37.78        0.0595      11.88
+
+ layer  2
+ wave type   layer    time     azimuth     ray param.   angle
+     ps        2      4.391      2.69        0.0470       9.38
+   pspmp       2     15.512    -28.58        0.0535      18.72
+   pspms       2     19.874    -37.84        0.0595      11.89
+   pssmp       2     19.810    -37.72        0.0594      20.88
+   pssms       2     24.190    -45.18        0.0667      13.35

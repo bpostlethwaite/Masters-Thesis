@@ -1,0 +1,10 @@
+
+Test of single rftn inversion code.
+
+srun1 is the shell to run ../snglinv.
+
+target_model is the answer; target.eqr is the waveform inverted.
+
+initial_model is the initial model.
+
+

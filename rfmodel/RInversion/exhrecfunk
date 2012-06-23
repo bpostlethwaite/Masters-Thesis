@@ -1,0 +1,20 @@
+#!/bin/sh
+# Run a suite of exhaustive search receiver function calculations in a
+# specified directory.
+# G. Helffrich/U. Bristol 1 Aug. 2006
+#
+# Emits pipe to generate list of file names without creating potentially large
+# file patterns (glob strings), fiters out non-synthetic file names.
+
+dir=${1:-none} ; shift
+[ $dir = none ] && { echo **$0: No synthetics directory given ; exit 1 ; }
+rfpars="$*"
+# ls -f $dir | 
+#  egrep '\.z$' |
+#  awk 'BEGIN{dir="'"${dir}"'"}{printf "%s%s\n",dir,$1}' |
+find $dir -type f -print |
+   egrep '\.z$' |
+while read f ; do
+   echo $f | recfunk ${rfpars}
+   # rm -f `echo $f | sed -e 's/\.z/.{z,r,t,rft}/'`
+done

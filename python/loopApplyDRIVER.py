@@ -31,7 +31,7 @@ if __name__== '__main__' :
     ###########################################################################
     # SET DIRECTORIES, FILES, VARS
     ###########################################################################
-    networks = ['TEST']
+    networks = ['CN']
     datadir = '/media/TerraS' 
     d = time.localtime(time.time())
     logname = "/log_{}_{}_{}_{}".format(d.tm_year,d.tm_mon,d.tm_mday,d.tm_hour)
@@ -94,15 +94,10 @@ if __name__== '__main__' :
                 eventdir = os.path.join(stdir,event)
                 files = os.listdir(eventdir)
                 for fs in files:
-                    try:
-                        m1 = reg1.match(fs)
+                    m1 = reg1.match(fs)
+                    if m1:
                         comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
-                        #m2 = reg2.match(fs)
-                        #comps.append((m2.group(1),fs))
-                    except AttributeError as e:
-                        #print "No match on file:",fs
-                        pass
-
+                        
     ###########################################################################
     # Check if three components have been found
     # If yes, sort alphebetically and call processor function

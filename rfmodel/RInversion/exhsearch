@@ -1,0 +1,222 @@
+#!/bin/sh
+#  Parse an exhaustive search description of a RF inversion model, and generate
+#  candidate models for input to rfksyn.  Description read from standard input.
+#
+#  By G. Helffrich/U. Bristol, 31 July 2006.
+#     Updated 12 June 2008.
+#
+#  Command line parameters:
+#    -p x [s/deg | s/km] - reference slowness and unit
+#    -dlevel n - subdivide models in different directories down to layer n 
+#        this prevents too many files from being put in a single directory.
+#        Default value is 2.
+#    -build - optionally produce grid search model suite; must specify prefix
+#        line in input, if used.
+#
+#  Any line beginning with # or * is treated as a comment.
+#
+#  Three types of input lines:
+#
+#  halfspace vp <real> vs <real> rho <real>
+#  layer <int> ( vp    <real> <real> <real> n <int> |
+#                vp/vs <real> <real> <real> n <int> )
+#              ( vs    <real> <real> <real> n <int> |
+#                vp/vs <real> <real> <real> n <int> |
+#                pois  <real> <real> <real> n <int> |
+#                vs:vs <real> <real> <real> n <int> )
+#              (rho  <real> <real> (vp | vs) | impedance 0 <real> vs)
+#              (dt <real> <real> | thick <real> <real> n <int>)
+#  prefix <name>
+#
+#  A successful model must have a halfspace defined, and layers 1-n.  If
+#  prefix line is given, all the model files are generated using the prefix
+#  given.
+#
+#  Each layer specifies a range of vp, vs and thickness values to generate.
+#  Ranges are specified by a ref value, low and high increment to reference and
+#  a number of steps.  Thus vp 6.0 -0.2 +0.2 n 5 would range from 5.8 to 6.2 in
+#  steps of 0.1.
+#  Vs can be specified either directly, or as a poisson's ratio
+#  value.  Use ... vs xx yy zz n ii ... or ... pois xx yy zz n ii ... to specify
+#  which method.
+#  Density is either specified by a Nafe-Drake or Birch relationship, or by
+#  an impedance ratio with the overlying layer.  For Nafe-Drake/Birch:
+#    rho xx yy vp indicates rho=xx + yy*vp and rho xx yy vs means rho=xx + yy*vs
+#  while for impedance
+#    impedance 0 xx vs means that rho=(rho(above)*vs(above)*xx)/vs(current)
+#    
+#  Wise users should:
+#     1) try first without -build to make sure you aren't generating
+#        too many models -- this is really easy to do by mistake.
+#     2) make the prefix /tmp/xxx... so that the models clog up temporary
+#        space rather than permanent space.
+#
+p= b=0 d=2
+while [ $# -gt 0 ]; do
+   case "$1" in
+      -p) p="$2 $3"; shift 2
+         ;;
+      -build) b=1
+         ;;
+      -dlevel) d=$2; shift
+         ;;
+      *) echo "**$0:  Unrecognized arg $1" ; exit 1
+         ;;
+   esac
+   shift
+done
+[ -z "$p" ] && { echo "**$0:  No -p specified" ; exit 1 ; }
+awk 'func vpois(pvel,sig){
+   #Vs as function of Vp and Poisson ratio
+   return pvel/sqrt(2*(1-sig)/(1-2*sig))
+}
+func pr(vp,vs) {
+   #Poisson ratio from vp and vs
+   r=vp/vs; return (r^2 - 2)/(2*(r^2-1))
+}
+func max(x,y) {
+   if (x>=y) return x; return y
+}
+func h(dt,vp,vs) {
+   #Calculate layer thickness to give S-P time lag across layer
+   return dt/(sqrt(1/vs^2 - p^2) - sqrt(1/vp^2 - p^2))
+}
+BEGIN{lmax=0; pfx=""; err=0; build='"${b}"'; parg="'"${p}"'"; dlevel='"${d}"'
+   n=split(parg,f); if (n != 2) {print "**No slowness unit given"; exit}
+   p=f[1]+0.0; if (f[2] ~ /s.deg/) p=p/111.1949
+}
+/^[#*]/{next}
+/halfspace +vp +[^ ]+ vs [^ ]+ rho [^ ]/{ # simple fixed halfspace values
+   hs=1;
+   hsvp=$3; hsvplo=0; hsvphi=0; hsvpn=1; hslayvp="vp"
+   hsvs=$5; hsvslo=0; hsvshi=0; hsvsn=1; hslayvs="vs"
+   hsrhoc=$7; hsrhof=0; hsrhorel="vp"
+   next
+}
+/halfspace +((vp)|(vp.vs)) +[^ ]+ +[^ ]+ +[^ ]+ +n +[0-9]+ +((vs)|(pois)|(vs:vs)|(vp.vs)) +[^ ]+ +[^ ]+ +[^ ]+ +n +[0-9]+ +rho +[^ ]+ +[^ ]+ +((vp)|(vs))/{
+   # halfspace values derived from layer above
+   hs=1;
+   hslayvp=$2; hsvp=$3; hsvplo=$4; hsvphi=$5; hsvpn=$7
+   hslayvs=$8; hsvs=$9; hsvslo=$(10); hsvshi=$(11); hsvsn=$(13);
+   hsrhoc=$(15); hsrhof=$(16); hsrhorel=$(17)
+   n=hsvpn*hsvsn
+   if (n > 9999) {
+      printf "**Too many combinations in half-space (%d; max 9999)\n",n
+      err=1
+   }
+   next
+}
+/layer +[0-9]+ +((vp)|(vp.vs)) +[^ ]+ +[^ ]+ +[^ ]+ +n +[0-9]+ +((vs)|(pois)|(vs:vs)|(vp.vs)) +[^ ]+ +[^ ]+ +[^ ]+ +n +[0-9]+ +((rho)|(imp(edance)?)) +[^ ]+ +[^ ]+ +((vp)|(vs)) +((th(ick)? +[^ ]+ +[^ ]+ +n +[^ ]+)|(dt +[^ ]+ +[^ ]+))/{
+   l=$2
+   if (l > lmax) lmax=l
+   layvp[l]=$3
+   vpref[l]=$4;    vplo[l]=$5;    vphi[l]=$6;    vpn[l]=$8-1;    vpi[l]=0
+   vsref[l]=$(10); vslo[l]=$(11); vshi[l]=$(12); vsn[l]=$(14)-1; vsi[l]=0
+   layrel[l]=$9; layrho[l]=$(15)
+   rhoc[l]=$(16); rhof[l]=$(17); rhorel[l]=$(18)
+   layth[l]=$(19)
+   thlo[l]=$(20); thhi[l]=$(21);
+   if (layth[l] ~ /th/) { # iterate over thickness range
+      thn[l]=$(23)-1; thi[l]=0
+   } else { # apply time lag constraint
+      thn[l]=0; thi[l]=0
+   }
+   lay[l]=$8*$(14)*(1+thn[l])
+   if (lay[l] > 999999) {
+      printf "**Layer %d:  too many combinations (%d; max 999999)\n",l,lay[l]
+      err=1
+   }
+   if (layrel[l] ~ /vs:vs/ && l==1) {
+      printf "**Layer %d:  %s must be wrt shallower layer\n",l,layrel[l]
+      err=1
+   }
+   if (layvp[l] ~ /vp.vs/ && l==1) {
+      printf "**Layer %d:  %s must be wrt shallower layer\n",l,layvp[l]
+      err=1
+   }
+   if (layrho[l] != "rho" && (rhorel[l] != "vs" || l==1)) {
+      printf "**Layer %d:  impedance must be vs, wrt shallower layer\n",l
+      err=1
+   }
+   next
+}
+/prefix/{pfx=$2; next}
+{printf "**Invalid syntax line %d: %s\n",NR,$0; err=1}
+END{
+   ntot=1; for(i=1;i<=lmax;i++) {
+      if (lay[i]<=0) {
+	 printf "**Missing description for layer %d\n",i
+	 err=1
+      } else
+	 ntot*=lay[i]
+   }
+   if (hs<=0) {
+      print "**No halfspace provided"; err=1
+   }
+   # Add combinations in half-space, if any
+   lmax=lmax+1
+   layvp[lmax]=hslayvp 
+      vpref[lmax]=hsvp; vplo[lmax]=hsvplo; vphi[lmax]=hsvphi;
+      vpn[lmax]=hsvpn-1; vpi[lmax]=0
+   layrel[lmax]=hslayvs
+      vsref[lmax]=hsvs; vslo[lmax]=hsvslo; vshi[lmax]=hsvshi;
+      vsn[lmax]=hsvsn-1; vsi[lmax]=0
+   layrho[lmax]="rho"
+      rhoc[lmax]=hsrhoc; rhof[lmax]=hsrhof; rhorel[lmax]=hsrhorel
+   layth[lmax]="th"; thn[lmax]=0; thlo[lmax]=0; thhi[lmax]=0; thi[lmax]=0
+   lay[lmax]=hsvpn*hsvsn
+   ntot*=lay[lmax]
+   # Report model combinations
+   printf "%d models to be generated",ntot
+   printf " (%d layers)",lmax
+   if (pfx!="") printf " with prefix %s",pfx
+   printf ".\n"
+   if (err>0 || pfx=="" || !build) exit
+
+   #  Generate models
+   do {
+      mid=""; dir=""
+      for(i=1; i<=lmax; i++) {
+	 vp[i]=vpref[i] + (vphi[i]-vplo[i])/max(1,vpn[i])*vpi[i] + vplo[i]
+	 vs[i]=vsref[i] + (vshi[i]-vslo[i])/max(1,vsn[i])*vsi[i] + vslo[i]
+	 if (layrel[i] == "pois") vs[i]=vpois(vp[i],vs[i])
+	 if (layrel[i] == "vs:vs") vs[i]=vs[i-1]*vs[i]
+	 if (layrel[i] == "vp/vs") vs[i]=vp[i]/vs[i]
+	 if (layvp[i] == "vp/vs") vp[i]=vp[i]*vs[i]
+	 if (layrho[i] == "rho") {
+	    if (rhorel[i] == "vs") vel=vs[i]; else vel=vp[i]
+	    rho[i]=rhoc[i]+vel*rhof[i]
+	 } else { # impedance relation
+	    rho[i]=(vs[i-1]*rho[i-1]*rhof[i])/vs[i]
+	 }
+         if (layth[l] ~ /th/) { # iterate over thickness range
+	    th[i]=thlo[i] + (thhi[i]-thlo[i])/max(1,thn[i])*thi[i]
+	 } else { # Calculate whether time lag criterion satisfied
+	    th[i]=0.5*(h(thlo[i],vp[i],vs[i]) + h(thhi[i],vp[i],vs[i]))
+	 }
+	 mid=sprintf("%s%02d%02d%02d",mid,vpi[i],vsi[i],thi[i])
+	 if(i<=dlevel) dir=sprintf("%s%02d/%02d/%02d/",dir,vpi[i],vsi[i],thi[i])
+      }
+      dname=pfx substr(dir,1,length(dir)-3)
+      system("mkdir -p " dname)
+      if (1) { 
+	 fname=dname mid ; pipe="cat << EOF > " fname
+	 printf "%3d %s\n",lmax,mid > fname
+	 for(i=1; i<=lmax; i++) {
+	    printf "%3d %8.4f %7.4f %7.4f %7.4f  0.0000  0.0000  0.0000  0.0000 %7.4f\n",i,vp[i],vs[i],rho[i],th[i],pr(vp[i],vs[i]) > fname
+	 }
+	 close(fname)
+      }
+      enumerating=1
+      for(i=1; i<=lmax; i++) {
+	 if (++vpi[i] <= vpn[i]) break; vpi[i]=0
+	 if (++vsi[i] <= vsn[i]) break; vsi[i]=0
+	 if (++thi[i] <= thn[i]) break; thi[i]=0
+	 enumerating = (i != lmax) || (vpi[i]+vsi[i]+thi[i])
+      }
+   } while(enumerating);
+}'
+#
+# 2 simple                          
+# 1   6.0000  3.4641  2.6900 35.0000  0.0000  0.0000  0.0000  0.0000  0.2500
+# 2   8.0000  4.6188  3.3300  0.0000  0.0000  0.0000  0.0000  0.0000  0.2500

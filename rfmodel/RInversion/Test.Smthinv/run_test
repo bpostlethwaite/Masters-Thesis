@@ -1,0 +1,23 @@
+../smthinv > test.log <<end
+initial_model
+3
+0.0
+1.0
+0.01
+n
+1
+target.eqr
+0.06
+5.
+2.5
+end
+#
+# initial model
+# maximum # of iterations per inversion
+# minimum smoothness trade-off parameter
+# maximum smoothness trade-off parameter
+# SVD truncation fraction
+# # waveforms
+# sac file name(s)
+# slowness
+# waveform delay

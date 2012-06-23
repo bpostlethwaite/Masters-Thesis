@@ -1,0 +1,19 @@
+Reference (flat dir structure, all files existed, nothing deleted)
+real    71m33.089s
+user    24m36.720s
+sys     7m15.980s
+
+Flat dir structure, no files existed, .[rtz] and .rft files deleted on the fly
+real    72m37.400s
+user    24m51.090s
+sys     10m39.470s
+
+Directory structure, no files existed, nothing deleted
+real    59m59.328s
+user    21m38.090s
+sys     6m48.870s
+
+Directory structure, all files existed, nothing deleted
+real    73m13.186s
+user    22m25.490s
+sys     7m25.510s

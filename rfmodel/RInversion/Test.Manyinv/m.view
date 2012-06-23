@@ -1,0 +1,7 @@
+qdp 1200
+color on inc on list r b
+do result wild dir . syn01.??04
+  r $result wvfrm01
+  p2
+  pause
+enddo

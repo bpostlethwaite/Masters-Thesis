@@ -1,0 +1,21 @@
+axes off all
+ticks off all
+border off
+begfr
+qdp 512
+xlim -10 40
+xvp .2 .5
+yvp .55 0.9
+color on inc on list r b
+r decon.out_2.5 1996.001.08.23.eqr
+div &1,depmax &2,depmax
+p2
+qdp 256
+yvp .15 .5
+r decon.out_0.4 g00.4.wl.0.0100.eqr
+div &1,depmax &2,depmax
+p2
+endfr
+axes on l b
+ticks on all
+border on

@@ -1,0 +1,22 @@
+#!/bin/sh
+#  Calculate Vs from RF amplitude and phase slowness using formula (15)
+#     in Ammon (1991).
+#  G. Helffrich/U. Bristol 17 June 2008
+#
+#  vsfromrfamp amp p [s/deg | s/km]
+#    or
+#  vsfromrfamp
+#    with lines of standard input (amplitude, slowness and slowness unit):
+#        amplitude, p, [s/deg | s/km]
+#
+prog='BEGIN{degkm=111.19}
+{  if ($3 ~ /s.deg/) p=$2/degkm; else p=$2; R=$1
+   b=p^2*(R^2+2); a=4*p^4*(R^2+1); ac4=16*p^4*R^2*(1+R^2)
+   vssq=0.5*(b - sqrt(b^2 - ac4))/a; vs=sqrt(vssq)
+   print $1,$2,$3,vs
+}'
+if [ $# -gt 0 ]; then
+   echo $1 $2 $3 | awk "${prog}"
+else
+   cat - | awk "${prog}"
+fi

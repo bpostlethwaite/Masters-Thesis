@@ -1,0 +1,91 @@
+* SAC macro to combine, by distance weighting, a set of receiver function
+*    seismograms or depth-o-grams into a set of synthetics alone a specified
+*    cross-section.
+*    G. Helffrich/U. Bristol, March 2006.
+*       Updated June, 2008
+*
+* Input is a file with list of SAC files in it or a pattern that matches a
+*    collection of files.  Each SAC file header has:
+*    (1) KA - name of phase
+*    (2) gcarc, baz - event coordinates
+*
+* Keywords:
+*   files x - phase alignment times in file x
+*   pat x - files to be displayed match shell pattern x
+*   xlim - time window to display
+*   range x y - distance window to display
+*   sect lat lon az lo hi n - section reference, azimuth, low and high distance
+*      number of traces
+*   title - title string to put onto plot
+*   embedded - "yes" if this is part of a larger plot (omit BEGINFRAME/ENDFRAME)
+*   label x - header field to label file with - otherwise file name
+*   ylabel x - label for vertical axis - otherwise defaults
+*   size x - boost amplitude by factor x (default 1.0)
+*   upto x - ignore projection points more distant than this from section
+*   model x - use velocity model x
+*   units [km|degrees] - units for cross section
+*   dt x - migrating seismograms: x dt for each one in section
+*   dz x - migrating depth-o-grams: x dz for each one in section
+* 
+$keys upto xlim range files pat title embedded label ylabel size prog model sect units dt dz
+$default title none
+$default embedded no
+$default label on
+$default ylabel default
+$default size 1.0
+$default pat none
+$default prog sacrfmigrate 
+$default model ak135 
+$default units degrees 
+$default range no
+$default dt no
+$default dz no
+if $dt$ ne no
+   setbb args "-traces time $dt$ -ref 6.5"
+elseif $dz$ ne no
+   setbb args "-traces depth $dz$"
+else
+   setbb args "-traces depth 1"
+endif
+sc to pfx echo /tmp/sac@$@$
+if none eq $pat$
+   sc $prog -units $units$ -model $model -range $upto -sect $sect %args% %pfx% < $files | awk '{printf "addstack @%s distance @%f\n",@$1,@$2}' > ./tmp_ptime
+else
+   sc ls $pat$ | $prog -units $units$ -model $model -range $upto -sect $sect %args% %pfx% | awk '{printf "addstack @%s distance @%f\n",@$1,@$2}' > ./tmp_ptime 
+endif
+if none ne "$title$"
+   $run cat - > ./tmp_rs.pcf
+[f3ssvbhc]
+t 0.75 0.08
+$title$
+$endrun
+endif
+sc echo "Q" >> ./tmp_rs.pcf
+sss
+zerostack
+timewindow $xlim
+if _no ne "_$range$"
+   distancewindow fixed $range$ units $units$
+else
+   distancewindow fixed (items 4 5 $sect$) units $units$
+endif
+macro ./tmp_ptime
+border off
+if $embedded eq no
+   beginframe
+endif
+if $units$ eq degrees
+   setbb lbl "deg."
+else
+   setbb lbl "km"
+endif
+prs referenceline off labels $label$ weight off xlabel "Range @(%lbl%@)" ylabel $ylabel$ size $size$
+plotc replay file ./tmp_rs
+if $embedded eq no
+   endframe
+endif
+border on
+quitsub
+sc awk '{print "/bin/rm -f",@$2}' ./tmp_ptime | sh
+sc /bin/rm -f ./tmp_ptime ./tmp_rs.pcf
+unsetbb lbl pfx args

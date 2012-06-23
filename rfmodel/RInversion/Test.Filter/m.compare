@@ -1,0 +1,22 @@
+qdp 1200
+xvp .1 .4
+yvp .1 .9
+axes on l t
+xlabel l t "Velocity @(km/s@)"
+ylabel "Depth @(km@)"
+xlim 3 9
+ylim -60 .5
+color on inc on list red blue black
+fileid t n l ur
+begfr
+r inv.mdl.01$1$.vp target_model.vp initial_model.vp
+p2
+xvp .5 .9
+yvp .2 .8
+axes on l b
+xlabel l b 
+xlim off
+ylim off
+r syn01.01$1$ wvfrm01 syn01.0100
+p2
+endfr

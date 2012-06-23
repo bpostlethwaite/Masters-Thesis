@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+#   runsyn {-trace f | -std f | -freq v | -type [P|S] | -p v [s/km | s/deg] |
+#           -win tl th | sps v}
+#
+#   -trace f - f is SAC file name of target trace
+#   -std f - f is SAC file name of std. dev. of target trace
+#   -sps v - v is samples per second in the seismogram
+#   -freq v - v is frequency cutoff max for deconvolution
+#   -type [P|S] - P or S for Ps RF or Sp rf (Sp is untested and probably wrong)
+#   -p v [s/km|s/deg] - v is slowness value followed by unit s/km or s/deg
+#   -win tl th - tl and th are the times in the seismogram that will be
+#      analyzed.  Implicitly, a noise window as long as the analysis window
+#      is used prior to tl in the seismogram.
+
+freq=2 sps=20 type=P tmp=/tmp/tmp$$
+while [ $# -gt 0 ]; do
+   case "$1" in
+   -trace) tr=$2; shift;;
+   -std*) sd=$2; shift;;
+   -freq) freq=$2; shift;;
+   -sps) sps=$2; shift;;
+   -type) type=$2; shift;;
+   -p) slow="$2 $3"; shift 2;;
+   -win*) win="$2 $3"; shift 2;;
+   *) echo "**$0: Unrecognized parameter: $1" ; exit 1;;
+   esac
+   shift
+done
+
+noi=`echo $win | awk '{dur=$2-$1; printf "%f %f\n",$1-dur,$1}'`
+
+rfksyn -sph -sps $sps -type $type -p $slow -conf -gen zr |
+   reformat "${win}" "${noi}" |
+   mtdecon -freq $freq |
+   rfmisfit $tr $sd

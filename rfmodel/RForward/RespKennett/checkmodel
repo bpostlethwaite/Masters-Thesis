@@ -1,0 +1,4 @@
+awk 'NR==1{n=$1; z=0}
+NR>1{if ($6 == 0.0) d="d"; else d="g"
+   printf "%3d %s %s %s %s\n",z,$2,$3,$4,d; z+=$5
+}'

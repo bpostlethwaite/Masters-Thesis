@@ -41,6 +41,7 @@ def ppicker(eventdir,pname,sname):
     p, s = (pt.data, st.data)
 
     dt = pt.stats.delta
+    print dt
     N = len(pt.data)
     b = pt.stats.sac['b']
     depth = pt.stats.sac['evdp']
@@ -48,7 +49,7 @@ def ppicker(eventdir,pname,sname):
     t4 = (pt.stats.sac['t4'] - b ) / dt   
     t7 = (pt.stats.sac['t7'] - b ) / dt
     left = round(t0 - 20/dt)
-    right = round(t0 + 240/dt)
+    right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
     nn = np.arange(0,N)
 
@@ -56,14 +57,15 @@ def ppicker(eventdir,pname,sname):
 
     while True:
     #plt.subplot(2,1,1)
-        print "Pick P-coda. Begin then End on event:", eventdir
+        #print "Pick P-coda. Begin then End on event:", eventdir
         plt.figure( num = None, figsize = (22,6) )
         plt.plot(p, label = 'Pcomp')
         plt.xticks(nn[::200],t[::200])
         plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
         plt.axvline(x = t0, color = 'y', label = 'gett P')
         plt.axvline(x = t4, color = 'g', label = 'gett pP')
-        plt.axvline(x = t7, color = 'r', label = 'gett PP')
+        if t7 < right:
+            plt.axvline(x = t7, color = 'r', label = 'gett PP')
         plt.xlim(left, right)
         plt.xlabel('Time \n P arrival is zero seconds')
         plt.legend()
@@ -78,12 +80,14 @@ def ppicker(eventdir,pname,sname):
             continue
         plt.close()
 
-        print "Keep trace? 'y' for yes, 'n' for no, 'r' for redo: "
+        print "Keep trace? 'n' for no, 'r' for redo, any other for yes: "
         inp = get()
 
         if 'r' in inp:
             continue
-        if 'y' in inp:
+        elif 'n' in inp:
+            raise SeisDataError('poorData')
+        else:
             pt.stats.sac['t1'] = T1
             pt.stats.sac['t3'] = T3
             pt.write(pf, format='SAC')
@@ -91,8 +95,7 @@ def ppicker(eventdir,pname,sname):
             st.stats.sac['t3'] = T3
             st.write(sf, format='SAC')
             return
-        elif 'n' in inp:
-            raise SeisDataError('poorData')
+        
     #plt.subplot(2,1,2)
     #plt.plot(s)
     #plt.title('S-trace')
@@ -104,11 +107,14 @@ if __name__== '__main__' :
     if (len(sys.argv) != 2):
         print "Send a absolute Station directory"
         exit()
-        
+    count = 1    
     stdir = sys.argv[1]
     reg2 = re.compile(r'^stack_(\w)\.sac')
     events = os.listdir(stdir)
+    events = filter(is_number,events)
+    
     for event in events:
+        print "{}/{} Pick P-coda limits".format(count, len(events) )
         if not is_number(event): # Make sure event dir is right format, skip those not in number format
             continue
         comps = []
@@ -128,13 +134,13 @@ if __name__== '__main__' :
              renameEvent(eventdir,"MissingComponents")
              continue
          # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
-         # Pull out sacfiles from zipped sorted list.
+         # Pull outn sacfiles from zipped sorted list.
         comps.sort()
         _ , sacfiles = zip(*comps)
 
         try:
             ppicker(eventdir,sacfiles[0],sacfiles[1])
-
+            count += 1
         except SeisDataError as e:    
             renameEvent(eventdir, e.msg)
             continue
