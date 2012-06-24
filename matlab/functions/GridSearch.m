@@ -96,7 +96,8 @@ hbest=h(ih);
 tps = hbest*(f1-f2);
 tpps = hbest*(f1+f2);
 tpss = 2*hbest*f1;
-sterr1=sqrt( sum( var([adjtpps*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
+
+sterr1=sqrt( sum( var( [adjtpps*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
     -adjtpss*gvr(round(tpss/dt)+1+[0:np-1]*nt)]) /(2*np) ));
 
 sterr2 = sqrt(sum(var([0.5*gvr(round(tps/dt)+1+[0:np-1]*nt),...

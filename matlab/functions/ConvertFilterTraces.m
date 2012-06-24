@@ -33,13 +33,13 @@ for ii = 1:length(dlist)
         
         % On first pass set N
         if ii == 1
-            N = 2^nextpow2(length(p));
+            N = 16384;
         end
         % Truncate if longer
-        if length(p) > N
-            p = p(1:N);
-            s = s(1:N);
-        end
+        %if length(p) > N
+        p = p(1:N);
+        s = s(1:N);
+        %end
         % Check to make sure picked time interval greater than picktol and
         % That the starting time in the record header matches the picks (make
         % sure it makes sense (Both T1 and T3 must be greater that record
@@ -75,10 +75,10 @@ for ii = 1:length(dlist)
 
     if bad
         % Put all filtered info into struct array badpicks
-        badpick.event{ind2} = dlist{ii};
-        badpick.errmsg{ind2} = emsg;
+        %badpick.event{ind2} = dlist{ii};
+        %badpick.errmsg{ind2} = emsg;
         % Badpick index
-        ind2 = ind2 + 1;
+        %ind2 = ind2 + 1;
         % Print error message to screen if printinfo = true
         if printinfo
             disp(emsg)
@@ -88,8 +88,8 @@ for ii = 1:length(dlist)
         % Good files go in the respective arrays and cells.
         header{ind1} = S1;
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
-        p(end+1:N) = 0; % Pad with zeros
-        s(end+1:N) = 0; % Pad with zeros
+        %p(end+1:N) = 0; % Pad with zeros
+        %s(end+1:N) = 0; % Pad with zeros
         ptrace(ind1,:) = p;
         strace(ind1,:) = s;
         ind1 = ind1 + 1;

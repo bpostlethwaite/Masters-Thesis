@@ -15,7 +15,7 @@ databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data.
-station = 'DRLN';
+station = 'FCC';
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
 loadflag = 0;
@@ -62,9 +62,9 @@ dbn.t2 = t2;
 %% Plot the results if we completed the processing
 close all
 plotStack(dbn);
-fprintf('Vp is +/- %1.3f km/s\n',results.errV)
-fprintf('R is +/- %1.3f \n',results.errR)    
-fprintf('H is +/- %1.3f \n',results.errH)    
+fprintf('Vp is %f +/- %1.3f km/s\n',results.vbest, results.errV)
+fprintf('R is %f +/- %1.3f \n',results.rbest, results.errR)    
+fprintf('H is %f +/- %1.3f \n',results.hbest, results.errH)    
     
 %% Enter Processing Notes:
 

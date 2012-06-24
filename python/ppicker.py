@@ -48,7 +48,7 @@ def ppicker(eventdir,pname,sname):
     t4 = (pt.stats.sac['t4'] - b ) / dt   
     t7 = (pt.stats.sac['t7'] - b ) / dt
     left = round(t0 - 20/dt)
-    right = round(t0 + 240/dt)
+    right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
     nn = np.arange(0,N)
 

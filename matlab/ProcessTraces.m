@@ -31,11 +31,27 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
 dt = header{1}.DELTA;
-%
+modratio = zeros(1,size(ptrace,1));
 for ii = 1:size(ptrace,1)
-    ptrace(ii,:) = ptrace(ii,:)/max(ptrace(ii,:));
-    strace(ii,:) = strace(ii,:)/max(strace(ii,:));
+    t1 = round( (header{ii}.T1 - header{ii}.B) / dt);
+    t3 = round( (header{ii}.T3 - header{ii}.B) / dt);
+    t0 = t1 - round(20/dt);
+    if t0 < 1
+        t0 = 1;
+    end
+    m1 = var(ptrace(ii,  t1 : t3 ));
+    m0 = var(ptrace(ii, t0 : t1 - round(2/dt)));
+    modratio(ii) = m1/m0;
+   
 end
+
+modratio(modratio < 20) = 1;
+modratio( (modratio < 100) & (modratio > 1) ) = 2;
+modratio(modratio < 500 & modratio > 2) = 5;
+modratio(modratio > 5) = 10;
+
+ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
+strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
 %}
 %% 5)  Window with Taper and fourier transform signal.
 %
@@ -90,19 +106,18 @@ if loadflag
     fLow = db(end).filterLow;
     fHigh = db(end).filterHigh;
 else
-    fLow = 0.08;
-    fHigh = 1.2;
+    fLow = 0.04;
+    fHigh = 1.0;
 end    
 numPoles = 2;
-brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
-%brec = rec;
+%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+brec = rec;
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
-    %brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001);% * (pscale(ii));
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001);% * (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 
@@ -111,8 +126,8 @@ if loadflag
     t1 = db(end).t1; 
     t2 = db(end).t2;
 else
-    t1 = 3.7;
-    t2 = 4.3;
+    t1 = 4.4;
+    t2 = 5.2;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
@@ -132,8 +147,8 @@ damp = 0.2;
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
 %% Curvelet Denoise
-%thresh = 0.1;
-%brec = performCurveletDenoise(brec,dt,thresh);
+thresh = 0.1;
+brec = performCurveletDenoise(brec,dt,thresh);
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec,Tps',dt,pslow);
