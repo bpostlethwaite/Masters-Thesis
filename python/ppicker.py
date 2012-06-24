@@ -41,7 +41,6 @@ def ppicker(eventdir,pname,sname):
     p, s = (pt.data, st.data)
 
     dt = pt.stats.delta
-    print dt
     N = len(pt.data)
     b = pt.stats.sac['b']
     depth = pt.stats.sac['evdp']
@@ -49,7 +48,7 @@ def ppicker(eventdir,pname,sname):
     t4 = (pt.stats.sac['t4'] - b ) / dt   
     t7 = (pt.stats.sac['t7'] - b ) / dt
     left = round(t0 - 20/dt)
-    right = round(t0 + 140/dt)
+    right = round(t0 + 240/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
     nn = np.arange(0,N)
 
@@ -139,8 +138,8 @@ if __name__== '__main__' :
         _ , sacfiles = zip(*comps)
 
         try:
-            ppicker(eventdir,sacfiles[0],sacfiles[1])
             count += 1
+            ppicker(eventdir,sacfiles[0],sacfiles[1])
         except SeisDataError as e:    
             renameEvent(eventdir, e.msg)
             continue

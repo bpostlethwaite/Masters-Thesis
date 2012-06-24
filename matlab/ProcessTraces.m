@@ -20,7 +20,7 @@ fclose('all'); % Close all open files from reading
 if loadflag
     npb = db(end).npb;
 else
-    npb = 3; % Average number of traces per bin
+    npb = 2; % Average number of traces per bin
 end
 numbin = round((1/npb)*size(ptrace,1));
 pbinLimits = linspace(.035,.08,numbin);
@@ -31,7 +31,7 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
 dt = header{1}.DELTA;
-%{
+%
 for ii = 1:size(ptrace,1)
     ptrace(ii,:) = ptrace(ii,:)/max(ptrace(ii,:));
     strace(ii,:) = strace(ii,:)/max(strace(ii,:));
@@ -90,8 +90,8 @@ if loadflag
     fLow = db(end).filterLow;
     fHigh = db(end).filterHigh;
 else
-    fLow = 0.04;
-    fHigh = 1.1;
+    fLow = 0.08;
+    fHigh = 1.2;
 end    
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
@@ -111,8 +111,8 @@ if loadflag
     t1 = db(end).t1; 
     t2 = db(end).t2;
 else
-    t1 = 4.5;
-    t2 = 5.5;
+    t1 = 3.7;
+    t2 = 4.3;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
