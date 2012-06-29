@@ -79,55 +79,38 @@ for ii = 1:nbins
 end
 close(h)
 
-%% Delete bad entries
-%{
-while true
-    fig = figure(1111);
-    csection(rec(:,1:round(26/dt)),0,dt);
-    [X,Y] = ginput(1);
-    usr = input('Are you finished? "y" for yes, any other key to keep deleting: ','s');
-    X = floor(X);
-    rec(X,:) = [];
-    pslow(X) = [];
-    
-    if strcmp(usr,'y')
-       figure(1111);
-        csection(rec(:,1:round(26/dt)),0,dt);
-        break
-       
-    else
-        continue
-    end
-end
-close(fig)
-%}
 %% 6) Filter Impulse Response
 if loadflag
     fLow = db(end).filterLow;
     fHigh = db(end).filterHigh;
 else
     fLow = 0.04;
-    fHigh = 1.0;
+    fHigh = 1.2;
 end    
 numPoles = 2;
-%brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
-brec = rec;
+brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+%brec = rec;
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001);% * (pscale(ii));
+    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) ;%* (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
+
+
+%% Curvelet Denoise
+thresh = 0.1;
+brec = performCurveletDenoise(brec,dt,thresh);
 
 %% Select tps
 if loadflag
     t1 = db(end).t1; 
     t2 = db(end).t2;
 else
-    t1 = 4.4;
-    t2 = 5.2;
+    t1 = 4.8;
+    t2 = 6.0;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
@@ -146,9 +129,7 @@ damp = 0.2;
 
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
 
-%% Curvelet Denoise
-thresh = 0.1;
-brec = performCurveletDenoise(brec,dt,thresh);
+
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec,Tps',dt,pslow);
