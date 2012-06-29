@@ -1,6 +1,0 @@
-#Grid search example input, taken from Lodge and Helffrich (2006)
-prefix /tmp/
-layer 1 vp 5.8 -0.8 0.8 n 5 vp/vs 1.75 -0.5 0.5 n 5 rho 1.72 0.337 vs dt 1.25 1.27
-layer 2 vp/vs 1.75 -0.5 0.5 n 5 vs:vs 1.12 0 0 n 1 rho 1.72 0.337 vs dt 0.88 0.90
-layer 3 vp/vs 1.75 -0.5 0.5 n 5 vs:vs 1.19 0 0 n 1 imp 0 1.06 vs dt 6.46 6.50
-halfspace vp/vs 1.75 -0.5 0.5 n 5 vs:vs 0.92 0 0 n 1 rho 0.613 0.327 vp

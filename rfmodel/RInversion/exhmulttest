@@ -1,4 +1,0 @@
-echo halfspace vp 8.00 vs 4.6188 rho 3.33
-echo layer 1 vp 6.0 -0.3 +0.3 n 13 pois 0.25 -0.05 +0.05 n 21 rho 1.720 0.280 vs th 5 50 n 46
-echo 99 | awk '{for(i=2;i<=$1;i++) printf "layer %d vp 6.0 -0.1 +0.1 n 1 pois 0.25 -0.05 +0.05 n 1 rho 1.720 0.280 vs th 5 50 n 1\n",i}'
-echo 'prefix /tmp/m/'

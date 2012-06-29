@@ -1,1 +1,0 @@
-/home/bpostlet/seismo/src/kbtaper.f
