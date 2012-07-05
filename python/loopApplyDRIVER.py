@@ -15,9 +15,18 @@ sh = subprocess.Popen
 ###########################################################################
 # HELPER FUNCTIONS
 ###########################################################################
-def renameEvent(eventdir,error):
-    shutil.move(eventdir,eventdir + "_" + error)
-    
+def renameEvent(eventdir,error, reverse = False):
+    if not reverse:
+        shutil.move(eventdir,eventdir + "_" + error)
+    elif reverse:
+        head, tail = os.path.split(eventdir)
+        try:
+            float(tail[:10])
+            shutil.move( eventdir, os.path.join(head,tail[:10]) )
+        except ValueError:
+            print "Error returning", tail, "into directory", tail[:10]
+
+
 def is_number(s):
     try:
         float(s)
@@ -32,7 +41,7 @@ if __name__== '__main__' :
     # SET DIRECTORIES, FILES, VARS
     ###########################################################################
     networks = ['CN']
-    datadir = '/media/TerraS' 
+    datadir = '/media/TerraS'
     d = time.localtime(time.time())
     logname = "/log_{}_{}_{}_{}".format(d.tm_year,d.tm_mon,d.tm_mday,d.tm_hour)
     logfile = open(datadir + logname, 'w')
@@ -55,7 +64,7 @@ if __name__== '__main__' :
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
 
     ###########################################################################
-    #  Walk through Networks supplied above. These are the root folders in 
+    #  Walk through Networks supplied above. These are the root folders in
     #  main directory folder
     ###########################################################################
     for network in networks:
@@ -73,7 +82,7 @@ if __name__== '__main__' :
     # Walk through all stations found in network folder
     ###########################################################################
         for station in stations:
-            try: 
+            try:
                 logfile.write("operating on station: " + station + "\n")
                 print "operating on station:", station
                 stdir = os.path.join(netdir,station)
@@ -97,7 +106,7 @@ if __name__== '__main__' :
                     m1 = reg1.match(fs)
                     if m1:
                         comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
-                        
+
     ###########################################################################
     # Check if three components have been found
     # If yes, sort alphebetically and call processor function
@@ -115,7 +124,7 @@ if __name__== '__main__' :
                 # Run Processing function
                 try:
                     setHeaders(eventdir, sacfiles, eventdict)
-                    detrend_taper_rotate(eventdir, sacfiles)                    
+                    detrend_taper_rotate(eventdir, sacfiles)
                     #sh("rm {}/*stack*".format(eventdir), shell=True, executable = "/bin/bash")
                 except IOError:
                     print "IOError in event:", eventdir
@@ -132,7 +141,7 @@ if __name__== '__main__' :
                     logfile.write("Error Processing: " + eventdir + " ValueError\n")
                     renameEvent(eventdir,"ValueError")
                     continue
-               
 
-                
+
+
     logfile.close()

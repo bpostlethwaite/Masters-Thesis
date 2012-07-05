@@ -118,11 +118,21 @@ if __name__== '__main__' :
     elif (len(sys.argv) > 2):
         flag = sys.argv[1]
         stdir = sys.argv[2]
-        if "-r" not in flag:
-            print "unsupported flag option. Use -r to repick only unpicked seismograms"
-            exit()
-        else:
+
+        if flag in "-r":
             repick = True
+
+        elif flag in "-u":
+            events = os.listdir(stdir)
+            for event in events:
+                if "poorData" in event:
+                    renameEvent( os.path.join(stdir,event), [], True)
+            exit()
+
+        else:
+            print "unsupported flag option. Use -r to repick only unpicked seismograms, or -u to unpick entire directory"
+            exit()
+
     else:
         stdir = sys.argv[1]
 
