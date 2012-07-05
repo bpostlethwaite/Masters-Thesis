@@ -9,24 +9,8 @@
 # IMPORTS
 ###########################################################################
 import os, re, time, shutil
-from preprocessor import setHeaders, detrend_taper_rotate, SeisDataError
-import subprocess
+from loopApplyDRIVER import renameEvent, is_number
 from collections import defaultdict
-sh = subprocess.Popen
-###########################################################################
-# HELPER FUNCTIONS
-###########################################################################
-def renameEvent(eventdir,error):
-    shutil.move(eventdir,eventdir + "_" + error)
-    
-def is_number(s):
-    try:
-        float(s)
-        return True
-    except ValueError:
-        return False
-    except TypeError:
-        return False
 
 # Build Dictionaries.
 leapyrs = ["2000", "2004", "2008", "2012"]
@@ -60,6 +44,36 @@ def rehashdate(match):
     return yr[2:4]+month+day+hour+minute
 
 
+class StationStats(object):
+    
+    def __init__(self, name):
+        self.name = name
+        self.width = 40
+
+    def setStats(self, totalEvents, goodEvents, missingComps, poorData, match, nomatch, saveableMCs):
+        self.totalev = totalEvents
+        self.goodEvents = goodEvents
+        self.missingComps = missingComps
+        self.poorData = poorData
+        self.match = match
+        self.nomatch = nomatch
+        self.saveableMCs = saveableMCs
+        self.percentGood = float(self.goodEvents) / float(self.totalev)
+        self.poor2good = float(self.poorData) / float(self.goodEvents)
+
+    def printLine(self, stuff):
+        spacer = " " * (self.width - 4 - len(stuff))
+        print "*  " + stuff + spacer + "*"
+
+    def printStats(self):
+        print "*" * self.width 
+        self.printLine(self.name)
+        self.printLine("Total events: {}".format(self.totalev) )
+        self.printLine("Percent useable: {0:2.1%}".format(self.percentGood) )
+        self.printLine("Percent poor: {0:2.1%}".format(self.poor2good) )
+        self.printLine("Possible Rescuable Comps: {}".format(self.saveableMCs))
+
+
 if __name__== '__main__' :
     ###########################################################################
     # SET DIRECTORIES, FILES, VARS
@@ -79,7 +93,6 @@ if __name__== '__main__' :
     ###########################################################################
     for network in networks:
         try:
-            print "operating on network:", network
             netdir = os.path.join(datadir,network)
             stations = os.listdir(netdir)
         except OSError as e:
@@ -92,44 +105,58 @@ if __name__== '__main__' :
     ###########################################################################
         for station in stations:
             
-            print "operating on station:", station
+            statdict = {}
+            fdict = {}
+            mfiles = []          
+            d = defaultdict(int)
             stdir = os.path.join(netdir,station)
             events = os.listdir(stdir)
+            statdict['totalEvents'] = len(events)
+            statdict['poorData'] = 0
+            statdict['match'] = 0
+            statdict['nomatch'] = 0
+            statdict['saveableMCs'] = 0
+            statdict['goodEvents'] = 0
+            statdict['missingComps'] = 0
 
-            fdict = {}
-            mfiles = []
-            match = 0
-            nomatch = 0
-            nomatchsave = 0
-            d = defaultdict(int)
             for event in events:
+                if "poorData" in event:
+                    statdict['poorData'] += 1
                 if "MissingComponents" not in event:
+                    # Build up a list of filenames NOT in MissingComponent folders
                     comps = []
                     eventdir = os.path.join(stdir, event)
                     eventdirclean = eventdir[0:-18]
                     files = os.listdir(eventdir)
                     for f in files:
                         fdict[f] = True
+                if is_number(event):
+                    statdict['goodEvents'] += 1
             for event in events:
                 if "MissingComponents" in event:
-                    
+                    # Go through list once more, this time with full list of filenames that are
+                    # not in missing component folders. Check to see how many of the M.C. files
+                    # are unique.
+                    statdict['missingComps'] += 1
                     mfiles = os.listdir( os.path.join(stdir,event) )
                     for mf in mfiles:
                         try:
                             if fdict[mf]:
-                                match += 1
+                                statdict['match'] += 1
                         except KeyError:
-                            nomatch += 1
+                            statdict['nomatch'] += 1
                             d[ mf[:32] ] += 1 #Put partial match here and increment counter 
 
-            print "matching", match
-            print "not matching", nomatch
             for key in d:
                 if d[key] >= 3:
-                    nomatchsave += 1
-            print "Possible rescuable sets", nomatchsave
-            print ""
-            
+                    statdict['saveableMCs'] += 1
+
+            stationstat = StationStats(station)
+            stationstat.setStats(**statdict)
+            if stationstat.poorData < 10:
+                stationstat.printStats()
+
+                        
             
     ###########################################################################
     # Empty out all missing component folders into one LostComponent Folder
