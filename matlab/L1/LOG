@@ -1,0 +1,27 @@
+LOG 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+synthetic_test.mat
+
+Content of D1
+
+cell array D1
+
+level 5, redundant
+
+D1{1}{1} = solution using Haar
+D1{2}{1} = solution using Daubechies
+D1{3}{1} = solution using ortho splines
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+synthetic_test_3splines.mat
+
+Content of D1
+
+cell array D1
+
+D1{1}{1} = solution using ortho splines
+D1{2}{1} = solution using bsplines
+D1{3}{1} = solution using dual splines
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
