@@ -60,6 +60,7 @@ def ppicker(eventdir,pname,sname,repick = False):
 
 
     while True:
+
         plt.figure( num = None, figsize = (22,6) )
         plt.plot(p, label = 'Pcomp')
         plt.xticks(nn[::200],t[::200])
