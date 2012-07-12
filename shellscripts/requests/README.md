@@ -6,7 +6,7 @@
 4. Run following command to generate a file showing azimuths and epicentral distances to Location given after rdneic
 5. Use UNIX awk to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees distance)
     
-    weed2spyder.sh dum.weed | rdneic -s -76.68 50.00 | \
+    weed2spyder.sh dum.weed | rdneic -s -103 65.00 | \
 	sort -nk1 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
 
 >> This outputs: name dum lat lon depth mag GCARC BackAZ
@@ -25,7 +25,11 @@ for what periods data are available for.
 	
 If things get confusing as to what has and has not been downloaded do list comparisons with:
 
-	comm -13  <(cat deseeded | sort | uniq) <(cat event.list | cut -d' ' -f1 | sort | uniq)  
+	comm -13  <(ls /tmp/seed/ | cut -c1-10 | sort | uniq) <(cat event.list | cut -d' ' -f1 | sort | uniq)  
+
+or if you created a deseeded file with the output of `deseeded.py`:
+
+	comm -13  <(cat deseeded | sort | uniq) <(cat event.list | cut -d' ' -f1 | sort | uniq)
 
 (just add a `| getFTP.sh` command at the end to try and download the remaining files)
 (tip, use a `head -n x` and `tail +n x` to pipe parts of the list. `tail +n x` is the inverse head, it cuts of everything but last `x` lines.)

@@ -42,35 +42,34 @@ nfiles = len(seedfiles)
 
 if seedfiles:
     for s in seedfiles:
-        try:
-            count += 1
-            event = s[:-5]
-            s2 = os.path.join(deseedDir, s)
-            shutil.move( os.path.join(seedDir, s), s2)
-            subprocess.check_call(rdseed + " " + s2, shell=True, stdout = pipe)
-            os.unlink(s2)
-            sacfiles = os.listdir(deseedDir)
 
-            for f in sacfiles:
-                m1 = reg.match(f)
+        count += 1
+        event = s[:-5]
+        s2 = os.path.join(deseedDir, s)
+        shutil.copyfile( os.path.join(seedDir, s), s2)
+        subprocess.check_call(rdseed + " " + s2, shell=True, stdout = pipe)
+        os.unlink(s2) # remove seedfile.
+        sacfiles = os.listdir(deseedDir)
+
+        for f in sacfiles:
+            m1 = reg.match(f)
+            if m1:
                 station = m1.group(3)                      
                 evDir = os.path.join(baseDir, station, event)
                 if not os.path.exists(evDir):
                     os.makedirs(evDir)
                 shutil.move( os.path.join(deseedDir, f), os.path.join(evDir, f) )
+            
 
-            left = os.listdir(deseedDir)
-            if len(left) != 0:
-                print "remaining files, abort"
-                exit()
+        left = os.listdir(deseedDir)
+        if len(left) != 0:
+            print "remaining files, abort"
+            exit()
 
+        #sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
+        sys.stdout.write(event+"\n")
+        sys.stdout.flush()
 
-            #sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
-            sys.stdout.write(event+"\n")
-            sys.stdout.flush()
-
-        except AttributeError as e:
-            sys.stderr.write(repr(e) + "\n")
 
     
     

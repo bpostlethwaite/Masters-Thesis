@@ -5,12 +5,16 @@
 # Note Scipy detrend is same as doing a remove mean and then detrend
 # Detrend demean taper rotate rename save
 
+# This is the main program that loops through the network dirs
+# and the station dirs and passes the files in the event folders
+# to the processing functions.
+
 ###########################################################################
 # IMPORTS
 ###########################################################################
 import os, re, time, shutil
 from preprocessor import setHeaders, detrend_taper_rotate, SeisDataError
-import subprocess
+import subprocess, sys
 sh = subprocess.Popen
 ###########################################################################
 # HELPER FUNCTIONS
@@ -45,6 +49,9 @@ if __name__== '__main__' :
     d = time.localtime(time.time())
     logname = "/log_{}_{}_{}_{}".format(d.tm_year,d.tm_mon,d.tm_mday,d.tm_hour)
     logfile = open(datadir + logname, 'w')
+    if len(sys.argv) != 2:
+        print "usage: loopApplyDRIVER.py eventfile"
+    eventlist = sys.argv[1]
     eventdict = {}
     ###########################################################################
     #  SET regex matches
@@ -58,8 +65,11 @@ if __name__== '__main__' :
     # fields[3] -> lon            fields[4] -> depth
     # fields[6] -> GCARC
      ###########################################################################
-    with open("/home/bpostlet/thesis/shellscripts/requests/event.list", 'r') as f:
-        for line in f:
+    with open(eventlist, 'r') as f:
+        for ind, line in enumerate(f):
+            if ind == 0:
+                stations = line.split()
+                
             fields = line.split()
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
 
@@ -71,8 +81,8 @@ if __name__== '__main__' :
         try:
             logfile.write("operating on network: " + network + "\n")
             print "operating on network:", network
-            netdir = os.path.join(datadir,network)
-            stations = os.listdir(netdir)
+            #netdir = os.path.join(datadir,network)
+            #stations = os.listdir(netdir)
         except OSError as e:
             logfile.write('Problems working in network ' + network + ' --skipping \n')
             print e

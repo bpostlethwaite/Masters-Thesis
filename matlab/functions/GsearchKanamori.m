@@ -21,7 +21,7 @@ dh = (h2 - h1)/(nh - 1);
 h = h1:dh:h2;
 
 % Misc
-v = 6.3; % bulk vp pwave velocity.
+v = 6.16; % bulk vp pwave velocity.
 p2 = pslow.^2;
 np = length(pslow);
 nt = length(rec);

@@ -5,6 +5,11 @@
 # Note Scipy detrend is same as doing a remove mean and then detrend
 # Detrend demean taper rotate rename save
 
+# This performs the kmeans clustering algorithm on
+# SAC data in a given station folder. The program opens
+# Each folder and picks out a sac
+
+
 ###########################################################################
 # IMPORTS
 ###########################################################################
@@ -29,7 +34,7 @@ def vectorize(latlon):
                       sin(obs[0]) ]
     return vects
 
-def assignCluster(vects, clusters):
+def assignVect2Cluster(vects, clusters):
    '''This calculates distances between vects and array of clusters
    producing an array of distances, each row for obs and each col
    for particular cluster, than we choose index of min dist'''
@@ -56,62 +61,50 @@ if __name__== '__main__' :
 
     reg2 = re.compile(r'^stack_(\w)\.sac')
     stdir = "/media/TerraS/CN/ULM"
-    datafile = os.path.join(stdir, "bazvect.mat")
-    k = 2
     
-    force = None
-    if len(sys.argv) > 1:
-        force = sys.argv[1]
+    events = os.listdir(stdir)
+    events = filter(is_number,events)
 
-    if os.path.exists( datafile ) and not force:
-        ddict = scipy.io.loadmat( datafile ) 
-        data = ddict['d']
+    data = np.zeros( (len(events), 2) )
 
-    else:
-        events = os.listdir(stdir)
-        events = filter(is_number,events)
+    for ind, event in enumerate(events):
+        files = os.listdir( os.path.join(stdir, event) )
+        for fs in files:
+            if reg2.match(fs):
+                st = read( os.path.join(stdir, event, fs) )
+                evla = float(st[0].stats.sac['evla'])
+                evlo = float(st[0].stats.sac['evlo'])
+                data[ind] = [ evla, evlo ]
+                continue
 
-        data = np.zeros( (len(events), 2) )
-
-        for ind, event in enumerate(events):
-            files = os.listdir( os.path.join(stdir, event) )
-            for fs in files:
-                if reg2.match(fs):
-                    st = read( os.path.join(stdir, event, fs) )
-                    evla = float(st[0].stats.sac['evla'])
-                    evlo = float(st[0].stats.sac['evlo'])
-                    data[ind] = [ evla, evlo ]
-                    continue
-
-        scipy.io.savemat( datafile , {"d": data} )
-    
-    clusterlatlon = np.array( [ [0 , 120 ],
-                                [0, -120] ] )
+    # Default to two clusters, one around japan the other
+    # around Chile.
+    clusterlatlon = np.array( [ [35 , 135 ],
+                                [35, -71] ] )
+                               
     vects = vectorize(data)
     clusters = vectorize(clusterlatlon)
 
-    bmap = Basemap(projection='robin',lon_0= 140)
-    bmap.fillcontinents(color='#cc9966',lake_color='#99ffff')
+    for i in range(5):
+        members = assignVect2Cluster(vects, clusters)
+        clusters = moveClusters(vects, clusters, members)
+        cls = devectorize(clusters)
+
+    bmap = Basemap(projection = 'robin', lon_0 = -80)
+    bmap.fillcontinents(color = '#cc9966', lake_color = '#99ffff')
     bmap.drawmapboundary(fill_color='0.3')
     bmap.drawparallels(np.arange(-90.,120.,30.))
     bmap.drawmeridians(np.arange(0.,420.,60.))
     x1, y1 = bmap( data[:,1], data[:,0] )
+    x2, y2 = bmap( cls[:,1], cls[:,0] )
+    print cls 
+    print x2, y2
 
-    #fig = plt.figure()
-    #ax1 = fig.add_subplot(111)
-    plt.ion()
+    clr = ['g','b','r','k','m']
+    for i in range( len(clusterlatlon) ):
+        bmap.scatter(x1[members == i], y1[members == i], c = clr[i], marker = '.')
+
     plt.show()
 
-    for i in range(10):
-        members = assignCluster(vects, clusters)
-        clusters = moveClusters(vects, clusters, members)
-        cls = devectorize(clusters)
-        x2, y2 = bmap( cls[:,1], cls[:,0] )
-        
-        bmap.scatter(x1, y1, marker = '.')
-        bmap.scatter(x2, y2, c='r', marker = 'o')
-        #ax1.scatter(data[:,0], data[:,1], marker = '.')
-        #ax1.scatter(cls[:,0], cls[:,1], c='r', marker = 'o')
 
-        plt.draw()
-        time.sleep(0.5)        
+# Need to save all the membership into SAC files.
