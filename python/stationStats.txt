@@ -1,0 +1,318 @@
+****************************************
+*  EUNU                                *
+*  Total events: 784                   *
+*  Percent useable: 84.7%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  ICQ                                 *
+*  Total events: 462                   *
+*  Percent useable: 35.1%              *
+*  Percent poor: 129.6%                *
+*  Possible Rescuable Comps: 4         *
+****************************************
+*  SILO                                *
+*  Total events: 280                   *
+*  Percent useable: 53.9%              *
+*  Percent poor: 70.9%                 *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  A54                                 *
+*  Total events: 553                   *
+*  Percent useable: 20.1%              *
+*  Percent poor: 359.5%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  GAC                                 *
+*  Total events: 533                   *
+*  Percent useable: 1.5%               *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 375       *
+****************************************
+*  ULM                                 *
+*  Total events: 553                   *
+*  Percent useable: 53.7%              *
+*  Percent poor: 69.4%                 *
+*  Possible Rescuable Comps: 6         *
+****************************************
+*  PLBC                                *
+*  Total events: 438                   *
+*  Percent useable: 82.6%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  YUK2                                *
+*  Total events: 172                   *
+*  Percent useable: 86.0%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  LMQ                                 *
+*  Total events: 546                   *
+*  Percent useable: 34.4%              *
+*  Percent poor: 167.0%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  INK                                 *
+*  Total events: 794                   *
+*  Percent useable: 84.1%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  KILO                                *
+*  Total events: 423                   *
+*  Percent useable: 37.8%              *
+*  Percent poor: 126.9%                *
+*  Possible Rescuable Comps: 8         *
+****************************************
+*  LMN                                 *
+*  Total events: 544                   *
+*  Percent useable: 32.2%              *
+*  Percent poor: 181.7%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  PNPO                                *
+*  Total events: 401                   *
+*  Percent useable: 39.2%              *
+*  Percent poor: 135.7%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  YUK5                                *
+*  Total events: 189                   *
+*  Percent useable: 86.8%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  DAWY                                *
+*  Total events: 818                   *
+*  Percent useable: 82.3%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  VIMO                                *
+*  Total events: 435                   *
+*  Percent useable: 32.6%              *
+*  Percent poor: 188.0%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  A16                                 *
+*  Total events: 563                   *
+*  Percent useable: 20.8%              *
+*  Percent poor: 342.7%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  VLDQ                                *
+*  Total events: 474                   *
+*  Percent useable: 39.7%              *
+*  Percent poor: 138.8%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  A21                                 *
+*  Total events: 471                   *
+*  Percent useable: 24.4%              *
+*  Percent poor: 273.0%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  WHY                                 *
+*  Total events: 764                   *
+*  Percent useable: 84.8%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  VABQ                                *
+*  Total events: 144                   *
+*  Percent useable: 67.4%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 39        *
+****************************************
+*  GGN                                 *
+*  Total events: 472                   *
+*  Percent useable: 29.2%              *
+*  Percent poor: 202.2%                *
+*  Possible Rescuable Comps: 7         *
+****************************************
+*  A11                                 *
+*  Total events: 541                   *
+*  Percent useable: 20.5%              *
+*  Percent poor: 344.1%                *
+*  Possible Rescuable Comps: 6         *
+****************************************
+*  MNTQ                                *
+*  Total events: 155                   *
+*  Percent useable: 35.5%              *
+*  Percent poor: 161.8%                *
+*  Possible Rescuable Comps: 1         *
+****************************************
+*  SADO                                *
+*  Total events: 557                   *
+*  Percent useable: 29.3%              *
+*  Percent poor: 209.8%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  BVCY                                *
+*  Total events: 176                   *
+*  Percent useable: 85.8%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  RES                                 *
+*  Total events: 817                   *
+*  Percent useable: 86.5%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  PKLO                                *
+*  Total events: 411                   *
+*  Percent useable: 41.4%              *
+*  Percent poor: 122.4%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  FCC                                 *
+*  Total events: 532                   *
+*  Percent useable: 43.2%              *
+*  Percent poor: 112.6%                *
+*  Possible Rescuable Comps: 8         *
+****************************************
+*  HYT                                 *
+*  Total events: 777                   *
+*  Percent useable: 24.2%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  SUNO                                *
+*  Total events: 411                   *
+*  Percent useable: 33.3%              *
+*  Percent poor: 179.6%                *
+*  Possible Rescuable Comps: 8         *
+****************************************
+*  YUK6                                *
+*  Total events: 153                   *
+*  Percent useable: 86.9%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  OTT                                 *
+*  Total events: 562                   *
+*  Percent useable: 4.8%               *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 424       *
+****************************************
+*  SCHQ                                *
+*  Total events: 558                   *
+*  Percent useable: 40.1%              *
+*  Percent poor: 137.1%                *
+*  Possible Rescuable Comps: 6         *
+****************************************
+*  YUK7                                *
+*  Total events: 214                   *
+*  Percent useable: 86.9%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  MALO                                *
+*  Total events: 426                   *
+*  Percent useable: 35.9%              *
+*  Percent poor: 160.1%                *
+*  Possible Rescuable Comps: 10        *
+****************************************
+*  SJNN                                *
+*  Total events: 354                   *
+*  Percent useable: 18.1%              *
+*  Percent poor: 393.8%                *
+*  Possible Rescuable Comps: 9         *
+****************************************
+*  EPLO                                *
+*  Total events: 367                   *
+*  Percent useable: 39.8%              *
+*  Percent poor: 126.0%                *
+*  Possible Rescuable Comps: 8         *
+****************************************
+*  KAPO                                *
+*  Total events: 556                   *
+*  Percent useable: 95.1%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 4         *
+****************************************
+*  FRB                                 *
+*  Total events: 826                   *
+*  Percent useable: 82.7%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  NATG                                *
+*  Total events: 356                   *
+*  Percent useable: 91.9%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  KGNO                                *
+*  Total events: 530                   *
+*  Percent useable: 33.6%              *
+*  Percent poor: 167.4%                *
+*  Possible Rescuable Comps: 6         *
+****************************************
+*  YUK1                                *
+*  Total events: 171                   *
+*  Percent useable: 87.1%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  CHEG                                *
+*  Total events: 163                   *
+*  Percent useable: 37.4%              *
+*  Percent poor: 134.4%                *
+*  Possible Rescuable Comps: 4         *
+****************************************
+*  YUK4                                *
+*  Total events: 16                    *
+*  Percent useable: 56.2%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  GBN                                 *
+*  Total events: 362                   *
+*  Percent useable: 29.3%              *
+*  Percent poor: 210.4%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  BATG                                *
+*  Total events: 361                   *
+*  Percent useable: 41.3%              *
+*  Percent poor: 124.2%                *
+*  Possible Rescuable Comps: 4         *
+****************************************
+*  CLRN                                *
+*  Total events: 166                   *
+*  Percent useable: 88.6%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  DRLN                                *
+*  Total events: 544                   *
+*  Percent useable: 29.6%              *
+*  Percent poor: 209.3%                *
+*  Possible Rescuable Comps: 6         *
+****************************************
+*  YUK3                                *
+*  Total events: 173                   *
+*  Percent useable: 86.1%              *
+*  Percent poor: 0.0%                  *
+*  Possible Rescuable Comps: 0         *
+****************************************
+*  A64                                 *
+*  Total events: 542                   *
+*  Percent useable: 30.6%              *
+*  Percent poor: 204.2%                *
+*  Possible Rescuable Comps: 5         *
+****************************************
+*  ATKO                                *
+*  Total events: 410                   *
+*  Percent useable: 47.3%              *
+*  Percent poor: 87.1%                 *
+*  Possible Rescuable Comps: 4         *
+****************************************
+*  A61                                 *
+*  Total events: 545                   *
+*  Percent useable: 23.3%              *
+*  Percent poor: 295.3%                *
+*  Possible Rescuable Comps: 7         *

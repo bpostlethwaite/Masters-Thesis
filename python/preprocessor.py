@@ -54,7 +54,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
     stlo = st[0].stats.sac['stlo']
     dt = st[0].stats.delta
     ##### Get BAZ & GCARC #####################
-    azim = "/home/bpostlet/thesis/shellscripts/requests/azim"
+    azim = "/home/bpostlet/thesis/shellscripts/azim"
     try:
         process = sh("{} -s {} {} -e {} {}".format(azim, stlo, stla, evlo, evla),
                      shell=True, executable = "/bin/bash", stdout = pipe )
@@ -135,11 +135,12 @@ def setHeaders(eventdir, sacfiles, eventdict):
             st[0].stats.sac['t7'] = PP
             st[0].stats.sac['kt4'] = "pP"
             st[0].stats.sac['t4'] = pP
+            st[0].stats.sac['kt1'] = "P_beg" # For picking p-coda energy
+            st[0].stats.sac['kt3'] = "P_end" # for picking p-coda energy
 
             
             ####### TRUNCATE if not truncated############
             if begin != st[0].stats.sac['b']:
-                print "truncating"
                 st[0].data = st[0].data[ (begin - beginOLD)/dt 
                                          : (end - beginOLD)/dt + 1 ] # truncate
                 st[0].stats.sac['b'] = begin
@@ -193,9 +194,6 @@ def detrend_taper_rotate(eventdir, sacfiles):
     # Call freetran and rotate into P and S space
     ev[1].data, ev[2].data = freetran(
         ev[1].data, ev[2].data, pslow, 6.06, 3.5)
-    # save only rotated data
-#    ev[1].write(os.path.join(eventdir,'stack_R.sac'), format='SAC')
-#    ev[2].write(os.path.join(eventdir,'stack_Z.sac'), format='SAC')
     # Save freetran transformed data objects
     ev[1].write(os.path.join(eventdir,'stack_P.sac'), format='SAC')
     ev[2].write(os.path.join(eventdir,'stack_S.sac'), format='SAC')

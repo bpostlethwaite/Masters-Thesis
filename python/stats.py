@@ -2,8 +2,7 @@
 #
 # python-mode indent C-c < or C-c >
 # python-mode comment/uncomment region M-;
-# Note Scipy detrend is same as doing a remove mean and then detrend
-# Detrend demean taper rotate rename save
+
 
 ###########################################################################
 # IMPORTS
@@ -153,8 +152,7 @@ if __name__== '__main__' :
 
             stationstat = StationStats(station)
             stationstat.setStats(**statdict)
-            if stationstat.poorData < 10:
-                stationstat.printStats()
+            stationstat.printStats()
 
                         
             

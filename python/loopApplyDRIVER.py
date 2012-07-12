@@ -2,8 +2,6 @@
 #
 # python-mode indent C-c < or C-c >
 # python-mode comment/uncomment region M-;
-# Note Scipy detrend is same as doing a remove mean and then detrend
-# Detrend demean taper rotate rename save
 
 # This is the main program that loops through the network dirs
 # and the station dirs and passes the files in the event folders
@@ -69,6 +67,7 @@ if __name__== '__main__' :
         for ind, line in enumerate(f):
             if ind == 0:
                 stations = line.split()
+                continue
                 
             fields = line.split()
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
@@ -81,8 +80,7 @@ if __name__== '__main__' :
         try:
             logfile.write("operating on network: " + network + "\n")
             print "operating on network:", network
-            #netdir = os.path.join(datadir,network)
-            #stations = os.listdir(netdir)
+            netdir = os.path.join(datadir,network)
         except OSError as e:
             logfile.write('Problems working in network ' + network + ' --skipping \n')
             print e
