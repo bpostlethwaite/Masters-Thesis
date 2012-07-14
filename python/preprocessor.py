@@ -14,10 +14,10 @@ from obspy.core import read
 from obspy.signal.rotate import rotate_NE_RT as rotate 
 from scipy.signal.signaltools import detrend
 from obspy.signal.invsim import cosTaper
-import subprocess 
+import subprocess, sys, os, re, shutil
 import numpy as np
 import os.path, math
-
+sh = subprocess.Popen
 ###########################################################################
 #  CREATE CUSTOM ERRORS
 ###########################################################################
@@ -26,6 +26,32 @@ class SeisDataError(Exception):
         self.msg = value
     def __str__(self):
         return repr(self.msg)
+
+###########################################################################
+# HELPER FUNCTIONS
+###########################################################################
+def renameEvent(eventdir,error, reverse = False):
+    if not reverse:
+        shutil.move(eventdir,eventdir + "_" + error)
+    elif reverse:
+        head, tail = os.path.split(eventdir)
+        try:
+            float(tail[:10])
+            shutil.move( eventdir, os.path.join(head,tail[:10]) )
+        except ValueError:
+            print "Error returning", tail, "into directory", tail[:10]
+
+
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+    except TypeError:
+        return False
+
+
 
 ###########################################################################
 #  SET UTILS, VARS & REFS
@@ -54,7 +80,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
     stlo = st[0].stats.sac['stlo']
     dt = st[0].stats.delta
     ##### Get BAZ & GCARC #####################
-    azim = "/home/bpostlet/thesis/shellscripts/requests/azim"
+    azim = "/home/bpostlet/thesis/shellscripts/azim"
     try:
         process = sh("{} -s {} {} -e {} {}".format(azim, stlo, stla, evlo, evla),
                      shell=True, executable = "/bin/bash", stdout = pipe )
@@ -135,11 +161,12 @@ def setHeaders(eventdir, sacfiles, eventdict):
             st[0].stats.sac['t7'] = PP
             st[0].stats.sac['kt4'] = "pP"
             st[0].stats.sac['t4'] = pP
+            st[0].stats.sac['kt1'] = "P_beg" # For picking p-coda energy
+            st[0].stats.sac['kt3'] = "P_end" # for picking p-coda energy
 
             
             ####### TRUNCATE if not truncated############
             if begin != st[0].stats.sac['b']:
-                print "truncating"
                 st[0].data = st[0].data[ (begin - beginOLD)/dt 
                                          : (end - beginOLD)/dt + 1 ] # truncate
                 st[0].stats.sac['b'] = begin
@@ -193,9 +220,6 @@ def detrend_taper_rotate(eventdir, sacfiles):
     # Call freetran and rotate into P and S space
     ev[1].data, ev[2].data = freetran(
         ev[1].data, ev[2].data, pslow, 6.06, 3.5)
-    # save only rotated data
-#    ev[1].write(os.path.join(eventdir,'stack_R.sac'), format='SAC')
-#    ev[2].write(os.path.join(eventdir,'stack_Z.sac'), format='SAC')
     # Save freetran transformed data objects
     ev[1].write(os.path.join(eventdir,'stack_P.sac'), format='SAC')
     ev[2].write(os.path.join(eventdir,'stack_S.sac'), format='SAC')
@@ -223,4 +247,91 @@ def freetran(rcomp, zcomp, pslow, alpha, beta):
 
     return dum[0,], dum[1,]
 
+if __name__== '__main__' :
+
+    ###########################################################################
+    # SET DIRECTORIES, FILES, VARS
+    ###########################################################################
+    netdir = '/media/TerraS/CN'
+ 
+    if len(sys.argv) != 2:
+        print "usage: preprocessor.py eventfile"
+    eventlist = sys.argv[1]
+    eventdict = {}
+    ###########################################################################
+    #  SET regex matches
+    ###########################################################################
+    reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
+    reg2 = re.compile(r'^stack_(\w)\.sac')
+
+    ###########################################################################
+    # Build a dictionary from file event.list from Request system
+    # fields[0] -> event name     fields[2] -> lat
+    # fields[3] -> lon            fields[4] -> depth
+    # fields[6] -> GCARC
+     ###########################################################################
+    with open(eventlist, 'r') as f:
+        for ind, line in enumerate(f):
+            if ind == 0:
+                stations = line.split()
+                continue
+                
+            fields = line.split()
+            eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
+
+    ###########################################################################
+    # Walk through all stations found in network folder
+    ###########################################################################
+    for station in os.listdir(netdir):
+        try:
+            stdir = os.path.join(netdir,station)
+            events = os.listdir(stdir)
+        except OSError as e:
+            print e
+            continue
+
+###########################################################################
+# Walk through all events found in station folder
+###########################################################################
+        for event in events:
+            if not is_number(event): # Make sure event dir is right format, skip those not in number format
+                continue
+            comps = []
+            eventdir = os.path.join(stdir,event)
+            files = os.listdir(eventdir)
+            for fs in files:
+                m1 = reg1.match(fs)
+                if m1:
+                    comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
+
+###########################################################################
+# Check if three components have been found
+# If yes, sort alphebetically and call processor function
+###########################################################################
+            if len(comps) != 3:
+                print "Did not register 3 components in directory:", eventdir
+                renameEvent(eventdir,"MissingComponents")
+                continue
+                # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
+                # Pull out sacfiles from zipped sorted list.
+            comps.sort()
+            _ , sacfiles = zip(*comps)
+
+            # Run Processing function
+            try:
+                setHeaders(eventdir, sacfiles, eventdict)
+                detrend_taper_rotate(eventdir, sacfiles)
+                #sh("rm {}/*stack*".format(eventdir), shell=True, executable = "/bin/bash")
+            except IOError:
+                print "IOError in event:", eventdir
+                renameEvent(eventdir,"IOError")
+                continue
+            except SeisDataError as e:
+                print e.msg + " in event:", eventdir
+                renameEvent(eventdir, e.msg)
+                continue
+            except ValueError:
+                print "ValueError in event:", eventdir
+                renameEvent(eventdir,"ValueError")
+                continue
 

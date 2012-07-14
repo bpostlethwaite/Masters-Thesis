@@ -13,6 +13,39 @@ import os, os.path, re, shutil, sys
 basedir = '/media/TerraS'
 rawdatadir = os.path.join(basedir,'BEN')
 
+# Following is for renaming event dirs based on the sac file name format.
+# Build Dictionaries.
+leapyrs = ["2000", "2004", "2008", "2012"]
+months = [(1,31),(2,28),(3,31),(4,30),(5,31),(6,30),(7,31),(8,31),(9,30),(10,31),(11,30),(12,31)]
+monthsleap = [(1,31),(2,29),(3,31),(4,30),(5,31),(6,30),(7,31),(8,31),(9,30),(10,31),(11,30),(12,31)]
+yrdays = []
+yrdaysleap = []
+day = 0
+
+for month in months:
+    for i in range(month[1]):
+        yrdays.append( ["{:02d}".format(month[0]),"{:02d}".format(i+1)] )
+        day += 1
+
+for month in monthsleap:
+    for i in range(month[1]):
+        yrdaysleap.append( ["{:02d}".format(month[0]),"{:02d}".format(i+1)] )
+        day += 1
+
+def rehashdate(match):
+    yr = match.group(1)
+    yrday = match.group(2)
+    hour = match.group(3)
+    minute = match.group(4)
+    if yr in leapyrs:
+        month = yrdaysleap[int(yrday)-1][0]
+        day = yrdaysleap[int(yrday)-1][1]
+    else:
+        month = yrdays[int(yrday)-1][0]
+        day = yrdays[int(yrday)-1][1]
+    return yr[2:4]+month+day+hour+minute
+
+
 # Define Matching criteria
 reg = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
 files = os.listdir(rawdatadir)
