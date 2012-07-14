@@ -9,8 +9,7 @@
 # IMPORTS
 ###########################################################################
 import os, re, time, shutil, sys, tty
-from preprocessor import SeisDataError
-from loopApplyDRIVER import renameEvent, is_number
+from preprocessor import SeisDataError, renameEvent, is_number
 import matplotlib.pyplot as plt
 from obspy.core import read
 import numpy as np
