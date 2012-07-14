@@ -89,10 +89,9 @@ b = 3.5;
 a = 6;
 %}
 
-for h = 2.1:0.1:3.2
-    h
-end
+%% JSON testing
 
+sts = loadjson('/media/TerraS/database/stations.json');
  
  
  

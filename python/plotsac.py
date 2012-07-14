@@ -15,7 +15,7 @@ import scipy.fftpack as fft
 from scipy.signal.signaltools import detrend
 import random, os, os.path, re
 import matplotlib.pyplot as plt
-from loopApplyDRIVER import is_number
+from preprocessor import is_number
 
 ###########################################################################
 # Some variables and stuff
