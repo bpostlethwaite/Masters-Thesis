@@ -9,11 +9,12 @@ addpath ../sac
 addpath functions
 
 %% Variables
-user = getenv('USER');
+homedir = getenv('HOME');
 sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
+
 %%  Select Station to Process and load station data.
 station = 'SADO';
 dbfile = fullfile(databasedir, [station,'.mat'] );
@@ -50,7 +51,9 @@ dbn.hmax = results.hmax;
 dbn.tps = results.tps;
 dbn.tpps = results.tpps;
 dbn.tpss = results.tpss;
-dbn.rec = brec(:,1:round(26/dt));
+dbn.rec = brec(:,1:round(35/dt));
+dbn.pslow = pslow;
+dbn.Tps = Tps;
 dbn.dt = dt;   
 dbn.npb = npb;   
 dbn.filterLow = fLow; 
@@ -72,21 +75,24 @@ notes = inputdlg('Enter Notes','Processing Notes',[3 80]);
 dbn.processnotes = notes; 
 
 %% Save entry
-saveit = questdlg('Save the parameters?', ...
+saveit = questdlg('Save data to .mat file and results to stations.json?', ...
 	'Save the sucker?', ...
 	'Yes','No','No');
 % Handle response
 switch saveit
     case 'Yes'
-        if loadflag
-            db(end + 1) = dbn; %#ok<NASGU>
-        else
-             db = dbn;
-        end
+        db = dbn; %#ok<NASGU>
         save(dbfile,'db')
-        
+        % Update stations.json
+        opt.FileName = [homedir,'/thesis/stations.json'];
+        opt.ForceRootName = 0;
+        sts = loadjson(opt.FileName);
+        res.Vp = results.vbest;
+        res.R = results.rbest;
+        res.H = results.hbest;
+        sts.(station).results = res;
     case 'No'
-       fprintf('fine')
+       fprintf('fine\n')
 end
 
 clear db
