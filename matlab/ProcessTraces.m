@@ -85,15 +85,15 @@ close(h)
 
 %% 6) Filter Impulse Response
 if loadflag
-    fLow = db(end).filterLow;
-    fHigh = db(end).filterHigh;
+    fLow = db.filterLow;
+    fHigh = db.filterHigh;
 else
     fLow = 0.04;
-    fHigh = 1.5;
+    fHigh = 1.2;
 end    
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
-brec = rec;
+%brec = rec;
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
@@ -105,13 +105,13 @@ end
 
 
 %% Curvelet Denoise
-thresh = 0.1;
-brec = performCurveletDenoise(brec,dt,thresh);
+% thresh = 0.1;
+% brec = performCurveletDenoise(brec,dt,thresh);
 
 %% Select tps
 if loadflag
-    t1 = db(end).t1; 
-    t2 = db(end).t2;
+    t1 = db.t1; 
+    t2 = db.t2;
 else
     t1 = 4.5;
     t2 = 5.2;
@@ -136,9 +136,10 @@ damp = 0.2;
 
 
 %% 8) Grid and Line Search
-%[ results ] = GridSearch(brec,Tps',dt,pslow);
 
-[ results ] = GsearchKanamori(brec,dt,pslow);
+[ results ] = GridSearch(brec,Tps',dt,pslow);
+
+%[ results ] = GsearchKanamori(brec,dt,pslow);
 %% Viewers
 %{
     
