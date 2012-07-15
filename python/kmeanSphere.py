@@ -38,7 +38,7 @@ def assignVect2Cluster(vects, clusters):
    '''This calculates distances between vects and array of clusters
    producing an array of distances, each row for obs and each col
    for particular cluster, than we choose index of min dist'''
-   members = np.dot(vects, clusters.T).argmin(axis = 1)            
+   members = np.dot(vects, clusters.T).argmin(axis = 1)
    return members
 
 def moveClusters(vects, clusters, members):
@@ -48,20 +48,18 @@ def moveClusters(vects, clusters, members):
     for ind in range( len(clusters) ):
         clusters[ind] = vects[members == ind].sum(axis = 0) / len(vects)
     return clusters
-    
+
 def devectorize(vects):
     latlon = np.zeros( (len(vects) , 2) )
     for ind, v in enumerate(vects):
         latlon[ind] = [ atan2( v[2], sqrt( v[0]**2 + v[1]**2) ) ,
-                   atan2( v[1], v[0] ) ] 
+                   atan2( v[1], v[0] ) ]
     return latlon * 180/pi
 
-        
-if __name__== '__main__' :
 
+
+def clusterEvents(stdir)
     reg2 = re.compile(r'^stack_(\w)\.sac')
-    stdir = "/media/TerraS/CN/ULM"
-    
     events = os.listdir(stdir)
     events = filter(is_number,events)
 
@@ -81,7 +79,7 @@ if __name__== '__main__' :
     # around Chile.
     clusterlatlon = np.array( [ [35 , 135 ],
                                 [35, -71] ] )
-                               
+
     vects = vectorize(data)
     clusters = vectorize(clusterlatlon)
 
@@ -97,7 +95,7 @@ if __name__== '__main__' :
     bmap.drawmeridians(np.arange(0.,420.,60.))
     x1, y1 = bmap( data[:,1], data[:,0] )
     x2, y2 = bmap( cls[:,1], cls[:,0] )
-    print cls 
+    print cls
     print x2, y2
 
     clr = ['g','b','r','k','m']
@@ -106,5 +104,19 @@ if __name__== '__main__' :
 
     plt.show()
 
+
+def clusterStations(stdict, k):
+    ''' Clusters stations in k groups and outputs the
+    station name followed by it's zone number'''
+
+    data = np.zeros( len(stdict), 2)
+    ind = 0
+    for st in stdict.keys():
+        data[ind] = [ stdict[st]
+
+
+if __name__== '__main__' :
+
+    stdir = sys.argv[1]
 
 # Need to save all the membership into SAC files.
