@@ -91,14 +91,16 @@ a = 6;
 
 %% JSON testing
 
-sts = loadjson('/media/TerraS/database/stations.json');
+opt.FileName = '/media/TerraS/database/test.json';
+opt.ForceRootName = 0;
+
+sts = loadjson(opt.FileName);
+
+results = struct('Vp',10,'R',2.3,'H',37.2);
+
+sts.('SADO').results = results;
  
- 
- 
- 
- 
- 
- 
+savejson('', sts, opt);
  
  
  
