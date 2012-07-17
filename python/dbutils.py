@@ -25,7 +25,7 @@ def json2shapefile(dbf, shpf):
     w.field('network', 'C', '10')
     w.field('status', 'C', '16')
     for key in stdict.keys():
-        # Set lon & lat 
+        # Set lon & lat
         w.point( stdict[key]["lon"], stdict[key]["lat"] )
         w.record( stdict[key]["network"],
                   stdict[key]["status"] )
@@ -65,7 +65,7 @@ def stationStats(stationDir):
 def updateStats(stdict, netdir, dbf):
     ''' Walks through all the keys in the main json database
     and checks if there are stats for that station. If there is
-    it updates the keys and values, otherwise it sets "status" 
+    it updates the keys and values, otherwise it sets "status"
     to "not aquired" '''
     db = json.loads( open(dbf).read() )
     for station in stdict.keys():
@@ -85,15 +85,15 @@ def updateStats(stdict, netdir, dbf):
 
 def buildStationDBfromList(stnf, dbf):
     ''' Builds station database from a list of stations taken
-    from the website: 
+    from the website:
     http://www.earthquakescanada.nrcan.gc.ca/stndon/data_avail-eng.php'''
-    
+
     d = {}
     q = defaultdict(int)
     with open(stnf) as stations:
         for s in stations:
             field = s.rstrip().split()
-            d[ field[0] ] = {'network': field[-1], 
+            d[ field[0] ] = {'network': field[-1],
                              'lat' : float(field[2]),
                              'lon' : float(field[3]),
                              'start': float(field[5]),
@@ -113,9 +113,9 @@ def buildStationDBfromList(stnf, dbf):
 
 
 if __name__== '__main__' :
-    
-    netdir = '/media/TerraS/CN' 
-    dbfile = '/media/TerraS/database/stations.json'
+
+    netdir = '/media/TerraS/CN'
+    dbfile = os.environ['HOME']+'/thesis/stations.json'
     shpfile = '/home/bpostlet/thesis/mapping/stations'
     stationlist = '/home/bpostlet/thesis/shellscripts/cnsn_stn.list'
     json2shapefile(dbfile, shpfile)
