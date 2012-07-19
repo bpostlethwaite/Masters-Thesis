@@ -23,7 +23,7 @@ from obspy.core import read
 import scipy.io
 from random import randint
 from mpl_toolkits.basemap import Basemap
-
+from sklearn.cluster import KMeans
 def vectorize(latlon):
     ''' Takes lat and long and spits out 3D vects'''
     vects = np.zeros( (len(latlon), 3) )
@@ -34,22 +34,12 @@ def vectorize(latlon):
                       sin(obs[0]) ]
     return vects
 
-# Sorry dot product for distance???!!!
-# Distance is ||x1-x2||
-# || vects - clusters ||
 def assignVect2Cluster(vects, clusters):
    '''This calculates distances between vects and array of clusters
    producing an array of distances, each row for obs and each col
    for particular cluster, than we choose index of min dist'''
-   a = np.zeros( len(clusters) )
-   members = np.zeros( len(vects) )
-   for i, vect in enumerate(vects):
-       for j, cluster in enumerate(clusters):
-           a[j] = sqrt( np.dot( (vect - cluster), (vect - cluster) ))
-           print a
-       members[i] = a.argmin()
+   members = np.dot(vects, clusters.T).argmin(axis = 1)
    return members
-
 
 def moveClusters(vects, clusters, members):
     ''' selects the vects belonging into a cluster, sums along the
@@ -67,12 +57,8 @@ def devectorize(vects):
     return latlon * 180/pi
 
 
+
 def clusterEvents(stdir):
-
-    if not stdir:
-        print "Please supply full path to target directory"
-        return
-
     reg2 = re.compile(r'^stack_(\w)\.sac')
     events = os.listdir(stdir)
     events = filter(is_number,events)
@@ -91,9 +77,11 @@ def clusterEvents(stdir):
 
     # Default to two clusters, one around japan the other
     # around Chile.
+    clusterlatlon = np.array( [ [35 , 135 ],
+                                [35, -71] ] )
+
     vects = vectorize(data)
-    clusters = vectorize( np.array( [ [35 , 135 ],
-                                      [35, -71] ]) )
+    clusters = vectorize(clusterlatlon)
 
     for i in range(5):
         members = assignVect2Cluster(vects, clusters)
@@ -117,62 +105,70 @@ def clusterEvents(stdir):
     plt.show()
 
 
-def clusterStations(stdict, k):
-    ''' Clusters stations in k groups and outputs the
-    station name followed by it's zone number'''
+
+
+def clusterStations(stdict, k, showmap = True):
+    ''' Clusters stations in k groups and outputs a dictionary
+    of cluster groups, their centre point and an array of stations'''
 
     data = np.zeros( (len(stdict), 2) )
     stations = []
-    ind = 0
-    for st in stdict.keys():
-        data[ind] = [ float(stdict[st]['lat']) , float(stdict[st]['lon']) ]
+
+    # Build data
+    for ind, st in enumerate(stdict.keys()):
+        data[ind] = [ stdict[st]['lat'], stdict[st]['lon'] ]
         stations.append(st)
-        ind += 1
 
     vects = vectorize(data)
 
-    clusterLatLon = np.array( [[49, -123],
-                               [43, -79],
-                               [70, -62],
-                               [60, -135]])
+    # Perform Kmeans
+    kmeans = KMeans(init='random', k = k, n_init = 10).fit( vects )
+    members = kmeans.labels_
 
-    clusters = vectorize( clusterLatLon )
+    # Build results
+    clusters = devectorize( kmeans.cluster_centers_ )
+    cldict = {}
 
-    for i in range(5):
-        members = assignVect2Cluster(vects, clusters)
-        clusters = moveClusters(vects, clusters, members)
-        print members
+    for ind, cluster in enumerate(clusters):
+        stns = [x for i, x in enumerate(stations) if members[i] == ind]
+        cldict[ind] = {'center': list(cluster), 'stations': stns }
 
-    cls = devectorize(clusters)
-    bmap = Basemap(width=8000000,height=5500000,projection='stere',
-                   resolution='c',lat_1=60.,lat_2=70,lat_0=65,lon_0=-107.)
-    #bmap = Basemap(projection = 'robin', lon_0 = -80)
-    bmap.drawmapboundary(fill_color='aqua')
-    #bmap.fillcontinents(color = 'coral', lake_color='aqua')
-    parallels = np.arange(0.,81,10.)
-    bmap.drawparallels(parallels,labels=[False,True,True,False])
-    meridians = np.arange(10.,351.,20.)
-    bmap.drawmeridians(meridians,labels=[True,False,False,True])
-    x1, y1 = bmap( data[:,1], data[:,0] )
-    x2, y2 = bmap( cls[:,1], cls[:,0] )
+    if showmap:
+        m = Basemap(width = 6000000,height = 5000000, projection='stere',
+                    resolution='c',lat_1=73.,lat_2=68,lat_0=63,lon_0 = -90.)
 
-    clr = ['g','b','r', 'c','y','k','m']
+        # fill continents, set lake color same as ocean color.
+        m.fillcontinents(color = '#cc9966', lake_color = '#99ffff')
+        m.drawmapboundary(fill_color='0.3')
+        #m.fillcontinents(color='coral',lake_color='aqua')
+        #m.drawmapboundary(fill_color='aqua')
+        # draw parallels and meridians.
+        # label parallels on right and top
+        # meridians on bottom and left
+        parallels = np.arange(0.,81,10.)
+        # labels = [left,right,top,bottom]
+        m.drawparallels(parallels,labels=[False,True,True,False])
+        meridians = np.arange(10.,351.,20.)
+        m.drawmeridians(meridians,labels=[True,False,False,True])
 
-    bmap.scatter(x2, y2, marker = 'x')
-    for i in range(k):
-        bmap.scatter(x1[members == i], y1[members == i], c = clr[i], marker = 'o')
+        x1, y1 = m( data[:,1], data[:,0] )
+        x2, y2 = m( clusters[:,1], clusters[:,0] )
 
-    plt.show()
+        clr = ['b','g','r','c','m','y','k','w']
+        for i in range( len(clusters) ):
+            m.scatter(x1[members == i], y1[members == i], c = clr[i], marker = 'o',  zorder= 10)
+            m.scatter(x2[i],y2[i], c = clr[i], marker = '+', s = 120, linewidths = 2, zorder = 12)
 
+        plt.show()
 
+    return cldict
 
 if __name__== '__main__' :
 
-    if len(sys.argv) > 1:
-        stdir = sys.argv[1]
-    else:
-        stdir = None
-
     dbfile = os.environ['HOME']+'/thesis/stations.json'
     stdict = json.loads( open(dbfile).read() )
-    clusterStations(stdict, 4)
+    clusterd = clusterStations(stdict, 5, showmap = True)
+
+    json.encoder.FLOAT_REPR = lambda o: format(o, '.2f')
+
+    print json.dumps(clusterd, sort_keys = True, indent = 2)

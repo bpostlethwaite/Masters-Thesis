@@ -90,7 +90,7 @@ a = 6;
 %}
 
 %% JSON testing
-
+%{
 opt.FileName = '/media/TerraS/database/test.json';
 opt.ForceRootName = 0;
 
@@ -101,7 +101,7 @@ results = struct('Vp',10,'R',2.3,'H',37.2);
 sts.('SADO').results = results;
  
 savejson('', sts, opt);
- 
+%}
  
  
 

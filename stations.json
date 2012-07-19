@@ -325,11 +325,11 @@
         "lon": -140.86063, 
         "network": "CNSN", 
         "numEvents": 176, 
-        "poorEvents": 0, 
+        "poorEvents": 115, 
         "start": 20100814.173, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 151
+        "usableEvents": 36
     }, 
     "BWLO": {
         "lat": 44.11741, 
@@ -413,11 +413,11 @@
         "lon": -68.58709, 
         "network": "CNSN", 
         "numEvents": 166, 
-        "poorEvents": 0, 
+        "poorEvents": 109, 
         "start": 20110113.21, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 147
+        "usableEvents": 38
     }, 
     "CLSB": {
         "lat": 52.75875, 
@@ -521,11 +521,11 @@
         "lon": -139.3909, 
         "network": "CNSN", 
         "numEvents": 818, 
-        "poorEvents": 0, 
+        "poorEvents": 448, 
         "start": 19930701.0, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 673
+        "usableEvents": 225
     }, 
     "DELO": {
         "lat": 44.51769, 
@@ -717,11 +717,11 @@
         "lon": -86.415752, 
         "network": "CHASME", 
         "numEvents": 784, 
-        "poorEvents": 0, 
+        "poorEvents": 455, 
         "start": 20000822.2316, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20080414.2359", 
-        "usableEvents": 664
+        "usableEvents": 209
     }, 
     "FALL": {
         "lat": 53.278, 
@@ -797,11 +797,11 @@
         "lon": -68.545117, 
         "network": "CNSN", 
         "numEvents": 826, 
-        "poorEvents": 0, 
+        "poorEvents": 456, 
         "start": 19920413.01, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 683
+        "usableEvents": 227
     }, 
     "FSMA": {
         "lat": 59.9862, 
@@ -1101,11 +1101,11 @@
         "lon": -133.525433, 
         "network": "CNSN", 
         "numEvents": 794, 
-        "poorEvents": 0, 
+        "poorEvents": 429, 
         "start": 19920228.0, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 668
+        "usableEvents": 239
     }, 
     "INUQ": {
         "lat": 58.45092, 
@@ -1177,11 +1177,11 @@
         "lon": -82.5079, 
         "network": "CNSN", 
         "numEvents": 556, 
-        "poorEvents": 0, 
+        "poorEvents": 320, 
         "start": 19980114.19, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 529
+        "usableEvents": 209
     }, 
     "KASO": {
         "lat": 53.52785, 
@@ -2033,11 +2033,11 @@
         "lon": -94.896167, 
         "network": "CNSN", 
         "numEvents": 817, 
-        "poorEvents": 0, 
+        "poorEvents": 508, 
         "start": 19920213.01, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 707
+        "usableEvents": 199
     }, 
     "RLKO": {
         "lat": 51.0704, 
