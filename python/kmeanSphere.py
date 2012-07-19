@@ -154,21 +154,42 @@ def clusterStations(stdict, k, showmap = True):
         x1, y1 = m( data[:,1], data[:,0] )
         x2, y2 = m( clusters[:,1], clusters[:,0] )
 
+        p2 = []
         clr = ['b','g','r','c','m','y','k','w']
         for i in range( len(clusters) ):
             m.scatter(x1[members == i], y1[members == i], c = clr[i], marker = 'o',  zorder= 10)
-            m.scatter(x2[i],y2[i], c = clr[i], marker = '+', s = 120, linewidths = 2, zorder = 12)
+            p2.append(m.scatter(x2[i],y2[i], c = clr[i], marker = '+', s = 120, linewidths = 2, zorder = 12))
+
+        legstr = [ "Cluster " + str(i) for i in range(k) ]
+        plt.legend(p2, legstr)
+
+        plt.ion()
 
         plt.show()
 
-    return cldict
+        s = raw_input("Enter a cluster ID or 'a' for all clusters and press enter: ")
+
+    return cldict, s
+
+def outputClusterdRemaining(clusterd, ID, stdict):
+    for key in clusterd.keys():
+        remStations = [station for station in clusterd[ID]['stations'] if stdict[station]['status'] == "not aquired"]
+
+    print "Cluster ID: ", ID
+    print "Cluster Lon / Lat: ", clusterd[ID]['center'][1], clusterd[ID]['center'][0]
+    for rs in remStations:
+        sys.stdout.write(rs + ' ')
 
 if __name__== '__main__' :
 
     dbfile = os.environ['HOME']+'/thesis/stations.json'
     stdict = json.loads( open(dbfile).read() )
-    clusterd = clusterStations(stdict, 5, showmap = True)
+    clusterd, s = clusterStations(stdict, 5, showmap = True)
+    if 'a' in s:
+        for ID in range( len(clusterd) ):
+            outputClusterdRemaining(clusterd, ID, stdict)
+    else:
+        outputClusterdRemaining(clusterd, int(s), stdict)
 
-    json.encoder.FLOAT_REPR = lambda o: format(o, '.2f')
-
-    print json.dumps(clusterd, sort_keys = True, indent = 2)
+    #json.encoder.FLOAT_REPR = lambda o: format(o, '.2f')
+    #print json.dumps(clusterd, sort_keys = True, indent = 2)

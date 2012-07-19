@@ -1059,7 +1059,7 @@
         "numEvents": 462, 
         "poorEvents": 210, 
         "start": 19960215.1638, 
-        "status": "data corruption", 
+        "status": "picked", 
         "stop": "20011112.1823", 
         "usableEvents": 162
     }, 
@@ -1637,11 +1637,11 @@
         "lon": -62.81015, 
         "network": "CNSN", 
         "numEvents": 356, 
-        "poorEvents": 0, 
+        "poorEvents": 231, 
         "start": 20051126.15, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 327
+        "usableEvents": 96
     }, 
     "NEMQ": {
         "lat": 51.6837, 
@@ -1897,11 +1897,11 @@
         "lon": -136.36594, 
         "network": "CNSN", 
         "numEvents": 438, 
-        "poorEvents": 0, 
+        "poorEvents": 271, 
         "start": 20050903.2111, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 362
+        "usableEvents": 91
     }, 
     "PLIO": {
         "lat": 41.75053, 
@@ -2485,11 +2485,11 @@
         "lon": -75.60793, 
         "network": "CNSN", 
         "numEvents": 144, 
-        "poorEvents": 0, 
+        "poorEvents": 67, 
         "start": 20101129.1001, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 97
+        "usableEvents": 30
     }, 
     "VDBQ": {
         "lat": 45.92769, 
@@ -2593,11 +2593,11 @@
         "lon": -134.8806, 
         "network": "CNSN", 
         "numEvents": 764, 
-        "poorEvents": 0, 
+        "poorEvents": 407, 
         "start": 19930827.18, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 648
+        "usableEvents": 241
     }, 
     "WISB": {
         "lat": 50.1265, 
@@ -2725,11 +2725,11 @@
         "lon": -140.5287, 
         "network": "CNSN", 
         "numEvents": 171, 
-        "poorEvents": 0, 
+        "poorEvents": 99, 
         "start": 20100825.18, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 149
+        "usableEvents": 50
     }, 
     "YUK2": {
         "badCompEvents": 1, 
@@ -2737,11 +2737,11 @@
         "lon": -140.8426, 
         "network": "CNSN", 
         "numEvents": 172, 
-        "poorEvents": 0, 
+        "poorEvents": 88, 
         "start": 20100828.13, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 148
+        "usableEvents": 60
     }, 
     "YUK3": {
         "badCompEvents": 0, 
@@ -2749,11 +2749,11 @@
         "lon": -140.4595, 
         "network": "CNSN", 
         "numEvents": 173, 
-        "poorEvents": 0, 
+        "poorEvents": 80, 
         "start": 20100825.0, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 149
+        "usableEvents": 69
     }, 
     "YUK4": {
         "badCompEvents": 0, 
@@ -2761,11 +2761,11 @@
         "lon": -138.5463, 
         "network": "CNSN", 
         "numEvents": 16, 
-        "poorEvents": 0, 
+        "poorEvents": 7, 
         "start": 20100829.19, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 9
+        "usableEvents": 2
     }, 
     "YUK5": {
         "badCompEvents": 0, 
@@ -2773,11 +2773,11 @@
         "lon": -137.8593, 
         "network": "CNSN", 
         "numEvents": 189, 
-        "poorEvents": 0, 
+        "poorEvents": 103, 
         "start": 20100823.0, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 164
+        "usableEvents": 61
     }, 
     "YUK6": {
         "badCompEvents": 0, 
@@ -2785,11 +2785,11 @@
         "lon": -138.36264, 
         "network": "CNSN", 
         "numEvents": 153, 
-        "poorEvents": 0, 
+        "poorEvents": 93, 
         "start": 20100829.02, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 133
+        "usableEvents": 40
     }, 
     "YUK7": {
         "badCompEvents": 0, 
@@ -2797,10 +2797,10 @@
         "lon": -138.13994, 
         "network": "CNSN", 
         "numEvents": 214, 
-        "poorEvents": 0, 
+        "poorEvents": 126, 
         "start": 20100824.02, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 186
+        "usableEvents": 60
     }
 }

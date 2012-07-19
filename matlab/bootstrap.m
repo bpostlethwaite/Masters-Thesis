@@ -32,8 +32,8 @@ R = Vp;
 H = Vp;
 fprintf('    ');
 
-%[Vp, R] = gridsearch( rec', Tps, dt, pslow);
-%[Vpold, Rold, H] = fastgrid( rec, Tps, dt, pslow);
+[Vp, R, H] = fastgridsearch( rec', Tps, dt, pslow);
+[Vpold, Rold, H] = fastgrid( rec, Tps, dt, pslow);
 
 for ii = 1:nmax
     ind = randi(n, n, 1);
