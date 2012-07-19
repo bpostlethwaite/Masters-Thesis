@@ -16,6 +16,12 @@ from preprocessor import is_number
 from collections import defaultdict
 import shapefile
 
+# CONFIGS
+netdir = '/media/TerraS/CN'
+dbfile = os.environ['HOME']+'/thesis/stations.json'
+shpfile = '/home/bpostlet/thesis/mapping/stations'
+stationlist = '/home/bpostlet/thesis/shellscripts/cnsn_stn.list'
+
 
 def buildStationDBfromList(stnf, dbf):
     ''' Builds station database from a list of stations taken
@@ -85,27 +91,33 @@ def stationStats(stationDir):
     status = "aquired"
     if statdict['poorEvents'] > 5:
         status = "picked"
-    if statdict['badCompEvents'] > 50:
+    if statdict['badCompEvents'] > 99:
         status = "data corruption"
     statdict['status'] = status
     return statdict
 
-def updateStats(stdict, netdir):
+def updateStats(stdict):
     ''' Walks through all the keys in the main json database
     and checks if there are stats for that station. If there is
     it updates the keys and values, otherwise it sets "status"
     to "not aquired" '''
 
+    # Get list of downloaded stations
+    stns = os.listdir(netdir)
+
     for station in stdict.keys():
-        stndir = os.path.join(netdir, station)
-        try:
+        if station in stns:
+            # Get stats on downloaded stations and add to dictionary
+            stndir = os.path.join(netdir, station)
             d = stationStats(stndir)
             for key in d.keys():
                 stdict[station][key] = d[key]
-        except OSError, KeyError:
+        else:
+            # If not downloaded set appropriate status
             stdict[station]['status'] = "not aquired"
-            continue
-    return stdict
+
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+
 
 def compare(A, B, op):
     return {
@@ -124,32 +136,32 @@ def queryStats(stdict, attrib = None, operator = None, value = None):
     a CLI interface'''
 
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
-    return qdict
+    print json.dumps(qdict, sort_keys = True, indent = 4)
+
 
 
 if __name__== '__main__' :
 
-    # Hard coded variables
-    netdir = '/media/TerraS/CN'
-    dbfile = os.environ['HOME']+'/thesis/stations.json'
-    shpfile = '/home/bpostlet/thesis/mapping/stations'
-    stationlist = '/home/bpostlet/thesis/shellscripts/cnsn_stn.list'
-
-    # Setup option parser
-    parser = argparse.ArgumentParser(description = "manage and query the station data json database")
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument("-u", "--update", help = "updates database with statistics from data files",
-                        action = "store_true")
-    group.add_argument("-q", "--query", nargs = 3, help = "--query <attribute> <operator> <value>")
-    args = parser.parse_args()
-
     #Load station database
     dbf =  open(dbfile)
     stdict = json.loads( dbf.read() )
+
+    # Create top-level parser
+    parser = argparse.ArgumentParser(description = "manage and query the station data json database")
+    group = parser.add_mutually_exclusive_group()
+    # Create query parser
+    group.add_argument('-q','--query', nargs = 3,
+                        help = "query <attribute> <operator> <value>")
+
+    group.add_argument('-u','--update', action = 'store_true',
+                        help = "updates database with statistics from data files")
+
+    # Parse arg list
+    args = parser.parse_args()
+
+
     if args.update:
-        stdict = updateStats(stdict, netdir)
-        open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+        updateStats(stdict)
 
     if args.query:
-        stdict = queryStats(stdict,args.query[0], args.query[1], args.query[2])
-        print json.dumps(stdict, sort_keys = True, indent = 4)
+        stdict = queryStats(stdict, args.query[0], args.query[1], args.query[2])
