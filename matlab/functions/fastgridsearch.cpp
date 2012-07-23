@@ -43,7 +43,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   // Grid parameters.
   double adjtpps = 0.7;
   double adjtpss = 0.3;
-  int i, ir , iv;
+  int i, ir , iv, ih;
 
   // P-velocity limits
   int nv = 200;
@@ -134,7 +134,6 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   Vp[0] = v[ ind[0] ];
   R[0] = r[ ind[1] ];
 
-
   // Perform gsearch for H
   for(ih = 0; ih < nh; ih++) {
     for(i = 0; i < nrecs; i++) {
@@ -154,7 +153,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   max = stackh[0];
   for (ih = 0; ih < nh; i++) {
     if( stackh[ih] > max ) {
-      max = stack[ih];
+      max = stackh[ih];
       ind[0] = ih;
     }
   }
