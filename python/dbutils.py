@@ -11,7 +11,7 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import json, os, argparse
+import json, os, argparse, sys
 from preprocessor import is_number
 from collections import defaultdict
 import shapefile
@@ -96,7 +96,7 @@ def stationStats(stationDir):
     statdict['status'] = status
     return statdict
 
-def updateStats(stdict):
+def updateStats(stdict, pipedStations = False):
     ''' Walks through all the keys in the main json database
     and checks if there are stats for that station. If there is
     it updates the keys and values, otherwise it sets "status"
@@ -126,11 +126,9 @@ def compare(A, B, op):
         '>=': lambda A, B: A >= B,
         '<': lambda A, B: A < B,
         '<=': lambda A, B: A <= B,
-        'True': True,
-        'False': False
         }[op](A, B)
 
-def queryStats(stdict, attrib = None, operator = None, value = None):
+def queryStats(stdict, attrib = None, operator = None, value = None, attrs = None, pipedStations = None):
     ''' Queries the json dictionary structure containing stations for given
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
@@ -139,7 +137,32 @@ def queryStats(stdict, attrib = None, operator = None, value = None):
         value = float(value)
 
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
+
+    qdict = filterStats(qdict, attrs, pipedStations)
+
+
+
+def printStats(stdict, attrs = None, pipedStations = None):
+    ''' Just prints the passed in dictionary running filters. No query actions'''
+    qdict = filterStats(stdict, attrs, pipedStations)
+
+
+
+def filterStats(qdict, attrs = None, pipedStations = None):
+    ''' Filters the dictionary by a station list (pipedStations)
+    and by an attribute list (attrs)'''
+    if pipedStations:
+        qdict = ( { k:v for k, v in qdict.items if k in pipedStations } )
+
+    if attrs:
+        for k in qdict.keys():
+            for attr in qdict[k].keys():
+                if attr not in attrs:
+                    del qdict[k][attr]
+
     print json.dumps(qdict, sort_keys = True, indent = 4)
+
+
 
 
 
@@ -149,22 +172,53 @@ if __name__== '__main__' :
     dbf =  open(dbfile)
     stdict = json.loads( dbf.read() )
 
+    # If we pipe a bunch of stations to program, query only these stations
+    if not sys.stdin.isatty():
+        pipedData = sys.stdin.read()
+    else:
+        pipedData = None
+
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "manage and query the station data json database")
     group = parser.add_mutually_exclusive_group()
     # Create query parser
     group.add_argument('-q','--query', nargs = 3,
-                        help = "query <attribute> <operator> <value>")
+                        help = "<attribute> '<operator>' <value>")
 
     group.add_argument('-u','--update', action = 'store_true',
                         help = "updates database with statistics from data files")
 
+    group.add_argument('-p','--printer', action = 'store_true',
+                       help = "prints out all stations or stations piped in." +
+                       "Use with -a flag to print only certain attributes")
+
+    parser.add_argument('-a','--attribute', nargs = '+',
+                        help = '<attrib1> <attrib2> ... Add the attributes to be printed out')
+
+    parser.add_argument('-k','--keys', action = 'store_true',
+                        help = 'Prints only the keys (station name) of the database')
+
+
     # Parse arg list
     args = parser.parse_args()
 
+    # Append piped data if there is any
+    args.pipedData = pipedData
+
+    if args.attribute:
+        attrs = args.attribute
+    else:
+        attrs = None
+
+    if args.keys:
+        keys = True
 
     if args.update:
-        updateStats(stdict)
+        updateStats(stdict, args)
 
     if args.query:
-        stdict = queryStats(stdict, args.query[0], args.query[1], args.query[2])
+        queryStats(stdict, args)
+
+    if args.printer:
+        printStats(stdict, args)
+    #print sys.stdin.readline(100)
