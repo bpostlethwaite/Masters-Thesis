@@ -95,15 +95,17 @@ numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 %brec = rec;
 %% Run a few L1 iterations
-userdir = getenv('HOME');
-f = fullfile(userdir, 'programming','matlab'); %Set base path
-addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) %Path to rice toolbox
-addpath(genpath([f,'/spgl1'])) %Path to L1 solver
-addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
-
-parfor ii = 1:nbins
-    lrec(ii,:) = L1crank(ptrace(pIndex(:,ii),:), strace(pIndex(:,ii),:),rec(ii,:), 10);
-end
+%{
+%userdir = getenv('HOME');
+%f = fullfile(userdir, 'programming','matlab'); %Set base path
+%addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) %Path to rice toolbox
+%addpath(genpath([f,'/spgl1'])) %Path to L1 solver
+%addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
+%
+%parfor ii = 1:nbins
+%    lrec(ii,:) = L1crank(ptrace(pIndex(:,ii),:), strace(pIndex(:,ii),:),rec(ii,:), 10);
+%end
+%}
 %% Rescale by slowness
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
