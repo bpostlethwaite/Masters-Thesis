@@ -135,6 +135,9 @@ def queryStats(stdict, attrib = None, operator = None, value = None):
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
 
+    if is_number(value):
+        value = float(value)
+
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
     print json.dumps(qdict, sort_keys = True, indent = 4)
 
