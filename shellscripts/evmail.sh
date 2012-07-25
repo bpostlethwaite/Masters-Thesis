@@ -78,7 +78,7 @@ while read event; do
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   cat $event"_request"
   rm $event"_request"
-  sleep 20
+  sleep 5
 
 
 done
