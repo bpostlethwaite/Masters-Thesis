@@ -128,13 +128,14 @@ def compare(A, B, op):
         '<=': lambda A, B: A <= B,
         }[op](A, B)
 
-def queryStats(stdict, attrib = None, operator = None, value = None, attrs = None, pipedStations = None):
+def queryStats(stdict, args):
     ''' Queries the json dictionary structure containing stations for given
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
 
-    if is_number(value):
-        value = float(value)
+    attrib = args.query[0]
+    operator = args.query[1]
+    value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
 
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
 
@@ -142,27 +143,29 @@ def queryStats(stdict, attrib = None, operator = None, value = None, attrs = Non
 
 
 
-def printStats(stdict, attrs = None, pipedStations = None):
+def printStats(stdict, args):
     ''' Just prints the passed in dictionary running filters. No query actions'''
-    qdict = filterStats(stdict, attrs, pipedStations)
+    qdict = filterStats(stdict, args)
 
 
 
-def filterStats(qdict, attrs = None, pipedStations = None):
+def filterStats(qdict, args):
     ''' Filters the dictionary by a station list (pipedStations)
     and by an attribute list (attrs)'''
-    if pipedStations:
-        qdict = ( { k:v for k, v in qdict.items if k in pipedStations } )
+    if args.pipedData:
+        qdict = ( { k:v for k, v in qdict.items() if k in args.pipedData } )
 
-    if attrs:
+    if args.attribute:
         for k in qdict.keys():
             for attr in qdict[k].keys():
-                if attr not in attrs:
+                if attr not in args.attribute:
                     del qdict[k][attr]
 
-    print json.dumps(qdict, sort_keys = True, indent = 4)
-
-
+    if args.keys:
+        for key in qdict.keys():
+            print key
+    else:
+        print json.dumps(qdict, sort_keys = True, indent = 4)
 
 
 
@@ -172,11 +175,6 @@ if __name__== '__main__' :
     dbf =  open(dbfile)
     stdict = json.loads( dbf.read() )
 
-    # If we pipe a bunch of stations to program, query only these stations
-    if not sys.stdin.isatty():
-        pipedData = sys.stdin.read()
-    else:
-        pipedData = None
 
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "manage and query the station data json database")
@@ -203,15 +201,11 @@ if __name__== '__main__' :
     args = parser.parse_args()
 
     # Append piped data if there is any
-    args.pipedData = pipedData
-
-    if args.attribute:
-        attrs = args.attribute
+    # If we pipe a bunch of stations to program, query only these stations
+    if not sys.stdin.isatty():
+        args.pipedData = sys.stdin.read().split('\n')
     else:
-        attrs = None
-
-    if args.keys:
-        keys = True
+        args.pipedData = None
 
     if args.update:
         updateStats(stdict, args)
@@ -221,4 +215,3 @@ if __name__== '__main__' :
 
     if args.printer:
         printStats(stdict, args)
-    #print sys.stdin.readline(100)
