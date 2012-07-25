@@ -41,13 +41,16 @@ dbn.stackh = results.stackh;
 dbn.rRange = results.rRange;
 dbn.vRange = results.vRange;
 dbn.hRange = results.hRange;
-dbn.stderr1 = results.sterr1;
-dbn.stderr2 = results.sterr2;
-dbn.errV = results.errV;
-dbn.errR = results.errR;
-dbn.errH = results.errH;
 dbn.smax = results.smax;
 dbn.hmax = results.hmax;
+dbn.bootVp = bootVp;
+dbn.bootR = bootR;
+dbn.bootH = bootH;
+dbn.bootVpRx = bootVpRx;
+dbn.bootHx = bootHx;
+dbn.stdVp = 2*std(bootVp);
+dbn.stdR = 2*std(bootR);
+dbn.stdH = 2*std(bootH);
 dbn.tps = results.tps;
 dbn.tpps = results.tpps;
 dbn.tpss = results.tpss;
@@ -65,53 +68,38 @@ dbn.t2 = t2;
 %% Plot the results if we completed the processing
 close all
 plotStack(dbn);
-fprintf('Vp is %f +/- %1.3f km/s\n',results.vbest, results.errV)
-fprintf('R is %f +/- %1.3f \n',results.rbest, results.errR)    
-fprintf('H is %f +/- %1.3f \n',results.hbest, results.errH)    
+fprintf('Vp is %f +/- %1.3f km/s\n',dbn.vbest, dbn.stdVp )
+fprintf('R is %f +/- %1.3f \n',dbn.rbest, dbn.stdR )    
+fprintf('H is %f +/- %1.3f \n',dbn.hbest, dbn.stdH )    
     
 %% Enter Processing Notes:
 
-notes = inputdlg('Enter Notes','Processing Notes',[3 80]);
+notes = input('Enter Processing Notes: ', 's');
 dbn.processnotes = notes; 
 
 %% Save entry
-saveit = questdlg('Save data to .mat file and results to stations.json?', ...
-	'Save the sucker?', ...
-	'Yes','No','No');
-% Handle response
-switch saveit
-    case 'Yes'
-        db = dbn; %#ok<NASGU>
-        save(dbfile,'db')
+saveit = input('Save data to .mat file and results to stations.json? (y|n): ','s');
+switch lower(saveit)
+    case 'y'
+        db = dbn;
+        save(dbfile,'db') % Save .mat file with bulk data
         % Update stations.json
         opt.FileName = [homedir,'/thesis/stations.json'];
         opt.ForceRootName = 0;
         sts = loadjson(opt.FileName);
-        res.Vp = results.vbest;
-        res.R = results.rbest;
-        res.H = results.hbest;
-        sts.(station).results = res;
-    case 'No'
-       fprintf('fine\n')
+        sts.(station).Vp = db.vbest;
+        sts.(station).R = db.rbest;
+        sts.(station).H = db.hbest;
+        sts.(station).stdVp = db.stdVp;
+        sts.(station).stdR = db.stdR;
+        sts.(station).stdH = db.stdH;
+        savejson('', sts, opt);
+        fprintf('Saved data\n')
+    otherwise
+        fprintf('Warning: data not saved\n')
 end
 
 clear db
 
-%}
-%% Compare database stations to station folder
-%{
-% Tests if folder looks like a station folder than tests if the station is
-% in the database station, returns those that are not.
-%runcompare = false;
-%if runcompare
-%    sts = dir(sacfolder);
-%    fprintf('Stations left unprocessed:\n')
-%    for ii = 1:length(sts)
-%        st = sts(ii).name;
-%        if strcmp(upper(st),st) && length(st) > 2 && ~any(strcmp(st,{db.station}))
-%            fprintf('%s\n',st)
-%        end
-%    end     
-%end
-%}
+
 

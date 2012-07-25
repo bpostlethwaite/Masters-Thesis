@@ -91,8 +91,14 @@ stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 
+% Get best estimates of travel times
+% using best parameters
+tps = hbest*(f1-f2);
+tpps = hbest*(f1+f2);
+tpss = 2*hbest*f1;
 %% Results & Errors
 % See Paper by Eaton et al.
+%{
 tps = hbest*(f1-f2);
 tpps = hbest*(f1+f2);
 tpss = 2*hbest*f1;
@@ -113,7 +119,7 @@ sterr2 = sqrt(sum(var([0.5*gvr(round(tps/dt)+1+[0:np-1]*nt),...
     errR = 0.5 * dr * errRn; 
     % Calculate +/- for H
     errH = 0.5 * dh * sum( (stackh > (hmax - sterr2)) ~= 0);
-
+%}
 %% Pack results into struct  
 results.method = 'bostock';
 results.rbest = rbest;
@@ -121,14 +127,14 @@ results.vbest = vbest;
 results.hbest = hbest;
 results.stackvr = stackvr;
 results.stackh = stackh;
-results.errV = errV;
-results.errR = errR;
-results.errH = errH;
+%results.errV = errV;
+%results.errR = errR;
+%results.errH = errH;
 results.rRange = r;
 results.vRange = v;
 results.hRange = h;
-results.sterr1 = sterr1;
-results.sterr2 = sterr2;
+%results.sterr1 = sterr1;
+%results.sterr2 = sterr2;
 results.smax = smax;
 results.hmax = hmax;
 results.tps = tps;
