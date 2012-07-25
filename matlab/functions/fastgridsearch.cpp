@@ -6,9 +6,9 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
 {
 
   //declare variables
-  mxArray *recIN, *pslowIN, *TpsIN, *ROUT, *VpOUT, *HOUT;
+  mxArray *recIN, *pslowIN, *TpsIN;
   const mwSize *dims;
-  double *rec, *pslow, *Tps, *Vp, *R, *H;
+  double *rec, *pslow, *Tps, *Vp, *R, *H, *VpRx, *Hx;
   double dt;
   int nrecs;
   int N;
@@ -16,8 +16,8 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   //associate inputs
   recIN = mxDuplicateArray(prhs[0]);
   TpsIN = mxDuplicateArray(prhs[1]);
-  pslowIN = mxDuplicateArray(prhs[3]);
   dt = mxGetScalar(prhs[2]);
+  pslowIN = mxDuplicateArray(prhs[3]);
 
   //figure out dimensions
   dims = mxGetDimensions(prhs[0]);
@@ -28,17 +28,22 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   // associate outputs
   //    c_out_m = plhs[0] = mxCreateDoubleMatrix(dimy,dimx,mxREAL);
   //    d_out_m = plhs[1] = mxCreateDoubleMatrix(dimy,dimx,mxREAL);
-  VpOUT = plhs[0] = mxCreateDoubleMatrix(1, 1, mxREAL);
-  ROUT = plhs[1] = mxCreateDoubleMatrix(1, 1, mxREAL);
-  HOUT = plhs[2] = mxCreateDoubleMatrix(1, 1, mxREAL);
+  plhs[0] = mxCreateDoubleMatrix(1, 1, mxREAL);
+  plhs[1] = mxCreateDoubleMatrix(1, 1, mxREAL);
+  plhs[2] = mxCreateDoubleMatrix(1, 1, mxREAL);
+  plhs[3] = mxCreateDoubleMatrix(1, 1, mxREAL);
+  plhs[4] = mxCreateDoubleMatrix(1, 1, mxREAL);
 
   //associate pointers
   rec = mxGetPr(recIN);
   pslow = mxGetPr(pslowIN);
   Tps = mxGetPr(TpsIN);
-  Vp = mxGetPr(VpOUT);
-  R = mxGetPr(ROUT);
-  H = mxGetPr(HOUT);
+  Vp = mxGetPr(plhs[0]);
+  R = mxGetPr(plhs[1]);
+  H = mxGetPr(plhs[2]);
+  VpRx = mxGetPr(plhs[3]);
+  Hx = mxGetPr(plhs[4]);
+
 
   // Grid parameters.
   double adjtpps = 0.7;
@@ -133,6 +138,8 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   // Pick winners
   Vp[0] = v[ ind[0] ];
   R[0] = r[ ind[1] ];
+  VpRx[0] = max;
+
 
   // Perform gsearch for H
   for(ih = 0; ih < nh; ih++) {
@@ -142,23 +149,25 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
       tps = round(h[ih] * (f1 - f2) / dt ) ;
       tpps = round( h[ih] * (f1 + f2) / dt );
       tpss = round( h[ih] * 2. * f1 / dt );
-      sumpps = sumps + rec[i * N + (int)tps];
+      sumps = sumps + rec[i * N + (int)tps];
       sumpps = sumpps + rec[i * N + (int)tpps];
       sumpss = sumpss + rec[i * N + (int)tpss];
     }
-    stackh[ih] = (0.5*tps + 0.3 * tpps - 0.2 * tpss) / nrecs;
+    stackh[ih] = (0.5*sumps + 0.3 * sumpps - 0.2 * sumpss) / nrecs;
     sumps = sumpps = sumpss = 0;
   }
 
   max = stackh[0];
-  for (ih = 0; ih < nh; i++) {
+  for (ih = 0; ih < nh; ih++) {
     if( stackh[ih] > max ) {
       max = stackh[ih];
       ind[0] = ih;
     }
   }
 
+  // Pick winner
   H[0] = h[ ind[0] ];
+  Hx[0] = max;
 
   return;
 

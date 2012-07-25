@@ -12,7 +12,6 @@ function [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper)
 % VIEWWINDOW is the boolean value which switches on/off windowed trace
 
 pad = 0.1;    % make taper x% wider so we don't cut out source function signal
-h = waitbar(0,'Windowing Traces');
 steps = size(ptrace,1);
 n = size(ptrace(1,:),2);
 numtr = size(ptrace,1);
@@ -58,7 +57,6 @@ for ii = 1:steps
         fprintf('NaN values in wft at. You should remove\n')
     end
     vft(ii,:) = fft(strace(ii,:));
-    waitbar(ii/steps,h)
 end 
 
     
@@ -76,7 +74,5 @@ end
     %v = fft(ptrace{ii}(1,:),N);
     %vft(ii,:) = v(1:2^13 + 1);
     
-
-close(h)
 
 end
