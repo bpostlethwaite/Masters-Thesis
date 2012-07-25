@@ -140,6 +140,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   R[0] = r[ ind[1] ];
   VpRx[0] = max;
 
+
   // Perform gsearch for H
   for(ih = 0; ih < nh; ih++) {
     for(i = 0; i < nrecs; i++) {
