@@ -63,25 +63,25 @@ viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
 [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %}
-
+%% Setup parallel toolbox
+workers = 4;
+matlabpool('local', workers)
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
-ind = 1;
+
+%ind = 1;
 viewFncs = 0;
-h = waitbar(0,'Deconvolving...');
 rec = zeros(nbins,size(wft,2));
-for ii = 1:nbins
+parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
     % Take complex conjugate and reverse 1st half to recomplete fft
     %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
     rec(ii,:) = real(ifft(r));
-    waitbar(ii/nbins,h)
 end
-close(h)
 
 %% 6) Filter Impulse Response
 if loadflag
@@ -94,10 +94,20 @@ end
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 %brec = rec;
+%% Run a few L1 iterations
+userdir = getenv('HOME');
+f = fullfile(userdir, 'programming','matlab'); %Set base path
+addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) %Path to rice toolbox
+addpath(genpath([f,'/spgl1'])) %Path to L1 solver
+addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
+
+parfor ii = 1:nbins
+    lrec(ii,:) = L1crank(ptrace(pIndex(:,ii),:), strace(pIndex(:,ii),:),rec(ii,:), 10);
+end
+%% Rescale by slowness
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
-
 for ii=1:size(brec,1);
     brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
@@ -105,8 +115,8 @@ end
 
 
 %% Curvelet Denoise
-% thresh = 0.1;
-% brec = performCurveletDenoise(brec,dt,thresh);
+ thresh = 0.1;
+brec = performCurveletDenoise(brec,dt,thresh);
 
 %% Select tps
 if loadflag
@@ -123,7 +133,6 @@ tps = (it + round(t1/dt)-1)*dt;
 %% 7) IRLS Newtons Method to find regression Tps
 %
 
-viewfit = 1; %View newton fit (0 is off)
 H = 35; % Starting guesses for physical paramaters
 alpha = 6.5;
 beta = 3.5;
@@ -131,15 +140,21 @@ tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
 
-[ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,viewfit);
-
-
+[ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
 
 %% 8) Grid and Line Search
 
-[ results ] = GridSearch(brec,Tps',dt,pslow);
+[ results ] = GridSearch( brec(:,1:round(35/dt)), Tps', dt, pslow);
 
 %[ results ] = GsearchKanamori(brec,dt,pslow);
+
+%% 9) Bootstrap Error calculation
+nmax = 1200; % number of bootstrap iterations
+tic
+[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap( brec(:,1:round(35/dt)), Tps, dt, pslow, nmax);
+toc
+%% Close parallel system
+matlabpool close
 %% Viewers
 %{
     

@@ -1,11 +1,11 @@
-function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol,s,viewfit)
+function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol,s)
 %NEWTONFIT Newton solver to solve for a non-linear regression
 %   Uses starting guesses and IRLS solver to find solution.
 
 iter = 1;
 TpsP = 0;
 deltaTps = 100;
-
+q = figure(369);
 while (iter < round(itermax)) && (deltaTps > tol);
     
     % Partials %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +53,7 @@ while (iter < round(itermax)) && (deltaTps > tol);
     iter = iter+1;
     % Real Time Fit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %
-    figure(369)
+    
     plot(p,t,'*',p,Tps)
     title('residual vector and Minimum norm solution')
     xlabel('pslow')
@@ -69,17 +69,10 @@ end
         %fprintf('Eig(H)\n')
         %eig(H)
 
-
+close(q)
 % Check if iter hit itermax, if so issue warning %%%%%%%%
 if iter == itermax
     fprintf(['Newton''s Method reached Max Iteration of %i!\n',...
         'Convergence norm at: %f \n'],iter,deltaTps)
 end
 
-if viewfit > 0
-figure(369)
-    plot(p,t,'*',p,Tps)
-    title('residual vector and Minimum norm solution')
-    xlabel('pslow')
-    ylabel('tps residual')
-end

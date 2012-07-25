@@ -53,9 +53,8 @@ for iv=1:nv
 end
 stackvr=(adjtpps*stpps + adjtpss*stpss);
 % Find max values indices
-%fprintf('%f\n',stackvr(33,160) )
 smax=max(max(stackvr));
-[iv,ir]=find(stackvr == smax)
+[iv,ir]=find(stackvr == smax);
 vbest=v(iv);
 rbest=r(ir);
 %% Line search for H.
@@ -65,6 +64,7 @@ f2=sqrt((1/vbest)^2-p2);
 htps = zeros(1,nh);
 htpps = htps;
 htpss = htps;
+
 for ih=1:nh
   tps=h(ih)*(f1-f2);
   tpps=h(ih)*(f1+f2);
@@ -76,12 +76,9 @@ end
 
 % Find max values indices
 stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
+
 [~,ih]=max(stackh);
 hbest=h(ih);
 
 
 end
-
-
-
-

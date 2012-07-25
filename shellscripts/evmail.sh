@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
 # Eastern
 #STATIONS='CHEG DRLN FCC GBN HAL SCHQ SJNN ULM ICQ NATG A11 A16 A21 A54 A61 A64 LMQ BATG GGN LMN KGNO OTT SADO GAC MNTQ VABQ VLDQ ATKO EPLO KAPO KILO MALO PKLO PNPO SILO SUNO VIMO '
 
 # Northern
 #STATIONS='EUNU BVCY DAWY HYT INK PLBC WHY YUK1 YUK2 YUK3 YUK4 YUK5 YUK6 YUK7 CLRN FRB RES'
+
+#Cluster ID:  NE
+#Cluster Lon / Lat:  -82.629555628 67.4848823627
+STATIONS='NUNN MRYN KUGN JOSN CMBN SBNU ARVN IGLN AP3N B2NU WAGN LAIN AKVQ SEDN KNGQ CDKN BULN GIFN TULEG QILN INUQ SRLN SMLN KRSQ YRTN MCMN UPNG IVKQ STLN ILON B1NU GFNU YBKN PINU'
 
 #Cluster NW
 #Cluster Lon / Lat:  -119.125289508 63.8850950385
@@ -13,10 +17,6 @@
 # Cluster ID:  East Coast
 #Cluster Lon / Lat:  -65.2107601448 49.199844889
 #STATIONS='WBHL HAL NWRL CODG GASG SCH MADG MALG SABG YOSQ MKVL QCQ NANL TIGG DMCQ KAJQ'
-
-#Cluster ID:  NE
-#Cluster Lon / Lat:  -82.629555628 67.4848823627
-#STATIONS='NUNN MRYN KUGN JOSN CMBN SBNU ARVN IGLN AP3N B2NU WAGN LAIN AKVQ SEDN KNGQ CDKN BULN GIFN TULEG QILN INUQ SRLN SMLN KRSQ YRTN MCMN UPNG IVKQ STLN ILON B1NU GFNU YBKN PINU'
 
 #Cluster ID:  Central
 #Cluster Lon / Lat:  -80.1393215565 47.173313008
@@ -72,12 +72,12 @@ while read event; do
 
   echo "START_TIME "$cn$yr"/"$mo1"/"$dy1"."$hr1":"$mi1":"$se1  >> $event"_request"
   #echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
-  echo "DURATION 600" >> $event"_request"
+  echo "DURATION 800" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
-  sleep 2
+  sleep 20
 
 
 done

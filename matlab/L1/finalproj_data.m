@@ -1,9 +1,13 @@
 % Wavelet Deconvolution 
 % Data application file 
-clear all; close all;
-addpath('/home/gmatharu/EOSC513/packages/spotbox-v1.0');
-load('D1.mat');
-M = size(D1,2);
+clear all; close all
+userdir = getenv('HOME');
+f = fullfile(userdir, 'programming','matlab'); %Set base path
+snr = @(x,y)20*log10(norm(x(:))/norm(x(:)-y(:)));
+addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) %Path to rice toolbox
+addpath(genpath([f,'/spgl1'])) %Path to L1 solver
+addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
+load('D1.mat')
 for ii = 1:36
    u = cell2mat(D1{ii}{1});
    s = cell2mat(D1{ii}{2});
@@ -38,9 +42,7 @@ for ii = 1:36
    %
  
    %% Run SPGL1
-   addpath /home/gmatharu/EOSC513/packages/SPGL1/spgl1-1.7
-   opts = spgSetParms('verbosity',1);         % Turn on the SPGL1 log output
-   opts = spgSetParms('iterations',100);% Turn on the SPGL1 log output
+   opts = spgSetParms('verbosity',1,'iterations',1);         % Turn on the SPGL1 log output
    x = spgl1(A,u(:),0,sigma,[],opts);
    xrec = w'*x;
    xrec = xrec/max(xrec);
