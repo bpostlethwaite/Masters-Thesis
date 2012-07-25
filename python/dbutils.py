@@ -139,7 +139,7 @@ def queryStats(stdict, args):
 
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
 
-    qdict = filterStats(qdict, attrs, pipedStations)
+    qdict = filterStats(qdict, args)
 
 
 
