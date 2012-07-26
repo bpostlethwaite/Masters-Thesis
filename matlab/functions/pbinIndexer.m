@@ -17,9 +17,7 @@ parray = kron(e2,pslows');
 pIndex = (parray >= limBottom) & (parray <  limTop);
 
 if CHECK > 0
-    if length(parray(pIndex)) == length(pslows)
-        fprintf('Passed check, all pslows accounted for in Index\n')
-    else
+    if length(parray(pIndex)) ~= length(pslows)
         fprintf('Failed check, not all plsows accounted for in Index\n')
     end
 end

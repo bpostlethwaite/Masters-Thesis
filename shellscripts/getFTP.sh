@@ -13,5 +13,5 @@ while read event; do
     	--user ftp:post.ben.here@gmail.com -o $SEEDDIR/$event.seed
 
     sleep 2
-    
+
 done
