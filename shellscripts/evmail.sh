@@ -37,7 +37,7 @@ while read event; do
   echo "CHAN_LIST *H*" >> $event"_request"
 # Get Stations
   echo "STA_LIST " $STATIONS >> $event"_request"
-  echo NET_LIST CNSN >> $event"_request"
+  echo NET_LIST "CNSN POLARIS CHASME" >> $event"_request"
 
   yr=`echo $event | awk '{print substr($1,1,2)}'`
   if test $yr -lt 18
@@ -76,9 +76,8 @@ while read event; do
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
-  cat $event"_request"
   rm $event"_request"
-  sleep 5
+  sleep 2
 
 
 done
