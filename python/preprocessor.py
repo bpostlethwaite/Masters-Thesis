@@ -107,7 +107,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
             raise SeisDataError('noPOld')
 
     ##### Get P & Pslow #####################
-    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp, gcarc),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
@@ -310,7 +310,11 @@ if __name__== '__main__' :
 ###########################################################################
         for event in events:
             if not is_number(event): # Make sure event dir is right format, skip those not in number format
+                renameEvent( os.path.join(stdir,event) , '', True):
                 continue
+            else:
+                continue
+
             comps = []
             eventdir = os.path.join(stdir,event)
             files = os.listdir(eventdir)
