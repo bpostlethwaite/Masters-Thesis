@@ -310,7 +310,10 @@ if __name__== '__main__' :
 ###########################################################################
         for event in events:
             if not is_number(event): # Make sure event dir is right format, skip those not in number format
+                #renameEvent( os.path.join(stdir, event), '', True)
                 continue
+            #else:
+                #continue
             comps = []
             eventdir = os.path.join(stdir,event)
             files = os.listdir(eventdir)
