@@ -1,6 +1,8 @@
 # Ignore directories
 ####################
 rfmodel/*
+shellscripts/rdseedv5.2/*
+shellscripts/get_tt
 
 # Matlab Backups
 ###################

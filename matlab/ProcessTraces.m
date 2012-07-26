@@ -18,7 +18,7 @@ fclose('all'); % Close all open files from reading
 %% 3) Bin by p value (build pIndex)
 %
 if loadflag
-    npb = db(end).npb;
+    npb = db.npb;
 else
     npb = 2; % Average number of traces per bin
 end
@@ -31,7 +31,6 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
 dt = header{1}.DELTA;
-
 if true
     modratio = zeros(1,size(ptrace,1));
     
@@ -56,40 +55,37 @@ if true
     ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
     strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
 end
-
 %% 5)  Window with Taper and fourier transform signal.
-%
 viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
 [wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
-%}
 %% Setup parallel toolbox
-workers = 4;
-matlabpool('local', workers)
+if ~matlabpool('size')
+    workers = 4;
+    matlabpool('local', workers)
+end
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
-
-%ind = 1;
 viewFncs = 0;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
-    % Take complex conjugate and reverse 1st half to recomplete fft
-    %rtrace(ind,:) = real(ifft([r,conj(r(end-1:-1:2))]));
     rec(ii,:) = real(ifft(r));
 end
-
+ind = isnan(rec(:,1));
+rec( ind  , : ) = [];
+pslow( ind ) = [];
 %% 6) Filter Impulse Response
 if loadflag
     fLow = db.filterLow;
     fHigh = db.filterHigh;
 else
     fLow = 0.04;
-    fHigh = 1.2;
+    fHigh = 1.0;
 end    
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
@@ -110,16 +106,16 @@ brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 % Scale by increasing p value
 pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
+
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/(max(abs(brec(ii,1:1200))) + 0.0001) * (pscale(ii));
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200)));% * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
-
-
 %% Curvelet Denoise
- thresh = 0.1;
+%{
+thresh = 0.1;
 brec = performCurveletDenoise(brec,dt,thresh);
-
+%}
 %% Select tps
 if loadflag
     t1 = db.t1; 
@@ -130,33 +126,22 @@ else
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
-
-%}
 %% 7) IRLS Newtons Method to find regression Tps
-%
-
 H = 35; % Starting guesses for physical paramaters
 alpha = 6.5;
 beta = 3.5;
 tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
-
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
-
 %% 8) Grid and Line Search
-
 [ results ] = GridSearch( brec(:,1:round(35/dt)), Tps', dt, pslow);
-
 %[ results ] = GsearchKanamori(brec,dt,pslow);
-
 %% 9) Bootstrap Error calculation
-nmax = 1200; % number of bootstrap iterations
-tic
+nmax = 1024; % number of bootstrap iterations
 [bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap( brec(:,1:round(35/dt)), Tps, dt, pslow, nmax);
-toc
 %% Close parallel system
-matlabpool close
+%matlabpool close
 %% Viewers
 %{
     
