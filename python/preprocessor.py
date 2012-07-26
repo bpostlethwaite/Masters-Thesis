@@ -4,6 +4,10 @@
 # python-mode comment/uncomment region M-;
 # Note Scipy detrend is same as doing a remove mean and then detrend
 # Detrend demean taper rotate rename save
+#
+# This program takes piped in station list input (space or newline seperated)
+# and an event.list arguement.
+#
 
 ###########################################################################
 # IMPORTS
@@ -11,7 +15,7 @@
 import matplotlib
 matplotlib.__version__ = "1.1.0"
 from obspy.core import read
-from obspy.signal.rotate import rotate_NE_RT as rotate 
+from obspy.signal.rotate import rotate_NE_RT as rotate
 from scipy.signal.signaltools import detrend
 from obspy.signal.invsim import cosTaper
 import subprocess, sys, os, re, shutil
@@ -76,22 +80,22 @@ def setHeaders(eventdir, sacfiles, eventdict):
     pP = -12345
     evla, evlo, evdp, gcarcOLD = eventdict[ os.path.basename(eventdir) ]
     st = read( os.path.join(eventdir, sacfiles[0]) )
-    stla = st[0].stats.sac['stla'] 
+    stla = st[0].stats.sac['stla']
     stlo = st[0].stats.sac['stlo']
     dt = st[0].stats.delta
     ##### Get BAZ & GCARC #####################
-    azim = "/home/bpostlet/thesis/shellscripts/azim"
+    azim = os.environ["HOME"] + "/thesis/shellscripts/azim"
     try:
         process = sh("{} -s {} {} -e {} {}".format(azim, stlo, stla, evlo, evla),
                      shell=True, executable = "/bin/bash", stdout = pipe )
         result =  process.communicate()[0].rstrip().split('\n')
-        gcarc = float( result[0].split(":")[1] ) 
+        gcarc = float( result[0].split(":")[1] )
         baz = float(result[2].split(":")[1] )
     except ValueError as e:
         raise SeisDataError("noAzim")
 
     ##### Get OLD P  #####################
-    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarcOLD),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarcOLD),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
@@ -103,20 +107,20 @@ def setHeaders(eventdir, sacfiles, eventdict):
             raise SeisDataError('noPOld')
 
     ##### Get P & Pslow #####################
-    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
         result = result.split()
         if result[1] == 'P':
-            slowness = float(result[3]) 
+            slowness = float(result[3])
             P = float(result[2])
             break
         else:
             raise SeisDataError('noPslow')
 
     ##### Get PP ###########################
-    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p PP".format(evdp,gcarc),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p PP".format(evdp,gcarc),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
@@ -126,7 +130,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
                 PP = float(result[2])
                 break
     ##### Get pP ###########################
-    process = sh("/home/bpostlet/bin/Get_tt/get_tt -z {} -d {} -p pP".format(evdp,gcarc),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p pP".format(evdp,gcarc),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
@@ -137,7 +141,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
                 break
 
     ##### CALCULATE BEGINNING AND END #####
-    N = 16384 
+    N = 16384
     begin = math.ceil(P) - 60
     if begin < beginOLD:
         begin = beginOLD
@@ -164,16 +168,16 @@ def setHeaders(eventdir, sacfiles, eventdict):
             st[0].stats.sac['kt1'] = "P_beg" # For picking p-coda energy
             st[0].stats.sac['kt3'] = "P_end" # for picking p-coda energy
 
-            
+
             ####### TRUNCATE if not truncated############
             if begin != st[0].stats.sac['b']:
-                st[0].data = st[0].data[ (begin - beginOLD)/dt 
+                st[0].data = st[0].data[ (begin - beginOLD)/dt
                                          : (end - beginOLD)/dt + 1 ] # truncate
                 st[0].stats.sac['b'] = begin
                 st[0].stats.sac['e'] = end
 
             ####### WRITE #################
-            st[0].write(ff, format = 'SAC')        
+            st[0].write(ff, format = 'SAC')
         except IOError:
             print "problem reading and writing in setHeaders func"
             raise IOError
@@ -189,13 +193,13 @@ def detrend_taper_rotate(eventdir, sacfiles):
     """preprocess performs the demean,detrend,taper and rotation into radial and
     transverse components. It saves these at STACK_R.sac and STACK_T.sac"""
 
-    ev = []    
+    ev = []
     # READ 3 Component SAC files into object array.
     for i in range(3):
         ff = os.path.join(eventdir, sacfiles[i])
         st = read(ff)
-        ev.append(st[0]) 
-    
+        ev.append(st[0])
+
     # Calculate values to be used in transformations
     dt = ev[1].stats.delta
     pslow = ev[1].stats.sac['user0']
@@ -214,8 +218,8 @@ def detrend_taper_rotate(eventdir, sacfiles):
     for i in range(3):
         ####### DETREND & TAPER #################
         ev[i].data = detrend(ev[i].data) * ctap
-    
-    # R, T = rotate(N, E) 
+
+    # R, T = rotate(N, E)
     ev[1].data, ev[0].data = rotate(ev[1].data, ev[0].data, baz)
     # Call freetran and rotate into P and S space
     ev[1].data, ev[2].data = freetran(
@@ -223,10 +227,10 @@ def detrend_taper_rotate(eventdir, sacfiles):
     # Save freetran transformed data objects
     ev[1].write(os.path.join(eventdir,'stack_P.sac'), format='SAC')
     ev[2].write(os.path.join(eventdir,'stack_S.sac'), format='SAC')
-    
+
 def freetran(rcomp, zcomp, pslow, alpha, beta):
-    """ Function FREETRAN converts radial and vertical component 
-    displacement seismograms to P and S components assuming 
+    """ Function FREETRAN converts radial and vertical component
+    displacement seismograms to P and S components assuming
     a given slowness PSLOW, and surface velocities alpha, beta.
     (Using 6.06 and 3.5 for A0 and B0)
     Usage: pcomp, scomp = freetran(rcomp,zcomp,pslow,alpha,beta)
@@ -249,40 +253,51 @@ def freetran(rcomp, zcomp, pslow, alpha, beta):
 
 if __name__== '__main__' :
 
-    ###########################################################################
-    # SET DIRECTORIES, FILES, VARS
-    ###########################################################################
+###########################################################################
+# SET DIRECTORIES, FILES, VARS
+###########################################################################
     netdir = '/media/TerraS/CN'
- 
+
     if len(sys.argv) != 2:
         print "usage: preprocessor.py eventfile"
+        exit()
     eventlist = sys.argv[1]
     eventdict = {}
-    ###########################################################################
-    #  SET regex matches
-    ###########################################################################
+###########################################################################
+#  SET regex matches
+###########################################################################
     reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
-    ###########################################################################
-    # Build a dictionary from file event.list from Request system
-    # fields[0] -> event name     fields[2] -> lat
-    # fields[3] -> lon            fields[4] -> depth
-    # fields[6] -> GCARC
-     ###########################################################################
+###########################################################################
+# Build a dictionary from file event.list from Request system
+# fields[0] -> event name     fields[2] -> lat
+# fields[3] -> lon            fields[4] -> depth
+# fields[6] -> GCARC
+###########################################################################
     with open(eventlist, 'r') as f:
         for ind, line in enumerate(f):
             if ind == 0:
                 stations = line.split()
                 continue
-                
+
             fields = line.split()
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
 
-    ###########################################################################
-    # Walk through all stations found in network folder
-    ###########################################################################
-    for station in os.listdir(netdir):
+###########################################################################
+# Walk through all stations piped into the program
+###########################################################################
+    stations = sys.stdin.read()
+    # Determine if stations being piped in are a newline list or a space delimited list
+    # and take the proper action
+    for num, line in enumerate(stations):
+        pass
+    if num > 0:
+        stations = stations.split()
+    else:
+        stations = stations.split('\n')
+
+    for station in stations:
         try:
             stdir = os.path.join(netdir,station)
             events = os.listdir(stdir)
@@ -334,4 +349,3 @@ if __name__== '__main__' :
                 print "ValueError in event:", eventdir
                 renameEvent(eventdir,"ValueError")
                 continue
-

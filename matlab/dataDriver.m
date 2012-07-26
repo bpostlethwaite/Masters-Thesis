@@ -64,19 +64,15 @@ dbn.filterHigh = fHigh;
 dbn.thresh = thresh;
 dbn.t1 = t1;        
 dbn.t2 = t2;        
-    
 %% Plot the results if we completed the processing
 close all
 plotStack(dbn);
 fprintf('Vp is %f +/- %1.3f km/s\n',dbn.vbest, dbn.stdVp )
 fprintf('R is %f +/- %1.3f \n',dbn.rbest, dbn.stdR )    
-fprintf('H is %f +/- %1.3f \n',dbn.hbest, dbn.stdH )    
-    
+fprintf('H is %f +/- %1.3f \n',dbn.hbest, dbn.stdH )     
 %% Enter Processing Notes:
-
 notes = input('Enter Processing Notes: ', 's');
 dbn.processnotes = notes; 
-
 %% Save entry
 saveit = input('Save data to .mat file and results to stations.json? (y|n): ','s');
 switch lower(saveit)
@@ -100,6 +96,3 @@ switch lower(saveit)
 end
 
 clear db
-
-
-
