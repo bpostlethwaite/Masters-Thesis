@@ -16,7 +16,8 @@ from time import sleep
 
 sh = subprocess.Popen
 pipe = subprocess.PIPE
-rdseed = "/home/bpostlet/thesis/shellscripts/rdseedv5.2/rdseed -df"
+
+rdseed = os.environ["HOME"] + "/thesis/shellscripts/rdseedv5.2/rdseed -df"
 
 #############################################################
 # Seperate Data into Event Folders                          #
@@ -54,12 +55,12 @@ if seedfiles:
         for f in sacfiles:
             m1 = reg.match(f)
             if m1:
-                station = m1.group(3)                      
+                station = m1.group(3)
                 evDir = os.path.join(baseDir, station, event)
                 if not os.path.exists(evDir):
                     os.makedirs(evDir)
                 shutil.move( os.path.join(deseedDir, f), os.path.join(evDir, f) )
-            
+
 
         left = os.listdir(deseedDir)
         if len(left) != 0:
@@ -69,9 +70,3 @@ if seedfiles:
         #sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
         sys.stdout.write(event+"\n")
         sys.stdout.flush()
-
-
-    
-    
-
-

@@ -79,7 +79,7 @@ def isPoor(s):
     else:
         return False
 
-def stationStats(stationDir):
+def fileStats(stationDir):
     ''' Runs through station directory and collects
     stats outputting to STDOUT as JSON '''
     statdict = {}
@@ -96,7 +96,7 @@ def stationStats(stationDir):
     statdict['status'] = status
     return statdict
 
-def updateStats(stdict, pipedStations = False):
+def updateStats(stdict):
     ''' Walks through all the keys in the main json database
     and checks if there are stats for that station. If there is
     it updates the keys and values, otherwise it sets "status"
@@ -109,9 +109,12 @@ def updateStats(stdict, pipedStations = False):
         if station in stns:
             # Get stats on downloaded stations and add to dictionary
             stndir = os.path.join(netdir, station)
-            d = stationStats(stndir)
+            d = fileStats(stndir)
             for key in d.keys():
                 stdict[station][key] = d[key]
+            if 'Vp' in stdict[station]:
+                stdict[station]['status'] = "processed"
+
         else:
             # If not downloaded set appropriate status
             stdict[station]['status'] = "not aquired"
@@ -126,6 +129,7 @@ def compare(A, B, op):
         '>=': lambda A, B: A >= B,
         '<': lambda A, B: A < B,
         '<=': lambda A, B: A <= B,
+        '!=': lambda A, B: A != B
         }[op](A, B)
 
 def queryStats(stdict, args):
@@ -139,7 +143,7 @@ def queryStats(stdict, args):
 
     qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
 
-    qdict = filterStats(qdict, attrs, pipedStations)
+    qdict = filterStats(qdict, args)
 
 
 
@@ -208,7 +212,7 @@ if __name__== '__main__' :
         args.pipedData = None
 
     if args.update:
-        updateStats(stdict, args)
+        updateStats(stdict)
 
     if args.query:
         queryStats(stdict, args)
