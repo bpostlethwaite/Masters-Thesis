@@ -1514,6 +1514,9 @@
         "stop": 0
     }, 
     "LMN": {
+        "H": 42.46231156, 
+        "R": 1.743467337, 
+        "Vp": 6.854271357, 
         "badCompEvents": 12, 
         "lat": 45.852, 
         "lon": -64.806, 
@@ -1521,11 +1524,17 @@
         "numEvents": 544, 
         "poorEvents": 318, 
         "start": 19930726, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 7.425341939, 
+        "stdR": 0.02340395854, 
+        "stdVp": 1.065222377, 
         "stop": 0, 
         "usableEvents": 175
     }, 
     "LMQ": {
+        "H": 42.08542714, 
+        "R": 1.93040201, 
+        "Vp": 7.125628141, 
         "badCompEvents": 15, 
         "lat": 47.5485, 
         "lon": -70.3258, 
@@ -1533,7 +1542,10 @@
         "numEvents": 546, 
         "poorEvents": 314, 
         "start": 19981002.01, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 4.005395111, 
+        "stdR": 0.04862114724, 
+        "stdVp": 0.5458966677, 
         "stop": 0, 
         "usableEvents": 188
     }, 
@@ -1578,6 +1590,9 @@
         "stop": "20081009.1908"
     }, 
     "MALO": {
+        "H": 39.1959799, 
+        "R": 1.751005025, 
+        "Vp": 6.537688442, 
         "badCompEvents": 20, 
         "lat": 50.0244, 
         "lon": -79.7635, 
@@ -1585,7 +1600,10 @@
         "numEvents": 426, 
         "poorEvents": 245, 
         "start": 20030717.23, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 2.166270142, 
+        "stdR": 0.01931976974, 
+        "stdVp": 0.3416857622, 
         "stop": 0, 
         "usableEvents": 153
     }, 
@@ -1694,6 +1712,9 @@
         "stop": "20100521.1825"
     }, 
     "MNTQ": {
+        "H": 40.32663317, 
+        "R": 1.76758794, 
+        "Vp": 7.396984925, 
         "badCompEvents": 4, 
         "lat": 45.500286, 
         "lon": -73.622767, 
@@ -1701,7 +1722,10 @@
         "numEvents": 155, 
         "poorEvents": 89, 
         "start": 20100726, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 10.6211747, 
+        "stdR": 0.07901022952, 
+        "stdVp": 1.67120268, 
         "stop": 0, 
         "usableEvents": 55
     }, 
@@ -1770,6 +1794,9 @@
         "stop": 0
     }, 
     "NATG": {
+        "H": 35.05025126, 
+        "R": 1.719346734, 
+        "Vp": 5.015075377, 
         "badCompEvents": 12, 
         "lat": 50.28721, 
         "lon": -62.81015, 
@@ -1777,7 +1804,10 @@
         "numEvents": 356, 
         "poorEvents": 231, 
         "start": 20051126.15, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 10.84489004, 
+        "stdR": 0.09225845091, 
+        "stdVp": 1.783345537, 
         "stop": 0, 
         "usableEvents": 96
     }, 
@@ -2030,6 +2060,9 @@
         "stop": 0
     }, 
     "PLBC": {
+        "H": 31.15577889, 
+        "R": 1.78718593, 
+        "Vp": 5.075376884, 
         "badCompEvents": 3, 
         "lat": 59.45503, 
         "lon": -136.36594, 
@@ -2037,7 +2070,10 @@
         "numEvents": 438, 
         "poorEvents": 271, 
         "start": 20050903.21, 
-        "status": "picked", 
+        "status": "processed", 
+        "stdH": 5.569609655, 
+        "stdR": 0.07077143604, 
+        "stdVp": 1.607437141, 
         "stop": 0, 
         "usableEvents": 91
     }, 

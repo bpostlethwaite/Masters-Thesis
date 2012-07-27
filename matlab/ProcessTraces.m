@@ -123,13 +123,13 @@ if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 3.5;
-    t2 = 5;
+    t1 = 3.2;
+    t2 = 6.2;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 %% 7) IRLS Newtons Method to find regression Tps
-H = 38; % Starting guesses for physical paramaters
+H = 34; % Starting guesses for physical paramaters
 alpha = 6.4;
 beta = 3.6;
 tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
