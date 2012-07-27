@@ -16,7 +16,7 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data.
-station = 'SADO';
+station = 'LMN';
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
 loadflag = 0;
@@ -27,9 +27,8 @@ end
 %% Run ToolChain
 ProcessTraces
 %% Assign Data
-% For a description of data see DataDescription.m
 dbn.station = station;    
-dbn.processnotes = [];
+dbn.processnotes = '';
 dbn.scanstatus = true; 
 dbn.failmessage = 'None'; 
 dbn.method = results.method;
