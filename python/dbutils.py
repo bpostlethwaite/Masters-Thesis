@@ -15,8 +15,10 @@ import json, os, argparse, sys
 from preprocessor import is_number
 from collections import defaultdict
 import shapefile
+import scipy.io as sio
 
 # CONFIGS
+databasedir = '/media/TerraS/database'
 netdir = '/media/TerraS/CN'
 dbfile = os.environ['HOME']+'/thesis/stations.json'
 shpfile = '/home/bpostlet/thesis/mapping/stations'
@@ -96,7 +98,16 @@ def fileStats(stationDir):
     statdict['status'] = status
     return statdict
 
-def updateStats(stdict):
+def matStats(matfile):
+    ''' Run through matlab generated mat files and pull out pertinent information
+    and put into the json station.json database'''
+    mat = sio.loadmat(os.path.join(databasedir,matfile))
+    db = mat['db'][0,0]
+    matdict = {}
+    matdict['processnotes'] = str(db['processnotes'])
+    return matdict
+
+def updateStats(stdict, args):
     ''' Walks through all the keys in the main json database
     and checks if there are stats for that station. If there is
     it updates the keys and values, otherwise it sets "status"
@@ -118,6 +129,18 @@ def updateStats(stdict):
         else:
             # If not downloaded set appropriate status
             stdict[station]['status'] = "not aquired"
+
+    # This feature is not quite working yet.
+    # Need to make this whole function more efficient.
+    # Test for modification times, roll through all stations
+    # once then update all the dictionaries once. Something
+    # like that.
+    if args.mat:
+        for matfile in os.listdir(databasedir):
+            if "mat" in matfile:
+                m = matStats(matfile)
+
+
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
 
@@ -195,11 +218,13 @@ if __name__== '__main__' :
                        "Use with -a flag to print only certain attributes")
 
     parser.add_argument('-a','--attribute', nargs = '+',
-                        help = '<attrib1> <attrib2> ... Add the attributes to be printed out')
+                        help = 'Only the given attributes will be printed out')
 
     parser.add_argument('-k','--keys', action = 'store_true',
                         help = 'Prints only the keys (station name) of the database')
 
+    parser.add_argument('-m', '--mat', action = 'store_true',
+                        help = 'Updates matlab processing results into json database')
 
     # Parse arg list
     args = parser.parse_args()
@@ -212,7 +237,7 @@ if __name__== '__main__' :
         args.pipedData = None
 
     if args.update:
-        updateStats(stdict)
+        updateStats(stdict, args)
 
     if args.query:
         queryStats(stdict, args)

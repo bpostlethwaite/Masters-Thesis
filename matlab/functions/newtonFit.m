@@ -1,7 +1,6 @@
 function [ Tps,h,a,b ] = newtonFit(h,a,b,p,t,itermax,tol,s)
 %NEWTONFIT Newton solver to solve for a non-linear regression
 %   Uses starting guesses and IRLS solver to find solution.
-
 iter = 1;
 TpsP = 0;
 deltaTps = 100;

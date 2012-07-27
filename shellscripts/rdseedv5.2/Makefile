@@ -21,19 +21,19 @@
 # MAKE       = command line "make" options passed to Makefiles in subdirectories
 # LIBS       = system libraries to link in when constructing executable
 
-CC = cc 
+CC = cc
 
 # for cygwin add the -D_CYGWIN flag, for users of windows pcs
-CFLAGS     = -O -m32 -g -D_CYGWIN
+#CFLAGS     = -O -m32 -g -D_CYGWIN
 
 # to compile rdseed as a 32-bit application
-#CFLAGS     = -O -m32 -g 
+#CFLAGS     = -O -m32 -g
 
 # uncomment to accommodate earlier versions of Mac OS X
 # CFLAGS = -O -m64 -g -mmacosx-version-min=10.4
 
 # else
-#CFLAGS = -O -m64 -g
+CFLAGS = -O -m64 -g
 
 INCLUDE    = -I../Include
 
