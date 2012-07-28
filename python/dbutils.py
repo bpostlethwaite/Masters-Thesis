@@ -146,7 +146,9 @@ def updateStats(stdict, args):
     statdict = fileStats(statdict, modtime, args.force)
     statdict = matStats(statdict, modtime, args.force)
     statdict = setStatus(statdict)
-    stdict.update(statdict)
+    for station in statdict.keys():
+        for attribute in statdict[station].keys():
+            stdict[station][attribute] = statdict[station][attribute]
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
     open(updtime,'w').write( str(time.time()) )
