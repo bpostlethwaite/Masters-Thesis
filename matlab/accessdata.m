@@ -1,55 +1,28 @@
 % Access Database
-%clear all
-%close all
+
+clear all
+close all
+addpath ../sac
+addpath functions
 
 
-user = getenv('USER');
-sacfolder = '/media/TerraS/CNSN';
-datadir = ['/home/',user,'/programming/matlab/thesis/data'];
-databasedir = [datadir,'/database'];
-all = 1;
+homedir = getenv('HOME');
+sacfolder = '/media/TerraS/CN';
+databasedir = '/media/TerraS/database';
 
-prompt={'Press Enter to Continue'};
-name='Pause Dialogue';
-numlines=1;
-defaultanswer={' '};
-options.Resize='on';
-options.WindowStyle='normal';
-options.Interpreter='tex';
+stations = dir(databasedir);
+for ii = 1:length(stations)
+    station = stations(ii).name;
+    try 
+       load(fullfile(databasedir,station))
+    catch exception
+        fprintf('skipping %s\n', station)
+        continue
+    end
     
-%% Select station. Include name or use 'all' for all.
-%station = all;
+    db.stdVp = std(db.bootVp);
+    db.stdR = std(db.bootR);
+    db.stdH = std(db.bootH);
 
-if any(station == 1)
-    dblist = dir(databasedir);
-    dblist(1:2) = []; % Get rid of . and ..
-else
-    clear dblist
-    dblist.name = [station,'.mat'];
+    save(fullfile(databasedir, station), 'db')
 end
-
-%% Iterate through stations        
-for ii = 1:length(dblist)
-    load(fullfile(databasedir,dblist(ii).name))
-    for jj = 1:length(db) 
-        fprintf('%s:\n%s\n',db(jj).station,cell2mat(db(jj).processnotes))
-        fprintf('T1 = %f   T2 = %f\n',db(jj).t1,db(jj).t2)
-        %if db(jj).scanstatus
-        %   fprintf('Displaying results for %s\n',db(jj).station)
-        %   plotStack(db(jj))
-        %   answer=inputdlg(prompt,name,numlines,defaultanswer,options);
-        %else
-        %   fprintf('Null scan status for %s\n',db(jj).station)      
-        %end
-     end
-    %save([databasedir,'/',db(1).station,'.mat'],'db')
-end
-    
-    %if any(strcmp([dba.station,'.mat'],{dblist.name}))
-    %    load([databasedir,'/',dba.station,'.mat'])
-    %    db(end+1) = dba;
-    %else
-    %    db = dba;
-    
-    
-%save([databasedir,'/',db.station,'.mat'],'db')

@@ -8,8 +8,9 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import os, re, time, shutil, sys, tty
+import os, re, time, shutil, sys, tty, argparse
 from preprocessor import SeisDataError, renameEvent, is_number
+from dbutils import isPoor
 import matplotlib.pyplot as plt
 from obspy.core import read
 import numpy as np
@@ -33,6 +34,7 @@ def ppicker(eventdir,pname,sname,repick = False):
     """ Function ppicker is a ginput based arrival picker
     allowing for 3 time picks which are saved in SAC data headers"""
 
+
     pf = os.path.join(eventdir, pname)
     sf = os.path.join(eventdir, sname)
     pt = read(pf)[0]
@@ -46,6 +48,12 @@ def ppicker(eventdir,pname,sname,repick = False):
     t0 = (pt.stats.sac['t0'] - b ) / dt
     t4 = (pt.stats.sac['t4'] - b ) / dt
     t7 = (pt.stats.sac['t7'] - b ) / dt
+
+    # Skip if T1 and T3 are greater than zero. The default is a large negative number
+    if repick:
+        if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
+            return
+
     left = round(t0 - 20/dt)
     right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
@@ -53,96 +61,93 @@ def ppicker(eventdir,pname,sname,repick = False):
 
     get = Getch()
 
-    if repick:
-        if float(pt.stats.sac['t1']) > 0 or float(pt.stats.sac['t3']) > 0:
-            return
+    plt.figure( num = None, figsize = (22,6) )
+    plt.plot(p, label = 'Pcomp')
+    plt.xticks(nn[::200],t[::200])
+    plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
+    plt.axvline(x = t0, color = 'y', label = 'gett P')
+    plt.axvline(x = t4, color = 'g', label = 'gett pP')
 
+    if t7 < right:
+        plt.axvline(x = t7, color = 'r', label = 'gett PP')
 
-    while True:
+    plt.xlim(left, right)
+    plt.xlabel('Time \n P arrival is zero seconds')
+    plt.legend()
+    x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
 
-        plt.figure( num = None, figsize = (22,6) )
-        plt.plot(p, label = 'Pcomp')
-        plt.xticks(nn[::200],t[::200])
-        plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
-        plt.axvline(x = t0, color = 'y', label = 'gett P')
-        plt.axvline(x = t4, color = 'g', label = 'gett pP')
+    try:
+        T1 = x[0][0]*dt + b
+        T3 = x[1][0]*dt + b
 
-        if t7 < right:
-            plt.axvline(x = t7, color = 'r', label = 'gett PP')
+    except IndexError:
+        print "Not all picks made in", eventdir
+        print "Please retry the picks"
+        continue
 
-        plt.xlim(left, right)
-        plt.xlabel('Time \n P arrival is zero seconds')
-        plt.legend()
-        x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
+    plt.close()
 
-        try:
-            T1 = x[0][0]*dt + b
-            T3 = x[1][0]*dt + b
+    print "Keep trace? 'n' for no, 'r' for redo, 'p' for previous, 's' for skip and any other for yes: "
+    inp = get()
 
-        except IndexError:
-            print "Not all picks made in", eventdir
-            print "Please retry the picks"
-            continue
+    if inp not in ['n','r','p','s']:
+        # Assume yes and save
+        pt.stats.sac['t1'] = T1
+        pt.stats.sac['t3'] = T3
+        pt.write(pf, format='SAC')
+        st.stats.sac['t1'] = T1
+        st.stats.sac['t3'] = T3
+        st.write(sf, format='SAC')
 
-        plt.close()
+    return inp
 
-        print "Keep trace? 'n' for no, 'r' for redo, any other for yes: "
-        inp = get()
-
-        if 'r' in inp:
-            continue
-
-        elif 'n' in inp:
-            raise SeisDataError('poorData')
-
-        else:
-            pt.stats.sac['t1'] = T1
-            pt.stats.sac['t3'] = T3
-            pt.write(pf, format='SAC')
-            st.stats.sac['t1'] = T1
-            st.stats.sac['t3'] = T3
-            st.write(sf, format='SAC')
-            return
-
+def isEitherPoorOrNumber(s):
+    if isPoor(s) or is_number(s):
+        return True
+    else:
+        return False
 
 if __name__== '__main__' :
 
-    repick = False
     count = 1
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
-    if (len(sys.argv) < 2):
-        print "Send a absolute Station directory and optional flag"
-        exit()
+    # Create top-level parser
+    parser = argparse.ArgumentParser(description = "Pick seismograms with a few options for file control")
+    parser.add_argument('-a', '--all', action = 'store_true',
+                        help = "selects numeric event folders as well as those marked poorData")
 
-    elif (len(sys.argv) > 2):
-        flag = sys.argv[1]
-        stdir = sys.argv[2]
+    parser.add_argument('-u','--unpicked', action = 'store_true',
+                        help = "select only those events with SAC times identified as picked")
 
-        if flag in "-r":
-            repick = True
+    parser.add_argument('-p', '--poor', action = 'store_true',
+                        help = 'Picks only folders renamed with the poorData suffix')
 
-        elif flag in "-u":
-            events = os.listdir(stdir)
-            for event in events:
-                if "poorData" in event:
-                    renameEvent( os.path.join(stdir,event), [], True)
-            exit()
-
-        else:
-            print "unsupported flag option. Use -r to repick only unpicked seismograms, or -u to unpick entire directory"
-            exit()
-
-    else:
-        stdir = sys.argv[1]
+    parser.add_argument('-r','--reset', action = 'store_true'
+                        help = "unpicks all folders by renaming them back to numeric event folder names")
+    args = parser.parse_args()
 
     events = os.listdir(stdir)
-    events = filter(is_number,events)
 
-    for event in events:
+    if args.reset:
+         for event in events:
+            if "poorData" in event:
+                renameEvent( os.path.join(stdir,event), [], True)
+        exit()
+
+    if args.all:
+        events = filter(isEitherPoororNumber, events)
+
+    if args.poor:
+        events = filter(isPoor, events)
+
+    if not args.poor and not args.all:
+        events = filter( is_number, events)
+
+    index = 0
+    while index < len(events):
+        event = events[index]
         print "{}/{} Pick P-coda limits".format(count, len(events) )
-        if not is_number(event): # Make sure event dir is right format, skip those not in number format
-            continue
         comps = []
         eventdir = os.path.join(stdir,event)
         files = os.listdir(eventdir)
@@ -157,7 +162,6 @@ if __name__== '__main__' :
     ###########################################################################
         if (len(comps) != 2):
              print "Did not register 2 components in directory:", eventdir
-             renameEvent(eventdir,"MissingComponents")
              continue
          # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
          # Pull outn sacfiles from zipped sorted list.
@@ -166,7 +170,15 @@ if __name__== '__main__' :
 
         try:
             count += 1
-            ppicker(eventdir,sacfiles[0],sacfiles[1], repick)
-        except SeisDataError as e:
-            renameEvent(eventdir, e.msg)
+            cmd = ppicker(eventdir,sacfiles[0],sacfiles[1], args.repick)
+        if cmd == 'n':
+            renameEvent(eventdir,"poorData")
+            continue
+        elif cmd == 'p':
+            index -= 1
+            continue
+        elif cmd == 'r':
+            continue
+        else:
+            index += 1:
             continue

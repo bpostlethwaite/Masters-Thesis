@@ -1,4 +1,4 @@
-function [rft,xft,betax] = simdecf(wft,vft,betan,pflag)
+function [rft,xft,betax] = simdecf(wft,vft,betan,pflag, discard)
 
 % SIMDECF Simultaneous deconvolution of multiple seismograms in
 % the frequency domain. Inputs are wavelet estimates WFT, data
@@ -75,8 +75,10 @@ else
     %disp('change search limits')
     %disp('index at minimum and no of seismograms');
     %[ibest,nm]
-    rft =rft * NaN;
-    xft = xft * NaN;
+    if discard
+        rft =rft * NaN;
+        xft = xft * NaN;
+    end
     return
   end
 
