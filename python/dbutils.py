@@ -11,7 +11,7 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import json, os, argparse, sys
+import json, os, argparse, sys, time
 from preprocessor import is_number
 from collections import defaultdict
 import shapefile
@@ -20,10 +20,10 @@ import scipy.io as sio
 # CONFIGS
 databasedir = '/media/TerraS/database'
 netdir = '/media/TerraS/CN'
-dbfile = os.environ['HOME']+'/thesis/stations.json'
-shpfile = '/home/bpostlet/thesis/mapping/stations'
-stationlist = '/home/bpostlet/thesis/shellscripts/cnsn_stn.list'
-
+dbfile = os.environ['HOME'] + '/thesis/stations.json'
+shpfile = os.environ['HOME'] + '/thesis/mapping/stations'
+stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
+updtime = os.environ['HOME'] + '/thesis/updtime.data'
 
 def buildStationDBfromList(stnf, dbf):
     ''' Builds station database from a list of stations taken
@@ -39,7 +39,8 @@ def buildStationDBfromList(stnf, dbf):
                              'lat' : float(field[2]),
                              'lon' : float(field[3]),
                              'start': float(field[5]),
-                             'stop': 0 if not is_number( field[6] ) else field[6]
+                             'stop': 0 if not is_number( field[6] ) else field[6],
+                             'status': "not aquired"
                              }
             q[ field[0] ] += 1
 
@@ -81,69 +82,74 @@ def isPoor(s):
     else:
         return False
 
-def fileStats(stationDir):
+
+def fileStats(statdict, modtime, force = False):
     ''' Runs through station directory and collects
-    stats outputting to STDOUT as JSON '''
-    statdict = {}
-    events = os.listdir(stationDir)
-    statdict['numEvents'] = len(events)
-    statdict['poorEvents'] = len( filter(isPoor,events) )
-    statdict['usableEvents'] = len( filter(is_number,events) )
-    statdict['badCompEvents'] = len( filter(missingComps,events) )
-    status = "aquired"
-    if statdict['poorEvents'] > 5:
-        status = "picked"
-    if statdict['badCompEvents'] > 99:
-        status = "data corruption"
-    statdict['status'] = status
+    stats into a dictionary for merging into main database'''
+
+    for station in os.listdir(netdir):
+        if force or (os.stat( os.path.join(netdir,station) ).st_mtime > modtime):
+            events = os.listdir( os.path.join(netdir,station) )
+            if station not in statdict:
+                statdict[station] = {}
+            statdict[station]['numEvents'] = len(events)
+            statdict[station]['poorEvents'] = len( filter(isPoor,events) )
+            statdict[station]['usableEvents'] = len( filter(is_number,events) )
+            statdict[station]['badCompEvents'] = len( filter(missingComps,events) )
     return statdict
 
-def matStats(matfile):
+def matStats(statdict, modtime, force = False):
     ''' Run through matlab generated mat files and pull out pertinent information
     and put into the json station.json database'''
-    mat = sio.loadmat(os.path.join(databasedir,matfile))
-    db = mat['db'][0,0]
-    matdict = {}
-    matdict['processnotes'] = str(db['processnotes'])
-    return matdict
+
+    for matfile in os.listdir(databasedir):
+        if '.mat' in matfile and (force or os.stat(databasedir + '/' + matfile).st_mtime > modtime):
+            mat = sio.loadmat(databasedir + '/' + matfile)
+            station = os.path.splitext(matfile)[0]
+            db = mat['db'][0,0]
+            if station not in statdict:
+                statdict[station] = {}
+            statdict[station]['processnotes'] = ''.join([''.join(c) for c in db['processnotes']])
+            statdict[station]['Vp'] = float(db['vbest'])
+            statdict[station]['R'] = float(db['rbest'])
+            statdict[station]['H'] = float(db['hbest'])
+            statdict[station]['stdVp'] = float(db['stdVp'])
+            statdict[station]['stdR'] = float(db['stdR'])
+            statdict[station]['stdH'] = float(db['stdH'])
+    return statdict
+
+def setStatus(s):
+    '''Sets the status of the station depending on various criteria.
+    Note the default is aquired, since for this function to run the data
+    must have been scanned'''
+    for k in s.keys():
+        status = "aquired"
+        if 'poorEvents' in s[k] and s[k]['poorEvents'] > 5:
+            status = "picked"
+        if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
+            status = "data corruption"
+        if 'Vp' in s[k]:
+            status = "processed"
+        s[k]['status'] = status
+    return s
 
 def updateStats(stdict, args):
-    ''' Walks through all the keys in the main json database
-    and checks if there are stats for that station. If there is
-    it updates the keys and values, otherwise it sets "status"
-    to "not aquired" '''
+    ''' Sets file stats (which event folders are good which are labeled poor etc)
+    as well as .mat file statistics from processing. It then runs the setStatus function
+    to go over these and determine a suitable status. These new info are added to the database
+    dictionary and saved. The updtime file which monitors the last time the database was updated
+    is updated to the new time.'''
 
     # Get list of downloaded stations
-    stns = os.listdir(netdir)
-
-    for station in stdict.keys():
-        if station in stns:
-            # Get stats on downloaded stations and add to dictionary
-            stndir = os.path.join(netdir, station)
-            d = fileStats(stndir)
-            for key in d.keys():
-                stdict[station][key] = d[key]
-            if 'Vp' in stdict[station]:
-                stdict[station]['status'] = "processed"
-
-        else:
-            # If not downloaded set appropriate status
-            stdict[station]['status'] = "not aquired"
-
-    # This feature is not quite working yet.
-    # Need to make this whole function more efficient.
-    # Test for modification times, roll through all stations
-    # once then update all the dictionaries once. Something
-    # like that.
-    if args.mat:
-        for matfile in os.listdir(databasedir):
-            if "mat" in matfile:
-                m = matStats(matfile)
-
-
+    modtime = float( open(updtime, 'r').read() )
+    statdict = {}
+    statdict = fileStats(statdict, modtime, args.force)
+    statdict = matStats(statdict, modtime, args.force)
+    statdict = setStatus(statdict)
+    stdict.update(statdict)
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
-
+    open(updtime,'w').write( str(time.time()) )
 
 def compare(A, B, op):
     return {
@@ -223,8 +229,8 @@ if __name__== '__main__' :
     parser.add_argument('-k','--keys', action = 'store_true',
                         help = 'Prints only the keys (station name) of the database')
 
-    parser.add_argument('-m', '--mat', action = 'store_true',
-                        help = 'Updates matlab processing results into json database')
+    parser.add_argument('-f', '--force', action = 'store_true',
+                        help = 'Forces updating even if files and folders are older than the stations.json file')
 
     # Parse arg list
     args = parser.parse_args()

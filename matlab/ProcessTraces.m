@@ -73,9 +73,10 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
+discardBad = 1;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
-    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
+    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs,discardBad);
     rec(ii,:) = real(ifft(r));
 end
 ind = isnan(rec(:,1));
@@ -110,7 +111,7 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200)));% * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
@@ -118,21 +119,22 @@ end
 thresh = 0.1;
 brec = performCurveletDenoise(brec,dt,thresh);
 %}
-%% Select tps
+
+%% 7) Get tps and IRLS Newtons Method to find regression Tps
 if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 3.2;
-    t2 = 6.2;
+    t1 = 3.3;
+    t2 = 4.8;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
-%% 7) IRLS Newtons Method to find regression Tps
+
 H = 34; % Starting guesses for physical paramaters
-alpha = 6.4;
-beta = 3.6;
-tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
+alpha = 6.6;
+beta = 3.5;
+tol = 1e-3;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
 warning off MATLAB:plot:IgnoreImaginaryXYPart
