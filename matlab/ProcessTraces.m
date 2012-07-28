@@ -73,7 +73,7 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
-discardBad = 1;
+discardBad = 0;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs,discardBad);
@@ -125,13 +125,13 @@ if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 3.3;
-    t2 = 4.8;
+    t1 = 4.0;
+    t2 = 5.3;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
 
-H = 34; % Starting guesses for physical paramaters
+H = 38; % Starting guesses for physical paramaters
 alpha = 6.6;
 beta = 3.5;
 tol = 1e-3;  % Tolerance on interior linear solve is 10x of Newton solution
