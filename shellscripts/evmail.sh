@@ -59,7 +59,7 @@ while read event; do
   tev=`echo $se $mi $hr $jd | awk '{print $1+$2*60+$3*3600+$4*86400}'`
   dist=`grep $event event.list | awk '{print $7}'`
   evdp=`grep $event event.list | awk '{print $5}'`
-  tp=`get_tt -z $evdp -d $dist -p P | grep P | head -1 | awk '{print $3}'`
+  tp=`$HOME/bin/Get_tt/get_tt -z $evdp -d $dist -p P | grep P | head -1 | awk '{print $3}'`
   t1=`echo $tev $tp | awk '{print $1+int($2+0.5) - 120}'` #Note 120 seconds before crude P arrival
 ## Translate back.
   jd1=`echo $t1 | awk '{print int($1/86400)}'`
@@ -72,7 +72,7 @@ while read event; do
 
   echo "START_TIME "$cn$yr"/"$mo1"/"$dy1"."$hr1":"$mi1":"$se1  >> $event"_request"
   #echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
-  echo "DURATION 800" >> $event"_request"
+  echo "DURATION 600" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
