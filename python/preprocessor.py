@@ -107,7 +107,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
             raise SeisDataError('noPOld')
 
     ##### Get P & Pslow #####################
-    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarc),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp, gcarc),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:

@@ -6,7 +6,7 @@ loadtools;
 thresh = 0;
 %% 1) Filter Event Directories
 %
-printinfo = 1; % On and off flag to print out processing results
+printinfo = 0; % On and off flag to print out processing results
 savelist  = 0;
 dlist = filterEventDirs(workingdir,printinfo);
 %% 2)  Convert sac file format, filter bad picks
@@ -30,6 +30,7 @@ pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
+%
 dt = header{1}.DELTA;
 if true
     modratio = zeros(1,size(ptrace,1));
@@ -55,6 +56,7 @@ if true
     ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
     strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
 end
+%}
 %% 5)  Window with Taper and fourier transform signal.
 viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
@@ -71,9 +73,10 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
+discardBad = 0;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
-    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs);
+    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs,discardBad);
     rec(ii,:) = real(ifft(r));
 end
 ind = isnan(rec(:,1));
@@ -108,7 +111,7 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200)));% * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
@@ -116,30 +119,33 @@ end
 thresh = 0.1;
 brec = performCurveletDenoise(brec,dt,thresh);
 %}
-%% Select tps
+
+%% 7) Get tps and IRLS Newtons Method to find regression Tps
 if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 4.5;
-    t2 = 5.2;
+    t1 = 4.0;
+    t2 = 5.3;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
-%% 7) IRLS Newtons Method to find regression Tps
-H = 35; % Starting guesses for physical paramaters
-alpha = 6.5;
+
+H = 38; % Starting guesses for physical paramaters
+alpha = 6.6;
 beta = 3.5;
-tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
+tol = 1e-3;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
+warning off MATLAB:plot:IgnoreImaginaryXYPart
+warning off MATLAB:nearlySingularMatrix
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
 %% 8) Grid and Line Search
-[ results ] = GridSearch( brec(:,1:round(35/dt)), Tps', dt, pslow);
+[ results ] = GridSearch( brec(:,1:round(45/dt)), Tps', dt, pslow);
 %[ results ] = GsearchKanamori(brec,dt,pslow);
 %% 9) Bootstrap Error calculation
 nmax = 1024; % number of bootstrap iterations
-[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap( brec(:,1:round(35/dt)), Tps, dt, pslow, nmax);
+[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap( brec(:,1:round(45/dt)), Tps, dt, pslow, nmax);
 %% Close parallel system
 %matlabpool close
 %% Viewers
