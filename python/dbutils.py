@@ -203,6 +203,26 @@ def filterStats(qdict, args):
         print json.dumps(qdict, sort_keys = True, indent = 4)
 
 
+def modifyData(stdict, args):
+    ''' modifies database using <station> <attribute> <value>
+    or if <station> <remove> then removes selected station'''
+    # Note, only remove functionality coded.
+    if args.modify[0] == "ALL":
+        stations = args.pipedData
+    else:
+        stations = [ args.modify[0], ]
+
+    for station in stations:
+        if args.modify[1] == "remove":
+            del stdict[station]
+        else:
+            attr = args.modify[1]
+            value = args.modify[2]
+            stdict[station][attr] = value
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+
+
+
 
 if __name__== '__main__' :
 
@@ -224,6 +244,10 @@ if __name__== '__main__' :
     group.add_argument('-p','--printer', action = 'store_true',
                        help = "prints out all stations or stations piped in." +
                        "Use with -a flag to print only certain attributes")
+
+    group.add_argument('-m','--modify', nargs = '+',
+                       help = "Either <station> <attribute> <value> or <station> <remove>." +
+                       "If <station> is set to ALL then it works on all stations piped in" )
 
     parser.add_argument('-a','--attribute', nargs = '+',
                         help = 'Only the given attributes will be printed out')
@@ -252,3 +276,6 @@ if __name__== '__main__' :
 
     if args.printer:
         printStats(stdict, args)
+
+    if args.modify:
+        modifyData(stdict, args)
