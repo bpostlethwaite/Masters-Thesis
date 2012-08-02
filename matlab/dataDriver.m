@@ -15,8 +15,8 @@ databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
-%%  Select Station to Process and load station data.
-station = 'SADO';
+%%  Select Station to Process and load station data
+station = 'CLRN';
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
 loadflag = 0;
@@ -27,11 +27,10 @@ end
 %% Run ToolChain
 ProcessTraces
 %% Assign Data
-% For a description of data see DataDescription.m
-dbn.station = station;    
-dbn.processnotes = [];
-dbn.scanstatus = true; 
-dbn.failmessage = 'None'; 
+dbn.station = station;
+dbn.processnotes = '';
+dbn.scanstatus = true;
+dbn.failmessage = 'None';
 dbn.method = results.method;
 dbn.rbest = results.rbest;
 dbn.vbest = results.vbest;
@@ -48,48 +47,37 @@ dbn.bootR = bootR;
 dbn.bootH = bootH;
 dbn.bootVpRx = bootVpRx;
 dbn.bootHx = bootHx;
-dbn.stdVp = 2*std(bootVp);
-dbn.stdR = 2*std(bootR);
-dbn.stdH = 2*std(bootH);
+dbn.stdVp = std(bootVp);
+dbn.stdR = std(bootR);
+dbn.stdH = std(bootH);
 dbn.tps = results.tps;
 dbn.tpps = results.tpps;
 dbn.tpss = results.tpss;
 dbn.rec = brec(:,1:round(35/dt));
 dbn.pslow = pslow;
 dbn.Tps = Tps;
-dbn.dt = dt;   
-dbn.npb = npb;   
-dbn.filterLow = fLow; 
-dbn.filterHigh = fHigh; 
+dbn.dt = dt;
+dbn.npb = npb;
+dbn.filterLow = fLow;
+dbn.filterHigh = fHigh;
 dbn.thresh = thresh;
-dbn.t1 = t1;        
-dbn.t2 = t2;        
+dbn.t1 = t1;
+dbn.t2 = t2;
 %% Plot the results if we completed the processing
 close all
 plotStack(dbn);
 fprintf('Vp is %f +/- %1.3f km/s\n',dbn.vbest, dbn.stdVp )
-fprintf('R is %f +/- %1.3f \n',dbn.rbest, dbn.stdR )    
-fprintf('H is %f +/- %1.3f \n',dbn.hbest, dbn.stdH )     
+fprintf('R is %f +/- %1.3f \n',dbn.rbest, dbn.stdR )
+fprintf('H is %f +/- %1.3f \n',dbn.hbest, dbn.stdH )
 %% Enter Processing Notes:
 notes = input('Enter Processing Notes: ', 's');
-dbn.processnotes = notes; 
+dbn.processnotes = notes;
 %% Save entry
-saveit = input('Save data to .mat file and results to stations.json? (y|n): ','s');
+saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)
     case 'y'
-        db = dbn;
+        db = dbn; %#ok<NASGU>
         save(dbfile,'db') % Save .mat file with bulk data
-        % Update stations.json
-        opt.FileName = [homedir,'/thesis/stations.json'];
-        opt.ForceRootName = 0;
-        sts = loadjson(opt.FileName);
-        sts.(station).Vp = db.vbest;
-        sts.(station).R = db.rbest;
-        sts.(station).H = db.hbest;
-        sts.(station).stdVp = db.stdVp;
-        sts.(station).stdR = db.stdR;
-        sts.(station).stdH = db.stdH;
-        savejson('', sts, opt);
         fprintf('Saved data\n')
     otherwise
         fprintf('Warning: data not saved\n')
