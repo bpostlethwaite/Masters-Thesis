@@ -3213,18 +3213,6 @@
         "stop": 0, 
         "usableEvents": 69
     }, 
-    "YUK4": {
-        "badCompEvents": 0, 
-        "lat": 61.4348, 
-        "lon": -138.5463, 
-        "network": "CNSN", 
-        "numEvents": 16, 
-        "poorEvents": 7, 
-        "start": 20100829.19, 
-        "status": "picked", 
-        "stop": 0, 
-        "usableEvents": 2
-    }, 
     "YUK5": {
         "H": 34.2964824120603, 
         "R": 1.864070351758794, 
