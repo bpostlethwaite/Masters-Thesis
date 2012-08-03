@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-143.065194</xmin>
-            <ymin>32.268872</ymin>
-            <xmax>-50.473506</xmax>
-            <ymax>89.534882</ymax>
+            <xmin>-143.108181</xmin>
+            <ymin>34.058435</ymin>
+            <xmax>-49.888227</xmax>
+            <ymax>91.324445</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,9 +29,9 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20120713211208779" visible="1"/>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="1">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stations20120802183107114" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="1">
@@ -39,14 +39,14 @@
                 <legendlayerfile isInOverview="0" layerid="stationGeology20120713182405240" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="politicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="politicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="geologicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
@@ -56,74 +56,16 @@
         </legendlayer>
     </legend>
     <Composer title="Composer 4" visible="1">
-        <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,18,-1,5,75,1,0,0,0,0" groupFont="Ubuntu,16,-1,5,75,1,0,0,0,0" layerFont="Ubuntu,14,-1,5,75,1,0,0,0,0" groupSpace="1" symbolSpace="2" symbolHeight="4" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,14,-1,5,75,1,0,0,0,0">
-            <Model autoUpdate="1">
-                <LayerItem layerId="stations20120713211208779" text="stations">
-                    <VectorClassificationItemNg text="aquired">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="255,255,0,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="triangle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="data corruption">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="255,0,0,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="triangle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="not aquired">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="0,0,0,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="triangle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="picked">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="0,170,0,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="triangle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-            </Model>
-            <ComposerItem width="48" x="18.957" y="17.3086" rotation="0" height="49.5" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="2.42654" id="" positionLock="false">
+        <ComposerLabel valign="32" labelText="Station Data Progress" halign="4" margin="0">
+            <LabelFont description="Ubuntu,26,-1,5,75,1,0,0,0,0"/>
+            <FontColor red="59" blue="59" green="59"/>
+            <ComposerItem width="98.082" x="160.311" y="7.00586" rotation="0" height="14.4238" frame="true" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.42654" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
-        </ComposerLegend>
+        </ComposerLabel>
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="23.3847" xmin="-143.065" ymax="89.5349" xmax="-50.4735"/>
+            <Extent ymin="23.3847" xmin="-143.065" ymax="89.5348" xmax="-50.4735"/>
             <LayerSet/>
             <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
                 <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
@@ -133,14 +75,30 @@
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
         </ComposerMap>
-        <ComposerLabel valign="32" labelText="Station Data Progress" halign="4" margin="0">
-            <LabelFont description="Ubuntu,26,-1,5,75,1,0,0,0,0"/>
-            <FontColor red="59" blue="59" green="59"/>
-            <ComposerItem width="98.082" x="160.311" y="7.00586" rotation="0" height="14.4238" frame="true" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.42654" id="" positionLock="false">
+        <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,18,-1,5,75,1,0,0,0,0" map="0" groupFont="Ubuntu,16,-1,5,75,1,0,0,0,0" layerFont="Ubuntu,14,-1,5,75,1,0,0,0,0" groupSpace="1" symbolSpace="2" symbolHeight="4" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,14,-1,5,75,1,0,0,0,0">
+            <Model autoUpdate="1">
+                <LayerItem layerId="stations20120802183107114" text="stations">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="155,197,115,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+            </Model>
+            <ComposerItem width="4" x="18.957" y="17.3086" rotation="0" height="11.5" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="2.42654" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
-        </ComposerLabel>
+        </ComposerLegend>
         <Composition printResolution="300" paperWidth="420" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="1" snapping="0" paperHeight="297" printAsRaster="0"/>
     </Composer>
     <projectlayers layercount="6">
@@ -2645,7 +2603,7 @@
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stations20120713211208779</id>
+            <id>stations20120802183107114</id>
             <datasource>./stations.shp</datasource>
             <title></title>
             <abstract></abstract>
@@ -2670,15 +2628,15 @@
                     <category symbol="0" value="aquired" label="aquired"/>
                     <category symbol="1" value="data corruption" label="data corruption"/>
                     <category symbol="2" value="not aquired" label="not aquired"/>
-                    <category symbol="3" value="picked" label="picked"/>
+                    <category symbol="3" value="processed" label="processed"/>
                 </categories>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="255,255,0,255"/>
+                            <prop k="color" v="0,85,255,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2688,7 +2646,7 @@
                             <prop k="angle" v="0"/>
                             <prop k="color" v="255,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2698,7 +2656,7 @@
                             <prop k="angle" v="0"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2706,9 +2664,9 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="3">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="0,170,0,255"/>
+                            <prop k="color" v="0,255,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2718,7 +2676,7 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="211,252,107,255"/>
+                            <prop k="color" v="64,151,67,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
@@ -2740,30 +2698,37 @@
             </renderer-v2>
             <customproperties/>
             <displayfield>network</displayfield>
-            <label>0</label>
+            <label>1</label>
+            <labelfield>Vp</labelfield>
             <labelattributes>
-                <label fieldname="" text="Label"/>
+                <label fieldname="Vp" text="Label"/>
                 <family fieldname="" name="Ubuntu"/>
-                <size fieldname="" units="pt" value="12"/>
+                <size fieldname="" units="pt" value="14"/>
                 <bold fieldname="" on="0"/>
                 <italic fieldname="" on="0"/>
                 <underline fieldname="" on="0"/>
                 <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
+                <color fieldname="" red="85" blue="255" green="255"/>
                 <x fieldname=""/>
                 <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <offset x="0" y="12" units="pt" yfieldname="" xfieldname=""/>
                 <angle fieldname="" value="0" auto="0"/>
                 <alignment fieldname="" value="center"/>
                 <buffercolor fieldname="" red="255" blue="255" green="255"/>
                 <buffersize fieldname="" units="pt" value="1"/>
                 <bufferenabled fieldname="" on=""/>
                 <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
+                <selectedonly on="1"/>
             </labelattributes>
             <edittypes>
+                <edittype type="0" name="H"/>
+                <edittype type="0" name="R"/>
+                <edittype type="0" name="Vp"/>
                 <edittype type="0" name="network"/>
                 <edittype type="0" name="status"/>
+                <edittype type="0" name="stdH"/>
+                <edittype type="0" name="stdR"/>
+                <edittype type="0" name="stdVp"/>
             </edittypes>
             <editform></editform>
             <editforminit></editforminit>

@@ -54,21 +54,35 @@ def buildStationDBfromList(stnf, dbf):
 
     f.write(jstr)
 
-def json2shapefile(dbf, shpf):
-    ''' Converts the station data into a shapefile for usage with
+def json2shapefile(stdict):
+    ''' Converts the stations.json data into a shapefile for usage with
     GIS programs such as QGIS'''
-    stdict = json.loads( open(dbf).read() )
     w = shapefile.Writer( shapeType = 1 )
     # Set fields for attribute table
-    w.field('network', 'C', '10')
-    w.field('status', 'C', '16')
+
+    fields = ["Vp","R","H","stdVp","stdR","stdH"]
+    w.field("network", 'C', '10')
+    w.field("status", 'C', '16')
+    #w.field("Vp", "C", "5")
+    for field in fields:
+        w.field(field, 'C', '5')
+
     for key in stdict.keys():
         # Set lon & lat
         w.point( stdict[key]["lon"], stdict[key]["lat"] )
+        values = []
+        for f in fields:
+            values.append( '{0:5.2f}'.format(stdict[key][f]) if f in stdict[key] else "None ")
         w.record( stdict[key]["network"],
-                  stdict[key]["status"] )
+                  stdict[key]["status"],
+                  values[0],
+                  values[1],
+                  values[2],
+                  values[3],
+                  values[4],
+                  values[5] )
 
-    w.save(shpf)
+    w.save(shpfile)
 
 def missingComps(s):
     if "MissingComponents" in s:
@@ -249,6 +263,9 @@ if __name__== '__main__' :
                        help = "Either <station> <attribute> <value> or <station> <remove>." +
                        "If <station> is set to ALL then it works on all stations piped in" )
 
+    group.add_argument('-s',"--shape", action = "store_true",
+                       help = "creates shapefile from stations.json")
+
     parser.add_argument('-a','--attribute', nargs = '+',
                         help = 'Only the given attributes will be printed out')
 
@@ -279,3 +296,6 @@ if __name__== '__main__' :
 
     if args.modify:
         modifyData(stdict, args)
+
+    if args.shape:
+        json2shapefile(stdict)
