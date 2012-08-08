@@ -11,7 +11,7 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import json, os, argparse, sys, time
+import json, os, argparse, sys, time, re
 from preprocessor import is_number
 from collections import defaultdict
 import shapefile
@@ -281,9 +281,10 @@ if __name__== '__main__' :
     # Append piped data if there is any
     # If we pipe a bunch of stations to program, query only these stations
     if not sys.stdin.isatty():
-        args.pipedData = sys.stdin.read().split('\n')
+        # trick to seperate a newline or space seperated list
+        args.pipedData =  re.findall(r'\w+', sys.stdin.read() )
     else:
-        args.pipedData = None
+        args.pipedData = False
 
     if args.update:
         updateStats(stdict, args)

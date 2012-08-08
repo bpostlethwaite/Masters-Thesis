@@ -232,30 +232,6 @@
         "status": "not aquired", 
         "stop": "20060912.2359"
     }, 
-    "B1NU": {
-        "badCompEvents": 0, 
-        "lat": 68.4619, 
-        "lon": -71.588, 
-        "network": "CHASME", 
-        "numEvents": 76, 
-        "poorEvents": 0, 
-        "start": 20000723.23, 
-        "status": "aquired", 
-        "stop": "20020816.0000", 
-        "usableEvents": 76
-    }, 
-    "B2NU": {
-        "badCompEvents": 0, 
-        "lat": 68.9216, 
-        "lon": -73.1966, 
-        "network": "CHASME", 
-        "numEvents": 16, 
-        "poorEvents": 0, 
-        "start": 20000724.15, 
-        "status": "aquired", 
-        "stop": "20001223.0000", 
-        "usableEvents": 16
-    }, 
     "BANO": {
         "lat": 45.01982, 
         "lon": -77.92802, 
@@ -393,11 +369,11 @@
         "lon": -93.12524, 
         "network": "POLARIS", 
         "numEvents": 378, 
-        "poorEvents": 0, 
+        "poorEvents": 163, 
         "start": 20060817.02, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 369
+        "usableEvents": 206
     }, 
     "BVCY": {
         "H": 30.276381909547737, 
