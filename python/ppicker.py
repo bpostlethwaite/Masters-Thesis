@@ -83,11 +83,12 @@ def ppicker(eventdir,pname,sname,repick = False):
     except IndexError:
         print "Not all picks made in", eventdir
         print "Please retry the picks"
-        continue
+        return 'r'
 
     plt.close()
 
     print "Keep trace? 'n' for no, 'r' for redo, 'p' for previous, 's' for skip and any other for yes: "
+
     inp = get()
 
     if inp not in ['n','r','p','s']:
@@ -109,31 +110,36 @@ def isEitherPoorOrNumber(s):
 
 if __name__== '__main__' :
 
-    count = 1
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
     # Create top-level parser
-    parser = argparse.ArgumentParser(description = "Pick seismograms with a few options for file control")
+    parser = argparse.ArgumentParser(description = "Pick seismograms with a few options for file control. ")
+
+    parser.add_argument('stndir', nargs = 1, help = "Include full path to station folder to be picked")
+
     parser.add_argument('-a', '--all', action = 'store_true',
                         help = "selects numeric event folders as well as those marked poorData")
 
     parser.add_argument('-u','--unpicked', action = 'store_true',
-                        help = "select only those events with SAC times identified as picked")
+                        help = "select only those events with SAC times identified as unpicked")
 
     parser.add_argument('-p', '--poor', action = 'store_true',
                         help = 'Picks only folders renamed with the poorData suffix')
 
-    parser.add_argument('-r','--reset', action = 'store_true'
+    parser.add_argument('-r','--reset', action = 'store_true',
                         help = "unpicks all folders by renaming them back to numeric event folder names")
+
     args = parser.parse_args()
 
+    # Suck out command line argument for station directory and return list of event folders
+    stdir = args.stndir[0]
     events = os.listdir(stdir)
 
     if args.reset:
          for event in events:
             if "poorData" in event:
                 renameEvent( os.path.join(stdir,event), [], True)
-        exit()
+         exit()
 
     if args.all:
         events = filter(isEitherPoororNumber, events)
@@ -147,9 +153,9 @@ if __name__== '__main__' :
     index = 0
     while index < len(events):
         event = events[index]
-        print "{}/{} Pick P-coda limits".format(count, len(events) )
+        print "{}/{} Pick P-coda limits".format(index, len(events) )
         comps = []
-        eventdir = os.path.join(stdir,event)
+        eventdir = os.path.join(stdir, event)
         files = os.listdir(eventdir)
         for fs in files:
             m = reg2.match(fs)
@@ -158,7 +164,7 @@ if __name__== '__main__' :
 
     ###########################################################################
     # Check if three components have been found
-    # If yes, sopt alphebetically and call processor function
+    # If yes, sort alphebetically and call picker function
     ###########################################################################
         if (len(comps) != 2):
              print "Did not register 2 components in directory:", eventdir
@@ -168,17 +174,21 @@ if __name__== '__main__' :
         comps.sort()
         _ , sacfiles = zip(*comps)
 
-        try:
-            count += 1
-            cmd = ppicker(eventdir,sacfiles[0],sacfiles[1], args.repick)
+        cmd = ppicker(eventdir,sacfiles[0],sacfiles[1], args.unpicked)
+
+    ###########################################################################
+    # This is the control switch board. If function returns n, rename folder.
+    # If it return a p, go to previous index. If it is an r, redo. Else move
+    # forward
+    ###########################################################################
         if cmd == 'n':
-            renameEvent(eventdir,"poorData")
-            continue
+            events[index] = os.path.basename( renameEvent(eventdir,"poorData") )
+            index += 1
         elif cmd == 'p':
             index -= 1
             continue
         elif cmd == 'r':
             continue
         else:
-            index += 1:
+            index += 1
             continue

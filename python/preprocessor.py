@@ -36,15 +36,17 @@ class SeisDataError(Exception):
 ###########################################################################
 def renameEvent(eventdir,error, reverse = False):
     if not reverse:
-        shutil.move(eventdir,eventdir + "_" + error)
+        newname = eventdir + "_" + error
+        shutil.move(eventdir, newname)
     elif reverse:
         head, tail = os.path.split(eventdir)
         try:
             float(tail[:10])
-            shutil.move( eventdir, os.path.join(head,tail[:10]) )
+            newname = os.path.join(head,tail[:10])
+            shutil.move( eventdir, newname )
         except ValueError:
             print "Error returning", tail, "into directory", tail[:10]
-
+    return newname
 
 def is_number(s):
     try:

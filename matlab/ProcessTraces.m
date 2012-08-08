@@ -125,8 +125,8 @@ if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 4.0;
-    t2 = 5.3;
+    t1 = 4.4;
+    t2 = 5.0;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;
