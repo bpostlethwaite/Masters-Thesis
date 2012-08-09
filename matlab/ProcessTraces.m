@@ -7,7 +7,6 @@ thresh = 0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
-savelist  = 0;
 dlist = filterEventDirs(workingdir,printinfo);
 %% 2)  Convert sac file format, filter bad picks
 %
@@ -20,18 +19,20 @@ fclose('all'); % Close all open files from reading
 if loadflag
     npb = db.npb;
 else
-    npb = 2; % Average number of traces per bin
+    npb = 1; % Average number of traces per bin
 end
 numbin = round((1/npb)*size(ptrace,1));
 pbinLimits = linspace(.035,.08,numbin);
 checkind = 1;
-[pIndex,pbin] = pbinIndexer(pbinLimits,pslows,checkind);
+[pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
 pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
-%
 dt = header{1}.DELTA;
+ptrace = diag(1./max(ptrace,[],2)) * ptrace;
+strace = diag(1./max(strace,[],2)) * strace;
+%{
 if true
     modratio = zeros(1,size(ptrace,1));
     
@@ -57,6 +58,7 @@ if true
     strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
 end
 %}
+
 %% 5)  Window with Taper and fourier transform signal.
 viewtaper  = 0;
 adj = 0.1; % This adjusts the Tukey window used.
@@ -73,15 +75,21 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
-discardBad = 0;
+discardBad = 1;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
-    [r,~,~] = simdecf(wft(pIndex(:,ii),:),vft(pIndex(:,ii),:),-1,viewFncs,discardBad);
+    [r,~,~] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1, viewFncs, discardBad);
     rec(ii,:) = real(ifft(r));
 end
-ind = isnan(rec(:,1));
-rec( ind  , : ) = [];
-pslow( ind ) = [];
+
+% if discardBad flag set simdecf will return Nan arrays where it did not
+% find a minimum, the following strips NaNs out and strips out appropriate
+% Pslow indices.
+if discardBad
+    ind = isnan(rec(:,1));
+    rec( ind  , : ) = [];
+    pslow( ind ) = [];
+end
 %% 6) Filter Impulse Response
 if loadflag
     fLow = db.filterLow;
@@ -95,15 +103,16 @@ brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 %brec = rec;
 %% Run a few L1 iterations
 %{
-%userdir = getenv('HOME');
-%f = fullfile(userdir, 'programming','matlab'); %Set base path
-%addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) %Path to rice toolbox
-%addpath(genpath([f,'/spgl1'])) %Path to L1 solver
-%addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
-%
-%parfor ii = 1:nbins
-%    lrec(ii,:) = L1crank(ptrace(pIndex(:,ii),:), strace(pIndex(:,ii),:),rec(ii,:), 10);
-%end
+userdir = getenv('HOME');
+f = fullfile(userdir, 'programming','matlab'); %Set base path
+addpath(genpath([f,'/spotbox-v1.0/'])) %Path to spot toolbox
+addpath(genpath([f,'/spotbox-v1.0/+spot/+rwt'])) 
+addpath(genpath([f,'/spgl1'])) %Path to L1 solver
+addpath(genpath([f,'/spotbox-v1.0/Splines'])) %Path to rice toolbox
+
+parfor ii = 1:nbins
+    lrec(ii,:) = L1crank(ptrace(pIndex(:,ii),:), strace(pIndex(:,ii),:),rec(ii,:), 10);
+end
 %}
 %% Rescale by slowness
 % Scale by increasing p value
@@ -111,7 +120,7 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))); % * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
@@ -125,8 +134,8 @@ if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 4.4;
-    t2 = 5.0;
+    t1 = 4.3;
+    t2 = 5.1;
 end
 [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
 tps = (it + round(t1/dt)-1)*dt;

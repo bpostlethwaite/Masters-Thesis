@@ -54,7 +54,7 @@ def ppicker(eventdir,pname,sname,repick = False):
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
             return
 
-    left = round(t0 - 20/dt)
+    left = round(t0 - 25/dt)
     right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
     nn = np.arange(0,N)
@@ -153,7 +153,7 @@ if __name__== '__main__' :
     index = 0
     while index < len(events):
         event = events[index]
-        print "{}/{} Pick P-coda limits".format(index, len(events) )
+        print "{}/{} Pick P-coda limits".format(index + 1, len(events) )
         comps = []
         eventdir = os.path.join(stdir, event)
         files = os.listdir(eventdir)
