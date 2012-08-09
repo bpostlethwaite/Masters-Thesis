@@ -1224,16 +1224,16 @@
         "stop": "20090703.2350"
     }, 
     "ILON": {
-        "badCompEvents": 0, 
+        "badCompEvents": 1, 
         "lat": 69.3712, 
         "lon": -81.824217, 
         "network": "POLARIS", 
         "numEvents": 493, 
-        "poorEvents": 0, 
+        "poorEvents": 204, 
         "start": 20050824.13, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 493
+        "usableEvents": 270
     }, 
     "INK": {
         "H": 27.386934673366834, 
@@ -1272,18 +1272,6 @@
         "stdVp": 0.39003228171076293, 
         "stop": 0, 
         "usableEvents": 177
-    }, 
-    "IVKQ": {
-        "badCompEvents": 0, 
-        "lat": 62.41835, 
-        "lon": -77.91132, 
-        "network": "POLARIS", 
-        "numEvents": 428, 
-        "poorEvents": 0, 
-        "start": 20060916.22, 
-        "status": "aquired", 
-        "stop": 0, 
-        "usableEvents": 428
     }, 
     "JERN": {
         "lat": 66.0194, 
@@ -2101,18 +2089,6 @@
         "status": "not aquired", 
         "stop": "20050728.0138"
     }, 
-    "PINU": {
-        "badCompEvents": 0, 
-        "lat": 72.6971, 
-        "lon": -77.9748, 
-        "network": "CHASME", 
-        "numEvents": 288, 
-        "poorEvents": 0, 
-        "start": 20000906.22, 
-        "status": "aquired", 
-        "stop": "20071201.2031", 
-        "usableEvents": 288
-    }, 
     "PKLO": {
         "H": 41.45728643216081, 
         "R": 1.7419597989949749, 
@@ -2602,16 +2578,16 @@
         "stop": 0
     }, 
     "STLN": {
-        "badCompEvents": 0, 
+        "badCompEvents": 1, 
         "lat": 67.31162, 
         "lon": -92.98495, 
         "network": "POLARIS", 
         "numEvents": 222, 
-        "poorEvents": 0, 
+        "poorEvents": 87, 
         "start": 20060818.01, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 222
+        "usableEvents": 130
     }, 
     "SULB": {
         "lat": 53.27857, 
@@ -2984,7 +2960,7 @@
         "stop": "20060929.2359"
     }, 
     "YBKN": {
-        "badCompEvents": 0, 
+        "badCompEvents": 5, 
         "lat": 64.3185, 
         "lon": -96.0026, 
         "network": "POLARIS", 
@@ -2993,7 +2969,7 @@
         "start": 20060827.21, 
         "status": "aquired", 
         "stop": 0, 
-        "usableEvents": 367
+        "usableEvents": 355
     }, 
     "YKW1": {
         "lat": 62.49322, 
