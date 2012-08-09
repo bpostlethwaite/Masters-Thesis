@@ -168,6 +168,7 @@ if __name__== '__main__' :
     ###########################################################################
         if (len(comps) != 2):
              print "Did not register 2 components in directory:", eventdir
+             index += 1
              continue
          # Sort in decending alphabetical, so 'E' is [0] 'N' is [1] and 'Z' is [2]
          # Pull outn sacfiles from zipped sorted list.
@@ -190,5 +191,8 @@ if __name__== '__main__' :
         elif cmd == 'r':
             continue
         else:
+            # If yes, check if dir previously renamed as poorData, if so rename to healthy event dir
+            if "poorData" in eventdir:
+                renameEvent( eventdir, [], True)
             index += 1
             continue
