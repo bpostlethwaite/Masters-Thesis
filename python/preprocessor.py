@@ -253,6 +253,8 @@ def freetran(rcomp, zcomp, pslow, alpha, beta):
 
     return dum[0,], dum[1,]
 
+
+
 if __name__== '__main__' :
 
 ###########################################################################
@@ -269,8 +271,6 @@ if __name__== '__main__' :
 #  SET regex matches
 ###########################################################################
     reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
-    reg2 = re.compile(r'^stack_(\w)\.sac')
-
 ###########################################################################
 # Build a dictionary from file event.list from Request system
 # fields[0] -> event name     fields[2] -> lat
@@ -285,19 +285,11 @@ if __name__== '__main__' :
 
             fields = line.split()
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
-
 ###########################################################################
 # Walk through all stations piped into the program
 ###########################################################################
-    stations = sys.stdin.read()
-    # Determine if stations being piped in are a newline list or a space delimited list
-    # and take the proper action
-    for num, line in enumerate(stations):
-        pass
-    if num > 0:
-        stations = stations.split()
-    else:
-        stations = stations.split('\n')
+    # Seperate stations being piped in
+    stations =  re.findall(r'\w+', sys.stdin.read() )
 
     for station in stations:
         try:
@@ -306,7 +298,6 @@ if __name__== '__main__' :
         except OSError as e:
             print e
             continue
-
 ###########################################################################
 # Walk through all events found in station folder
 ###########################################################################
@@ -323,7 +314,6 @@ if __name__== '__main__' :
                 m1 = reg1.match(fs)
                 if m1:
                     comps.append((m1.group(4),fs)) # Save the component extension, see Regex above.
-
 ###########################################################################
 # Check if three components have been found
 # If yes, sort alphebetically and call processor function

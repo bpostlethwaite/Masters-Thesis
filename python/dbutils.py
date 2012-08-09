@@ -221,18 +221,19 @@ def modifyData(stdict, args):
     ''' modifies database using <station> <attribute> <value>
     or if <station> <remove> then removes selected station'''
     # Note, only remove functionality coded.
-    if args.modify[0] == "ALL":
+    if args.pipedData:
         stations = args.pipedData
     else:
-        stations = [ args.modify[0], ]
-
+        # Pop off station argument of arg list
+        stations =  [ args.modify.pop(0) ]
     for station in stations:
-        if args.modify[1] == "remove":
+        if args.modify[0] == "remove":
             del stdict[station]
         else:
-            attr = args.modify[1]
-            value = args.modify[2]
+            attr = args.modify[0]
+            value = args.modify[10]
             stdict[station][attr] = value
+
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
 
 
@@ -261,7 +262,7 @@ if __name__== '__main__' :
 
     group.add_argument('-m','--modify', nargs = '+',
                        help = "Either <station> <attribute> <value> or <station> <remove>." +
-                       "If <station> is set to ALL then it works on all stations piped in" )
+                       "If you pipe data into program then it operates on all stations piped in and you leave <station> out." )
 
     group.add_argument('-s',"--shape", action = "store_true",
                        help = "creates shapefile from stations.json")
@@ -281,7 +282,7 @@ if __name__== '__main__' :
     # Append piped data if there is any
     # If we pipe a bunch of stations to program, query only these stations
     if not sys.stdin.isatty():
-        # trick to seperate a newline or space seperated list
+        # trick to seperate a newline or space seperated list. Always returns list.
         args.pipedData =  re.findall(r'\w+', sys.stdin.read() )
     else:
         args.pipedData = False

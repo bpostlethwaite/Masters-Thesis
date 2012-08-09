@@ -538,11 +538,11 @@
         "lon": -64.44806, 
         "network": "POLARIS", 
         "numEvents": 130, 
-        "poorEvents": 0, 
+        "poorEvents": 40, 
         "start": 20090817.12, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 116
+        "usableEvents": 76
     }, 
     "CODG": {
         "lat": 47.84056, 
@@ -1001,18 +1001,6 @@
         "status": "not aquired", 
         "stop": "20110708.1600"
     }, 
-    "GFNU": {
-        "badCompEvents": 0, 
-        "lat": 76.418, 
-        "lon": -82.8998, 
-        "network": "CHASME", 
-        "numEvents": 20, 
-        "poorEvents": 0, 
-        "start": 20000901.21, 
-        "status": "aquired", 
-        "stop": "20010628.1317", 
-        "usableEvents": 20
-    }, 
     "GGN": {
         "H": 45.60301507537689, 
         "R": 1.693718592964824, 
@@ -1046,11 +1034,11 @@
         "lon": -81.638, 
         "network": "POLARIS", 
         "numEvents": 376, 
-        "poorEvents": 0, 
+        "poorEvents": 170, 
         "start": 20050819.22, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20110730.1800", 
-        "usableEvents": 364
+        "usableEvents": 194
     }, 
     "GLBC": {
         "lat": 48.39599, 
@@ -1219,18 +1207,6 @@
         "stop": "20011112.1823", 
         "usableEvents": 162
     }, 
-    "IGLN": {
-        "badCompEvents": 0, 
-        "lat": 69.369, 
-        "lon": -81.8175, 
-        "network": "POLARIS", 
-        "numEvents": 24, 
-        "poorEvents": 0, 
-        "start": 20040902.21, 
-        "status": "aquired", 
-        "stop": "20050822.2016", 
-        "usableEvents": 19
-    }, 
     "IHLN": {
         "lat": 63.3052, 
         "lon": -110.89112, 
@@ -1323,11 +1299,11 @@
         "lon": -91.54197, 
         "network": "POLARIS", 
         "numEvents": 163, 
-        "poorEvents": 0, 
+        "poorEvents": 62, 
         "start": 20060825.11, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20100802.2000", 
-        "usableEvents": 150
+        "usableEvents": 88
     }, 
     "JRBB": {
         "lat": 48.43002, 
@@ -1486,18 +1462,6 @@
         "stop": 0, 
         "usableEvents": 30
     }, 
-    "KRSQ": {
-        "badCompEvents": 0, 
-        "lat": 60.02204, 
-        "lon": -69.99115, 
-        "network": "POLARIS", 
-        "numEvents": 30, 
-        "poorEvents": 0, 
-        "start": 20110807, 
-        "status": "aquired", 
-        "stop": 0, 
-        "usableEvents": 29
-    }, 
     "KSVO": {
         "lat": 44.5524, 
         "lon": -73.6861, 
@@ -1512,11 +1476,11 @@
         "lon": -90.0616, 
         "network": "POLARIS", 
         "numEvents": 196, 
-        "poorEvents": 0, 
+        "poorEvents": 59, 
         "start": 20070818.23, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 191
+        "usableEvents": 132
     }, 
     "KUKN": {
         "lat": 67.82264, 
@@ -1532,11 +1496,11 @@
         "lon": -83.53605, 
         "network": "POLARIS", 
         "numEvents": 172, 
-        "poorEvents": 0, 
+        "poorEvents": 75, 
         "start": 20050818.18, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 169
+        "usableEvents": 94
     }, 
     "LATQ": {
         "lat": 47.38355, 
@@ -1745,11 +1709,11 @@
         "lon": -92.29769, 
         "network": "POLARIS", 
         "numEvents": 194, 
-        "poorEvents": 0, 
+        "poorEvents": 86, 
         "start": 20100804, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 193
+        "usableEvents": 107
     }, 
     "MEDA": {
         "lat": 49.98148, 
@@ -1856,11 +1820,11 @@
         "lon": -79.37953, 
         "network": "POLARIS", 
         "numEvents": 48, 
-        "poorEvents": 0, 
+        "poorEvents": 18, 
         "start": 20110801.1, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 46
+        "usableEvents": 28
     }, 
     "MSNO": {
         "lat": 51.2913, 
@@ -2284,11 +2248,11 @@
         "lon": -86.3709, 
         "network": "POLARIS", 
         "numEvents": 317, 
-        "poorEvents": 0, 
+        "poorEvents": 158, 
         "start": 20040904.22, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20100730.0500", 
-        "usableEvents": 307
+        "usableEvents": 149
     }, 
     "QURY": {
         "lat": 53.3763, 
@@ -2408,18 +2372,6 @@
         "stop": "19940720.1830", 
         "usableEvents": 163
     }, 
-    "SBNU": {
-        "badCompEvents": 0, 
-        "lat": 69.5405, 
-        "lon": -93.5571, 
-        "network": "CHASME", 
-        "numEvents": 40, 
-        "poorEvents": 0, 
-        "start": 20000923.22, 
-        "status": "aquired", 
-        "stop": "20020725.2028", 
-        "usableEvents": 38
-    }, 
     "SCH": {
         "lat": 54.8183, 
         "lon": -66.7833, 
@@ -2453,11 +2405,11 @@
         "lon": -91.20811, 
         "network": "POLARIS", 
         "numEvents": 301, 
-        "poorEvents": 0, 
+        "poorEvents": 145, 
         "start": 20060824.16, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 288
+        "usableEvents": 143
     }, 
     "SHB": {
         "lat": 49.593, 
@@ -2543,11 +2495,11 @@
         "lon": -91.93642, 
         "network": "POLARIS", 
         "numEvents": 98, 
-        "poorEvents": 0, 
+        "poorEvents": 33, 
         "start": 20100730.19, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 96
+        "usableEvents": 63
     }, 
     "SMPN": {
         "lat": 68.21066, 
@@ -2619,11 +2571,11 @@
         "lon": -83.323833, 
         "network": "POLARIS", 
         "numEvents": 193, 
-        "poorEvents": 0, 
+        "poorEvents": 103, 
         "start": 20050821.21, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20090714.2359", 
-        "usableEvents": 188
+        "usableEvents": 85
     }, 
     "SSIB": {
         "lat": 48.75577, 
@@ -2839,18 +2791,6 @@
         "stop": 0, 
         "usableEvents": 297
     }, 
-    "UPNG": {
-        "badCompEvents": 0, 
-        "lat": 72.7848, 
-        "lon": -56.1408, 
-        "network": "CHASME", 
-        "numEvents": 15, 
-        "poorEvents": 0, 
-        "start": 20000719.22, 
-        "status": "aquired", 
-        "stop": "20001127.0719", 
-        "usableEvents": 15
-    }, 
     "UWOO": {
         "lat": 43.011, 
         "lon": -81.2724, 
@@ -2946,11 +2886,11 @@
         "lon": -89.44454, 
         "network": "POLARIS", 
         "numEvents": 230, 
-        "poorEvents": 0, 
+        "poorEvents": 150, 
         "start": 20060820.2, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 225
+        "usableEvents": 75
     }, 
     "WALA": {
         "lat": 49.0586, 
@@ -3133,11 +3073,11 @@
         "lon": -92.1095, 
         "network": "POLARIS", 
         "numEvents": 196, 
-        "poorEvents": 0, 
+        "poorEvents": 94, 
         "start": 20040906.22, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": "20090707.2350", 
-        "usableEvents": 170
+        "usableEvents": 76
     }, 
     "YUK1": {
         "H": 33.165829145728644, 
