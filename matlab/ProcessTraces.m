@@ -19,7 +19,7 @@ fclose('all'); % Close all open files from reading
 if loadflag
     npb = db.npb;
 else
-    npb = 1; % Average number of traces per bin
+    npb = 2; % Average number of traces per bin
 end
 numbin = round((1/npb)*size(ptrace,1));
 pbinLimits = linspace(.035,.08,numbin);
@@ -75,7 +75,7 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
-discardBad = 1;
+discardBad = 0;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1, viewFncs, discardBad);
@@ -120,12 +120,12 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))); % * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
 %{
-thresh = 0.1;
+thresh = 0.3;
 brec = performCurveletDenoise(brec,dt,thresh);
 %}
 
@@ -134,21 +134,53 @@ if loadflag
     t1 = db.t1; 
     t2 = db.t2;
 else
-    t1 = 4.3;
-    t2 = 5.1;
+    t1 = 2.0;
+    t2 = 6.5;
 end
-[~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
-tps = (it + round(t1/dt)-1)*dt;
+adjbounds = true;
+while adjbounds
+     
+    [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
+    tps = (it + round(t1/dt)-1)*dt;
+    h = figure(3311);
+        plot(1:length(tps),tps,'*')
+        title('Check bounds and tighten and adjust accordingly')
+    t1n = input('Enter a new lower bound or 0 to skip process: ');
+    if t1n ~= 0
+        t1 = t1n;
+        t2n = input('Enter a new higher bound or 0 to skip process: ');
+        if t2n ~= 0
+            t2 = t2n;
+        end
+    end
+    if t1n == 0 || t2n == 0
+        adjbounds = false;
+    end
 
-H = 38; % Starting guesses for physical paramaters
+end
+close(h)
+% Copy final agreed values for saving.
+% Starting guesses for physical paramaters
+% The conditional system is a crude way of stabilizing newtons method by
+% a smarter first guess based on the mean P/S travel time difference
+if mean(tps) < 4
+    H = 33; 
+elseif mean(tps) < 4.4
+    H = 35;
+elseif mean(tps) < 4.6
+    H = 37;
+else
+    H = 40;
+end
 alpha = 6.6;
 beta = 3.5;
-tol = 1e-3;  % Tolerance on interior linear solve is 10x of Newton solution
+tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
 itermax = 300; % Stop if we go beyond this iteration number
 damp = 0.2;
 warning off MATLAB:plot:IgnoreImaginaryXYPart
 warning off MATLAB:nearlySingularMatrix
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
+
 %% 8) Grid and Line Search
 [ results ] = GridSearch( brec(:,1:round(45/dt)), Tps', dt, pslow);
 %[ results ] = GsearchKanamori(brec,dt,pslow);

@@ -142,8 +142,11 @@ def setStatus(s):
             status = "picked"
         if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
             status = "data corruption"
-        if 'Vp' in s[k]:
-            status = "processed"
+        if 'stdVp' in s[k]:
+            if s[k]['stdVp'] <= 0.5:
+                status = "processed-ok"
+            else:
+                status = 'processed-notok'
         s[k]['status'] = status
     return s
 
