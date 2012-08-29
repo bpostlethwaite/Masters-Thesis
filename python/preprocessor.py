@@ -12,8 +12,8 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import matplotlib
-matplotlib.__version__ = "1.1.0"
+#import matplotlib
+#matplotlib.__version__ = "1.1.0"
 from obspy.core import read
 from obspy.signal.rotate import rotate_NE_RT as rotate
 from scipy.signal.signaltools import detrend
@@ -80,6 +80,8 @@ def setHeaders(eventdir, sacfiles, eventdict):
     P  = -12345
     PP = -12345
     pP = -12345
+    # This gets the stats for the station as processed by weed2spyder & rdneic
+    # So that the same times can be recalculated as were used by the evmail.sh script.
     evla, evlo, evdp, gcarcOLD = eventdict[ os.path.basename(eventdir) ]
     st = read( os.path.join(eventdir, sacfiles[0]) )
     stla = st[0].stats.sac['stla']
@@ -143,7 +145,11 @@ def setHeaders(eventdir, sacfiles, eventdict):
                 break
 
     ##### CALCULATE BEGINNING AND END #####
-    N = 16384
+    if dt >= 0.02:
+        N = 16384
+    else:
+        N = 32768
+
     begin = math.ceil(P) - 60
     if begin < beginOLD:
         begin = beginOLD
@@ -263,7 +269,7 @@ if __name__== '__main__' :
     netdir = '/media/TerraS/CN'
 
     if len(sys.argv) != 2:
-        print "usage: preprocessor.py eventfile"
+        print "usage: <piped station list> | preprocessor.py eventfile"
         exit()
     eventlist = sys.argv[1]
     eventdict = {}
@@ -278,13 +284,10 @@ if __name__== '__main__' :
 # fields[6] -> GCARC
 ###########################################################################
     with open(eventlist, 'r') as f:
-        for ind, line in enumerate(f):
-            if ind == 0:
-                stations = line.split()
-                continue
-
+        for line in f:
             fields = line.split()
             eventdict[ fields[0] ] = (fields[2], fields[3], fields[4], fields[6])
+
 ###########################################################################
 # Walk through all stations piped into the program
 ###########################################################################
