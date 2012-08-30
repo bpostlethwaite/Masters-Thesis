@@ -2514,18 +2514,6 @@
         "status": "not aquired", 
         "stop": 0
     }, 
-    "RDEA": {
-        "badCompEvents": 0, 
-        "lat": 56.55125, 
-        "lon": -115.3179, 
-        "network": "POLARIS", 
-        "numEvents": 133, 
-        "poorEvents": 0, 
-        "start": 20110608.17, 
-        "status": "aquired", 
-        "stop": 0, 
-        "usableEvents": 106
-    }, 
     "RDLO": {
         "lat": 50.97448, 
         "lon": -93.91244, 
@@ -2567,11 +2555,11 @@
         "lon": -118.01823, 
         "network": "POLARIS", 
         "numEvents": 204, 
-        "poorEvents": 0, 
+        "poorEvents": 95, 
         "start": 20070812.02, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 174
+        "usableEvents": 79
     }, 
     "RSPO": {
         "lat": 46.0734, 
@@ -2765,11 +2753,11 @@
         "lon": -126.65396, 
         "network": "POLARIS", 
         "numEvents": 214, 
-        "poorEvents": 0, 
+        "poorEvents": 113, 
         "start": 20100717.14, 
-        "status": "aquired", 
+        "status": "picked", 
         "stop": 0, 
-        "usableEvents": 198
+        "usableEvents": 85
     }, 
     "SNB": {
         "lat": 48.775, 
