@@ -71,7 +71,7 @@ else
 
 % If minimum not found inform user.
   if ibest == 1 | ibest == length(beta)
-    disp('WARNING: No minimum found for GCV')
+    %fprintf('WARNING: No minimum found for GCV');
     %disp('change search limits')
     %disp('index at minimum and no of seismograms');
     %[ibest,nm]

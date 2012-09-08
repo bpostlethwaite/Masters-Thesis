@@ -16,8 +16,10 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
-station = 'YBKN';
+station = 'SCHQ';
+%{
 
+%}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
 loadflag = 0;

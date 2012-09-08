@@ -18,7 +18,6 @@ function [ptrace,strace,header,pslows,badpick] = ...
 % SAVEFLAG > 0 means that we save the data in the appropriate directory
 
 ind1 = 1;
-ind2 = 1;
 bad = false;
 badpick.event = [];
 badpick.errmsg = [];
@@ -36,10 +35,15 @@ for ii = 1:length(dlist)
             N = 16384;
         end
         % Truncate if longer
-        %if length(p) > N
-        p = p(1:N);
-        s = s(1:N);
-        %end
+        if length(p) > N
+            p(N+1:end) = [];
+            s(N+1:end) = [];
+        end
+        % Pad with zeros if shorter
+        if length(p) < N
+            p(end+1 : N) = 0;
+            s(end+1 : N) = 0;
+        end
         % Check to make sure picked time interval greater than picktol and
         % That the starting time in the record header matches the picks (make
         % sure it makes sense (Both T1 and T3 must be greater that record
@@ -64,15 +68,13 @@ for ii = 1:length(dlist)
                 emsg = sprintf('One or both of T1 and T3 is not numeric\n');
             end
         end
-        
-        
+          
     catch exception % Skip if we had problems opening it.
         bad = true;
         emsg = sprintf('Identifier: { %s }\nMessage: { %s } ',...
             exception.identifier,exception.message);
     end
     
-
     if bad
         % Put all filtered info into struct array badpicks
         %badpick.event{ind2} = dlist{ii};
@@ -88,8 +90,6 @@ for ii = 1:length(dlist)
         % Good files go in the respective arrays and cells.
         header{ind1} = S1;
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
-        %p(end+1:N) = 0; % Pad with zeros
-        %s(end+1:N) = 0; % Pad with zeros
         ptrace(ind1,:) = p;
         strace(ind1,:) = s;
         ind1 = ind1 + 1;

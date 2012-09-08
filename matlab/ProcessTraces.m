@@ -16,11 +16,7 @@ picktol  = 2; % The picks should be more than PICKTOL seconds apart, or somethin
 fclose('all'); % Close all open files from reading
 %% 3) Bin by p value (build pIndex)
 %
-if loadflag
-    npb = db.npb;
-else
-    npb = 2; % Average number of traces per bin
-end
+npb = 2; % Average number of traces per bin
 numbin = round((1/npb)*size(ptrace,1));
 pbinLimits = linspace(.035,.08,numbin);
 checkind = 1;
@@ -29,11 +25,9 @@ pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
+modnorm = 0;
 dt = header{1}.DELTA;
-ptrace = diag(1./max(ptrace,[],2)) * ptrace;
-strace = diag(1./max(strace,[],2)) * strace;
-%{
-if true
+if modnorm
     modratio = zeros(1,size(ptrace,1));
     
     for ii = 1:size(ptrace,1)
@@ -53,11 +47,13 @@ if true
     modratio( (modratio < 100) & (modratio > 1) ) = 2;
     modratio(modratio < 500 & modratio > 2) = 3;
     modratio(modratio > 5) = 4;
-
     ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
     strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
+
+else
+    ptrace = diag(1./max(ptrace,[],2)) * ptrace;
+    strace = diag(1./max(strace,[],2)) * strace;
 end
-%}
 
 %% 5)  Window with Taper and fourier transform signal.
 viewtaper  = 0;
@@ -96,7 +92,7 @@ if loadflag
     fHigh = db.filterHigh;
 else
     fLow = 0.04;
-    fHigh = 1.0;
+    fHigh = 1.1;
 end    
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
@@ -164,11 +160,11 @@ close(h)
 % The conditional system is a crude way of stabilizing newtons method by
 % a smarter first guess based on the mean P/S travel time difference
 if mean(tps) < 4
-    H = 33; 
+    H = 30; 
 elseif mean(tps) < 4.4
-    H = 35;
+    H = 33;
 elseif mean(tps) < 4.6
-    H = 37;
+    H = 36;
 else
     H = 40;
 end
