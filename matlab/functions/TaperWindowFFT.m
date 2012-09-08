@@ -20,7 +20,6 @@ dt = header{1}.DELTA;
 t = 1:n;
 
 for ii = 1:steps
-
     begintaper = round( (header{ii}.T1 - header{ii}.B)/dt );
     endtaper   = round( (header{ii}.T3 - header{ii}.B)/dt );
     Ntaper = endtaper - begintaper;
@@ -30,8 +29,12 @@ for ii = 1:steps
     if nbegintaper < 1   % We don't want to index off begining of the trace
         nbegintaper = 1;
     end
+    if nbegintaper + Ntaper - 1 > n % don't want it to be larger than  array
+        Ntaper = n + 1 - nbegintaper;
+    end
+
     WIN( ii, nbegintaper : nbegintaper + Ntaper - 1) = tukeywin(Ntaper,adj);
-    %
+
     if viewtaper > 0
         t0 = round( (header{ii}.T0 - header{ii}.B) /dt );
         t1 = round( (header{ii}.T1 - header{ii}.B) /dt );
@@ -51,28 +54,10 @@ for ii = 1:steps
         title(sprintf('Trace # %i\nPress Enter to Continue',ii))
         input('Press Enter to Continue\n')
     end
-    %}
     wft(ii,:) = fft(ptrace(ii,:).*WIN(ii,:));
     if (any(isnan(wft(ii,:))))
         fprintf('NaN values in wft at. You should remove\n')
     end
     vft(ii,:) = fft(strace(ii,:));
 end 
-
-    
-
-    % Only use 1st half of fft for deconvolution in future
-    %wft = fft((ptrace.*WIN)');
-    %if (any(isnan(wft)))
-    %    fprintf('NaN values in wft at. You should remove\n')
-    %end
-    %vft = fft(strace');
-    %wft = wft'; vft = vft';
-    %w = fft((ptrace{ii}(1,:).*WIN),N);
-    %wft(ii,:) = w(1:2^13 + 1);
-    
-    %v = fft(ptrace{ii}(1,:),N);
-    %vft(ii,:) = v(1:2^13 + 1);
-    
-
 end

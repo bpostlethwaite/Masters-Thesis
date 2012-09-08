@@ -102,6 +102,12 @@ sts.('SADO').results = results;
  
 savejson('', sts, opt);
 %}
+count = 0;
+for n=1:100
+    fprintf(1, repmat('\b',1,count)); %delete line before
+    count = fprintf('Error error (%i)', n);
+end
+
  
  
 
