@@ -120,9 +120,9 @@ for ii=1:size(brec,1);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
-%{
+%
 thresh = 0.3;
-brec = performCurveletDenoise(brec,dt,thresh);
+crec = performCurveletDenoise(brec,dt,thresh);
 %}
 
 %% 7) Get tps and IRLS Newtons Method to find regression Tps
