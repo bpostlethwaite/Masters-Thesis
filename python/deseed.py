@@ -64,8 +64,9 @@ if seedfiles:
 
         left = os.listdir(deseedDir)
         if len(left) != 0:
-            print "remaining files, abort"
-            exit()
+            print "problems deseeding", event
+        for l in left: # Remove remaining bad files
+            os.unlink(os.path.join(deseedDir,l))
 
         #sys.stdout.write('deseeded  [%d%%]\r' %(count*100/nfiles))
         sys.stdout.write(event+"\n")
