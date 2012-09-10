@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-143.065194</xmin>
-            <ymin>32.461847</ymin>
-            <xmax>-50.473506</xmax>
-            <ymax>89.341907</ymax>
+            <xmin>-168.242206</xmin>
+            <ymin>57.745165</ymin>
+            <xmax>-67.335106</xmax>
+            <ymax>120.154082</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,9 +29,9 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20120810191913318" visible="1"/>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stations20120909155044712" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="1">
@@ -49,9 +49,9 @@
                 <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="bedrockGeology" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="1"/>
             </filegroup>
         </legendlayer>
     </legend>
@@ -77,13 +77,13 @@
         </ComposerMap>
         <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,18,-1,5,75,1,0,0,0,0" map="0" groupFont="Ubuntu,16,-1,5,75,1,0,0,0,0" layerFont="Ubuntu,14,-1,5,75,1,0,0,0,0" groupSpace="1" symbolSpace="2" symbolHeight="4" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,14,-1,5,75,1,0,0,0,0">
             <Model autoUpdate="1">
-                <LayerItem layerId="stations20120810191913318" text="stations">
+                <LayerItem layerId="stations20120909155044712" text="stations">
                     <VectorClassificationItemNg text="">
                         <symbols>
                             <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
                                 <layer pass="0" class="SimpleMarker" locked="0">
                                     <prop k="angle" v="0"/>
-                                    <prop k="color" v="167,219,230,255"/>
+                                    <prop k="color" v="237,189,144,255"/>
                                     <prop k="color_border" v="0,0,0,255"/>
                                     <prop k="name" v="circle"/>
                                     <prop k="offset" v="0,0"/>
@@ -2592,7 +2592,7 @@
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stations20120810191913318</id>
+            <id>stations20120909155044712</id>
             <datasource>./stations.shp</datasource>
             <title></title>
             <abstract></abstract>
@@ -2614,18 +2614,19 @@
             <vectorjoins/>
             <renderer-v2 attr="status" symbollevels="0" type="categorizedSymbol">
                 <categories>
-                    <category symbol="0" value="data corruption" label="data corruption"/>
-                    <category symbol="1" value="not aquired" label="not aquired"/>
-                    <category symbol="2" value="processed-notok" label="processed-notok"/>
-                    <category symbol="3" value="processed-ok" label="processed-ok"/>
+                    <category symbol="0" value="aquired" label="aquired"/>
+                    <category symbol="1" value="data corruption" label="data corruption"/>
+                    <category symbol="2" value="not aquired" label="not aquired"/>
+                    <category symbol="3" value="processed-notok" label="processed-notok"/>
+                    <category symbol="4" value="processed-ok" label="processed-ok"/>
                 </categories>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="215,25,28,255"/>
+                            <prop k="color" v="0,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2633,9 +2634,9 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="1">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="color" v="170,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2643,9 +2644,9 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="2">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="255,166,11,255"/>
+                            <prop k="color" v="0,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2653,9 +2654,19 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="3">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="85,255,0,255"/>
+                            <prop k="color" v="255,85,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="2"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="4">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,170,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
@@ -2665,16 +2676,16 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="130,114,76,255"/>
+                            <prop k="color" v="97,93,177,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="triangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
                     </symbol>
                 </source-symbol>
                 <colorramp type="colorbrewer" name="[source]">
-                    <prop k="colors" v="4"/>
+                    <prop k="colors" v="5"/>
                     <prop k="schemeName" v="Spectral"/>
                 </colorramp>
                 <rotation field=""/>
@@ -2695,9 +2706,9 @@
                 <color fieldname="" red="255" blue="255" green="255"/>
                 <x fieldname=""/>
                 <y fieldname=""/>
-                <offset x="0" y="8" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="-1" auto="1"/>
-                <alignment fieldname="network" value="center"/>
+                <offset x="0" y="7" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
                 <buffercolor fieldname="" red="255" blue="255" green="255"/>
                 <buffersize fieldname="" units="pt" value="1"/>
                 <bufferenabled fieldname="" on=""/>
@@ -2714,13 +2725,19 @@
                 <edittype type="0" name="stdR"/>
                 <edittype type="0" name="stdVp"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <attributeactions/>
         </maplayer>
     </projectlayers>
     <properties>
+        <NorthArrow>
+            <Rotation type="int">0</Rotation>
+            <Enabled type="bool">true</Enabled>
+            <Placement type="int">0</Placement>
+            <Automatic type="bool">true</Automatic>
+        </NorthArrow>
         <SpatialRefSys>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
         </SpatialRefSys>

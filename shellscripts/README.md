@@ -6,7 +6,7 @@
 4. Run following command to generate a file showing azimuths and epicentral distances to Location given after rdneic
 5. Use UNIX awk to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees distance)
 
-    weed2spyder.sh dum.weed | rdneic -s  -119.1 63.8 | sort -nk1 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
+    weed2spyder.sh dum.weed | rdneic -s -80.1 47.2 | sort -nk1 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
 
 >> This outputs the following columns: name dum lat lon depth mag GCARC BackAZ
 
@@ -31,7 +31,7 @@ or if you created a deseeded file with the output of `deseeded.py`:
 	comm -13  <(cat deseeded | sort | uniq) <(cat event.list | cut -d' ' -f1 | sort | uniq)
 
 (just add a `| getFTP.sh` command at the end to try and download the remaining files)
-(tip, use a `head -n x` and `tail -n +x` to pipe parts of the list. `tail -n +x` is the inverse head, it cuts of everything but last `x` lines.)
+(tip, use a `head -n x` and `tail -n +x` to pipe parts of the list. `tail -n +x` is the inverse head, it cuts off everything but last `x` lines.)
 
 10. Transform SEED to SAC and move into network/station/event/component.sac file structure.
 
