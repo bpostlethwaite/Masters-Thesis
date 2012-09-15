@@ -25,34 +25,38 @@ shpfile = os.environ['HOME'] + '/thesis/mapping/stations'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
 updtime = os.environ['HOME'] + '/thesis/updtime.data'
 
-def buildStationDBfromList(stnf, dbf):
+def buildStations(stdict, cnsnlist):
     ''' Builds station database from a list of stations taken
     from the website:
     http://www.earthquakescanada.nrcan.gc.ca/stndon/data_avail-eng.php'''
 
+    reg = re.compile(r'^[BH][H].$')
     d = {}
     q = defaultdict(int)
-    with open(stnf) as stations:
+    a = len(stdict.keys())
+    with open(cnsnlist) as stations:
         for s in stations:
             field = s.rstrip().split()
-            d[ field[0] ] = {'network': field[-1],
-                             'lat' : float(field[2]),
-                             'lon' : float(field[3]),
-                             'start': float(field[5]),
-                             'stop': 0 if not is_number( field[6] ) else field[6],
-                             'status': "not aquired"
+            station = field[0]
+            if station not in stdict and reg.match(field[1]):
+                d[ station ] = {'network': field[-1],
+                                'lat' : float(field[2]),
+                                'lon' : float(field[3]),
+                                'start': float(field[5]),
+                                'stop': 0 if not is_number( field[6] ) else field[6],
+                                'status': "not aquired"
                              }
-            q[ field[0] ] += 1
+                q[ field[0] ] += 1
 
     # Remove Stations that don't offer 3 components
     for key in q:
         if q[key] < 3:
             del d[key]
-
-    f = open(dbf,'w')
-    jstr = json.dumps(d, sort_keys = True, indent = 4)
-
-    f.write(jstr)
+    b = len(d.keys())
+    stdict = dict(stdict.items() + d.items()) # Merge the old dict with new items
+    c = len(stdict.keys())
+    assert a+b == c
+#    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
 
 def json2shapefile(stdict):
     ''' Converts the stations.json data into a shapefile for usage with
@@ -234,7 +238,7 @@ def modifyData(stdict, args):
             del stdict[station]
         else:
             attr = args.modify[0]
-            value = args.modify[10]
+            value = args.modify[1]
             stdict[station][attr] = value
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
@@ -256,9 +260,6 @@ if __name__== '__main__' :
     group.add_argument('-q','--query', nargs = 3,
                         help = "<attribute> '<operator>' <value>")
 
-    group.add_argument('-u','--update', action = 'store_true',
-                        help = "updates database with statistics from data files")
-
     group.add_argument('-p','--printer', action = 'store_true',
                        help = "prints out all stations or stations piped in." +
                        "Use with -a flag to print only certain attributes")
@@ -266,9 +267,6 @@ if __name__== '__main__' :
     group.add_argument('-m','--modify', nargs = '+',
                        help = "Either <station> <attribute> <value> or <station> <remove>." +
                        "If you pipe data into program then it operates on all stations piped in and you leave <station> out." )
-
-    group.add_argument('-s',"--shape", action = "store_true",
-                       help = "creates shapefile from stations.json")
 
     parser.add_argument('-a','--attribute', nargs = '+',
                         help = 'Only the given attributes will be printed out')
@@ -278,6 +276,15 @@ if __name__== '__main__' :
 
     parser.add_argument('-f', '--force', action = 'store_true',
                         help = 'Forces updating even if files and folders are older than the stations.json file')
+
+    group.add_argument('-u','--update', action = 'store_true',
+                        help = "updates database with statistics from data files")
+
+    group.add_argument('-s',"--shape", action = "store_true",
+                       help = "creates shapefile from stations.json")
+
+    group.add_argument('-b',"--build", action = "store_true",
+                       help = "Builds stations from CNSN station list. Won't overwrite existing database stations")
 
     # Parse arg list
     args = parser.parse_args()
@@ -304,3 +311,6 @@ if __name__== '__main__' :
 
     if args.shape:
         json2shapefile(stdict)
+
+    if args.build:
+        buildStations(stdict, stationlist)

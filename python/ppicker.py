@@ -56,14 +56,14 @@ def ppicker(eventdir,pname,sname,repick = False):
 
     left = round(t0 - 30/dt)
     right = round(t0 + 140/dt)
-    t = np.around(np.arange(-t0*dt,(N - t0)*dt,dt))
+    t = np.around(np.arange(-t0*dt, (N - t0)*dt, dt)) # Time axis
     nn = np.arange(0,N)
 
     get = Getch()
 
     plt.figure( num = None, figsize = (22,6) )
     plt.plot(p, label = 'Pcomp')
-    plt.xticks(nn[::200],t[::200])
+    plt.xticks(nn[::500],t[::500]) # Changed from 200
     plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
     plt.axvline(x = t0, color = 'y', label = 'gett P')
     plt.axvline(x = t4, color = 'g', label = 'gett pP')
