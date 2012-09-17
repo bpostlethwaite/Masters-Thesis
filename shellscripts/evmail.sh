@@ -91,7 +91,7 @@ while read event; do
   echo "STOP" >> $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
-  sleep 60
+  sleep 10
 
 
 done
