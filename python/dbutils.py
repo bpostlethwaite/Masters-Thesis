@@ -184,7 +184,7 @@ def compare(A, B, op):
         'lt': lambda A, B: A < B,
         'lte': lambda A, B: A <= B,
         'ne': lambda A, B: A != B,
-        'in': lambda A, B: A in B
+        'in': lambda A, B: B in A
         }[op](A, B)
 
 def queryStats(stdict, args):
@@ -192,11 +192,11 @@ def queryStats(stdict, args):
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
 
-    value = args.query[0] if not is_number(args.query[0]) else float(args.query[0])
+    value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
     operator = args.query[1]
-    attrib = args.query[2]
+    attrib = args.query[0]
 
-    qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(value, stdict[k][attrib], operator))  } )
+    qdict = ({ k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
 
     qdict = filterStats(qdict, args)
 
@@ -261,7 +261,7 @@ if __name__== '__main__' :
     group = parser.add_mutually_exclusive_group()
     # Create query parser
     group.add_argument('-q','--query', nargs = 3,
-                        help = "<value> < eq | ne | gt | gte | lt | lte | in > <attribute> ")
+                        help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>")
 
     group.add_argument('-p','--printer', action = 'store_true',
                        help = "prints out all stations or stations piped in." +
