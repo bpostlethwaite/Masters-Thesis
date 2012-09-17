@@ -121,10 +121,8 @@ for ii=1:size(brec,1);
 end
 %% Curvelet Denoise
 %
-thresh = 0.3;
-crec = performCurveletDenoise(brec,dt,thresh);
-%}
-
+%thresh = 0.3;
+%crec = performCurveletDenoise(brec,dt,thresh);
 %% 7) Get tps and IRLS Newtons Method to find regression Tps
 if loadflag
     t1 = db.t1; 
@@ -178,11 +176,11 @@ warning off MATLAB:nearlySingularMatrix
 [ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
 
 %% 8) Grid and Line Search
-[ results ] = GridSearch( brec(:,1:round(45/dt)), Tps', dt, pslow);
+[ results ] = GridSearch(brec(:,1:round(45/dt)), Tps', dt, pslow);
 %[ results ] = GsearchKanamori(brec,dt,pslow);
 %% 9) Bootstrap Error calculation
 nmax = 1024; % number of bootstrap iterations
-[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap( brec(:,1:round(45/dt)), Tps, dt, pslow, nmax);
+[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap(brec(:,1:round(45/dt)), Tps, dt, pslow, nmax);
 %% Close parallel system
 %matlabpool close
 %% Viewers
