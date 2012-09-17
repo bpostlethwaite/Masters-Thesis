@@ -33,7 +33,7 @@ def buildStations(stdict, cnsnlist):
     reg = re.compile(r'^[BH][H].$')
     d = {}
     q = defaultdict(int)
-    a = len(stdict.keys())
+
     with open(cnsnlist) as stations:
         for s in stations:
             field = s.rstrip().split()
@@ -52,11 +52,10 @@ def buildStations(stdict, cnsnlist):
     for key in q:
         if q[key] < 3:
             del d[key]
-    b = len(d.keys())
+
     stdict = dict(stdict.items() + d.items()) # Merge the old dict with new items
-    c = len(stdict.keys())
-    assert a+b == c
-#    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
 
 def json2shapefile(stdict):
     ''' Converts the stations.json data into a shapefile for usage with
@@ -136,21 +135,24 @@ def matStats(statdict, modtime, force = False):
             statdict[station]['stdH'] = float(db['stdH'])
     return statdict
 
-def setStatus(s):
+def setStatus(s, stdict):
     '''Sets the status of the station depending on various criteria.
     Note the default is aquired, since for this function to run the data
     must have been scanned'''
     for k in s.keys():
+        # If user has selected bad station, don't change it.
         status = "aquired"
         if 'poorEvents' in s[k] and s[k]['poorEvents'] > 5:
             status = "picked"
-        if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
-            status = "data corruption"
         if 'stdVp' in s[k]:
             if s[k]['stdVp'] <= 0.5:
                 status = "processed-ok"
             else:
                 status = 'processed-notok'
+        if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
+            status = "data corruption"
+        if k in stdict and stdict[k]['status'] == 'bad station':
+            status = "bad station"
         s[k]['status'] = status
     return s
 
@@ -166,7 +168,7 @@ def updateStats(stdict, args):
     statdict = {}
     statdict = fileStats(statdict, modtime, args.force)
     statdict = matStats(statdict, modtime, args.force)
-    statdict = setStatus(statdict)
+    statdict = setStatus(statdict, stdict)
     for station in statdict.keys():
         for attribute in statdict[station].keys():
             stdict[station][attribute] = statdict[station][attribute]
@@ -176,12 +178,13 @@ def updateStats(stdict, args):
 
 def compare(A, B, op):
     return {
-        '==': lambda A, B: A == B,
-        '>': lambda A, B: A > B,
-        '>=': lambda A, B: A >= B,
-        '<': lambda A, B: A < B,
-        '<=': lambda A, B: A <= B,
-        '!=': lambda A, B: A != B
+        'eq': lambda A, B: A == B,
+        'gt': lambda A, B: A > B,
+        'gte': lambda A, B: A >= B,
+        'lt': lambda A, B: A < B,
+        'lte': lambda A, B: A <= B,
+        'ne': lambda A, B: A != B,
+        'in': lambda A, B: A in B
         }[op](A, B)
 
 def queryStats(stdict, args):
@@ -189,11 +192,11 @@ def queryStats(stdict, args):
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
 
-    attrib = args.query[0]
+    value = args.query[0] if not is_number(args.query[0]) else float(args.query[0])
     operator = args.query[1]
-    value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
+    attrib = args.query[2]
 
-    qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
+    qdict = ( { k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(value, stdict[k][attrib], operator))  } )
 
     qdict = filterStats(qdict, args)
 
@@ -258,7 +261,7 @@ if __name__== '__main__' :
     group = parser.add_mutually_exclusive_group()
     # Create query parser
     group.add_argument('-q','--query', nargs = 3,
-                        help = "<attribute> '<operator>' <value>")
+                        help = "<value> < eq | ne | gt | gte | lt | lte | in > <attribute> ")
 
     group.add_argument('-p','--printer', action = 'store_true',
                        help = "prints out all stations or stations piped in." +

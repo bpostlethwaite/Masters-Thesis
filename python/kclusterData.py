@@ -13,7 +13,7 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import os, re, time, shutil, sys, json
+import os, re, time, shutil, sys, json, argparse
 from preprocessor import renameEvent, is_number
 from collections import defaultdict
 import numpy as np
@@ -162,34 +162,59 @@ def clusterStations(stdict, k, showmap = True):
 
         legstr = [ "Cluster " + str(i) for i in range(k) ]
         plt.legend(p2, legstr)
-
-        plt.ion()
-
+        #plt.ion()
         plt.show()
 
-        s = raw_input("Enter a cluster ID or 'a' for all clusters and press enter: ")
+    return cldict
 
-    return cldict, s
-
-def outputClusterdRemaining(clusterd, ID, stdict):
-    for key in clusterd.keys():
-        remStations = [station for station in clusterd[ID]['stations'] if stdict[station]['status'] == "not aquired"]
-
-    print "Cluster ID: ", ID
-    print "Cluster Lon / Lat: ", clusterd[ID]['center'][1], clusterd[ID]['center'][0]
-    for rs in remStations:
-        sys.stdout.write(rs + ' ')
+def printClusters(clusterd):
+    for key, value in clusterd.items():
+        print "Centroid:", clusterd[key]["center"]
+        for station in clusterd[key]["stations"]:
+            print station
 
 if __name__== '__main__' :
 
     dbfile = os.environ['HOME']+'/thesis/stations.json'
     stdict = json.loads( open(dbfile).read() )
-    clusterd, s = clusterStations(stdict, 5, showmap = True)
-    if 'a' in s:
-        for ID in range( len(clusterd) ):
-            outputClusterdRemaining(clusterd, ID, stdict)
-    else:
-        outputClusterdRemaining(clusterd, int(s), stdict)
+
+    # Create top-level parser
+    parser = argparse.ArgumentParser(description = "Cluster stations or events around a cluster lon/lat")
+    group = parser.add_mutually_exclusive_group()
+    # Create query parser
+    group.add_argument('-s','--stations', nargs = '?', const = True,
+                        help = "Cluster stations in first argument or those piped in.")
+    parser.add_argument('-n','--number', nargs = 1, type = int,
+                        help = "Set number of clusters. Default is 2")
+    parser.add_argument('-m','--map', action = "store_true",
+                        help = "Show map of clustered events")
+    parser.add_argument('-p','--printc', action = "store_true",
+                        help = "Print list of clusters and members")
+
+    args = parser.parse_args()
+
+    if not args.number:
+        # Default behaviour
+        args.number = 2
+
+    if args.stations:
+        # trick to seperate a newline or space seperated list. Always returns list.
+        # Insert stations at beginning of arg list matching case where stations are included after flag
+        if not sys.stdin.isatty():
+            stations = []
+            stations.insert(0,re.findall(r'\w+', sys.stdin.read() ))
+        else:
+            stations = args.stations
+        stnd = {k:v for k,v in stdict.items() if k in stations[0]}
+        clusterd = clusterStations(stnd, args.number[0], showmap = args.map)
+        if args.printc:
+            printClusters(clusterd)
+
+
+  #      for ID in range( len(clusterd) ):
+  #          outputClusterdRemaining(clusterd, ID, stdict)
+  #  else:
+  #      outputClusterdRemaining(clusterd, int(s), stdict)
 
     #json.encoder.FLOAT_REPR = lambda o: format(o, '.2f')
     #print json.dumps(clusterd, sort_keys = True, indent = 2)

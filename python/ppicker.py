@@ -63,7 +63,7 @@ def ppicker(eventdir,pname,sname,repick = False):
 
     plt.figure( num = None, figsize = (22,6) )
     plt.plot(p, label = 'Pcomp')
-    plt.xticks(nn[::500],t[::500]) # Changed from 200
+    plt.xticks(nn[::round(5/dt)],t[::round(5/dt)]) # Changed from 200
     plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
     plt.axvline(x = t0, color = 'y', label = 'gett P')
     plt.axvline(x = t4, color = 'g', label = 'gett pP')
