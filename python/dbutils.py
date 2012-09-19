@@ -196,23 +196,16 @@ def queryStats(stdict, args):
     operator = args.query[1]
     attrib = args.query[0]
 
-    qdict = ({ k:v for k, v in stdict.items() if (attrib in stdict[k] and compare(stdict[k][attrib], value, operator))  } )
+    return ({ k:v for k, v in stdict.items()
+              if (attrib in stdict[k]
+                  and compare(stdict[k][attrib], value, operator))  } )
 
-    qdict = filterStats(qdict, args)
+def getStats(qdict, args, printer):
+    ''' Filters the dictionary by a station list (pipedStations | command line list)
+    and by an attribute list (attrs). Then returns &| prints out data'''
 
-
-
-def printStats(stdict, args):
-    ''' Just prints the passed in dictionary running filters. No query actions'''
-    qdict = filterStats(stdict, args)
-
-
-
-def filterStats(qdict, args):
-    ''' Filters the dictionary by a station list (pipedStations)
-    and by an attribute list (attrs)'''
-    if args.pipedData:
-        qdict = ( { k:v for k, v in qdict.items() if k in args.pipedData } )
+    if args.stationList: #check for piped data or station list or ALL stations
+        qdict = ( { k:v for k, v in qdict.items() if k in args.stationList } )
 
     if args.attribute:
         for k in qdict.keys():
@@ -220,19 +213,21 @@ def filterStats(qdict, args):
                 if attr not in args.attribute:
                     del qdict[k][attr]
 
-    if args.keys:
-        for key in qdict.keys():
-            print key
-    else:
-        print json.dumps(qdict, sort_keys = True, indent = 4)
+    if printer:
+        if args.keys:
+            for key in qdict.keys():
+                print key
+        else:
+            print json.dumps(qdict, sort_keys = True, indent = 4)
 
+    return qdict
 
 def modifyData(stdict, args):
     ''' modifies database using <station> <attribute> <value>
     or if <station> <remove> then removes selected station'''
     # Note, only remove functionality coded.
-    if args.pipedData:
-        stations = args.pipedData
+    if args.stationList:
+        stations = args.stationList
     else:
         # Pop off station argument of arg list
         stations =  [ args.modify.pop(0) ]
@@ -259,13 +254,13 @@ if __name__== '__main__' :
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "manage and query the station data json database")
     group = parser.add_mutually_exclusive_group()
+
     # Create query parser
+    parser.add_argument('-p', '--printer', nargs = '*',
+                       help = "<stationA> <stationB> or pipe stations in. Default without arg is ALL stations")
+
     group.add_argument('-q','--query', nargs = 3,
                         help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>")
-
-    group.add_argument('-p','--printer', action = 'store_true',
-                       help = "prints out all stations or stations piped in." +
-                       "Use with -a flag to print only certain attributes")
 
     group.add_argument('-m','--modify', nargs = '+',
                        help = "Either <station> <attribute> <value> or <station> <remove>." +
@@ -296,18 +291,22 @@ if __name__== '__main__' :
     # If we pipe a bunch of stations to program, query only these stations
     if not sys.stdin.isatty():
         # trick to seperate a newline or space seperated list. Always returns list.
-        args.pipedData =  re.findall(r'\w+', sys.stdin.read() )
+        args.stationList =  re.findall(r'\w+', sys.stdin.read() )
     else:
-        args.pipedData = False
+        args.stationList = False
 
     if args.update:
         updateStats(stdict, args)
 
     if args.query:
-        queryStats(stdict, args)
+        stdict = queryStats(stdict, args)
+        getStats(stdict, args, printer = True)
 
-    if args.printer:
-        printStats(stdict, args)
+    if args.printer != None:
+        # if it has command line options assume stations
+        if args.printer:
+            args.stationList = args.printer
+        getStats(stdict, args, printer = True)
 
     if args.modify:
         modifyData(stdict, args)

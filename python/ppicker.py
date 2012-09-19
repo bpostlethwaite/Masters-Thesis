@@ -30,7 +30,7 @@ class Getch:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch
 
-def ppicker(eventdir,pname,sname,repick = False):
+def ppicker(eventdir, pname, sname, repick = False):
     """ Function ppicker is a ginput based arrival picker
     allowing for 3 time picks which are saved in SAC data headers"""
 
@@ -52,7 +52,7 @@ def ppicker(eventdir,pname,sname,repick = False):
     # Skip if T1 and T3 are greater than zero. The default is a large negative number
     if repick:
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
-            return
+            return 's'
 
     left = round(t0 - 30/dt)
     right = round(t0 + 140/dt)
@@ -189,6 +189,9 @@ if __name__== '__main__' :
             index -= 1
             continue
         elif cmd == 'r':
+            continue
+        elif cmd == 's':
+            index += 1
             continue
         else:
             # If yes, check if dir previously renamed as poorData, if so rename to healthy event dir
