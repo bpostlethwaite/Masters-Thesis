@@ -47,28 +47,26 @@ def plot():
     #for e in epoch:
     #    d[e] = []
     #
-    #epochdata = open(os.environ['HOME'] + '/thesis/python/epoch.json')
-    #epochdict = json.loads( epochdata.read() )
-    #print json.dumps(epochdict, sort_keys = True, indent = 2)
+##### Load data, create arrays
 
+    epochdata = open(os.environ['HOME'] + '/thesis/python/epoch.json')
+    epochdict = json.loads( epochdata.read() )
+    #print json.dumps(epochdict, sort_keys = True, indent = 2)
     args = Args()
     args.addQuery("status","eq","processed-ok")
     #args.addKeys()
-
     stdict = queryStats(stdict, args)
-
     #getStats(stdict, args, printer = True)
-
     data = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
-
     # sort by increasing  thickness H
     data = sorted(data, key = lambda x: x[3])
-
     H = np.array([x[3] for x in data])
     R = np.array([x[1] for x in data])
     Vp = np.array([x[2] for x in data])
     Vs = 1 / R * Vp
 
+
+##### Paramater Plots
     f, axarr = plt.subplots(3, sharex = True)
     # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
     axarr[0].plot(H, R, '*', label = 'Vp/Vs')
@@ -82,6 +80,10 @@ def plot():
     axarr[2].set_xlabel("Crustal Thickness H [km]")
     axarr[2].set_ylabel("Vs [km/s]")
     axarr[2].legend(loc=2)
+
+
+##### Geochronology Plots
+
 
     plt.show()
     # plt.xticks(nn[::round(5/dt)],t[::round(5/dt)]) # Changed from 200
