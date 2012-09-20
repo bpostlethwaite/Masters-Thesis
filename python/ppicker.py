@@ -182,6 +182,7 @@ if __name__== '__main__' :
     # If it return a p, go to previous index. If it is an r, redo. Else move
     # forward
     ###########################################################################
+
         if cmd == 'n':
             events[index] = os.path.basename( renameEvent(eventdir,"poorData") )
             index += 1
