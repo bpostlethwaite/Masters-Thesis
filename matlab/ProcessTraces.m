@@ -28,7 +28,7 @@ nbins = length(pslow); % Number of bins we now have.
 modnorm = 0;
 dt = header{1}.DELTA;
 if modnorm
-    modratio = zeros(1,size(ptrace,1));
+    modratio = zeros(1,size(ptrace,1));   
     
     for ii = 1:size(ptrace,1)
         t1 = round( (header{ii}.T1 - header{ii}.B) / dt);
@@ -42,7 +42,6 @@ if modnorm
         modratio(ii) = m1/m0;
 
     end
-
     modratio(modratio < 20) = 1;
     modratio( (modratio < 100) & (modratio > 1) ) = 2;
     modratio(modratio < 500 & modratio > 2) = 3;
@@ -71,7 +70,7 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
-discardBad = 0;
+discardBad = 1;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1, viewFncs, discardBad);
@@ -92,7 +91,7 @@ if loadflag
     fHigh = db.filterHigh;
 else
     fLow = 0.04;
-    fHigh = 1.1;
+    fHigh = 0.9;
 end    
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
@@ -132,25 +131,71 @@ else
     t2 = 6.5;
 end
 adjbounds = true;
-while adjbounds
-     
+% 
+while adjbounds 
+    t1n = ' ';
+    t2n = ' ';
     [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
     tps = (it + round(t1/dt)-1)*dt;
     h = figure(3311);
         plot(1:length(tps),tps,'*')
         title('Check bounds and tighten and adjust accordingly')
-    t1n = input('Enter a new lower bound or 0 to skip process: ');
-    if t1n ~= 0
-        t1 = t1n;
-        t2n = input('Enter a new higher bound or 0 to skip process: ');
-        if t2n ~= 0
-            t2 = t2n;
+    t1n = input('Enter a new lower bound or "y" to accept or "b" to enter banish mode: ', 's');
+    if str2num(t1n) % Check if input is a number
+        t1 = str2num(t1n); % If it is use number as lower bound
+        t2n = input('Enter a new higher bound or "y" to accept or "b" to enter banish mode: ', 's');
+        if str2num(t2n) % Check if 2nd input is a number
+            t2 = str2num(t2n); %#ok<*ST2NM> % If it is use num as upper bound
         end
+        
+    elseif (t1n == 'y') || (t2n == 'y') % If user enters 'y' move on
+        adjbounds = false; % break loop
+    
+    elseif (t1n == 'b') || (t2n == 'b') % If user enters 'b' enter banish mode
+        banish = true;
+        fprintf('Banish Mode\n')
+        b1 = t1;
+        b2 = t2;
+        
+        while banish %Stay in banish mode till we get a 'y' or a 'b'
+            t1n = ' ';
+            t2n = ' ';
+            h = figure(3311);
+                hold on
+                plot(1:length(tps),tps,'*')
+                plot(1:length(tps), b1, ':r')
+                plot(1:length(tps), b2, ':r')
+                title('Enter bounds all traces outside bounds will be removed')
+            t1n = input('Enter a new lower bound or "y" to accept or "b" to LEAVE banish mode: ', 's');
+            if str2num(t1n) % Check if input is a number
+                b1 = str2num(t1n); % If it is use number as lower bound
+                plot(1:length(tps), b1, ':r')
+                t2n = input('Enter a new higher bound or "y" to accept or "b" to LEAVE banish mode: ', 's');
+                if str2num(t2n) % Check if 2nd input is a number
+                    b2 = str2num(t2n); % If it is use num as upper bound
+                    plot(1:length(tps), b2, ':r')
+                end
+                
+            elseif (t1n == 'y') || (t2n == 'y')
+                % If select yes, kill all RFs outside range
+                ind = (tps < b1) | (tps > b2);
+                tps(ind) = [];
+                pslow(ind) = [];
+                brec(ind,:) = [];
+                banish = false;
+                hold off
+            elseif (t1n == 'b') || (t2n == 'b')
+                banish = false;
+                hold off
+            else
+                fprintf('Sorry %s or %s is bad input\n', t1n, t2n) 
+            end
+        end
+        
+    else
+        fprintf('Sorry %s or %s is bad input\n', t1n, t2n) 
     end
-    if t1n == 0 || t2n == 0
-        adjbounds = false;
-    end
-
+            
 end
 close(h)
 % Copy final agreed values for saving.
