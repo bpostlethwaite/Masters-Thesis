@@ -16,7 +16,7 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
-station = 'WLVO';
+station = 'TOBO';
 %{
 
 %}
