@@ -45,7 +45,8 @@ def plot(prmdata = None, geodata = None, plottype = None):
         Vp = np.array([x[2] for x in prmdata])
         Vs = 1 / R * Vp
 
-        f, axarr = plt.subplots(3, sharex = True)
+        fig1 = pl.figure()
+        f, axarr = fig1.subplots(3, sharex = True)
         # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
         axarr[0].plot(H, R, '*', label = 'Vp/Vs')
         axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
@@ -62,7 +63,37 @@ def plot(prmdata = None, geodata = None, plottype = None):
 
 ##### Geochronology Plots
     if "geochron" in plottype:
-        pass
+    ### Create vectors from raw data
+        H = np.array([x[3] for x in geodata])
+        R = np.array([x[1] for x in geodata])
+        Vp = np.array([x[2] for x in geodata])
+        rng = np.array([x[4] for x in geodata])
+        Vs = 1 / R * Vp
+
+
+        #plt.plot(H, rng)
+
+        fig2 = plt.figure()
+        ax = fig2.gca()
+
+
+        ax.hlines(y = Vs, xmin = np.log10(rng[:,1]), xmax = np.log10(rng[:,0]))
+        ax.set_xlim(ax.get_xlim()[::-1])
+
+        # f, axarr = plt.subplots(3, sharex = True)
+        # # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+        # axarr[0].plot(H, R, '*', label = 'Vp/Vs')
+        # axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
+        # axarr[0].set_ylabel("Vp/Vs")
+        # axarr[0].legend(loc=2)
+        # axarr[1].plot(H, Vp, '*', label = 'Vp')
+        # axarr[1].set_ylabel("Vp [km/s]")
+        # axarr[1].legend(loc=2)
+        # axarr[2].plot(H, Vs, '*', label = 'Vs')
+        # axarr[2].set_xlabel("Crustal Thickness H [km]")
+        # axarr[2].set_ylabel("Vs [km/s]")
+        # axarr[2].legend(loc=2)
+
 
 
     plt.show()
@@ -96,9 +127,8 @@ if __name__== '__main__' :
 ### Load data
     stndata =  open(os.environ['HOME'] + '/thesis/stations.json')
     stdict = json.loads( stndata.read() )
-    stnchron = open(os.environ['HOME'] + '/thesis/stnchrons.json')
-    epochdict = json.loads( epochdata.read() )
-    stngeo = open(os.environ['HOME'] + '/thesis/python/geostn.json')
+    stnc = open(os.environ['HOME'] + '/thesis/stnchrons.json')
+    stnchron = json.loads( stnc.read() )
     #print json.dumps(epochdict, sort_keys = True, indent = 2)
 
 ### Create Arg to programatically interact with dbutils functionality
@@ -108,11 +138,13 @@ if __name__== '__main__' :
     stdict = queryStats(stdict, args)
     #getStats(stdict, args, printer = True)
 
-### Create station data
+### Create data
     params = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
     # sort by increasing  thickness H
     params = sorted(params, key = lambda x: x[3])
 
-### Create Geo data
-    geochron =
-    plot(prmdata = params, plottype = "param")
+### Create Geo data. The reason to do this seperately is there might be
+### less stns in the geochron dictionary then in the parameter dictionary.
+    geochron = [(key, value['R'], value['Vp'], value['H'], stnchron[key]) for key, value in stdict.items() if key in stnchron and stnchron[key]]
+
+    plot(prmdata = params, geodata = geochron, plottype = "geochron")
