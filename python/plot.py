@@ -27,50 +27,42 @@ class Args(object):
 
 
 
-def plot():
+def plot(prmdata = None, geodata = None, plottype = None):
+    ''' Plot modes are "param" and "geochron", or a list with the modes
+    in it. If param mode plot requires parameter data, prmdata as a list
+    with tuple (stnName, Vp, R, H) for each station.
+    If geochron mode requires geodata with'''
 
 
-### Load data
-    stndata =  open(os.environ['HOME'] + '/thesis/stations.json')
-    stdict = json.loads( stndata.read() )
-    epochdata = open(os.environ['HOME'] + '/thesis/python/epoch.json')
-    epochdict = json.loads( epochdata.read() )
-    #print json.dumps(epochdict, sort_keys = True, indent = 2)
-
-### Create Arg to programatically interact with dbutils functionality
-    args = Args()
-    args.addQuery("status","eq","processed-ok")
-    #args.addKeys()
-    stdict = queryStats(stdict, args)
-    #getStats(stdict, args, printer = True)
-
-### Create vectors from raw data
-    data = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
-    # sort by increasing  thickness H
-    data = sorted(data, key = lambda x: x[3])
-    H = np.array([x[3] for x in data])
-    R = np.array([x[1] for x in data])
-    Vp = np.array([x[2] for x in data])
-    Vs = 1 / R * Vp
 
 
-##### Parameter Plots
-    f, axarr = plt.subplots(3, sharex = True)
-    # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
-    axarr[0].plot(H, R, '*', label = 'Vp/Vs')
-    axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
-    axarr[0].set_ylabel("Vp/Vs")
-    axarr[0].legend(loc=2)
-    axarr[1].plot(H, Vp, '*', label = 'Vp')
-    axarr[1].set_ylabel("Vp [km/s]")
-    axarr[1].legend(loc=2)
-    axarr[2].plot(H, Vs, '*', label = 'Vs')
-    axarr[2].set_xlabel("Crustal Thickness H [km]")
-    axarr[2].set_ylabel("Vs [km/s]")
-    axarr[2].legend(loc=2)
+    ##### Parameter Plots
+    if "param" in plottype:
+
+    ### Create vectors from raw data
+        H = np.array([x[3] for x in prmdata])
+        R = np.array([x[1] for x in prmdata])
+        Vp = np.array([x[2] for x in prmdata])
+        Vs = 1 / R * Vp
+
+        f, axarr = plt.subplots(3, sharex = True)
+        # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+        axarr[0].plot(H, R, '*', label = 'Vp/Vs')
+        axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
+        axarr[0].set_ylabel("Vp/Vs")
+        axarr[0].legend(loc=2)
+        axarr[1].plot(H, Vp, '*', label = 'Vp')
+        axarr[1].set_ylabel("Vp [km/s]")
+        axarr[1].legend(loc=2)
+        axarr[2].plot(H, Vs, '*', label = 'Vs')
+        axarr[2].set_xlabel("Crustal Thickness H [km]")
+        axarr[2].set_ylabel("Vs [km/s]")
+        axarr[2].legend(loc=2)
 
 
 ##### Geochronology Plots
+    if "geochron" in plottype:
+        pass
 
 
     plt.show()
@@ -101,4 +93,26 @@ def plot():
 
 if __name__== '__main__' :
 
-    plot()
+### Load data
+    stndata =  open(os.environ['HOME'] + '/thesis/stations.json')
+    stdict = json.loads( stndata.read() )
+    stnchron = open(os.environ['HOME'] + '/thesis/stnchrons.json')
+    epochdict = json.loads( epochdata.read() )
+    stngeo = open(os.environ['HOME'] + '/thesis/python/geostn.json')
+    #print json.dumps(epochdict, sort_keys = True, indent = 2)
+
+### Create Arg to programatically interact with dbutils functionality
+    args = Args()
+    args.addQuery("status","eq","processed-ok")
+    #args.addKeys()
+    stdict = queryStats(stdict, args)
+    #getStats(stdict, args, printer = True)
+
+### Create station data
+    params = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
+    # sort by increasing  thickness H
+    params = sorted(params, key = lambda x: x[3])
+
+### Create Geo data
+    geochron =
+    plot(prmdata = params, plottype = "param")
