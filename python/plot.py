@@ -10,7 +10,6 @@ import os, json
 from dbutils import queryStats, getStats
 import matplotlib.pyplot as plt
 import numpy as np
-from dbfpy import dbf
 
 class Args(object):
 
@@ -30,33 +29,22 @@ class Args(object):
 
 def plot():
 
-    #Load station database
+
+### Load data
     stndata =  open(os.environ['HOME'] + '/thesis/stations.json')
     stdict = json.loads( stndata.read() )
-    # Load geological time data
-    #db = dbf.Dbf(os.environ['HOME'] + "/thesis/mapping/BedrockGeology.dbf")
-    #era = set()
-    #period = set()
-    #epoch = set()
-    #for rec in db:
-    #    era.add(rec["ERA"])
-    #    period.add(rec["PERIOD"])
-    #    epoch.add(rec["EPOCH"])
-    #
-    #d = {}
-    #for e in epoch:
-    #    d[e] = []
-    #
-##### Load data, create arrays
-
     epochdata = open(os.environ['HOME'] + '/thesis/python/epoch.json')
     epochdict = json.loads( epochdata.read() )
     #print json.dumps(epochdict, sort_keys = True, indent = 2)
+
+### Create Arg to programatically interact with dbutils functionality
     args = Args()
     args.addQuery("status","eq","processed-ok")
     #args.addKeys()
     stdict = queryStats(stdict, args)
     #getStats(stdict, args, printer = True)
+
+### Create vectors from raw data
     data = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
     # sort by increasing  thickness H
     data = sorted(data, key = lambda x: x[3])
@@ -66,7 +54,7 @@ def plot():
     Vs = 1 / R * Vp
 
 
-##### Paramater Plots
+##### Parameter Plots
     f, axarr = plt.subplots(3, sharex = True)
     # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
     axarr[0].plot(H, R, '*', label = 'Vp/Vs')
