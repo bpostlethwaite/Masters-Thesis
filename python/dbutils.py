@@ -64,6 +64,7 @@ def json2shapefile(stdict):
     # Set fields for attribute table
 
     fields = ["Vp","R","H","stdVp","stdR","stdH"]
+    w.field("station", 'C', '6')
     w.field("network", 'C', '10')
     w.field("status", 'C', '16')
     #w.field("Vp", "C", "5")
@@ -76,7 +77,8 @@ def json2shapefile(stdict):
         values = []
         for f in fields:
             values.append( '{0:5.2f}'.format(stdict[key][f]) if f in stdict[key] else "None ")
-        w.record( stdict[key]["network"],
+        w.record( key,
+                  stdict[key]["network"],
                   stdict[key]["status"],
                   values[0],
                   values[1],
