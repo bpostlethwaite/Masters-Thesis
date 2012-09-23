@@ -45,20 +45,27 @@ def plot(prmdata = None, geodata = None, plottype = None):
         Vp = np.array([x[2] for x in prmdata])
         Vs = 1 / R * Vp
 
-        fig1 = pl.figure()
-        f, axarr = fig1.subplots(3, sharex = True)
+        plt.figure(1)
+
         # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
-        axarr[0].plot(H, R, '*', label = 'Vp/Vs')
-        axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
-        axarr[0].set_ylabel("Vp/Vs")
-        axarr[0].legend(loc=2)
-        axarr[1].plot(H, Vp, '*', label = 'Vp')
-        axarr[1].set_ylabel("Vp [km/s]")
-        axarr[1].legend(loc=2)
-        axarr[2].plot(H, Vs, '*', label = 'Vs')
-        axarr[2].set_xlabel("Crustal Thickness H [km]")
-        axarr[2].set_ylabel("Vs [km/s]")
-        axarr[2].legend(loc=2)
+        ax1 = plt.subplot(311)
+        plt.plot(H, R, '*', label = 'Vp/Vs')
+        plt.title("Vp/Vs, Vp and Vs against crustal thickness H")
+        plt.ylabel("Vp/Vs")
+        plt.legend(loc=2)
+        plt.setp( ax1.get_xticklabels(), visible=False)
+
+        ax2 = plt.subplot(312, sharex = ax1)
+        plt.plot(H, Vp, '*', label = 'Vp')
+        plt.ylabel("Vp [km/s]")
+        plt.legend(loc=2)
+        plt.setp( ax1.get_xticklabels(), visible=False)
+
+        ax3 = plt.subplot(313, sharex = ax1)
+        plt.plot(H, Vs, '*', label = 'Vs')
+        plt.xlabel("Crustal Thickness H [km]")
+        plt.ylabel("Vs [km/s]")
+        plt.legend(loc=2)
 
 
 ##### Geochronology Plots
@@ -70,56 +77,22 @@ def plot(prmdata = None, geodata = None, plottype = None):
         rng = np.array([x[4] for x in geodata])
         Vs = 1 / R * Vp
 
+        plt.figure(2)
+        ax1 = plt.subplot(111)
+        plt.hlines(y = H, xmin = rng[:,1], xmax = rng[:,0])
+        plt.title("Crustal Thickness H against Bedrock Age in Mya")
+        plt.ylabel("Crustal Thickenss [km]")
+        #plt.setp( ax1.get_xticklabels(), visible = False)
+        ax1.set_xlim(ax1.get_xlim()[::-1])
 
-        #plt.plot(H, rng)
 
-        fig2 = plt.figure()
-        ax = fig2.gca()
-
-
-        ax.hlines(y = Vs, xmin = np.log10(rng[:,1]), xmax = np.log10(rng[:,0]))
-        ax.set_xlim(ax.get_xlim()[::-1])
-
-        # f, axarr = plt.subplots(3, sharex = True)
-        # # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
-        # axarr[0].plot(H, R, '*', label = 'Vp/Vs')
-        # axarr[0].set_title("Vp/Vs, Vp and Vs against crustal thickness H")
-        # axarr[0].set_ylabel("Vp/Vs")
-        # axarr[0].legend(loc=2)
-        # axarr[1].plot(H, Vp, '*', label = 'Vp')
-        # axarr[1].set_ylabel("Vp [km/s]")
-        # axarr[1].legend(loc=2)
-        # axarr[2].plot(H, Vs, '*', label = 'Vs')
-        # axarr[2].set_xlabel("Crustal Thickness H [km]")
-        # axarr[2].set_ylabel("Vs [km/s]")
-        # axarr[2].legend(loc=2)
-
+        #ax2 = plt.subplot(212, sharex = ax1)
+        #plt.hlines(y = Vs, xmin = rng[:,1], xmax = rng[:,0])
+        plt.xlabel("Million Years Ago")
+        #plt.ylabel("Shear Wave Velocity Vs [km/s]")
 
 
     plt.show()
-    # plt.xticks(nn[::round(5/dt)],t[::round(5/dt)]) # Changed from 200
-    # plt.title('{} \n P-trace, source depth = {}'.format( eventdir, depth) )
-    # plt.axvline(x = t0, color = 'y', label = 'gett P')
-    # plt.axvline(x = t4, color = 'g', label = 'gett pP')
-
-    # if t7 < right:
-    #     plt.axvline(x = t7, color = 'r', label = 'gett PP')
-
-    # plt.xlim(left, right)
-    # plt.xlabel('Time \n P arrival is zero seconds')
-    # plt.legend()
-    # x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
-
-    # try:
-    #     T1 = x[0][0]*dt + b
-    #     T3 = x[1][0]*dt + b
-
-    # except IndexError:
-    #     print "Not all picks made in", eventdir
-    #     print "Please retry the picks"
-    #     return 'r'
-
-    # plt.close()
 
 
 if __name__== '__main__' :
@@ -127,6 +100,7 @@ if __name__== '__main__' :
 ### Load data
     stndata =  open(os.environ['HOME'] + '/thesis/stations.json')
     stdict = json.loads( stndata.read() )
+
     stnc = open(os.environ['HOME'] + '/thesis/stnchrons.json')
     stnchron = json.loads( stnc.read() )
     #print json.dumps(epochdict, sort_keys = True, indent = 2)
@@ -147,4 +121,4 @@ if __name__== '__main__' :
 ### less stns in the geochron dictionary then in the parameter dictionary.
     geochron = [(key, value['R'], value['Vp'], value['H'], stnchron[key]) for key, value in stdict.items() if key in stnchron and stnchron[key]]
 
-    plot(prmdata = params, geodata = geochron, plottype = "geochron")
+    plot(prmdata = params, geodata = geochron, plottype = ["param","geochron"])

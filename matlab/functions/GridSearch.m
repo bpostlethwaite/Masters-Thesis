@@ -1,14 +1,14 @@
 function [ results ] = GridSearch(rec,tps,dt,pslow)
 %GRIDSEARCH Summary of this function goes here
-%   
+%
 % FUNCTION [vbest,rbest,hbest] = GRIDSEARCH(REC,DT,PSLOW,T1,T2);
 %
-% Function computes best homogeneous crustal model for 
+% Function computes best homogeneous crustal model for
 % a suite of receiver functions REC of dimensions NTRACE
 % by NTIMES, given the sample interval DT, the corresponding
-% slownesses PSLOW (of dimension NTRACE) and a window 
+% slownesses PSLOW (of dimension NTRACE) and a window
 % defined by T1 and T2. This window is specified by user
-% to encompass timing of direct Ps conversion from Moho 
+% to encompass timing of direct Ps conversion from Moho
 % as tightly as possible. Times TPS for conversion are picked
 % as location of maxima for traces within this window.
 %
@@ -96,45 +96,17 @@ hbest=h(ih);
 tps = hbest*(f1-f2);
 tpps = hbest*(f1+f2);
 tpss = 2*hbest*f1;
-%% Results & Errors
-% See Paper by Eaton et al.
-%{
-tps = hbest*(f1-f2);
-tpps = hbest*(f1+f2);
-tpss = 2*hbest*f1;
 
-sterr1=sqrt( sum( var( [adjtpps*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-    -adjtpss*gvr(round(tpss/dt)+1+[0:np-1]*nt)]) /(2*np) ));
-
-sterr2 = sqrt(sum(var([0.5*gvr(round(tps/dt)+1+[0:np-1]*nt),...
-                 0.3*gvr(round(tpps/dt)+1+[0:np-1]*nt),...
-                 -0.2*gvr(round(tpss/dt)+1+[0:np-1]*nt)])/(3*np)));
-             
-    err = smax - sterr1;
-    % Calculate +/- for Vp
-    errVpn = sum(any(stackvr > err,2)); 
-    errV = 0.5 * dv * errVpn;
-    % Calculate +/- for R
-    errRn = sum(any(stackvr > err,1)); 
-    errR = 0.5 * dr * errRn; 
-    % Calculate +/- for H
-    errH = 0.5 * dh * sum( (stackh > (hmax - sterr2)) ~= 0);
-%}
-%% Pack results into struct  
+%% Pack results into struct
 results.method = 'bostock';
 results.rbest = rbest;
 results.vbest = vbest;
 results.hbest = hbest;
 results.stackvr = stackvr;
 results.stackh = stackh;
-%results.errV = errV;
-%results.errR = errR;
-%results.errH = errH;
 results.rRange = r;
 results.vRange = v;
 results.hRange = h;
-%results.sterr1 = sterr1;
-%results.sterr2 = sterr2;
 results.smax = smax;
 results.hmax = hmax;
 results.tps = tps;
@@ -142,7 +114,3 @@ results.tpps = tpps;
 results.tpss = tpss;
 
 end
-
-
-
-
