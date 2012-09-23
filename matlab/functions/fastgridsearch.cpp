@@ -35,9 +35,9 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   plhs[4] = mxCreateDoubleMatrix(1, 1, mxREAL);
 
   //associate pointers
-  rec = mxGetPr(recIN);
-  pslow = mxGetPr(pslowIN);
-  Tps = mxGetPr(TpsIN);
+  rec = mxGetPr(recIN); // Receiver funcs
+  pslow = mxGetPr(pslowIN); // slowness
+  Tps = mxGetPr(TpsIN); // Main arrival Tps
   Vp = mxGetPr(plhs[0]);
   R = mxGetPr(plhs[1]);
   H = mxGetPr(plhs[2]);
