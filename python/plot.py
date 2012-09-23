@@ -92,6 +92,64 @@ def plot(prmdata = None, geodata = None, plottype = None):
         #plt.ylabel("Shear Wave Velocity Vs [km/s]")
 
 
+#### Kanamori data
+    if "kanamori" in plottype:
+        Rk = np.array([x[4] for x in prmdata])
+        Hk = np.array([x[5] for x in prmdata])
+        H = np.array([x[3] for x in prmdata])
+        R = np.array([x[1] for x in prmdata])
+        Vp = np.array([x[2] for x in prmdata])
+        Vs = 1 / R * Vp
+
+        plt.figure(3)
+        # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+        plt.plot(Hk, Rk, '*', label = 'Vp/Vs Kanamori')
+        plt.plot(H, R, '*', label = 'Vp/Vs', color = "red")
+        plt.title("Vp/Vs as a function of crustal thickness H")
+        plt.ylabel("Vp/Vs")
+        plt.legend(loc=2)
+
+        plt.figure(4)
+        plt.subplot(211)
+        ns = np.arange(len(Hk))
+        # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+        plt.plot(ns, Hk, label = 'H Kanamori')
+        plt.plot(ns, H, label = 'H', color = "red")
+        plt.title("H over stations")
+        plt.ylabel("H")
+        plt.legend(loc=2)
+
+        ax1 = plt.subplot(212)
+        plt.plot(ns, Rk, label = 'R Kanamori')
+        plt.plot(ns, R, label = 'R', color = "red")
+        plt.title("R over stations")
+        plt.ylabel("Vp/Vs")
+        plt.legend(loc=2)
+
+
+        plt.figure(5)
+
+        # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+        ax1 = plt.subplot(311)
+        plt.plot(Hk, R, '*', label = 'Vp/Vs')
+        plt.title("Vp/Vs, Vp and Vs against KANAMORI crustal thickness H")
+        plt.ylabel("Vp/Vs")
+        plt.legend(loc=2)
+        plt.setp( ax1.get_xticklabels(), visible=False)
+
+        ax2 = plt.subplot(312, sharex = ax1)
+        plt.plot(Hk, Vp, '*', label = 'Vp')
+        plt.ylabel("Vp [km/s]")
+        plt.legend(loc=2)
+        plt.setp( ax1.get_xticklabels(), visible=False)
+
+        ax3 = plt.subplot(313, sharex = ax1)
+        plt.plot(Hk, Vs, '*', label = 'Vs')
+        plt.xlabel("KANAMORI Crustal Thickness H [km]")
+        plt.ylabel("Vs [km/s]")
+        plt.legend(loc=2)
+
+
     plt.show()
 
 
@@ -105,6 +163,10 @@ if __name__== '__main__' :
     stnchron = json.loads( stnc.read() )
     #print json.dumps(epochdict, sort_keys = True, indent = 2)
 
+    kan = open(os.environ['HOME'] + '/thesis/kanStats.json')
+    kand = json.loads( kan.read() )
+
+
 ### Create Arg to programatically interact with dbutils functionality
     args = Args()
     args.addQuery("status","eq","processed-ok")
@@ -113,12 +175,16 @@ if __name__== '__main__' :
     #getStats(stdict, args, printer = True)
 
 ### Create data
-    params = [(key, value['R'], value['Vp'], value['H']) for key, value in stdict.items()]
+    params = []
+    for key, value in stdict.items():
+        params.append( (key, value['R'], value['Vp'], value['H'], kand[key]['R'], kand[key]['H']) )
+
     # sort by increasing  thickness H
-    params = sorted(params, key = lambda x: x[3])
+    #params = sorted(params, key = lambda x: x[3])
+
 
 ### Create Geo data. The reason to do this seperately is there might be
 ### less stns in the geochron dictionary then in the parameter dictionary.
     geochron = [(key, value['R'], value['Vp'], value['H'], stnchron[key]) for key, value in stdict.items() if key in stnchron and stnchron[key]]
 
-    plot(prmdata = params, geodata = geochron, plottype = ["param","geochron"])
+    plot(prmdata = params, geodata = geochron, plottype = ["param","geochron", "kanamori"][1] )
