@@ -104,7 +104,7 @@ def plot(prmdata = None, geodata = None, plottype = None):
         plt.figure(3)
         # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
         plt.plot(Hk, Rk, '*', label = 'Vp/Vs Kanamori')
-        plt.plot(H, R, '*', label = 'Vp/Vs', color = "red")
+        #plt.plot(H, R, '*', label = 'Vp/Vs', color = "red")
         plt.title("Vp/Vs as a function of crustal thickness H")
         plt.ylabel("Vp/Vs")
         plt.legend(loc=2)
@@ -187,4 +187,4 @@ if __name__== '__main__' :
 ### less stns in the geochron dictionary then in the parameter dictionary.
     geochron = [(key, value['R'], value['Vp'], value['H'], stnchron[key]) for key, value in stdict.items() if key in stnchron and stnchron[key]]
 
-    plot(prmdata = params, geodata = geochron, plottype = ["param","geochron", "kanamori"][1] )
+    plot(prmdata = params, geodata = geochron, plottype = ["param","geochron", "kanamori"][:] )
