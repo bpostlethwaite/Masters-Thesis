@@ -64,7 +64,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   double dr = (r2-r1)/(nr-1);
   double r[nr];
 
-  // R limits
+  // H limits
   int nh = 200;
   double h1 = 25.;
   double h2 = 45.;
