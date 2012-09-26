@@ -10,7 +10,7 @@ addpath functions
 
 %% Variables
 homedir = getenv('HOME');
-sacfolder = '/media/TerraS/CN';
+sacfolder = '/media/TerraS/CNSN';
 databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
