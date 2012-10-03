@@ -115,7 +115,7 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200)));% * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
@@ -124,108 +124,118 @@ end
 %crec = performCurveletDenoise(brec,dt,thresh);
 %% 7) Get tps and IRLS Newtons Method to find regression Tps
 if 0
-    t1 = db.t1; 
+    t1 = db.t1;
     t2 = db.t2;
 else
     t1 = 2.0;
     t2 = 6.5;
 end
 adjbounds = true;
-% 
-while adjbounds 
+%
+while adjbounds
     t1n = ' ';
     t2n = ' ';
     [~,it] = max(brec(:,round(t1/dt) + 1: round(t2/dt)) + 1,[],2);
     tps = (it + round(t1/dt)-1)*dt;
     h = figure(3311);
-        plot(1:length(tps),tps,'*')
-        title('Check bounds and tighten and adjust accordingly')
-    t1n = input('Enter a new lower bound or "y" to accept or "b" to enter banish mode: ', 's');
+    clf(h)
+    plot(pslow, tps,'*')
+    title('Check bounds and tighten and adjust accordingly')
+    t1n = input('Enter a new lower bound or "y" to accept: ', 's');
     if str2num(t1n) % Check if input is a number
         t1 = str2num(t1n); % If it is use number as lower bound
-        t2n = input('Enter a new higher bound or "y" to accept or "b" to enter banish mode: ', 's');
+        t2n = input('Enter a new higher bound or "y" to accept: ', 's');
         if str2num(t2n) % Check if 2nd input is a number
             t2 = str2num(t2n); %#ok<*ST2NM> % If it is use num as upper bound
         end
         
     elseif (t1n == 'y') || (t2n == 'y') % If user enters 'y' move on
-        adjbounds = false; % break loop
-    
-    elseif (t1n == 'b') || (t2n == 'b') % If user enters 'b' enter banish mode
+        % Enter banish mode
         banish = true;
-        fprintf('Banish Mode\n')
-        b1 = t1;
-        b2 = t2;
-        
-        while banish %Stay in banish mode till we get a 'y' or a 'b'
-            t1n = ' ';
-            t2n = ' ';
-            h = figure(3311);
-                hold on
-                plot(1:length(tps),tps,'*')
-                plot(1:length(tps), b1, ':r')
-                plot(1:length(tps), b2, ':r')
-                title('Enter bounds all traces outside bounds will be removed')
-            t1n = input('Enter a new lower bound or "y" to accept or "b" to LEAVE banish mode: ', 's');
-            if str2num(t1n) % Check if input is a number
-                b1 = str2num(t1n); % If it is use number as lower bound
-                plot(1:length(tps), b1, ':r')
-                t2n = input('Enter a new higher bound or "y" to accept or "b" to LEAVE banish mode: ', 's');
-                if str2num(t2n) % Check if 2nd input is a number
-                    b2 = str2num(t2n); % If it is use num as upper bound
-                    plot(1:length(tps), b2, ':r')
-                end
-                
-            elseif (t1n == 'y') || (t2n == 'y')
-                % If select yes, kill all RFs outside range
-                ind = (tps < b1) | (tps > b2);
-                tps(ind) = [];
-                pslow(ind) = [];
-                brec(ind,:) = [];
-                banish = false;
-                hold off
-            elseif (t1n == 'b') || (t2n == 'b')
-                banish = false;
-                hold off
+        bound = 1;
+        while banish %Stay in banish mode till we get a 'y' or a 'x'
+            
+            % Compute newton fit
+            if mean(tps) < 4
+                H = 30;
+            elseif mean(tps) < 4.4
+                H = 33;
+            elseif mean(tps) < 4.6
+                H = 36;
             else
-                fprintf('Sorry %s or %s is bad input\n', t1n, t2n) 
+                H = 40;
+            end
+            alpha = 6.6;
+            beta = 3.5;
+            tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
+            itermax = 300; % Stop if we go beyond this iteration number
+            damp = 0.2;
+            warning off MATLAB:plot:IgnoreImaginaryXYPart
+            warning off MATLAB:nearlySingularMatrix
+            [ Tps,H,alpha,beta ] = ...
+                newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp,h);
+            
+            % Compute and show bounds
+            changebounds = true;
+            while changebounds
+                tup = Tps + bound;
+                tlw = Tps - bound;
+                figure(h);
+                clf(h)
+                hold on
+                plot(pslow( (tps < tlw) | (tps > tup) ), ...
+                    tps( (tps < tlw) | (tps > tup) ),'r*')
+                plot(pslow( (tps >= tlw) & (tps <= tup) ), ...
+                    tps( (tps >= tlw) & (tps <= tup) ),'b*')
+                plot(pslow, Tps, 'g')
+                bline = plot(pslow, tup, '--r', pslow, tlw, '--r');
+                hold off
+                title(sprintf(['Current bound = %1.2f\n'...
+                    'Red stars will be removed'], bound))
+                t1n = input(['Enter a new bound, "r" to remove red' ...
+                    ' stared traces or "y" to accept: '], 's');
+                
+                % Check input, kill outside bounds and repeat or skip and
+                % finish
+                if str2num(t1n) % Check if input is a number
+                    bound = str2num(t1n); % If it is use number as lower bound
+                    
+                elseif (t1n == 'r')
+                    ind = (tps < tlw) | (tps > tup);
+                    tps(ind) = [];
+                    pslow(ind) = [];
+                    brec(ind,:) = [];
+                    Tps(ind) = [];
+                    changebounds = false;
+                elseif (t1n == 'y')
+                    banish = false;
+                    adjbounds = false;
+                    changebounds = false;
+                    hold off
+                else
+                    fprintf('Sorry %s or %s is bad input\n', t1n)
+                end
             end
         end
         
     else
-        fprintf('Sorry %s or %s is bad input\n', t1n, t2n) 
+        fprintf('Sorry %s or %s is bad input\n', t1n, t2n)
     end
-            
+    
+    
+    close(h)
 end
-close(h)
 % Copy final agreed values for saving.
-% Starting guesses for physical paramaters
-% The conditional system is a crude way of stabilizing newtons method by
-% a smarter first guess based on the mean P/S travel time difference
-if mean(tps) < 4
-    H = 30; 
-elseif mean(tps) < 4.4
-    H = 33;
-elseif mean(tps) < 4.6
-    H = 36;
-else
-    H = 40;
-end
-alpha = 6.6;
-beta = 3.5;
-tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
-itermax = 300; % Stop if we go beyond this iteration number
-damp = 0.2;
-warning off MATLAB:plot:IgnoreImaginaryXYPart
-warning off MATLAB:nearlySingularMatrix
-[ Tps,H,alpha,beta ] = newtonFit(H,alpha,beta,pslow',tps,itermax,tol,damp);
+
+
 
 %% 8) Grid and Line Search
 [ results ] = GridSearch(brec(:,1:round(45/dt)), Tps', dt, pslow);
-%[ results ] = GsearchKanamori(brec,dt,pslow);
+[Rkan, Hkan, ~] = fastgridsearchKAN( brec(:,1:round(45/dt))', dt, pslow);
 %% 9) Bootstrap Error calculation
 nmax = 1024; % number of bootstrap iterations
-[bootVp, bootR, bootH, bootVpRx, bootHx] = bootstrap(brec(:,1:round(45/dt)), Tps, dt, pslow, nmax);
+[bootVp, bootR, bootH, bootVpRx, bootHx] = ...
+    bootstrap(brec(:,1:round(45/dt)), Tps, dt, pslow, nmax);
 %% Close parallel system
 %matlabpool close
 %% Viewers

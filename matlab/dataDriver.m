@@ -16,7 +16,7 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
-station = 'LAIN';
+station = 'SILO';
 %{
 ACKN
 AP3N 
@@ -29,7 +29,7 @@ FRB
 GALN
 GIFN
 ILON
-LAIN
+LAIN 
 MALO
 MLON
 ORIO
@@ -37,7 +37,7 @@ PEMO
 PLVO
 SEDN
 SILO
-SNPN
+SNPN <-
 SRLN
 TYNO
 ULM
@@ -101,6 +101,10 @@ fprintf('Old Data:\n')
 fprintf('Vp is %f +/- %1.3f km/s\n',db.vbest, db.stdVp)
 fprintf('R is %f +/- %1.3f \n',db.rbest, db.stdR )
 fprintf('H is %f +/- %1.3f \n',db.hbest, db.stdH )
+
+fprintf('\nKanamori data\n')
+fprintf('R is %f \n',Rkan)
+fprintf('H is %f kms\n',Hkan)
 
 fprintf('\nNew Data:\n')
 fprintf('Vp is %f +/- %1.3f km/s\n',dbn.vbest, dbn.stdVp )
