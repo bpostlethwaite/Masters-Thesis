@@ -70,7 +70,7 @@ end
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 viewFncs = 0;
-discardBad = 1;
+discardBad = 0;
 rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,~] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1, viewFncs, discardBad);
@@ -86,13 +86,13 @@ if discardBad
     pslow( ind ) = [];
 end
 %% 6) Filter Impulse Response
-if loadflag
+if 0
     fLow = db.filterLow;
     fHigh = db.filterHigh;
 else
     fLow = 0.04;
-    fHigh = 0.9;
-end    
+    fHigh = 3;
+end  
 numPoles = 2;
 brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
 %brec = rec;
@@ -115,7 +115,7 @@ pscale = (pslow + min(pslow)).^2;
 pscale = pscale/max(pscale);
 
 for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
+    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200)));% * pscale(ii);
     %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
 end
 %% Curvelet Denoise
@@ -123,7 +123,7 @@ end
 %thresh = 0.3;
 %crec = performCurveletDenoise(brec,dt,thresh);
 %% 7) Get tps and IRLS Newtons Method to find regression Tps
-if loadflag
+if 0
     t1 = db.t1; 
     t2 = db.t2;
 else
