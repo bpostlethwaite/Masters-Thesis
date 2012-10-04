@@ -107,7 +107,6 @@ for i in range(5, 4, -1):
         # Detrend Vp/Vs 3D Gsearch data
         Rdtr = R - (regrB -  np.mean(regrB))
 
-
         plt.figure(num = 1 - i, figsize = (10,12) )
         # see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
         ax1 = plt.subplot(211)
