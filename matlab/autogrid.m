@@ -19,18 +19,18 @@ while ischar(tline)
     [ v, r, h, ~] = G3Dsearch(db.rec', db.dt, db.pslow, 150);
     
     fprintf('%s\n',station)
-    %     fprintf('--- Kanamori -----\n')
-    %     fprintf('R = %f\n', kr)
-    %     fprintf('H = %f\n', kh)
-    %     fprintf('--- Bostock -----\n')
-    %     fprintf('Vp = %f\n', bv)
-    %     fprintf('R = %f\n', br)
-    %     fprintf('H = %f\n', bh)
-    %fprintf('--- 3Dsearch -----\n')
+%     fprintf('--- Kanamori -----\n')
+%     fprintf('R = %f\n', kr)
+%     fprintf('H = %f\n', kh)
+%     fprintf('--- Bostock -----\n')
+%     fprintf('Vp = %f\n', bv)
+%     fprintf('R = %f\n', br)
+%     fprintf('H = %f\n', bh)
+%     fprintf('--- 3Dsearch -----\n')
     fprintf('Vp = %f\n', v)
     fprintf('R = %f\n', r)
     fprintf('H = %f\n', h)
-   
+    
     s.(station).('Vp') = v;
     s.(station).('R') = r;
     s.(station).('H') = h;
