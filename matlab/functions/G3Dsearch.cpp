@@ -112,7 +112,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
 
         }
         // add the mean of the two wieghted impulse estimate sums.
-        stack3d[ih * ir * iv + ir * iv + iv] = (adjtps * sumps + adjtpps * sumpps + adjtpss * sumpss) / nrecs;
+        stack3d[ih + nr * ir + nr * nv * iv] = (adjtps * sumps + adjtpps * sumpps + adjtpss * sumpss) / nrecs;
         sumps = sumpps = sumpss = 0;
       }
     }
@@ -126,8 +126,8 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
     for( ir = 0; ir < nr; ir++ ) {
       for( iv = 0; iv < nv; iv++ ) {
         // If we find a value greater than the current max, update max
-        if( stack3d[ih * ir * iv + ir * iv + iv] > max ) {
-          max = stack3d[ih * ir * iv + ir * iv + iv];
+        if( stack3d[ih + nr * ir + nr * nv * iv] > max ) {
+          max = stack3d[ih + nr * ir + nr * nv * iv];
           ind[0] = ih;
           ind[1] = ir;
           ind[2] = iv;
