@@ -94,7 +94,7 @@ else
     fHigh = 3;
 end  
 numPoles = 2;
-brec = fbpfilt(rec,dt,fLow,fHigh,numPoles,0);
+brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 %brec = rec;
 %% Run a few L1 iterations
 %{
@@ -152,7 +152,7 @@ while adjbounds
     elseif (t1n == 'y') || (t2n == 'y') % If user enters 'y' move on
         % Enter banish mode
         banish = true;
-        bound = 1;
+        bound = 0.4;
         while banish %Stay in banish mode till we get a 'y' or a 'x'
             
             % Compute newton fit
