@@ -1,17 +1,18 @@
-#!/bin/python
+#!/usr/bin/python2
 # preprawdata takes directory of raw seismograms and
 # 1) Seperates into seperate station and event directories
 # 2) Loops through event folders and performs:
 #     a)detrend b)demean c)taper d)rotate e)rename
 
 import os, os.path, re, shutil, sys
-
+#from obspy.core import read
 #############################################################
 # Seperate Data into Event Folders                          #
 #############################################################
 # Directories
 basedir = '/media/TerraS'
 rawdatadir = os.path.join(basedir,'BEN')
+
 
 # Following is for renaming event dirs based on the sac file name format.
 # Build Dictionaries.
@@ -37,6 +38,7 @@ def rehashdate(match):
     yrday = match.group(2)
     hour = match.group(3)
     minute = match.group(4)
+
     if yr in leapyrs:
         month = yrdaysleap[int(yrday)-1][0]
         day = yrdaysleap[int(yrday)-1][1]
@@ -47,30 +49,71 @@ def rehashdate(match):
 
 
 # Define Matching criteria
-reg = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
+reg = re.compile(r'^(\d{4})\.(\d{3})\.(\d{2})\.(\d{2})\.(\d{2})\.\d{4}\.(\w{2})\.(\w{4})\.\.(\w{3}).*')
 files = os.listdir(rawdatadir)
 nfiles = len(files)
 count = 0
+evd = {}
+
 for d in files:
     try:
-        count += 1
         m1 = reg.match(d)
         fullfile = os.path.join(rawdatadir,d)
         date = m1.group(1).split('.')
-        network = m1.group(2)
-        station = m1.group(3)
-        event =  date[0][2:4]+date[1]+date[2]
+        station = m1.group(7)
+        event =  rehashdate(m1)
+        ndir = os.path.join(basedir, "CN", station, event)
+        # Problem is that the different components have slightly different
+        # event times. So we have to check only up to the hour, not minute.
+        # Then move into the right folder.
+        # If truncated entry has not made it into dictionary,
+        # create one, and add full entry.
+        # If it is, use the full ndir from previous similar event name.
+        if ndir[:-2] not in evd:
+            evd[ndir[:-2]] = ndir
         try:
-            ndir = os.path.join(basedir, network, station, event)
-            if not os.path.exists(ndir):
-                os.makedirs(ndir)
-            shutil.copy(fullfile, ndir + '/' + d)
+            if not os.path.exists(evd[ndir[:-2]]):
+                os.makedirs( evd[ndir[:-2]] )
+
+            count += 1
+            shutil.copy( fullfile, evd[ndir[:-2]] )
             sys.stdout.write('copied  [%d%%]\r' %(count*100/nfiles))
             sys.stdout.flush()
         except AttributeError:
             print 'problem copying file: ', d
-        
+
+
     except AttributeError:
         print 'could not make match on: ', d
 
+
+### GET STATION INFO FROM DATA
+
+# date = 1
+# net = 2
+# stn = 3
+# comp = 4
+# d = {}
+
+# ss = set(['SHWN', 'NOTN', 'ELEF', 'CTSN', 'HOWN', 'VTIN', 'MNGN', 'PNGN', 'SHMN', 'KIMN', 'DORN', 'EA06', 'CRLN', 'MANN', 'ARTN'])
+
+# for event in events:
+#     m = reg.match(event)
+#     if m.group(stn) in ss:
+#         s = read(os.path.join(davedir, event))
+#         d[ m.group(stn) ] = {
+#             "network" : s[0].stats.network,
+#             "lat" : float(s[0].stats.sac['stla']),
+#             "lon" : float(s[0].stats.sac['stlo']),
+#             "start" : float(0.),
+#             "stop" : float(0.),
+#             "status": "not aquired"
+#             }
+
+#         ss.remove(m.group(stn))
+
+# stdict = json.loads( open(dbfile).read() )
+# stdict.update(d)
+#print json.dumps(stdict, sort_keys = True, indent = 4 )
+#open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2))
 
