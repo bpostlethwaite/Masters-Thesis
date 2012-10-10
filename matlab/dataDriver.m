@@ -16,7 +16,7 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
-station = 'SILO';
+station = 'YOSQ';
 %{
 ACKN
 AP3N 
@@ -37,7 +37,7 @@ PEMO
 PLVO
 SEDN
 SILO
-SNPN <-
+SNPN 
 SRLN
 TYNO
 ULM
@@ -95,7 +95,7 @@ dbn.t1 = t1;
 dbn.t2 = t2;
 %% Plot the results if we completed the processing
 close all
-plotStack(dbn);
+%plotStack(dbn);
 %plotStack(db);
 fprintf('Old Data:\n')
 fprintf('Vp is %f +/- %1.3f km/s\n',db.vbest, db.stdVp)
