@@ -34,9 +34,9 @@ gvr = rec'; % rotate
 gvr = gvr(:); % vectorize
 
 %% Grid serarch for r and H
-
+grid = zeros(nr,nh);
 f2 = sqrt((1 / v)^2 - p2);
-for ir = 1:nr
+parfor ir = 1:nr
     for ih = 1:nh
         f1 = sqrt((r(ir) / v)^2 - p2);
         t1 = h(ih) * (f1 - f2);

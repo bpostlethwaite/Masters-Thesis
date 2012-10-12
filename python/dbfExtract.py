@@ -9,7 +9,7 @@
 import os, json
 from dbfpy import dbf
 
-datafile = os.environ['HOME'] + "/thesis/stationChrons.json"
+datafile = os.environ['HOME'] + "/thesis/stnChrons.json"
 epochdata = open(os.environ['HOME'] + '/thesis/epoch.json')
 epochdict = json.loads( epochdata.read() )
 

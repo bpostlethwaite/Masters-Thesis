@@ -27,53 +27,29 @@ nbins = length(pslow); % Number of bins we now have.
 %% 4) Normalize
 modnorm = 0;
 dt = header{1}.DELTA;
-if modnorm
-    modratio = zeros(1,size(ptrace,1));   
-    
-    for ii = 1:size(ptrace,1)
-        t1 = round( (header{ii}.T1 - header{ii}.B) / dt);
-        t3 = round( (header{ii}.T3 - header{ii}.B) / dt);
-        t0 = t1 - round(20/dt);
-        if t0 < 1
-            t0 = 1;
-        end
-        m1 = var(ptrace(ii,  t1 : t3 ));
-        m0 = var(ptrace(ii, t0 : t1 - round(2/dt)));
-        modratio(ii) = m1/m0;
+ptrace = diag(1./max(ptrace,[],2)) * ptrace;
+strace = diag(1./max(strace,[],2)) * strace;
 
-    end
-    modratio(modratio < 20) = 1;
-    modratio( (modratio < 100) & (modratio > 1) ) = 2;
-    modratio(modratio < 500 & modratio > 2) = 3;
-    modratio(modratio > 5) = 4;
-    ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
-    strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
-
-else
-    ptrace = diag(1./max(ptrace,[],2)) * ptrace;
-    strace = diag(1./max(strace,[],2)) * strace;
-end
-
-%% 5)  Window with Taper and fourier transform signal.
-viewtaper  = 0;
-adj = 0.1; % This adjusts the Tukey window used.
-[wft,vft,WIN] = TaperWindowFFT(ptrace,strace,header,adj,viewtaper);
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
     matlabpool('local', workers)
 end
+%% 5)  Window with Taper and fourier transform signal.
+adj = 0.1; % This adjusts the Tukey window used.
+[wft, vft] = TaperWindowFFT(ptrace,strace,header,adj,0);
+
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
-viewFncs = 0;
-discardBad = 0;
+discardBad = 1;
 rec = zeros(nbins,size(wft,2));
+
 parfor ii = 1:nbins
-    [r,~,~] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1, viewFncs, discardBad);
+    [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
     rec(ii,:) = real(ifft(r));
 end
 
@@ -81,7 +57,7 @@ end
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.
 if discardBad
-    ind = isnan(rec(:,1));
+    ind = isinf(betax);
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
@@ -93,9 +69,9 @@ else
     fLow = 0.04;
     fHigh = 3;
 end  
-numPoles = 2;
+numPoles = 3;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
-%brec = rec;
+
 %% Run a few L1 iterations
 %{
 userdir = getenv('HOME');
@@ -111,13 +87,8 @@ end
 %}
 %% Rescale by slowness
 % Scale by increasing p value
-pscale = (pslow + min(pslow)).^2;
-pscale = pscale/max(pscale);
-
-for ii=1:size(brec,1);
-    brec(ii,:) = brec(ii,:)/max(abs(brec(ii,1:1200))) * pscale(ii);
-    %brec(ii,:)=brec(ii,:)/pslow(ii)^.2;    
-end
+pscale = wrev(1./pslow.^2)';
+brec =  diag( pscale ./ max(abs(brec(:,1:1200)), [], 2)) * brec;
 %% Curvelet Denoise
 %
 %thresh = 0.3;
@@ -131,7 +102,7 @@ else
     t2 = 6.5;
 end
 adjbounds = true;
-%
+
 while adjbounds
     t1n = ' ';
     t2n = ' ';
@@ -152,7 +123,7 @@ while adjbounds
     elseif (t1n == 'y') || (t2n == 'y') % If user enters 'y' move on
         % Enter banish mode
         banish = true;
-        bound = 0.4;
+        bound = 0.3;
         while banish %Stay in banish mode till we get a 'y' or a 'x'
             
             % Compute newton fit
@@ -225,12 +196,11 @@ while adjbounds
     
     close(h)
 end
-% Copy final agreed values for saving.
-
-
 
 %% 8) Grid and Line Search
+tic
 [ results ] = GridSearch(brec(:,1:round(45/dt)), Tps', dt, pslow);
+toc
 [Rkan, Hkan, ~] = fastgridsearchKAN( brec(:,1:round(45/dt))', dt, pslow);
 %% 9) Bootstrap Error calculation
 nmax = 1024; % number of bootstrap iterations
@@ -261,4 +231,27 @@ t = [1:size(brec,2)] * dt;
     end
 %}
 
-
+%% Junk Stff
+% if modnorm
+%     modratio = zeros(1,size(ptrace,1));   
+%     
+%     for ii = 1:size(ptrace,1)
+%         t1 = round( (header{ii}.T1 - header{ii}.B) / dt);
+%         t3 = round( (header{ii}.T3 - header{ii}.B) / dt);
+%         t0 = t1 - round(20/dt);
+%         if t0 < 1
+%             t0 = 1;
+%         end
+%         m1 = var(ptrace(ii,  t1 : t3 ));
+%         m0 = var(ptrace(ii, t0 : t1 - round(2/dt)));
+%         modratio(ii) = m1/m0;
+% 
+%     end
+%     modratio(modratio < 20) = 1;
+%     modratio( (modratio < 100) & (modratio > 1) ) = 2;
+%     modratio(modratio < 500 & modratio > 2) = 3;
+%     modratio(modratio > 5) = 4;
+%     ptrace = diag(modratio) * diag(1./max(ptrace,[],2)) * ptrace;
+%     strace = diag(modratio) * diag(1./max(strace,[],2)) * strace;
+% 
+% else

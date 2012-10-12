@@ -54,7 +54,7 @@ gvr = rec'; %rotate
 gvr = gvr(:); %vectorize
 
 %% Grid search for Vp,R.
-for iv=1:nv
+parfor iv=1:nv
   for ir=1:nr
      f1=sqrt((r(ir)/v(iv))^2-p2);
      f2=sqrt((1/v(iv))^2-p2);
