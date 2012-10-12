@@ -17,6 +17,8 @@ shellscripts/get_tt
 *.o
 *.so
 *.pyc
+*.mexa32
+*.mexa64
 
 # Packages #
 ############

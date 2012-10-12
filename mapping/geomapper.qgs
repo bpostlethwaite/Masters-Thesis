@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-143.270680</xmin>
-            <ymin>32.360505</ymin>
-            <xmax>-50.401960</xmax>
-            <ymax>92.541585</ymax>
+            <xmin>-143.065194</xmin>
+            <ymin>32.461847</ymin>
+            <xmax>-50.473506</xmax>
+            <ymax>89.341907</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,9 +29,9 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="1">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20120920182854226" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="stations20121010192259644" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="0">
@@ -77,13 +77,13 @@
         </ComposerMap>
         <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,18,-1,5,75,1,0,0,0,0" map="0" groupFont="Ubuntu,16,-1,5,75,1,0,0,0,0" layerFont="Ubuntu,14,-1,5,75,1,0,0,0,0" groupSpace="1" symbolSpace="2" symbolHeight="4" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,14,-1,5,75,1,0,0,0,0">
             <Model autoUpdate="1">
-                <LayerItem layerId="stations20120920182854226" text="stations">
+                <LayerItem layerId="stationGeology20120920192509665" text="stationGeology">
                     <VectorClassificationItemNg text="">
                         <symbols>
                             <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
                                 <layer pass="0" class="SimpleMarker" locked="0">
                                     <prop k="angle" v="0"/>
-                                    <prop k="color" v="166,103,193,255"/>
+                                    <prop k="color" v="166,106,164,255"/>
                                     <prop k="color_border" v="0,0,0,255"/>
                                     <prop k="name" v="circle"/>
                                     <prop k="offset" v="0,0"/>
@@ -93,13 +93,13 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
-                <LayerItem layerId="stationGeology20120920192509665" text="stationGeology">
+                <LayerItem layerId="stations20121010192259644" text="stations">
                     <VectorClassificationItemNg text="">
                         <symbols>
                             <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
                                 <layer pass="0" class="SimpleMarker" locked="0">
                                     <prop k="angle" v="0"/>
-                                    <prop k="color" v="166,106,164,255"/>
+                                    <prop k="color" v="85,179,93,255"/>
                                     <prop k="color_border" v="0,0,0,255"/>
                                     <prop k="name" v="circle"/>
                                     <prop k="offset" v="0,0"/>
@@ -2560,7 +2560,7 @@
                 <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield></displayfield>
+            <displayfield>station</displayfield>
             <label>0</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
@@ -2582,14 +2582,14 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stations20120920182854226</id>
-            <datasource>./stations.shp|layerid=0|subset="status" = 'processed-ok'</datasource>
+            <id>stations20121010192259644</id>
+            <datasource>./stations.shp</datasource>
             <title></title>
             <abstract></abstract>
             <layername>stations</layername>
@@ -2690,16 +2690,16 @@
             <customproperties/>
             <displayfield>network</displayfield>
             <label>1</label>
-            <labelfield>H</labelfield>
+            <labelfield>Vp</labelfield>
             <labelattributes>
-                <label fieldname="H" text="Label"/>
+                <label fieldname="Vp" text="Label"/>
                 <family fieldname="" name="Ubuntu"/>
-                <size fieldname="" units="pt" value="9"/>
-                <bold fieldname="" on="1"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
                 <italic fieldname="" on="0"/>
                 <underline fieldname="" on="0"/>
                 <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="255" blue="0" green="0"/>
+                <color fieldname="" red="255" blue="0" green="255"/>
                 <x fieldname=""/>
                 <y fieldname=""/>
                 <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
@@ -2709,7 +2709,7 @@
                 <buffersize fieldname="" units="pt" value="1"/>
                 <bufferenabled fieldname="" on=""/>
                 <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
+                <selectedonly on="1"/>
             </labelattributes>
             <edittypes>
                 <edittype type="0" name="H"/>
