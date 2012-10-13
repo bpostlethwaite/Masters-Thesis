@@ -1,9 +1,24 @@
-function [ vbest, rbest, hbest ] = fastgrid(rec,tps,dt,pslow) %#codegen
+function [ results ] = gridsearchMB(rec,tps,dt,pslow)
 %GRIDSEARCH Summary of this function goes here
 %
-% FUNCTION [vbest,rbest,hbest] = fastgrid(REC,DT,PSLOW,T1,T2);
+% FUNCTION [vbest,rbest,hbest] = GRIDSEARCH(REC,DT,PSLOW,T1,T2);
 %
-% Same as gridsearch.m but trimmed of unnecessary stuff for speed.
+% Function computes best homogeneous crustal model for
+% a suite of receiver functions REC of dimensions NTRACE
+% by NTIMES, given the sample interval DT, the corresponding
+% slownesses PSLOW (of dimension NTRACE) and a window
+% defined by T1 and T2. This window is specified by user
+% to encompass timing of direct Ps conversion from Moho
+% as tightly as possible. Times TPS for conversion are picked
+% as location of maxima for traces within this window.
+%
+% Output parameters are estimate bulk P-velocity VBEST,
+% Vp/Vs ratio RBEST and crustal thickness HBEST.
+
+% First find arrival of direct conversions.
+% Find timing of direct conversion.
+
+
 %% Grid parameters.
 adjtpps = 0.7;
 adjtpss = 0.3;
@@ -25,7 +40,7 @@ r=r1:dr:r2;
 % thickness h
 nh=200;
 h1=25;
-h2=45;
+h2=50;
 dh=(h2-h1)/(nh-1);
 h=[h1:dh:h2];
 
@@ -39,9 +54,7 @@ gvr = rec'; %rotate
 gvr = gvr(:); %vectorize
 
 %% Grid search for Vp,R.
-stpps = zeros(nv,nr);
-stpss = stpps;
-for iv=1:nv
+parfor iv=1:nv
   for ir=1:nr
      f1=sqrt((r(ir)/v(iv))^2-p2);
      f2=sqrt((1/v(iv))^2-p2);
@@ -51,20 +64,18 @@ for iv=1:nv
      stpss(iv,ir) = -mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
   end
 end
+%stackvr=(stpps+stpss)/2;
 stackvr=(adjtpps*stpps + adjtpss*stpss);
 % Find max values indices
 smax=max(max(stackvr));
 [iv,ir]=find(stackvr == smax);
 vbest=v(iv);
 rbest=r(ir);
+
 %% Line search for H.
 
 f1=sqrt((rbest/vbest)^2-p2);
 f2=sqrt((1/vbest)^2-p2);
-htps = zeros(1,nh);
-htpps = htps;
-htpss = htps;
-
 for ih=1:nh
   tps=h(ih)*(f1-f2);
   tpps=h(ih)*(f1+f2);
@@ -75,10 +86,31 @@ for ih=1:nh
 end
 
 % Find max values indices
+%stackh=(htps+htpps+htpss)/3;
 stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
-
-[~,ih]=max(stackh);
+[hmax,ih]=max(stackh);
 hbest=h(ih);
 
+% Get best estimates of travel times
+% using best parameters
+tps = hbest*(f1-f2);
+tpps = hbest*(f1+f2);
+tpss = 2*hbest*f1;
+
+%% Pack results into struct
+results.method = 'bostock';
+results.rbest = rbest;
+results.vbest = vbest;
+results.hbest = hbest;
+results.stackvr = stackvr;
+results.stackh = stackh;
+results.rRange = r;
+results.vRange = v;
+results.hRange = h;
+results.smax = smax;
+results.hmax = hmax;
+results.tps = tps;
+results.tpps = tpps;
+results.tpss = tpss;
 
 end

@@ -23,10 +23,10 @@ if type
         axis square
         colorbar
         hold on
-        plot(db.rbest,db.vbest,'w+')
-        plot(db.rbest,db.vbest,'ko')
+        plot(db.rbest, db.vbest, 'w+')
+        plot(db.rbest, db.vbest, 'ko')
         contour(db.rRange,db.vRange,db.stackvr,...
-            [db.smax - std(db.bootVpRx), db.smax - std(db.bootVpRx)],'k-')
+            [db.smax - db.stdsmax, db.smax - db.stdsmax], 'k-')
         hold off
         xlab=xlabel('R');
         ylab=ylabel('V_P [km/s]');
@@ -34,7 +34,7 @@ if type
         set(ylab,'FontName','Helvetica','FontSize',16);
         title(sprintf('%s\nVp = %1.3f +/- %1.3f km/s\nR = %1.3f +/- %1.3f',...
             db.station, db.vbest, db.stdVp, db.rbest, db.stdR));
-    
+
       subplot(2,1,2)
         set(gca,'FontName','Helvetica','FontSize',16,...
             'Clipping','off','layer','top');
@@ -43,31 +43,33 @@ if type
         hlim=axis;
         plot([db.hbest,db.hbest],[hlim(3),hlim(4)],'g')
         plot([hlim(1),hlim(2)],...
-            [db.hmax - std(db.bootHx), db.hmax - std(db.bootHx)],'r')
+            [db.hmax - db.stdhmax, db.hmax - db.stdhmax],'r')
         hold off
         xlab=xlabel('H [km]');
         ylab=ylabel('Stack Ampltitude');
         set(xlab,'FontName','Helvetica','FontSize',16);
         set(ylab,'FontName','Helvetica','FontSize',16);
         title(sprintf('H = %3.2f +/- %1.3f km',db.hbest, db.stdH));
-    
+
 else
     figure(23)
     set(gca,'FontName','Helvetica','FontSize',16,...
             'Clipping','off','layer','top');
-        imagesc(db.hRange,db.rRange,db.stackvr);
+        imagesc(db.hRange, db.rRange, db.stackhr);
         axis xy
         axis square
         colorbar
         hold on
         plot(db.hbest,db.rbest,'w+')
         plot(db.hbest,db.rbest,'ko')
+        contour(db.rRange,db.vRange,db.stackhr,...
+            [db.smax - db.stdsmax, db.smax - db.stdsmax], 'k-')
         hold off
         xlab=xlabel('H');
         ylab=ylabel('R [Vp/Vs]');
         set(xlab,'FontName','Helvetica','FontSize',16);
         set(ylab,'FontName','Helvetica','FontSize',16);
-        title(sprintf(' H = %1.3f R = %1.3f',db.hbest,db.rbest));
+        title(sprintf(' H = %1.3f R = %1.3f',db.hbest, db.rbest));
 end
 
     hfig = figure(29);

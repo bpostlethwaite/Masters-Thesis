@@ -1,4 +1,4 @@
-function [Vp, R, H, VpRmax, Hmax] = bootstrap(rec, Tps, dt, pslow, nmax)
+function [Vp, R, H, VpRmax, Hmax] = bootstrapMB(rec, Tps, dt, pslow, nmax)
 % Bootstap error calculation for grid search confidence.
 % [Vp, R, H, VpRmax, Hmax] = bootstrap(rec, Tps, dt, pslow, nmax)
 % Outputs are arrays of best estimates of Vp, R and H along with the
@@ -17,7 +17,7 @@ VpRmax = zeros(1, nmax);
 Hmax = zeros(1, nmax);
 parfor ii = 1:nmax
     ind = randi(n, n, 1);
-    [Vp(ii), R(ii), H(ii), VpRmax(ii), Hmax(ii) ] = fastgridsearch( rec(:, ind), Tps(ind), dt, pslow(ind) );
+    [Vp(ii), R(ii), H(ii), VpRmax(ii), Hmax(ii) ] = gridsearchMBC( rec(:, ind), Tps(ind), dt, pslow(ind) );
 end
 
 

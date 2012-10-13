@@ -144,7 +144,7 @@ def setStatus(s, stdict):
     for k in s.keys():
         # If user has selected bad station, don't change it.
         status = "aquired"
-        if 'poorEvents' in s[k] and s[k]['poorEvents'] > 5:
+        if 'poorEvents' in s[k] and s[k]['poorEvents'] >= 1:
             status = "picked"
         if 'stdVp' in s[k]:
             if s[k]['stdVp'] <= 0.5:
