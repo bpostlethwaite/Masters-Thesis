@@ -55,7 +55,7 @@ def buildStations(stdict, cnsnlist):
 
     stdict = dict(stdict.items() + d.items()) # Merge the old dict with new items
 
-    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2 ))
 
 def json2shapefile(stdict):
     ''' Converts the stations.json data into a shapefile for usage with
@@ -128,13 +128,29 @@ def matStats(statdict, modtime, force = False):
             db = mat['db'][0,0]
             if station not in statdict:
                 statdict[station] = {}
+            # Shared data
             statdict[station]['processnotes'] = ''.join([''.join(c) for c in db['processnotes']])
-            statdict[station]['Vp'] = float(db['vbest'])
-            statdict[station]['R'] = float(db['rbest'])
-            statdict[station]['H'] = float(db['hbest'])
-            statdict[station]['stdVp'] = float(db['stdVp'])
-            statdict[station]['stdR'] = float(db['stdR'])
-            statdict[station]['stdH'] = float(db['stdH'])
+            # Specific Processing Data
+            try:
+                statdict[station]['mb'] = {}
+                statdict[station]['mb']['Vp'] = float(db['mb']['vbest'])
+                statdict[station]['mb']['R'] = float(db['mb']['rbest'])
+                statdict[station]['mb']['H'] = float(db['mb']['hbest'])
+                statdict[station]['mb']['stdVp'] = float(db['mb']['stdVp'])
+                statdict[station]['mb']['stdR'] = float(db['mb']['stdR'])
+                statdict[station]['mb']['stdH'] = float(db['mb']['stdH'])
+            except IndexError:
+                pass
+
+            try:
+                statdict[station]['km'] = {}
+                statdict[station]['km']['R'] = float(db['km']['rbest'])
+                statdict[station]['km']['H'] = float(db['km']['hbest'])
+                statdict[station]['km']['stdR'] = float(db['km']['stdR'])
+                statdict[station]['km']['stdH'] = float(db['km']['stdH'])
+            except IndexError:
+                pass
+
     return statdict
 
 def setStatus(s, stdict):
@@ -142,17 +158,19 @@ def setStatus(s, stdict):
     Note the default is aquired, since for this function to run the data
     must have been scanned'''
     for k in s.keys():
-        # If user has selected bad station, don't change it.
         status = "aquired"
         if 'poorEvents' in s[k] and s[k]['poorEvents'] >= 1:
             status = "picked"
-        if 'stdVp' in s[k]:
-            if s[k]['stdVp'] <= 0.5:
-                status = "processed-ok"
-            else:
-                status = 'processed-notok'
+        # CHANGE THIS BELOW TO A KANAMORI STATISTIC
+        if 'mb' in s[k]: # Set processing status by MB algo's Vp result
+            if 'stdVp' in s[k]['mb']:
+                if s[k]['mb']['stdVp'] <= 0.5:
+                    status = "processed-ok"
+                else:
+                    status = 'processed-notok'
         if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
             status = "data corruption"
+        # If user has selected bad station, don't change it.
         if k in stdict and stdict[k]['status'] == 'bad station':
             status = "bad station"
         s[k]['status'] = status
@@ -168,14 +186,19 @@ def updateStats(stdict, args):
     # Get list of downloaded stations
     modtime = float( open(updtime, 'r').read() )
     statdict = {}
+    # Loop through file statistics and .mat files
+    # and if modify time is later, collect data
+    # If force flag, collect regardless of the modification time
     statdict = fileStats(statdict, modtime, args.force)
     statdict = matStats(statdict, modtime, args.force)
     statdict = setStatus(statdict, stdict)
+    # Set the station.json stats to the collected stats
     for station in statdict.keys():
         for attribute in statdict[station].keys():
             stdict[station][attribute] = statdict[station][attribute]
 
-    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2 ))
+    # Update the modification time of last station.json update
     open(updtime,'w').write( str(time.time()) )
 
 def compare(A, B, op):
@@ -197,10 +220,16 @@ def queryStats(stdict, args):
     value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
     operator = args.query[1]
     attrib = args.query[0]
-
-    return ({ k:v for k, v in stdict.items()
-              if (attrib in stdict[k]
-                  and compare(stdict[k][attrib], value, operator))  } )
+    if "::" in attrib:
+        method, attrib = attrib.split("::")
+        return ({ k:v for k, v in stdict.items()
+                  if (method in stdict[k]
+                      and attrib in stdict[k][method]
+                      and compare(stdict[k][method][attrib], value, operator))  } )
+    else:
+        return ({ k:v for k, v in stdict.items()
+                  if (attrib in stdict[k]
+                      and compare(stdict[k][attrib], value, operator))  } )
 
 def getStats(qdict, args, printer):
     ''' Filters the dictionary by a station list (pipedStations | command line list)
@@ -210,17 +239,26 @@ def getStats(qdict, args, printer):
         qdict = ( { k:v for k, v in qdict.items() if k in args.stationList } )
 
     if args.attribute:
-        for k in qdict.keys():
-            for attr in qdict[k].keys():
-                if attr not in args.attribute:
-                    del qdict[k][attr]
+        adict = {}
+        attrib = args.attribute
+        if "::" in attrib:
+            method, attrib = attrib.split("::")
+            for k in qdict.keys():
+                if attrib in qdict[k][method]:
+                    adict[k] = {}
+                    adict[k][method][attrib] = qdict[k][method][attrib]
+        else:
+            for k in qdict.keys():
+                if attrib in qdict[k]:
+                    adict[k] = {}
+                    adict[k][attrib] = qdict[k][attrib]
 
     if printer:
         if args.keys:
             for key in qdict.keys():
                 print key
         else:
-            print json.dumps(qdict, sort_keys = True, indent = 4)
+            print json.dumps(qdict, sort_keys = True, indent = 2)
 
     return qdict
 
@@ -236,12 +274,15 @@ def modifyData(stdict, args):
     for station in stations:
         if args.modify[0] == "remove":
             del stdict[station]
+        elif args.modify[1] == "remove":
+            attr = args.modify[0]
+            del stdict[station][attr]
         else:
             attr = args.modify[0]
             value = args.modify[1]
             stdict[station][attr] = value
 
-    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 4 ))
+    open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2 ))
 
 
 
@@ -262,10 +303,10 @@ if __name__== '__main__' :
                        help = "<stationA> <stationB> or pipe stations in. Default without arg is ALL stations")
 
     group.add_argument('-q','--query', nargs = 3,
-                        help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>")
+                        help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>, <attrib> can be a nested key like <attrib::attrib>")
 
     group.add_argument('-m','--modify', nargs = '+',
-                       help = "Either <station> <attribute> <value> or <station> <remove>." +
+                       help = "Either <station> <attribute> <value> or <station> <attribute> 'remove' or <station> 'remove'." +
                        "If you pipe data into program then it operates on all stations piped in and you leave <station> out." )
 
     parser.add_argument('-a','--attribute', nargs = '+',
