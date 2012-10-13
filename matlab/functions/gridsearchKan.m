@@ -1,4 +1,4 @@
-function [ rbest, hbest ] = GsearchKanamori(rec,dt,pslow)
+function [ results ] = gridsearchKan(rec, dt, pslow)
 %GSEARCHKANAMORI Grid Search as implemented in Kanamori, Zhu 2000
 %
 % Grid search over Tps TPpPs and TPpSs with parameters R (Vp/Vs) and H
@@ -34,7 +34,7 @@ gvr = rec'; % rotate
 gvr = gvr(:); % vectorize
 
 %% Grid serarch for r and H
-grid = zeros(nr,nh);
+stackhr = zeros(nr,nh);
 f2 = sqrt((1 / v)^2 - p2);
 parfor ir = 1:nr
     for ih = 1:nh
@@ -45,7 +45,7 @@ parfor ir = 1:nr
         r1 = mean(gvr(round(t1/dt)+1+[0:np-1]*nt));
         r2 = mean(gvr(round(t2/dt)+1+[0:np-1]*nt));
         r3 = mean(gvr(round(t3/dt)+1+[0:np-1]*nt));
-        grid(ir,ih) = w1*r1 + w2*r2 - w3*r3;
+        stackhr(ir,ih) = w1*r1 + w2*r2 - w3*r3;
     end
 end
 
@@ -54,5 +54,19 @@ smax = max(max(grid));
 [ir,ih] = find(grid == smax);
 hbest = h(ih);
 rbest = r(ir);
+
+%% Pack results into struct
+results.method = 'kanamori';
+results.rbest = rbest;
+results.v = v;
+results.hbest = hbest;
+results.stackhr = stackhr;
+results.rRange = r;
+results.hRange = h;
+results.smax = smax;
+results.tps = tps;
+results.tpps = tpps;
+results.tpss = tpss;
+
 
 end
