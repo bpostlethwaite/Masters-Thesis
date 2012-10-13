@@ -45,14 +45,18 @@ clear adj
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 discardBad = 1;
-rec = zeros(nbins,size(wft,2));
+Rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
-    rec(ii,:) = real(ifft(r));
+    Rec(ii,:) = real(ifft(r));
 end
 % if discardBad flag set simdecf will return Nan arrays where it did not
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.
+%% renew
+rec = Rec;
+pslow = Pslow;
+%%
 if discardBad
     ind = isinf(betax);
     rec( ind  , : ) = [];
