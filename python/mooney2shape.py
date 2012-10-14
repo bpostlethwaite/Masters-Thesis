@@ -10,39 +10,27 @@
 ###########################################################################
 import shapefile, os
 import fnmatch
-
-def find(seq, pattern):
-    pattern = pattern.lower()
-    for i, n in enumerate(seq):
-        if fnmatch.fnmatch(n.lower(), pattern):
-            return i
-    return -1
-
-def index(seq, pattern):
-    result = find(seq, pattern)
-    if result == -1:
-        raise ValueError
-    return result
+import numpy as np
+from plotTools import find
 
 
-shpfile = os.environ['HOME'] + '/thesis/mapping/mooneyGrid'
-crusttypes = os.environ['HOME'] + '/thesis/mapping/mooneyTypeGrid.txt'
-typekeys = os.environ['HOME'] + '/thesis/mapping/mooneyTypeGrid_key.txt'
-
+shpfile = os.environ['HOME'] + '/thesis/mapping/mooney/crust2layer'
+crusttypes = os.environ['HOME'] + '/thesis/mapping/mooney/TypeGrid.txt'
+typekeys = os.environ['HOME'] + '/thesis/mapping/mooney/TypeGrid_key.txt'
 
 
 
 #### BUILD FIELDS
-fields = []
-params = ['Vp','Vs','R','H','Rho']
-locs = ['UppCrust','MidCrust','LwrCrust','Mantle']
+
 #fields.append('TypeCode','CrustName')
-for param in params:
-    for loc in locs:
-        if param == 'H' and loc == 'Mantle':
-            fields.append("H_Total")
-        else:
-            fields.append(param + "_" + loc)
+#for param in params:
+#    for loc in locs:
+#        if param == 'H' and loc == 'Mantle':
+#            fields.append("H_Total")
+#        else:
+#            fields.append(param + "_" + loc)
+
+
 
 # Break Canada into 2x2 blocks
 # Go into typegrid and select
@@ -62,10 +50,10 @@ with open(crusttypes) as f:
 ### BUILD TYPE KEYS FROM FILE
 # Each individual profile is a 7 layer 1D-model with
 # 8 Columns of data storing:
-# 1) ice, 2) water, 3) soft sediments, 4) hard sediments,
-# 5) upper crust, 6) middle crust, 7) lower crust and 8) Mantle
+# 0) ice, 1) water, 2) soft sediments, 3) hard sediments,
+# 4) upper crust, 5) middle crust, 6) lower crust and 7) Mantle
 # Each type key has these 8 columns for each of 4 rows:
-# 1) P-wave, 2) S-wave, 3) Density and 4) Crustal Thickness
+# 0) P-wave, 1) S-wave, 2) Density and 3) Crustal Thickness
 # Also included next to the TypeKeyname is geological region type
 # and sediment and/or ice thickness
 typedict = {}
@@ -130,58 +118,92 @@ with open(typekeys) as f:
                 # Not really useful to this application
                 typedict[tkey]['txt'] = " ".join(info[1 : mk]).rstrip(',') #+ " " + " ".join(info[iy+1 : nk]).rstrip(',')
 
-            typedict[tkey]['seds'] = seds
-            typedict[tkey]['ice'] = ice
+            #typedict[tkey]['seds'] = seds
+            #typedict[tkey]['ice'] = ice
 
         else: # Parameter Lines: Just append as arrays
-            typedict[tkey]["params"].append(line.rstrip().split())
+            # Strip trailing characters and turn into floats and assign to a numpy array
+            typedict[tkey]["params"].append(np.array( map(float, [x.strip('.\n') for x in line.split()]) ) )
 
 
-# Now we have a big list of lon and lats for Canada
-# Associated with Ctypes and a big dictionary of
-# Ctype values. We need to link the two together.
+#['0', '0', '1.5', '18.', '3', '6.5', '6', 'inf.', '35']
 
-# Here we create a list with a tuple at each entry
-# The tuples first value is a tuple with lat/lon in it
-# The second value is a dictionary with all the values in it.
+# Now we have a dictionary full of the type information
+# such as Vp for the different layers. What we want is
+# an estimate for Vp for the crust as a whole
+# So we need to average parameters over layer thickness's
+# and include effects of ice and sedimentation.
+# Mooney, Laske and Masters, Crust 5.1: a global crustal model at 5x5 degrees, JGR, 103, 727-747, 1998.
+# Typedict[key][params] is:
+# 8 Columns of data storing:
+# 0) ice, 1) water, 2) soft sediments, 3) hard sediments,
+# 4) upper crust, 5) middle crust, 6) lower crust and 7) Mantle
+# Each type key has these 8 columns for each of 4 rows:
+# 0) P-wave, 1) S-wave, 2) Density and 3) Crustal Thickness
+# With the Crustal Thickness row 3) containing and 9th column
+# 8) Total Thickness
+# EXAMPLE:
+# ice   h20     ss      hs      uc      mc      lc      mnt    total
+# 3.81	1.5	3.8	4.3	6.1	6.6	7.2	7.9           Pwave
+# 1.94	0	2.1	2.5	3.5	3.8	4	4.5           Swave
+# 0.92	1.02	2.3	2.5	2.75	2.9	3.1	3.3           Density
+# 1.5	0	0.5	0	19	12	6	inf.	39    Thickness
+
 mooney = []
-for (lat,lon), key in mtypes:
-    mooney.append( ((lat,lon), typedict[key]) )
+for coords, key in mtypes:
+    vp = typedict[key]['params'][0][0:7] # Vp Ice -> lower crust
+    vs = typedict[key]['params'][1][0:7] # Vs Ice -> lower crust
+    h = typedict[key]['params'][3][0:7] # H Ice -> lower crust
+    ht = typedict[key]['params'][3][8] # Total thickness
+    ratio = h / ht
+    #print vp
+    mooney.append( (
+            coords,
+            key,
+            typedict[key]['txt'],
+            ( np.dot(vp, ratio),
+              np.dot(vs, ratio),
+              ht)) )
+
 
 # 45 characters in length! We will need to truncate this
 # Before adding to attribute table in GIS
-print max([len(d['txt']) for (_, d) in mooney])
+#print max([len(d['txt']) for (_, d) in mooney])
+
 
 ## Build Shapefile
 
-def json2shapefile(stdict):
-    ''' Converts the stations.json data into a shapefile for usage with
-    GIS programs such as QGIS'''
-    w = shapefile.Writer( shapeType = 4 )
+def mooney2shapefile(mooney):
+    """ transfer mooney data into a shapefile + attribute table """
+    w = shapefile.Writer( shapefile.POLYGON )
     # Set fields for attribute table
 
-    fields = ["Vp","R","H","stdVp","stdR","stdH"]
-    w.field("station", 'C', '6')
-    w.field("network", 'C', '10')
-    w.field("status", 'C', '16')
-    #w.field("Vp", "C", "5")
-    for field in fields:
-        w.field(field, 'C', '5')
+    w.field("mcode", 'C', '3')
+    w.field("Geotype", 'C', '30')
+    w.field("mVp", 'C', '6')
+    w.field("mVs", 'C', '6')
+    w.field("mH", 'C', '6')
 
-    for key in stdict.keys():
+    for (lon, lat), key, txt, (vp, vs, ht) in mooney:
         # Set lon & lat
-        w.point( stdict[key]["lon"], stdict[key]["lat"] )
-        values = []
-        for f in fields:
-            values.append( '{0:5.2f}'.format(stdict[key][f]) if f in stdict[key] else "None ")
+
+
+        w.poly( parts = [ [[lon, lat],
+                          [lon - 2, lat ],
+                          [lon - 2, lat - 2],
+                          [lon, lat - 2 ],
+                          [lon, lat]] ] )
+
         w.record( key,
-                  stdict[key]["network"],
-                  stdict[key]["status"],
-                  values[0],
-                  values[1],
-                  values[2],
-                  values[3],
-                  values[4],
-                  values[5] )
+                  txt,
+                  "{0:2.3f}".format(vp),
+                  "{0:2.3f}".format(vs),
+                  "{0:2.3f}".format(ht))
+
 
     w.save(shpfile)
+
+
+
+
+mooney2shapefile(mooney)

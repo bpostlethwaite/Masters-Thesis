@@ -25,6 +25,57 @@ shpfile = os.environ['HOME'] + '/thesis/mapping/stations'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
 updtime = os.environ['HOME'] + '/thesis/updtime.data'
 
+
+def flattenlist(a, result=None):
+    """Flattens a nested list.
+
+        >>> flattenlist([ [1, 2, [3, 4] ], [5, 6], 7])
+        [1, 2, 3, 4, 5, 6, 7]
+    """
+    if result is None:
+        result = []
+
+    for x in a:
+        if isinstance(x, list):
+            flattenlist(x, result)
+        else:
+            result.append(x)
+
+    return result
+
+def flattendict(a, sep, pfx = '', result = None):
+    """Flattens a nested dictionary.
+
+        >>> flattendict( {'a' : 3, 'b' : {'a' : 1, 'b' : 2} })
+        {'a' : 3, 'b::a' : 1, 'b::b' : 2}
+    """
+    if result is None:
+        result = {}
+
+    for k, v in a.items():
+        if isinstance(v, dict):
+            flattendict(v, sep, pfx = pfx + sep + k, result = result)
+        else:
+            result[k + pfx] = v
+
+    return result
+
+class Scoper(object):
+
+    def __init__(self, sep):
+        self.sep = sep
+
+    def flattendict(self, a):
+        return flattendict(a, self.sep)
+
+    def unscopekey(self, keys, result = None):
+        if isinstance(keys, list):
+            return [ k[ k.rfind(self.sep) + 1 :] for k in keys ]
+        else:
+            return keys[ keys.rfind(self.sep) + 1 :]
+
+
+
 def buildStations(stdict, cnsnlist):
     ''' Builds station database from a list of stations taken
     from the website:
@@ -212,7 +263,7 @@ def compare(A, B, op):
         'in': lambda A, B: B in A
         }[op](A, B)
 
-def queryStats(stdict, args):
+def queryStats(stdict, args, sep):
     ''' Queries the json dictionary structure containing stations for given
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
@@ -220,8 +271,8 @@ def queryStats(stdict, args):
     value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
     operator = args.query[1]
     attrib = args.query[0]
-    if "::" in attrib:
-        method, attrib = attrib.split("::")
+    if sep in attrib:
+        method, attrib = attrib.split(sep)
         return ({ k:v for k, v in stdict.items()
                   if (method in stdict[k]
                       and attrib in stdict[k][method]
@@ -231,7 +282,7 @@ def queryStats(stdict, args):
                   if (attrib in stdict[k]
                       and compare(stdict[k][attrib], value, operator))  } )
 
-def getStats(qdict, args, printer):
+def getStats(qdict, args, sep, printer):
     ''' Filters the dictionary by a station list (pipedStations | command line list)
     and by an attribute list (attrs). Then returns &| prints out data'''
 
@@ -239,19 +290,26 @@ def getStats(qdict, args, printer):
         qdict = ( { k:v for k, v in qdict.items() if k in args.stationList } )
 
     if args.attribute:
+        # Further trim the list by selecting only
+        # the stations that have the particular attribute
+        # and get rid of all other attributes.
         adict = {}
-        attrib = args.attribute
-        if "::" in attrib:
-            method, attrib = attrib.split("::")
+        attrib = args.attribute[0]
+        if sep in attrib:
+            method, attrib = attrib.split(sep)
             for k in qdict.keys():
-                if attrib in qdict[k][method]:
-                    adict[k] = {}
-                    adict[k][method][attrib] = qdict[k][method][attrib]
+                if method in qdict[k]:
+                    if attrib in qdict[k][method]:
+                        adict[k] = {}
+                        adict[k][method] = {}
+                        adict[k][method][attrib] = qdict[k][method][attrib]
         else:
             for k in qdict.keys():
+                print attrib
                 if attrib in qdict[k]:
                     adict[k] = {}
                     adict[k][attrib] = qdict[k][attrib]
+        qdict = adict
 
     if printer:
         if args.keys:
@@ -303,7 +361,7 @@ if __name__== '__main__' :
                        help = "<stationA> <stationB> or pipe stations in. Default without arg is ALL stations")
 
     group.add_argument('-q','--query', nargs = 3,
-                        help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>, <attrib> can be a nested key like <attrib::attrib>")
+                        help = "<attribute> < eq | ne | gt | gte | lt | lte | in > <value>, <attrib> can be a nested key like <attrib.attrib>")
 
     group.add_argument('-m','--modify', nargs = '+',
                        help = "Either <station> <attribute> <value> or <station> <attribute> 'remove' or <station> 'remove'." +
@@ -338,18 +396,20 @@ if __name__== '__main__' :
     else:
         args.stationList = False
 
+    sep = "::"
+
     if args.update:
         updateStats(stdict, args)
 
     if args.query:
-        stdict = queryStats(stdict, args)
-        getStats(stdict, args, printer = True)
+        stdict = queryStats(stdict, args, sep)
+        getStats(stdict, args, sep, printer = True)
 
     if args.printer != None:
         # if it has command line options assume stations
         if args.printer:
             args.stationList = args.printer
-        getStats(stdict, args, printer = True)
+        getStats(stdict, args, sep, printer = True)
 
     if args.modify:
         modifyData(stdict, args)
