@@ -7,12 +7,36 @@
 # IMPORTS
 ###########################################################################
 import os, json
-from dbutils import queryStats, getStats
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.signal import detrend
-from scipy.stats import pearsonr
-from matplotlib.backends.backend_pdf import PdfPages
+from dbutils import queryStats, getStats, Scoper
+#import matplotlib.pyplot as plt
+#import numpy as np
+#from scipy.signal import detrend
+#from scipy.stats import pearsonr
+#from matplotlib.backends.backend_pdf import PdfPages
+
+from itertools import chain
+
+
+
+def find(seq, pattern):
+    pattern = pattern.lower()
+    for i, n in enumerate(seq):
+        if fnmatch.fnmatch(n.lower(), pattern):
+             return i
+    return -1
+
+def index(seq, pattern):
+    result = find(seq, pattern)
+    if result == -1:
+        raise ValueError
+    return result
+
+def isin(seq, pattern):
+    result = find(seq, pattern)
+    if result == -1:
+        return False
+    else:
+        return True
 
 
 class Args(object):
@@ -29,34 +53,38 @@ class Args(object):
         self.keys = True
 
 class Params(object):
-    def __init__(self, fname, statlist):
-
-        self.name = fname
+    def __init__(self, fname, plist):
+        """ Takes a file name to json formatted data
+        with a bunch of stations as primary attributes, each with
+        a value that is also an attribute. whatever"""
         self._stns = []
-        self.stnd = json.loads( open(fname).read() )
-        for key in self.stnd.keys():
-            if "R" not in self.stnd[key] and "H" not in self.stnd[key]:
-                del self.stnd[key]
+        scp = Scoper("::")
+        # We want to make sure there are no namespace clashes
+        # when we unscope the attribute names. ie a::b -> b
+        assert len(plist) == len(set(scp.unscopekey(plist))), "plist has nonunique de-scoped names"
 
-        self._R = np.zeros(len(self.stnd))
-        self._Vp = np.zeros(len(self.stnd))
-        self._Vs = np.zeros(len(self.stnd))
-        self._H = np.zeros(len(self.stnd))
+        stationdata = json.loads( open(fname).read() )
+        for stn in stationdata.keys():
+            # Make sure all parameters exist for each station
+            # If they do, add station to list.
+            # Use the scoper to flatten json so we can check if
+            # scoped keys are in the dictionary. (allows us to search with
+            # depth into dictionary a::b = d['a']['b']
+            if len([p for p in plist if isin(
+                        scp.flattendict(stationdata[stn]), p) ]) == len(plist):
+                self._stns.append(stn)
 
-        i = 0
-        for key in self.stnd.keys():
-            self._stns.append(key)
-            self._R[i] = self.stnd[key]["R"]
-            self._H[i] = self.stnd[key]["H"]
-            if "Vp" in statlist and "Vp" in self.stnd[key]:
-                self._Vp[i] = self.stnd[key]["Vp"]
-            i += 1
+        # Create a temporary dictionary of all
+        # Station data
+        for ii, stn in enumerate(self._stns):
+            for p in plist:
+                temp[p][ii] = scoper.flattendict(stationdata[stn][p])
 
-        if "Vp" in statlist:
-            self._Vs = 1.0 / self._R * self._Vp
-            assert( len(self._R) == len(self._Vp) == len(self._H))
-        else:
-            assert( len(self._R) == len(self._H))
+        # Initialize object attributes with the
+        # numpy data from json data.
+        self.attrs =
+        for p in plist:
+            setattr(self, '_' + scoper.unscopekey(p), temp[p])
 
     def filterParams(self, args, keys = None):
         filtd = queryStats(self.stnd, args)
@@ -88,17 +116,25 @@ class Params(object):
         args.addQuery("status", "in", "")
         self.filterParams(args, stns)
 
-if __name__ == "main":
+
+class Tor(object):
+
+    def __init__(self, attr, value):
+        setattr(self, attr, value)
+
+
+if __name__  == "__main__":
+    pass
 
 ## Setup pdf printer
-    pp = PdfPages('correlations.pdf')
+#    pp = PdfPages('correlations.pdf')
 ### Load data
 
-    mb = Params( os.environ['HOME'] + '/thesis/stations.json', ["Vp","H","R"])
+#    mb = Params( os.environ['HOME'] + '/thesis/stations.json', ["Vp","H","R"])
 
 #(os.environ['HOME'] + '/thesis/stnchrons.json')
-    kn = Params(os.environ['HOME'] + '/thesis/kanStats.json', ["H","R"])
-    d3 = Params(os.environ['HOME'] + '/thesis/3DStats.json', ["Vp","H","R"])
+#    kn = Params(os.environ['HOME'] + '/thesis/kanStats.json', ["H","R"])
+#    d3 = Params(os.environ['HOME'] + '/thesis/3DStats.json', ["Vp","H","R"])
 
 
 
