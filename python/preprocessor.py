@@ -99,7 +99,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
         raise SeisDataError("noAzim")
 
     ##### Get OLD P  #####################
-    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp,gcarcOLD),
+    process = sh(os.environ["HOME"] + "/bin/Get_tt/get_tt -z {} -d {} -p P".format(evdp, gcarcOLD),
                  shell=True, executable = "/bin/bash", stdout = pipe )
     results =  process.communicate()[0].rstrip().split('\n')
     for result in results:
@@ -154,6 +154,7 @@ def setHeaders(eventdir, sacfiles, eventdict):
     if begin < beginOLD:
         begin = beginOLD
     end = begin + N*dt
+
 
     ####### SET HEADERS #################
     for sacfile in sacfiles:

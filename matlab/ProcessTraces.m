@@ -70,7 +70,7 @@ else
     fLow = 0.04;
     fHigh = 3;
 end  
-numPoles = 3;
+numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 %% Rescale by slowness
 % Scale by increasing p value
