@@ -54,9 +54,9 @@ def flattendict(a, sep, pfx = '', result = None):
 
     for k, v in a.items():
         if isinstance(v, dict):
-            flattendict(v, sep, pfx = pfx + sep + k, result = result)
+            flattendict(v, sep, pfx = pfx + k + sep, result = result)
         else:
-            result[k + pfx] = v
+            result[pfx + k] = v
 
     return result
 
@@ -68,11 +68,19 @@ class Scoper(object):
     def flattendict(self, a):
         return flattendict(a, self.sep)
 
-    def unscopekey(self, keys, result = None):
+    def unscopekey(self, keys):
+        """ Removes scope operator from keys."""
         if isinstance(keys, list):
             return [ k[ k.rfind(self.sep) + 1 :] for k in keys ]
         else:
             return keys[ keys.rfind(self.sep) + 1 :]
+
+    def normscope(self, keys, reuslt = None):
+        """Replaces scope operator with python acceptable underscore _."""
+        if isinstance(keys, list):
+            return [ str.replace(k, self.sep, "_") for k in keys ]
+        else:
+            return str.replace(keys, self.sep, "_")
 
 
 
@@ -219,6 +227,8 @@ def setStatus(s, stdict):
                     status = "processed-ok"
                 else:
                     status = 'processed-notok'
+        if 'usableEvents' in s[k] and s[k]['usableEvents'] < 15:
+            status = "data corruption"
         if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
             status = "data corruption"
         # If user has selected bad station, don't change it.

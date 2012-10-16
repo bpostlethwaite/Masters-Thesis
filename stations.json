@@ -2411,11 +2411,11 @@
     "lon": -69.87945556640625, 
     "network": "X5", 
     "numEvents": 180, 
-    "poorEvents": 0, 
+    "poorEvents": 34, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 162
+    "usableEvents": 128
   }, 
   "KJKQ": {
     "badCompEvents": 0, 
@@ -2519,11 +2519,11 @@
     "lon": -69.99115, 
     "network": "POLARIS", 
     "numEvents": 30, 
-    "poorEvents": 0, 
+    "poorEvents": 21, 
     "start": 20110807.0, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 30
+    "usableEvents": 8
   }, 
   "KSVO": {
     "badCompEvents": 0, 
@@ -2903,11 +2903,11 @@
     "lon": -79.59183502197266, 
     "network": "X5", 
     "numEvents": 95, 
-    "poorEvents": 0, 
+    "poorEvents": 29, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 90
+    "usableEvents": 61
   }, 
   "MATQ": {
     "badCompEvents": 2, 
@@ -3056,12 +3056,12 @@
     "lat": 55.09233, 
     "lon": -59.18405, 
     "network": "POLARIS", 
-    "numEvents": 31, 
+    "numEvents": 9, 
     "poorEvents": 0, 
     "start": 20110726.0, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 31
+    "usableEvents": 9
   }, 
   "MLON": {
     "badCompEvents": 2, 
@@ -3091,11 +3091,11 @@
     "lon": -72.43433380126953, 
     "network": "X5", 
     "numEvents": 129, 
-    "poorEvents": 0, 
+    "poorEvents": 2, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 121
+    "usableEvents": 119
   }, 
   "MNT": {
     "badCompEvents": 62, 
@@ -3245,11 +3245,11 @@
     "lon": -61.68843, 
     "network": "POLARIS", 
     "numEvents": 13, 
-    "poorEvents": 0, 
+    "poorEvents": 2, 
     "start": 20110724.0, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 13
+    "usableEvents": 11
   }, 
   "NATG": {
     "badCompEvents": 12, 
@@ -3343,11 +3343,11 @@
     "lon": -78.13545227050781, 
     "network": "X5", 
     "numEvents": 103, 
-    "poorEvents": 0, 
+    "poorEvents": 37, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 97
+    "usableEvents": 60
   }, 
   "NSKO": {
     "lat": 52.1965, 
@@ -3385,11 +3385,11 @@
     "lon": -60.14245, 
     "network": "POLARIS", 
     "numEvents": 62, 
-    "poorEvents": 0, 
+    "poorEvents": 18, 
     "start": 20110721.0, 
-    "status": "aquired", 
+    "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 62
+    "usableEvents": 43
   }, 
   "ORHO": {
     "badCompEvents": 0, 
@@ -3733,11 +3733,11 @@
     "lon": -65.7115478515625, 
     "network": "X5", 
     "numEvents": 113, 
-    "poorEvents": 0, 
+    "poorEvents": 18, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 103
+    "usableEvents": 85
   }, 
   "PNPO": {
     "badCompEvents": 19, 
@@ -3969,11 +3969,11 @@
     "lon": -60.00843, 
     "network": "POLARIS", 
     "numEvents": 175, 
-    "poorEvents": 0, 
+    "poorEvents": 27, 
     "start": 20051013.1956, 
-    "status": "aquired", 
+    "status": "bad station", 
     "stop": "20090429.1251", 
-    "usableEvents": 175
+    "usableEvents": 131
   }, 
   "SADO": {
     "badCompEvents": 11, 
@@ -4079,11 +4079,11 @@
     "lon": -84.11451721191406, 
     "network": "X5", 
     "numEvents": 93, 
-    "poorEvents": 0, 
+    "poorEvents": 18, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 86
+    "usableEvents": 68
   }, 
   "SHVB": {
     "lat": 48.4723, 
@@ -4099,11 +4099,11 @@
     "lon": -85.08869171142578, 
     "network": "X5", 
     "numEvents": 124, 
-    "poorEvents": 0, 
+    "poorEvents": 39, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 96
+    "usableEvents": 57
   }, 
   "SILB": {
     "lat": 48.60198, 
@@ -4733,11 +4733,11 @@
     "lon": -117.18511199951172, 
     "network": "NE", 
     "numEvents": 66, 
-    "poorEvents": 0, 
+    "poorEvents": 10, 
     "start": 0.0, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 61
+    "usableEvents": 51
   }, 
   "WAGN": {
     "badCompEvents": 0, 
@@ -4778,16 +4778,16 @@
     "stop": 0
   }, 
   "WBHL": {
-    "badCompEvents": 0, 
+    "badCompEvents": 1, 
     "lat": 52.90296, 
     "lon": -66.86634, 
     "network": "POLARIS", 
     "numEvents": 30, 
-    "poorEvents": 0, 
+    "poorEvents": 22, 
     "start": 20110718.0, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 30
+    "usableEvents": 7
   }, 
   "WEMQ": {
     "badCompEvents": 6, 

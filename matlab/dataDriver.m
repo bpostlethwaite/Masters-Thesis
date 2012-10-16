@@ -69,20 +69,20 @@ if strcmp(method, 'bostock')
 
     % Specific Kanamori
 elseif strcmp(method, 'kanamori')   
-    db.km = results.method;
-    db.km = results.rbest;
-    db.km = results.v;
-    db.km = results.hbest;
-    db.km = results.stackhr;
-    db.km = results.rRange;
-    db.km = results.hRange;
-    db.km = results.smax;
-    db.km = results.tps;
-    db.km = results.tpps;
-    db.km = results.tpss;
-    db.km.stdsmax = std(bootRHx);
-    db.km.stdR = std(bootR);
-    db.km.stdH = std(bootH);
+    db.hk = results.method;
+    db.hk = results.rbest;
+    db.hk = results.v;
+    db.hk = results.hbest;
+    db.hk = results.stackhr;
+    db.hk = results.rRange;
+    db.hk = results.hRange;
+    db.hk = results.smax;
+    db.hk = results.tps;
+    db.hk = results.tpps;
+    db.hk = results.tpss;
+    db.hk.stdsmax = std(bootRHx);
+    db.hk.stdR = std(bootR);
+    db.hk.stdH = std(bootH);
 
 else
      ME = MException('ProcessMethodNotFound', ...

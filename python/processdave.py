@@ -20,7 +20,7 @@ from obspy.signal.invsim import cosTaper
 import subprocess, sys, os, re, shutil
 import numpy as np
 import os.path, math
-sh = subprocess.Popen
+
 ###########################################################################
 #  CREATE CUSTOM ERRORS
 ###########################################################################
@@ -245,7 +245,7 @@ if __name__== '__main__' :
 ###########################################################################
 #  SET regex matches
 ###########################################################################
-    reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')
+    reg1 = re.compile(r'^(\d{4}\.\d{3}\.\d{2}\.\d{2}\.\d{2})\.\d{4}\.(\w{2})\.(\w*)\.\.(\w{3}).*')b
 
     for station in ['SHWN', 'NOTN', 'ELEF', 'CTSN', 'HOWN', 'VTIN', 'MNGN', 'PNGN', 'SHMN', 'KIMN', 'DORN', 'EA06', 'CRLN', 'MANN', 'ARTN']:
         try:
@@ -254,7 +254,7 @@ if __name__== '__main__' :
         except OSError as e:
             print e
             continue
-###########################################################################
+#########n##################################################################
 # Walk through all events found in station folder
 ###########################################################################
         for event in events:

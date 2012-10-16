@@ -7,6 +7,8 @@
 # IMPORTS
 ###########################################################################
 import os, json
+import fnmatch
+import numpy as np
 from dbutils import queryStats, getStats, Scoper
 #import matplotlib.pyplot as plt
 #import numpy as np
@@ -53,74 +55,71 @@ class Args(object):
         self.keys = True
 
 class Params(object):
-    def __init__(self, fname, plist):
+    def __init__(self, fname, args, plist):
         """ Takes a file name to json formatted data
         with a bunch of stations as primary attributes, each with
         a value that is also an attribute. whatever"""
-        self._stns = []
-        scp = Scoper("::")
-        # We want to make sure there are no namespace clashes
-        # when we unscope the attribute names. ie a::b -> b
-        assert len(plist) == len(set(scp.unscopekey(plist))), "plist has nonunique de-scoped names"
+        self._stns = [] # Base data
+        self.stns = [] # Filtered data
+        self.plist = plist
+        # scoper provides some utilites for working with scoped declarations for
+        # accessing deep json structures
+        self.scp = Scoper("::")
 
-        stationdata = json.loads( open(fname).read() )
-        for stn in stationdata.keys():
+        rawdata = json.loads( open(fname).read() )
+        filtdata = queryStats(rawdata, args, self.scp.sep)
+        filtdata = getStats(filtdata, args, self.scp.sep, False)
+
+
+        for stn in filtdata.keys():
             # Make sure all parameters exist for each station
             # If they do, add station to list.
             # Use the scoper to flatten json so we can check if
             # scoped keys are in the dictionary. (allows us to search with
             # depth into dictionary a::b = d['a']['b']
-            if len([p for p in plist if isin(
-                        scp.flattendict(stationdata[stn]), p) ]) == len(plist):
+            if len([p for p in plist if p in self.scp.flattendict(filtdata[stn])]) == len(plist):
                 self._stns.append(stn)
 
+        # Make self._stns immutable
+        self._stns = tuple(self._stns)
         # Create a temporary dictionary of all
-        # Station data
+        # station data.
+        temp = {}
+        for p in plist:
+            temp[p] = np.zeros(len(self._stns))
         for ii, stn in enumerate(self._stns):
             for p in plist:
-                temp[p][ii] = scoper.flattendict(stationdata[stn][p])
+                temp[p][ii] = self.scp.flattendict(filtdata[stn])[p]
 
-        # Initialize object attributes with the
-        # numpy data from json data.
-        self.attrs =
+        # Build base data variables with _ prefix as
+        # numpy data extracted from json data.
         for p in plist:
-            setattr(self, '_' + scoper.unscopekey(p), temp[p])
+            setattr(self, '_' + self.scp.normscope(p), temp[p])
 
-    def filterParams(self, args, keys = None):
-        filtd = queryStats(self.stnd, args)
-        filtd = getStats(filtd, args, False)
+        # Build variable list
+        self.syncto(self._stns)
+
+    def syncto(self, stns):
+        """ Filter by list of stations only, useful for syncing
+        with another Param object station list. The incoming
+        station list must be subset of object station list or an
+        error is raised."""
         self.stns = []
-        self.R = np.zeros(len(filtd))
-        self.Vp = np.zeros(len(filtd))
-        self.Vs = np.zeros(len(filtd))
-        self.H = np.zeros(len(filtd))
+        inds = []
+        for stn in stns:
+            ind = find(self._stns, stn)
+            if ind == -1:
+                raise IndexError("No matching station, {}, in caller object".format(stn))
+            else:
+                self.stns.append(stn)
+                inds.append(ind)
+        # For each base attribute make a new attribute with name minus underscore
+        # which has the value of the inds sorted array.
+        for p in self.plist:
+            setattr(self, self.scp.normscope(p),
+                    np.take(getattr(self, '_'+ self.scp.normscope(p)),
+                            inds))
 
-        if not keys:
-            keys = filtd.keys()
-
-        inc = 0
-        ind = 0
-        for key in keys:
-            ind = self._stns.index(key)
-            self.stns.append( self._stns[ind] )
-            self.R[inc] = self._R[ind]
-            self.Vp[inc] = self._Vp[ind]
-            self.Vs[inc] = self._Vs[ind]
-            self.H[inc] = self._H[ind]
-            inc += 1
-
-    def matchStns(self, stns):
-        """ Filter by list of stations only """
-        args = Args()
-        args.stationList = stns
-        args.addQuery("status", "in", "")
-        self.filterParams(args, stns)
-
-
-class Tor(object):
-
-    def __init__(self, attr, value):
-        setattr(self, attr, value)
 
 
 if __name__  == "__main__":

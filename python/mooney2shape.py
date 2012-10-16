@@ -9,7 +9,6 @@
 # IMPORTS
 ###########################################################################
 import shapefile, os
-import fnmatch
 import numpy as np
 from plotTools import find
 
