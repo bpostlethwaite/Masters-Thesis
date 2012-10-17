@@ -1,4 +1,4 @@
-function [R, H, RHx] = bootstrapKan(rec, dt, pslow, nmax)
+function [R, H, RHx] = bootstrapKan(rec, dt, pslow, vp, nmax)
 % Bootstap error calculation for grid search confidence.
 % [Vp, R, H, VpRmax, Hmax] = bootstrap(rec, Tps, dt, pslow, nmax)
 % Outputs are arrays of best estimates of Vp, R and H along with the
@@ -14,7 +14,7 @@ H = zeros(1, nmax);
 RHx = zeros(1, nmax);
 parfor ii = 1:nmax
     ind = randi(n, n, 1);
-    [R(ii), H(ii), RHx(ii) ] = gridsearchKanC( brec(:,1:round(45/dt))', dt, pslow);
+    [R(ii), H(ii), RHx(ii) ] = gridsearchKanC( rec(:, ind), dt, pslow(ind), vp);
 end
 
 

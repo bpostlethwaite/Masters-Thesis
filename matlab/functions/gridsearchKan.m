@@ -1,8 +1,8 @@
-function [ results ] = gridsearchKan(rec, dt, pslow)
+function [ results ] = gridsearchKan(rec, dt, pslow, v)
 %GSEARCHKANAMORI Grid Search as implemented in Kanamori, Zhu 2000
 %
 % Grid search over Tps TPpPs and TPpSs with parameters R (Vp/Vs) and H
-%
+% Input Mooneys v
 
 
 %% Grip parameters
@@ -21,7 +21,7 @@ dh = (h2 - h1)/(nh - 1);
 h = h1:dh:h2;
 
 % Misc
-v = 6.38; % bulk vp pwave velocity.
+%v = 6.38; % bulk vp pwave velocity.
 p2 = pslow.^2;
 np = length(pslow);
 nt = length(rec);
@@ -50,10 +50,11 @@ parfor ir = 1:nr
 end
 
 % Select best/highest values and recalculate
-smax = max(max(grid));
-[ir,ih] = find(grid == smax);
+smax = max(max(stackhr));
+[ir,ih] = find(stackhr == smax);
 hbest = h(ih);
 rbest = r(ir);
+f1 = sqrt((rbest / v)^2 - p2);
 
 %% Pack results into struct
 results.method = 'kanamori';
@@ -64,9 +65,9 @@ results.stackhr = stackhr;
 results.rRange = r;
 results.hRange = h;
 results.smax = smax;
-results.tps = tps;
-results.tpps = tpps;
-results.tpss = tpss;
+results.tps = hbest * (f1 - f2);
+results.tpps = hbest * (f1 + f2);
+results.tpss = hbest * 2 * f1;
 
 
 end

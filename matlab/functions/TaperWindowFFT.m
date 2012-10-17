@@ -18,7 +18,7 @@ n = size(ptrace, 2);
 dt = header{1}.DELTA;
 %t = 1:n;
 
-parfor ii = 1 : steps
+for ii = 1 : steps
     
     begintaper = round( (header{ii}.T1 - header{ii}.B)/dt );
     endtaper   = round( (header{ii}.T3 - header{ii}.B)/dt );
@@ -30,12 +30,11 @@ parfor ii = 1 : steps
         nbegintaper = 1;
     end
     
-    if nbegintaper + Ntaper - 1 > n % don't want it to be larger than  array
-        Ntaper = n + 1 - nbegintaper;
+    if nbegintaper + Ntaper - 1 >= n % don't want it to be larger than  array
+        Ntaper = n - nbegintaper;
     end
-
     wft(ii,:) = fft(ptrace(ii,:) .* [ zeros(1, nbegintaper),...
-            tukeywin(Ntaper,adj)', zeros(1, n - Ntaper - nbegintaper)])
+            tukeywin(Ntaper,adj)', zeros(1, n - Ntaper - nbegintaper)]);
     vft(ii,:) = fft(strace(ii,:));
     %if (any(isnan(wft(ii,:))))
     %    fprintf('NaN values in wft at. You should remove\n')

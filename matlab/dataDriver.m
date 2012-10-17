@@ -5,11 +5,12 @@
 
 clear all
 close all
+homedir = getenv('HOME');
 addpath ../sac
 addpath functions
-
+addpath([homedir,'/programming/matlab/jsonlab'])
 %% Variables
-homedir = getenv('HOME');
+stnsjson = [homedir,'/thesis/stations.json'];
 sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
@@ -17,37 +18,48 @@ sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'PNT';
+station = 'A16';
 %{
-PNT
-PA01
-HOLB
-PA03
-NANL
-AHCB
-B1NU
-KIMN
-NOTN
-YNEN
+
+PTCO
+DRLN
+KSVO
+PLVO
+GBLN
+MGTN
+YRTN
+MNTQ
+BVCY
+A16
+A11
+PLBC
+MCMN
+ACKN
+YUK3
+CAMN
+COKN
+NODN
+CBRQ
+DELO
+SADO
+ILON
+SUNO
+ULM
+SEDN
+VLDQ
 TOBO
 ELFO
 NMSQ
-OTT
+WHFN
 KAJQ
-MGB
-HFRN
-THMB
-RAYA
-GFNU
-JRBC
+CHGQ
+VABQ
 RSPO
-TWGB
 YBKN
-LDGN
-NLLB
+PLIO
 PEMO
-PINU
-HRMB
+LDGN
+
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
@@ -57,7 +69,13 @@ if exist(dbfile, 'file')
     load(dbfile)
     loadflag = 1;
     dbold = db;
+    display(dbold.processnotes)
 end
+
+load stnsjson.mat
+mooneyVp = json.(station).wm.Vp;
+clear json
+
 %% Run ToolChain
 ProcessTraces
 
@@ -65,7 +83,7 @@ ProcessTraces
     % Shared
     db.station = station;
     db.processnotes = '';
-    db.rec = rec;    
+    db.rec = brec;    
     db.pslow = pslow;
     db.dt = dt;
     db.npb = npb;
@@ -97,18 +115,17 @@ if strcmp(method, 'bostock')
     db.mb.stdH = std(bootH);
 
     % Specific Kanamori
-elseif strcmp(method, 'kanamori')   
-    db.hk = results.method;
-    db.hk = results.rbest;
-    db.hk = results.v;
-    db.hk = results.hbest;
-    db.hk = results.stackhr;
-    db.hk = results.rRange;
-    db.hk = results.hRange;
-    db.hk = results.smax;
-    db.hk = results.tps;
-    db.hk = results.tpps;
-    db.hk = results.tpss;
+elseif strcmp(method, 'kanamori')
+    db.hk.rbest = results.rbest;
+    db.hk.v = results.v;
+    db.hk.hbest = results.hbest;
+    db.hk.stackhr = results.stackhr;
+    db.hk.rRange = results.rRange;
+    db.hk.hRange = results.hRange;
+    db.hk.smax = results.smax;
+    db.hk.tps = results.tps;
+    db.hk.tpps = results.tpps;
+    db.hk.tpss = results.tpss;
     db.hk.stdsmax = std(bootRHx);
     db.hk.stdR = std(bootR);
     db.hk.stdH = std(bootH);
@@ -120,15 +137,16 @@ else
 end
 %% Plot the results if we completed the processing
 close all
-plotStack(db);
+plotStack(db, method);
 fprintf('Old Data:\n')
 
 %if strcmp(method, 'bostock')
 %    fprintf('Vp is %f +/- %1.3f km/s\n',dbold.vbest, dbold.stdVp)
 %end
-%fprintf('R is %f +/- %1.3f \n',dbold.rbest, dbold.stdR )
-%fprintf('H is %f +/- %1.3f \n',dbold.hbest, dbold.stdH )
-%
+if strcmp(method, 'kanamori')
+    fprintf('R is %f +/- %1.3f \n',db.hk.rbest, db.hk.stdR )
+    fprintf('H is %f +/- %1.3f \n',db.hk.hbest, db.hk.stdH )
+end
 %fprintf('\nKanamori data\n')
 %fprintf('R is %f \n',Rkan)
 %fprintf('H is %f kms\n',Hkan)
@@ -141,6 +159,8 @@ fprintf('Old Data:\n')
 %% Enter Processing Notes:
 notes = input('Enter Processing Notes: ', 's');
 db.processnotes = notes;
+%% Enter use / ignore flag
+db.usable = input('Enter 1 to use, or 0 to set as a discard: ');
 %% Save entry
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)

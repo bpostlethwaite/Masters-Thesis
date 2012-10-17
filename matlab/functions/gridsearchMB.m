@@ -74,8 +74,8 @@ rbest=r(ir);
 
 %% Line search for H.
 
-f1=sqrt((rbest/vbest)^2-p2);
-f2=sqrt((1/vbest)^2-p2);
+f1 = sqrt((rbest/vbest)^2-p2);
+f2 = sqrt((1/vbest)^2-p2);
 for ih=1:nh
   tps=h(ih)*(f1-f2);
   tpps=h(ih)*(f1+f2);
@@ -91,11 +91,6 @@ stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 
-% Get best estimates of travel times
-% using best parameters
-tps = hbest*(f1-f2);
-tpps = hbest*(f1+f2);
-tpss = 2*hbest*f1;
 
 %% Pack results into struct
 results.method = 'bostock';
@@ -109,8 +104,8 @@ results.vRange = v;
 results.hRange = h;
 results.smax = smax;
 results.hmax = hmax;
-results.tps = tps;
-results.tpps = tpps;
-results.tpss = tpss;
+results.tps = hbest * (f1 - f2);
+results.tpps = hbest * (f1 + f2);
+results.tpss = 2 * hbest * f1;
 
 end
