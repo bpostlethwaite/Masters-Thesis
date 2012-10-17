@@ -1,4 +1,4 @@
-function [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, tps)
+function [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt)
 %NLREGRESSION Summary of this function goes here
 %   Detailed explanation goes here
 

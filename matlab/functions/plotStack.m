@@ -1,17 +1,21 @@
-function plotStack(db)
+function plotStack(db, method)
 % PLOTSTACK plots the station structure data db.
 
+set(0, 'DefaultFigureRendererMode', 'manual')
+set(0,'DefaultFigureRenderer','zbuffer')
+
 type = 1;
-if isfield(db,'method')
-    if strcmp(db.method,'kanamori')
-        type = 0;
-    end
+if strcmp(method,'kanamori')
+     type = 0;
 end
 
-if type
+
     hfig = figure(23);
     pos = get(hfig,'OuterPosition');
     pos1 = pos; % save backup for next window
+    
+if type
+
     pos(4) = pos(4) * 2; % Increase height by 2
     pos(2) = floor(pos(2) / 4); % Lower the figure so it fits in window
     set(hfig,'OuterPosition', pos)
@@ -51,35 +55,48 @@ if type
         set(ylab,'FontName','Helvetica','FontSize',16);
         title(sprintf('H = %3.2f +/- %1.3f km',db.hbest, db.stdH));
 
+       hfig = figure(29);
+        pos1(1) = floor(pos(1)/4);
+        set(hfig,'OuterPosition',pos1)
+        csection(db.rec(:,1:round(26/db.dt)),0,db.dt);
+        hold on
+        plot(db.tps,'k+')
+        plot(db.tpps,'k+')
+        plot(db.tpss,'k+')
+        title(sprintf('%s',db.station) )
+        hold off
+
+        
 else
-    figure(23)
-    set(gca,'FontName','Helvetica','FontSize',16,...
+
+        set(gca,'FontName','Helvetica','FontSize',16,...
             'Clipping','off','layer','top');
-        imagesc(db.hRange, db.rRange, db.stackhr);
+        imagesc(db.hk.hRange, db.hk.rRange, db.hk.stackhr);
         axis xy
         axis square
         colorbar
         hold on
-        plot(db.hbest,db.rbest,'w+')
-        plot(db.hbest,db.rbest,'ko')
-        contour(db.rRange,db.vRange,db.stackhr,...
-            [db.smax - db.stdsmax, db.smax - db.stdsmax], 'k-')
+        plot(db.hk.hbest, db.hk.rbest,'w+')
+        plot(db.hk.hbest, db.hk.rbest,'ko')
+        contour(db.hk.hRange, db.hk.rRange, db.hk.stackhr,...
+            [db.hk.smax - db.hk.stdsmax, db.hk.smax - db.hk.stdsmax], 'k-')
         hold off
-        xlab=xlabel('H');
+        xlab=xlabel('H [km]');
         ylab=ylabel('R [Vp/Vs]');
         set(xlab,'FontName','Helvetica','FontSize',16);
         set(ylab,'FontName','Helvetica','FontSize',16);
-        title(sprintf(' H = %1.3f R = %1.3f',db.hbest, db.rbest));
-end
+        title(sprintf('%s\nH = %1.3f +/- %1.3f km/s\nR = %1.3f +/- %1.3f',...
+            db.station, db.hk.hbest, db.hk.stdH, db.hk.rbest, db.hk.stdR));
+     
 
-    hfig = figure(29);
-    pos1(1) = floor(pos(1)/4);
-    set(hfig,'OuterPosition',pos1)
-    csection(db.rec(:,1:round(26/db.dt)),0,db.dt);
-    hold on
-    plot(db.tps,'k+')
-    plot(db.tpps,'k+')
-    plot(db.tpss,'k+')
-    title(sprintf('%s',db.station) )
-    hold off
+        hfig = figure(29);
+        pos1(1) = floor(pos(1)/4);
+        set(hfig,'OuterPosition',pos1)
+        csection(db.rec(:,1:round(26/db.dt)),0,db.dt);
+        hold on
+        plot(db.hk.tps,'k+')
+        plot(db.hk.tpps,'k+')
+        plot(db.hk.tpss,'k+')
+        title(sprintf('%s',db.station) )
+        hold off
 end

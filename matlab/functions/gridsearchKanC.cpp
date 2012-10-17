@@ -9,7 +9,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   mxArray *recIN, *pslowIN;
   const mwSize *dims;
   double *rec, *pslow, *Tps, *R, *H, *HRx;
-  double dt, v = 6.38;
+  double dt, v;
   int nrecs;
   int N;
 
@@ -17,7 +17,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   recIN = mxDuplicateArray(prhs[0]);
   dt = mxGetScalar(prhs[1]);
   pslowIN = mxDuplicateArray(prhs[2]);
-
+  v = mxGetScalar(prhs[3]);
 
   //figure out dimensions
   dims = mxGetDimensions(prhs[0]);

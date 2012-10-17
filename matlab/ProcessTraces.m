@@ -36,7 +36,7 @@ if ~matlabpool('size')
 end
 %% 5)  Window with Taper and fourier transform signal.
 adj = 0.1; % This adjusts the Tukey window used.
-[wft, vft] = TaperWindowFFT(ptrace,strace,header,adj,0);
+[wft, vft] = TaperWindowFFT(ptrace, strace, header, adj, 0);
 clear adj
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
@@ -79,7 +79,7 @@ brec =  diag( pscale ./ max(abs(brec(:,1:1200)), [], 2)) * brec;
 %% 7) MB Processing
 if strcmp(method, 'bostock')
     % Get Newton method nonlinear regression and select Tps points
-    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, tps);
+    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt);
 
     [ results ] = gridsearchMB(brec(:,1:round(45/dt)), Tps', dt, pslow);
 
@@ -90,11 +90,11 @@ if strcmp(method, 'bostock')
 elseif strcmp(method, 'kanamori')
     
     % Get Newton method nonlinear regression and select Tps points
-    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, tps);
+    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt);
     
-    [ results ] = gridsearchKan(brec(:,1:round(45/dt)), dt, pslow);
+    [ results ] = gridsearchKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp);
     
-    [bootR, bootH, bootRHx] =  bootstrapKan(brec(:,1:round(45/dt)), dt, pslow, 1024);
+    [bootR, bootH, bootRHx] =  bootstrapKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp, 1024);
 end
 %% Close parallel system
 %matlabpool close
