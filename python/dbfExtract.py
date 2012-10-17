@@ -14,16 +14,19 @@ import dbf
 stnjson = os.environ['HOME'] + "/thesis/stations.json"
 stnd = json.loads( open(stnjson).read() )
 #Load geological time data
-print dir(dbf)
-db = dbf.dbf(os.environ['HOME'] + "/thesis/mapping/stationMooney.dbf")
+
+db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationMooney.dbf")
+
 
 for rec in db:
-    stnd[rec["STATION"]]["wm"] = {}
-    stnd[rec["STATION"]]["wm"]["Vp"] = rec["MVP"]
+    stnd[rec["station"]]["wm"] = {}
+    stnd[rec["station"]]["wm"]["Vp"] = float(rec["mvp"])
+    stnd[rec["station"]]["wm"]["R"] = float(rec["mvp"]) / float(rec["mvs"])
+    stnd[rec["station"]]["wm"]["H"] = float(rec["mh"])
 
 
-print json.dumps(stnd, sort_keys = True, indent = 2 )
-#open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
+#print json.dumps(stnd, sort_keys = True, indent = 2 )
+open(stnjson,'w').write( json.dumps(stnd, sort_keys = True, indent = 2 ))
 
 
 # Extracting Station Chrons

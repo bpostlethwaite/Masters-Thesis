@@ -19,7 +19,12 @@
     "start": 19990627.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 111
+    "usableEvents": 111, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "A16": {
     "badCompEvents": 14, 
@@ -41,7 +46,12 @@
     "start": 19990626.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 117
+    "usableEvents": 117, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "A21": {
     "badCompEvents": 18, 
@@ -63,7 +73,12 @@
     "start": 19990925.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 115
+    "usableEvents": 115, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "A54": {
     "badCompEvents": 13, 
@@ -85,7 +100,12 @@
     "start": 19990626.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 111
+    "usableEvents": 111, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "A61": {
     "badCompEvents": 18, 
@@ -107,7 +127,12 @@
     "start": 19990618.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 127
+    "usableEvents": 127, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "A64": {
     "badCompEvents": 10, 
@@ -129,7 +154,12 @@
     "start": 19990623.01, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 166
+    "usableEvents": 166, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "ACKN": {
     "badCompEvents": 4, 
@@ -151,7 +181,12 @@
     "start": 20010909, 
     "status": "processed-ok", 
     "stop": "20060711.1440", 
-    "usableEvents": 95
+    "usableEvents": 95, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ACTO": {
     "badCompEvents": 1, 
@@ -173,7 +208,12 @@
     "start": 20020131, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 236
+    "usableEvents": 236, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "AHCB": {
     "lat": 48.9325, 
@@ -181,7 +221,12 @@
     "network": "ETS", 
     "start": 20030227.01, 
     "status": "not aquired", 
-    "stop": "20070219.2359"
+    "stop": "20070219.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "AKVQ": {
     "badCompEvents": 0, 
@@ -203,7 +248,12 @@
     "start": 20060915.14, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 93
+    "usableEvents": 93, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "ALFO": {
     "badCompEvents": 0, 
@@ -225,7 +275,12 @@
     "start": 20031002.2018, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 207
+    "usableEvents": 207, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "ALGO": {
     "badCompEvents": 1, 
@@ -247,7 +302,12 @@
     "start": 20020911.23, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 156
+    "usableEvents": 156, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "ALRB": {
     "lat": 52.51029, 
@@ -255,7 +315,12 @@
     "network": "POLARIS", 
     "start": 20060830.01, 
     "status": "not aquired", 
-    "stop": "20090827.2200"
+    "stop": "20090827.2200", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "ANMB": {
     "lat": 49.31868, 
@@ -263,7 +328,12 @@
     "network": "POLARIS", 
     "start": 20021118.19, 
     "status": "not aquired", 
-    "stop": "20040819.1731"
+    "stop": "20040819.1731", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "AP3N": {
     "badCompEvents": 1, 
@@ -285,7 +355,12 @@
     "start": 20050817.22, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 76
+    "usableEvents": 76, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ARTN": {
     "badCompEvents": 0, 
@@ -297,7 +372,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 132
+    "usableEvents": 132, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ARVN": {
     "badCompEvents": 3, 
@@ -319,7 +399,12 @@
     "start": 20060812.23, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 169
+    "usableEvents": 169, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "ATKO": {
     "badCompEvents": 16, 
@@ -341,7 +426,12 @@
     "start": 20040609.22, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 194
+    "usableEvents": 194, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.763566948459231, 
+      "Vp": 6.467
+    }
   }, 
   "ATLB": {
     "lat": 50.21837, 
@@ -349,7 +439,12 @@
     "network": "ETS", 
     "start": 20060315.02, 
     "status": "not aquired", 
-    "stop": "20060912.2359"
+    "stop": "20060912.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "B1NU": {
     "lat": 68.4619, 
@@ -357,7 +452,12 @@
     "network": "CHASME", 
     "start": 20000723.2328, 
     "status": "not aquired", 
-    "stop": "20020816.0000"
+    "stop": "20020816.0000", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "B2NU": {
     "lat": 68.9216, 
@@ -365,7 +465,12 @@
     "network": "CHASME", 
     "start": 20000724.1502, 
     "status": "not aquired", 
-    "stop": "20001223.0000"
+    "stop": "20001223.0000", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "BANO": {
     "badCompEvents": 1, 
@@ -387,7 +492,12 @@
     "start": 20020825.173, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 229
+    "usableEvents": 229, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "BASO": {
     "badCompEvents": 93, 
@@ -409,7 +519,12 @@
     "start": 20070801.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 175
+    "usableEvents": 175, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "BATG": {
     "badCompEvents": 7, 
@@ -431,7 +546,12 @@
     "start": 20051022.17, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 149
+    "usableEvents": 149, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "BBB": {
     "lat": 52.1847, 
@@ -439,7 +559,12 @@
     "network": "CNSN", 
     "start": 20120302.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BCBC": {
     "lat": 52.372, 
@@ -447,7 +572,12 @@
     "network": "CNSN", 
     "start": 20071206.17, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BELQ": {
     "badCompEvents": 2, 
@@ -469,7 +599,12 @@
     "start": 20070822.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 172
+    "usableEvents": 172, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "BMBC": {
     "lat": 56.045, 
@@ -477,7 +612,12 @@
     "network": "CNSN", 
     "start": 19980130, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7587363712608333, 
+      "Vp": 6.291
+    }
   }, 
   "BMRO": {
     "badCompEvents": 94, 
@@ -499,7 +639,12 @@
     "start": 20070802.19, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 167
+    "usableEvents": 167, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "BMSB": {
     "lat": 48.8356, 
@@ -507,7 +652,12 @@
     "network": "CNSN", 
     "start": 20030307, 
     "status": "not aquired", 
-    "stop": "20111124.0042"
+    "stop": "20111124.0042", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BOXN": {
     "badCompEvents": 1, 
@@ -529,7 +679,12 @@
     "start": 20020802.23, 
     "status": "processed-notok", 
     "stop": "20070719.1458", 
-    "usableEvents": 116
+    "usableEvents": 116, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "BPCB": {
     "lat": 48.92358, 
@@ -537,7 +692,12 @@
     "network": "ETS", 
     "start": 20080319.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BRCO": {
     "badCompEvents": 0, 
@@ -559,7 +719,12 @@
     "start": 20020206, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 221
+    "usableEvents": 221, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "BRPO": {
     "badCompEvents": 0, 
@@ -571,7 +736,12 @@
     "start": 20020910, 
     "status": "bad station", 
     "stop": "20021015.0000", 
-    "usableEvents": 3
+    "usableEvents": 3, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "BTB": {
     "lat": 49.4683, 
@@ -579,7 +749,12 @@
     "network": "CNSN", 
     "start": 20070919.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BUKO": {
     "badCompEvents": 3, 
@@ -601,7 +776,12 @@
     "start": 20031102.18, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 243
+    "usableEvents": 243, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "BULN": {
     "badCompEvents": 2, 
@@ -623,7 +803,12 @@
     "start": 20060817.02, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 206
+    "usableEvents": 206, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "BVCY": {
     "badCompEvents": 1, 
@@ -645,7 +830,12 @@
     "start": 20100814.17, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 36
+    "usableEvents": 36, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "BWLO": {
     "badCompEvents": 94, 
@@ -667,7 +857,12 @@
     "start": 20070801.11, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 148
+    "usableEvents": 148, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "CAMN": {
     "badCompEvents": 0, 
@@ -689,7 +884,12 @@
     "start": 20020730.1, 
     "status": "processed-notok", 
     "stop": "20050715.1741", 
-    "usableEvents": 79
+    "usableEvents": 79, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "CBB": {
     "lat": 50.03155, 
@@ -697,7 +897,12 @@
     "network": "CNSN", 
     "start": 19961128, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "CBRQ": {
     "badCompEvents": 0, 
@@ -719,7 +924,12 @@
     "start": 20040730.2, 
     "status": "processed-notok", 
     "stop": "20050529.0000", 
-    "usableEvents": 18
+    "usableEvents": 18, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "CDKN": {
     "badCompEvents": 0, 
@@ -741,7 +951,12 @@
     "start": 20090820.15, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 50
+    "usableEvents": 50, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "CHEG": {
     "badCompEvents": 5, 
@@ -763,7 +978,12 @@
     "start": 20051019.14, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 61
+    "usableEvents": 61, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7891937290033595, 
+      "Vp": 6.391
+    }
   }, 
   "CHGQ": {
     "badCompEvents": 3, 
@@ -785,7 +1005,12 @@
     "start": 20071011.1427, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 172
+    "usableEvents": 172, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "CLAP": {
     "lat": 53.3217, 
@@ -793,7 +1018,12 @@
     "network": "HABC", 
     "start": 19990628.23, 
     "status": "not aquired", 
-    "stop": "19990927.2102"
+    "stop": "19990927.2102", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "CLPO": {
     "badCompEvents": 0, 
@@ -815,7 +1045,12 @@
     "start": 20021011.2, 
     "status": "processed-ok", 
     "stop": "20031116.0000", 
-    "usableEvents": 28
+    "usableEvents": 28, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "CLRN": {
     "badCompEvents": 0, 
@@ -837,7 +1072,12 @@
     "start": 20110113.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 38
+    "usableEvents": 38, 
+    "wm": {
+      "H": 24.0, 
+      "R": 1.8107784431137726, 
+      "Vp": 6.048
+    }
   }, 
   "CLSB": {
     "lat": 52.75875, 
@@ -845,7 +1085,12 @@
     "network": "POLARIS", 
     "start": 20060902.14, 
     "status": "not aquired", 
-    "stop": "20090826.1830"
+    "stop": "20090826.1830", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "CLVB": {
     "lat": 49.38167, 
@@ -853,7 +1098,12 @@
     "network": "POLARIS", 
     "start": 20021117.18, 
     "status": "not aquired", 
-    "stop": "20050804.1519"
+    "stop": "20050804.1519", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "CLVN": {
     "badCompEvents": 1, 
@@ -875,7 +1125,12 @@
     "start": 20100718.23, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 40
+    "usableEvents": 40, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "CLWO": {
     "badCompEvents": 0, 
@@ -897,7 +1152,12 @@
     "start": 20030725.17, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 218
+    "usableEvents": 218, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "CMBN": {
     "badCompEvents": 2, 
@@ -919,7 +1179,12 @@
     "start": 20090817.12, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 76
+    "usableEvents": 76, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "CODG": {
     "badCompEvents": 0, 
@@ -941,7 +1206,12 @@
     "start": 20051006.13, 
     "status": "processed-notok", 
     "stop": "20080910.2300", 
-    "usableEvents": 53
+    "usableEvents": 53, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7868580894533408, 
+      "Vp": 6.472
+    }
   }, 
   "COKN": {
     "badCompEvents": 8, 
@@ -963,7 +1233,12 @@
     "start": 20080710.18, 
     "status": "processed-notok", 
     "stop": "20110706.1900", 
-    "usableEvents": 104
+    "usableEvents": 104, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "COQB": {
     "lat": 49.35422, 
@@ -971,7 +1246,12 @@
     "network": "POLARIS", 
     "start": 20020407.02, 
     "status": "not aquired", 
-    "stop": "20050803.1503"
+    "stop": "20050803.1503", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "COWN": {
     "badCompEvents": 0, 
@@ -993,7 +1273,12 @@
     "start": 20020719.23, 
     "status": "processed-ok", 
     "stop": "20090703.2350", 
-    "usableEvents": 160
+    "usableEvents": 160, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "CPLB": {
     "lat": 48.61181, 
@@ -1001,7 +1286,12 @@
     "network": "ETS", 
     "start": 20061016.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "CRLN": {
     "badCompEvents": 3, 
@@ -1013,7 +1303,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 106
+    "usableEvents": 106, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "CTLN": {
     "badCompEvents": 2, 
@@ -1035,7 +1330,12 @@
     "start": 20040718.16, 
     "status": "processed-notok", 
     "stop": "20100714.2200", 
-    "usableEvents": 176
+    "usableEvents": 176, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "CTSN": {
     "badCompEvents": 0, 
@@ -1047,7 +1347,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 160
+    "usableEvents": 160, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "DAWS": {
     "lat": 53.234, 
@@ -1055,7 +1360,12 @@
     "network": "HABC", 
     "start": 19990707.02, 
     "status": "not aquired", 
-    "stop": "19990929.2219"
+    "stop": "19990929.2219", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "DAWY": {
     "badCompEvents": 0, 
@@ -1077,7 +1387,12 @@
     "start": 19930701, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 225
+    "usableEvents": 225, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "DELO": {
     "badCompEvents": 1, 
@@ -1099,7 +1414,12 @@
     "start": 20020827.172, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 263
+    "usableEvents": 263, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "DHLB": {
     "lat": 48.9915, 
@@ -1107,7 +1427,12 @@
     "network": "ETS", 
     "start": 20030303, 
     "status": "not aquired", 
-    "stop": "20030805.2359"
+    "stop": "20030805.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "DHRN": {
     "badCompEvents": 0, 
@@ -1129,7 +1454,12 @@
     "start": 20090715.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 176
+    "usableEvents": 176, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "DIB": {
     "lat": 53.20247, 
@@ -1137,7 +1467,12 @@
     "network": "CNSN", 
     "start": 20040315.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "DLBC": {
     "badCompEvents": 0, 
@@ -1159,7 +1494,12 @@
     "start": 19940928.22, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 385
+    "usableEvents": 385, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "DMCQ": {
     "badCompEvents": 0, 
@@ -1181,7 +1521,12 @@
     "start": 20090915.19, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 149
+    "usableEvents": 149, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "DORN": {
     "badCompEvents": 0, 
@@ -1193,7 +1538,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 155
+    "usableEvents": 155, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "DPQ": {
     "badCompEvents": 666, 
@@ -1205,7 +1555,12 @@
     "start": 20091103.15, 
     "status": "data corruption", 
     "stop": "20111212.2100", 
-    "usableEvents": 20
+    "usableEvents": 20, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "DRCO": {
     "badCompEvents": 0, 
@@ -1217,7 +1572,12 @@
     "start": 20111026.2, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 41
+    "usableEvents": 41, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "DREO": {
     "badCompEvents": 0, 
@@ -1229,7 +1589,12 @@
     "start": 20070622.2, 
     "status": "bad station", 
     "stop": "20111024.1600", 
-    "usableEvents": 273
+    "usableEvents": 273, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "DRLN": {
     "badCompEvents": 14, 
@@ -1251,7 +1616,12 @@
     "start": 19931214, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 161
+    "usableEvents": 161, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "DRWO": {
     "badCompEvents": 0, 
@@ -1263,7 +1633,12 @@
     "start": 20070620.2042, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 368
+    "usableEvents": 368, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "DSMN": {
     "badCompEvents": 0, 
@@ -1285,7 +1660,12 @@
     "start": 20030718.03, 
     "status": "processed-ok", 
     "stop": "20050723.1605", 
-    "usableEvents": 46
+    "usableEvents": 46, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "DSNO": {
     "badCompEvents": 0, 
@@ -1297,7 +1677,12 @@
     "start": 20061109.1725, 
     "status": "bad station", 
     "stop": "20091007.1200", 
-    "usableEvents": 121
+    "usableEvents": 121, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "DVKN": {
     "badCompEvents": 5, 
@@ -1319,7 +1704,12 @@
     "start": 20020726.03, 
     "status": "processed-ok", 
     "stop": "20060717.1422", 
-    "usableEvents": 66
+    "usableEvents": 66, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "EA06": {
     "badCompEvents": 0, 
@@ -1331,7 +1721,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 182
+    "usableEvents": 182, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "EDB": {
     "lat": 49.8737, 
@@ -1339,7 +1734,12 @@
     "network": "CNSN", 
     "start": 19960328, 
     "status": "not aquired", 
-    "stop": "20040611.1200"
+    "stop": "20040611.1200", 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7891937290033595, 
+      "Vp": 6.391
+    }
   }, 
   "EDM": {
     "lat": 53.2217, 
@@ -1347,7 +1747,12 @@
     "network": "CNSN", 
     "start": 19920603.15, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 46.0, 
+      "R": 1.7771381578947367, 
+      "Vp": 6.483
+    }
   }, 
   "EDZN": {
     "badCompEvents": 0, 
@@ -1369,7 +1774,12 @@
     "start": 20110715, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 45
+    "usableEvents": 45, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "EKTN": {
     "badCompEvents": 1, 
@@ -1391,7 +1801,12 @@
     "start": 20010914, 
     "status": "processed-notok", 
     "stop": "20060712.1403", 
-    "usableEvents": 107
+    "usableEvents": 107, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ELEF": {
     "badCompEvents": 1, 
@@ -1403,7 +1818,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 15
+    "usableEvents": 15, 
+    "wm": {
+      "H": 27.0, 
+      "R": 1.788330632090762, 
+      "Vp": 5.517
+    }
   }, 
   "ELFO": {
     "badCompEvents": 1, 
@@ -1425,7 +1845,12 @@
     "start": 20040723.16, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 188
+    "usableEvents": 188, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "ELGO": {
     "badCompEvents": 0, 
@@ -1447,7 +1872,12 @@
     "start": 20020201.0, 
     "status": "processed-notok", 
     "stop": "20060428.1255", 
-    "usableEvents": 87
+    "usableEvents": 87, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "ENGB": {
     "lat": 49.008, 
@@ -1455,7 +1885,12 @@
     "network": "POLARIS", 
     "start": 20020405, 
     "status": "not aquired", 
-    "stop": "20050830.1714"
+    "stop": "20050830.1714", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "EPLO": {
     "badCompEvents": 15, 
@@ -1477,7 +1912,12 @@
     "start": 20040611.18, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 146
+    "usableEvents": 146, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.763566948459231, 
+      "Vp": 6.467
+    }
   }, 
   "EUNU": {
     "badCompEvents": 0, 
@@ -1499,7 +1939,12 @@
     "start": 20000822.23, 
     "status": "processed-notok", 
     "stop": "20080414.2359", 
-    "usableEvents": 209
+    "usableEvents": 209, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.7684977578475336, 
+      "Vp": 6.31
+    }
   }, 
   "FALL": {
     "lat": 53.278, 
@@ -1507,7 +1952,12 @@
     "network": "HABC", 
     "start": 19990701.2, 
     "status": "not aquired", 
-    "stop": "19990929.1735"
+    "stop": "19990929.1735", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "FCBC": {
     "lat": 48.97418, 
@@ -1515,7 +1965,12 @@
     "network": "ETS", 
     "start": 20061219.22, 
     "status": "not aquired", 
-    "stop": "20070215.2356"
+    "stop": "20070215.2356", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "FCC": {
     "badCompEvents": 19, 
@@ -1537,7 +1992,12 @@
     "start": 19931001.17, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 230
+    "usableEvents": 230, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7622167622167624, 
+      "Vp": 6.455
+    }
   }, 
   "FHRB": {
     "lat": 50.0537, 
@@ -1545,7 +2005,12 @@
     "network": "ETS", 
     "start": 20090312.14, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "FLLB": {
     "lat": 51.73903, 
@@ -1553,7 +2018,12 @@
     "network": "POLARIS", 
     "start": 20060824.2, 
     "status": "not aquired", 
-    "stop": "20080610.1705"
+    "stop": "20080610.1705", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "FNBB": {
     "badCompEvents": 0, 
@@ -1575,7 +2045,12 @@
     "start": 19991024, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 433
+    "usableEvents": 433, 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7587363712608333, 
+      "Vp": 6.291
+    }
   }, 
   "FNBC": {
     "lat": 58.8418, 
@@ -1583,7 +2058,12 @@
     "network": "CNSN", 
     "start": 19980209.1, 
     "status": "not aquired", 
-    "stop": "19991022.0000"
+    "stop": "19991022.0000", 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7587363712608333, 
+      "Vp": 6.291
+    }
   }, 
   "FPLB": {
     "lat": 52.95406, 
@@ -1591,7 +2071,12 @@
     "network": "POLARIS", 
     "start": 20071117, 
     "status": "not aquired", 
-    "stop": "20080611.2000"
+    "stop": "20080611.2000", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "FRB": {
     "badCompEvents": 4, 
@@ -1613,7 +2098,12 @@
     "start": 19920413.01, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 227
+    "usableEvents": 227, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "FSMA": {
     "badCompEvents": 0, 
@@ -1635,7 +2125,12 @@
     "start": 20100912, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 49
+    "usableEvents": 49, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.7717685235262304, 
+      "Vp": 6.552
+    }
   }, 
   "GAC": {
     "badCompEvents": 523, 
@@ -1647,7 +2142,12 @@
     "start": 20111125.13, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 8
+    "usableEvents": 8, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "GALN": {
     "badCompEvents": 0, 
@@ -1669,7 +2169,12 @@
     "start": 20040720.2, 
     "status": "processed-ok", 
     "stop": "20100715.2000", 
-    "usableEvents": 186
+    "usableEvents": 186, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GASG": {
     "badCompEvents": 3, 
@@ -1691,7 +2196,12 @@
     "start": 20051025.14, 
     "status": "processed-notok", 
     "stop": "20081021.1441", 
-    "usableEvents": 44
+    "usableEvents": 44, 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7594901634801883, 
+      "Vp": 6.35
+    }
   }, 
   "GBLN": {
     "badCompEvents": 0, 
@@ -1713,7 +2223,12 @@
     "start": 20030924.21, 
     "status": "processed-ok", 
     "stop": "20070726.1542", 
-    "usableEvents": 78
+    "usableEvents": 78, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GBN": {
     "badCompEvents": 10, 
@@ -1735,7 +2250,12 @@
     "start": 20051017.12, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 106
+    "usableEvents": 106, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.8079183420971232, 
+      "Vp": 5.845
+    }
   }, 
   "GDLN": {
     "badCompEvents": 0, 
@@ -1757,7 +2277,12 @@
     "start": 20080716.18, 
     "status": "processed-notok", 
     "stop": "20110708.1600", 
-    "usableEvents": 115
+    "usableEvents": 115, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GFNU": {
     "lat": 76.418, 
@@ -1765,7 +2290,12 @@
     "network": "CHASME", 
     "start": 20000901.2107, 
     "status": "not aquired", 
-    "stop": "20010628.1317"
+    "stop": "20010628.1317", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GGN": {
     "badCompEvents": 18, 
@@ -1787,7 +2317,12 @@
     "start": 20020130.13, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 138
+    "usableEvents": 138, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "GHNB": {
     "lat": 49.3065, 
@@ -1795,7 +2330,12 @@
     "network": "ETS", 
     "start": 20050703.22, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "GIFN": {
     "badCompEvents": 1, 
@@ -1817,7 +2357,12 @@
     "start": 20050819.22, 
     "status": "processed-ok", 
     "stop": "20110730.1800", 
-    "usableEvents": 194
+    "usableEvents": 194, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GLBC": {
     "lat": 48.39599, 
@@ -1825,7 +2370,12 @@
     "network": "ETS", 
     "start": 20040402, 
     "status": "not aquired", 
-    "stop": "20051016.2359"
+    "stop": "20051016.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "GLWN": {
     "badCompEvents": 1, 
@@ -1847,7 +2397,12 @@
     "start": 20020723.16, 
     "status": "processed-notok", 
     "stop": "20070720.1439", 
-    "usableEvents": 84
+    "usableEvents": 84, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "GOWB": {
     "lat": 48.73688, 
@@ -1855,7 +2410,12 @@
     "network": "POLARIS", 
     "start": 20020410, 
     "status": "not aquired", 
-    "stop": "20050819.1703"
+    "stop": "20050819.1703", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "HAL": {
     "badCompEvents": 0, 
@@ -1877,7 +2437,12 @@
     "start": 20080814.18, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 90
+    "usableEvents": 90, 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "HBDB": {
     "lat": 49.16972, 
@@ -1885,7 +2450,12 @@
     "network": "POLARIS", 
     "start": 20030529.21, 
     "status": "not aquired", 
-    "stop": "20050728.1458"
+    "stop": "20050728.1458", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "HFRN": {
     "badCompEvents": 0, 
@@ -1907,7 +2477,12 @@
     "start": 20110712.16, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 46
+    "usableEvents": 46, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "HGVO": {
     "badCompEvents": 0, 
@@ -1929,7 +2504,12 @@
     "start": 20020204, 
     "status": "processed-notok", 
     "stop": "20060429.1900", 
-    "usableEvents": 60
+    "usableEvents": 60, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "HILA": {
     "badCompEvents": 3, 
@@ -1951,7 +2531,12 @@
     "start": 20091019.18, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 99
+    "usableEvents": 99, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.772504091653028, 
+      "Vp": 6.498
+    }
   }, 
   "HLSB": {
     "lat": 49.28365, 
@@ -1959,7 +2544,12 @@
     "network": "POLARIS", 
     "start": 20021110.19, 
     "status": "not aquired", 
-    "stop": "20050726.1825"
+    "stop": "20050726.1825", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "HMNT": {
     "badCompEvents": 8, 
@@ -1981,7 +2571,12 @@
     "start": 20000920.17, 
     "status": "processed-notok", 
     "stop": "20020722.2146", 
-    "usableEvents": 38
+    "usableEvents": 38, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "HNB": {
     "lat": 49.2745, 
@@ -1989,7 +2584,12 @@
     "network": "CNSN", 
     "start": 19970308, 
     "status": "not aquired", 
-    "stop": "20001117.0000"
+    "stop": "20001117.0000", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "HOLB": {
     "lat": 50.6405, 
@@ -1997,7 +2597,12 @@
     "network": "CNSN", 
     "start": 20090820.2, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7853246044735407, 
+      "Vp": 6.545
+    }
   }, 
   "HOPB": {
     "lat": 49.3873, 
@@ -2005,7 +2610,12 @@
     "network": "CNSN", 
     "start": 20070726.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "HOWN": {
     "badCompEvents": 1, 
@@ -2017,7 +2627,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 130
+    "usableEvents": 130, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "HPLN": {
     "badCompEvents": 1, 
@@ -2039,7 +2654,12 @@
     "start": 20090716.17, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 94
+    "usableEvents": 94, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "HRMB": {
     "lat": 49.2446, 
@@ -2047,7 +2667,12 @@
     "network": "POLARIS", 
     "start": 20021112.02, 
     "status": "not aquired", 
-    "stop": "20050727.1525"
+    "stop": "20050727.1525", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "HSMO": {
     "lat": 47.37082, 
@@ -2055,7 +2680,12 @@
     "network": "FEDNOR", 
     "start": 20050720.18, 
     "status": "not aquired", 
-    "stop": "20081005.2300"
+    "stop": "20081005.2300", 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "HYT": {
     "badCompEvents": 562, 
@@ -2067,7 +2697,12 @@
     "start": 20100819.22, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 188
+    "usableEvents": 188, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "I10H1": {
     "lat": 50.2015, 
@@ -2075,7 +2710,12 @@
     "network": "CNSN", 
     "start": 20001210.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ICQ": {
     "badCompEvents": 78, 
@@ -2097,7 +2737,12 @@
     "start": 19960215.16, 
     "status": "processed-ok", 
     "stop": "20011112.1823", 
-    "usableEvents": 162
+    "usableEvents": 162, 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7594901634801883, 
+      "Vp": 6.35
+    }
   }, 
   "IGLN": {
     "lat": 69.369, 
@@ -2105,7 +2750,12 @@
     "network": "POLARIS", 
     "start": 20040902.2108, 
     "status": "not aquired", 
-    "stop": "20050822.2016"
+    "stop": "20050822.2016", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "IHLN": {
     "badCompEvents": 0, 
@@ -2127,7 +2777,12 @@
     "start": 20020731.22, 
     "status": "processed-ok", 
     "stop": "20050718.1542", 
-    "usableEvents": 69
+    "usableEvents": 69, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ILKN": {
     "badCompEvents": 0, 
@@ -2149,7 +2804,12 @@
     "start": 20030927.24, 
     "status": "processed-ok", 
     "stop": "20090703.2350", 
-    "usableEvents": 104
+    "usableEvents": 104, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ILON": {
     "badCompEvents": 1, 
@@ -2171,7 +2831,12 @@
     "start": 20050824.13, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 270
+    "usableEvents": 270, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "INK": {
     "badCompEvents": 0, 
@@ -2193,7 +2858,12 @@
     "start": 19920228, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 239
+    "usableEvents": 239, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7704225352112677, 
+      "Vp": 6.285
+    }
   }, 
   "INUQ": {
     "badCompEvents": 0, 
@@ -2215,7 +2885,12 @@
     "start": 20060912.2, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 177
+    "usableEvents": 177, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "IVKQ": {
     "lat": 62.41835, 
@@ -2223,7 +2898,12 @@
     "network": "POLARIS", 
     "start": 20060916.22, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "JERN": {
     "badCompEvents": 3, 
@@ -2245,7 +2925,12 @@
     "start": 20060721.23, 
     "status": "processed-ok", 
     "stop": "20100720.2200", 
-    "usableEvents": 90
+    "usableEvents": 90, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "JOSN": {
     "badCompEvents": 5, 
@@ -2267,7 +2952,12 @@
     "start": 20060825.11, 
     "status": "processed-notok", 
     "stop": "20100802.2000", 
-    "usableEvents": 88
+    "usableEvents": 88, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "JRBB": {
     "lat": 48.43002, 
@@ -2275,7 +2965,12 @@
     "network": "ETS", 
     "start": 20080513, 
     "status": "not aquired", 
-    "stop": "20080605.2310"
+    "stop": "20080605.2310", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "JRBC": {
     "lat": 48.39572, 
@@ -2283,7 +2978,12 @@
     "network": "ETS", 
     "start": 20061102.01, 
     "status": "not aquired", 
-    "stop": "20070115.1900"
+    "stop": "20070115.1900", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "KAJQ": {
     "badCompEvents": 0, 
@@ -2305,7 +3005,12 @@
     "start": 20110810, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 31
+    "usableEvents": 31, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7891937290033595, 
+      "Vp": 6.391
+    }
   }, 
   "KANO": {
     "lat": 53.2883, 
@@ -2313,7 +3018,12 @@
     "network": "HABC", 
     "start": 19990708, 
     "status": "not aquired", 
-    "stop": "19990929.2000"
+    "stop": "19990929.2000", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "KAPO": {
     "badCompEvents": 14, 
@@ -2335,7 +3045,12 @@
     "start": 19980114.19, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 209
+    "usableEvents": 209, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.763566948459231, 
+      "Vp": 6.467
+    }
   }, 
   "KASO": {
     "lat": 53.52785, 
@@ -2343,7 +3058,12 @@
     "network": "FEDNOR", 
     "start": 20050803.15, 
     "status": "not aquired", 
-    "stop": "20080820.2107"
+    "stop": "20080820.2107", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "KELB": {
     "lat": 48.66107, 
@@ -2351,7 +3071,12 @@
     "network": "POLARIS", 
     "start": 20020408, 
     "status": "not aquired", 
-    "stop": "20040603.2300"
+    "stop": "20040603.2300", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "KGNO": {
     "badCompEvents": 15, 
@@ -2373,7 +3098,12 @@
     "start": 19991221.2, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 178
+    "usableEvents": 178, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "KHVB": {
     "lat": 48.5688, 
@@ -2381,7 +3111,12 @@
     "network": "ETS", 
     "start": 20030228, 
     "status": "not aquired", 
-    "stop": "20040806.0000"
+    "stop": "20040806.0000", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "KILO": {
     "badCompEvents": 49, 
@@ -2403,7 +3138,12 @@
     "start": 20030622.13, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 160
+    "usableEvents": 160, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "KIMN": {
     "badCompEvents": 1, 
@@ -2415,7 +3155,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 128
+    "usableEvents": 128, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "KJKQ": {
     "badCompEvents": 0, 
@@ -2437,7 +3182,12 @@
     "start": 20110813, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 26
+    "usableEvents": 26, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "KLBO": {
     "badCompEvents": 0, 
@@ -2459,7 +3209,12 @@
     "start": 20030728.13, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 283
+    "usableEvents": 283, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "KLNB": {
     "lat": 48.66107, 
@@ -2467,7 +3222,12 @@
     "network": "POLARIS", 
     "start": 20040603.23, 
     "status": "not aquired", 
-    "stop": "20060622.1556"
+    "stop": "20060622.1556", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "KNDN": {
     "badCompEvents": 0, 
@@ -2489,7 +3249,12 @@
     "start": 20020804.16, 
     "status": "processed-notok", 
     "stop": "20070714.1618", 
-    "usableEvents": 87
+    "usableEvents": 87, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "KNGQ": {
     "badCompEvents": 0, 
@@ -2511,7 +3276,12 @@
     "start": 20110805, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 30
+    "usableEvents": 30, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "KRSQ": {
     "badCompEvents": 0, 
@@ -2523,7 +3293,12 @@
     "start": 20110807.0, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 8
+    "usableEvents": 8, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "KSVO": {
     "badCompEvents": 0, 
@@ -2545,7 +3320,12 @@
     "start": 20020428.0, 
     "status": "processed-ok", 
     "stop": "20040506.1230", 
-    "usableEvents": 23
+    "usableEvents": 23, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "KUGN": {
     "badCompEvents": 1, 
@@ -2567,7 +3347,12 @@
     "start": 20070818.23, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 132
+    "usableEvents": 132, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "KUKN": {
     "badCompEvents": 1, 
@@ -2589,7 +3374,12 @@
     "start": 20100721.19, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 127
+    "usableEvents": 127, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LAIN": {
     "badCompEvents": 0, 
@@ -2611,7 +3401,12 @@
     "start": 20050818.18, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 94
+    "usableEvents": 94, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LATQ": {
     "badCompEvents": 0, 
@@ -2623,7 +3418,12 @@
     "start": 20070914.19, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 316
+    "usableEvents": 316, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "LCBC": {
     "lat": 48.48337, 
@@ -2631,7 +3431,12 @@
     "network": "ETS", 
     "start": 20040330, 
     "status": "not aquired", 
-    "stop": "20051012.2359"
+    "stop": "20051012.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "LDBN": {
     "lat": 66.72194, 
@@ -2639,7 +3444,12 @@
     "network": "POLARIS", 
     "start": 20100717.23, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LDGN": {
     "badCompEvents": 2, 
@@ -2661,7 +3471,12 @@
     "start": 20010913, 
     "status": "processed-ok", 
     "stop": "20060503.1012", 
-    "usableEvents": 61
+    "usableEvents": 61, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LDIO": {
     "lat": 49.17499, 
@@ -2669,7 +3484,12 @@
     "network": "FEDNOR", 
     "start": 20040616.21, 
     "status": "not aquired", 
-    "stop": "20080813.1505"
+    "stop": "20080813.1505", 
+    "wm": {
+      "H": 50.0, 
+      "R": 1.7644492911668486, 
+      "Vp": 6.472
+    }
   }, 
   "LGSN": {
     "badCompEvents": 0, 
@@ -2691,7 +3511,12 @@
     "start": 20020725, 
     "status": "processed-ok", 
     "stop": "20060717.1625", 
-    "usableEvents": 79
+    "usableEvents": 79, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LINO": {
     "badCompEvents": 0, 
@@ -2713,7 +3538,12 @@
     "start": 20020908, 
     "status": "processed-ok", 
     "stop": "20060504.1420", 
-    "usableEvents": 62
+    "usableEvents": 62, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "LLLB": {
     "lat": 50.609, 
@@ -2721,7 +3551,12 @@
     "network": "CNSN", 
     "start": 19981117.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "LMN": {
     "badCompEvents": 12, 
@@ -2743,7 +3578,12 @@
     "start": 19930726, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 175
+    "usableEvents": 175, 
+    "wm": {
+      "H": 38.0, 
+      "R": 1.763440860215054, 
+      "Vp": 6.232
+    }
   }, 
   "LMQ": {
     "badCompEvents": 15, 
@@ -2765,7 +3605,12 @@
     "start": 19981002.01, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 188
+    "usableEvents": 188, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "LSQQ": {
     "badCompEvents": 0, 
@@ -2777,7 +3622,12 @@
     "start": 20090913.1844, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 266
+    "usableEvents": 266, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "LUPN": {
     "badCompEvents": 0, 
@@ -2799,7 +3649,12 @@
     "start": 20030711.22, 
     "status": "processed-notok", 
     "stop": "20060721.2330", 
-    "usableEvents": 74
+    "usableEvents": 74, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "LZB": {
     "lat": 48.6117, 
@@ -2807,7 +3662,12 @@
     "network": "CNSN", 
     "start": 20010110, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "MADG": {
     "badCompEvents": 0, 
@@ -2829,7 +3689,12 @@
     "start": 20051001.19, 
     "status": "processed-notok", 
     "stop": "20081015.1233", 
-    "usableEvents": 58
+    "usableEvents": 58, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7891937290033595, 
+      "Vp": 6.391
+    }
   }, 
   "MALG": {
     "badCompEvents": 0, 
@@ -2851,7 +3716,12 @@
     "start": 20051015.14, 
     "status": "processed-notok", 
     "stop": "20081009.1908", 
-    "usableEvents": 78
+    "usableEvents": 78, 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "MALO": {
     "badCompEvents": 20, 
@@ -2873,7 +3743,12 @@
     "start": 20030717.23, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 153
+    "usableEvents": 153, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MANA": {
     "badCompEvents": 0, 
@@ -2895,7 +3770,12 @@
     "start": 20091018.03, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 71
+    "usableEvents": 71, 
+    "wm": {
+      "H": 46.0, 
+      "R": 1.7744565217391304, 
+      "Vp": 6.53
+    }
   }, 
   "MANN": {
     "badCompEvents": 0, 
@@ -2907,7 +3787,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 61
+    "usableEvents": 61, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "MATQ": {
     "badCompEvents": 2, 
@@ -2929,7 +3814,12 @@
     "start": 20070919.16, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 155
+    "usableEvents": 155, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "MBC": {
     "lat": 76.2417, 
@@ -2937,7 +3827,12 @@
     "network": "CNSN", 
     "start": 19920829, 
     "status": "not aquired", 
-    "stop": "19970629.0000"
+    "stop": "19970629.0000", 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7868580894533408, 
+      "Vp": 6.472
+    }
   }, 
   "MCKN": {
     "badCompEvents": 1, 
@@ -2959,7 +3854,12 @@
     "start": 20020726.2, 
     "status": "processed-notok", 
     "stop": "20070718.1359", 
-    "usableEvents": 70
+    "usableEvents": 70, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MCMB1": {
     "lat": 52.8217, 
@@ -2967,7 +3867,12 @@
     "network": "CNSN", 
     "start": 20071122.23, 
     "status": "not aquired", 
-    "stop": "20080614.1700"
+    "stop": "20080614.1700", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "MCMN": {
     "badCompEvents": 0, 
@@ -2989,7 +3894,12 @@
     "start": 20100804, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 107
+    "usableEvents": 107, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "MEDA": {
     "lat": 49.98148, 
@@ -2997,7 +3907,12 @@
     "network": "POLARIS", 
     "start": 20091014.12, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 48.0, 
+      "R": 1.782392026578073, 
+      "Vp": 6.438
+    }
   }, 
   "MEDO": {
     "badCompEvents": 0, 
@@ -3019,7 +3934,12 @@
     "start": 20040507.21, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 205
+    "usableEvents": 205, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "MGB": {
     "lat": 48.99986, 
@@ -3027,7 +3947,12 @@
     "network": "CNSN", 
     "start": 20050721.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "MGTN": {
     "badCompEvents": 0, 
@@ -3049,7 +3974,12 @@
     "start": 20020804.21, 
     "status": "processed-notok", 
     "stop": "20070715.1600", 
-    "usableEvents": 55
+    "usableEvents": 55, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MKVL": {
     "badCompEvents": 0, 
@@ -3061,7 +3991,12 @@
     "start": 20110726.0, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 9
+    "usableEvents": 9, 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "MLON": {
     "badCompEvents": 2, 
@@ -3083,7 +4018,12 @@
     "start": 20020803.2, 
     "status": "processed-ok", 
     "stop": "20070716.1530", 
-    "usableEvents": 112
+    "usableEvents": 112, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MNGN": {
     "badCompEvents": 0, 
@@ -3095,7 +4035,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 119
+    "usableEvents": 119, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "MNT": {
     "badCompEvents": 62, 
@@ -3117,7 +4062,12 @@
     "start": 19991015.01, 
     "status": "processed-ok", 
     "stop": "20100521.1825", 
-    "usableEvents": 172
+    "usableEvents": 172, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "MNTQ": {
     "badCompEvents": 4, 
@@ -3139,7 +4089,12 @@
     "start": 20100726, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 212
+    "usableEvents": 212, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "MOBC": {
     "lat": 53.14478, 
@@ -3147,7 +4102,12 @@
     "network": "CNSN", 
     "start": 19960226.2, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7853246044735407, 
+      "Vp": 6.545
+    }
   }, 
   "MPPO": {
     "badCompEvents": 0, 
@@ -3169,7 +4129,12 @@
     "start": 20020823, 
     "status": "processed-ok", 
     "stop": "20080515.2359", 
-    "usableEvents": 89
+    "usableEvents": 89, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "MRHQ": {
     "badCompEvents": 0, 
@@ -3191,7 +4156,12 @@
     "start": 20041013.01, 
     "status": "processed-notok", 
     "stop": "20080722.1407", 
-    "usableEvents": 77
+    "usableEvents": 77, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "MRYN": {
     "badCompEvents": 0, 
@@ -3213,7 +4183,12 @@
     "start": 20110801.1, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 28
+    "usableEvents": 28, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "MSNO": {
     "lat": 51.2913, 
@@ -3221,7 +4196,12 @@
     "network": "FEDNOR", 
     "start": 20050723.15, 
     "status": "not aquired", 
-    "stop": "20080930.2300"
+    "stop": "20080930.2300", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MUMO": {
     "lat": 52.61279, 
@@ -3229,7 +4209,12 @@
     "network": "FEDNOR", 
     "start": 20030615, 
     "status": "not aquired", 
-    "stop": "20080817.1800"
+    "stop": "20080817.1800", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "MWAB": {
     "lat": 49.74111, 
@@ -3237,7 +4222,12 @@
     "network": "ETS", 
     "start": 20090731.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "NANL": {
     "badCompEvents": 0, 
@@ -3249,7 +4239,12 @@
     "start": 20110724.0, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 11
+    "usableEvents": 11, 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.8113444061422752, 
+      "Vp": 5.78
+    }
   }, 
   "NATG": {
     "badCompEvents": 12, 
@@ -3271,7 +4266,12 @@
     "start": 20051126.15, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 96
+    "usableEvents": 96, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "NEMQ": {
     "badCompEvents": 0, 
@@ -3283,7 +4283,12 @@
     "start": 20070827.17, 
     "status": "bad station", 
     "stop": "20090910.0000", 
-    "usableEvents": 29
+    "usableEvents": 29, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "NLLB": {
     "lat": 49.2274, 
@@ -3291,7 +4296,12 @@
     "network": "CNSN", 
     "start": 20030101, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "NMSQ": {
     "badCompEvents": 0, 
@@ -3313,7 +4323,12 @@
     "start": 20090912.1218, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 125
+    "usableEvents": 125, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "NODN": {
     "badCompEvents": 0, 
@@ -3335,7 +4350,12 @@
     "start": 20020729.19, 
     "status": "processed-ok", 
     "stop": "20050717.1551", 
-    "usableEvents": 48
+    "usableEvents": 48, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "NOTN": {
     "badCompEvents": 0, 
@@ -3347,7 +4367,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 60
+    "usableEvents": 60, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "NSKO": {
     "lat": 52.1965, 
@@ -3355,7 +4380,12 @@
     "network": "FEDNOR", 
     "start": 20050729.13, 
     "status": "not aquired", 
-    "stop": "20080823.1734"
+    "stop": "20080823.1734", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "NUNN": {
     "badCompEvents": 2, 
@@ -3377,7 +4407,12 @@
     "start": 20070816.17, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 129
+    "usableEvents": 129, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "NWRL": {
     "badCompEvents": 0, 
@@ -3389,7 +4424,12 @@
     "start": 20110721.0, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 43
+    "usableEvents": 43, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "ORHO": {
     "badCompEvents": 0, 
@@ -3401,7 +4441,12 @@
     "start": 20070619.18, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 343
+    "usableEvents": 343, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "ORIO": {
     "badCompEvents": 0, 
@@ -3423,7 +4468,12 @@
     "start": 20080619.17, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 128
+    "usableEvents": 128, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "OTRO": {
     "lat": 50.1818, 
@@ -3431,7 +4481,12 @@
     "network": "FEDNOR", 
     "start": 20030618.23, 
     "status": "not aquired", 
-    "stop": "20081003.2300"
+    "stop": "20081003.2300", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "OTT": {
     "badCompEvents": 534, 
@@ -3443,7 +4498,12 @@
     "start": 20020101.01, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 27
+    "usableEvents": 27, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "OZB": {
     "lat": 48.9603, 
@@ -3451,7 +4511,12 @@
     "network": "CNSN", 
     "start": 19960328, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA01": {
     "lat": 48.6526, 
@@ -3459,7 +4524,12 @@
     "network": "CNSN", 
     "start": 20100722.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA02": {
     "lat": 48.65182, 
@@ -3467,7 +4537,12 @@
     "network": "CNSN", 
     "start": 20100722.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA03": {
     "lat": 48.65175, 
@@ -3475,7 +4550,12 @@
     "network": "CNSN", 
     "start": 20100722.2, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA04": {
     "lat": 48.65097, 
@@ -3483,7 +4563,12 @@
     "network": "CNSN", 
     "start": 20100722.2, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA05": {
     "lat": 48.64973, 
@@ -3491,7 +4576,12 @@
     "network": "CNSN", 
     "start": 20100722.18, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PA12": {
     "lat": 48.6482, 
@@ -3499,7 +4589,12 @@
     "network": "CNSN", 
     "start": 20100722.18, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PACB": {
     "lat": 50.43553, 
@@ -3507,7 +4602,12 @@
     "network": "ETS", 
     "start": 20100624.01, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PECO": {
     "badCompEvents": 0, 
@@ -3529,7 +4629,12 @@
     "start": 20020906.19, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 184
+    "usableEvents": 184, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "PEMO": {
     "badCompEvents": 1, 
@@ -3551,7 +4656,12 @@
     "start": 20021114.0, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 167
+    "usableEvents": 167, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "PFB": {
     "lat": 48.5717, 
@@ -3559,7 +4669,12 @@
     "network": "CNSN", 
     "start": 20010510, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PGC": {
     "lat": 48.64983, 
@@ -3567,7 +4682,12 @@
     "network": "CNSN", 
     "start": 19980128.2, 
     "status": "not aquired", 
-    "stop": "19980219.2347"
+    "stop": "19980219.2347", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PGCB": {
     "lat": 48.6498, 
@@ -3575,7 +4695,12 @@
     "network": "POLARIS", 
     "start": 20020226, 
     "status": "not aquired", 
-    "stop": "20020719.0000"
+    "stop": "20020719.0000", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PHC": {
     "lat": 50.70666, 
@@ -3583,7 +4708,12 @@
     "network": "CNSN", 
     "start": 19951214, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PHYB": {
     "lat": 49.0828, 
@@ -3591,7 +4721,12 @@
     "network": "ETS", 
     "start": 20040505.18, 
     "status": "not aquired", 
-    "stop": "20051014.2359"
+    "stop": "20051014.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PIMB": {
     "lat": 49.27432, 
@@ -3599,7 +4734,12 @@
     "network": "POLARIS", 
     "start": 20021114.23, 
     "status": "not aquired", 
-    "stop": "20050728.0138"
+    "stop": "20050728.0138", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PINU": {
     "lat": 72.6971, 
@@ -3607,7 +4747,12 @@
     "network": "CHASME", 
     "start": 20000906.2237, 
     "status": "not aquired", 
-    "stop": "20071201.2031"
+    "stop": "20071201.2031", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "PKLO": {
     "badCompEvents": 14, 
@@ -3629,7 +4774,12 @@
     "start": 20040615.15, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 170
+    "usableEvents": 170, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "PKRO": {
     "badCompEvents": 2, 
@@ -3651,7 +4801,12 @@
     "start": 20020130, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 183
+    "usableEvents": 183, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "PLBC": {
     "badCompEvents": 3, 
@@ -3673,7 +4828,12 @@
     "start": 20050903.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 91
+    "usableEvents": 91, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PLIO": {
     "badCompEvents": 0, 
@@ -3695,7 +4855,12 @@
     "start": 20030822.16, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 191
+    "usableEvents": 191, 
+    "wm": {
+      "H": 46.0, 
+      "R": 1.7771381578947367, 
+      "Vp": 6.483
+    }
   }, 
   "PLVO": {
     "badCompEvents": 0, 
@@ -3717,7 +4882,12 @@
     "start": 20040513.22, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 244
+    "usableEvents": 244, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "PMB": {
     "lat": 50.5188, 
@@ -3725,7 +4895,12 @@
     "network": "CNSN", 
     "start": 19930604, 
     "status": "not aquired", 
-    "stop": "19980928.0000"
+    "stop": "19980928.0000", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "PNGN": {
     "badCompEvents": 0, 
@@ -3737,7 +4912,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 85
+    "usableEvents": 85, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "PNPO": {
     "badCompEvents": 19, 
@@ -3759,7 +4939,12 @@
     "start": 20040618.2, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 157
+    "usableEvents": 157, 
+    "wm": {
+      "H": 50.0, 
+      "R": 1.7644492911668486, 
+      "Vp": 6.472
+    }
   }, 
   "PNT": {
     "lat": 49.32241, 
@@ -3767,7 +4952,12 @@
     "network": "CNSN", 
     "start": 19930203, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.7593038821954485, 
+      "Vp": 6.571
+    }
   }, 
   "PPSB": {
     "lat": 48.39558, 
@@ -3775,7 +4965,12 @@
     "network": "ETS", 
     "start": 20061102.19, 
     "status": "not aquired", 
-    "stop": "20070215.2010"
+    "stop": "20070215.2010", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "PRDA": {
     "lat": 50.8674, 
@@ -3783,7 +4978,12 @@
     "network": "POLARIS", 
     "start": 20091113.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 46.0, 
+      "R": 1.7785773595350125, 
+      "Vp": 6.426
+    }
   }, 
   "PTCO": {
     "badCompEvents": 0, 
@@ -3805,7 +5005,12 @@
     "start": 20020205, 
     "status": "processed-notok", 
     "stop": "20060430.1530", 
-    "usableEvents": 58
+    "usableEvents": 58, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "QCQ": {
     "badCompEvents": 569, 
@@ -3817,7 +5022,12 @@
     "start": 19971101.01, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 7
+    "usableEvents": 7, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "QILN": {
     "badCompEvents": 0, 
@@ -3839,7 +5049,12 @@
     "start": 20040904.22, 
     "status": "processed-ok", 
     "stop": "20100730.0500", 
-    "usableEvents": 149
+    "usableEvents": 149, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "QURY": {
     "lat": 53.3763, 
@@ -3847,7 +5062,12 @@
     "network": "HABC", 
     "start": 19990629.18, 
     "status": "not aquired", 
-    "stop": "20000616.1620"
+    "stop": "20000616.1620", 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "RAMB": {
     "lat": 52.63197, 
@@ -3855,7 +5075,12 @@
     "network": "POLARIS", 
     "start": 20060903.21, 
     "status": "not aquired", 
-    "stop": "20071122.1750"
+    "stop": "20071122.1750", 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "RAYA": {
     "lat": 49.386267, 
@@ -3863,7 +5088,12 @@
     "network": "POLARIS", 
     "start": 20100709.11, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 50.0, 
+      "R": 1.76029328821207, 
+      "Vp": 6.242
+    }
   }, 
   "RDEA": {
     "lat": 56.55125, 
@@ -3871,7 +5101,12 @@
     "network": "POLARIS", 
     "start": 20110608.173, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.772504091653028, 
+      "Vp": 6.498
+    }
   }, 
   "RDLO": {
     "lat": 50.97448, 
@@ -3879,7 +5114,12 @@
     "network": "FEDNOR", 
     "start": 20040613.17, 
     "status": "not aquired", 
-    "stop": "20041119.0000"
+    "stop": "20041119.0000", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "RES": {
     "badCompEvents": 0, 
@@ -3901,7 +5141,12 @@
     "start": 19920213.01, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 199
+    "usableEvents": 199, 
+    "wm": {
+      "H": 41.0, 
+      "R": 1.7725590663250783, 
+      "Vp": 6.227
+    }
   }, 
   "RLKO": {
     "lat": 51.0704, 
@@ -3909,7 +5154,12 @@
     "network": "FEDNOR", 
     "start": 20041119.15, 
     "status": "not aquired", 
-    "stop": "20080815.2000"
+    "stop": "20080815.2000", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "ROMN": {
     "badCompEvents": 15, 
@@ -3931,7 +5181,12 @@
     "start": 20070812.02, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 79
+    "usableEvents": 79, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "RSPO": {
     "badCompEvents": 0, 
@@ -3953,7 +5208,12 @@
     "start": 20040805.183, 
     "status": "processed-notok", 
     "stop": "20100517.1721", 
-    "usableEvents": 115
+    "usableEvents": 115, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "RUBB": {
     "lat": 54.3262, 
@@ -3961,7 +5221,12 @@
     "network": "CNSN", 
     "start": 20120518.21, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7764900662251655, 
+      "Vp": 6.438
+    }
   }, 
   "SABG": {
     "badCompEvents": 0, 
@@ -3973,7 +5238,12 @@
     "start": 20051013.1956, 
     "status": "bad station", 
     "stop": "20090429.1251", 
-    "usableEvents": 131
+    "usableEvents": 131, 
+    "wm": {
+      "H": 19.5, 
+      "R": 2.052316890881913, 
+      "Vp": 4.119
+    }
   }, 
   "SADO": {
     "badCompEvents": 11, 
@@ -3995,7 +5265,12 @@
     "start": 19931203.13, 
     "status": "processed-ok", 
     "stop": "19940720.1830", 
-    "usableEvents": 163
+    "usableEvents": 163, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "SBNU": {
     "lat": 69.5405, 
@@ -4003,7 +5278,12 @@
     "network": "CHASME", 
     "start": 20000923.2158, 
     "status": "not aquired", 
-    "stop": "20020725.2028"
+    "stop": "20020725.2028", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SCH": {
     "lat": 54.8183, 
@@ -4011,7 +5291,12 @@
     "network": "CNSN", 
     "start": 19940327.18, 
     "status": "not aquired", 
-    "stop": "19941212.1848"
+    "stop": "19941212.1848", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "SCHQ": {
     "badCompEvents": 13, 
@@ -4033,7 +5318,12 @@
     "start": 19980616.18, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 727
+    "usableEvents": 727, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "SEDN": {
     "badCompEvents": 2, 
@@ -4055,7 +5345,12 @@
     "start": 20060824.16, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 143
+    "usableEvents": 143, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "SHB": {
     "lat": 49.593, 
@@ -4063,7 +5358,12 @@
     "network": "CNSN", 
     "start": 19961128, 
     "status": "not aquired", 
-    "stop": "20001123.0000"
+    "stop": "20001123.0000", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SHDB": {
     "lat": 48.797, 
@@ -4071,7 +5371,12 @@
     "network": "ETS", 
     "start": 20061103.01, 
     "status": "not aquired", 
-    "stop": "20070324.2359"
+    "stop": "20070324.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SHMN": {
     "badCompEvents": 0, 
@@ -4083,7 +5388,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 68
+    "usableEvents": 68, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "SHVB": {
     "lat": 48.4723, 
@@ -4091,7 +5401,12 @@
     "network": "ETS", 
     "start": 20050719.01, 
     "status": "not aquired", 
-    "stop": "20051013.2130"
+    "stop": "20051013.2130", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SHWN": {
     "badCompEvents": 0, 
@@ -4103,7 +5418,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 57
+    "usableEvents": 57, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "SILB": {
     "lat": 48.60198, 
@@ -4111,7 +5431,12 @@
     "network": "POLARIS", 
     "start": 20030222.21, 
     "status": "not aquired", 
-    "stop": "20060704.1909"
+    "stop": "20060704.1909", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SILO": {
     "badCompEvents": 10, 
@@ -4133,7 +5458,12 @@
     "start": 20030609.12, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 151
+    "usableEvents": 151, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SJNN": {
     "badCompEvents": 15, 
@@ -4155,7 +5485,12 @@
     "start": 20051012.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 64
+    "usableEvents": 64, 
+    "wm": {
+      "H": 29.5, 
+      "R": 1.7984031936127745, 
+      "Vp": 6.307
+    }
   }, 
   "SLEB": {
     "lat": 51.1667, 
@@ -4163,7 +5498,12 @@
     "network": "CNSN", 
     "start": 19971205, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 50.0, 
+      "R": 1.758859357696567, 
+      "Vp": 6.353
+    }
   }, 
   "SMLN": {
     "badCompEvents": 0, 
@@ -4185,7 +5525,12 @@
     "start": 20100730.19, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 63
+    "usableEvents": 63, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SMPN": {
     "badCompEvents": 1, 
@@ -4207,7 +5552,12 @@
     "start": 20100717.14, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 85
+    "usableEvents": 85, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SNB": {
     "lat": 48.775, 
@@ -4215,7 +5565,12 @@
     "network": "CNSN", 
     "start": 20110317.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SNKN": {
     "lat": 56.53624, 
@@ -4223,7 +5578,12 @@
     "network": "POLARIS", 
     "start": 20120301.163, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SNLN": {
     "badCompEvents": 1, 
@@ -4245,7 +5605,12 @@
     "start": 20080712.22, 
     "status": "processed-notok", 
     "stop": "20110707.1500", 
-    "usableEvents": 118
+    "usableEvents": 118, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SNPN": {
     "badCompEvents": 4, 
@@ -4267,7 +5632,12 @@
     "start": 20020731.19, 
     "status": "processed-ok", 
     "stop": "20070811.2359", 
-    "usableEvents": 89
+    "usableEvents": 89, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SNQN": {
     "badCompEvents": 0, 
@@ -4289,7 +5659,12 @@
     "start": 20060920.04, 
     "status": "processed-notok", 
     "stop": "20090724.2359", 
-    "usableEvents": 51
+    "usableEvents": 51, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SOKB": {
     "lat": 48.3947, 
@@ -4297,7 +5672,12 @@
     "network": "ETS", 
     "start": 20080317.05, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SPLB": {
     "lat": 49.8921, 
@@ -4305,7 +5685,12 @@
     "network": "ETS", 
     "start": 20090730.01, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SRLN": {
     "badCompEvents": 1, 
@@ -4327,7 +5712,12 @@
     "start": 20050821.21, 
     "status": "processed-ok", 
     "stop": "20090714.2359", 
-    "usableEvents": 85
+    "usableEvents": 85, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SSIB": {
     "lat": 48.75577, 
@@ -4335,7 +5725,12 @@
     "network": "POLARIS", 
     "start": 20021204.17, 
     "status": "not aquired", 
-    "stop": "20060616.1712"
+    "stop": "20060616.1712", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "SSNO": {
     "badCompEvents": 0, 
@@ -4347,7 +5742,12 @@
     "start": 20061109.17, 
     "status": "bad station", 
     "stop": "20091007.1200", 
-    "usableEvents": 101
+    "usableEvents": 101, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "STCO": {
     "badCompEvents": 0, 
@@ -4359,7 +5759,12 @@
     "start": 20011109, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 535
+    "usableEvents": 535, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "STLN": {
     "badCompEvents": 1, 
@@ -4381,7 +5786,12 @@
     "start": 20060818.01, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 130
+    "usableEvents": 130, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "SULB": {
     "lat": 53.27857, 
@@ -4389,7 +5799,12 @@
     "network": "POLARIS", 
     "start": 20060905.15, 
     "status": "not aquired", 
-    "stop": "20090825.2359"
+    "stop": "20090825.2359", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "SUNO": {
     "badCompEvents": 13, 
@@ -4411,7 +5826,12 @@
     "start": 20030623.21, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 137
+    "usableEvents": 137, 
+    "wm": {
+      "H": 45.0, 
+      "R": 1.775811209439528, 
+      "Vp": 6.622
+    }
   }, 
   "TALB": {
     "lat": 52.0147, 
@@ -4419,7 +5839,12 @@
     "network": "POLARIS", 
     "start": 20060828.01, 
     "status": "not aquired", 
-    "stop": "20080611.1200"
+    "stop": "20080611.1200", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "TASB": {
     "lat": 49.9266, 
@@ -4427,7 +5852,12 @@
     "network": "ETS", 
     "start": 20060316.23, 
     "status": "not aquired", 
-    "stop": "20060929.2334"
+    "stop": "20060929.2334", 
+    "wm": {
+      "H": 32.0, 
+      "R": 1.7891937290033595, 
+      "Vp": 6.391
+    }
   }, 
   "TFRB": {
     "lat": 48.93322, 
@@ -4435,7 +5865,12 @@
     "network": "ETS", 
     "start": 20040528.18, 
     "status": "not aquired", 
-    "stop": "20040818.2359"
+    "stop": "20040818.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "THAB": {
     "lat": 49.28, 
@@ -4443,7 +5878,12 @@
     "network": "ETS", 
     "start": 20050810.01, 
     "status": "not aquired", 
-    "stop": "20070219.2359"
+    "stop": "20070219.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "THMB": {
     "lat": 52.5489, 
@@ -4451,7 +5891,12 @@
     "network": "POLARIS", 
     "start": 20060827.01, 
     "status": "not aquired", 
-    "stop": "20080610.2315"
+    "stop": "20080610.2315", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "TIGG": {
     "badCompEvents": 0, 
@@ -4473,7 +5918,12 @@
     "start": 20050929.02, 
     "status": "processed-notok", 
     "stop": "20071105.2020", 
-    "usableEvents": 47
+    "usableEvents": 47, 
+    "wm": {
+      "H": 43.0, 
+      "R": 1.7587363712608333, 
+      "Vp": 6.291
+    }
   }, 
   "TLCB": {
     "lat": 50.546, 
@@ -4481,7 +5931,12 @@
     "network": "ETS", 
     "start": 20041220, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "TOBO": {
     "badCompEvents": 8, 
@@ -4503,7 +5958,12 @@
     "start": 20030729.1543, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 229
+    "usableEvents": 229, 
+    "wm": {
+      "H": 45.5, 
+      "R": 1.777087273709808, 
+      "Vp": 6.577
+    }
   }, 
   "TOFB": {
     "lat": 49.154317, 
@@ -4511,7 +5971,12 @@
     "network": "ETS", 
     "start": 20090214.02, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "TORO": {
     "badCompEvents": 1, 
@@ -4523,7 +5988,12 @@
     "start": 20040504.19, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 441
+    "usableEvents": 441, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "TSJB": {
     "lat": 48.60128, 
@@ -4531,7 +6001,12 @@
     "network": "POLARIS", 
     "start": 20030304, 
     "status": "not aquired", 
-    "stop": "20060619.1716"
+    "stop": "20060619.1716", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "TULEG": {
     "badCompEvents": 167, 
@@ -4543,7 +6018,12 @@
     "start": 20000926.16, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 187
+    "usableEvents": 187, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "TWGB": {
     "lat": 48.60757, 
@@ -4551,7 +6031,12 @@
     "network": "POLARIS", 
     "start": 20021125.19, 
     "status": "not aquired", 
-    "stop": "20050510.1911"
+    "stop": "20050510.1911", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "TWKB": {
     "lat": 48.64485, 
@@ -4559,7 +6044,12 @@
     "network": "POLARIS", 
     "start": 20021120.23, 
     "status": "not aquired", 
-    "stop": "20060514.0015"
+    "stop": "20060514.0015", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "TYNO": {
     "badCompEvents": 3, 
@@ -4581,7 +6071,12 @@
     "start": 20010807.2149, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 213
+    "usableEvents": 213, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "UBRB": {
     "lat": 52.89179, 
@@ -4589,7 +6084,12 @@
     "network": "CNSN", 
     "start": 20071016.12, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "ULM": {
     "badCompEvents": 19, 
@@ -4611,7 +6111,12 @@
     "start": 19941207.2, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 297
+    "usableEvents": 297, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "UPNG": {
     "lat": 72.7848, 
@@ -4619,7 +6124,12 @@
     "network": "CHASME", 
     "start": 20000719.2238, 
     "status": "not aquired", 
-    "stop": "20001127.0719"
+    "stop": "20001127.0719", 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "UWOO": {
     "badCompEvents": 0, 
@@ -4631,7 +6141,12 @@
     "start": 20020226, 
     "status": "bad station", 
     "stop": "20020508.0000", 
-    "usableEvents": 8
+    "usableEvents": 8, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "VABQ": {
     "badCompEvents": 41, 
@@ -4653,7 +6168,12 @@
     "start": 20101129.1, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 30
+    "usableEvents": 30, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "VDBQ": {
     "badCompEvents": 18, 
@@ -4665,7 +6185,12 @@
     "start": 20100624.19, 
     "status": "bad station", 
     "stop": "20101126.1900", 
-    "usableEvents": 0
+    "usableEvents": 0, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "VGZ": {
     "lat": 48.4139, 
@@ -4673,7 +6198,12 @@
     "network": "CNSN", 
     "start": 20090731, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "VIB": {
     "lat": 53.2522, 
@@ -4681,7 +6211,12 @@
     "network": "CNSN", 
     "start": 20041123.13, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 31.0, 
+      "R": 1.8009395184967705, 
+      "Vp": 6.134
+    }
   }, 
   "VIMO": {
     "badCompEvents": 15, 
@@ -4703,7 +6238,12 @@
     "start": 20030611.13, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 142
+    "usableEvents": 142, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "VLDQ": {
     "badCompEvents": 10, 
@@ -4725,7 +6265,12 @@
     "start": 20020107, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 188
+    "usableEvents": 188, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "VTIN": {
     "badCompEvents": 0, 
@@ -4737,7 +6282,12 @@
     "start": 0.0, 
     "status": "picked", 
     "stop": 0.0, 
-    "usableEvents": 51
+    "usableEvents": 51, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7661581137309292, 
+      "Vp": 6.367
+    }
   }, 
   "WAGN": {
     "badCompEvents": 0, 
@@ -4759,7 +6309,12 @@
     "start": 20060820.2, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 75
+    "usableEvents": 75, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "WALA": {
     "lat": 49.0586, 
@@ -4767,7 +6322,12 @@
     "network": "CNSN", 
     "start": 19920603.15, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 50.0, 
+      "R": 1.76029328821207, 
+      "Vp": 6.242
+    }
   }, 
   "WAPA": {
     "lat": 55.18333, 
@@ -4775,7 +6335,12 @@
     "network": "POLARIS", 
     "start": 20091020.17, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 46.0, 
+      "R": 1.7785773595350125, 
+      "Vp": 6.426
+    }
   }, 
   "WBHL": {
     "badCompEvents": 1, 
@@ -4787,7 +6352,12 @@
     "start": 20110718.0, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 7
+    "usableEvents": 7, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "WEMQ": {
     "badCompEvents": 6, 
@@ -4799,7 +6369,12 @@
     "start": 20050623.16, 
     "status": "bad station", 
     "stop": "20070923.1800", 
-    "usableEvents": 218
+    "usableEvents": 218, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "WHFN": {
     "badCompEvents": 3, 
@@ -4821,7 +6396,12 @@
     "start": 20080710.18, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 127
+    "usableEvents": 127, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "WHY": {
     "badCompEvents": 0, 
@@ -4843,7 +6423,12 @@
     "start": 19930827.18, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 241
+    "usableEvents": 241, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "WISB": {
     "lat": 50.1265, 
@@ -4851,7 +6436,12 @@
     "network": "CNSN", 
     "start": 20030509.23, 
     "status": "not aquired", 
-    "stop": "20030602.2300"
+    "stop": "20030602.2300", 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "WLVO": {
     "badCompEvents": 1, 
@@ -4873,7 +6463,12 @@
     "start": 20020129, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 235
+    "usableEvents": 235, 
+    "wm": {
+      "H": 41.5, 
+      "R": 1.7621768707482994, 
+      "Vp": 6.476
+    }
   }, 
   "WSLR": {
     "lat": 50.1265, 
@@ -4881,7 +6476,12 @@
     "network": "CNSN", 
     "start": 20030602.23, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.7717508055853919, 
+      "Vp": 6.598
+    }
   }, 
   "WTRB": {
     "lat": 50.12979, 
@@ -4889,7 +6489,12 @@
     "network": "ETS", 
     "start": 20060318.2, 
     "status": "not aquired", 
-    "stop": "20060929.2359"
+    "stop": "20060929.2359", 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YBKN": {
     "badCompEvents": 5, 
@@ -4911,7 +6516,12 @@
     "start": 20060827.21, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 189
+    "usableEvents": 189, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "YKW1": {
     "badCompEvents": 171, 
@@ -4923,7 +6533,12 @@
     "start": 20060221.15, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 758
+    "usableEvents": 758, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YKW2": {
     "badCompEvents": 3, 
@@ -4945,7 +6560,12 @@
     "start": 19890125, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 177
+    "usableEvents": 177, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YKW3": {
     "badCompEvents": 1102, 
@@ -4957,7 +6577,12 @@
     "start": 19890125, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 5
+    "usableEvents": 5, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YKW4": {
     "badCompEvents": 7, 
@@ -4979,7 +6604,12 @@
     "start": 19890125, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 125
+    "usableEvents": 125, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YKW5": {
     "badCompEvents": 0, 
@@ -5001,7 +6631,12 @@
     "start": 20011126.21, 
     "status": "processed-notok", 
     "stop": "20060220.1940", 
-    "usableEvents": 120
+    "usableEvents": 120, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YMBN": {
     "badCompEvents": 0, 
@@ -5023,7 +6658,12 @@
     "start": 20010907, 
     "status": "processed-notok", 
     "stop": "20060710.1449", 
-    "usableEvents": 74
+    "usableEvents": 74, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YNEN": {
     "badCompEvents": 0, 
@@ -5045,7 +6685,12 @@
     "start": 20020724.18, 
     "status": "processed-notok", 
     "stop": "20060709.1559", 
-    "usableEvents": 53
+    "usableEvents": 53, 
+    "wm": {
+      "H": 37.0, 
+      "R": 1.7623465211459752, 
+      "Vp": 6.459
+    }
   }, 
   "YOSQ": {
     "badCompEvents": 10, 
@@ -5067,7 +6712,12 @@
     "start": 20050626.2, 
     "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 175
+    "usableEvents": 175, 
+    "wm": {
+      "H": 40.0, 
+      "R": 1.774496644295302, 
+      "Vp": 6.61
+    }
   }, 
   "YOUB": {
     "lat": 48.90095, 
@@ -5075,7 +6725,12 @@
     "network": "CNSN", 
     "start": 20030228, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YRTN": {
     "badCompEvents": 0, 
@@ -5097,7 +6752,12 @@
     "start": 20040906.22, 
     "status": "processed-notok", 
     "stop": "20090707.2350", 
-    "usableEvents": 76
+    "usableEvents": 76, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7654015401540153, 
+      "Vp": 6.419
+    }
   }, 
   "YUK1": {
     "badCompEvents": 0, 
@@ -5119,7 +6779,12 @@
     "start": 20100825.18, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 50
+    "usableEvents": 50, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YUK2": {
     "badCompEvents": 1, 
@@ -5141,7 +6806,12 @@
     "start": 20100828.13, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 60
+    "usableEvents": 60, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YUK3": {
     "badCompEvents": 0, 
@@ -5163,7 +6833,12 @@
     "start": 20100825, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 69
+    "usableEvents": 69, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YUK4": {
     "lat": 61.4348, 
@@ -5171,7 +6846,12 @@
     "network": "CNSN", 
     "start": 20100829.19, 
     "status": "not aquired", 
-    "stop": 0
+    "stop": 0, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YUK5": {
     "badCompEvents": 0, 
@@ -5193,7 +6873,12 @@
     "start": 20100823, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 61
+    "usableEvents": 61, 
+    "wm": {
+      "H": 39.0, 
+      "R": 1.7543044547690625, 
+      "Vp": 6.419
+    }
   }, 
   "YUK6": {
     "badCompEvents": 0, 
@@ -5215,7 +6900,12 @@
     "start": 20100829.02, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 40
+    "usableEvents": 40, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }, 
   "YUK7": {
     "badCompEvents": 0, 
@@ -5237,6 +6927,11 @@
     "start": 20100824.02, 
     "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 60
+    "usableEvents": 60, 
+    "wm": {
+      "H": 34.0, 
+      "R": 1.7712435932020503, 
+      "Vp": 6.566
+    }
   }
 }
