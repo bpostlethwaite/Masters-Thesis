@@ -273,67 +273,73 @@ def compare(A, B, op):
         'in': lambda A, B: B in A
         }[op](A, B)
 
-def queryStats(stdict, args, sep):
+def queryStns(stdict, args, scp):
     ''' Queries the json dictionary structure containing stations for given
     queries, logical commands and arguments. This is meant to be coupled with
     a CLI interface'''
 
-    value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
-    operator = args.query[1]
-    attrib = args.query[0]
-    if sep in attrib:
-        method, attrib = attrib.split(sep)
-        return ({ k:v for k, v in stdict.items()
-                  if (method in stdict[k]
-                      and attrib in stdict[k][method]
-                      and compare(stdict[k][method][attrib], value, operator))  } )
-    else:
-        return ({ k:v for k, v in stdict.items()
-                  if (attrib in stdict[k]
-                      and compare(stdict[k][attrib], value, operator))  } )
+    qdict = stdict
 
-def getStats(qdict, args, sep, printer):
-    ''' Filters the dictionary by a station list (pipedStations | command line list)
-    and by an attribute list (attrs). Then returns &| prints out data'''
-
+    # Reduce station list if piped station data was present
     if args.stationList: #check for piped data or station list or ALL stations
-        qdict = ( { k:v for k, v in qdict.items() if k in args.stationList } )
+        qdict = ( { k:v for k, v in stdict.items() if k in args.stationList } )
 
+    # Run Query
+    if args.query:
+        value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
+        operator = args.query[1]
+        attrib = args.query[0]
+        qdict = ({ k:v for k, v in stdict.items()
+                   if (attrib in scp.flattendict(stdict[k])
+                       and compare(scp.flattendict(stdict[k])[attrib], value, operator))  } )
+
+    # Filter by attribute if required
     if args.attribute:
         # Further trim the list by selecting only
         # the stations that have the particular attribute
         # and get rid of all other attributes.
         adict = {}
         attrib = args.attribute[0]
-        if sep in attrib:
-            method, attrib = attrib.split(sep)
-            for k in qdict.keys():
-                if method in qdict[k]:
-                    if attrib in qdict[k][method]:
-                        adict[k] = {}
-                        adict[k][method] = {}
-                        adict[k][method][attrib] = qdict[k][method][attrib]
-        else:
-            for k in qdict.keys():
-                print attrib
-                if attrib in qdict[k]:
-                    adict[k] = {}
-                    adict[k][attrib] = qdict[k][attrib]
+        for k in qdict.keys():
+            if attrib in scp.flattendict(qdict[k]):
+                adict[k] = {}
+                adict[k][attrib] = scp.flattendict(qdict[k])[attrib]
+
         qdict = adict
 
-    if printer:
-        if args.keys:
-            for key in qdict.keys():
-                print key
-        else:
-            print json.dumps(qdict, sort_keys = True, indent = 2)
-
     return qdict
+
+def printStns(stdict, qdict, args, scp):
+
+    ndict = {}
+    # Reverse: Print stations not listed in qdict
+    if args.reverse:
+        for stn in stdict:
+            if stn not in qdict:
+                ndict[stn] = stdict[stn]
+        qdict = ndict
+
+    # If both keys and attribute flags supplied
+    # Print only attribute, no station name etc.
+    if args.keys and args.attribute:
+        for key in qdict.keys():
+            a = qdict[key].keys()[0]
+            print qdict[key][a]
+
+    # Print only station names
+    elif args.keys:
+        for key in qdict.keys():
+            print key
+
+    # Print the works
+    else:
+        print json.dumps(qdict, sort_keys = True, indent = 2)
+
 
 def modifyData(stdict, args):
     ''' modifies database using <station> <attribute> <value>
     or if <station> <remove> then removes selected station'''
-    # Note, only remove functionality coded.
+    # Note, need to implement scoping for remove capability.
     if args.stationList:
         stations = args.stationList
     else:
@@ -365,9 +371,10 @@ if __name__== '__main__' :
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "manage and query the station data json database")
     group = parser.add_mutually_exclusive_group()
+    group2 = parser.add_mutually_exclusive_group()
 
     # Create query parser
-    parser.add_argument('-p', '--printer', nargs = '*',
+    group.add_argument('-p', '--printer', nargs = '*',
                        help = "<stationA> <stationB> or pipe stations in. Default without arg is ALL stations")
 
     group.add_argument('-q','--query', nargs = 3,
@@ -378,10 +385,14 @@ if __name__== '__main__' :
                        "If you pipe data into program then it operates on all stations piped in and you leave <station> out." )
 
     parser.add_argument('-a','--attribute', nargs = '+',
-                        help = 'Only the given attributes will be printed out')
+                        help = 'Print out the given attribute and supress all other attribues.' +
+                        ' Works with the keys option, though the -k flag will just print out the attribute')
 
     parser.add_argument('-k','--keys', action = 'store_true',
                         help = 'Prints only the keys (station name) of the database')
+
+    parser.add_argument('-r','--reverse', action = 'store_true',
+                        help = 'Prints the stations NOT fitting the query or piped in stations.')
 
     parser.add_argument('-f', '--force', action = 'store_true',
                         help = 'Forces updating even if files and folders are older than the stations.json file')
@@ -406,20 +417,22 @@ if __name__== '__main__' :
     else:
         args.stationList = False
 
-    sep = "::"
+    scp = Scoper("::")
 
     if args.update:
         updateStats(stdict, args)
 
     if args.query:
-        stdict = queryStats(stdict, args, sep)
-        getStats(stdict, args, sep, printer = True)
+        qdict = queryStns(stdict, args, scp)
+        printStns(stdict, qdict, args, scp)
 
     if args.printer != None:
-        # if it has command line options assume stations
-        if args.printer:
+        # if it has command line options (meaning its not an empty list)
+        # assume there are stations after it, though piped stations should take
+        # presedence.
+        if args.printer and not args.stationList:
             args.stationList = args.printer
-        getStats(stdict, args, sep, printer = True)
+        printStns(stdict, queryStns(stdict, args, scp), args, scp)
 
     if args.modify:
         modifyData(stdict, args)

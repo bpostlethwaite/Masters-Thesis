@@ -17,8 +17,37 @@ sfile = 'stack_S.sac';
 
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'ACKN';
+station = 'PNT';
 %{
+PNT
+PA01
+HOLB
+PA03
+NANL
+AHCB
+B1NU
+KIMN
+NOTN
+YNEN
+TOBO
+ELFO
+NMSQ
+OTT
+KAJQ
+MGB
+HFRN
+THMB
+RAYA
+GFNU
+JRBC
+RSPO
+TWGB
+YBKN
+LDGN
+NLLB
+PEMO
+PINU
+HRMB
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
