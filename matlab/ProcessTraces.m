@@ -2,29 +2,31 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 
-loadtools;
-thresh = 0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
-dlist = filterEventDirs(workingdir,printinfo);
+dlist = filterEventDirs(workingdir, printinfo);
 %% 2)  Convert sac file format, filter bad picks
 %
 picktol  = 2; % The picks should be more than PICKTOL seconds apart, or something may be wrong
-[ptrace,strace,header,pslows,badpicks] = ...
-    ConvertFilterTraces(dlist,pfile,sfile,picktol,printinfo);
+splitAzimuth = 0;
+cluster = 0;
+[ptrace, strace, header, pslows, ~] = ...
+    ConvertFilterTraces(dlist, pfile, sfile,...
+    picktol, printinfo, splitAzimuth, cluster);
 fclose('all'); % Close all open files from reading
+clear picktol printinfo dlist pfile sfile splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
 npb = 2; % Average number of traces per bin
 numbin = round((1/npb) * size(ptrace, 1));
-pbinLimits = linspace(.035, .08, numbin);
+pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
 Pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(Pslow); % Number of bins we now have.
-clear numbin pbinLimits checkind
+%clear numbin pbinLimits checkind
 %% 4) Normalize
 dt = header{1}.DELTA;
 ptrace = diag(1./max(ptrace,[],2)) * ptrace;
@@ -53,25 +55,23 @@ end
 % if discardBad flag set simdecf will return Nan arrays where it did not
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.
-%% renew
+%% Renew
+% So we don't have to run simdecf again to renew variables in manual rerun
 rec = Rec;
 pslow = Pslow;
-%%
+%% Weed out poor rf results
+% Cut out traces where no betax was found during simdecf
 if discardBad
     ind = isinf(betax);
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
 %% 6) Filter Impulse Response
-if 0
-    fLow = db.filterLow;
-    fHigh = db.filterHigh;
-else
-    fLow = 0.04;
-    fHigh = 3;
-end  
+fLow = 0.04;
+fHigh = 3;
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
+clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
 pscale = wrev(1./pslow.^2)';
@@ -84,17 +84,17 @@ if strcmp(method, 'bostock')
     [ results ] = gridsearchMB(brec(:,1:round(45/dt)), Tps', dt, pslow);
 
     [bootVp, bootR, bootH, bootVpRx, bootHx] = ...
-    bootstrapMB(brec(:,1:round(45/dt)), Tps, dt, pslow, 1024);
+        bootstrapMB(brec(:,1:round(45/dt)), Tps, dt, pslow, 1024);
 
 %% Kanamori Processing
 elseif strcmp(method, 'kanamori')
-    
     % Get Newton method nonlinear regression and select Tps points
     [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt);
     
     [ results ] = gridsearchKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp);
     
-    [bootR, bootH, bootRHx] =  bootstrapKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp, 1024);
+    [bootR, bootH, bootRHx] = ...
+        bootstrapKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp, 1024);
 end
 %% Close parallel system
 %matlabpool close

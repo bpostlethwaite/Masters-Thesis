@@ -189,6 +189,8 @@ def matStats(statdict, modtime, force = False):
                 statdict[station] = {}
             # Shared data
             statdict[station]['processnotes'] = ''.join([''.join(c) for c in db['processnotes']])
+            if 'usable' in statdict[station]:
+                statdict[station]['usable'] = db['usable']
             # Specific Processing Data
             try:
                 statdict[station]['mb'] = {}
@@ -202,11 +204,11 @@ def matStats(statdict, modtime, force = False):
                 pass
 
             try:
-                statdict[station]['km'] = {}
-                statdict[station]['km']['R'] = float(db['km']['rbest'])
-                statdict[station]['km']['H'] = float(db['km']['hbest'])
-                statdict[station]['km']['stdR'] = float(db['km']['stdR'])
-                statdict[station]['km']['stdH'] = float(db['km']['stdH'])
+                statdict[station]['hk'] = {}
+                statdict[station]['hk']['R'] = float(db['hk']['rbest'])
+                statdict[station]['hk']['H'] = float(db['hk']['hbest'])
+                statdict[station]['hk']['stdR'] = float(db['hk']['stdR'])
+                statdict[station]['hk']['stdH'] = float(db['hk']['stdH'])
             except IndexError:
                 pass
 
@@ -289,9 +291,9 @@ def queryStns(stdict, args, scp):
         value = args.query[2] if not is_number(args.query[2]) else float(args.query[2])
         operator = args.query[1]
         attrib = args.query[0]
-        qdict = ({ k:v for k, v in stdict.items()
-                   if (attrib in scp.flattendict(stdict[k])
-                       and compare(scp.flattendict(stdict[k])[attrib], value, operator))  } )
+        qdict = ({ k:v for k, v in qdict.items()
+                   if (attrib in scp.flattendict(qdict[k])
+                       and compare(scp.flattendict(qdict[k])[attrib], value, operator))  } )
 
     # Filter by attribute if required
     if args.attribute:

@@ -24,6 +24,7 @@ import scipy.io
 from random import randint
 from mpl_toolkits.basemap import Basemap
 from sklearn.cluster import KMeans
+
 def vectorize(latlon):
     ''' Takes lat and long and spits out 3D vects'''
     vects = np.zeros( (len(latlon), 3) )
@@ -58,53 +59,71 @@ def devectorize(vects):
 
 
 
-def clusterEvents(stdir):
-    reg2 = re.compile(r'^stack_(\w)\.sac')
+def clusterEvents(stdir, k, showmap = True):
+    reg1 = re.compile(r'^stack_P.sac')
     events = os.listdir(stdir)
     events = filter(is_number,events)
-
+    evlist = []
+    evdict = {}
     data = np.zeros( (len(events), 2) )
 
-    for ind, event in enumerate(events):
+    ind = 0
+    for event in events:
         files = os.listdir( os.path.join(stdir, event) )
         for fs in files:
-            if reg2.match(fs):
+            if reg1.match(fs):
                 st = read( os.path.join(stdir, event, fs) )
                 evla = float(st[0].stats.sac['evla'])
                 evlo = float(st[0].stats.sac['evlo'])
                 data[ind] = [ evla, evlo ]
+                evlist.append(event)
+                ind += 1
                 continue
 
     # Default to two clusters, one around japan the other
     # around Chile.
-    clusterlatlon = np.array( [ [35 , 135 ],
-                                [35, -71] ] )
-
     vects = vectorize(data)
-    clusters = vectorize(clusterlatlon)
 
-    for i in range(5):
-        members = assignVect2Cluster(vects, clusters)
-        clusters = moveClusters(vects, clusters, members)
-        cls = devectorize(clusters)
+    if k == 2:
+        initguess = vectorize(np.array( [ [58., 149.],
+                                          [-7., -74.] ] ))
+    else:
+        initguess = "k-means++"
+    # Perform Kmeans
+    kmeans = KMeans(init = initguess, k = k, n_init = 10).fit( vects )
+    members = kmeans.labels_
 
-    bmap = Basemap(projection = 'robin', lon_0 = -80)
-    bmap.fillcontinents(color = '#cc9966', lake_color = '#99ffff')
-    bmap.drawmapboundary(fill_color='0.3')
-    bmap.drawparallels(np.arange(-90.,120.,30.))
-    bmap.drawmeridians(np.arange(0.,420.,60.))
-    x1, y1 = bmap( data[:,1], data[:,0] )
-    x2, y2 = bmap( cls[:,1], cls[:,0] )
-    print cls
-    print x2, y2
+    # Build results
+    clusters = devectorize( kmeans.cluster_centers_ )
+    cldict = {}
 
-    clr = ['g','b','r','k','m']
-    for i in range( len(clusterlatlon) ):
-        bmap.scatter(x1[members == i], y1[members == i], c = clr[i], marker = '.')
+    for ind, ev in enumerate(evlist):
+        evdict[ev] = members[ind]
 
-    plt.show()
+    for ind, cluster in enumerate(clusters):
+        cldict[ind] = list(cluster)
 
+    if showmap:
+        bmap = Basemap(projection = 'robin', lon_0 = -80)
+        bmap.fillcontinents(color = '#cc9966', lake_color = '#99ffff')
+        bmap.drawmapboundary(fill_color='0.3')
+        bmap.drawparallels(np.arange(-90.,120.,30.))
+        bmap.drawmeridians(np.arange(0.,420.,60.))
 
+        x1, y1 = bmap( data[:,1], data[:,0] )
+        x2, y2 = bmap( clusters[:,1], clusters[:,0] )
+
+        p2 = []
+        clr = ['g','b','r','k','m']
+        for i in range( len(clusters) ):
+            bmap.scatter(x1[members == i], y1[members == i], c = clr[i], marker = 'o')
+            p2.append(bmap.scatter(x2[i],y2[i], c = clr[i], marker = '+', s = 120, linewidths = 2, zorder = 12))
+
+        legstr = [ "Cluster " + str(i) for i in range(k) ]
+        plt.legend(p2, legstr)
+        plt.show()
+
+    return evdict, cldict
 
 
 def clusterStations(stdict, k, showmap = True):
@@ -177,6 +196,7 @@ if __name__== '__main__' :
 
     dbfile = os.environ['HOME']+'/thesis/stations.json'
     stdict = json.loads( open(dbfile).read() )
+    stndir = "/media/TerraS/CN"
 
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "Cluster stations or events around a cluster lon/lat")
@@ -184,12 +204,17 @@ if __name__== '__main__' :
     # Create query parser
     group.add_argument('-s','--stations', nargs = '?', const = True,
                         help = "Cluster stations in first argument or those piped in.")
+    group.add_argument('-e','--events', nargs = '?', const = True,
+                        help = "Cluster events with given station or piped in stations. -e <station> <station>")
     parser.add_argument('-n','--number', nargs = 1, type = int,
                         help = "Set number of clusters. Default is 2")
     parser.add_argument('-m','--map', action = "store_true",
                         help = "Show map of clustered events")
     parser.add_argument('-p','--printc', action = "store_true",
                         help = "Print list of clusters and members")
+    parser.add_argument('-w','--write', action = "store_true",
+                        help = "Write event clusters to SAC files")
+
 
     args = parser.parse_args()
 
@@ -205,16 +230,37 @@ if __name__== '__main__' :
             stations.insert(0,re.findall(r'\w+', sys.stdin.read() ))
         else:
             stations = args.stations
+
         stnd = {k:v for k,v in stdict.items() if k in stations[0]}
         clusterd = clusterStations(stnd, args.number[0], showmap = args.map)
         if args.printc:
             printClusters(clusterd)
 
+    if args.events:
+        stations = []
+        if not sys.stdin.isatty():
+            stations.insert(0,re.findall(r'\w+', sys.stdin.read() ))
+        else:
+            stations.append(args.events)
 
-  #      for ID in range( len(clusterd) ):
-  #          outputClusterdRemaining(clusterd, ID, stdict)
-  #  else:
-  #      outputClusterdRemaining(clusterd, int(s), stdict)
+        for stn in stations:
+            evdict, cldict = clusterEvents(os.path.join(stndir,stn), args.number[0], showmap = args.map)
 
-    #json.encoder.FLOAT_REPR = lambda o: format(o, '.2f')
-    #print json.dumps(clusterd, sort_keys = True, indent = 2)
+            if args.printc:
+                for key in cldict.keys():
+                    print key, ":", cldict[key]
+                    for key in evdict.keys():
+                        print key, ":", evdict[key]
+
+            if args.write:
+                reg2 = re.compile(r'^stack_(\w)\.sac')
+                for event in evdict.keys():
+                    files = os.listdir( os.path.join(stndir, stn, event) )
+                    for fs in files:
+                        if reg2.match(fs):
+                            st = read( os.path.join(stndir, stn, event, fs) )
+                            st[0].stats.sac['user9'] = evdict[event]
+                            st[0].stats.sac['kt9'] = "ClusterFlag"
+                            st[0].write(os.path.join(stndir, stn, event, fs), format = 'SAC')
+                            continue
+

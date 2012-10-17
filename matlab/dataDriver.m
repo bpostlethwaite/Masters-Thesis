@@ -5,20 +5,18 @@
 
 clear all
 close all
-homedir = getenv('HOME');
+loadtools;
 addpath ../sac
 addpath functions
-addpath([homedir,'/programming/matlab/jsonlab'])
+addpath([userdir,'/programming/matlab/jsonlab'])
 %% Variables
-stnsjson = [homedir,'/thesis/stations.json'];
 sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
-
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'A16';
+station = 'LDGN';
 %{
 
 PTCO
@@ -71,18 +69,18 @@ if exist(dbfile, 'file')
     dbold = db;
     display(dbold.processnotes)
 end
-
+% Load Mooney Crust 2.0 database Vp estimate
 load stnsjson.mat
 mooneyVp = json.(station).wm.Vp;
-clear json
-
+clear json sacfolder databasedir homedir
 %% Run ToolChain
 ProcessTraces
 
 %% Assign Data
+
     % Shared
     db.station = station;
-    db.processnotes = '';
+    db.processnotes = ''; % Default
     db.rec = brec;    
     db.pslow = pslow;
     db.dt = dt;
@@ -91,6 +89,9 @@ ProcessTraces
     db.fHigh = fHigh;
     db.t1 = t1;
     db.t2 = t2;
+    db.usable = 1; % Default, later ask for value
+    db.Tps = Tps;
+
 
     % Specific MB
 if strcmp(method, 'bostock')
@@ -107,7 +108,6 @@ if strcmp(method, 'bostock')
     db.mb.tps = results.tps;
     db.mb.tpps = results.tpps;
     db.mb.tpss = results.tpss;
-    db.mb.Tps = Tps;
     db.mb.stdsmax = std(bootVpRx);
     db.mb.stdhmax = std(bootHx);
     db.mb.stdVp = std(bootVp);
@@ -138,7 +138,6 @@ end
 %% Plot the results if we completed the processing
 close all
 plotStack(db, method);
-fprintf('Old Data:\n')
 
 %if strcmp(method, 'bostock')
 %    fprintf('Vp is %f +/- %1.3f km/s\n',dbold.vbest, dbold.stdVp)
@@ -146,6 +145,15 @@ fprintf('Old Data:\n')
 if strcmp(method, 'kanamori')
     fprintf('R is %f +/- %1.3f \n',db.hk.rbest, db.hk.stdR )
     fprintf('H is %f +/- %1.3f \n',db.hk.hbest, db.hk.stdH )
+    if exist('dbold','var')
+        if isfield(dbold,'hk')
+            fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
+            fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
+        end
+        fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
+        fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
+        fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+    end
 end
 %fprintf('\nKanamori data\n')
 %fprintf('R is %f \n',Rkan)
@@ -156,12 +164,12 @@ end
 %fprintf('R is %f +/- %1.3f \n',db.rbest, db.stdR )
 %fprintf('H is %f +/- %1.3f \n',db.hbest, db.stdH )
 
-%% Enter Processing Notes:
+%% Enter Finishing commands:
 notes = input('Enter Processing Notes: ', 's');
 db.processnotes = notes;
-%% Enter use / ignore flag
+% Enter use / ignore flag
 db.usable = input('Enter 1 to use, or 0 to set as a discard: ');
-%% Save entry
+% Save entrydbold.mb.
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)
     case 'y'
