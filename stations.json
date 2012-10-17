@@ -1,6 +1,12 @@
 {
   "A11": {
     "badCompEvents": 19, 
+    "hk": {
+      "H": 27.261306532663315, 
+      "R": 1.8806532663316582, 
+      "stdH": 5.8170395835191835, 
+      "stdR": 0.06832970808583337
+    }, 
     "km": {}, 
     "lat": 47.2425, 
     "lon": -70.1978, 
@@ -15,7 +21,7 @@
     "network": "CNSN", 
     "numEvents": 541, 
     "poorEvents": 382, 
-    "processnotes": "", 
+    "processnotes": "Lots of scatter, reprocess", 
     "start": 19990627.01, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -28,6 +34,12 @@
   }, 
   "A16": {
     "badCompEvents": 14, 
+    "hk": {
+      "H": 41.834170854271356, 
+      "R": 1.821859296482412, 
+      "stdH": 2.07658009006335, 
+      "stdR": 0.04526344603565239
+    }, 
     "km": {}, 
     "lat": 47.4706, 
     "lon": -70.0064, 
@@ -42,7 +54,7 @@
     "network": "CNSN", 
     "numEvents": 563, 
     "poorEvents": 401, 
-    "processnotes": "", 
+    "processnotes": "Try splitting by azimuth", 
     "start": 19990626.01, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -55,6 +67,7 @@
   }, 
   "A21": {
     "badCompEvents": 18, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.7036, 
     "lon": -69.6897, 
@@ -82,6 +95,7 @@
   }, 
   "A54": {
     "badCompEvents": 13, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.4567, 
     "lon": -70.4125, 
@@ -109,6 +123,7 @@
   }, 
   "A61": {
     "badCompEvents": 18, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.69353, 
     "lon": -70.09143, 
@@ -136,6 +151,7 @@
   }, 
   "A64": {
     "badCompEvents": 10, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.8264, 
     "lon": -69.8922, 
@@ -163,6 +179,12 @@
   }, 
   "ACKN": {
     "badCompEvents": 4, 
+    "hk": {
+      "H": 39.321608040201006, 
+      "R": 1.7464824120603015, 
+      "stdH": 0.23419802784605936, 
+      "stdR": 0.005674503518284316
+    }, 
     "km": {}, 
     "lat": 64.99151, 
     "lon": -110.87081, 
@@ -190,6 +212,7 @@
   }, 
   "ACTO": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.60867, 
     "lon": -80.06236, 
@@ -230,6 +253,7 @@
   }, 
   "AKVQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 60.80801, 
     "lon": -78.19122, 
@@ -257,6 +281,7 @@
   }, 
   "ALFO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.62828, 
     "lon": -74.88419, 
@@ -284,6 +309,7 @@
   }, 
   "ALGO": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.95443, 
     "lon": -78.05093, 
@@ -337,6 +363,7 @@
   }, 
   "AP3N": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 69.45864, 
     "lon": -84.46158, 
@@ -381,6 +408,7 @@
   }, 
   "ARVN": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 61.09764, 
     "lon": -94.07014, 
@@ -408,6 +436,7 @@
   }, 
   "ATKO": {
     "badCompEvents": 16, 
+    "hk": {}, 
     "km": {}, 
     "lat": 48.8231, 
     "lon": -91.60045, 
@@ -447,12 +476,16 @@
     }
   }, 
   "B1NU": {
+    "badCompEvents": 0, 
     "lat": 68.4619, 
     "lon": -71.588, 
     "network": "CHASME", 
+    "numEvents": 75, 
+    "poorEvents": 0, 
     "start": 20000723.2328, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20020816.0000", 
+    "usableEvents": 72, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -460,12 +493,16 @@
     }
   }, 
   "B2NU": {
+    "badCompEvents": 0, 
     "lat": 68.9216, 
     "lon": -73.1966, 
     "network": "CHASME", 
+    "numEvents": 16, 
+    "poorEvents": 0, 
     "start": 20000724.1502, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20001223.0000", 
+    "usableEvents": 16, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -474,6 +511,7 @@
   }, 
   "BANO": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.01982, 
     "lon": -77.92802, 
@@ -501,6 +539,7 @@
   }, 
   "BASO": {
     "badCompEvents": 93, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.01331, 
     "lon": -81.66482, 
@@ -528,6 +567,7 @@
   }, 
   "BATG": {
     "badCompEvents": 7, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.27666, 
     "lon": -66.05989, 
@@ -581,6 +621,7 @@
   }, 
   "BELQ": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.39801, 
     "lon": -78.68739, 
@@ -621,6 +662,7 @@
   }, 
   "BMRO": {
     "badCompEvents": 94, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.59519, 
     "lon": -81.21742, 
@@ -661,6 +703,7 @@
   }, 
   "BOXN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.85215, 
     "lon": -109.71694, 
@@ -701,6 +744,7 @@
   }, 
   "BRCO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.24372, 
     "lon": -81.44225, 
@@ -758,6 +802,7 @@
   }, 
   "BUKO": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.44228, 
     "lon": -79.39895, 
@@ -785,6 +830,7 @@
   }, 
   "BULN": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 66.39713, 
     "lon": -93.12524, 
@@ -812,6 +858,12 @@
   }, 
   "BVCY": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 31.407035175879397, 
+      "R": 1.8082914572864321, 
+      "stdH": 2.847437278789117, 
+      "stdR": 0.08197237217059954
+    }, 
     "km": {}, 
     "lat": 62.41415, 
     "lon": -140.86063, 
@@ -826,7 +878,7 @@
     "network": "CNSN", 
     "numEvents": 176, 
     "poorEvents": 115, 
-    "processnotes": "To few data", 
+    "processnotes": "Too few data", 
     "start": 20100814.17, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -839,6 +891,7 @@
   }, 
   "BWLO": {
     "badCompEvents": 94, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.11741, 
     "lon": -81.13824, 
@@ -866,6 +919,12 @@
   }, 
   "CAMN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 38.81909547738694, 
+      "R": 1.7540201005025124, 
+      "stdH": 0.1937916686186716, 
+      "stdR": 0.005818510339943951
+    }, 
     "km": {}, 
     "lat": 63.73213, 
     "lon": -110.89893, 
@@ -906,6 +965,12 @@
   }, 
   "CBRQ": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.814070351758794, 
+      "R": 1.7027638190954772, 
+      "stdH": 0.2789077806139903, 
+      "stdR": 0.006844131746771945
+    }, 
     "km": {}, 
     "lat": 47.30915, 
     "lon": -76.47073, 
@@ -920,7 +985,7 @@
     "network": "POLARIS", 
     "numEvents": 32, 
     "poorEvents": 12, 
-    "processnotes": "No data", 
+    "processnotes": "too few data", 
     "start": 20040730.2, 
     "status": "processed-notok", 
     "stop": "20050529.0000", 
@@ -933,6 +998,7 @@
   }, 
   "CDKN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.23484, 
     "lon": -66.34399, 
@@ -960,6 +1026,7 @@
   }, 
   "CHEG": {
     "badCompEvents": 5, 
+    "hk": {}, 
     "km": {}, 
     "lat": 46.80836, 
     "lon": -60.67447, 
@@ -987,6 +1054,12 @@
   }, 
   "CHGQ": {
     "badCompEvents": 3, 
+    "hk": {
+      "H": 35.92964824120603, 
+      "R": 1.7193467336683417, 
+      "stdH": 1.077831746926463, 
+      "stdR": 0.021491440877238508
+    }, 
     "km": {}, 
     "lat": 49.9105, 
     "lon": -74.374833, 
@@ -1001,7 +1074,7 @@
     "network": "POLARIS", 
     "numEvents": 377, 
     "poorEvents": 196, 
-    "processnotes": "Can do better with reprocessing", 
+    "processnotes": "poor reflected phases", 
     "start": 20071011.1427, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -1027,6 +1100,7 @@
   }, 
   "CLPO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.24599, 
     "lon": -76.96416, 
@@ -1054,6 +1128,7 @@
   }, 
   "CLRN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 70.47433, 
     "lon": -68.58709, 
@@ -1107,6 +1182,7 @@
   }, 
   "CLVN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 67.03902, 
     "lon": -126.07792, 
@@ -1134,6 +1210,7 @@
   }, 
   "CLWO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.44907, 
     "lon": -80.30132, 
@@ -1161,6 +1238,7 @@
   }, 
   "CMBN": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.68613, 
     "lon": -64.44806, 
@@ -1188,6 +1266,7 @@
   }, 
   "CODG": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.84056, 
     "lon": -59.25352, 
@@ -1215,6 +1294,12 @@
   }, 
   "COKN": {
     "badCompEvents": 8, 
+    "hk": {
+      "H": 48.36683417085427, 
+      "R": 1.6756281407035174, 
+      "stdH": 5.764402529292162, 
+      "stdR": 0.1127014043778641
+    }, 
     "km": {}, 
     "lat": 63.27016, 
     "lon": -108.76226, 
@@ -1229,7 +1314,7 @@
     "network": "POLARIS", 
     "numEvents": 244, 
     "poorEvents": 49, 
-    "processnotes": "Alot of scatter. Repick ?", 
+    "processnotes": "reprocess", 
     "start": 20080710.18, 
     "status": "processed-notok", 
     "stop": "20110706.1900", 
@@ -1255,6 +1340,7 @@
   }, 
   "COWN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.26795, 
     "lon": -111.18597, 
@@ -1312,6 +1398,7 @@
   }, 
   "CTLN": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.42873, 
     "lon": -116.0189, 
@@ -1369,6 +1456,7 @@
   }, 
   "DAWY": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.0655, 
     "lon": -139.3909, 
@@ -1396,6 +1484,12 @@
   }, 
   "DELO": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 39.824120603015075, 
+      "R": 1.7781407035175878, 
+      "stdH": 0.11913492906885842, 
+      "stdR": 0.00405150191513321
+    }, 
     "km": {}, 
     "lat": 44.51769, 
     "lon": -77.61857, 
@@ -1410,7 +1504,7 @@
     "network": "POLARIS", 
     "numEvents": 572, 
     "poorEvents": 292, 
-    "processnotes": "Reprocessed at 3Hz", 
+    "processnotes": "", 
     "start": 20020827.172, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -1436,6 +1530,7 @@
   }, 
   "DHRN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 67.03311, 
     "lon": -119.50879, 
@@ -1476,6 +1571,7 @@
   }, 
   "DLBC": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 58.4372, 
     "lon": -130.0272, 
@@ -1503,6 +1599,7 @@
   }, 
   "DMCQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 48.96455, 
     "lon": -72.068033, 
@@ -1598,6 +1695,12 @@
   }, 
   "DRLN": {
     "badCompEvents": 14, 
+    "hk": {
+      "H": 28.391959798994975, 
+      "R": 1.8881909547738693, 
+      "stdH": 2.2665678440588355, 
+      "stdR": 0.06112505940698957
+    }, 
     "km": {}, 
     "lat": 49.256, 
     "lon": -57.5042, 
@@ -1612,7 +1715,7 @@
     "network": "CNSN", 
     "numEvents": 544, 
     "poorEvents": 337, 
-    "processnotes": "Pretty messy crustal units, unlikely to rescue", 
+    "processnotes": "", 
     "start": 19931214, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -1642,6 +1745,7 @@
   }, 
   "DSMN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.17993, 
     "lon": -113.90039, 
@@ -1686,6 +1790,7 @@
   }, 
   "DVKN": {
     "badCompEvents": 5, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.5092, 
     "lon": -110.30962, 
@@ -1756,6 +1861,7 @@
   }, 
   "EDZN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.7272, 
     "lon": -116.09895, 
@@ -1783,6 +1889,7 @@
   }, 
   "EKTN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.69846, 
     "lon": -110.60967, 
@@ -1827,6 +1934,12 @@
   }, 
   "ELFO": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 41.70854271356784, 
+      "R": 1.80678391959799, 
+      "stdH": 1.6467887598300284, 
+      "stdR": 0.03468217741940656
+    }, 
     "km": {}, 
     "lat": 43.193, 
     "lon": -81.3163, 
@@ -1841,7 +1954,7 @@
     "network": "POLARIS", 
     "numEvents": 424, 
     "poorEvents": 203, 
-    "processnotes": "Could lower error by discarding bad RFs", 
+    "processnotes": "reprocess. poor reflected phases", 
     "start": 20040723.16, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -1854,6 +1967,7 @@
   }, 
   "ELGO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.67546, 
     "lon": -80.43743, 
@@ -1894,6 +2008,7 @@
   }, 
   "EPLO": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 49.6737, 
     "lon": -93.72582, 
@@ -1921,6 +2036,7 @@
   }, 
   "EUNU": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 80.053224, 
     "lon": -86.415752, 
@@ -1974,6 +2090,7 @@
   }, 
   "FCC": {
     "badCompEvents": 19, 
+    "hk": {}, 
     "km": {}, 
     "lat": 58.7616, 
     "lon": -94.0866, 
@@ -2027,6 +2144,7 @@
   }, 
   "FNBB": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 58.8904, 
     "lon": -123.0097, 
@@ -2080,6 +2198,7 @@
   }, 
   "FRB": {
     "badCompEvents": 4, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.746917, 
     "lon": -68.545117, 
@@ -2107,6 +2226,7 @@
   }, 
   "FSMA": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 59.9862, 
     "lon": -111.8218, 
@@ -2151,6 +2271,7 @@
   }, 
   "GALN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.11672, 
     "lon": -117.31425, 
@@ -2178,6 +2299,7 @@
   }, 
   "GASG": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 48.94626, 
     "lon": -66.11613, 
@@ -2205,6 +2327,12 @@
   }, 
   "GBLN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 35.552763819095475, 
+      "R": 1.79321608040201, 
+      "stdH": 1.609785931541556, 
+      "stdR": 0.02793287095090041
+    }, 
     "km": {}, 
     "lat": 64.19953, 
     "lon": -112.9935, 
@@ -2219,7 +2347,7 @@
     "network": "POLARIS", 
     "numEvents": 245, 
     "poorEvents": 147, 
-    "processnotes": "reprocess to get better results", 
+    "processnotes": "", 
     "start": 20030924.21, 
     "status": "processed-ok", 
     "stop": "20070726.1542", 
@@ -2232,6 +2360,7 @@
   }, 
   "GBN": {
     "badCompEvents": 10, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.4067, 
     "lon": -61.5133, 
@@ -2259,6 +2388,7 @@
   }, 
   "GDLN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.01992, 
     "lon": -105.99431, 
@@ -2285,12 +2415,16 @@
     }
   }, 
   "GFNU": {
+    "badCompEvents": 0, 
     "lat": 76.418, 
     "lon": -82.8998, 
     "network": "CHASME", 
+    "numEvents": 21, 
+    "poorEvents": 0, 
     "start": 20000901.2107, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20010628.1317", 
+    "usableEvents": 21, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -2299,6 +2433,7 @@
   }, 
   "GGN": {
     "badCompEvents": 18, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.117, 
     "lon": -66.822, 
@@ -2339,6 +2474,7 @@
   }, 
   "GIFN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 69.994467, 
     "lon": -81.638, 
@@ -2379,6 +2515,7 @@
   }, 
   "GLWN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.7253, 
     "lon": -109.33039, 
@@ -2419,6 +2556,7 @@
   }, 
   "HAL": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.6377, 
     "lon": -63.592, 
@@ -2459,6 +2597,7 @@
   }, 
   "HFRN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.86172, 
     "lon": -109.27772, 
@@ -2486,6 +2625,7 @@
   }, 
   "HGVO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 42.96066, 
     "lon": -80.12644, 
@@ -2513,6 +2653,7 @@
   }, 
   "HILA": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 58.55608, 
     "lon": -117.02029, 
@@ -2553,6 +2694,7 @@
   }, 
   "HMNT": {
     "badCompEvents": 8, 
+    "hk": {}, 
     "km": {}, 
     "lat": 70.7631, 
     "lon": -117.8058, 
@@ -2636,6 +2778,7 @@
   }, 
   "HPLN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 66.34852, 
     "lon": -115.32322, 
@@ -2719,6 +2862,7 @@
   }, 
   "ICQ": {
     "badCompEvents": 78, 
+    "hk": {}, 
     "km": {}, 
     "lat": 49.5217, 
     "lon": -67.2719, 
@@ -2745,12 +2889,16 @@
     }
   }, 
   "IGLN": {
+    "badCompEvents": 0, 
     "lat": 69.369, 
     "lon": -81.8175, 
     "network": "POLARIS", 
+    "numEvents": 35, 
+    "poorEvents": 0, 
     "start": 20040902.2108, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20050822.2016", 
+    "usableEvents": 24, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -2759,6 +2907,7 @@
   }, 
   "IHLN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.3052, 
     "lon": -110.89112, 
@@ -2786,6 +2935,7 @@
   }, 
   "ILKN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.22413, 
     "lon": -115.12933, 
@@ -2813,6 +2963,12 @@
   }, 
   "ILON": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 37.43718592964824, 
+      "R": 1.729899497487437, 
+      "stdH": 0.07643098209681433, 
+      "stdR": 0.0024205047071298074
+    }, 
     "km": {}, 
     "lat": 69.3712, 
     "lon": -81.824217, 
@@ -2840,6 +2996,7 @@
   }, 
   "INK": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 68.3065166, 
     "lon": -133.525433, 
@@ -2867,6 +3024,7 @@
   }, 
   "INUQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 58.45092, 
     "lon": -78.11861, 
@@ -2893,12 +3051,16 @@
     }
   }, 
   "IVKQ": {
+    "badCompEvents": 0, 
     "lat": 62.41835, 
     "lon": -77.91132, 
     "network": "POLARIS", 
+    "numEvents": 444, 
+    "poorEvents": 0, 
     "start": 20060916.22, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 409, 
     "wm": {
       "H": 39.0, 
       "R": 1.7654015401540153, 
@@ -2907,6 +3069,7 @@
   }, 
   "JERN": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 66.0194, 
     "lon": -111.4672, 
@@ -2934,6 +3097,7 @@
   }, 
   "JOSN": {
     "badCompEvents": 5, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.16221, 
     "lon": -91.54197, 
@@ -2987,6 +3151,12 @@
   }, 
   "KAJQ": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 36.68341708542714, 
+      "R": 1.7268844221105526, 
+      "stdH": 0.829542976283543, 
+      "stdR": 0.021626430784594513
+    }, 
     "km": {}, 
     "lat": 58.69405, 
     "lon": -65.93048, 
@@ -3001,7 +3171,7 @@
     "network": "POLARIS", 
     "numEvents": 38, 
     "poorEvents": 6, 
-    "processnotes": "", 
+    "processnotes": "inverse tps curve", 
     "start": 20110810, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -3027,6 +3197,7 @@
   }, 
   "KAPO": {
     "badCompEvents": 14, 
+    "hk": {}, 
     "km": {}, 
     "lat": 49.4504, 
     "lon": -82.5079, 
@@ -3080,6 +3251,7 @@
   }, 
   "KGNO": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.2272, 
     "lon": -76.4934, 
@@ -3120,6 +3292,7 @@
   }, 
   "KILO": {
     "badCompEvents": 49, 
+    "hk": {}, 
     "km": {}, 
     "lat": 48.4972, 
     "lon": -79.7232, 
@@ -3164,6 +3337,7 @@
   }, 
   "KJKQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 55.27687, 
     "lon": -77.74548, 
@@ -3191,6 +3365,7 @@
   }, 
   "KLBO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.35657, 
     "lon": -80.2132, 
@@ -3231,6 +3406,7 @@
   }, 
   "KNDN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.41929, 
     "lon": -109.20131, 
@@ -3258,6 +3434,7 @@
   }, 
   "KNGQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 61.58492, 
     "lon": -71.94828, 
@@ -3302,6 +3479,12 @@
   }, 
   "KSVO": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.311557788944725, 
+      "R": 1.80678391959799, 
+      "stdH": 2.2424966794413983, 
+      "stdR": 10.0
+    }, 
     "km": {}, 
     "lat": 44.5524, 
     "lon": -73.6861, 
@@ -3316,7 +3499,7 @@
     "network": "POLARIS", 
     "numEvents": 62, 
     "poorEvents": 37, 
-    "processnotes": "So little data but the reflections are visible.", 
+    "processnotes": "Way too little data", 
     "start": 20020428.0, 
     "status": "processed-ok", 
     "stop": "20040506.1230", 
@@ -3329,6 +3512,7 @@
   }, 
   "KUGN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 68.0898, 
     "lon": -90.0616, 
@@ -3356,6 +3540,7 @@
   }, 
   "KUKN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 67.82264, 
     "lon": -115.08992, 
@@ -3383,6 +3568,7 @@
   }, 
   "LAIN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 69.1086, 
     "lon": -83.53605, 
@@ -3453,6 +3639,12 @@
   }, 
   "LDGN": {
     "badCompEvents": 2, 
+    "hk": {
+      "H": 39.321608040201006, 
+      "R": 1.7314070351758792, 
+      "stdH": 0.240972946964718, 
+      "stdR": 0.0061898194725407505
+    }, 
     "km": {}, 
     "lat": 64.57856, 
     "lon": -110.52242, 
@@ -3467,7 +3659,7 @@
     "network": "POLARIS", 
     "numEvents": 195, 
     "poorEvents": 90, 
-    "processnotes": "Tps slope does not match tps", 
+    "processnotes": "", 
     "start": 20010913, 
     "status": "processed-ok", 
     "stop": "20060503.1012", 
@@ -3493,6 +3685,7 @@
   }, 
   "LGSN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.33372, 
     "lon": -110.13072, 
@@ -3520,6 +3713,7 @@
   }, 
   "LINO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.35407, 
     "lon": -78.7802, 
@@ -3560,6 +3754,7 @@
   }, 
   "LMN": {
     "badCompEvents": 12, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.852, 
     "lon": -64.806, 
@@ -3587,6 +3782,7 @@
   }, 
   "LMQ": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.5485, 
     "lon": -70.3258, 
@@ -3631,6 +3827,7 @@
   }, 
   "LUPN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.73834, 
     "lon": -111.25686, 
@@ -3671,6 +3868,7 @@
   }, 
   "MADG": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.27478, 
     "lon": -61.68917, 
@@ -3698,6 +3896,7 @@
   }, 
   "MALG": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.79035, 
     "lon": -63.32714, 
@@ -3725,6 +3924,7 @@
   }, 
   "MALO": {
     "badCompEvents": 20, 
+    "hk": {}, 
     "km": {}, 
     "lat": 50.0244, 
     "lon": -79.7635, 
@@ -3752,6 +3952,7 @@
   }, 
   "MANA": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 56.85538, 
     "lon": -117.63672, 
@@ -3796,6 +3997,7 @@
   }, 
   "MATQ": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 49.758917, 
     "lon": -77.637633, 
@@ -3836,6 +4038,7 @@
   }, 
   "MCKN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.19803, 
     "lon": -110.21317, 
@@ -3876,6 +4079,12 @@
   }, 
   "MCMN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 36.93467336683417, 
+      "R": 1.7374371859296482, 
+      "stdH": 0.13213674899254085, 
+      "stdR": 0.0033235945168846328
+    }, 
     "km": {}, 
     "lat": 63.3043, 
     "lon": -92.29769, 
@@ -3916,6 +4125,7 @@
   }, 
   "MEDO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.1646, 
     "lon": -78.45462, 
@@ -3956,6 +4166,12 @@
   }, 
   "MGTN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 32.1608040201005, 
+      "R": 1.9243718592964825, 
+      "stdH": 4.613828366518921, 
+      "stdR": 0.10250602101440058
+    }, 
     "km": {}, 
     "lat": 63.68559, 
     "lon": -109.5911, 
@@ -3970,7 +4186,7 @@
     "network": "POLARIS", 
     "numEvents": 158, 
     "poorEvents": 60, 
-    "processnotes": "Very poor Tpss energy", 
+    "processnotes": "Poor reflective phases", 
     "start": 20020804.21, 
     "status": "processed-notok", 
     "stop": "20070715.1600", 
@@ -3982,16 +4198,16 @@
     }
   }, 
   "MKVL": {
-    "badCompEvents": 0, 
+    "badCompEvents": 1, 
     "lat": 55.09233, 
     "lon": -59.18405, 
     "network": "POLARIS", 
-    "numEvents": 9, 
-    "poorEvents": 0, 
+    "numEvents": 31, 
+    "poorEvents": 9, 
     "start": 20110726.0, 
-    "status": "data corruption", 
+    "status": "picked", 
     "stop": 0, 
-    "usableEvents": 9, 
+    "usableEvents": 21, 
     "wm": {
       "H": 31.0, 
       "R": 1.8009395184967705, 
@@ -4000,6 +4216,7 @@
   }, 
   "MLON": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.96955, 
     "lon": -109.89532, 
@@ -4044,6 +4261,7 @@
   }, 
   "MNT": {
     "badCompEvents": 62, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.5025, 
     "lon": -73.6231, 
@@ -4071,6 +4289,12 @@
   }, 
   "MNTQ": {
     "badCompEvents": 4, 
+    "hk": {
+      "H": 31.155778894472363, 
+      "R": 1.877638190954774, 
+      "stdH": 1.8281092508514252, 
+      "stdR": 0.050663277341357366
+    }, 
     "km": {}, 
     "lat": 45.500286, 
     "lon": -73.622767, 
@@ -4085,7 +4309,7 @@
     "network": "CNSN", 
     "numEvents": 312, 
     "poorEvents": 89, 
-    "processnotes": "not enough data", 
+    "processnotes": "Poor direct and reflected phases", 
     "start": 20100726, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -4111,6 +4335,7 @@
   }, 
   "MPPO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 44.76999, 
     "lon": -76.26484, 
@@ -4138,6 +4363,7 @@
   }, 
   "MRHQ": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.887, 
     "lon": -74.2127, 
@@ -4165,6 +4391,7 @@
   }, 
   "MRYN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 71.33279, 
     "lon": -79.37953, 
@@ -4248,6 +4475,7 @@
   }, 
   "NATG": {
     "badCompEvents": 12, 
+    "hk": {}, 
     "km": {}, 
     "lat": 50.28721, 
     "lon": -62.81015, 
@@ -4305,6 +4533,12 @@
   }, 
   "NMSQ": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 38.94472361809045, 
+      "R": 1.6846733668341707, 
+      "stdH": 1.6650878757543657, 
+      "stdR": 0.038333643791631
+    }, 
     "km": {}, 
     "lat": 51.713283, 
     "lon": -76.023717, 
@@ -4319,7 +4553,7 @@
     "network": "POLARIS", 
     "numEvents": 294, 
     "poorEvents": 164, 
-    "processnotes": "Reflected phases difficult to distinguish. Try reprocessing", 
+    "processnotes": "poor reflected phases", 
     "start": 20090912.1218, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -4332,6 +4566,12 @@
   }, 
   "NODN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 38.69346733668342, 
+      "R": 1.7314070351758792, 
+      "stdH": 0.48074885395184985, 
+      "stdR": 0.025643350369678446
+    }, 
     "km": {}, 
     "lat": 63.96072, 
     "lon": -110.96015, 
@@ -4346,7 +4586,7 @@
     "network": "POLARIS", 
     "numEvents": 141, 
     "poorEvents": 59, 
-    "processnotes": "Reprocess for ++", 
+    "processnotes": "", 
     "start": 20020729.19, 
     "status": "processed-ok", 
     "stop": "20050717.1551", 
@@ -4389,6 +4629,7 @@
   }, 
   "NUNN": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.2146, 
     "lon": -91.0784, 
@@ -4450,6 +4691,7 @@
   }, 
   "ORIO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 45.451483, 
     "lon": -75.51105, 
@@ -4611,6 +4853,7 @@
   }, 
   "PECO": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.93402, 
     "lon": -76.99387, 
@@ -4638,6 +4881,12 @@
   }, 
   "PEMO": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 38.69346733668342, 
+      "R": 1.7660804020100502, 
+      "stdH": 0.3556517751042894, 
+      "stdR": 0.00841742414705695
+    }, 
     "km": {}, 
     "lat": 45.67732, 
     "lon": -77.2466, 
@@ -4742,12 +4991,16 @@
     }
   }, 
   "PINU": {
+    "badCompEvents": 0, 
     "lat": 72.6971, 
     "lon": -77.9748, 
     "network": "CHASME", 
+    "numEvents": 319, 
+    "poorEvents": 0, 
     "start": 20000906.2237, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20071201.2031", 
+    "usableEvents": 292, 
     "wm": {
       "H": 31.0, 
       "R": 1.8009395184967705, 
@@ -4756,6 +5009,7 @@
   }, 
   "PKLO": {
     "badCompEvents": 14, 
+    "hk": {}, 
     "km": {}, 
     "lat": 51.49867, 
     "lon": -90.35219, 
@@ -4783,6 +5037,7 @@
   }, 
   "PKRO": {
     "badCompEvents": 2, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.9639, 
     "lon": -79.0708, 
@@ -4810,6 +5065,12 @@
   }, 
   "PLBC": {
     "badCompEvents": 3, 
+    "hk": {
+      "H": 35.678391959798994, 
+      "R": 1.6771356783919598, 
+      "stdH": 4.337135565285194, 
+      "stdR": 0.10333999622324387
+    }, 
     "km": {}, 
     "lat": 59.45503, 
     "lon": -136.36594, 
@@ -4824,7 +5085,7 @@
     "network": "CNSN", 
     "numEvents": 438, 
     "poorEvents": 271, 
-    "processnotes": "Get more data", 
+    "processnotes": "poor reflected phases", 
     "start": 20050903.21, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -4837,6 +5098,12 @@
   }, 
   "PLIO": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 46.231155778894475, 
+      "R": 1.8535175879396983, 
+      "stdH": 1.4948321526505999, 
+      "stdR": 0.02553534574873634
+    }, 
     "km": {}, 
     "lat": 41.75053, 
     "lon": -82.62837, 
@@ -4851,7 +5118,7 @@
     "network": "POLARIS", 
     "numEvents": 544, 
     "poorEvents": 312, 
-    "processnotes": "Strong reflectors in upper crust. Interesting", 
+    "processnotes": "Phases too weak. Reprocess", 
     "start": 20030822.16, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -4864,6 +5131,12 @@
   }, 
   "PLVO": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 39.321608040201006, 
+      "R": 1.7645728643216079, 
+      "stdH": 0.16993147588889737, 
+      "stdR": 0.004536994445082005
+    }, 
     "km": {}, 
     "lat": 45.039642, 
     "lon": -77.07538, 
@@ -4878,7 +5151,7 @@
     "network": "POLARIS", 
     "numEvents": 517, 
     "poorEvents": 255, 
-    "processnotes": "", 
+    "processnotes": "Beautiful", 
     "start": 20040513.22, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -4921,6 +5194,7 @@
   }, 
   "PNPO": {
     "badCompEvents": 19, 
+    "hk": {}, 
     "km": {}, 
     "lat": 48.59568, 
     "lon": -86.28463, 
@@ -4987,6 +5261,12 @@
   }, 
   "PTCO": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 44.72361809045226, 
+      "R": 1.751005025125628, 
+      "stdH": 0.7065859700476201, 
+      "stdR": 0.01382097144628504
+    }, 
     "km": {}, 
     "lat": 42.88437, 
     "lon": -79.31151, 
@@ -5001,7 +5281,7 @@
     "network": "POLARIS", 
     "numEvents": 130, 
     "poorEvents": 63, 
-    "processnotes": "Not enough traces", 
+    "processnotes": "", 
     "start": 20020205, 
     "status": "processed-notok", 
     "stop": "20060430.1530", 
@@ -5031,6 +5311,7 @@
   }, 
   "QILN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 66.6532, 
     "lon": -86.3709, 
@@ -5123,6 +5404,7 @@
   }, 
   "RES": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 74.689233, 
     "lon": -94.896167, 
@@ -5163,6 +5445,7 @@
   }, 
   "ROMN": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.31574, 
     "lon": -118.01823, 
@@ -5190,6 +5473,12 @@
   }, 
   "RSPO": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 34.04522613065326, 
+      "R": 1.8550251256281407, 
+      "stdH": 1.65086808058126, 
+      "stdR": 0.040127071683926055
+    }, 
     "km": {}, 
     "lat": 46.0734, 
     "lon": -79.7602, 
@@ -5204,7 +5493,7 @@
     "network": "POLARIS", 
     "numEvents": 289, 
     "poorEvents": 168, 
-    "processnotes": "Reflected phase signal weak. Try reprocessing", 
+    "processnotes": "poor reflected phases", 
     "start": 20040805.183, 
     "status": "processed-notok", 
     "stop": "20100517.1721", 
@@ -5247,6 +5536,12 @@
   }, 
   "SADO": {
     "badCompEvents": 11, 
+    "hk": {
+      "H": 38.94472361809045, 
+      "R": 1.7736180904522612, 
+      "stdH": 0.23904721502402032, 
+      "stdR": 0.0061944227495454906
+    }, 
     "km": {}, 
     "lat": 44.7694, 
     "lon": -79.1417, 
@@ -5273,12 +5568,16 @@
     }
   }, 
   "SBNU": {
+    "badCompEvents": 0, 
     "lat": 69.5405, 
     "lon": -93.5571, 
     "network": "CHASME", 
+    "numEvents": 39, 
+    "poorEvents": 0, 
     "start": 20000923.2158, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20020725.2028", 
+    "usableEvents": 37, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -5300,6 +5599,7 @@
   }, 
   "SCHQ": {
     "badCompEvents": 13, 
+    "hk": {}, 
     "km": {}, 
     "lat": 54.832402, 
     "lon": -66.833177, 
@@ -5327,6 +5627,12 @@
   }, 
   "SEDN": {
     "badCompEvents": 2, 
+    "hk": {
+      "H": 35.92964824120603, 
+      "R": 1.7464824120603015, 
+      "stdH": 0.9838025800277094, 
+      "stdR": 0.023996146458354288
+    }, 
     "km": {}, 
     "lat": 63.25017, 
     "lon": -91.20811, 
@@ -5341,7 +5647,7 @@
     "network": "POLARIS", 
     "numEvents": 301, 
     "poorEvents": 145, 
-    "processnotes": "set discardBad, Vp changed by nearly 0.5 km/s!", 
+    "processnotes": "", 
     "start": 20060824.16, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -5440,6 +5746,7 @@
   }, 
   "SILO": {
     "badCompEvents": 10, 
+    "hk": {}, 
     "km": {}, 
     "lat": 54.47918, 
     "lon": -84.91262, 
@@ -5467,6 +5774,7 @@
   }, 
   "SJNN": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.59516, 
     "lon": -52.67807, 
@@ -5507,6 +5815,7 @@
   }, 
   "SMLN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 68.59364, 
     "lon": -91.93642, 
@@ -5534,6 +5843,7 @@
   }, 
   "SMPN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 68.21066, 
     "lon": -126.65396, 
@@ -5587,6 +5897,7 @@
   }, 
   "SNLN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.83043, 
     "lon": -107.61195, 
@@ -5614,6 +5925,7 @@
   }, 
   "SNPN": {
     "badCompEvents": 4, 
+    "hk": {}, 
     "km": {}, 
     "lat": 63.51784, 
     "lon": -110.90776, 
@@ -5641,6 +5953,7 @@
   }, 
   "SNQN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 56.54181, 
     "lon": -79.22543, 
@@ -5694,6 +6007,7 @@
   }, 
   "SRLN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 68.551317, 
     "lon": -83.323833, 
@@ -5768,6 +6082,7 @@
   }, 
   "STLN": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 67.31162, 
     "lon": -92.98495, 
@@ -5808,6 +6123,12 @@
   }, 
   "SUNO": {
     "badCompEvents": 13, 
+    "hk": {
+      "H": 35.92964824120603, 
+      "R": 1.7419597989949749, 
+      "stdH": 0.6514721576922918, 
+      "stdR": 0.018780058039643246
+    }, 
     "km": {}, 
     "lat": 46.6438, 
     "lon": -81.3442, 
@@ -5900,6 +6221,7 @@
   }, 
   "TIGG": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 47.00153, 
     "lon": -63.99805, 
@@ -5940,6 +6262,12 @@
   }, 
   "TOBO": {
     "badCompEvents": 8, 
+    "hk": {
+      "H": 39.19597989949749, 
+      "R": 1.79321608040201, 
+      "stdH": 2.4422767774006986, 
+      "stdR": 0.05526714124350484
+    }, 
     "km": {}, 
     "lat": 45.22573, 
     "lon": -81.52337, 
@@ -5954,7 +6282,7 @@
     "network": "POLARIS", 
     "numEvents": 571, 
     "poorEvents": 319, 
-    "processnotes": "Off edge of Gsearch.", 
+    "processnotes": "poor reflected phases", 
     "start": 20030729.1543, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -6053,6 +6381,7 @@
   }, 
   "TYNO": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.0948, 
     "lon": -79.8703, 
@@ -6093,6 +6422,12 @@
   }, 
   "ULM": {
     "badCompEvents": 19, 
+    "hk": {
+      "H": 34.67336683417085, 
+      "R": 1.7238693467336683, 
+      "stdH": 0.08130330436561088, 
+      "stdR": 0.0029839098592567012
+    }, 
     "km": {}, 
     "lat": 50.250261, 
     "lon": -95.874956, 
@@ -6119,12 +6454,16 @@
     }
   }, 
   "UPNG": {
+    "badCompEvents": 0, 
     "lat": 72.7848, 
     "lon": -56.1408, 
     "network": "CHASME", 
+    "numEvents": 15, 
+    "poorEvents": 0, 
     "start": 20000719.2238, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20001127.0719", 
+    "usableEvents": 15, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -6150,6 +6489,12 @@
   }, 
   "VABQ": {
     "badCompEvents": 41, 
+    "hk": {
+      "H": 46.608040201005025, 
+      "R": 1.6560301507537687, 
+      "stdH": 3.9033004261461888, 
+      "stdR": 0.069567471419686
+    }, 
     "km": {}, 
     "lat": 45.90472, 
     "lon": -75.60793, 
@@ -6164,7 +6509,7 @@
     "network": "CNSN", 
     "numEvents": 144, 
     "poorEvents": 67, 
-    "processnotes": "Not enough data", 
+    "processnotes": "too few data", 
     "start": 20101129.1, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -6220,6 +6565,7 @@
   }, 
   "VIMO": {
     "badCompEvents": 15, 
+    "hk": {}, 
     "km": {}, 
     "lat": 52.81726, 
     "lon": -83.74489, 
@@ -6247,6 +6593,12 @@
   }, 
   "VLDQ": {
     "badCompEvents": 10, 
+    "hk": {
+      "H": 35.42713567839196, 
+      "R": 1.7811557788944723, 
+      "stdH": 1.9626144836318005, 
+      "stdR": 0.04915751508040669
+    }, 
     "km": {}, 
     "lat": 48.1901, 
     "lon": -77.7573, 
@@ -6261,7 +6613,7 @@
     "network": "CNSN", 
     "numEvents": 474, 
     "poorEvents": 261, 
-    "processnotes": "Good data just very poor reflections. More exploration required", 
+    "processnotes": "reprocess", 
     "start": 20020107, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -6291,6 +6643,7 @@
   }, 
   "WAGN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.87916, 
     "lon": -89.44454, 
@@ -6378,6 +6731,12 @@
   }, 
   "WHFN": {
     "badCompEvents": 3, 
+    "hk": {
+      "H": 45.47738693467337, 
+      "R": 1.7675879396984924, 
+      "stdH": 2.3397635389566034, 
+      "stdR": 0.04799872183118506
+    }, 
     "km": {}, 
     "lat": 62.55917, 
     "lon": -107.08651, 
@@ -6392,7 +6751,7 @@
     "network": "POLARIS", 
     "numEvents": 452, 
     "poorEvents": 187, 
-    "processnotes": "Vp off the scale. Not confident with results. Reprocess.", 
+    "processnotes": "reprocess", 
     "start": 20080710.18, 
     "status": "processed-ok", 
     "stop": 0, 
@@ -6405,6 +6764,7 @@
   }, 
   "WHY": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 60.6597, 
     "lon": -134.8806, 
@@ -6445,6 +6805,7 @@
   }, 
   "WLVO": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 43.9234, 
     "lon": -78.3973, 
@@ -6498,6 +6859,12 @@
   }, 
   "YBKN": {
     "badCompEvents": 5, 
+    "hk": {
+      "H": 35.050251256281406, 
+      "R": 1.7314070351758792, 
+      "stdH": 0.10920290679200896, 
+      "stdR": 0.0043078859182307085
+    }, 
     "km": {}, 
     "lat": 64.3185, 
     "lon": -96.0026, 
@@ -6542,6 +6909,7 @@
   }, 
   "YKW2": {
     "badCompEvents": 3, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.49322, 
     "lon": -114.60528, 
@@ -6586,6 +6954,7 @@
   }, 
   "YKW4": {
     "badCompEvents": 7, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.49322, 
     "lon": -114.60528, 
@@ -6613,6 +6982,7 @@
   }, 
   "YKW5": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.49322, 
     "lon": -114.60528, 
@@ -6640,6 +7010,7 @@
   }, 
   "YMBN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 64.87421, 
     "lon": -111.53258, 
@@ -6667,6 +7038,7 @@
   }, 
   "YNEN": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 65.0883, 
     "lon": -111.05, 
@@ -6694,6 +7066,7 @@
   }, 
   "YOSQ": {
     "badCompEvents": 10, 
+    "hk": {}, 
     "km": {}, 
     "lat": 52.86657, 
     "lon": -72.19983, 
@@ -6734,6 +7107,12 @@
   }, 
   "YRTN": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.06030150753769, 
+      "R": 1.7359296482412059, 
+      "stdH": 0.9304132086693322, 
+      "stdR": 0.02400068572513156
+    }, 
     "km": {}, 
     "lat": 62.8102, 
     "lon": -92.1095, 
@@ -6748,7 +7127,7 @@
     "network": "POLARIS", 
     "numEvents": 196, 
     "poorEvents": 94, 
-    "processnotes": "Maximum located on wrong periodic maxima. ", 
+    "processnotes": "", 
     "start": 20040906.22, 
     "status": "processed-notok", 
     "stop": "20090707.2350", 
@@ -6761,6 +7140,7 @@
   }, 
   "YUK1": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 62.1533, 
     "lon": -140.5287, 
@@ -6788,6 +7168,7 @@
   }, 
   "YUK2": {
     "badCompEvents": 1, 
+    "hk": {}, 
     "km": {}, 
     "lat": 61.7668, 
     "lon": -140.8426, 
@@ -6815,6 +7196,12 @@
   }, 
   "YUK3": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 46.984924623115575, 
+      "R": 1.6831658291457285, 
+      "stdH": 7.9885694857068765, 
+      "stdR": 0.1077790343671761
+    }, 
     "km": {}, 
     "lat": 61.7755, 
     "lon": -140.4595, 
@@ -6829,7 +7216,7 @@
     "network": "CNSN", 
     "numEvents": 173, 
     "poorEvents": 80, 
-    "processnotes": "", 
+    "processnotes": "reprocess", 
     "start": 20100825, 
     "status": "processed-notok", 
     "stop": 0, 
@@ -6855,6 +7242,7 @@
   }, 
   "YUK5": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 61.1315, 
     "lon": -137.8593, 
@@ -6882,6 +7270,7 @@
   }, 
   "YUK6": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 60.94321, 
     "lon": -138.36264, 
@@ -6909,6 +7298,7 @@
   }, 
   "YUK7": {
     "badCompEvents": 0, 
+    "hk": {}, 
     "km": {}, 
     "lat": 60.53072, 
     "lon": -138.13994, 

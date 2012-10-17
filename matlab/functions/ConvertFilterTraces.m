@@ -1,5 +1,6 @@
 function [ptrace,strace,header,pslows,badpick] = ...
-    ConvertFilterTraces(dlist,pfile,sfile,picktol,printinfo)
+    ConvertFilterTraces(dlist,pfile,sfile,...
+    picktol,printinfo, splitAzim, clusterID)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -96,6 +97,16 @@ for ii = 1:length(dlist)
     end
     
     bad = false;  % Reset our bad/good trace flag.
+end
+
+if splitAzim
+    for ii = 1:length(header)
+        clstr(ii) = header{ii}.USER9;
+    end
+    pslows(clstr ~= clusterID) = [];
+    header(clstr ~= clusterID) = [];
+    ptrace(clstr ~= clusterID, :) = [];
+    strace(clstr ~= clusterID, :) = [];
 end
 
 % Sort by ascending pslows

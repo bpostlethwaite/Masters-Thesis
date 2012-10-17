@@ -38,15 +38,15 @@ while adjbounds
             if mean(tps) < 4
                 H = 30;
             elseif mean(tps) < 4.4
-                H = 33;
+                H = 34;
             elseif mean(tps) < 4.6
-                H = 36;
+                H = 37;
             else
-                H = 40;
+                H = 42;
             end
-            alpha = 6.6;
-            beta = 3.5;
-            tol = 1e-4;  % Tolerance on interior linear solve is 10x of Newton solution
+            alpha = 6.4;
+            beta = 3.6;
+            tol = 1e-3;  % Tolerance on interior linear solve is 10x of Newton solution
             itermax = 300; % Stop if we go beyond this iteration number
             damp = 0.2;
             warning off MATLAB:plot:IgnoreImaginaryXYPart
@@ -72,25 +72,27 @@ while adjbounds
                 title(sprintf(['Current bound = %1.2f\n'...
                     'Red stars will be removed'], bound))
                 t1n = input(['Enter a new bound, "r" to remove red' ...
-                    ' stared traces or "y" to accept: '], 's');
+                    ' stared traces,\n "b" to go back and "y" to accept: '], 's');
                 
                 % Check input, kill outside bounds and repeat or skip and
                 % finish
                 if str2num(t1n) % Check if input is a number
                     bound = str2num(t1n); % If it is use number as lower bound
-                    
+                elseif (t1n =='b')
+                    banish = false;
+                    break % Go back to limit setter
                 elseif (t1n == 'r')
                     ind = (tps < tlw) | (tps > tup);
                     tps(ind) = [];
                     pslow(ind) = [];
                     brec(ind,:) = [];
                     Tps(ind) = [];
-                    changebounds = false;
-                elseif (t1n == 'y')
+                    break
+                elseif (t1n == 'y') % Get out of all loops
                     banish = false;
                     adjbounds = false;
-                    changebounds = false;
                     hold off
+                    break
                 else
                     fprintf('Sorry %s or %s is bad input\n', t1n)
                 end
