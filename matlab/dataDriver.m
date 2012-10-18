@@ -16,47 +16,10 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'LDGN';
+station = 'ELEF';
 %{
 
-PTCO
-DRLN
-KSVO
-PLVO
-GBLN
-MGTN
-YRTN
-MNTQ
-BVCY
-A16
-A11
-PLBC
-MCMN
-ACKN
-YUK3
-CAMN
-COKN
-NODN
-CBRQ
-DELO
-SADO
-ILON
-SUNO
-ULM
-SEDN
-VLDQ
-TOBO
-ELFO
-NMSQ
-WHFN
-KAJQ
-CHGQ
-VABQ
-RSPO
-YBKN
-PLIO
-PEMO
-LDGN
+
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
@@ -139,9 +102,23 @@ end
 close all
 plotStack(db, method);
 
-%if strcmp(method, 'bostock')
-%    fprintf('Vp is %f +/- %1.3f km/s\n',dbold.vbest, dbold.stdVp)
-%end
+if strcmp(method, 'bostock')
+    fprintf('Vp is %f +/- %1.3f \n',db.mb.vbest, db.mb.stdVp )
+    fprintf('R is %f +/- %1.3f \n',db.mb.rbest, db.mb.stdR )
+    fprintf('H is %f +/- %1.3f \n',db.mb.hbest, db.mb.stdH )
+    if exist('dbold','var')
+        if isfield(dbold,'mb')
+            fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+            fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
+            fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
+        end
+        if isfield(dbold,'hk')
+            fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
+            fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
+        end
+    end
+end
+
 if strcmp(method, 'kanamori')
     fprintf('R is %f +/- %1.3f \n',db.hk.rbest, db.hk.stdR )
     fprintf('H is %f +/- %1.3f \n',db.hk.hbest, db.hk.stdH )
@@ -152,23 +129,15 @@ if strcmp(method, 'kanamori')
         end
         fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
         fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
-        fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+        fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
     end
 end
-%fprintf('\nKanamori data\n')
-%fprintf('R is %f \n',Rkan)
-%fprintf('H is %f kms\n',Hkan)
-%
-%fprintf('\nNew Data:\n')
-%fprintf('Vp is %f +/- %1.3f km/s\n',db.vbest, db.stdVp )
-%fprintf('R is %f +/- %1.3f \n',db.rbest, db.stdR )
-%fprintf('H is %f +/- %1.3f \n',db.hbest, db.stdH )
 
 %% Enter Finishing commands:
 notes = input('Enter Processing Notes: ', 's');
 db.processnotes = notes;
 % Enter use / ignore flag
-db.usable = input('Enter 1 to use, or 0 to set as a discard: ');
+db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
 % Save entrydbold.mb.
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)
@@ -180,4 +149,3 @@ switch lower(saveit)
 end
 
 close all
-

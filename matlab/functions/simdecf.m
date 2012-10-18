@@ -28,7 +28,7 @@ end
 if betan > 0
   betax = betan;
 else
-  beta = exp(-5:0.5:50);
+  beta = exp(-5 : 0.2 : 15);
   gcvf = zeros(1, length(beta));
   for ib = 1:length(beta);
 

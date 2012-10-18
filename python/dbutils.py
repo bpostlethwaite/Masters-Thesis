@@ -189,8 +189,11 @@ def matStats(statdict, modtime, force = False):
                 statdict[station] = {}
             # Shared data
             statdict[station]['processnotes'] = ''.join([''.join(c) for c in db['processnotes']])
-            if 'usable' in statdict[station]:
-                statdict[station]['usable'] = db['usable']
+            try:
+                statdict[station]['usable'] = int(db['usable'])
+            except IndexError:
+                pass
+
             # Specific Processing Data
             try:
                 statdict[station]['mb'] = {}
@@ -223,12 +226,11 @@ def setStatus(s, stdict):
         if 'poorEvents' in s[k] and s[k]['poorEvents'] >= 1:
             status = "picked"
         # CHANGE THIS BELOW TO A KANAMORI STATISTIC
-        if 'mb' in s[k]: # Set processing status by MB algo's Vp result
-            if 'stdVp' in s[k]['mb']:
-                if s[k]['mb']['stdVp'] <= 0.5:
-                    status = "processed-ok"
-                else:
-                    status = 'processed-notok'
+        if 'usable' in s[k]: # Set processing status by MB algo's Vp result
+            if s[k]['usable']:
+                status = "processed-ok"
+            else:
+                status = "processed-notok"
         if 'usableEvents' in s[k] and s[k]['usableEvents'] < 15:
             status = "data corruption"
         if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
