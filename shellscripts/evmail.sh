@@ -53,7 +53,7 @@ while read event; do
   echo "CHAN_LIST *H*" >> $event"_request"
 # Get Stations
   echo "STA_LIST " $STATIONS >> $event"_request"
-  echo NET_LIST "CNSN POLARIS CHASME" >> $event"_request"
+  echo "NET_LIST " "CNSN POLARIS CHASME FEDNOR ETS" >> $event"_request"
 
   yr=`echo $event | awk '{print substr($1,1,2)}'`
   if test $yr -lt 18
