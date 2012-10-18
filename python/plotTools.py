@@ -9,7 +9,7 @@
 import os, json
 import fnmatch
 import numpy as np
-from dbutils import queryStats, getStats, Scoper
+from dbutils import queryStns, Scoper
 #import matplotlib.pyplot as plt
 #import numpy as np
 #from scipy.signal import detrend
@@ -67,8 +67,8 @@ class Params(object):
         self.scp = Scoper("::")
 
         rawdata = json.loads( open(fname).read() )
-        filtdata = queryStats(rawdata, args, self.scp.sep)
-        filtdata = getStats(filtdata, args, self.scp.sep, False)
+        filtdata = queryStns(rawdata, args, self.scp)
+
 
 
         for stn in filtdata.keys():
@@ -97,28 +97,40 @@ class Params(object):
             setattr(self, '_' + self.scp.normscope(p), temp[p])
 
         # Build variable list
-        self.syncto(self._stns)
+        self.orderAttribs([i for i in range(len(self._stns))])
 
-    def syncto(self, stns):
+    def sync(self, pobj):
         """ Filter by list of stations only, useful for syncing
         with another Param object station list. The incoming
         station list must be subset of object station list or an
         error is raised."""
-        self.stns = []
-        inds = []
-        for stn in stns:
-            ind = find(self._stns, stn)
-            if ind == -1:
-                raise IndexError("No matching station, {}, in caller object".format(stn))
+#        stns = []
+        myInds = []
+        yourInds = []
+        # Scan down callee's station list
+        for ind, stn in enumerate(pobj.stns):
+            # Look for the stn in the callee and find the index in self
+            ix = find(self._stns, stn)
+            # If we don't have a stn, we skip an ind in the callee's index list
+            if ix == -1:
+                pass
             else:
-                self.stns.append(stn)
-                inds.append(ind)
+                myInds.append(ix)
+                yourInds.append(ind)
+
+        pobj.orderAttribs(yourInds)
+        self.orderAttribs(myInds)
+
+    def orderAttribs(self, index):
+        """ Take a list of index of length len(self.stns)
+        holding indice numbers to reorganize attribute vectors"""
         # For each base attribute make a new attribute with name minus underscore
         # which has the value of the inds sorted array.
+        self.stns = np.take(self._stns, index)
         for p in self.plist:
             setattr(self, self.scp.normscope(p),
                     np.take(getattr(self, '_'+ self.scp.normscope(p)),
-                            inds))
+                            index))
 
 
 

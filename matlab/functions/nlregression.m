@@ -41,8 +41,10 @@ while adjbounds
                 H = 34;
             elseif mean(tps) < 4.6
                 H = 37;
-            else
+            elseif mean(tps) < 5.0
                 H = 42;
+            else
+                H = 46;
             end
             alpha = 6.4;
             beta = 3.6;
