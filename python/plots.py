@@ -18,10 +18,10 @@ from matplotlib.backends.backend_pdf import PdfPages
 #####################
 # PLOT CMD
 #####################
-p1 = None
-p2 = None
-p3 = None
-p4 = None
+p1 = None # Comparing junk
+p2 = None # Proterozoic vs Archean
+p3 = None # Comparing some errors in Kanamori approach
+p4 = plt # Compare values between bostock, kanamori and Mooney
 p5 = None
 p6 = None
 p7 = None
@@ -61,7 +61,7 @@ if p1:
 
 
 #######################################################################
-# F2
+# F2 ## Protozoic vs Archean Histograms
 if p2:
     p2.figure()
     arg1 = Args()
@@ -74,27 +74,94 @@ if p2:
     # Sync up data
     d.sync(g)
 
-    print len(g.stns)
-
     # Get some logical indexes for start ages within geological times of interest
     arch =  (g.lower <= 3800) & (g.lower > 2500)
     proto = (g.lower <= 2500) & (g.lower > 542)
 
-    p2.hist(d.hk_R[arch], histtype='stepfilled', bins = 10, color='b', label="archean")
-    p2.hist(d.hk_R[proto], histtype='stepfilled' , bins = 10, color='r', alpha=0.5, label='Protozoic')
+    p2.subplot(211)
+    p2.hist(d.hk_R[arch], histtype='stepfilled', bins = 20, normed = True, color='b', label="archean")
+    p2.hist(d.hk_R[proto], histtype='stepfilled' , bins = 20, normed = True, color='r', alpha=0.5, label='Protozoic')
     p2.title("Archean/Protozoic Vp/Vs Histogram")
     p2.xlabel("Value")
-    p2.ylabel("Probability")
+    p2.ylabel("Distribution")
+    p2.legend()
+
+    p2.subplot(212)
+    p2.hist(d.hk_H[arch], histtype='stepfilled', bins = 20, normed=True, color='b', label="archean")
+    p2.hist(d.hk_H[proto], histtype='stepfilled' , bins = 20, normed=True, color='r', alpha=0.5, label='Protozoic')
+    p2.title("Archean/Protozoic Crustal Thickness Histogram")
+    p2.xlabel("Value")
+    p2.ylabel("Distribution")
+    p2.ylim((0,1))
     p2.legend()
 
 
 #######################################################################
-# F3
+# F3 Standard Deviation histograms
 if p3:
     p3.figure()
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    # Load station params
+    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR"])
+
+    p3.subplot(211)
+    p3.hist(d.hk_stdR, histtype='stepfilled', bins = 20, normed = True, color='b', label="Vp/Vs deviation")
+    p3.title("Vp/Vs ")
+    p3.xlabel("Value")
+    p3.ylabel("Probability")
+    p3.legend()
+
+    p3.subplot(212)
+    p3.hist(d.hk_stdH, histtype='stepfilled', normed= True, bins = 20, color='r', label="Thickness deviation")
+    p3.title("Vp/Vs ")
+    p3.xlabel("Value")
+    p3.ylabel("Probability")
+    p3.legend()
+
 
 #######################################################################
 # F4
+
+if p4:
+    p4.figure()
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    # Load station params
+    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
+    m = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","wm::R","wm::Vp"])
+    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::H","mb::R","mb::Vp"])
+
+    k.sync(m)
+    m.sync(b)
+    b.sync(k)
+
+    t = np.arange(len(k.hk_H))
+
+    ax1 = p4.subplot(311)
+    p4.plot(t , k.hk_H, label = "Kanamori H")
+    p4.plot(t , m.wm_H, label = "Mooney H")
+    p4.title("mean H Kan = {:2.2f}. mean H Mooney = {:2.2f}".format(np.mean(k.hk_H), np.mean(m.wm_H)) )
+    p4.ylabel("Thickness H")
+    p4.legend()
+    p4.setp( ax1.get_xticklabels(), visible=False)
+
+    p4.subplot(312, sharex = ax1)
+    p4.plot(t , k.hk_R, label = "Kanamori Vp/Vs")
+    p4.plot(t , m.wm_R, label = "Mooney Vp/Vs")
+    p4.title("mean Vp/Vs Kan = {:2.2f}. mean Vp/Vs Mooney = {:2.2f}".format(np.mean(k.hk_R),np.mean(m.wm_R) ))
+    p4.ylabel("Vp/Vs")
+    p4.legend()
+    p4.setp( ax1.get_xticklabels(), visible = False)
+
+    p4.subplot(313, sharex = ax1)
+    p4.plot(t , b.mb_Vp , label = "Bostock Vp")
+    p4.plot(t , m.wm_Vp , label = "Mooney Vp")
+    p4.title("mean Vp MB = {:2.2f}. mean Vp Mooney = {:2.2f}".format(np.mean(b.mb_Vp), np.mean(m.wm_Vp) ))
+    p4.xlabel("Station")
+    p4.ylabel("Vp")
+    p4.legend()
+
 
 #######################################################################
 # F5
