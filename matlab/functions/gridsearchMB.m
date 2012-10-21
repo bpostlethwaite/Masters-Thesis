@@ -1,4 +1,4 @@
-function [ results ] = gridsearchMB(rec,tps,dt,pslow)
+function [ results ] = gridsearchMB(rec, dt, pslow, tps)
 %GRIDSEARCH Summary of this function goes here
 %
 % FUNCTION [vbest,rbest,hbest] = GRIDSEARCH(REC,DT,PSLOW,T1,T2);

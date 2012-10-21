@@ -42,7 +42,7 @@ for rec in db:
     stnChrons[rec["station"]] = {}
     stnChrons[rec["station"]]["lower"] = epochdict[rec["epoch"]][0]
     stnChrons[rec["station"]]["upper"] = epochdict[rec["epoch"]][1]
-
+    stnChrons[rec["station"]]["era"] = rec["era"].lower()
 
 open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
 #print json.dumps(stnChrons, sort_keys = True, indent = 2 )

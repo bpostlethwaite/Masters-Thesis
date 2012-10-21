@@ -26,7 +26,7 @@ checkind = 1;
 Pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(Pslow); % Number of bins we now have.
-%clear numbin pbinLimits checkind
+clear numbin pbinLimits checkind
 %% 4) Normalize
 dt = header{1}.DELTA;
 ptrace = diag(1./max(ptrace,[],2)) * ptrace;
@@ -75,26 +75,20 @@ clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
 pscale = wrev(1./pslow.^2)';
-brec =  diag( pscale ./ max(abs(brec(:,1:1200)), [], 2)) * brec;
-%% 7) MB Processing
+brec =  diag( pscale ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
+
+%% Run Processing suite
+[brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
+
 if strcmp(method, 'bostock')
-    % Get Newton method nonlinear regression and select Tps points
-    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt);
+    [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, db.hk.tps);
 
-    [ results ] = gridsearchMB(brec(:,1:round(45/dt)), Tps', dt, pslow);
+elseif strcmp(method, 'kanamori')      
+    [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
 
-    [bootVp, bootR, bootH, bootVpRx, bootHx] = ...
-        bootstrapMB(brec(:,1:round(45/dt)), Tps, dt, pslow, 1024);
-
-%% Kanamori Processing
-elseif strcmp(method, 'kanamori')
-    % Get Newton method nonlinear regression and select Tps points
-    [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt);
-    
-    [ results ] = gridsearchKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp);
-    
-    [bootR, bootH, bootRHx] = ...
-        bootstrapKan(brec(:,1:round(45/dt)), dt, pslow, mooneyVp, 1024);
 end
-%% Close parallel system
-%matlabpool close
+
+% Run Bootstrap
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024, method, db.hk.tps', vp);    
+    
+    

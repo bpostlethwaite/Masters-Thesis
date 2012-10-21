@@ -15,8 +15,8 @@ databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data
-method = 'kanamori';
-station = 'ELEF';
+method = 'bostock';
+station = 'ULM';
 %{
 
 
@@ -33,71 +33,17 @@ if exist(dbfile, 'file')
     display(dbold.processnotes)
 end
 % Load Mooney Crust 2.0 database Vp estimate
+% from stations.json database
 load stnsjson.mat
-mooneyVp = json.(station).wm.Vp;
+vp = json.(station).wm.Vp;
 clear json sacfolder databasedir homedir
 %% Run ToolChain
 ProcessTraces
 
 %% Assign Data
+[ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
+    pslow, dt, npb, fLow, fHigh, t1, t2, Tps, results, boot);
 
-    % Shared
-    db.station = station;
-    db.processnotes = ''; % Default
-    db.rec = brec;    
-    db.pslow = pslow;
-    db.dt = dt;
-    db.npb = npb;
-    db.fLow = fLow;
-    db.fHigh = fHigh;
-    db.t1 = t1;
-    db.t2 = t2;
-    db.usable = 1; % Default, later ask for value
-    db.Tps = Tps;
-
-
-    % Specific MB
-if strcmp(method, 'bostock')
-    db.mb.rbest = results.rbest;
-    db.mb.vbest = results.vbest;
-    db.mb.hbest = results.hbest;
-    db.mb.stackvr = results.stackvr;
-    db.mb.stackh = results.stackh;
-    db.mb.rRange = results.rRange;
-    db.mb.vRange = results.vRange;
-    db.mb.hRange = results.hRange;
-    db.mb.smax = results.smax;
-    db.mb.hmax = results.hmax;
-    db.mb.tps = results.tps;
-    db.mb.tpps = results.tpps;
-    db.mb.tpss = results.tpss;
-    db.mb.stdsmax = std(bootVpRx);
-    db.mb.stdhmax = std(bootHx);
-    db.mb.stdVp = std(bootVp);
-    db.mb.stdR = std(bootR);
-    db.mb.stdH = std(bootH);
-
-    % Specific Kanamori
-elseif strcmp(method, 'kanamori')
-    db.hk.rbest = results.rbest;
-    db.hk.v = results.v;
-    db.hk.hbest = results.hbest;
-    db.hk.stackhr = results.stackhr;
-    db.hk.rRange = results.rRange;
-    db.hk.hRange = results.hRange;
-    db.hk.smax = results.smax;
-    db.hk.tps = results.tps;
-    db.hk.tpps = results.tpps;
-    db.hk.tpss = results.tpss;
-    db.hk.stdsmax = std(bootRHx);
-    db.hk.stdR = std(bootR);
-    db.hk.stdH = std(bootH);
-
-else
-     ME = MException('ProcessMethodNotFound', ...
-             'Must be "bostock" or "kanamori."');
-     throw(ME);
-end
 %% Plot the results if we completed the processing
 close all
 plotStack(db, method);

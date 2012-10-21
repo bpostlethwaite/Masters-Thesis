@@ -69,8 +69,6 @@ class Params(object):
         rawdata = json.loads( open(fname).read() )
         filtdata = queryStns(rawdata, args, self.scp)
 
-
-
         for stn in filtdata.keys():
             # Make sure all parameters exist for each station
             # If they do, add station to list.
@@ -82,6 +80,7 @@ class Params(object):
 
         # Make self._stns immutable
         self._stns = tuple(self._stns)
+
         # Create a temporary dictionary of all
         # station data.
         temp = {}
@@ -96,8 +95,9 @@ class Params(object):
         for p in plist:
             setattr(self, '_' + self.scp.normscope(p), temp[p])
 
-        # Build variable list
-        self.orderAttribs([i for i in range(len(self._stns))])
+        # Build variable list, initial array order is just
+        # station order
+        self.reset()
 
     def sync(self, pobj):
         """ Filter by list of stations only, useful for syncing
@@ -105,33 +105,45 @@ class Params(object):
         station list must be subset of object station list or an
         error is raised."""
 #        stns = []
-        myInds = []
-        yourInds = []
+        myIndx = []
+        yourIndx = []
         # Scan down callee's station list
         for ind, stn in enumerate(pobj.stns):
             # Look for the stn in the callee and find the index in self
-            ix = find(self._stns, stn)
+            ix = find(self.stns, stn)
             # If we don't have a stn, we skip an ind in the callee's index list
             if ix == -1:
                 pass
             else:
-                myInds.append(ix)
-                yourInds.append(ind)
+                myIndx.append(ix)
+                yourIndx.append(ind)
 
-        pobj.orderAttribs(yourInds)
-        self.orderAttribs(myInds)
+        pobj.orderAttribs(yourIndx)
+        self.orderAttribs(myIndx)
+        # For chaining
+        return self
 
-    def orderAttribs(self, index):
+    def orderAttribs(self, newindex):
         """ Take a list of index of length len(self.stns)
         holding indice numbers to reorganize attribute vectors"""
         # For each base attribute make a new attribute with name minus underscore
         # which has the value of the inds sorted array.
-        self.stns = np.take(self._stns, index)
+        # The index to sort by must relate to the initial index
+        # by continuing to pass the same rearranged list. (through
+        # modification of self.index)
+
+        self.index = np.take(self.index, newindex)
+        self.stns = np.take(self._stns, self.index)
         for p in self.plist:
             setattr(self, self.scp.normscope(p),
                     np.take(getattr(self, '_'+ self.scp.normscope(p)),
-                            index))
+                            self.index))
 
+
+    def reset(self):
+        self.index = [i for i in range(len(self._stns))]
+        self.orderAttribs(self.index)
+        return self
 
 
 if __name__  == "__main__":
