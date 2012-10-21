@@ -1,1345 +1,1681 @@
 {
   "A11": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 488.3
   }, 
   "A16": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 488.3
   }, 
   "A21": {
+    "era": "paleozoic", 
     "lower": 488.3, 
     "upper": 443.7
   }, 
   "A54": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "A61": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1200
   }, 
   "A64": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "ACKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ACTO": {
+    "era": "paleozoic", 
     "lower": 443.7, 
     "upper": 428.2
   }, 
   "AHCB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "AKVQ": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "ALFO": {
+    "era": "precambrian", 
     "lower": 1200, 
     "upper": 1000
   }, 
   "ALGO": {
+    "era": "precambrian", 
     "lower": 1800, 
     "upper": 1400
   }, 
   "ALRB": {
+    "era": "cenozoic", 
     "lower": 23, 
     "upper": 2.59
   }, 
   "ANMB": {
+    "era": "mesozoic", 
     "lower": 130, 
     "upper": 85.8
   }, 
   "AP3N": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "ARTN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ARVN": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "ATKO": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2800
   }, 
   "ATLB": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "B1NU": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "B2NU": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "BANO": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "BASO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "BATG": {
+    "era": "paleozoic", 
     "lower": 488.3, 
     "upper": 443.7
   }, 
   "BBB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "BCBC": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "BELQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "BMBC": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "BMRO": {
+    "era": "paleozoic", 
     "lower": 422.9, 
     "upper": 416
   }, 
   "BMSB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "BOXN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "BPCB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "BRCO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "BRPO": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1200
   }, 
   "BTB": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 251
   }, 
   "BUKO": {
+    "era": "precambrian", 
     "lower": 1800, 
     "upper": 1400
   }, 
   "BULN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "BVCY": {
+    "era": "paleozoic-mesozoic", 
     "lower": 416, 
     "upper": 65.5
   }, 
   "BWLO": {
+    "era": "paleozoic", 
     "lower": 422.9, 
     "upper": 416
   }, 
   "CAMN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "CBB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "CBRQ": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "CDKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 1600
   }, 
   "CHEG": {
+    "era": "precambrian-paleozoic", 
     "lower": 1000, 
     "upper": 416
   }, 
   "CHGQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "CLAP": {
+    "era": "cenozoic", 
     "lower": 2.588, 
     "upper": 0
   }, 
   "CLPO": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "CLRN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "CLSB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "CLVB": {
+    "era": "mesozoic", 
     "lower": 130, 
     "upper": 85.8
   }, 
   "CLVN": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 385.3
   }, 
   "CLWO": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "CMBN": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "CODG": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 299
   }, 
   "COKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "COQB": {
+    "era": "mesozoic", 
     "lower": 130, 
     "upper": 85.8
   }, 
   "COWN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "CPLB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "CRLN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 1600
   }, 
   "CTLN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "CTSN": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "DAWS": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "DAWY": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 251
   }, 
   "DELO": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "DHLB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "DHRN": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1200
   }, 
   "DIB": {
+    "era": "cenozoic", 
     "lower": 23, 
     "upper": 2.59
   }, 
   "DLBC": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "DMCQ": {
+    "era": "precambrian", 
     "lower": 1800, 
     "upper": 1400
   }, 
   "DORN": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "DPQ": {
+    "era": "precambrian", 
     "lower": 1800, 
     "upper": 1400
   }, 
   "DRCO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "DREO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "DRLN": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 299
   }, 
   "DRWO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "DSMN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "DSNO": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2150
   }, 
   "DVKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "EA06": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "EDB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "EDM": {
+    "era": "mesozoic", 
     "lower": 83.5, 
     "upper": 65.5
   }, 
   "EDZN": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 488.3
   }, 
   "EKTN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ELEF": {
+    "era": "mesozoic-cenozoic", 
     "lower": 145.5, 
     "upper": 2.588
   }, 
   "ELFO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "ELGO": {
+    "era": "paleozoic", 
     "lower": 422.9, 
     "upper": 416
   }, 
   "ENGB": {
+    "era": "cenozoic", 
     "lower": 2.588, 
     "upper": 0
   }, 
   "EPLO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "EUNU": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 145.5
   }, 
   "FALL": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "FCBC": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "FCC": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "FHRB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "FLLB": {
+    "era": "cenozoic", 
     "lower": 23, 
     "upper": 2.59
   }, 
   "FNBB": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "FNBC": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "FPLB": {
+    "era": "cenozoic", 
     "lower": 23, 
     "upper": 2.59
   }, 
   "FRB": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "FSMA": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 385.3
   }, 
   "GAC": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1000
   }, 
   "GALN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "GASG": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 443.7
   }, 
   "GBLN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "GBN": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 359.2
   }, 
   "GDLN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "GFNU": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "GGN": {
+    "era": "paleozoic", 
     "lower": 443.7, 
     "upper": 416
   }, 
   "GHNB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "GIFN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "GLBC": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "GLWN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "GOWB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "HAL": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 359.2
   }, 
   "HBDB": {
+    "era": "mesozoic", 
     "lower": 161.2, 
     "upper": 145.5
   }, 
   "HFRN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "HGVO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "HILA": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "HLSB": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "HMNT": {
+    "era": "precambrian", 
     "lower": 1000, 
     "upper": 542
   }, 
   "HNB": {
+    "era": "mesozoic", 
     "lower": 161.2, 
     "upper": 145.5
   }, 
   "HOLB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "HOPB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "HOWN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 1600
   }, 
   "HPLN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "HRMB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "HSMO": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2150
   }, 
   "HYT": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "I10H1": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ICQ": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "IGLN": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "IHLN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ILKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "ILON": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "INK": {
+    "era": "precambrian", 
     "lower": 1200, 
     "upper": 542
   }, 
   "INUQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "IVKQ": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "JERN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "JOSN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "JRBB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "JRBC": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "KAJQ": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "KANO": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "KAPO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "KASO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "KELB": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "KGNO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "KHVB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "KILO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "KIMN": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "KJKQ": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 2500
   }, 
   "KLBO": {
+    "era": "", 
     "lower": 0, 
     "upper": 0
   }, 
   "KLNB": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "KNDN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "KNGQ": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "KRSQ": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "KSVO": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1000
   }, 
   "KUGN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "KUKN": {
+    "era": "precambrian", 
     "lower": 1200, 
     "upper": 542
   }, 
   "LAIN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LATQ": {
+    "era": "precambrian", 
     "lower": 1800, 
     "upper": 1400
   }, 
   "LCBC": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 65.5
   }, 
   "LDBN": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "LDGN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LDIO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LGSN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LINO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "LLLB": {
+    "era": "paleozoic-mesozoic", 
     "lower": 359.2, 
     "upper": 145.5
   }, 
   "LMN": {
+    "era": "precambrian", 
     "lower": 1000, 
     "upper": 542
   }, 
   "LMQ": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "LSQQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LUPN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "LZB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "MADG": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 251.0
   }, 
   "MALG": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 299
   }, 
   "MALO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MANA": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "MANN": {
+    "era": "paleozoic", 
     "lower": 443.7, 
     "upper": 428.2
   }, 
   "MATQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MBC": {
+    "era": "paleozoic", 
     "lower": 385.3, 
     "upper": 359.2
   }, 
   "MCKN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MCMB1": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "MCMN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "MEDA": {
+    "era": "mesozoic", 
     "lower": 83.5, 
     "upper": 65.5
   }, 
   "MGB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "MGTN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MKVL": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "MLON": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MNGN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 1600
   }, 
   "MNT": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "MNTQ": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "MOBC": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "MPPO": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 443.7
   }, 
   "MRHQ": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "MRYN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "MSNO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "MUMO": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2800
   }, 
   "MWAB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "NANL": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "NATG": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "NEMQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "NLLB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "NMSQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "NODN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "NOTN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "NSKO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "NUNN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "NWRL": {
+    "era": "", 
     "lower": 0, 
     "upper": 0
   }, 
   "ORHO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "ORIO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "OTRO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "OTT": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "OZB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 145.5
   }, 
   "PA01": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PA02": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PA03": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PA04": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PA05": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PA12": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PACB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "PECO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "PEMO": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1200
   }, 
   "PFB": {
+    "era": "paleozoic", 
     "lower": 199.6, 
     "upper": 65.5
   }, 
   "PGC": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PGCB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "PHC": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "PHYB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "PIMB": {
+    "era": "mesozoic", 
     "lower": 161.2, 
     "upper": 145.5
   }, 
   "PINU": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "PKLO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "PKRO": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "PLBC": {
+    "era": "paleozoic", 
     "lower": 488.3, 
     "upper": 199.6
   }, 
   "PLIO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "PLVO": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "PMB": {
+    "era": "mesozoic", 
     "lower": 161.2, 
     "upper": 145.5
   }, 
   "PNGN": {
+    "era": "precambrian", 
     "lower": 3800, 
     "upper": 542
   }, 
   "PNPO": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "PNT": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "PPSB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "PRDA": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "PTCO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "QCQ": {
+    "era": "paleozoic", 
     "lower": 542, 
     "upper": 488.3
   }, 
   "QILN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "QURY": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "RAMB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "RAYA": {
+    "era": "mesozoic", 
     "lower": 83.5, 
     "upper": 65.5
   }, 
   "RDEA": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "RDLO": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2800
   }, 
   "RES": {
+    "era": "paleozoic", 
     "lower": 488.3, 
     "upper": 416
   }, 
   "RLKO": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2800
   }, 
   "ROMN": {
+    "era": "paleozoic", 
     "lower": 488.3, 
     "upper": 416
   }, 
   "RSPO": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 1600
   }, 
   "RUBB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "SABG": {
+    "era": "cenozoic", 
     "lower": 2.588, 
     "upper": 0
   }, 
   "SADO": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1200
   }, 
   "SBNU": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "SCH": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "SCHQ": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2050
   }, 
   "SEDN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "SHB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "SHDB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "SHMN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 1600
   }, 
   "SHVB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 65.5
   }, 
   "SHWN": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "SILB": {
+    "era": "mesozoic", 
     "lower": 175.6, 
     "upper": 161.2
   }, 
   "SILO": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "SJNN": {
+    "era": "precambrian", 
     "lower": 1000, 
     "upper": 542
   }, 
   "SLEB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "SMLN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "SMPN": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "SNB": {
+    "era": "mesozoic", 
     "lower": 99.6, 
     "upper": 65.5
   }, 
   "SNKN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "SNLN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "SNPN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "SNQN": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "SOKB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "SPLB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "SRLN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "SSIB": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 359.2
   }, 
   "SSNO": {
+    "era": "precambrian", 
     "lower": 2500, 
     "upper": 2150
   }, 
   "STCO": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "STLN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "SULB": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "SUNO": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "TALB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "TASB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "TFRB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "THAB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "THMB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "TIGG": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 251.0
   }, 
   "TLCB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "TOBO": {
+    "era": "paleozoic", 
     "lower": 422.9, 
     "upper": 416
   }, 
   "TOFB": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "TORO": {
+    "era": "paleozoic", 
     "lower": 460.9, 
     "upper": 443.7
   }, 
   "TSJB": {
+    "era": "mesozoic", 
     "lower": 199.6, 
     "upper": 161.2
   }, 
   "TWGB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 145.5
   }, 
   "TWKB": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 251
   }, 
   "TYNO": {
+    "era": "paleozoic", 
     "lower": 422.9, 
     "upper": 416
   }, 
   "UBRB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "ULM": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "UWOO": {
+    "era": "paleozoic", 
     "lower": 397.5, 
     "upper": 385.3
   }, 
   "VABQ": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "VDBQ": {
+    "era": "precambrian", 
     "lower": 1400, 
     "upper": 1200
   }, 
   "VGZ": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 145.5
   }, 
   "VIB": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "VIMO": {
+    "era": "paleozoic", 
     "lower": 443.7, 
     "upper": 428.2
   }, 
   "VLDQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "VTIN": {
+    "era": "precambrian", 
     "lower": 1000, 
     "upper": 542
   }, 
   "WAGN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "WALA": {
+    "era": "precambrian", 
     "lower": 1600, 
     "upper": 1000
   }, 
   "WAPA": {
+    "era": "mesozoic", 
     "lower": 83.5, 
     "upper": 65.5
   }, 
   "WBHL": {
+    "era": "precambrian", 
     "lower": 2300, 
     "upper": 1800
   }, 
   "WEMQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "WHFN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "WHY": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "WISB": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "WLVO": {
+    "era": "paleozoic", 
     "lower": 471.8, 
     "upper": 460.9
   }, 
   "WSLR": {
+    "era": "mesozoic", 
     "lower": 145.5, 
     "upper": 99.6
   }, 
   "WTRB": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "YBKN": {
+    "era": "precambrian", 
     "lower": 3200, 
     "upper": 2500
   }, 
   "YKW1": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YKW2": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YKW3": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YKW4": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YKW5": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YMBN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YNEN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YOSQ": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YOUB": {
+    "era": "paleozoic", 
     "lower": 416, 
     "upper": 251
   }, 
   "YRTN": {
+    "era": "precambrian", 
     "lower": 2800, 
     "upper": 2500
   }, 
   "YUK1": {
+    "era": "paleozoic-mesozoic", 
     "lower": 416, 
     "upper": 65.5
   }, 
   "YUK2": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 251
   }, 
   "YUK3": {
+    "era": "paleozoic", 
     "lower": 318.1, 
     "upper": 251
   }, 
   "YUK4": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 23
   }, 
   "YUK5": {
+    "era": "unknown", 
     "lower": 0, 
     "upper": 0
   }, 
   "YUK6": {
+    "era": "mesozoic", 
     "lower": 251, 
     "upper": 199.6
   }, 
   "YUK7": {
+    "era": "cenozoic", 
     "lower": 65.5, 
     "upper": 0
   }

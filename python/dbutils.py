@@ -325,7 +325,7 @@ def printStns(stdict, qdict, args, scp):
 
     # If both keys and attribute flags supplied
     # Print only attribute, no station name etc.
-    if args.keys and args.attribute:
+    if args.keys and args.attribute and not args.reverse:
         for key in qdict.keys():
             a = qdict[key].keys()[0]
             print qdict[key][a]

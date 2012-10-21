@@ -1,14 +1,11 @@
-function [brec, pslow, tps, Tps, t1, t2] = nlregression(brec, pslow, dt)
+function [brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt)
 %NLREGRESSION Summary of this function goes here
 %   Detailed explanation goes here
 
-if 0
-    t1 = db.t1;
-    t2 = db.t2;
-else
-    t1 = 2.0;
-    t2 = 6.5;
-end
+
+t1 = 2.0;
+t2 = 6.5;
+
 adjbounds = true;
 
 while adjbounds

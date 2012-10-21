@@ -24,14 +24,14 @@
         </destinationsrs>
     </mapcanvas>
     <legend updateDrawingOrder="false">
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20121017205931860" visible="1"/>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stations" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stations20121017205931860" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stationGeology" showFeatureCount="1">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stationGeology20121017210235428" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="stationGeology20121017210235428" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationMooney" showFeatureCount="0">
@@ -39,19 +39,19 @@
                 <legendlayerfile isInOverview="0" layerid="stationMooney20121016152022588" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="cities" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="cities" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="crust2layer" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="crust2layer" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust2layer20121013142002155" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="crust2layer20121013142002155" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="politicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="politicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="geologicalProvinces" showFeatureCount="0">
@@ -65,7 +65,7 @@
             </filegroup>
         </legendlayer>
     </legend>
-    <Composer title="Composer 4" visible="1">
+    <Composer title="Composer 4" visible="0">
         <ComposerLabel valign="32" labelText="Station Data Progress" halign="4" margin="0">
             <LabelFont description="Ubuntu,26,-1,5,75,1,0,0,0,0"/>
             <FontColor red="59" blue="59" green="59"/>
@@ -152,7 +152,7 @@
                     </VectorClassificationItemNg>
                 </LayerItem>
             </Model>
-            <ComposerItem width="4" x="18.957" y="17.3086" rotation="0" height="40" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="2.42654" id="" positionLock="false">
+            <ComposerItem width="38" x="18.957" y="17.3086" rotation="0" height="73.8" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="2.07383" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>

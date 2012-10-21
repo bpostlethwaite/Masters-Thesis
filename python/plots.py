@@ -16,13 +16,13 @@ from scipy.stats import pearsonr
 from matplotlib.backends.backend_pdf import PdfPages
 
 #####################
-# PLOT CMD
+# F0 PLOT CMD
 #####################
-p1 = None # Comparing junk
-p2 = None # Proterozoic vs Archean
-p3 = None # Comparing some errors in Kanamori approach
-p4 = plt # Compare values between bostock, kanamori and Mooney
-p5 = None
+p1 = None # Plot test. Should be perfect linear mapping + survive some asserts.
+p2 = plt # Proterozoic vs Archean
+p3 = None # Comparing some errors in Kanamori approach and new vs old bostock data
+p4 = None # Compare values between bostock, kanamori and Mooney
+p5 = None # Investigation into effect of much higher freq limit on MB data
 p6 = None
 p7 = None
 ######################
@@ -31,34 +31,63 @@ p7 = None
 # F1
 if p1:
     arg1 = Args()
-    arg1.stationList ="ACKN AP3N CLPO COWN DELO DSMN DVKN FRB GALN GIFN ILON LAIN MALO MLON ORIO PEMO PLVO SEDN SILO SNPN SRLN TYNO ULM WAGN WLVO YBKN YOSQ"
+    arg1.addQuery("hk::H", "lt", "45")
     arg2 = Args()
+    arg2.addQuery("hk::H", "lt", "40")
+    arg3 = Args()
+    arg3.addQuery("hk::H", "lt", "35")
+    arg4 = Args()
 
     fstns = os.environ['HOME'] + '/thesis/stations.json'
-    fstnsold = os.environ['HOME'] + '/thesis/stations.json'
-    hf = Params(fstns, arg2, ["mb::Vp","mb::H","mb::R"])
-    mb = Params(fstnsold, arg1 , ["mb::Vp","mb::H","mb::R"])
 
-#    hf.syncto(mb.stns)
-    mb.sync(hf)
+    a = Params(fstns, arg1, ["mb::H"])
+    b = Params(fstns, arg2, ["mb::H"])
+    c = Params(fstns, arg2, ["hk::H"])
+    d = Params(fstns, arg3, ["hk::H"])
+    e = Params(fstns, arg3, ["wm::H"])
+    f = Params(fstns, arg4, ["wm::H"])
 
-    p1.figure(num = 100, figsize = (10, 10) )
-    #see http://matplotlib.org/examples/pylab_examples/subplots_demo.html
-    ax1 = p1.subplot(311)
-    p1.plot(mb.mb_H, mb.mb_R, 'ob', label = 'Vp/Vs MB')
-    p1.plot(hf.mb_H, hf.mb_R, 'or', label = 'Vp/Vs 3hz MB')
-    p1.title("3D Grid search Vp/Vs, Vp and Vs against crustal thickness H")
-    p1.ylabel("Vp/Vs")
-    p1.legend(loc=2)
-    p1.setp( ax1.get_xticklabels(), visible=False)
 
-    ax2 = p1.subplot(312, sharex = ax1)
-    p1.plot(mb.mb_H, mb.mb_Vp, 'ob', label = 'Vp MB')
-    p1.plot(hf.mb_H, hf.mb_Vp, 'or', label = 'Vp 3hz MB')
-    p1.ylabel("Vp [km/s]")
-    p1.legend(loc=2)
-    p1.setp( ax1.get_xticklabels(), visible=False)
+    lena = len(a.mb_H)
+    a.sync(b)
+    assert len(a.reset().mb_H) == lena
 
+    assert np.equal(a.sync(b).mb_H, b.sync(a).mb_H).all()
+
+    c.sync(d.sync(e.sync(f)))
+
+    for ii in range(len(f.stns)):
+        assert c.stns[ii] == f.stns[ii]
+        assert c.hk_H[ii] == d.hk_H[ii]
+
+    assert f.sync(d) == f.reset().sync(e)
+
+    c.reset()
+    d.reset()
+    e.reset()
+    f.reset()
+
+    d.sync(c)
+    e.sync(d)
+    f.sync(e)
+
+    for ii in range(len(f.stns)):
+        assert c.stns[ii] == f.stns[ii]
+        assert c.hk_H[ii] == d.hk_H[ii]
+
+
+    p1.figure()
+    p1.subplot(131, aspect="equal")
+    p1.plot(a.mb_H, b.mb_H, 'ob', label = 'test 1')
+    p1.title("Test 1")
+
+    p1.subplot(132, aspect="equal")
+    p1.plot(c.hk_H, d.hk_H, 'ob', label = 'test 2')
+    p1.title("Test 2")
+
+    p1.subplot(133, aspect="equal")
+    p1.plot(e.wm_H, f.wm_H, 'ob', label = 'test 3')
+    p1.title("Test 3")
 
 #######################################################################
 # F2 ## Protozoic vs Archean Histograms
@@ -75,49 +104,134 @@ if p2:
     d.sync(g)
 
     # Get some logical indexes for start ages within geological times of interest
-    arch =  (g.lower <= 3800) & (g.lower > 2500)
-    proto = (g.lower <= 2500) & (g.lower > 542)
+    arch =  (g.lower <= 3801) & (g.lower > 2500)
+    proto = (g.lower <= 2500) & (g.lower > 540)
 
     p2.subplot(211)
-    p2.hist(d.hk_R[arch], histtype='stepfilled', bins = 20, normed = True, color='b', label="archean")
-    p2.hist(d.hk_R[proto], histtype='stepfilled' , bins = 20, normed = True, color='r', alpha=0.5, label='Protozoic')
+    p2.hist(d.hk_R[arch], histtype='stepfilled', bins = 14, normed = True, color='b', label="archean")
+    p2.hist(d.hk_R[proto], histtype='stepfilled' , bins = 14, normed = True, color='r', alpha=0.5, label='Protozoic')
     p2.title("Archean/Protozoic Vp/Vs Histogram")
     p2.xlabel("Value")
     p2.ylabel("Distribution")
     p2.legend()
 
     p2.subplot(212)
-    p2.hist(d.hk_H[arch], histtype='stepfilled', bins = 20, normed=True, color='b', label="archean")
-    p2.hist(d.hk_H[proto], histtype='stepfilled' , bins = 20, normed=True, color='r', alpha=0.5, label='Protozoic')
+    p2.hist(d.hk_H[arch], histtype='stepfilled', bins = 14, normed=True, color='b', label="archean")
+    p2.hist(d.hk_H[proto], histtype='stepfilled' , bins = 14, normed=True, color='r', alpha=0.5, label='Protozoic')
     p2.title("Archean/Protozoic Crustal Thickness Histogram")
     p2.xlabel("Value")
     p2.ylabel("Distribution")
-    p2.ylim((0,1))
+    p2.ylim((0,0.3))
     p2.legend()
 
 
 #######################################################################
-# F3 Standard Deviation histograms
+# F3
 if p3:
-    p3.figure()
+
     arg1 = Args()
     arg1.addQuery("usable", "eq", "1")
+    arg2 = Args()
     # Load station params
-    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR"])
+    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
+    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
+    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
 
-    p3.subplot(211)
-    p3.hist(d.hk_stdR, histtype='stepfilled', bins = 20, normed = True, color='b', label="Vp/Vs deviation")
-    p3.title("Vp/Vs ")
+    k.sync(b.sync(ob))
+
+    p3.figure()
+    p3.subplot(311)
+    p3.hist(k.hk_stdR, histtype='stepfilled', bins = 20,  color='b', label="kan dev")
+    p3.hist(b.mb_stdR, histtype='stepfilled', bins = 20,  color='r', label="mb dev")
+    p3.hist(ob.stdR, histtype='stepfilled', bins = 20,  color='g', label="mb-old dev")
+    p3.title("Vp/Vs std dev for kan, bostock and bostock-old ")
     p3.xlabel("Value")
     p3.ylabel("Probability")
     p3.legend()
 
-    p3.subplot(212)
-    p3.hist(d.hk_stdH, histtype='stepfilled', normed= True, bins = 20, color='r', label="Thickness deviation")
-    p3.title("Vp/Vs ")
+    p3.subplot(312)
+    p3.hist(k.hk_stdH, histtype='stepfilled',  bins = 20, color='b', label="kan dev")
+    p3.hist(b.mb_stdH, histtype='stepfilled', bins = 20, color='r', alpha = 0.5, label="mb dev")
+    p3.hist(ob.stdH, histtype='stepfilled', bins = 20, color='g', alpha = 0.5, label="mb-old dev")
+    p3.title("H std dev for kan, bostock and bostock-old ")
     p3.xlabel("Value")
     p3.ylabel("Probability")
     p3.legend()
+
+    p3.subplot(313)
+    p3.hist(b.mb_stdVp, histtype='stepfilled', bins = 20, color='r', label="mb dev")
+    p3.hist(ob.stdVp, histtype='stepfilled', bins = 20, color='g', alpha = 0.5, label="mb-old dev")
+    p3.title("Vp std dev for mb vs mb-old ")
+    p3.xlabel("Value")
+    p3.ylabel("Probability")
+    p3.legend()
+
+
+    t = np.arange(len(k.hk_H))
+
+    p3.figure()
+    ax1 = p3.subplot(311)
+    p3.plot(t, k.hk_stdR, color='b', label="kan std R")
+    p3.plot(t, b.mb_stdR, color='r', label="mb std R")
+    p3.plot(t, ob.stdR, color='g', label="mb-old std R")
+    p3.title("Vp/Vs std- kan, bostock and bostock-old ")
+    p3.ylabel("Error Vp/Vs")
+    p3.setp( ax1.get_xticklabels(), visible=False)
+    p3.legend()
+
+    ax2 = p3.subplot(312)
+    p3.plot(k.hk_stdH, color='b', label="kan std H")
+    p3.plot(b.mb_stdH, color='r', label="mb std H")
+    p3.plot(ob.stdH, color='g', label="mb-old std H")
+    p3.title("H std - kan, bostock and bostock-old ")
+    p3.ylabel("Error Thickness [km]")
+    p3.setp( ax2.get_xticklabels(), visible=False)
+    p3.legend()
+
+    p3.subplot(313)
+    p3.plot(b.mb_stdVp, color='r',  label="mb std Vp")
+    p3.plot(ob.stdVp, color='g',  label="mb-old std Vp")
+    p3.title("std Vp - mb vs mb-old ")
+    p3.xlabel("Stations")
+    p3.ylabel("Error Vp [km/s]")
+    p3.legend()
+
+
+    p3.figure()
+    ax1 = p3.subplot(311)
+    p3.plot(t, k.hk_R, color='b', label="kan R")
+    p3.plot(t, b.mb_R, color='r', label="mb R")
+    p3.plot(t, ob.R, color='g', label="mb-old R")
+    p3.title("Vp/Vs - kan, bostock and bostock-old ")
+    p3.ylabel("Vp/Vs")
+    p3.setp( ax1.get_xticklabels(), visible=False)
+    p3.legend()
+
+    ax2 = p3.subplot(312)
+    p3.plot(k.hk_H, color='b', label="kan H")
+    p3.plot(b.mb_H, color='r', label="mb H")
+    p3.plot(ob.H, color='g', label="mb-old H")
+    p3.title("H - kan, bostock and bostock-old ")
+    p3.ylabel("Thickness [km]")
+    p3.setp( ax2.get_xticklabels(), visible=False)
+    p3.legend()
+
+    p3.subplot(313)
+    p3.plot(b.mb_Vp, color='r',  label="mb dev")
+    p3.plot(ob.Vp, color='g',  label="mb-old dev")
+    p3.title("Vp - mb vs mb-old ")
+    p3.xlabel("Stations")
+    p3.ylabel("Vp [km/s]")
+    p3.legend()
+
+
+    p3.figure()
+    p3.plot(t, (b.mb_stdR - ob.stdR) * 1 / np.max( np.abs( b.mb_stdR - ob.stdR )), color='b', label="mb std R. Mean = {}".format(np.mean(b.mb_stdR - ob.stdR)) )
+    p3.plot(t, (b.mb_stdH - ob.stdH) * 1 / np.max( np.abs( b.mb_stdH - ob.stdH )), color='g', label="mb std H. Mean = {}".format(np.mean(b.mb_stdH - ob.stdH)) )
+    p3.plot(t, (b.mb_stdVp - ob.stdVp) * 1 / np.max( np.abs(b.mb_stdVp - ob.stdVp)), color='r',  label="mb std Vp. Mean = {}".format(np.mean(b.mb_stdVp - ob.stdVp)) )
+    p3.xticks(t, b.stns)
+    p3.legend()
+
 
 
 #######################################################################
@@ -132,9 +246,7 @@ if p4:
     m = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","wm::R","wm::Vp"])
     b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::H","mb::R","mb::Vp"])
 
-    k.sync(m)
-    m.sync(b)
-    b.sync(k)
+    m.sync(b.sync(k))
 
     t = np.arange(len(k.hk_H))
 
@@ -146,13 +258,13 @@ if p4:
     p4.legend()
     p4.setp( ax1.get_xticklabels(), visible=False)
 
-    p4.subplot(312, sharex = ax1)
+    ax2 = p4.subplot(312, sharex = ax1)
     p4.plot(t , k.hk_R, label = "Kanamori Vp/Vs")
     p4.plot(t , m.wm_R, label = "Mooney Vp/Vs")
     p4.title("mean Vp/Vs Kan = {:2.2f}. mean Vp/Vs Mooney = {:2.2f}".format(np.mean(k.hk_R),np.mean(m.wm_R) ))
     p4.ylabel("Vp/Vs")
     p4.legend()
-    p4.setp( ax1.get_xticklabels(), visible = False)
+    p4.setp( ax2.get_xticklabels(), visible = False)
 
     p4.subplot(313, sharex = ax1)
     p4.plot(t , b.mb_Vp , label = "Bostock Vp")
@@ -162,12 +274,43 @@ if p4:
     p4.ylabel("Vp")
     p4.legend()
 
-
 #######################################################################
 # F5
 
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    # Load station params
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    arg2 = Args()
+    # Load station params
+    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
+    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
+    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
+
+    k.sync(b.sync(ob))
+
+
+
 #######################################################################
 # F6
+if p6:
+
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    arg2 = Args()
+    # Load station params
+    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
+    g = Params(os.environ["HOME"] + "/thesis/stnChrons.json", arg2, ["lower", "upper"] )
+    # Sync up data
+    k.sync(g)
+
+    # Get some logical indexes for start ages within geological times of interest
+
+    p6.figure()
+    p6.plot(k.hk_H, k.hk_R, "o")
+#    p3.hist(b.mb_stdVp, histtype='stepfilled', bins = 20, color='r', label="mb dev")
+
 
 #######################################################################
 # F7

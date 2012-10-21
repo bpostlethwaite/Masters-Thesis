@@ -2,9 +2,8 @@
 
 
 clear all; close all
-homedir = getenv('HOME');
-addpath([homedir,'/thesis/matlab/functions']);
-addpath([homedir,'/programming/matlab/jsonlab']);
+loadtools
+addpath([userdir,'/thesis/matlab/functions']);
 databasedir = '/media/TerraS/database';
 
 s = dir(databasedir);
