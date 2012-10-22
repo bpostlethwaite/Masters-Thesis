@@ -19,11 +19,11 @@ from matplotlib.backends.backend_pdf import PdfPages
 # F0 PLOT CMD
 #####################
 p1 = None # Plot test. Should be perfect linear mapping + survive some asserts.
-p2 = plt # Proterozoic vs Archean
+p2 = None # Proterozoic vs Archean
 p3 = None # Comparing some errors in Kanamori approach and new vs old bostock data
 p4 = None # Compare values between bostock, kanamori and Mooney
 p5 = None # Investigation into effect of much higher freq limit on MB data
-p6 = None
+p6 = plt # Plot Mooney Vp shot data against stations of close proximity
 p7 = None
 ######################
 
@@ -137,7 +137,7 @@ if p3:
     b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
     ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
 
-    k.sync(b.sync(ob))
+    k.sync(b.sync(ob.sync(k.sync(b.sync(ob)))))
 
     p3.figure()
     p3.subplot(311)
@@ -246,7 +246,7 @@ if p4:
     m = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","wm::R","wm::Vp"])
     b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::H","mb::R","mb::Vp"])
 
-    m.sync(b.sync(k))
+    m.sync(b.sync(k.sync(m.sync(b.sync(k)))))
 
     t = np.arange(len(k.hk_H))
 
@@ -299,17 +299,57 @@ if p6:
     arg1 = Args()
     arg1.addQuery("usable", "eq", "1")
     arg2 = Args()
-    # Load station params
+    arg2.addQuery("Vp", "gt", "4")
+    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","mb::stdVp","mb::H","mb::R","mb::Vp"])
     k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    g = Params(os.environ["HOME"] + "/thesis/stnChrons.json", arg2, ["lower", "upper"] )
-    # Sync up data
-    k.sync(g)
+    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', Args() , ["stdVp","stdR","stdH","Vp","R","H"])
+    m = Params(os.environ['HOME'] + '/thesis/moonStations.json', arg2 , ["Vp","H"])
 
-    # Get some logical indexes for start ages within geological times of interest
 
-    p6.figure()
-    p6.plot(k.hk_H, k.hk_R, "o")
-#    p3.hist(b.mb_stdVp, histtype='stepfilled', bins = 20, color='r', label="mb dev")
+
+    b.sync(ob.sync(m.sync(k.sync(b.sync(ob.sync(m.sync(k.sync(b))))))))
+    mgap = np.abs(b.mb_Vp - m.Vp) > 0.5
+    print b.stns[mgap]
+
+    p6. figure()
+    t = np.arange(len(b.mb_Vp))
+    ax = p6.subplot(311)
+    p6.plot(t, b.mb_Vp, label = "MB Vp")
+    p6.plot(t, ob.Vp, label = "Old MB Vp")
+    p6.plot(t, m.Vp, label = "Mooney Shots")
+    for i, stn in enumerate(b.stns[mgap]):
+        ax.annotate(stn, xy = (t[mgap][i], b.mb_Vp[mgap][i]),  xycoords='data',
+                    xytext=(-30, -30), textcoords='offset points',
+                    arrowprops=dict(arrowstyle="->",
+                                    connectionstyle="arc3,rad=.2"))
+
+    p6.legend()
+
+    ax2 = p6.subplot(312)
+    p6.plot(t, b.mb_stdVp, label = "MB stdVp")
+    p6.plot(t, ob.stdVp, label = "Old MB stdVp")
+    for i, stn in enumerate(b.stns[mgap]):
+        ax2.annotate(stn, xy = (t[mgap][i], b.mb_stdVp[mgap][i]),  xycoords='data',
+                    xytext=(-30, -30), textcoords='offset points',
+                    arrowprops=dict(arrowstyle="->",
+                                    connectionstyle="arc3,rad=.2"))
+
+    p6.legend()
+
+
+    ax3 = p6.subplot(313)
+    p6.plot(t, b.mb_H, label = "MB H")
+    p6.plot(t, ob.H, label = "Old MB H")
+    p6.plot(t, m.H, label = "Mooney Shots H")
+    p6.plot(t, b.wm_H, label = "Mooney C2 H")
+    p6.plot(t, k.hk_H, label = "Kan H")
+    for i, stn in enumerate(b.stns[mgap]):
+        ax3.annotate(stn, xy = (t[mgap][i], b.mb_H[mgap][i]),  xycoords='data',
+                    xytext=(-30, -30), textcoords='offset points',
+                    arrowprops=dict(arrowstyle="->",
+                                    connectionstyle="arc3,rad=.2"))
+    p6.legend()
+
 
 
 #######################################################################

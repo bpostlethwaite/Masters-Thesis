@@ -3,94 +3,32 @@
 clear all
 close all
 loadtools;
-addpath([userdir,'/programming/matlab/jsonlab'])
+addpath functions
 addpath([userdir,'/programming/matlab/ternplot'])
+addpath([userdir,'/programming/matlab/jsonlab'])
 
-n = 10;
+% Function to go from Vp/Vs -> Poisson's ratio
+poisson = @(R) ( (R^2 - 2) / (2*(R^2 - 1)));
 
-a = 6.62;
-b = 7.84;
-c = 7.04;
-d = 7.2;
-
-a2 = 0.3;
-b2 = 0.21;
-c2 = 0.29;
-d2 = 0.26;
-
-[ Avp, Bvp, Cvp] = tern(a, b, c, d, n);
-[ Ap, Bp, Cp] = tern(a2, b2, c2, d2, n);
-%A = linspace(0.6, 0.82, n);
-%B = linspace(0, 0.18, n);
-%C = linspace(0, 0.4, n);
+% Values taken from 
+% Christensen, N. I. (1996), Poisson's ratio and crustal seismology,
+% J. Geophys. Res., 101(B2), 3139–3156, doi:10.1029/95JB03446.
+          % Vp    Vs    Vp/Vs Poisson
+maficG   = [6.942 3.820 1.817 0.283]; % 600  Mpa
+biotiteG = [6.302 3.606 1.747 0.257]; % 600  Mpa
+graniteG = [6.208 3.583 1.732 0.250]; % 600  Mpa
 
 
-%% Intersections
+% Load up some data from json file
 
-% Function for barycentric to cartesian coord transformation
-% See http://en.wikipedia.org/wiki/Ternary_plot#Using_Cartesian_coordinates
-b2c = @(a,b,c) ([ (2*b+c) ./ (2 * (a+b+c)); sqrt(3) * c ./ (2 * (a+b+c))]);
-% Function for calculating line slope (y2 - y1) /  (x2 - x1)
-slope = @(line) (line(2,2) - line(2,1))/(line(1,2) - line(1,1));
-% Function for calculating intercept
-intercept = @(line,m) line(2,1) - m*line(1,1);
-% Function for checking results are in ternary domain 0 -> 1
-inside = @(b) (b(1) >= 0 && b(1) <= 1 && ...
-               b(2) >= 0 && b(2) <= 1 && ...
-               b(3) >= 0 && b(3) <= 1);
-           
-line1 = b2c(Avp, Bvp, Cvp);
-line2 = b2c(Ap, Bp, Cp);
+data = [a1, b1, c1, d1;
+        a2, b2, c2, d2;
+        a3, b3, c3, d3];
 
-% Get slopes
-m1 = slope(line1);
-m2 = slope(line2);
+options.plot = true;
+options.endmlabel = {'Mafic Granulite','Biotite Gneiss','Granite Gneiss'};
+options.datalabel = {'Vp','Vs','Vp2'};
 
-b1 = intercept(line1,m1);
-b2 = intercept(line2,m2);
-x = (b2-b1)/(m1-m2);
-y = m1*x + b1;
-    
-% Makes sure they are not parallel (different intercept and same slop)
-sameSlope = abs(m1-m2) < eps(m1);
-differentIntercept = abs(b1-b2) > eps(b1);
-isParallel = sameSlope && differentIntercept;
-if isParallel
-     ME = MException('ParallelLines', ...
-             'No intercept can be calculated as lines are parallel');
-     throw(ME);
-end
-%% Barycentric Transformations. 
-% see http://en.wikipedia.org/wiki/Barycentric_coordinates_(mathematics)
-% Cart -> Bary transform matrix
-T = [-0.5     , 0.5;
-    -sqrt(3)/2, -sqrt(3)/2];
-% Invert for Barycentric coords
-b = T\([x; y] - [0.5; sqrt(3) / 2]);     
-b(3) = 1 - b(1) - b(2);
 
-if ~inside(b)
-     ME = MException('OutsideDomain', ...
-             'Intercept lies outside domain');
-     throw(ME);
-end
-    
-
-%% Plots
-figure(2)
-h = plot(line1(1,:),line1(2,:));
-hold on
-h(2) = plot(line2(1,:),line2(2,:), 'r');
-set(h,'linewidth',2)
-axis([0 1 0 1])
-plot(x,y,'m*','markersize',8)
-hold off
-
-figure(3)
-ternplot(Avp,Bvp,Cvp)
-hold on
-ternplot(Ap,Bp,Cp,'r')
-ternplot(b(1), b(2), b(3), 'k*')
-ternplot(b(1), b(2), b(3), 'go')
-
+b = tern(data, options);
 

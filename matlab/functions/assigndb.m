@@ -1,5 +1,5 @@
 function [ db ] = assigndb( db, method, station, brec, ...
-    pslow, dt, npb, fLow, fHigh, t1, t2, Tps, results, boot)
+    pslow, dt, npb, fLow, fHigh, results, boot)
 %ASSIGNDB Assigns data to database object
 
 
@@ -12,10 +12,10 @@ function [ db ] = assigndb( db, method, station, brec, ...
     db.npb = npb;
     db.fLow = fLow;
     db.fHigh = fHigh;
-    db.t1 = t1;
-    db.t2 = t2;
+%    db.t1 = t1;
+%    db.t2 = t2;
     db.usable = 1; % Default, later ask for value
-    db.Tps = Tps;
+%    db.Tps = Tps;
 
 
     % Specific MB
