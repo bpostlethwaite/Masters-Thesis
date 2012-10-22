@@ -16,7 +16,7 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data
 method = 'bostock';
-station = 'ULM';
+station = 'DAWY';
 %{
 
 
@@ -42,7 +42,7 @@ ProcessTraces
 
 %% Assign Data
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
-    pslow, dt, npb, fLow, fHigh, t1, t2, Tps, results, boot);
+    pslow, dt, npb, fLow, fHigh, results, boot);
 
 %% Plot the results if we completed the processing
 close all

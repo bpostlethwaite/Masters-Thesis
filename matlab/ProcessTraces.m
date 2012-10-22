@@ -46,7 +46,6 @@ clear adj
 % Build up spectral stack, 1 stack for each p (need to sort traces by
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
-discardBad = 1;
 Rec = zeros(nbins,size(wft,2));
 parfor ii = 1:nbins
     [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
@@ -61,6 +60,7 @@ rec = Rec;
 pslow = Pslow;
 %% Weed out poor rf results
 % Cut out traces where no betax was found during simdecf
+discardBad = 1;
 if discardBad
     ind = isinf(betax);
     rec( ind  , : ) = [];
@@ -80,8 +80,12 @@ brec =  diag( pscale ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 %% Run Processing suite
 [brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
 
+[results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
+TTps = results.tps;
+%TTps = Tps';
+
 if strcmp(method, 'bostock')
-    [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, db.hk.tps);
+    [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
 
 elseif strcmp(method, 'kanamori')      
     [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
@@ -89,6 +93,6 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024, method, db.hk.tps', vp);    
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024, method, TTps', vp);    
     
     

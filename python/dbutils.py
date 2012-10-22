@@ -367,11 +367,6 @@ def modifyData(stdict, args):
 
 if __name__== '__main__' :
 
-    #Load station database
-    dbf =  open(dbfile)
-    stdict = json.loads( dbf.read() )
-
-
     # Create top-level parser
     parser = argparse.ArgumentParser(description = "manage and query the station data json database")
     group = parser.add_mutually_exclusive_group()
@@ -401,6 +396,9 @@ if __name__== '__main__' :
     parser.add_argument('-f', '--force', action = 'store_true',
                         help = 'Forces updating even if files and folders are older than the stations.json file')
 
+    parser.add_argument('-d', '--data', nargs = 1,
+                        help = 'Use the input file as source json instead of default stations.json')
+
     group.add_argument('-u','--update', action = 'store_true',
                         help = "updates database with statistics from data files")
 
@@ -412,6 +410,15 @@ if __name__== '__main__' :
 
     # Parse arg list
     args = parser.parse_args()
+
+    #Load station database
+    if args.data:
+        dbf = open(args.data[0])
+    else:
+        dbf =  open(dbfile)
+
+    stdict = json.loads( dbf.read() )
+
 
     # Append piped data if there is any
     # If we pipe a bunch of stations to program, query only these stations
