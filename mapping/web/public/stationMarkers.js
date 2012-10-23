@@ -12,7 +12,8 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 // Connect sockets to server and receiver station data
-  var socket = io.connect("http://192.168.1.124:8111")
+//  var socket = io.connect("http://192.168.1.124:8111")
+  var socket = io.connect("http://24.84.18.166")
   socket.on('stationJson', function(data) {
     // Send station data to marker function
     addMarkers(map, data);

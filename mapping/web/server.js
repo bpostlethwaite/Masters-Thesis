@@ -7,7 +7,7 @@ var server = require("node-static")
   , fs = require("fs")
 
 // Listen on port
-var port = 8111
+var port = 80
 app.listen(port)
 console.log("Static server listening on " + port)
 
