@@ -1,0 +1,18 @@
+{
+  "name": "stationdata_webInterface",
+  "version": "0.0.0",
+  "description": "Web interface / display for presenting station data",
+  "main": "server.js",
+  "dependencies": {
+    "node-static": "~0.6.4",
+    "socket.io": "~0.9.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "Ben Postlethwaite",
+  "license": "BSD"
+}

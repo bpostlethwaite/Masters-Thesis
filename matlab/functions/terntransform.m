@@ -29,8 +29,8 @@ for ii = 1:length(dv)
         count = count + 1;
     end
     if count ~= 3
-        fprintf([sprintf('Data %f outside ternary <%f, %f, %f>',d,a,b,c),...
-            'endmember limits, skipping\n'])
+        %fprintf([sprintf('Data %f outside ternary <%f, %f, %f>',d,a,b,c),...
+        %    'endmember limits, skipping\n'])
         continue
     end
     

@@ -45,7 +45,7 @@ for comb = combs'
         b(3) >= 0 && b(3) <= 1);
     
     if ~inside(b)
-        fprintf('Intersection found outside endmember domain, skipping\n')
+        %fprintf('Intersection found outside endmember domain, skipping\n')
         continue
     end
     

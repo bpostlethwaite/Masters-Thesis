@@ -1,0 +1,126 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ternary</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2012-10-22"><meta name="DC.source" content="ternary.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><p>Get data</p><pre class="codeoutput">AP3N</pre><img vspace="5" hspace="5" src="ternary_01.png" alt=""> <pre class="codeoutput">BOXN</pre><img vspace="5" hspace="5" src="ternary_02.png" alt=""> <pre class="codeoutput">BUKO</pre><img vspace="5" hspace="5" src="ternary_03.png" alt=""> <pre class="codeoutput">CDKN</pre><img vspace="5" hspace="5" src="ternary_04.png" alt=""> <pre class="codeoutput">DELO</pre><img vspace="5" hspace="5" src="ternary_05.png" alt=""> <pre class="codeoutput">DHRN</pre><img vspace="5" hspace="5" src="ternary_06.png" alt=""> <pre class="codeoutput">DMCQData 6.190000 outside ternary &lt;6.942000, 6.302000, 6.208000&gt;endmember limits, skipping
+</pre><pre class="codeoutput">DORN</pre><img vspace="5" hspace="5" src="ternary_07.png" alt=""> <pre class="codeoutput">DVKN</pre><img vspace="5" hspace="5" src="ternary_08.png" alt=""> <pre class="codeoutput">EPLO</pre><img vspace="5" hspace="5" src="ternary_09.png" alt=""> <pre class="codeoutput">GALNData 6.190000 outside ternary &lt;6.942000, 6.302000, 6.208000&gt;endmember limits, skipping
+</pre><pre class="codeoutput">GBLN</pre><img vspace="5" hspace="5" src="ternary_10.png" alt=""> <pre class="codeoutput">GLWN</pre><img vspace="5" hspace="5" src="ternary_11.png" alt=""> <pre class="codeoutput">HPLNData 6.196909 outside ternary &lt;6.942000, 6.302000, 6.208000&gt;endmember limits, skipping
+</pre><pre class="codeoutput">IHLN</pre><img vspace="5" hspace="5" src="ternary_12.png" alt=""> <pre class="codeoutput">KAJQ</pre><img vspace="5" hspace="5" src="ternary_13.png" alt=""> <pre class="codeoutput">LDGN</pre><img vspace="5" hspace="5" src="ternary_14.png" alt=""> <pre class="codeoutput">LGSN</pre><img vspace="5" hspace="5" src="ternary_15.png" alt=""> <pre class="codeoutput">LMN</pre><img vspace="5" hspace="5" src="ternary_16.png" alt=""> <pre class="codeoutput">LUPN</pre><img vspace="5" hspace="5" src="ternary_17.png" alt=""> <pre class="codeoutput">MATQ</pre><img vspace="5" hspace="5" src="ternary_18.png" alt=""> <pre class="codeoutput">NMSQ</pre><img vspace="5" hspace="5" src="ternary_19.png" alt=""> <pre class="codeoutput">NODN</pre><img vspace="5" hspace="5" src="ternary_20.png" alt=""> <pre class="codeoutput">NOTN</pre><img vspace="5" hspace="5" src="ternary_21.png" alt=""> <pre class="codeoutput">PEMO</pre><img vspace="5" hspace="5" src="ternary_22.png" alt=""> <pre class="codeoutput">PKLO</pre><img vspace="5" hspace="5" src="ternary_23.png" alt=""> <pre class="codeoutput">PNGN</pre><img vspace="5" hspace="5" src="ternary_24.png" alt=""> <pre class="codeoutput">SADOData 6.193555 outside ternary &lt;6.942000, 6.302000, 6.208000&gt;endmember limits, skipping
+</pre><pre class="codeoutput">SEDN</pre><img vspace="5" hspace="5" src="ternary_25.png" alt=""> <pre class="codeoutput">SHMNData 6.138638 outside ternary &lt;6.942000, 6.302000, 6.208000&gt;endmember limits, skipping
+</pre><pre class="codeoutput">SJNN</pre><img vspace="5" hspace="5" src="ternary_26.png" alt=""> <pre class="codeoutput">SNLN</pre><img vspace="5" hspace="5" src="ternary_27.png" alt=""> <pre class="codeoutput">SRLN</pre><img vspace="5" hspace="5" src="ternary_28.png" alt=""> <pre class="codeoutput">WAGN</pre><img vspace="5" hspace="5" src="ternary_29.png" alt=""> <pre class="codeoutput">YKW2</pre><img vspace="5" hspace="5" src="ternary_30.png" alt=""> <pre class="codeoutput">YRTN</pre><img vspace="5" hspace="5" src="ternary_31.png" alt=""> <p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+% tern hacks
+
+clear all
+close all
+loadtools;
+addpath functions
+addpath([userdir,'/programming/matlab/ternplot'])
+addpath([userdir,'/programming/matlab/jsonlab'])
+
+% Function to go from Vp/Vs -> Poisson's ratio
+poisson = @(R) ( (R^2 - 2) / (2*(R^2 - 1)));
+
+% Values taken from 
+% Christensen, N. I. (1996), Poisson's ratio and crustal seismology,
+% J. Geophys. Res., 101(B2), 3139–3156, doi:10.1029/95JB03446.
+          % Vp    Vs    Vp/Vs Poisson
+maficG   = [6.942 3.820 1.817 0.283]; % 600  Mpa
+biotiteG = [6.302 3.606 1.747 0.257]; % 600  Mpa
+graniteG = [6.208 3.583 1.732 0.250]; % 600  Mpa
+
+
+% Load up some data from json file
+js = loadjson('../ternplots.json');
+stns = fieldnames(js);
+
+% Set options for plotting in tern
+op.plot = true;
+op.endmlabel = {'Mafic Granulite','Biotite Gneiss','Granite Gneiss'};
+op.datalabel = {'Vp'};
+
+t = 1:100;
+for i = 1:numel(stns)
+%%
+    % Get data
+    stn = stns{i};
+    Vp = js.(stn).ms.Vp;
+    
+    data = [maficG(1), biotiteG(1), graniteG(1), Vp];
+
+    % Display terns and info
+    fprintf('%s',stn)
+    b = tern(data, op);
+    if b
+        fprintf('Intersects = %f', b)
+    end
+    %strucdisp(js.(stn))
+
+end
+
+%data = [a1, b1, c1, d1;
+%        a2, b2, c2, d2;
+%        a3, b3, c3, d3];
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

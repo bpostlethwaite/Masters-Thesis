@@ -20,15 +20,50 @@ graniteG = [6.208 3.583 1.732 0.250]; % 600  Mpa
 
 
 % Load up some data from json file
+js = loadjson('../ternplots.json');
+stns = fieldnames(js);
 
-data = [a1, b1, c1, d1;
-        a2, b2, c2, d2;
-        a3, b3, c3, d3];
+% Set options for plotting in tern
+op.plot = true;
+op.endmlabel = {'Mafic Granulite','Biotite Gneiss','Granite Gneiss'};
 
-options.plot = true;
-options.endmlabel = {'Mafic Granulite','Biotite Gneiss','Granite Gneiss'};
-options.datalabel = {'Vp','Vs','Vp2'};
+t = 1:100;
+for i = 1 : numel(stns)
+%%
+    % Get data
+    stn = stns{i};
+    msVp = js.(stn).ms.Vp;
+    wmVp = js.(stn).wm.Vp;
+    mbVp = js.(stn).mb.Vp;
+    R = js.(stn).hk.R;
+    P = poisson(R);
+    % Build up data matrix
+    data = [maficG(1)  biotiteG(1)  graniteG(1)  msVp;
+            maficG(1)  biotiteG(1)  graniteG(1)  wmVp;
+            maficG(1)  biotiteG(1)  graniteG(1)  mbVp;
+            maficG(4)  biotiteG(4)  graniteG(4)  P];
+    % Set title and data legends
+    %op.title = ['station: ', stn];
+    op.datalabel = {['shot Vp: ', num2str(msVp)],...
+                    ['Crust2 Vp: ', num2str(wmVp)],...
+                    ['MB Vp: ', num2str(mbVp)],...  
+                    ['\alpha: ', num2str(P)]};
+    % Set save figure name and flag
+    op.savefig = ['../mapping/web/public/images/tern_',stn,'.png'];
+    % Display terns and info
+    fprintf('%s\n',stn)
+    b = tern(data, op);
+    if b
+        fprintf('Intersects = %f\n', b)
+    end
+
+end
+
+%data = [a1, b1, c1, d1;
+%        a2, b2, c2, d2;
+%        a3, b3, c3, d3];
 
 
-b = tern(data, options);
+
+
 
