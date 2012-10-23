@@ -1,0 +1,242 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>tern</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2012-10-22"><meta name="DC.source" content="tern.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [ b ] = tern(data, varagin)
+<span class="comment">%TERN Utility for finding intersect in barycentric space and plotting.</span>
+<span class="comment">%   INPUTS are data, a 1x4 or 2x4 array depending on chosen options which</span>
+<span class="comment">%   holds the ternary endmember values a,b,c as well as the data value</span>
+<span class="comment">%   which is represented as a line in barycentric space. The format is [a,</span>
+<span class="comment">%   b, c, d] or [ a1, b1, c1, d1</span>
+<span class="comment">%                 a2, b2, c2, d2</span>
+<span class="comment">%                 a3, b3, c3, d3]</span>
+<span class="comment">%   Where an intersect will be calculated for each unique row pairs.</span>
+<span class="comment">%   Where the endmembers are calculated as:</span>
+<span class="comment">%       b</span>
+<span class="comment">%      / \</span>
+<span class="comment">%     /   \</span>
+<span class="comment">%    c --- a</span>
+<span class="comment">%</span>
+<span class="comment">%   The options arguement is optional and for various functionality have</span>
+<span class="comment">%   following fields set.</span>
+<span class="comment">%</span>
+<span class="comment">%   op.plot = true                      Plotting enabled [Default is off]</span>
+<span class="comment">%   op.endmlabel = {'L1','L2','L3'}     Set Labels for end members</span>
+<span class="comment">%   op.datalabel = {'L1', &lt;'L2'&gt;}       Set Labels for 1 or 2 data</span>
+<span class="comment">%   op.npoints = n                      Set number of Points in ternplots</span>
+<span class="comment">%                                           and intersection calc.</span>
+<span class="comment">%   op.title = "string"                 Give a title for the plot</span>
+<span class="comment">%</span>
+<span class="comment">%   Relies on the plotting functionality from the ternplot package</span>
+<span class="comment">%   by Carl Sandrock.</span>
+<span class="comment">%</span>
+<span class="comment">%   Author Ben Postlethwaite 2012</span>
+<span class="comment">%   https://github.com/bpostlethwaite</span>
+
+<span class="comment">% Setup defaults if options not supplied</span>
+<span class="keyword">if</span> nargin == 1
+    op.npoints = 100;
+<span class="keyword">elseif</span> nargin == 2
+    op = varagin;
+    <span class="keyword">if</span> ~isfield(op,<span class="string">'npoints'</span>)
+        op.npoints = 100;
+    <span class="keyword">end</span>
+<span class="keyword">else</span>
+    ME = MException(<span class="string">'FUNCTION:TooManyArgs'</span>, <span class="keyword">...</span>
+                    <span class="string">'Too many arguments supplied to tern'</span>);
+    throw(ME);
+
+<span class="keyword">end</span>;
+
+<span class="comment">% Set default return param</span>
+b = false;
+
+<span class="comment">% Check data array is correct size</span>
+<span class="keyword">if</span> size(data, 2) ~= 4
+    ME = MException(<span class="string">'INPUT:DimensionError'</span>, <span class="keyword">...</span>
+                    <span class="string">'data needs to be mx4'</span>);
+    throw(ME);
+<span class="keyword">end</span>
+
+<span class="comment">% Transform data into percentages and cast as 1 barycentric line per row.</span>
+[A, B, C] = terntransform(data(:,1), data(:,2),<span class="keyword">...</span>
+                          data(:,3), data(:,4), op.npoints);
+[ b ] = baryIntersect(A, B, C);
+
+color = [<span class="string">'b'</span>,<span class="string">'g'</span>,<span class="string">'r'</span>,<span class="string">'y'</span>,<span class="string">'m'</span>,<span class="string">'c'</span>,<span class="string">'k'</span>];
+<span class="keyword">if</span> op.plot
+    figure()
+    <span class="keyword">for</span> ii = 1:size(A,1)
+        ternplot(A(ii,:), B(ii,:), C(ii,:), color(ii))
+        hold <span class="string">on</span>
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> b
+        <span class="keyword">for</span> ii = 1 : size(b, 1)
+            ternplot(b(ii,1), b(ii,2), b(ii,3), <span class="string">'r*'</span>, <span class="string">'markerSize'</span>, 10)
+            ternplot(b(ii,1), b(ii,2), b(ii,3), <span class="string">'ko'</span>,<span class="keyword">...</span>
+                <span class="string">'markerSize'</span>, 10, <span class="string">'lineWidth'</span>, 2)
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> isfield(op,<span class="string">'datalabel'</span>)
+        legend( op.datalabel )
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> isfield(op, <span class="string">'endmlabel'</span>)
+        ternlabel(op.endmlabel(1), op.endmlabel(2), op.endmlabel(3))
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Error using tern (line 43)
+Too many arguments supplied to tern
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+function [ b ] = tern(data, varagin)
+%TERN Utility for finding intersect in barycentric space and plotting.
+%   INPUTS are data, a 1x4 or 2x4 array depending on chosen options which
+%   holds the ternary endmember values a,b,c as well as the data value
+%   which is represented as a line in barycentric space. The format is [a,
+%   b, c, d] or [ a1, b1, c1, d1
+%                 a2, b2, c2, d2
+%                 a3, b3, c3, d3]
+%   Where an intersect will be calculated for each unique row pairs.
+%   Where the endmembers are calculated as:
+%       b
+%      / \
+%     /   \
+%    c REPLACE_WITH_DASH_DASH- a 
+%
+%   The options arguement is optional and for various functionality have 
+%   following fields set.
+%
+%   op.plot = true                      Plotting enabled [Default is off]
+%   op.endmlabel = {'L1','L2','L3'}     Set Labels for end members
+%   op.datalabel = {'L1', <'L2'>}       Set Labels for 1 or 2 data 
+%   op.npoints = n                      Set number of Points in ternplots
+%                                           and intersection calc.
+%   op.title = "string"                 Give a title for the plot
+%
+%   Relies on the plotting functionality from the ternplot package 
+%   by Carl Sandrock. 
+%
+%   Author Ben Postlethwaite 2012
+%   https://github.com/bpostlethwaite
+
+% Setup defaults if options not supplied
+if nargin == 1
+    op.npoints = 100;
+elseif nargin == 2
+    op = varagin;
+    if ~isfield(op,'npoints')
+        op.npoints = 100;
+    end
+else
+    ME = MException('FUNCTION:TooManyArgs', ...
+                    'Too many arguments supplied to tern');
+    throw(ME);
+    
+end;
+
+% Set default return param
+b = false;
+
+% Check data array is correct size
+if size(data, 2) ~= 4 
+    ME = MException('INPUT:DimensionError', ...
+                    'data needs to be mx4');
+    throw(ME);
+end
+
+% Transform data into percentages and cast as 1 barycentric line per row.
+[A, B, C] = terntransform(data(:,1), data(:,2),...
+                          data(:,3), data(:,4), op.npoints);
+[ b ] = baryIntersect(A, B, C);
+
+color = ['b','g','r','y','m','c','k'];
+if op.plot
+    figure()
+    for ii = 1:size(A,1)
+        ternplot(A(ii,:), B(ii,:), C(ii,:), color(ii))
+        hold on
+    end
+
+    if b
+        for ii = 1 : size(b, 1)
+            ternplot(b(ii,1), b(ii,2), b(ii,3), 'r*', 'markerSize', 10)
+            ternplot(b(ii,1), b(ii,2), b(ii,3), 'ko',...
+                'markerSize', 10, 'lineWidth', 2)  
+        end
+    end
+    
+    if isfield(op,'datalabel')
+        legend( op.datalabel )
+    end
+
+    if isfield(op, 'endmlabel')
+        ternlabel(op.endmlabel(1), op.endmlabel(2), op.endmlabel(3))
+    end
+
+end
+
+end
+
+
+##### SOURCE END #####
+--></body></html>
