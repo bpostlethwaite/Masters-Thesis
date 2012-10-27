@@ -31,10 +31,14 @@
 #STATIONS='KRSQ WBHL SCH SABG NWRL MKVL NANL'
 #Centroid: [71.345789950524036, -80.248527296905493]
 #STATIONS='SBNU IGLN B2NU B1NU IVKQ MBC GFNU UPNG PINU'
+
+
+###### NEED TO GET STILL #######################################
 #Centroid: [51.907729523541249, -88.290815468256724]
-STATIONS='KASO MUMO OTRO LDIO SNKN NSKO RDLO MSNO RLKO I10H1'
+#STATIONS='KASO MUMO OTRO LDIO SNKN NSKO RDLO MSNO RLKO I10H1'
+###############################################################
 # Centroid: [-115.9, 53.64]
-#STATIONS='WALA MEDA WAPA EDM RDEA PRDA RAYA SLEB BMBC FNBC'
+STATIONS='WALA MEDA WAPA EDM RDEA PRDA RAYA SLEB BMBC FNBC'
 
 #Cluster ID:  West
 #Cluster Lon / Lat:  -124.08 50.58
@@ -53,8 +57,8 @@ while read event; do
   echo "CHAN_LIST *H*" >> $event"_request"
 # Get Stations
   echo "STA_LIST " $STATIONS >> $event"_request"
-#  echo "NET_LIST " "CNSN POLARIS CHASME FEDNOR ETS" >> $event"_request"
-  echo "NET_LIST " "CNSN " >> $event"_request"
+  echo "NET_LIST CNSN POLARIS" >> $event"_request"
+
   yr=`echo $event | awk '{print substr($1,1,2)}'`
   if test $yr -lt 18
   then
@@ -91,8 +95,10 @@ while read event; do
   echo "DURATION 600" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
-  mail autodrm@seismo.nrcan.gc.ca < $event"_request"
+  mail post.ben.here@gmail.com < $event"_request"
+#  mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
   sleep 60
+
 
 done
