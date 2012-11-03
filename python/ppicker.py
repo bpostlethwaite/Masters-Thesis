@@ -197,6 +197,6 @@ if __name__== '__main__' :
         else:
             # If yes, check if dir previously renamed as poorData, if so rename to healthy event dir
             if "poorData" in eventdir:
-                renameEvent( eventdir, [], True)
+                events[index] = os.path.basename(renameEvent( eventdir, [], True))
             index += 1
             continue

@@ -31,20 +31,17 @@
 #STATIONS='KRSQ WBHL SCH SABG NWRL MKVL NANL'
 #Centroid: [71.345789950524036, -80.248527296905493]
 #STATIONS='SBNU IGLN B2NU B1NU IVKQ MBC GFNU UPNG PINU'
-
-
-###### NEED TO GET STILL #######################################
 #Centroid: [51.907729523541249, -88.290815468256724]
 #STATIONS='KASO MUMO OTRO LDIO SNKN NSKO RDLO MSNO RLKO I10H1'
-###############################################################
 # Centroid: [-115.9, 53.64]
-STATIONS='WALA MEDA WAPA EDM RDEA PRDA RAYA SLEB BMBC FNBC'
-
+#STATIONS='WALA MEDA WAPA EDM RDEA PRDA RAYA SLEB BMBC FNBC'
+#Centroid: [-123.6, 52.6]
+STATIONS='SULB ALRB MCMB1 UBRB FPLB THMB CLSB FLLB TALB RAMB'
 #Cluster ID:  West
 #Cluster Lon / Lat:  -124.08 50.58
-#STATIONS='CLVB FALL VIB LLLB BCBC UBRB PGCB SULB RAMB MWAB PMB WISB KELB THAB PHC ALRB WSLR QURY BPCB TLCB TFRB SNB HLSB PACB GHNB BMSB YOUB SHB SPLB VGZ HBDB CBB LCBC KHVB '
-#STATIONS='WTRB PGC BTB HOPB LZB HNB FLLB DHLB ENGB PA05 SILB TSJB MCMB1 GLBC ATLB RUBB TOFB MOBC TASB KLNB TALB CLAP SHDB DAWS BBB CLSB SSIB SOKB TWKB PHYB EDB OZB THMB ANMB'
-#STATIONS='DIB COQB PA12 FHRB CPLB FCBC FPLB PPSB PIMB JRBB SHVB KANO PA04 PNT PA01 HOLB PA03 PA02 AHCB PFB MGB JRBC TWGB NLLB HRMB GOWB'
+#STATIONS='CLVB FALL VIB LLLB BCBC PGCB MWAB PMB WISB KELB THAB PHC WSLR QURY BPCB TLCB TFRB SNB HLSB PACB GHNB BMSB YOUB SHB SPLB VGZ HBDB CBB LCBC KHVB '
+#STATIONS='WTRB PGC BTB HOPB LZB HNB DHLB ENGB PA05 SILB TSJB GLBC ATLB RUBB TOFB MOBC TASB KLNB CLAP SHDB DAWS BBB SSIB SOKB TWKB PHYB EDB OZB ANMB'
+#STATIONS='DIB COQB PA12 FHRB CPLB FCBC PPSB PIMB JRBB SHVB KANO PA04 PNT PA01 HOLB PA03 PA02 AHCB PFB MGB JRBC TWGB NLLB HRMB GOWB'
 
 while read event; do
 
@@ -91,14 +88,14 @@ while read event; do
 ################################
 
   echo "START_TIME "$cn$yr"/"$mo1"/"$dy1"."$hr1":"$mi1":"$se1  >> $event"_request"
-  #echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
+#  echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
   echo "DURATION 600" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
-  mail post.ben.here@gmail.com < $event"_request"
-#  mail autodrm@seismo.nrcan.gc.ca < $event"_request"
+#  mail post.ben.here@gmail.com < $event"_request"
+  mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
-  sleep 60
+  sleep 5
 
 
 done

@@ -387,12 +387,16 @@
     }
   }, 
   "ALRB": {
+    "badCompEvents": 0, 
     "lat": 52.51029, 
     "lon": -125.08443, 
     "network": "POLARIS", 
+    "numEvents": 277, 
+    "poorEvents": 0, 
     "start": 20060830.01, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20090827.2200", 
+    "usableEvents": 255, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -559,11 +563,11 @@
     "lon": -71.588, 
     "network": "CHASME", 
     "numEvents": 75, 
-    "poorEvents": 0, 
+    "poorEvents": 21, 
     "start": 20000723.2328, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": "20020816.0000", 
-    "usableEvents": 72, 
+    "usableEvents": 51, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -576,11 +580,11 @@
     "lon": -73.1966, 
     "network": "CHASME", 
     "numEvents": 16, 
-    "poorEvents": 0, 
+    "poorEvents": 8, 
     "start": 20000724.1502, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": "20001223.0000", 
-    "usableEvents": 16, 
+    "usableEvents": 8, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -750,12 +754,16 @@
     }
   }, 
   "BMBC": {
+    "badCompEvents": 0, 
     "lat": 56.045, 
     "lon": -122.131, 
     "network": "CNSN", 
+    "numEvents": 1127, 
+    "poorEvents": 396, 
     "start": 19980130, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": 0, 
+    "usableEvents": 612, 
     "wm": {
       "H": 43.0, 
       "R": 1.7587363712608333, 
@@ -1321,12 +1329,16 @@
     }
   }, 
   "CLSB": {
+    "badCompEvents": 0, 
     "lat": 52.75875, 
     "lon": -122.55515, 
     "network": "POLARIS", 
+    "numEvents": 275, 
+    "poorEvents": 0, 
     "start": 20060902.14, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20090826.1830", 
+    "usableEvents": 253, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -2145,12 +2157,16 @@
     }
   }, 
   "EDM": {
+    "badCompEvents": 0, 
     "lat": 53.2217, 
     "lon": -113.35, 
     "network": "CNSN", 
+    "numEvents": 1062, 
+    "poorEvents": 415, 
     "start": 19920603.15, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": 0, 
+    "usableEvents": 502, 
     "wm": {
       "H": 46.0, 
       "R": 1.7771381578947367, 
@@ -2184,7 +2200,7 @@
     "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
-    "usableEvents": 45, 
+    "usableEvents": 44, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -2474,12 +2490,16 @@
     }
   }, 
   "FLLB": {
+    "badCompEvents": 0, 
     "lat": 51.73903, 
     "lon": -123.1059, 
     "network": "POLARIS", 
+    "numEvents": 165, 
+    "poorEvents": 0, 
     "start": 20060824.2, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080610.1705", 
+    "usableEvents": 159, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -2534,12 +2554,16 @@
     }
   }, 
   "FPLB": {
+    "badCompEvents": 0, 
     "lat": 52.95406, 
     "lon": -123.77904, 
     "network": "POLARIS", 
+    "numEvents": 42, 
+    "poorEvents": 0, 
     "start": 20071117, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080611.2000", 
+    "usableEvents": 40, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -2807,11 +2831,11 @@
     "lon": -82.8998, 
     "network": "CHASME", 
     "numEvents": 21, 
-    "poorEvents": 0, 
+    "poorEvents": 10, 
     "start": 20000901.2107, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": "20010628.1317", 
-    "usableEvents": 21, 
+    "usableEvents": 11, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -3247,7 +3271,7 @@
     "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
-    "usableEvents": 94, 
+    "usableEvents": 92, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -3350,11 +3374,11 @@
     "lon": -81.8175, 
     "network": "POLARIS", 
     "numEvents": 35, 
-    "poorEvents": 0, 
+    "poorEvents": 11, 
     "start": 20040902.2108, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": "20050822.2016", 
-    "usableEvents": 24, 
+    "usableEvents": 13, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -3537,11 +3561,11 @@
     "lon": -77.91132, 
     "network": "POLARIS", 
     "numEvents": 444, 
-    "poorEvents": 0, 
+    "poorEvents": 66, 
     "start": 20060916.22, 
-    "status": "aquired", 
+    "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 409, 
+    "usableEvents": 343, 
     "wm": {
       "H": 39.0, 
       "R": 1.7654015401540153, 
@@ -3724,12 +3748,16 @@
     }
   }, 
   "KASO": {
+    "badCompEvents": 2, 
     "lat": 53.52785, 
     "lon": -88.64139, 
     "network": "FEDNOR", 
+    "numEvents": 131, 
+    "poorEvents": 0, 
     "start": 20050803.15, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080820.2107", 
+    "usableEvents": 125, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -4124,7 +4152,7 @@
     "status": "processed-notok", 
     "stop": 0, 
     "usable": 0, 
-    "usableEvents": 127, 
+    "usableEvents": 126, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -4243,12 +4271,16 @@
     }
   }, 
   "LDIO": {
+    "badCompEvents": 1, 
     "lat": 49.17499, 
     "lon": -89.59551, 
     "network": "FEDNOR", 
+    "numEvents": 206, 
+    "poorEvents": 0, 
     "start": 20040616.21, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080813.1505", 
+    "usableEvents": 190, 
     "wm": {
       "H": 50.0, 
       "R": 1.7644492911668486, 
@@ -4719,12 +4751,16 @@
     }
   }, 
   "MCMB1": {
+    "badCompEvents": 58, 
     "lat": 52.8217, 
     "lon": -123.81895, 
     "network": "CNSN", 
+    "numEvents": 58, 
+    "poorEvents": 0, 
     "start": 20071122.23, 
-    "status": "not aquired", 
+    "status": "data corruption", 
     "stop": "20080614.1700", 
+    "usableEvents": 0, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -4766,12 +4802,16 @@
     }
   }, 
   "MEDA": {
+    "badCompEvents": 0, 
     "lat": 49.98148, 
     "lon": -110.74244, 
     "network": "POLARIS", 
+    "numEvents": 243, 
+    "poorEvents": 0, 
     "start": 20091014.12, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 215, 
     "wm": {
       "H": 48.0, 
       "R": 1.782392026578073, 
@@ -4987,7 +5027,7 @@
     }
   }, 
   "MNTQ": {
-    "badCompEvents": 4, 
+    "badCompEvents": 52, 
     "hk": {
       "H": 31.155778894472363, 
       "R": 1.877638190954774, 
@@ -5006,14 +5046,14 @@
       "stdVp": 0.9041480331620241
     }, 
     "network": "CNSN", 
-    "numEvents": 312, 
+    "numEvents": 307, 
     "poorEvents": 89, 
     "processnotes": "Poor direct and reflected phases", 
     "start": 20100726, 
-    "status": "processed-notok", 
+    "status": "data corruption", 
     "stop": 0, 
     "usable": 0, 
-    "usableEvents": 212, 
+    "usableEvents": 0, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -5136,12 +5176,16 @@
     }
   }, 
   "MSNO": {
+    "badCompEvents": 1, 
     "lat": 51.2913, 
     "lon": -80.6151, 
     "network": "FEDNOR", 
+    "numEvents": 123, 
+    "poorEvents": 0, 
     "start": 20050723.15, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080930.2300", 
+    "usableEvents": 113, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -5149,12 +5193,16 @@
     }
   }, 
   "MUMO": {
+    "badCompEvents": 0, 
     "lat": 52.61279, 
     "lon": -90.39136, 
     "network": "FEDNOR", 
+    "numEvents": 251, 
+    "poorEvents": 0, 
     "start": 20030615, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080817.1800", 
+    "usableEvents": 241, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -5357,12 +5405,16 @@
     }
   }, 
   "NSKO": {
+    "badCompEvents": 3, 
     "lat": 52.1965, 
     "lon": -87.93053, 
     "network": "FEDNOR", 
+    "numEvents": 100, 
+    "poorEvents": 0, 
     "start": 20050729.13, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080823.1734", 
+    "usableEvents": 94, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -5472,12 +5524,16 @@
     }
   }, 
   "OTRO": {
+    "badCompEvents": 0, 
     "lat": 50.1818, 
     "lon": -81.6286, 
     "network": "FEDNOR", 
+    "numEvents": 246, 
+    "poorEvents": 0, 
     "start": 20030618.23, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20081003.2300", 
+    "usableEvents": 225, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -5494,7 +5550,7 @@
     "start": 20020101.01, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 27, 
+    "usableEvents": 26, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -5757,11 +5813,11 @@
     "lon": -77.9748, 
     "network": "CHASME", 
     "numEvents": 319, 
-    "poorEvents": 0, 
+    "poorEvents": 152, 
     "start": 20000906.2237, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": "20071201.2031", 
-    "usableEvents": 292, 
+    "usableEvents": 140, 
     "wm": {
       "H": 31.0, 
       "R": 1.8009395184967705, 
@@ -5897,7 +5953,7 @@
     "status": "processed-notok", 
     "stop": 0, 
     "usable": 0, 
-    "usableEvents": 191, 
+    "usableEvents": 189, 
     "wm": {
       "H": 46.0, 
       "R": 1.7771381578947367, 
@@ -6045,12 +6101,16 @@
     }
   }, 
   "PRDA": {
+    "badCompEvents": 0, 
     "lat": 50.8674, 
     "lon": -114.29185, 
     "network": "POLARIS", 
+    "numEvents": 381, 
+    "poorEvents": 0, 
     "start": 20091113.21, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 353, 
     "wm": {
       "H": 46.0, 
       "R": 1.7785773595350125, 
@@ -6156,12 +6216,16 @@
     }
   }, 
   "RAMB": {
+    "badCompEvents": 0, 
     "lat": 52.63197, 
     "lon": -123.12273, 
     "network": "POLARIS", 
+    "numEvents": 102, 
+    "poorEvents": 0, 
     "start": 20060903.21, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20071122.1750", 
+    "usableEvents": 99, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -6169,12 +6233,16 @@
     }
   }, 
   "RAYA": {
+    "badCompEvents": 0, 
     "lat": 49.386267, 
     "lon": -112.6873, 
     "network": "POLARIS", 
+    "numEvents": 261, 
+    "poorEvents": 0, 
     "start": 20100709.11, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 231, 
     "wm": {
       "H": 50.0, 
       "R": 1.76029328821207, 
@@ -6182,12 +6250,16 @@
     }
   }, 
   "RDEA": {
+    "badCompEvents": 0, 
     "lat": 56.55125, 
     "lon": -115.3179, 
     "network": "POLARIS", 
+    "numEvents": 152, 
+    "poorEvents": 0, 
     "start": 20110608.173, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 132, 
     "wm": {
       "H": 41.0, 
       "R": 1.772504091653028, 
@@ -6195,12 +6267,16 @@
     }
   }, 
   "RDLO": {
+    "badCompEvents": 0, 
     "lat": 50.97448, 
     "lon": -93.91244, 
     "network": "FEDNOR", 
+    "numEvents": 11, 
+    "poorEvents": 0, 
     "start": 20040613.17, 
-    "status": "not aquired", 
+    "status": "data corruption", 
     "stop": "20041119.0000", 
+    "usableEvents": 11, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -6242,12 +6318,16 @@
     }
   }, 
   "RLKO": {
+    "badCompEvents": 0, 
     "lat": 51.0704, 
     "lon": -93.7585, 
     "network": "FEDNOR", 
+    "numEvents": 173, 
+    "poorEvents": 0, 
     "start": 20041119.15, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080815.2000", 
+    "usableEvents": 169, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -6392,11 +6472,11 @@
     "lon": -93.5571, 
     "network": "CHASME", 
     "numEvents": 39, 
-    "poorEvents": 0, 
+    "poorEvents": 19, 
     "start": 20000923.2158, 
-    "status": "aquired", 
+    "status": "picked", 
     "stop": "20020725.2028", 
-    "usableEvents": 37, 
+    "usableEvents": 18, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -6417,7 +6497,7 @@
     }
   }, 
   "SCHQ": {
-    "badCompEvents": 13, 
+    "badCompEvents": 680, 
     "hk": {
       "H": 50.0, 
       "R": 1.7314070351758792, 
@@ -6436,14 +6516,14 @@
       "stdVp": 0.5748417478845789
     }, 
     "network": "CNSN", 
-    "numEvents": 1061, 
+    "numEvents": 1048, 
     "poorEvents": 307, 
     "processnotes": "poor reflected phases", 
     "start": 19980616.18, 
-    "status": "processed-notok", 
+    "status": "data corruption", 
     "stop": 0, 
     "usable": 0, 
-    "usableEvents": 727, 
+    "usableEvents": 1, 
     "wm": {
       "H": 40.0, 
       "R": 1.774496644295302, 
@@ -6671,12 +6751,16 @@
     }
   }, 
   "SLEB": {
+    "badCompEvents": 1, 
     "lat": 51.1667, 
     "lon": -118.1333, 
     "network": "CNSN", 
+    "numEvents": 824, 
+    "poorEvents": 0, 
     "start": 19971205, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 770, 
     "wm": {
       "H": 50.0, 
       "R": 1.758859357696567, 
@@ -6765,12 +6849,16 @@
     }
   }, 
   "SNKN": {
+    "badCompEvents": 2, 
     "lat": 56.53624, 
     "lon": -79.23153, 
     "network": "POLARIS", 
+    "numEvents": 281, 
+    "poorEvents": 0, 
     "start": 20120301.163, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 264, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -7021,12 +7109,16 @@
     }
   }, 
   "SULB": {
+    "badCompEvents": 0, 
     "lat": 53.27857, 
     "lon": -124.35757, 
     "network": "POLARIS", 
+    "numEvents": 197, 
+    "poorEvents": 0, 
     "start": 20060905.15, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20090825.2359", 
+    "usableEvents": 190, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -7068,12 +7160,16 @@
     }
   }, 
   "TALB": {
+    "badCompEvents": 0, 
     "lat": 52.0147, 
     "lon": -124.2536, 
     "network": "POLARIS", 
+    "numEvents": 173, 
+    "poorEvents": 0, 
     "start": 20060828.01, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080611.1200", 
+    "usableEvents": 167, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -7120,12 +7216,16 @@
     }
   }, 
   "THMB": {
+    "badCompEvents": 1, 
     "lat": 52.5489, 
     "lon": -124.1323, 
     "network": "POLARIS", 
+    "numEvents": 96, 
+    "poorEvents": 0, 
     "start": 20060827.01, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20080610.2315", 
+    "usableEvents": 92, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -7334,12 +7434,16 @@
     }
   }, 
   "UBRB": {
+    "badCompEvents": 1, 
     "lat": 52.89179, 
     "lon": -124.08318, 
     "network": "CNSN", 
+    "numEvents": 637, 
+    "poorEvents": 0, 
     "start": 20071016.12, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 574, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -7386,11 +7490,11 @@
     "lon": -56.1408, 
     "network": "CHASME", 
     "numEvents": 15, 
-    "poorEvents": 0, 
+    "poorEvents": 8, 
     "start": 20000719.2238, 
-    "status": "aquired", 
+    "status": "data corruption", 
     "stop": "20001127.0719", 
-    "usableEvents": 15, 
+    "usableEvents": 7, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -7620,12 +7724,16 @@
     }
   }, 
   "WALA": {
+    "badCompEvents": 0, 
     "lat": 49.0586, 
     "lon": -113.9115, 
     "network": "CNSN", 
+    "numEvents": 1155, 
+    "poorEvents": 0, 
     "start": 19920603.15, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 1015, 
     "wm": {
       "H": 50.0, 
       "R": 1.76029328821207, 
@@ -7633,12 +7741,16 @@
     }
   }, 
   "WAPA": {
+    "badCompEvents": 1, 
     "lat": 55.18333, 
     "lon": -119.25361, 
     "network": "POLARIS", 
+    "numEvents": 397, 
+    "poorEvents": 0, 
     "start": 20091020.17, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 355, 
     "wm": {
       "H": 46.0, 
       "R": 1.7785773595350125, 
@@ -7864,7 +7976,7 @@
     "start": 20060221.15, 
     "status": "data corruption", 
     "stop": 0, 
-    "usableEvents": 758, 
+    "usableEvents": 746, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -7898,7 +8010,7 @@
     "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
-    "usableEvents": 177, 
+    "usableEvents": 176, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -7983,7 +8095,7 @@
     "status": "processed-notok", 
     "stop": "20060220.1940", 
     "usable": 0, 
-    "usableEvents": 120, 
+    "usableEvents": 118, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 

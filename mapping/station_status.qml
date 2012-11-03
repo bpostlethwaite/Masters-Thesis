@@ -8,6 +8,8 @@
       <category symbol="2" value="not aquired" label="not aquired"/>
       <category symbol="3" value="processed-notok" label="processed-notok"/>
       <category symbol="4" value="processed-ok" label="processed-ok"/>
+      <category symbol="5" value="aquired" label="aquired"/>
+      <category symbol="6" value="picked" label="picked"/>
     </categories>
     <symbols>
       <symbol outputUnit="MM" alpha="1" type="marker" name="0">
@@ -60,12 +62,32 @@
           <prop k="size" v="2"/>
         </layer>
       </symbol>
+      <symbol outputUnit="MM" alpha="1" type="marker" name="5">
+        <layer pass="0" class="SimpleMarker" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="85,0,127,255"/>
+          <prop k="color_border" v="0,0,0,255"/>
+          <prop k="name" v="equilateral_triangle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="size" v="2"/>
+        </layer>
+      </symbol>
+      <symbol outputUnit="MM" alpha="1" type="marker" name="6">
+        <layer pass="0" class="SimpleMarker" locked="0">
+          <prop k="angle" v="0"/>
+          <prop k="color" v="170,85,0,255"/>
+          <prop k="color_border" v="0,0,0,255"/>
+          <prop k="name" v="equilateral_triangle"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="size" v="2"/>
+        </layer>
+      </symbol>
     </symbols>
     <source-symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="0">
         <layer pass="0" class="SimpleMarker" locked="0">
           <prop k="angle" v="0"/>
-          <prop k="color" v="139,54,95,255"/>
+          <prop k="color" v="170,255,255,255"/>
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
