@@ -54,7 +54,7 @@ def ppicker(eventdir, pname, sname, repick = False):
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
             return 's'
 
-    left = round(t0 - 30/dt)
+    left = round(t0 - 15/dt)
     right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt, (N - t0)*dt, dt)) # Time axis
     nn = np.arange(0,N)
