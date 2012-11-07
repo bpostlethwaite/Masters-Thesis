@@ -404,12 +404,16 @@
     }
   }, 
   "ANMB": {
+    "badCompEvents": 0, 
     "lat": 49.31868, 
     "lon": -122.85853, 
     "network": "POLARIS", 
+    "numEvents": 123, 
+    "poorEvents": 47, 
     "start": 20021118.19, 
-    "status": "not aquired", 
+    "status": "bad station", 
     "stop": "20040819.1731", 
+    "usableEvents": 69, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -1529,12 +1533,16 @@
     }
   }, 
   "COQB": {
+    "badCompEvents": 0, 
     "lat": 49.35422, 
     "lon": -122.77472, 
     "network": "POLARIS", 
+    "numEvents": 215, 
+    "poorEvents": 169, 
     "start": 20020407.02, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": "20050803.1503", 
+    "usableEvents": 35, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -3018,12 +3026,16 @@
     }
   }, 
   "HBDB": {
+    "badCompEvents": 0, 
     "lat": 49.16972, 
     "lon": -122.21348, 
     "network": "POLARIS", 
+    "numEvents": 133, 
+    "poorEvents": 41, 
     "start": 20030529.21, 
-    "status": "not aquired", 
+    "status": "bad station", 
     "stop": "20050728.1458", 
+    "usableEvents": 87, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -3133,12 +3145,16 @@
     }
   }, 
   "HLSB": {
+    "badCompEvents": 1, 
     "lat": 49.28365, 
     "lon": -121.72493, 
     "network": "POLARIS", 
+    "numEvents": 182, 
+    "poorEvents": 69, 
     "start": 20021110.19, 
-    "status": "not aquired", 
+    "status": "bad station", 
     "stop": "20050726.1825", 
+    "usableEvents": 102, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -3180,12 +3196,16 @@
     }
   }, 
   "HNB": {
+    "badCompEvents": 60, 
     "lat": 49.2745, 
     "lon": -122.5792, 
     "network": "CNSN", 
+    "numEvents": 838, 
+    "poorEvents": 603, 
     "start": 19970308, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": "20001117.0000", 
+    "usableEvents": 138, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -3206,12 +3226,16 @@
     }
   }, 
   "HOPB": {
+    "badCompEvents": 0, 
     "lat": 49.3873, 
     "lon": -121.4205, 
     "network": "CNSN", 
+    "numEvents": 1065, 
+    "poorEvents": 857, 
     "start": 20070726.19, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": 0, 
+    "usableEvents": 164, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -3279,12 +3303,16 @@
     }
   }, 
   "HRMB": {
+    "badCompEvents": 0, 
     "lat": 49.2446, 
     "lon": -121.9391, 
     "network": "POLARIS", 
+    "numEvents": 182, 
+    "poorEvents": 43, 
     "start": 20021112.02, 
-    "status": "not aquired", 
+    "status": "bad station", 
     "stop": "20050727.1525", 
+    "usableEvents": 128, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -4356,12 +4384,16 @@
     }
   }, 
   "LLLB": {
+    "badCompEvents": 0, 
     "lat": 50.609, 
     "lon": -121.8815, 
     "network": "CNSN", 
+    "numEvents": 1212, 
+    "poorEvents": 857, 
     "start": 19981117.21, 
-    "status": "not aquired", 
+    "status": "picked", 
     "stop": 0, 
+    "usableEvents": 305, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -5795,12 +5827,16 @@
     }
   }, 
   "PIMB": {
+    "badCompEvents": 0, 
     "lat": 49.27432, 
     "lon": -122.66607, 
     "network": "POLARIS", 
+    "numEvents": 173, 
+    "poorEvents": 0, 
     "start": 20021114.23, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20050728.0138", 
+    "usableEvents": 162, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -6075,12 +6111,16 @@
     }
   }, 
   "PNT": {
+    "badCompEvents": 0, 
     "lat": 49.32241, 
     "lon": -119.62536, 
     "network": "CNSN", 
+    "numEvents": 1205, 
+    "poorEvents": 0, 
     "start": 19930203, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 1139, 
     "wm": {
       "H": 41.0, 
       "R": 1.7593038821954485, 
@@ -7907,12 +7947,16 @@
     }
   }, 
   "WSLR": {
+    "badCompEvents": 1, 
     "lat": 50.1265, 
     "lon": -122.9212, 
     "network": "CNSN", 
+    "numEvents": 969, 
+    "poorEvents": 0, 
     "start": 20030602.23, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": 0, 
+    "usableEvents": 928, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 

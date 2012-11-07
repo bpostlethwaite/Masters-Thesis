@@ -1,45 +1,59 @@
 clear all; close all
 loadtools;
-addpath([userdir,'/thesis/matlab/functions']);
+addpath functions
+addpath([userdir,'/programming/matlab/jsonlab'])
+%% Variables
+sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 
+json = loadjson('../stations.json');
+
+%%  Select Station to Process and load station data
+method = 'kanamori';
 s = dir(databasedir);
+logfile = fopen('logfile','w');
 
-method = 'bostock';
-for ii = 1: length(s)
-    % Get rid of . and .. names
-    if length(s(ii).name) < 3
-        continue
-    end
-    
-    disp(s(ii).name)
-    
-    dbfile = fullfile(databasedir, s(ii).name);
-    load(dbfile) 
-    
-    if db.usable
-     
-        % Run bostock algorithm with Tps = kanamori tps results
-        [ results ] = gridsearchMB(db.rec(:, 1:round(45/db.dt)),...
-            db.dt, db.pslow, db.hk.tps);
-    
-        % Run Bootstrap
-        [ boot ] = bootstrap(db.rec(:, 1:round(45/db.dt)),...
-            db.dt, db.pslow, 1024, method, db.hk.tps', 0);    
-        
-        % Assign data 
-        [ db ] = assigndb( db, method, db.station, db.rec(:, 1:round(45/db.dt)), ...
-            db.pslow, db.dt, db.npb, db.fLow, db.fHigh, db.t1,...
-            db.t2, db.Tps, results, boot);
-    
-    else
-        
-        db.rec = db.rec(:, 1:round(45/db.dt));
-        
-    end
-    
+for ii = 1 : length(s)
 
-    % Save sequence
-    save(dbfile,'db') 
-    clear db
+    try
+        % Get rid of . and .. names
+        if length(s(ii).name) < 3
+            continue
+        end
+        
+        [~,station,~] = fileparts(s(ii).name);
+        
+        dbfile = fullfile(databasedir, [station,'.mat'] );
+        
+        
+        clear db dbold
+        if exist(dbfile, 'file')
+            load(dbfile)
+            if  strcmp(json.(station).status,'picked') ||...
+                    strcmp(json.(station).status,'processed-notok') || ...
+                    strcmp(json.(station).status, 'processed-ok')
+            else
+                continue
+            end
+        end
+        
+        if ~exist('db', 'var')
+            db = struct();
+        end
+        
+        workingdir = fullfile(sacfolder,station);
+        vp = json.(station).wm.Vp;
+        db = process(db, station, workingdir, method, vp);
+ 
+        db.usable = 1;
+        
+        % Save sequence
+        save(dbfile,'db')
+        fprintf(logfile, '%s - pass\n',station);
+        clear db dbold
+        
+    catch ME
+        fprintf(logfile, '%s - fail\n',station);
+        fprintf('%s\n', ME.message)
+    end
 end

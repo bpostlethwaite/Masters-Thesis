@@ -1,3 +1,4 @@
+function db = process(db, station, workingdir, method, vp)
 %ProcessTraces
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
@@ -8,6 +9,8 @@ printinfo = 0; % On and off flag to print out processing results
 dlist = filterEventDirs(workingdir, printinfo);
 %% 2)  Convert sac file format, filter bad picks
 %
+pfile = 'stack_P.sac';
+sfile = 'stack_S.sac';
 picktol  = 2; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 splitAzimuth = 0;
 cluster = 0;
@@ -15,7 +18,7 @@ cluster = 0;
     ConvertFilterTraces(dlist, pfile, sfile,...
     picktol, printinfo, splitAzimuth, cluster);
 %fclose('all'); % Close all open files from reading
-clear picktol printinfo dlist splitAzimuth cluster
+
 %% 3) Bin by p value (build pIndex)
 %
 npb = 2; % Average number of traces per bin
@@ -26,7 +29,7 @@ checkind = 1;
 Pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(Pslow); % Number of bins we now have.
-clear numbin pbinLimits checkind
+
 %% 4) Normalize
 dt = header{1}.DELTA;
 ptrace = diag(1./max(ptrace,[],2)) * ptrace;
@@ -39,7 +42,7 @@ end
 %% 5)  Window with Taper and fourier transform signal.
 adj = 0.1; % This adjusts the Tukey window used.
 [wft, vft] = TaperWindowFFT(ptrace, strace, header, adj, 0);
-clear adj
+
 %% 5) Impulse Response: Stack & Deconvolve
 % prep all signals to same length N (power of 2)
 % FFT windowed traces and stack in by appropriate pbin
@@ -71,23 +74,13 @@ fLow = 0.04;
 fHigh = 3;
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
-clear numPoles
+
 %% Rescale by slowness
 % Scale by increasing p value
 pscale = wrev(1./pslow.^2)';
 brec =  diag( pscale ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 
 %% Run Processing suite
-vp = json.(station).wm.Vp;
-% Load Mooney Crust 2.0 database Vp estimate
-% from stations.json database
-
-
-%[brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
-
-%[results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
-%TTps = results.tps;
-%TTps = Tps';
 TTps = [];
 if strcmp(method, 'bostock')
     [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
@@ -98,6 +91,7 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 48, method, TTps', vp);    
-    
-    
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 2048 , method, TTps', vp);    
+%% Assign Data
+[ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
+                   pslow, dt, npb, fLow, fHigh, results, boot);
