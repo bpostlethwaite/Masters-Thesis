@@ -15,32 +15,56 @@ databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 %%  Select Station to Process and load station data
-method = 'bostock';
-station = 'DAWY';
+method = 'kanamori';
+station = '';
 %{
 
+ALRB
+B1NU
+BMBC
+CLSB
+COQB
+EDM
+FLLB
+HNB
+HOPB
+KASO
+LDIO
+LLLB
+MEDA
+MUMO
+NSKO
+PINU
+PRDA
+RAMB
+RLKO
+SBNU
+SLEB
+SULB
+TALB
+THMB
+UBRB
+WALA
+WAPA
 
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
-loadflag = 0;
 clear db dbold
 if exist(dbfile, 'file')
     load(dbfile)
-    loadflag = 1;
     dbold = db;
     display(dbold.processnotes)
 end
-% Load Mooney Crust 2.0 database Vp estimate
-% from stations.json database
-load stnsjson.mat
-vp = json.(station).wm.Vp;
-clear json sacfolder databasedir homedir
+
 %% Run ToolChain
 ProcessTraces
 
 %% Assign Data
+if ~exist('db', 'var')
+    db = struct();
+end
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
     pslow, dt, npb, fLow, fHigh, results, boot);
 
@@ -73,9 +97,11 @@ if strcmp(method, 'kanamori')
             fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
             fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
         end
-        fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
-        fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
-        fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+        if isfield(dbold,'mb')
+            fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
+            fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
+            fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+        end
     end
 end
 
