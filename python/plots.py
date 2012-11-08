@@ -23,8 +23,8 @@ p2 = None # Proterozoic vs Archean
 p3 = None # Comparing some errors in Kanamori approach and new vs old bostock data
 p4 = None # Compare values between bostock, kanamori and Mooney
 p5 = None # Investigation into effect of much higher freq limit on MB data
-p6 = plt # Plot Mooney Vp shot data against stations of close proximity
-p7 = None
+p6 = None # Plot Mooney Vp shot data against stations of close proximity
+p7 = None # Histograms of kanamori data
 ######################
 
 #######################################################################
@@ -354,6 +354,39 @@ if p6:
 
 #######################################################################
 # F7
+# F2 ## Protozoic vs Archean Histograms
+if p7:
+    p7.figure()
+    arg1 = Args()
+    arg1.addQuery("usable", "eq", "1")
+    arg2 = Args()
+    # Load station params
+    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
+    # Load geochron data
+    g = Params(os.environ["HOME"] + "/thesis/stnChrons.json", arg2, ["lower", "upper"] )
+    # Sync up data
+    d.sync(g)
+
+    # Get some logical indexes for start ages within geological times of interest
+    arch =  (g.lower <= 3801) & (g.lower > 2500)
+    proto = (g.lower <= 2500) & (g.lower > 540)
+
+    p7.subplot(211)
+    p7.hist(d.hk_R[arch], histtype='stepfilled', bins = 14, normed = True, color='b', label="archean")
+    p7.hist(d.hk_R[proto], histtype='stepfilled' , bins = 14, normed = True, color='r', alpha=0.5, label='Protozoic')
+    p7.title("Archean/Protozoic Vp/Vs Histogram")
+    p7.xlabel("Value")
+    p7.ylabel("Distribution")
+    p7.legend()
+
+    p7.subplot(212)
+    p7.hist(d.hk_H[arch], histtype='stepfilled', bins = 14, normed=True, color='b', label="archean")
+    p7.hist(d.hk_H[proto], histtype='stepfilled' , bins = 14, normed=True, color='r', alpha=0.5, label='Protozoic')
+    p7.title("Archean/Protozoic Crustal Thickness Histogram")
+    p7.xlabel("Value")
+    p7.ylabel("Distribution")
+    p7.ylim((0,0.3))
+    p7.legend()
 
 #######################################################################
 
@@ -372,4 +405,3 @@ if p6:
     p6.show()
 if p7:
     p7.show()
-

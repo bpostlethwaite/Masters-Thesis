@@ -20,7 +20,7 @@ function initialize() {
 
 
 // Connect sockets to server and receiver station data
-  var socket = io.connect("http://192.168.1.124:8111")
+  var socket = io.connect("http://24.84.18.166:80")
   var dpackets = {}
   var receivedpacks = 2
   socket.on('ternJson', function(data) {
