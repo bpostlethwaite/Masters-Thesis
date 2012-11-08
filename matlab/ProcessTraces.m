@@ -74,7 +74,8 @@ brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
-pscale = wrev(1./pslow.^2)';
+%pscale = wrev(1./pslow.^2)';
+pscale = 1;
 brec =  diag( pscale ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 
 %% Run Processing suite
@@ -98,6 +99,6 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 48, method, TTps', vp);    
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1048, method, TTps', vp);    
     
     

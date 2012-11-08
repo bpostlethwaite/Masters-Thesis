@@ -71,7 +71,7 @@ if discardBad
 end
 %% 6) Filter Impulse Response
 fLow = 0.04;
-fHigh = 3;
+fHigh = 2;
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 
@@ -91,7 +91,7 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 2048 , method, TTps', vp);    
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024 , method, TTps', vp);    
 %% Assign Data
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
                    pslow, dt, npb, fLow, fHigh, results, boot);
