@@ -14,39 +14,24 @@ sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
+load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = '';
+station = 'FNBC';
+
 %{
-
-ALRB
-B1NU
-BMBC
-CLSB
-COQB
-EDM
-FLLB
-HNB
-HOPB
-KASO
-LDIO
-LLLB
-MEDA
-MUMO
-NSKO
-PINU
-PRDA
-RAMB
-RLKO
-SBNU
-SLEB
-SULB
-TALB
-THMB
-UBRB
-WALA
-WAPA
-
+BBB
+CBB
+FNBC
+ MBC
+ MOBC
+ OZB
+ PGC
+ PHC
+ PMB
+ RSNT
+ SHB
+ ULM2
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
@@ -56,15 +41,15 @@ if exist(dbfile, 'file')
     load(dbfile)
     dbold = db;
     display(dbold.processnotes)
+else
+    db = struct();
 end
 
 %% Run ToolChain
 ProcessTraces
 
 %% Assign Data
-if ~exist('db', 'var')
-    db = struct();
-end
+
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
     pslow, dt, npb, fLow, fHigh, results, boot);
 
@@ -109,7 +94,8 @@ end
 notes = input('Enter Processing Notes: ', 's');
 db.processnotes = notes;
 % Enter use / ignore flag
-db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
+%db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
+db.usable = 1;
 % Save entrydbold.mb.
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)

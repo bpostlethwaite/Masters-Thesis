@@ -22,7 +22,7 @@ p1 = None # Plot test. Should be perfect linear mapping + survive some asserts.
 p2 = None # Proterozoic vs Archean
 p3 = None # Comparing some errors in Kanamori approach and new vs old bostock data
 p4 = None # Compare values between bostock, kanamori and Mooney
-p5 = None # Investigation into effect of much higher freq limit on MB data
+p5 = plt # Investigation into effect of new auto processing
 p6 = None # Plot Mooney Vp shot data against stations of close proximity
 p7 = None # Histograms of kanamori data
 ######################
@@ -276,19 +276,53 @@ if p4:
 
 #######################################################################
 # F5
+if p5:
 
     arg1 = Args()
     arg1.addQuery("usable", "eq", "1")
     # Load station params
-    arg1 = Args()
-    arg1.addQuery("usable", "eq", "1")
     arg2 = Args()
+
+    arg3 = Args()
+    arg3.addQuery("hk::stdH", "lt", "100")
+
     # Load station params
     k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
-    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
-    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
+    ok = Params(os.environ['HOME'] + '/thesis/stations.old.json', arg2 ,["hk::stdH","hk::stdR","hk::R","hk::H"])
+    kall = Params(os.environ['HOME'] + '/thesis/stations.json', arg3, ["hk::stdH","hk::stdR","hk::R","hk::H"])
 
-    k.sync(b.sync(ob))
+    k.sync(ok.sync(k))
+    t = np.arange(len(k.hk_H))
+
+    p5.subplot(211)
+    p5.plot(t , k.hk_H, label = "Kanamori H")
+    p5.plot(t , ok.hk_H, label = "KanmoriOLD H")
+    p5.title("mean H Kan = {:2.2f}. mean H OLDKAN = {:2.2f}".format(np.mean(k.hk_H), np.mean(ok.hk_H)) )
+    p5.ylabel("Thickness H")
+    p5.legend()
+
+    p5.subplot(212)
+    p5.plot(t , k.hk_R, label = "Kanamori Vp/Vs")
+    p5.plot(t , ok.hk_R, label = "KanamorOLD Vp/Vs")
+    p5.title("mean Vp/Vs Kan = {:2.2f}. mean Vp/Vs OLDKAN = {:2.2f}".format(np.mean(k.hk_R),np.mean(ok.hk_R) ))
+    p5.ylabel("Vp/Vs")
+    p5.legend()
+
+
+    p5.figure()
+    p5.subplot(2,1,1)
+    p5.hist(kall.hk_R, bins = 40, color='r', label="mb dev")
+    p5.title("Vp std dev for mb vs mb-old ")
+    p5.xlabel("Value")
+    p5.ylabel("Probability")
+    p5.legend()
+
+    p5.subplot(2,1,2)
+    p5.hist(kall.hk_stdR,  bins = 40, color='g', label="mb-old dev")
+    p5.title("Vp std dev for mb vs mb-old ")
+    p5.xlabel("Value")
+    p5.ylabel("Probability")
+    p5.legend()
 
 
 

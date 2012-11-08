@@ -11,38 +11,39 @@ import dbf
 
 
 # Extracting Mooney Crust 2.0 Data
-# stnjson = os.environ['HOME'] + "/thesis/stations.json"
-# stnd = json.loads( open(stnjson).read() )
-# #Load geological time data
+stnjson = os.environ['HOME'] + "/thesis/stations.json"
+stnd = json.loads( open(stnjson).read() )
+#Load geological time data
 
-# db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationMooney.dbf")
-
-
-# for rec in db:
-#     stnd[rec["station"]]["wm"] = {}
-#     stnd[rec["station"]]["wm"]["Vp"] = float(rec["mvp"])
-#     stnd[rec["station"]]["wm"]["R"] = float(rec["mvp"]) / float(rec["mvs"])
-#     stnd[rec["station"]]["wm"]["H"] = float(rec["mh"])
+db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationMooney.dbf")
 
 
-# #print json.dumps(stnd, sort_keys = True, indent = 2 )
-# open(stnjson,'w').write( json.dumps(stnd, sort_keys = True, indent = 2 ))
+for rec in db:
+    stnd[rec["station"]]["wm"] = {}
+    stnd[rec["station"]]["wm"]["Vp"] = float(rec["mvp"])
+    stnd[rec["station"]]["wm"]["R"] = float(rec["mvp"]) / float(rec["mvs"])
+    stnd[rec["station"]]["wm"]["H"] = float(rec["mh"])
+    stnd[rec["station"]]["wm"]["type"] = (rec["geotype"])
+
+
+#print json.dumps(stnd, sort_keys = True, indent = 2 )
+open(stnjson,'w').write( json.dumps(stnd, sort_keys = True, indent = 2 ))
 
 
 #Extracting Station Chrons
-datafile = os.environ['HOME'] + "/thesis/stnChrons.json"
-epochdata = open(os.environ['HOME'] + '/thesis/epoch.json')
-epochdict = json.loads( epochdata.read() )
+# datafile = os.environ['HOME'] + "/thesis/stnChrons.json"
+# epochdata = open(os.environ['HOME'] + '/thesis/epoch.json')
+# epochdict = json.loads( epochdata.read() )
 
-    #Load geological time data
-db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeology.dbf")
+#     #Load geological time data
+# db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeology.dbf")
 
-stnChrons = {}
-for rec in db:
-    stnChrons[rec["station"]] = {}
-    stnChrons[rec["station"]]["lower"] = epochdict[rec["epoch"]][0]
-    stnChrons[rec["station"]]["upper"] = epochdict[rec["epoch"]][1]
-    stnChrons[rec["station"]]["era"] = rec["era"].lower()
+# stnChrons = {}
+# for rec in db:
+#     stnChrons[rec["station"]] = {}
+#     stnChrons[rec["station"]]["lower"] = epochdict[rec["epoch"]][0]
+#     stnChrons[rec["station"]]["upper"] = epochdict[rec["epoch"]][1]
+#     stnChrons[rec["station"]]["era"] = rec["era"].lower()
 
-open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
+# open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
 #print json.dumps(stnChrons, sort_keys = True, indent = 2 )

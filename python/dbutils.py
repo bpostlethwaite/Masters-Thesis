@@ -226,8 +226,8 @@ def setStatus(s, stdict):
         if 'poorEvents' in s[k] and s[k]['poorEvents'] >= 1:
             status = "picked"
         # CHANGE THIS BELOW TO A KANAMORI STATISTIC
-        if 'usable' in s[k]: # Set processing status by MB algo's Vp result
-            if s[k]['usable']:
+        if 'hk' in s[k]: # Set processing status by Kan R result
+            if s[k]['hk']['stdR'] < 0.04:
                 status = "processed-ok"
             else:
                 status = "processed-notok"

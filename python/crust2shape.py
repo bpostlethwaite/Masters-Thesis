@@ -165,6 +165,7 @@ for coords, key in mtypes:
               ht)) )
 
 
+
 # 45 characters in length! We will need to truncate this
 # Before adding to attribute table in GIS
 #print max([len(d['txt']) for (_, d) in mooney])
@@ -205,4 +206,4 @@ def mooney2shapefile(mooney):
 
 
 
-mooney2shapefile(mooney)
+#mooney2shapefile(mooney)
