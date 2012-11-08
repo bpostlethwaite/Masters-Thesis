@@ -39,11 +39,20 @@ function handler(request, response) {
 //
 // Load up station data into memory
 //
-var json
+var jsonternary
+var jsonstation
 fs.readFile("../../ternplots.json", 'utf8', function (err, data) {
   if (err) throw err
   try {
-    json = JSON.parse(data)
+    jsonternary = JSON.parse(data)
+  } catch (err) {
+    throw err
+  }
+})
+fs.readFile("../../stations.json", 'utf8', function (err, data) {
+  if (err) throw err
+  try {
+    jsonstation = JSON.parse(data)
   } catch (err) {
     throw err
   }
@@ -58,5 +67,7 @@ io.sockets.on('connection', function(socket) {
   //
   // Connect content
   //
-  socket.emit('stationJson', json )
+  socket.emit('ternJson', jsonternary )
+  socket.emit('stationsJson', jsonstation )
+
 })
