@@ -32,15 +32,18 @@
 #Centroid: [71.345789950524036, -80.248527296905493]
 #STATIONS='SBNU IGLN B2NU B1NU IVKQ MBC GFNU UPNG PINU'
 #Centroid: [51.907729523541249, -88.290815468256724]
-STATIONS='KASO MUMO OTRO LDIO SNKN NSKO RDLO MSNO RLKO I10H1'
+#STATIONS='KASO MUMO OTRO LDIO SNKN NSKO RDLO MSNO RLKO I10H1'
 # Centroid: [-115.9, 53.64]
 #STATIONS='WALA MEDA WAPA EDM RDEA PRDA RAYA SLEB BMBC FNBC'
-
+#Centroid: [-123.6, 52.6]
+#STATIONS='SULB ALRB MCMB1 UBRB FPLB THMB CLSB FLLB TALB RAMB'
+#Centroid: [-122.2 49.6]
+STATIONS='WSLR PMB LLLB HBDB HRMB HLSB HOPB PNT HNB PIMB COQB ANMB'
 #Cluster ID:  West
 #Cluster Lon / Lat:  -124.08 50.58
-#STATIONS='CLVB FALL VIB LLLB BCBC UBRB PGCB SULB RAMB MWAB PMB WISB KELB THAB PHC ALRB WSLR QURY BPCB TLCB TFRB SNB HLSB PACB GHNB BMSB YOUB SHB SPLB VGZ HBDB CBB LCBC KHVB '
-#STATIONS='WTRB PGC BTB HOPB LZB HNB FLLB DHLB ENGB PA05 SILB TSJB MCMB1 GLBC ATLB RUBB TOFB MOBC TASB KLNB TALB CLAP SHDB DAWS BBB CLSB SSIB SOKB TWKB PHYB EDB OZB THMB ANMB'
-#STATIONS='DIB COQB PA12 FHRB CPLB FCBC FPLB PPSB PIMB JRBB SHVB KANO PA04 PNT PA01 HOLB PA03 PA02 AHCB PFB MGB JRBC TWGB NLLB HRMB GOWB'
+#STATIONS='CLVB FALL VIB BCBC PGCB MWAB WISB KELB THAB PHC QURY BPCB TLCB TFRB SNB PACB GHNB BMSB YOUB SHB SPLB VGZ CBB LCBC KHVB '
+#STATIONS='WTRB PGC BTB LZB DHLB ENGB PA05 SILB TSJB GLBC ATLB RUBB TOFB MOBC TASB KLNB CLAP SHDB DAWS BBB SSIB SOKB TWKB PHYB EDB OZB'
+#STATIONS='DIB PA12 FHRB CPLB FCBC PPSB JRBB SHVB KANO PA04 PA01 HOLB PA03 PA02 AHCB PFB MGB JRBC TWGB NLLB GOWB'
 
 while read event; do
 
@@ -53,8 +56,8 @@ while read event; do
   echo "CHAN_LIST *H*" >> $event"_request"
 # Get Stations
   echo "STA_LIST " $STATIONS >> $event"_request"
-#  echo "NET_LIST " "CNSN POLARIS CHASME FEDNOR ETS" >> $event"_request"
-  echo "NET_LIST " "CNSN " >> $event"_request"
+  echo "NET_LIST CNSN POLARIS" >> $event"_request"
+
   yr=`echo $event | awk '{print substr($1,1,2)}'`
   if test $yr -lt 18
   then
@@ -87,12 +90,14 @@ while read event; do
 ################################
 
   echo "START_TIME "$cn$yr"/"$mo1"/"$dy1"."$hr1":"$mi1":"$se1  >> $event"_request"
-  #echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
+#  echo "START_TIME" $cn$yr"/"$mo"/"$dy"."$hr":"$mi":"$se  >> $event"_request"
   echo "DURATION 600" >> $event"_request"
   echo "WAVE SEED" >> $event"_request"
   echo "STOP" >> $event"_request"
+#  mail post.ben.here@gmail.com < $event"_request"
   mail autodrm@seismo.nrcan.gc.ca < $event"_request"
   rm $event"_request"
-  sleep 60
+  sleep 1
+
 
 done

@@ -54,7 +54,7 @@ def ppicker(eventdir, pname, sname, repick = False):
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
             return 's'
 
-    left = round(t0 - 30/dt)
+    left = round(t0 - 15/dt)
     right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt, (N - t0)*dt, dt)) # Time axis
     nn = np.arange(0,N)
@@ -197,6 +197,6 @@ if __name__== '__main__' :
         else:
             # If yes, check if dir previously renamed as poorData, if so rename to healthy event dir
             if "poorData" in eventdir:
-                renameEvent( eventdir, [], True)
+                events[index] = os.path.basename(renameEvent( eventdir, [], True))
             index += 1
             continue
