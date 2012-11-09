@@ -71,7 +71,7 @@ if discardBad
 end
 %% 6) Filter Impulse Response
 fLow = 0.04;
-fHigh = 2;
+fHigh = 3;
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 
