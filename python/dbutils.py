@@ -116,26 +116,27 @@ def buildStations(stdict, cnsnlist):
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2 ))
 
-def json2shapefile(stdict):
+def json2shapefile(stdict, sc):
     ''' Converts the stations.json data into a shapefile for usage with
     GIS programs such as QGIS'''
+
     w = shapefile.Writer( shapeType = 1 )
     # Set fields for attribute table
 
-    fields = ["Vp","R","H","stdVp","stdR","stdH"]
+    fields = ["wm::Vp","wm::R", "hk::R", "hk::H", "hk::stdR", "hk::stdH"]
     w.field("station", 'C', '6')
     w.field("network", 'C', '10')
     w.field("status", 'C', '16')
     #w.field("Vp", "C", "5")
     for field in fields:
-        w.field(field, 'C', '5')
+        w.field(field, 'C', '6')
 
     for key in stdict.keys():
         # Set lon & lat
         w.point( stdict[key]["lon"], stdict[key]["lat"] )
         values = []
         for f in fields:
-            values.append( '{0:5.2f}'.format(stdict[key][f]) if f in stdict[key] else "None ")
+            values.append( '{0:2.3f}'.format(sc.flattendict(stdict[key])[f]) if f in sc.flattendict(stdict[key]) else "None ")
         w.record( key,
                   stdict[key]["network"],
                   stdict[key]["status"],
@@ -144,7 +145,7 @@ def json2shapefile(stdict):
                   values[2],
                   values[3],
                   values[4],
-                  values[5] )
+                  values[5])
 
     w.save(shpfile)
 
@@ -449,7 +450,7 @@ if __name__== '__main__' :
         modifyData(stdict, args)
 
     if args.shape:
-        json2shapefile(stdict)
+        json2shapefile(stdict, scp)
 
     if args.build:
         buildStations(stdict, stationlist)
