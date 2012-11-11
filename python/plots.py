@@ -12,8 +12,9 @@ from plotTools import Args, Params
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import detrend
-from scipy.stats import pearsonr
+from scipy.stats import pearsonr, norm
 from matplotlib.backends.backend_pdf import PdfPages
+import matplotlib.mlab as mlab
 
 #####################
 # F0 PLOT CMD
@@ -22,10 +23,17 @@ p1 = None # Plot test. Should be perfect linear mapping + survive some asserts.
 p2 = None # Proterozoic vs Archean
 p3 = None # Comparing some errors in Kanamori approach and new vs old bostock data
 p4 = None # Compare values between bostock, kanamori and Mooney
-p5 = plt # Investigation into effect of new auto processing
+p5 = None # Investigation into effect of new auto processing
 p6 = None # Plot Mooney Vp shot data against stations of close proximity
-p7 = None # Histograms of kanamori data
+p7 = plt # Histograms of kanamori data
 ######################
+
+
+
+def poisson(R):
+    ''' Function to go from Vp/Vs -> Poisson's ratio '''
+    return  ( (R**2 - 2) / (2*(R**2 - 1)))
+
 
 #######################################################################
 # F1
@@ -388,39 +396,63 @@ if p6:
 
 #######################################################################
 # F7
-# F2 ## Protozoic vs Archean Histograms
 if p7:
     p7.figure()
     arg1 = Args()
-    arg1.addQuery("usable", "eq", "1")
-    arg2 = Args()
+    arg1.addQuery("hk::stdR", "lt", "0.041")
     # Load station params
     d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    # Load geochron data
-    g = Params(os.environ["HOME"] + "/thesis/stnChrons.json", arg2, ["lower", "upper"] )
-    # Sync up data
-    d.sync(g)
 
-    # Get some logical indexes for start ages within geological times of interest
-    arch =  (g.lower <= 3801) & (g.lower > 2500)
-    proto = (g.lower <= 2500) & (g.lower > 540)
+    alpha = poisson(d.hk_R)
+    avgvn = poisson(1.746516)
+    avgpNik = 0.265
 
-    p7.subplot(211)
-    p7.hist(d.hk_R[arch], histtype='stepfilled', bins = 14, normed = True, color='b', label="archean")
-    p7.hist(d.hk_R[proto], histtype='stepfilled' , bins = 14, normed = True, color='r', alpha=0.5, label='Protozoic')
-    p7.title("Archean/Protozoic Vp/Vs Histogram")
-    p7.xlabel("Value")
-    p7.ylabel("Distribution")
-    p7.legend()
+# #    p7.subplot(211)
+#     p7.hist(d.hk_R, bins = 20, color='b', label="archean")
+# #    p7.hist(d.hk_R, histtype='stepfilled' , bins = 14, normed = True, color='r', alpha=0.5, label='Protozoic')
+#     p7.title("Canada Wide Poisson Ratio Histogram")
+#     p7.xlabel("Value")
+#     p7.ylabel("Distribution")
+#     p7.legend()
 
-    p7.subplot(212)
-    p7.hist(d.hk_H[arch], histtype='stepfilled', bins = 14, normed=True, color='b', label="archean")
-    p7.hist(d.hk_H[proto], histtype='stepfilled' , bins = 14, normed=True, color='r', alpha=0.5, label='Protozoic')
-    p7.title("Archean/Protozoic Crustal Thickness Histogram")
-    p7.xlabel("Value")
-    p7.ylabel("Distribution")
-    p7.ylim((0,0.3))
-    p7.legend()
+    ax = p7.subplot(111)
+
+    # best fit of data
+    (mu, sigma) = norm.fit(alpha)
+    # the histogram of the data
+    n, bins, patches = plt.hist(alpha, 30, normed = True,  facecolor='green', alpha=0.75, label='Poisson ratio')
+
+    # add a 'best fit' line
+    y = mlab.normpdf( bins, mu, sigma)
+    p7.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
+    p7.axvline(x = avgvn, linewidth = 4, color = 'r', label = "Voronoi Weighted Poisson Average")
+    p7.axvline(x = avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust N. Christensen ('96)")
+    p7.title("Canada Wide Poisson Ratio Histogram", size = 22)
+    p7.xlabel("Poisson Ratio", size = 16)
+    p7.ylabel("Probability", size = 16)
+    p7.legend(prop={'size':16})
+    p7.grid(True)
+
+    for tick in ax.xaxis.get_major_ticks():
+                tick.label.set_fontsize(14)
+
+    for v in [avgvn, avgpNik]:
+        txt = r'$\sigma=$'+"{:0.3f}".format(v)
+        diffbin = bins[2] - bins[1]
+        ax.annotate(txt, xy = (v , 0.8 * max(n)),  xycoords='data', size = 16,
+                     xytext=(30, 0), textcoords='offset points',
+                     arrowprops=dict(arrowstyle="->",lw = 3,
+                                     connectionstyle="arc3,rad=.2"))
+
+
+    # p7.subplot(212)
+    # p7.hist(d.hk_H[arch], histtype='stepfilled', bins = 14, normed=True, color='b', label="archean")
+    # p7.hist(d.hk_H[proto], histtype='stepfilled' , bins = 14, normed=True, color='r', alpha=0.5, label='Protozoic')
+    # p7.title("Archean/Protozoic Crustal Thickness Histogram")
+    # p7.xlabel("Value")
+    # p7.ylabel("Distribution")
+    # p7.ylim((0,0.3))
+    # p7.legend()
 
 #######################################################################
 
@@ -439,3 +471,5 @@ if p6:
     p6.show()
 if p7:
     p7.show()
+
+

@@ -20,13 +20,31 @@ method = 'kanamori';
 station = 'WALA';
 
 %{
-SLEB
-WHY
-YUK6
-YUK3
-CLVN
-TIGG
+
+HNB
 WALA
+KJKQ
+VIMO
+EUNU
+BMRO
+MNTQ
+PIMB
+TALB
+EA06
+KASO
+DMCQ
+COQB
+VLDQ
+CBB
+ATKO
+PKRO
+ALRB
+OZB
+ELFO
+A64
+RSPO
+EDZN
+PLIO
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );

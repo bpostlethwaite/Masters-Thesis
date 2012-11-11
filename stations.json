@@ -142,10 +142,10 @@
   "A61": {
     "badCompEvents": 18, 
     "hk": {
-      "H": 43.34170854271357, 
-      "R": 1.8384422110552763, 
-      "stdH": 1.9180544058634963, 
-      "stdR": 0.04865900378386834
+      "H": 43.11557788944724, 
+      "R": 1.8520100502512562, 
+      "stdH": 0.74761899116138, 
+      "stdR": 0.020404195699690576
     }, 
     "km": {}, 
     "lat": 47.69353, 
@@ -163,7 +163,7 @@
     "poorEvents": 358, 
     "processnotes": "", 
     "start": 19990618.01, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
     "usableEvents": 144, 
@@ -331,10 +331,10 @@
   "ALE": {
     "badCompEvents": 10, 
     "hk": {
-      "H": 25.0, 
-      "R": 1.7811557788944723, 
-      "stdH": 2.681275363979944, 
-      "stdR": 0.049658583896142465
+      "H": 24.64824120603015, 
+      "R": 1.8082914572864321, 
+      "stdH": 1.6935472605049886, 
+      "stdR": 0.034752274803385615
     }, 
     "lat": 82.502998, 
     "lon": -62.349998, 
@@ -342,9 +342,9 @@
     "network": "CNSN", 
     "numEvents": 412, 
     "poorEvents": 0, 
-    "processnotes": "Noisy", 
+    "processnotes": "", 
     "start": 19900501.16, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
     "usableEvents": 398, 
@@ -930,10 +930,10 @@
   "BOXN": {
     "badCompEvents": 1, 
     "hk": {
-      "H": 39.824120603015075, 
-      "R": 1.7404522613065325, 
-      "stdH": 2.0509770527055515, 
-      "stdR": 0.04650008921635322
+      "H": 39.69849246231156, 
+      "R": 1.7419597989949749, 
+      "stdH": 1.2061790184947927, 
+      "stdR": 0.025276501100175014
     }, 
     "km": {}, 
     "lat": 63.85215, 
@@ -951,7 +951,7 @@
     "poorEvents": 115, 
     "processnotes": "", 
     "start": 20020802.23, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20070719.1458", 
     "usable": 1, 
     "usableEvents": 119, 
@@ -1513,10 +1513,10 @@
   "CLVN": {
     "badCompEvents": 1, 
     "hk": {
-      "H": 38.06532663316583, 
-      "R": 1.7706030150753769, 
-      "stdH": 2.3844502658817217, 
-      "stdR": 0.04905852854192195
+      "H": 38.44221105527638, 
+      "R": 1.7736180904522612, 
+      "stdH": 1.7010075868853376, 
+      "stdR": 0.026189407994574462
     }, 
     "km": {}, 
     "lat": 67.03902, 
@@ -1534,7 +1534,7 @@
     "poorEvents": 35, 
     "processnotes": "", 
     "start": 20100718.23, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
     "usableEvents": 40, 
@@ -3482,10 +3482,10 @@
   "HNB": {
     "badCompEvents": 60, 
     "hk": {
-      "H": 41.834170854271356, 
-      "R": 1.7118090452261305, 
-      "stdH": 4.703431492938129, 
-      "stdR": 0.055764881893726206
+      "H": 32.78894472361809, 
+      "R": 1.6635678391959798, 
+      "stdH": 2.766218826347837, 
+      "stdR": 0.047417319755115386
     }, 
     "lat": 49.2745, 
     "lon": -122.5792, 
@@ -3643,15 +3643,24 @@
   }, 
   "HYT": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 35.92964824120603, 
+      "R": 1.787185929648241, 
+      "stdH": 1.0797904059309031, 
+      "stdR": 0.02687649056840015
+    }, 
     "lat": 60.825, 
     "lon": -137.5038, 
+    "mb": {}, 
     "network": "CNSN", 
     "numEvents": 215, 
-    "poorEvents": 0, 
+    "poorEvents": 59, 
+    "processnotes": "", 
     "start": 20100819.22, 
-    "status": "aquired", 
+    "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 188, 
+    "usable": 1, 
+    "usableEvents": 129, 
     "wm": {
       "H": 39.0, 
       "R": 1.7543044547690625, 
@@ -4656,10 +4665,10 @@
   "LDIO": {
     "badCompEvents": 1, 
     "hk": {
-      "H": 45.47738693467337, 
-      "R": 1.7374371859296482, 
-      "stdH": 2.1622157205424752, 
-      "stdR": 0.04062236535602669
+      "H": 42.462311557788944, 
+      "R": 1.7947236180904522, 
+      "stdH": 1.8291087792624354, 
+      "stdR": 0.03881260133980392
     }, 
     "lat": 49.17499, 
     "lon": -89.59551, 
@@ -4669,7 +4678,7 @@
     "poorEvents": 126, 
     "processnotes": "", 
     "start": 20040616.21, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20080813.1505", 
     "usable": 1, 
     "usableEvents": 64, 
@@ -4683,10 +4692,10 @@
   "LGSN": {
     "badCompEvents": 0, 
     "hk": {
-      "H": 37.814070351758794, 
-      "R": 1.757035175879397, 
-      "stdH": 1.7884457310902753, 
-      "stdR": 0.04195439118902001
+      "H": 38.09045226130653, 
+      "R": 1.7494974874371858, 
+      "stdH": 0.6385027566772031, 
+      "stdR": 0.01693654454371309
     }, 
     "km": {}, 
     "lat": 64.33372, 
@@ -4704,7 +4713,7 @@
     "poorEvents": 119, 
     "processnotes": "", 
     "start": 20020725, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20060717.1625", 
     "usable": 1, 
     "usableEvents": 82, 
@@ -5518,10 +5527,10 @@
   "MOBC": {
     "badCompEvents": 0, 
     "hk": {
-      "H": 27.01005025125628, 
-      "R": 1.8565326633165828, 
-      "stdH": 0.598313094173597, 
-      "stdR": 0.045507099170817876
+      "H": 27.412060301507537, 
+      "R": 1.8414572864321608, 
+      "stdH": 0.6941011845550245, 
+      "stdR": 0.047710132633125686
     }, 
     "lat": 53.14478, 
     "lon": -131.96866, 
@@ -6357,15 +6366,24 @@
   }, 
   "PIMB": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 27.1356783919598, 
+      "R": 1.9047738693467335, 
+      "stdH": 3.428250579226884, 
+      "stdR": 0.054255683920009304
+    }, 
     "lat": 49.27432, 
     "lon": -122.66607, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 173, 
-    "poorEvents": 0, 
+    "poorEvents": 119, 
+    "processnotes": "", 
     "start": 20021114.23, 
-    "status": "aquired", 
+    "status": "processed-notok", 
     "stop": "20050728.0138", 
-    "usableEvents": 162, 
+    "usable": 1, 
+    "usableEvents": 43, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -6673,15 +6691,24 @@
   }, 
   "PNT": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.311557788944725, 
+      "R": 1.6530150753768844, 
+      "stdH": 4.2024085916941845, 
+      "stdR": 0.0793189325420911
+    }, 
     "lat": 49.32241, 
     "lon": -119.62536, 
+    "mb": {}, 
     "network": "CNSN", 
     "numEvents": 1205, 
-    "poorEvents": 0, 
+    "poorEvents": 723, 
+    "processnotes": "", 
     "start": 19930203, 
-    "status": "aquired", 
+    "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 1139, 
+    "usable": 1, 
+    "usableEvents": 416, 
     "wm": {
       "H": 41.0, 
       "R": 1.7593038821954485, 
@@ -7142,10 +7169,10 @@
   "SBNU": {
     "badCompEvents": 0, 
     "hk": {
-      "H": 35.92964824120603, 
-      "R": 1.707286432160804, 
-      "stdH": 1.0033178559877798, 
-      "stdR": 0.049743448030546575
+      "H": 36.20603015075377, 
+      "R": 1.7057788944723618, 
+      "stdH": 0.5372830388283538, 
+      "stdR": 0.022116929812551943
     }, 
     "lat": 69.5405, 
     "lon": -93.5571, 
@@ -7155,7 +7182,7 @@
     "poorEvents": 19, 
     "processnotes": "", 
     "start": 20000923.2158, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20020725.2028", 
     "usable": 1, 
     "usableEvents": 18, 
@@ -7850,10 +7877,10 @@
   "SULB": {
     "badCompEvents": 0, 
     "hk": {
-      "H": 36.05527638190955, 
-      "R": 1.722361809045226, 
-      "stdH": 1.59861682607474, 
-      "stdR": 0.041706423854533964
+      "H": 36.30653266331658, 
+      "R": 1.701256281407035, 
+      "stdH": 1.468215536684727, 
+      "stdR": 0.038469133104707696
     }, 
     "lat": 53.27857, 
     "lon": -124.35757, 
@@ -7863,7 +7890,7 @@
     "poorEvents": 133, 
     "processnotes": "", 
     "start": 20060905.15, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20090825.2359", 
     "usable": 1, 
     "usableEvents": 57, 
@@ -8008,10 +8035,10 @@
   "TIGG": {
     "badCompEvents": 0, 
     "hk": {
-      "H": 35.552763819095475, 
-      "R": 1.7690954773869345, 
-      "stdH": 4.014028968871131, 
-      "stdR": 0.04442498688233233
+      "H": 35.32663316582915, 
+      "R": 1.7781407035175878, 
+      "stdH": 2.570539409763748, 
+      "stdR": 0.03609061944247255
     }, 
     "km": {}, 
     "lat": 47.00153, 
@@ -8027,9 +8054,9 @@
     "network": "POLARIS", 
     "numEvents": 88, 
     "poorEvents": 39, 
-    "processnotes": "", 
+    "processnotes": "\\", 
     "start": 20050929.02, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20071105.2020", 
     "usable": 1, 
     "usableEvents": 48, 
@@ -8137,15 +8164,24 @@
   }, 
   "TULEG": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.688442211055275, 
+      "R": 1.7645728643216079, 
+      "stdH": 3.1613005905293603, 
+      "stdR": 0.07958066247375664
+    }, 
     "lat": 76.5374, 
     "lon": -68.8237, 
+    "mb": {}, 
     "network": "CHASME", 
     "numEvents": 210, 
-    "poorEvents": 0, 
+    "poorEvents": 120, 
+    "processnotes": "", 
     "start": 20000926.16, 
-    "status": "aquired", 
+    "status": "processed-notok", 
     "stop": 0, 
-    "usableEvents": 187, 
+    "usable": 1, 
+    "usableEvents": 67, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -8765,15 +8801,24 @@
   }, 
   "WSLR": {
     "badCompEvents": 1, 
+    "hk": {
+      "H": 36.80904522613065, 
+      "R": 1.7178391959798993, 
+      "stdH": 0.13252410272176626, 
+      "stdR": 0.004468509795075681
+    }, 
     "lat": 50.1265, 
     "lon": -122.9212, 
+    "mb": {}, 
     "network": "CNSN", 
     "numEvents": 969, 
-    "poorEvents": 0, 
+    "poorEvents": 638, 
+    "processnotes": "", 
     "start": 20030602.23, 
-    "status": "aquired", 
+    "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 928, 
+    "usable": 1, 
+    "usableEvents": 290, 
     "wm": {
       "H": 40.0, 
       "R": 1.7717508055853919, 
@@ -8832,15 +8877,24 @@
   }, 
   "YKW1": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 37.93969849246231, 
+      "R": 1.7555276381909546, 
+      "stdH": 0.5137552092553429, 
+      "stdR": 0.013969303630756878
+    }, 
     "lat": 62.49322, 
     "lon": -114.60528, 
+    "mb": {}, 
     "network": "CNSN", 
     "numEvents": 883, 
-    "poorEvents": 0, 
+    "poorEvents": 487, 
+    "processnotes": "", 
     "start": 20060221.15, 
-    "status": "aquired", 
+    "status": "processed-ok", 
     "stop": 0, 
-    "usableEvents": 746, 
+    "usable": 1, 
+    "usableEvents": 259, 
     "wm": {
       "H": 37.0, 
       "R": 1.7623465211459752, 
@@ -8940,9 +8994,9 @@
     "badCompEvents": 0, 
     "hk": {
       "H": 33.417085427135675, 
-      "R": 1.8625628140703516, 
-      "stdH": 1.6051800501335647, 
-      "stdR": 0.04463993810613844
+      "R": 1.8685929648241206, 
+      "stdH": 1.5479568416668552, 
+      "stdR": 0.03977998475763837
     }, 
     "km": {}, 
     "lat": 62.49322, 
@@ -8960,7 +9014,7 @@
     "poorEvents": 121, 
     "processnotes": "", 
     "start": 20011126.21, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20060220.1940", 
     "usable": 1, 
     "usableEvents": 121, 

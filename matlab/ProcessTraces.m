@@ -2,13 +2,21 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 
+%% Main Control
+npb = 4; % Average number of traces per bin
+discardBad = 1; % Discard traces that do not find minimum during decon
+%pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
+pscale = @(pslow) 1;
+fLow = 0.04; % Lower frequency cutoff
+fHigh = 3; % Upper frequency cutoff
+
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
 dlist = filterEventDirs(workingdir, printinfo);
 %% 2)  Convert sac file format, filter bad picks
 %
-picktol  = 2; % The picks should be more than PICKTOL seconds apart, or something may be wrong
+picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 splitAzimuth = 0;
 cluster = 0;
 [ptrace, strace, header, pslows, ~] = ...
@@ -18,7 +26,6 @@ cluster = 0;
 clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
-npb = 2; % Average number of traces per bin
 numbin = round((1/npb) * size(ptrace, 1));
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
@@ -29,8 +36,14 @@ nbins = length(Pslow); % Number of bins we now have.
 clear numbin pbinLimits checkind
 %% 4) Normalize
 dt = header{1}.DELTA;
-ptrace = diag(1./max(ptrace,[],2)) * ptrace;
-strace = diag(1./max(strace,[],2)) * strace;
+
+%wdiag = 0;
+ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
+strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
+%wdiag = normtrace( ptrace, header, dt );
+%ptrace = wdiag * ptrace;
+%strace = wdiag * strace;
+clear wdiag
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
@@ -60,30 +73,23 @@ rec = Rec;
 pslow = Pslow;
 %% Weed out poor rf results
 % Cut out traces where no betax was found during simdecf
-discardBad = 1;
 if discardBad
     ind = isinf(betax);
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
 %% 6) Filter Impulse Response
-fLow = 0.04;
-fHigh = 3;
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
-%pscale = wrev(1./pslow.^2)';
-pscale = 1;
-brec =  diag( pscale ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
+brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 
 %% Run Processing suite
 vp = json.(station).wm.Vp;
 % Load Mooney Crust 2.0 database Vp estimate
 % from stations.json database
-
-
 %[brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
 
 %[results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
@@ -100,5 +106,3 @@ end
 
 % Run Bootstrap
 [ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1048, method, TTps', vp);    
-    
-    
