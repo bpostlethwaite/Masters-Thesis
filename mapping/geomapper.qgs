@@ -2,12 +2,12 @@
 <qgis projectname="" version="1.8.0-Lisboa">
     <title></title>
     <mapcanvas>
-        <units>degrees</units>
+        <units>meters</units>
         <extent>
-            <xmin>-128.857236</xmin>
-            <ymin>42.952159</ymin>
-            <xmax>-36.265548</xmax>
-            <ymax>102.953716</ymax>
+            <xmin>-121.203026</xmin>
+            <ymin>42.752076</ymin>
+            <xmax>-58.374077</xmax>
+            <ymax>81.348568</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -26,21 +26,21 @@
     <legend updateDrawingOrder="false">
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20121108112221219" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="stations20121110193030485" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="mooneyShots" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="mooneyShots" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="mooneyShots20121020212751052" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationMooney" showFeatureCount="1">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="stationMooney" showFeatureCount="1">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="stationMooney20121107222623762" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="1">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="1">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="stationGeology20121017210235428" visible="0"/>
             </filegroup>
         </legendlayer>
@@ -59,8 +59,8 @@
                 <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
@@ -156,13 +156,13 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
-                <LayerItem layerId="stations20121108112221219" text="stations">
+                <LayerItem layerId="stations20121110193030485" text="stations">
                     <VectorClassificationItemNg text="">
                         <symbols>
                             <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
                                 <layer pass="0" class="SimpleMarker" locked="0">
                                     <prop k="angle" v="0"/>
-                                    <prop k="color" v="210,138,181,255"/>
+                                    <prop k="color" v="94,92,177,255"/>
                                     <prop k="color_border" v="0,0,0,255"/>
                                     <prop k="name" v="circle"/>
                                     <prop k="offset" v="0,0"/>
@@ -2179,7 +2179,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="3">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="170,170,0,255"/>
+                            <prop k="color" v="127,100,116,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2209,7 +2209,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="6">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="91,22,13,255"/>
+                            <prop k="color" v="170,170,127,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2229,7 +2229,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="8">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="159,174,112,255"/>
+                            <prop k="color" v="255,170,127,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2239,7 +2239,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="9">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="101,67,175,255"/>
+                            <prop k="color" v="0,170,127,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -3983,7 +3983,7 @@
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stations20121108112221219</id>
+            <id>stations20121110193030485</id>
             <datasource>./stations.shp</datasource>
             <title></title>
             <abstract></abstract>
@@ -4162,14 +4162,23 @@
         </maplayer>
     </projectlayers>
     <properties>
+        <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+        <WMSOnlineResource type="QString"></WMSOnlineResource>
         <NorthArrow>
             <Rotation type="int">0</Rotation>
             <Enabled type="bool">true</Enabled>
             <Placement type="int">0</Placement>
             <Automatic type="bool">true</Automatic>
         </NorthArrow>
+        <WMSContactPerson type="QString"></WMSContactPerson>
+        <Identify>
+            <disabledLayers type="QStringList"/>
+        </Identify>
+        <WMSContactPhone type="QString"></WMSContactPhone>
         <SpatialRefSys>
+            <ProjectCRSProj4String type="QString">+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</ProjectCRSProj4String>
             <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+            <ProjectionsEnabled type="int">0</ProjectionsEnabled>
         </SpatialRefSys>
         <Paths>
             <Absolute type="bool">false</Absolute>
@@ -4183,9 +4192,15 @@
             <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
             <CanvasColorBluePart type="int">255</CanvasColorBluePart>
         </Gui>
+        <WMSContactMail type="QString"></WMSContactMail>
+        <WFSLayers type="QStringList"/>
         <PositionPrecision>
             <DecimalPlaces type="int">2</DecimalPlaces>
             <Automatic type="bool">true</Automatic>
         </PositionPrecision>
+        <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+        <WMSContactOrganization type="QString"></WMSContactOrganization>
+        <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+        <WMSServiceTitle type="QString"></WMSServiceTitle>
     </properties>
 </qgis>

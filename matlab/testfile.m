@@ -80,11 +80,6 @@ legend('actual curve','data','L2 solution','L1 solution')
 %}
 
 %% Math tests
-d = [0.09, 0.45, 0.2, 0.5];
-
-lim = 0.5;
-dnew =  1 - d ./ lim + 0.3;
-dnew = dnew ./ sum(dnew)
 %}
 
 %% JSON testing
@@ -100,4 +95,13 @@ sts.('SADO').results = results;
  
 savejson('', sts, opt);
 %}
+
+%% Polytope testing
+%loadtools;
+%mpt_init;
+%addpath(genpath([userdir,'/programming/matlab/mpt/']));
+%clear all
+%close all
+%load 3Dpolytopes.mat
+
 
