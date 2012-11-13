@@ -1,0 +1,66 @@
+<Composer title="Composer 4" visible="1">
+ <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,16,-1,5,50,0,0,0,0,0" map="0" groupFont="Ubuntu,14,-1,5,50,0,0,0,0,0" layerFont="Ubuntu,12,-1,5,50,0,0,0,0,0" groupSpace="2" symbolSpace="2" symbolHeight="4" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,12,-1,5,50,0,0,0,0,0">
+  <Model autoUpdate="1">
+   <LayerItem layerId="moonVpGeology20121112134602141" text="moonVpGeology">
+    <VectorClassificationItemNg text="Upper Peak:  6.497 &lt; Vp > 6.528">
+     <symbols>
+      <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+       <layer pass="0" class="SimpleMarker" locked="0">
+        <prop k="angle" v="0"/>
+        <prop k="color" v="0,0,255,255"/>
+        <prop k="color_border" v="0,0,0,255"/>
+        <prop k="name" v="star"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="size" v="3"/>
+       </layer>
+      </symbol>
+     </symbols>
+    </VectorClassificationItemNg>
+    <VectorClassificationItemNg text="Lower Peak:  6.287 &lt; Vp > 6.317">
+     <symbols>
+      <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+       <layer pass="0" class="SimpleMarker" locked="0">
+        <prop k="angle" v="0"/>
+        <prop k="color" v="255,0,0,255"/>
+        <prop k="color_border" v="0,0,0,255"/>
+        <prop k="name" v="star"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="size" v="3"/>
+       </layer>
+      </symbol>
+     </symbols>
+    </VectorClassificationItemNg>
+   </LayerItem>
+  </Model>
+  <ComposerItem width="72" x="8.81657" y="27.7722" rotation="0" height="33.3" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="2.26846" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLegend>
+ <ComposerPicture pictureWidth="19.4201" file="/usr/share/qgis/svg/north_arrows/north-arrow_2_simple_half_arrow.svg" pictureHeight="17.1923" mapId="-1">
+  <ComposerItem width="19.7172" x="7.78637" y="165.142" rotation="0" height="17.5286" frame="true" outlineWidth="0.3" zValue="2" lastValidViewScaleFactor="2.26846" id="" positionLock="false">
+   <FrameColor alpha="255" red="255" blue="255" green="255"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerPicture>
+ <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+  <Extent ymin="40.4801" xmin="-137.711" ymax="87.0544" xmax="-50.7111"/>
+  <LayerSet/>
+  <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
+   <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
+  </Grid>
+  <ComposerItem width="293.151" x="1.76331" y="41.8787" rotation="0" height="156.935" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.26846" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerMap>
+ <ComposerLabel valign="32" labelText="Bimodal Vp Peaks" halign="1" margin="1">
+  <LabelFont description="Ubuntu,36,-1,5,50,0,0,0,0,0"/>
+  <FontColor red="0" blue="0" green="0"/>
+  <ComposerItem width="109.325" x="86.4024" y="8.37574" rotation="0" height="24.2456" frame="true" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.26846" id="" positionLock="false">
+   <FrameColor alpha="255" red="255" blue="255" green="255"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="210" printAsRaster="0"/>
+</Composer>

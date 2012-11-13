@@ -1,6 +1,7 @@
 {
   "A11": {
     "badCompEvents": 19, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 27.1356783919598, 
       "R": 1.8896984924623115, 
@@ -36,6 +37,7 @@
   }, 
   "A16": {
     "badCompEvents": 14, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 41.959798994974875, 
       "R": 1.814321608040201, 
@@ -71,6 +73,7 @@
   }, 
   "A21": {
     "badCompEvents": 18, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.66834170854271, 
       "R": 1.95, 
@@ -106,6 +109,7 @@
   }, 
   "A54": {
     "badCompEvents": 13, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 41.20603015075377, 
       "R": 1.8278894472361809, 
@@ -141,6 +145,7 @@
   }, 
   "A61": {
     "badCompEvents": 18, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 43.11557788944724, 
       "R": 1.8520100502512562, 
@@ -176,6 +181,7 @@
   }, 
   "A64": {
     "badCompEvents": 10, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 38.94472361809045, 
       "R": 1.80678391959799, 
@@ -211,6 +217,7 @@
   }, 
   "ACKN": {
     "badCompEvents": 4, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.19597989949749, 
       "R": 1.7479899497487437, 
@@ -246,6 +253,7 @@
   }, 
   "ACTO": {
     "badCompEvents": 1, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.20603015075377, 
       "R": 1.7660804020100502, 
@@ -280,6 +288,7 @@
     }
   }, 
   "AHCB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.9325, 
     "lon": -123.7373, 
     "network": "ETS", 
@@ -290,11 +299,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "AKVQ": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 45.85427135678392, 
       "R": 1.7600502512562812, 
@@ -330,6 +340,7 @@
   }, 
   "ALE": {
     "badCompEvents": 10, 
+    "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 24.64824120603015, 
       "R": 1.8082914572864321, 
@@ -357,6 +368,7 @@
   }, 
   "ALFO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.69849246231156, 
       "R": 1.7449748743718592, 
@@ -392,6 +404,7 @@
   }, 
   "ALGO": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 43.969849246231156, 
       "R": 1.8384422110552763, 
@@ -422,11 +435,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "ALRB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 31.78391959798995, 
       "R": 1.864070351758794, 
@@ -449,11 +463,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "ANMB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.09045226130653, 
       "R": 1.8188442211055276, 
@@ -476,11 +491,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "AP3N": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.82914572864322, 
       "R": 1.7027638190954772, 
@@ -516,6 +532,7 @@
   }, 
   "ARTN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 31.281407035175878, 
       "R": 1.7766331658291457, 
@@ -543,6 +560,7 @@
   }, 
   "ARVN": {
     "badCompEvents": 3, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.82914572864322, 
       "R": 1.7374371859296482, 
@@ -578,6 +596,7 @@
   }, 
   "ATKO": {
     "badCompEvents": 16, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 44.095477386934675, 
       "R": 1.7253768844221105, 
@@ -612,6 +631,7 @@
     }
   }, 
   "ATLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.21837, 
     "lon": -127.05998, 
     "network": "ETS", 
@@ -622,11 +642,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "B1NU": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 42.8391959798995, 
       "R": 1.7118090452261305, 
@@ -654,6 +675,7 @@
   }, 
   "B2NU": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "lat": 68.9216, 
     "lon": -73.1966, 
     "network": "CHASME", 
@@ -672,6 +694,7 @@
   }, 
   "BANO": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.57286432160804, 
       "R": 1.7690954773869345, 
@@ -707,6 +730,7 @@
   }, 
   "BASO": {
     "badCompEvents": 93, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 39.19597989949749, 
       "R": 1.7600502512562812, 
@@ -737,11 +761,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "BATG": {
     "badCompEvents": 7, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.040201005025125, 
       "R": 1.714824120603015, 
@@ -777,6 +802,7 @@
   }, 
   "BBB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.0, 
       "R": 1.842964824120603, 
@@ -799,25 +825,31 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BCBC": {
+    "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 52.372, 
     "lon": -126.755, 
     "network": "CNSN", 
+    "numEvents": 618, 
+    "poorEvents": 0, 
     "start": 20071206.17, 
-    "status": "not aquired", 
+    "status": "bad station", 
     "stop": 0, 
+    "usableEvents": 580, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BELQ": {
     "badCompEvents": 2, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.6831658291457285, 
@@ -848,11 +880,12 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "BMBC": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.93467336683417, 
       "R": 1.728391959798995, 
@@ -880,6 +913,7 @@
   }, 
   "BMRO": {
     "badCompEvents": 94, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 43.969849246231156, 
       "R": 1.8399497487437186, 
@@ -910,10 +944,11 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "BMSB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.8356, 
     "lon": -125.1355, 
     "network": "CNSN", 
@@ -924,11 +959,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BOXN": {
     "badCompEvents": 1, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.69849246231156, 
       "R": 1.7419597989949749, 
@@ -963,6 +999,7 @@
     }
   }, 
   "BPCB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.92358, 
     "lon": -123.70447, 
     "network": "ETS", 
@@ -973,11 +1010,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BRCO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 26.256281407035175, 
       "R": 1.665075376884422, 
@@ -1008,11 +1046,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "BRPO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "lat": 45.65059, 
     "lon": -77.5061, 
     "network": "POLARIS", 
@@ -1030,6 +1069,7 @@
     }
   }, 
   "BTB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.4683, 
     "lon": -125.5214, 
     "network": "CNSN", 
@@ -1040,11 +1080,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BUKO": {
     "badCompEvents": 3, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 41.834170854271356, 
       "R": 1.7675879396984924, 
@@ -1075,11 +1116,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "BULN": {
     "badCompEvents": 2, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 37.185929648241206, 
       "R": 1.713316582914573, 
@@ -1115,6 +1157,7 @@
   }, 
   "BVCY": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.0, 
       "R": 1.6816582914572864, 
@@ -1145,11 +1188,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "BWLO": {
     "badCompEvents": 94, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 49.62311557788945, 
       "R": 1.8535175879396983, 
@@ -1180,11 +1224,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "CAMN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.69346733668342, 
       "R": 1.757035175879397, 
@@ -1220,6 +1265,7 @@
   }, 
   "CBB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 46.85929648241206, 
       "R": 1.8233668341708542, 
@@ -1242,11 +1288,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "CBRQ": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 37.56281407035176, 
       "R": 1.7087939698492463, 
@@ -1282,6 +1329,7 @@
   }, 
   "CDKN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 41.33165829145729, 
       "R": 1.707286432160804, 
@@ -1317,6 +1365,7 @@
   }, 
   "CHEG": {
     "badCompEvents": 5, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 41.834170854271356, 
       "R": 1.6982412060301506, 
@@ -1347,11 +1396,12 @@
       "H": 32.0, 
       "R": 1.7891937290033595, 
       "Vp": 6.391, 
-      "type": "Margin /shield transition, Eas"
+      "type": "Margin /shield transition, East Siberia"
     }
   }, 
   "CHGQ": {
     "badCompEvents": 3, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 34.42211055276382, 
       "R": 1.757035175879397, 
@@ -1386,6 +1436,7 @@
     }
   }, 
   "CLAP": {
+    "geoprov": "Pacific Continental Shelf", 
     "lat": 53.3217, 
     "lon": -132.411, 
     "network": "HABC", 
@@ -1401,6 +1452,7 @@
   }, 
   "CLPO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.321608040201006, 
       "R": 1.7645728643216079, 
@@ -1436,6 +1488,7 @@
   }, 
   "CLRN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 25.0, 
       "R": 1.9469849246231155, 
@@ -1466,11 +1519,12 @@
       "H": 24.0, 
       "R": 1.8107784431137726, 
       "Vp": 6.048, 
-      "type": "continental slope, margin, tra"
+      "type": "continental slope, margin, transition"
     }
   }, 
   "CLSB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.381909547738694, 
       "R": 1.8821608040201006, 
@@ -1497,21 +1551,27 @@
     }
   }, 
   "CLVB": {
+    "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.38167, 
     "lon": -123.14468, 
     "network": "POLARIS", 
+    "numEvents": 137, 
+    "poorEvents": 0, 
     "start": 20021117.18, 
-    "status": "not aquired", 
+    "status": "aquired", 
     "stop": "20050804.1519", 
+    "usableEvents": 119, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "CLVN": {
     "badCompEvents": 1, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 38.44221105527638, 
       "R": 1.7736180904522612, 
@@ -1547,6 +1607,7 @@
   }, 
   "CLWO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 45.22613065326633, 
       "R": 1.79321608040201, 
@@ -1577,11 +1638,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "CMBN": {
     "badCompEvents": 2, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 32.914572864321606, 
       "R": 1.7329145728643216, 
@@ -1617,6 +1679,7 @@
   }, 
   "CODG": {
     "badCompEvents": 0, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 25.376884422110553, 
       "R": 1.65, 
@@ -1652,6 +1715,7 @@
   }, 
   "COKN": {
     "badCompEvents": 8, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 35.80402010050251, 
       "R": 1.9183417085427135, 
@@ -1687,6 +1751,7 @@
   }, 
   "COQB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 29.64824120603015, 
       "R": 1.7087939698492463, 
@@ -1709,11 +1774,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "COWN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.57286432160804, 
       "R": 1.7193467336683417, 
@@ -1748,6 +1814,7 @@
     }
   }, 
   "CPLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.61181, 
     "lon": -124.75119, 
     "network": "ETS", 
@@ -1758,11 +1825,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "CRLN": {
     "badCompEvents": 3, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 34.42211055276382, 
       "R": 1.7600502512562812, 
@@ -1797,6 +1865,7 @@
   }, 
   "CTLN": {
     "badCompEvents": 2, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 39.447236180904525, 
       "R": 1.680150753768844, 
@@ -1832,6 +1901,7 @@
   }, 
   "CTSN": {
     "badCompEvents": 0, 
+    "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 35.050251256281406, 
       "R": 1.7751256281407035, 
@@ -1865,6 +1935,7 @@
     }
   }, 
   "DAWS": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.234, 
     "lon": -132.4782, 
     "network": "HABC", 
@@ -1880,6 +1951,7 @@
   }, 
   "DAWY": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 37.56281407035176, 
       "R": 1.7027638190954772, 
@@ -1910,11 +1982,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "DELO": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.69849246231156, 
       "R": 1.7796482412060302, 
@@ -1949,6 +2022,7 @@
     }
   }, 
   "DHLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.9915, 
     "lon": -123.8152, 
     "network": "ETS", 
@@ -1959,11 +2033,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "DHRN": {
     "badCompEvents": 0, 
+    "geoprov": "Arctic Platform", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.7479899497487437, 
@@ -1998,6 +2073,7 @@
     }
   }, 
   "DIB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.20247, 
     "lon": -132.47666, 
     "network": "CNSN", 
@@ -2013,6 +2089,7 @@
   }, 
   "DLBC": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 33.040201005025125, 
       "R": 1.8082914572864321, 
@@ -2048,6 +2125,7 @@
   }, 
   "DMCQ": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 35.80402010050251, 
       "R": 1.8384422110552763, 
@@ -2083,6 +2161,7 @@
   }, 
   "DORN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 35.92964824120603, 
       "R": 1.7525125628140703, 
@@ -2117,6 +2196,7 @@
   }, 
   "DPQ": {
     "badCompEvents": 666, 
+    "geoprov": "Grenville Province", 
     "lat": 46.6804, 
     "lon": -72.7774, 
     "network": "CNSN", 
@@ -2135,6 +2215,7 @@
   }, 
   "DRCO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.87658, 
     "lon": -78.70228, 
     "network": "POLARIS", 
@@ -2153,6 +2234,7 @@
   }, 
   "DREO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.87244, 
     "lon": -78.70396, 
     "network": "POLARIS", 
@@ -2171,6 +2253,7 @@
   }, 
   "DRLN": {
     "badCompEvents": 14, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.175879396984925, 
       "R": 1.7163316582914572, 
@@ -2206,6 +2289,7 @@
   }, 
   "DRWO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.871897, 
     "lon": -78.729983, 
     "network": "POLARIS", 
@@ -2224,6 +2308,7 @@
   }, 
   "DSMN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 35.678391959798994, 
       "R": 1.743467336683417, 
@@ -2259,6 +2344,7 @@
   }, 
   "DSNO": {
     "badCompEvents": 0, 
+    "geoprov": "Southern Province", 
     "lat": 46.4715, 
     "lon": -81.187, 
     "network": "POLARIS", 
@@ -2272,11 +2358,12 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "DVKN": {
     "badCompEvents": 5, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.19597989949749, 
       "R": 1.714824120603015, 
@@ -2312,6 +2399,7 @@
   }, 
   "EA06": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 42.96482412060301, 
       "R": 1.7494974874371858, 
@@ -2338,6 +2426,7 @@
     }
   }, 
   "EDB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.8737, 
     "lon": -127.1198, 
     "network": "CNSN", 
@@ -2348,11 +2437,12 @@
       "H": 32.0, 
       "R": 1.7891937290033595, 
       "Vp": 6.391, 
-      "type": "Margin /shield transition, Eas"
+      "type": "Margin /shield transition, East Siberia"
     }
   }, 
   "EDM": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 31.90954773869347, 
       "R": 1.9304020100502512, 
@@ -2380,6 +2470,7 @@
   }, 
   "EDZN": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.7464824120603015, 
@@ -2415,6 +2506,7 @@
   }, 
   "EKTN": {
     "badCompEvents": 1, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.94472361809045, 
       "R": 1.7344221105527637, 
@@ -2450,6 +2542,7 @@
   }, 
   "ELEF": {
     "badCompEvents": 1, 
+    "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 29.14572864321608, 
       "R": 1.79321608040201, 
@@ -2472,11 +2565,12 @@
       "H": 27.0, 
       "R": 1.788330632090762, 
       "Vp": 5.517, 
-      "type": "continental slope, margin, tra"
+      "type": "continental slope, margin, transition"
     }
   }, 
   "ELFO": {
     "badCompEvents": 1, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 42.462311557788944, 
       "R": 1.7841708542713568, 
@@ -2512,6 +2606,7 @@
   }, 
   "ELGO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.834170854271356, 
       "R": 1.79321608040201, 
@@ -2546,6 +2641,7 @@
     }
   }, 
   "ENGB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.008, 
     "lon": -123.08893, 
     "network": "POLARIS", 
@@ -2556,11 +2652,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "EPLO": {
     "badCompEvents": 15, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.69849246231156, 
       "R": 1.7208542713567838, 
@@ -2596,6 +2693,7 @@
   }, 
   "EUNU": {
     "badCompEvents": 0, 
+    "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 27.51256281407035, 
       "R": 1.7027638190954772, 
@@ -2630,6 +2728,7 @@
     }
   }, 
   "FALL": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.278, 
     "lon": -132.4601, 
     "network": "HABC", 
@@ -2644,6 +2743,7 @@
     }
   }, 
   "FCBC": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.97418, 
     "lon": -124.73576, 
     "network": "ETS", 
@@ -2654,11 +2754,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "FCC": {
     "badCompEvents": 19, 
+    "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 41.70854271356784, 
       "R": 1.7163316582914572, 
@@ -2694,6 +2795,7 @@
   }, 
   "FFC": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.07537688442211, 
       "R": 1.7344221105527637, 
@@ -2720,6 +2822,7 @@
     }
   }, 
   "FHRB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.0537, 
     "lon": -127.1186, 
     "network": "ETS", 
@@ -2730,11 +2833,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "FLLB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 32.41206030150754, 
       "R": 1.8324120603015075, 
@@ -2757,11 +2861,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "FNBB": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 32.663316582914575, 
       "R": 1.858040201005025, 
@@ -2797,6 +2902,7 @@
   }, 
   "FNBC": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.65, 
@@ -2824,6 +2930,7 @@
   }, 
   "FPLB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 52.95406, 
     "lon": -123.77904, 
     "network": "POLARIS", 
@@ -2842,6 +2949,7 @@
   }, 
   "FRB": {
     "badCompEvents": 4, 
+    "geoprov": "", 
     "hk": {
       "H": 42.21105527638191, 
       "R": 1.7600502512562812, 
@@ -2877,6 +2985,7 @@
   }, 
   "FSMA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 41.08040201005025, 
       "R": 1.65, 
@@ -2912,6 +3021,7 @@
   }, 
   "GAC": {
     "badCompEvents": 523, 
+    "geoprov": "Grenville Province", 
     "lat": 45.7033, 
     "lon": -75.4783, 
     "network": "CNSN", 
@@ -2930,6 +3040,7 @@
   }, 
   "GALN": {
     "badCompEvents": 0, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 37.06030150753769, 
       "R": 1.7886934673366834, 
@@ -2965,6 +3076,7 @@
   }, 
   "GASG": {
     "badCompEvents": 3, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 42.71356783919598, 
       "R": 1.7208542713567838, 
@@ -3000,6 +3112,7 @@
   }, 
   "GBLN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 34.92462311557789, 
       "R": 1.8233668341708542, 
@@ -3035,6 +3148,7 @@
   }, 
   "GBN": {
     "badCompEvents": 10, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.92964824120603, 
       "R": 1.7268844221105526, 
@@ -3070,6 +3184,7 @@
   }, 
   "GDLN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 43.84422110552764, 
       "R": 1.7660804020100502, 
@@ -3105,6 +3220,7 @@
   }, 
   "GFNU": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "lat": 76.418, 
     "lon": -82.8998, 
     "network": "CHASME", 
@@ -3123,6 +3239,7 @@
   }, 
   "GGN": {
     "badCompEvents": 18, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.050251256281406, 
       "R": 1.7374371859296482, 
@@ -3157,6 +3274,7 @@
     }
   }, 
   "GHNB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.3065, 
     "lon": -124.2364, 
     "network": "ETS", 
@@ -3167,11 +3285,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "GIFN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.82914572864322, 
       "R": 1.7374371859296482, 
@@ -3206,6 +3325,7 @@
     }
   }, 
   "GLBC": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.39599, 
     "lon": -123.63631, 
     "network": "ETS", 
@@ -3216,11 +3336,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "GLWN": {
     "badCompEvents": 1, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 43.5929648241206, 
       "R": 1.7344221105527637, 
@@ -3255,6 +3376,7 @@
     }
   }, 
   "GOWB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.73688, 
     "lon": -123.18478, 
     "network": "POLARIS", 
@@ -3265,11 +3387,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "HAL": {
     "badCompEvents": 0, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.66834170854271, 
       "R": 1.7042713567839196, 
@@ -3305,6 +3428,7 @@
   }, 
   "HBDB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.16972, 
     "lon": -122.21348, 
     "network": "POLARIS", 
@@ -3318,11 +3442,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "HFRN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 36.30653266331658, 
       "R": 1.921356783919598, 
@@ -3358,6 +3483,7 @@
   }, 
   "HGVO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.45728643216081, 
       "R": 1.7902010050251256, 
@@ -3393,6 +3519,7 @@
   }, 
   "HILA": {
     "badCompEvents": 3, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 25.0, 
       "R": 1.6907035175879397, 
@@ -3428,6 +3555,7 @@
   }, 
   "HLSB": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.28365, 
     "lon": -121.72493, 
     "network": "POLARIS", 
@@ -3446,6 +3574,7 @@
   }, 
   "HMNT": {
     "badCompEvents": 8, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 43.84422110552764, 
       "R": 1.906281407035176, 
@@ -3481,6 +3610,7 @@
   }, 
   "HNB": {
     "badCompEvents": 60, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 32.78894472361809, 
       "R": 1.6635678391959798, 
@@ -3503,10 +3633,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "HOLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.6405, 
     "lon": -128.1318, 
     "network": "CNSN", 
@@ -3522,6 +3653,7 @@
   }, 
   "HOPB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 44.095477386934675, 
       "R": 1.8821608040201006, 
@@ -3549,6 +3681,7 @@
   }, 
   "HOWN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 49.49748743718593, 
       "R": 1.6952261306532663, 
@@ -3576,6 +3709,7 @@
   }, 
   "HPLN": {
     "badCompEvents": 1, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 39.824120603015075, 
       "R": 1.6907035175879397, 
@@ -3611,6 +3745,7 @@
   }, 
   "HRMB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.2446, 
     "lon": -121.9391, 
     "network": "POLARIS", 
@@ -3628,6 +3763,7 @@
     }
   }, 
   "HSMO": {
+    "geoprov": "Southern Province", 
     "lat": 47.37082, 
     "lon": -79.66566, 
     "network": "FEDNOR", 
@@ -3638,11 +3774,12 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "HYT": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 35.92964824120603, 
       "R": 1.787185929648241, 
@@ -3669,6 +3806,7 @@
     }
   }, 
   "I10H1": {
+    "geoprov": "Superior Province", 
     "lat": 50.2015, 
     "lon": -96.0269, 
     "network": "CNSN", 
@@ -3684,6 +3822,7 @@
   }, 
   "ICQ": {
     "badCompEvents": 78, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.32663316582915, 
       "R": 1.7947236180904522, 
@@ -3719,6 +3858,7 @@
   }, 
   "IGLN": {
     "badCompEvents": 0, 
+    "geoprov": "Arctic Platform", 
     "lat": 69.369, 
     "lon": -81.8175, 
     "network": "POLARIS", 
@@ -3737,6 +3877,7 @@
   }, 
   "IHLN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.5678391959799, 
       "R": 1.751005025125628, 
@@ -3772,6 +3913,7 @@
   }, 
   "ILKN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.44221105527638, 
       "R": 1.7103015075376884, 
@@ -3807,6 +3949,7 @@
   }, 
   "ILON": {
     "badCompEvents": 1, 
+    "geoprov": "Arctic Platform", 
     "hk": {
       "H": 37.311557788944725, 
       "R": 1.7329145728643216, 
@@ -3842,6 +3985,7 @@
   }, 
   "INK": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 29.14572864321608, 
       "R": 1.8836683417085427, 
@@ -3877,6 +4021,7 @@
   }, 
   "INUQ": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 41.33165829145729, 
       "R": 1.7344221105527637, 
@@ -3912,6 +4057,7 @@
   }, 
   "IVKQ": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "lat": 62.41835, 
     "lon": -77.91132, 
     "network": "POLARIS", 
@@ -3930,6 +4076,7 @@
   }, 
   "JERN": {
     "badCompEvents": 3, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 37.185929648241206, 
       "R": 1.7163316582914572, 
@@ -3965,6 +4112,7 @@
   }, 
   "JOSN": {
     "badCompEvents": 5, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 25.12562814070352, 
       "R": 1.9183417085427135, 
@@ -3999,6 +4147,7 @@
     }
   }, 
   "JRBB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.43002, 
     "lon": -124.05218, 
     "network": "ETS", 
@@ -4009,10 +4158,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "JRBC": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.39572, 
     "lon": -123.96005, 
     "network": "ETS", 
@@ -4023,11 +4173,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "KAJQ": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.7389447236180904, 
@@ -4058,10 +4209,11 @@
       "H": 32.0, 
       "R": 1.7891937290033595, 
       "Vp": 6.391, 
-      "type": "Margin /shield transition, Eas"
+      "type": "Margin /shield transition, East Siberia"
     }
   }, 
   "KANO": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.2883, 
     "lon": -132.6175, 
     "network": "HABC", 
@@ -4077,6 +4229,7 @@
   }, 
   "KAPO": {
     "badCompEvents": 14, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 48.618090452261306, 
       "R": 1.707286432160804, 
@@ -4112,6 +4265,7 @@
   }, 
   "KASO": {
     "badCompEvents": 2, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.447236180904525, 
       "R": 1.722361809045226, 
@@ -4138,6 +4292,7 @@
     }
   }, 
   "KELB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.66107, 
     "lon": -123.57007, 
     "network": "POLARIS", 
@@ -4148,11 +4303,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "KGNO": {
     "badCompEvents": 15, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.7035175879397, 
       "R": 1.8339195979899496, 
@@ -4187,6 +4343,7 @@
     }
   }, 
   "KHVB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.5688, 
     "lon": -123.4663, 
     "network": "ETS", 
@@ -4197,11 +4354,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "KILO": {
     "badCompEvents": 49, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.447236180904525, 
       "R": 1.7494974874371858, 
@@ -4237,6 +4395,7 @@
   }, 
   "KIMN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 46.231155778894475, 
       "R": 1.722361809045226, 
@@ -4271,6 +4430,7 @@
   }, 
   "KJKQ": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 45.85427135678392, 
       "R": 1.785678391959799, 
@@ -4336,10 +4496,11 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "KLNB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.66107, 
     "lon": -123.57063, 
     "network": "POLARIS", 
@@ -4350,11 +4511,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "KNDN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.07035175879397, 
       "R": 1.7977386934673367, 
@@ -4390,6 +4552,7 @@
   }, 
   "KNGQ": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 48.36683417085427, 
       "R": 1.7178391959798993, 
@@ -4425,6 +4588,7 @@
   }, 
   "KRSQ": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "lat": 60.02204, 
     "lon": -69.99115, 
     "network": "POLARIS", 
@@ -4443,6 +4607,7 @@
   }, 
   "KSVO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 36.93467336683417, 
       "R": 1.8082914572864321, 
@@ -4478,6 +4643,7 @@
   }, 
   "KUGN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 34.92462311557789, 
       "R": 1.7208542713567838, 
@@ -4513,6 +4679,7 @@
   }, 
   "KUKN": {
     "badCompEvents": 1, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 25.376884422110553, 
       "R": 1.95, 
@@ -4548,6 +4715,7 @@
   }, 
   "LAIN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 38.5678391959799, 
       "R": 1.7479899497487437, 
@@ -4583,6 +4751,7 @@
   }, 
   "LATQ": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "lat": 47.38355, 
     "lon": -72.781933, 
     "network": "POLARIS", 
@@ -4600,6 +4769,7 @@
     }
   }, 
   "LCBC": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.48337, 
     "lon": -124.2619, 
     "network": "ETS", 
@@ -4610,10 +4780,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "LDBN": {
+    "geoprov": "Interior Platform", 
     "lat": 66.72194, 
     "lon": -124.94306, 
     "network": "POLARIS", 
@@ -4629,6 +4800,7 @@
   }, 
   "LDGN": {
     "badCompEvents": 2, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.321608040201006, 
       "R": 1.7314070351758792, 
@@ -4664,6 +4836,7 @@
   }, 
   "LDIO": {
     "badCompEvents": 1, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 42.462311557788944, 
       "R": 1.7947236180904522, 
@@ -4691,6 +4864,7 @@
   }, 
   "LGSN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.09045226130653, 
       "R": 1.7494974874371858, 
@@ -4726,6 +4900,7 @@
   }, 
   "LINO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.07537688442211, 
       "R": 1.7525125628140703, 
@@ -4756,11 +4931,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "LLLB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.30653266331658, 
       "R": 1.6952261306532663, 
@@ -4788,6 +4964,7 @@
   }, 
   "LMN": {
     "badCompEvents": 12, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 37.93969849246231, 
       "R": 1.7630653266331657, 
@@ -4823,6 +5000,7 @@
   }, 
   "LMQ": {
     "badCompEvents": 15, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 48.99497487437186, 
       "R": 1.7359296482412059, 
@@ -4858,6 +5036,7 @@
   }, 
   "LSQQ": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "lat": 49.058017, 
     "lon": -76.979567, 
     "network": "POLARIS", 
@@ -4876,6 +5055,7 @@
   }, 
   "LUPN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 36.55778894472362, 
       "R": 1.7630653266331657, 
@@ -4910,6 +5090,7 @@
     }
   }, 
   "LZB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.6117, 
     "lon": -123.8236, 
     "network": "CNSN", 
@@ -4920,11 +5101,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "MADG": {
     "badCompEvents": 0, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.79396984924623, 
       "R": 1.877638190954774, 
@@ -4955,11 +5137,12 @@
       "H": 32.0, 
       "R": 1.7891937290033595, 
       "Vp": 6.391, 
-      "type": "Margin /shield transition, Eas"
+      "type": "Margin /shield transition, East Siberia"
     }
   }, 
   "MALG": {
     "badCompEvents": 0, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 36.68341708542714, 
       "R": 1.8369346733668341, 
@@ -4995,6 +5178,7 @@
   }, 
   "MALO": {
     "badCompEvents": 20, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.07035175879397, 
       "R": 1.7359296482412059, 
@@ -5030,6 +5214,7 @@
   }, 
   "MANA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 28.768844221105528, 
       "R": 1.758542713567839, 
@@ -5065,6 +5250,7 @@
   }, 
   "MANN": {
     "badCompEvents": 0, 
+    "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 34.54773869346734, 
       "R": 1.7675879396984924, 
@@ -5099,6 +5285,7 @@
   }, 
   "MATQ": {
     "badCompEvents": 2, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 35.30150753768844, 
       "R": 1.7389447236180904, 
@@ -5134,6 +5321,7 @@
   }, 
   "MBC": {
     "badCompEvents": 0, 
+    "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 28.894472361809044, 
       "R": 1.829396984924623, 
@@ -5161,6 +5349,7 @@
   }, 
   "MCKN": {
     "badCompEvents": 1, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 37.814070351758794, 
       "R": 1.7464824120603015, 
@@ -5196,6 +5385,7 @@
   }, 
   "MCMB1": {
     "badCompEvents": 58, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 52.8217, 
     "lon": -123.81895, 
     "network": "CNSN", 
@@ -5214,6 +5404,7 @@
   }, 
   "MCMN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 37.06030150753769, 
       "R": 1.7344221105527637, 
@@ -5249,6 +5440,7 @@
   }, 
   "MEDA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 34.2964824120603, 
       "R": 1.864070351758794, 
@@ -5271,7 +5463,7 @@
       "H": 48.0, 
       "R": 1.782392026578073, 
       "Vp": 6.438, 
-      "type": "early/mid Proter. shield, Afri"
+      "type": "early/mid Proter. shield, Africa"
     }
   }, 
   "MEDO": {
@@ -5310,6 +5502,7 @@
     }
   }, 
   "MGB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.99986, 
     "lon": -124.6975, 
     "network": "CNSN", 
@@ -5320,11 +5513,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "MGTN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 32.28643216080402, 
       "R": 1.9183417085427135, 
@@ -5360,6 +5554,7 @@
   }, 
   "MKVL": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 25.753768844221106, 
       "R": 1.7042713567839196, 
@@ -5387,6 +5582,7 @@
   }, 
   "MLON": {
     "badCompEvents": 2, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 39.447236180904525, 
       "R": 1.7344221105527637, 
@@ -5422,6 +5618,7 @@
   }, 
   "MNGN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.57788944723618, 
       "R": 1.7600502512562812, 
@@ -5456,6 +5653,7 @@
   }, 
   "MNT": {
     "badCompEvents": 62, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 33.91959798994975, 
       "R": 1.8188442211055276, 
@@ -5491,6 +5689,7 @@
   }, 
   "MNTQ": {
     "badCompEvents": 52, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 31.155778894472363, 
       "R": 1.877638190954774, 
@@ -5526,6 +5725,7 @@
   }, 
   "MOBC": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.412060301507537, 
       "R": 1.8414572864321608, 
@@ -5553,6 +5753,7 @@
   }, 
   "MPPO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.57788944723618, 
       "R": 1.7314070351758792, 
@@ -5588,6 +5789,7 @@
   }, 
   "MRHQ": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 37.43718592964824, 
       "R": 1.7811557788944723, 
@@ -5623,6 +5825,7 @@
   }, 
   "MRYN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 39.824120603015075, 
       "R": 1.728391959798995, 
@@ -5658,6 +5861,7 @@
   }, 
   "MSNO": {
     "badCompEvents": 1, 
+    "geoprov": "Hudson Bay Lowlands", 
     "lat": 51.2913, 
     "lon": -80.6151, 
     "network": "FEDNOR", 
@@ -5676,6 +5880,7 @@
   }, 
   "MUMO": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.19597989949749, 
       "R": 1.680150753768844, 
@@ -5702,6 +5907,7 @@
     }
   }, 
   "MWAB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.74111, 
     "lon": -125.3032, 
     "network": "ETS", 
@@ -5712,11 +5918,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "NANL": {
     "badCompEvents": 0, 
+    "geoprov": "", 
     "lat": 56.53712, 
     "lon": -61.68843, 
     "network": "POLARIS", 
@@ -5735,6 +5942,7 @@
   }, 
   "NATG": {
     "badCompEvents": 12, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 45.85427135678392, 
       "R": 1.757035175879397, 
@@ -5770,6 +5978,7 @@
   }, 
   "NEMQ": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "lat": 51.6837, 
     "lon": -76.25757, 
     "network": "POLARIS", 
@@ -5787,6 +5996,7 @@
     }
   }, 
   "NLLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.2274, 
     "lon": -123.9881, 
     "network": "CNSN", 
@@ -5797,11 +6007,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "NMSQ": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 38.69346733668342, 
       "R": 1.6846733668341707, 
@@ -5837,6 +6048,7 @@
   }, 
   "NODN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.19095477386935, 
       "R": 1.7329145728643216, 
@@ -5872,6 +6084,7 @@
   }, 
   "NOTN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.729899497487437, 
@@ -5906,6 +6119,7 @@
   }, 
   "NSKO": {
     "badCompEvents": 3, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 40.82914572864322, 
       "R": 1.7118090452261305, 
@@ -5933,6 +6147,7 @@
   }, 
   "NUNN": {
     "badCompEvents": 2, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.05527638190955, 
       "R": 1.729899497487437, 
@@ -5986,6 +6201,7 @@
   }, 
   "ORHO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 45.456333, 
     "lon": -75.536667, 
     "network": "POLARIS", 
@@ -6004,6 +6220,7 @@
   }, 
   "ORIO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 38.44221105527638, 
       "R": 1.7781407035175878, 
@@ -6039,6 +6256,7 @@
   }, 
   "OTRO": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "lat": 50.1818, 
     "lon": -81.6286, 
     "network": "FEDNOR", 
@@ -6057,6 +6275,7 @@
   }, 
   "OTT": {
     "badCompEvents": 534, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 45.3942, 
     "lon": -75.7167, 
     "network": "CNSN", 
@@ -6075,6 +6294,7 @@
   }, 
   "OZB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.628140703517587, 
       "R": 1.6816582914572864, 
@@ -6097,10 +6317,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA01": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.6526, 
     "lon": -123.44695, 
     "network": "CNSN", 
@@ -6111,10 +6332,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA02": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.65182, 
     "lon": -123.44893, 
     "network": "CNSN", 
@@ -6125,10 +6347,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA03": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.65175, 
     "lon": -123.44477, 
     "network": "CNSN", 
@@ -6139,10 +6362,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA04": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.65097, 
     "lon": -123.44617, 
     "network": "CNSN", 
@@ -6153,10 +6377,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA05": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.64973, 
     "lon": -123.44385, 
     "network": "CNSN", 
@@ -6167,10 +6392,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PA12": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.6482, 
     "lon": -123.44962, 
     "network": "CNSN", 
@@ -6181,10 +6407,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PACB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.43553, 
     "lon": -127.4925, 
     "network": "ETS", 
@@ -6195,11 +6422,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PECO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 35.552763819095475, 
       "R": 1.95, 
@@ -6235,6 +6463,7 @@
   }, 
   "PEMO": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 38.31658291457286, 
       "R": 1.7766331658291457, 
@@ -6269,6 +6498,7 @@
     }
   }, 
   "PFB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.5717, 
     "lon": -124.44, 
     "network": "CNSN", 
@@ -6279,11 +6509,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PGC": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.46733668341709, 
       "R": 1.7736180904522612, 
@@ -6306,10 +6537,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PGCB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.6498, 
     "lon": -123.4522, 
     "network": "POLARIS", 
@@ -6320,11 +6552,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PHC": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 31.281407035175878, 
       "R": 1.8339195979899496, 
@@ -6347,10 +6580,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PHYB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.0828, 
     "lon": -123.8431, 
     "network": "ETS", 
@@ -6361,11 +6595,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PIMB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.1356783919598, 
       "R": 1.9047738693467335, 
@@ -6388,11 +6623,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PINU": {
     "badCompEvents": 0, 
+    "geoprov": "Arctic Platform", 
     "hk": {
       "H": 31.407035175879397, 
       "R": 1.7374371859296482, 
@@ -6420,6 +6656,7 @@
   }, 
   "PKLO": {
     "badCompEvents": 14, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 38.5678391959799, 
       "R": 1.7389447236180904, 
@@ -6455,6 +6692,7 @@
   }, 
   "PKRO": {
     "badCompEvents": 2, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.57788944723618, 
       "R": 1.751005025125628, 
@@ -6490,6 +6728,7 @@
   }, 
   "PLBC": {
     "badCompEvents": 3, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 35.678391959798994, 
       "R": 1.6756281407035174, 
@@ -6520,11 +6759,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PLIO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 46.482412060301506, 
       "R": 1.8309045226130654, 
@@ -6560,6 +6800,7 @@
   }, 
   "PLVO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.447236180904525, 
       "R": 1.7600502512562812, 
@@ -6595,6 +6836,7 @@
   }, 
   "PMB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.93467336683417, 
       "R": 1.714824120603015, 
@@ -6617,11 +6859,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "PNGN": {
     "badCompEvents": 0, 
+    "geoprov": "", 
     "hk": {
       "H": 35.050251256281406, 
       "R": 1.707286432160804, 
@@ -6656,6 +6899,7 @@
   }, 
   "PNPO": {
     "badCompEvents": 19, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 40.95477386934674, 
       "R": 1.79321608040201, 
@@ -6691,6 +6935,7 @@
   }, 
   "PNT": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 37.311557788944725, 
       "R": 1.6530150753768844, 
@@ -6717,6 +6962,7 @@
     }
   }, 
   "PPSB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.39558, 
     "lon": -123.67676, 
     "network": "ETS", 
@@ -6727,11 +6973,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "PRDA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 48.618090452261306, 
       "R": 1.7042713567839196, 
@@ -6759,6 +7006,7 @@
   }, 
   "PTCO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 44.72361809045226, 
       "R": 1.7494974874371858, 
@@ -6794,6 +7042,7 @@
   }, 
   "QCQ": {
     "badCompEvents": 569, 
+    "geoprov": "Appalachian Orogen", 
     "lat": 46.7791, 
     "lon": -71.276, 
     "network": "CNSN", 
@@ -6812,6 +7061,7 @@
   }, 
   "QILN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.55778894472362, 
       "R": 1.729899497487437, 
@@ -6846,6 +7096,7 @@
     }
   }, 
   "QURY": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.3763, 
     "lon": -132.2225, 
     "network": "HABC", 
@@ -6861,6 +7112,7 @@
   }, 
   "RAMB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 30.15075376884422, 
       "R": 1.879145728643216, 
@@ -6888,6 +7140,7 @@
   }, 
   "RAYA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "lat": 49.386267, 
     "lon": -112.6873, 
     "network": "POLARIS", 
@@ -6906,6 +7159,7 @@
   }, 
   "RDEA": {
     "badCompEvents": 0, 
+    "geoprov": "Interior Platform", 
     "lat": 56.55125, 
     "lon": -115.3179, 
     "network": "POLARIS", 
@@ -6924,6 +7178,7 @@
   }, 
   "RDLO": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "lat": 50.97448, 
     "lon": -93.91244, 
     "network": "FEDNOR", 
@@ -6942,6 +7197,7 @@
   }, 
   "RES": {
     "badCompEvents": 0, 
+    "geoprov": "Arctic Platform", 
     "hk": {
       "H": 38.06532663316583, 
       "R": 1.6756281407035174, 
@@ -6977,6 +7233,7 @@
   }, 
   "RLKO": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 41.582914572864325, 
       "R": 1.7464824120603015, 
@@ -7004,6 +7261,7 @@
   }, 
   "ROMN": {
     "badCompEvents": 15, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.722361809045226, 
@@ -7039,6 +7297,7 @@
   }, 
   "RSNT": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 36.05527638190955, 
       "R": 1.7645728643216079, 
@@ -7066,6 +7325,7 @@
   }, 
   "RSPO": {
     "badCompEvents": 0, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 34.04522613065326, 
       "R": 1.8670854271356783, 
@@ -7096,10 +7356,11 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "RUBB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 54.3262, 
     "lon": -130.2523, 
     "network": "CNSN", 
@@ -7115,6 +7376,7 @@
   }, 
   "SABG": {
     "badCompEvents": 0, 
+    "geoprov": "Atlantic Continental Shelf", 
     "lat": 43.93124, 
     "lon": -60.00843, 
     "network": "POLARIS", 
@@ -7133,6 +7395,7 @@
   }, 
   "SADO": {
     "badCompEvents": 11, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.19597989949749, 
       "R": 1.7736180904522612, 
@@ -7163,11 +7426,12 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "SBNU": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.20603015075377, 
       "R": 1.7057788944723618, 
@@ -7195,6 +7459,7 @@
   }, 
   "SCH": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "lat": 54.8183, 
     "lon": -66.7833, 
     "network": "CNSN", 
@@ -7213,6 +7478,7 @@
   }, 
   "SCHQ": {
     "badCompEvents": 680, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 50.0, 
       "R": 1.7314070351758792, 
@@ -7248,6 +7514,7 @@
   }, 
   "SEDN": {
     "badCompEvents": 2, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 29.899497487437188, 
       "R": 1.8972361809045226, 
@@ -7283,6 +7550,7 @@
   }, 
   "SHB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.09045226130653, 
       "R": 1.92286432160804, 
@@ -7305,10 +7573,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SHDB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.797, 
     "lon": -123.636, 
     "network": "ETS", 
@@ -7319,11 +7588,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SHMN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.7268844221105526, 
@@ -7357,6 +7627,7 @@
     }
   }, 
   "SHVB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.4723, 
     "lon": -123.636, 
     "network": "ETS", 
@@ -7367,11 +7638,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SHWN": {
     "badCompEvents": 0, 
+    "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.7087939698492463, 
@@ -7405,6 +7677,7 @@
     }
   }, 
   "SILB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.60198, 
     "lon": -123.28147, 
     "network": "POLARIS", 
@@ -7415,11 +7688,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SILO": {
     "badCompEvents": 10, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 38.19095477386935, 
       "R": 1.7344221105527637, 
@@ -7455,6 +7729,7 @@
   }, 
   "SJNN": {
     "badCompEvents": 15, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 36.4321608040201, 
       "R": 1.7193467336683417, 
@@ -7490,6 +7765,7 @@
   }, 
   "SLEB": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.386934673366834, 
       "R": 1.6695979899497486, 
@@ -7517,6 +7793,7 @@
   }, 
   "SMLN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 30.904522613065325, 
       "R": 1.9032663316582914, 
@@ -7552,6 +7829,7 @@
   }, 
   "SMPN": {
     "badCompEvents": 1, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 37.93969849246231, 
       "R": 1.714824120603015, 
@@ -7587,6 +7865,7 @@
   }, 
   "SNB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.775, 
     "lon": -123.1708, 
     "network": "CNSN", 
@@ -7600,11 +7879,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SNKN": {
     "badCompEvents": 2, 
+    "geoprov": "Churchill Province", 
     "lat": 56.53624, 
     "lon": -79.23153, 
     "network": "POLARIS", 
@@ -7623,6 +7903,7 @@
   }, 
   "SNLN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 42.71356783919598, 
       "R": 1.7178391959798993, 
@@ -7658,6 +7939,7 @@
   }, 
   "SNPN": {
     "badCompEvents": 4, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.69346733668342, 
       "R": 1.7419597989949749, 
@@ -7693,6 +7975,7 @@
   }, 
   "SNQN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 49.246231155778894, 
       "R": 1.7540201005025124, 
@@ -7727,6 +8010,7 @@
     }
   }, 
   "SOKB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.3947, 
     "lon": -123.67314, 
     "network": "ETS", 
@@ -7737,10 +8021,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SPLB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.8921, 
     "lon": -125.6526, 
     "network": "ETS", 
@@ -7751,11 +8036,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SRLN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 37.311557788944725, 
       "R": 1.7208542713567838, 
@@ -7790,6 +8076,7 @@
     }
   }, 
   "SSIB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.75577, 
     "lon": -123.38748, 
     "network": "POLARIS", 
@@ -7800,11 +8087,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "SSNO": {
     "badCompEvents": 0, 
+    "geoprov": "Southern Province", 
     "lat": 46.4715, 
     "lon": -81.187, 
     "network": "POLARIS", 
@@ -7818,11 +8106,12 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "STCO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.2084, 
     "lon": -79.1708, 
     "network": "POLARIS", 
@@ -7841,6 +8130,7 @@
   }, 
   "STLN": {
     "badCompEvents": 1, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 37.93969849246231, 
       "R": 1.7238693467336683, 
@@ -7876,6 +8166,7 @@
   }, 
   "SULB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.30653266331658, 
       "R": 1.701256281407035, 
@@ -7898,11 +8189,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "SUNO": {
     "badCompEvents": 13, 
+    "geoprov": "Southern Province", 
     "hk": {
       "H": 35.80402010050251, 
       "R": 1.7479899497487437, 
@@ -7933,11 +8225,12 @@
       "H": 45.0, 
       "R": 1.775811209439528, 
       "Vp": 6.622, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "TALB": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 28.894472361809044, 
       "R": 1.65, 
@@ -7960,10 +8253,11 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "TASB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.9266, 
     "lon": -126.6513, 
     "network": "ETS", 
@@ -7974,10 +8268,11 @@
       "H": 32.0, 
       "R": 1.7891937290033595, 
       "Vp": 6.391, 
-      "type": "Margin /shield transition, Eas"
+      "type": "Margin /shield transition, East Siberia"
     }
   }, 
   "TFRB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.93322, 
     "lon": -124.6363, 
     "network": "ETS", 
@@ -7988,10 +8283,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "THAB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.28, 
     "lon": -124.9184, 
     "network": "ETS", 
@@ -8002,11 +8298,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "THMB": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.633165829145728, 
       "R": 1.7389447236180904, 
@@ -8029,11 +8326,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "TIGG": {
     "badCompEvents": 0, 
+    "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.32663316582915, 
       "R": 1.7781407035175878, 
@@ -8068,6 +8366,7 @@
     }
   }, 
   "TLCB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.546, 
     "lon": -126.8324, 
     "network": "ETS", 
@@ -8078,11 +8377,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "TOBO": {
     "badCompEvents": 8, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 38.94472361809045, 
       "R": 1.800753768844221, 
@@ -8113,10 +8413,11 @@
       "H": 45.5, 
       "R": 1.777087273709808, 
       "Vp": 6.577, 
-      "type": "early/mid Proter. shield, Finl"
+      "type": "early/mid Proter. shield, Finland"
     }
   }, 
   "TOFB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 49.154317, 
     "lon": -125.907817, 
     "network": "ETS", 
@@ -8127,11 +8428,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "TORO": {
     "badCompEvents": 1, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.61363, 
     "lon": -79.3433, 
     "network": "POLARIS", 
@@ -8149,6 +8451,7 @@
     }
   }, 
   "TSJB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.60128, 
     "lon": -123.98852, 
     "network": "POLARIS", 
@@ -8159,7 +8462,7 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "TULEG": {
@@ -8190,6 +8493,7 @@
     }
   }, 
   "TWGB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.60757, 
     "lon": -124.25585, 
     "network": "POLARIS", 
@@ -8200,10 +8504,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "TWKB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.64485, 
     "lon": -123.7332, 
     "network": "POLARIS", 
@@ -8214,11 +8519,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "TYNO": {
     "badCompEvents": 3, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.959798994974875, 
       "R": 1.772110552763819, 
@@ -8254,6 +8560,7 @@
   }, 
   "UBRB": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.18090452261306, 
       "R": 1.7494974874371858, 
@@ -8276,11 +8583,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "ULM": {
     "badCompEvents": 19, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 34.67336683417085, 
       "R": 1.7238693467336683, 
@@ -8316,6 +8624,7 @@
   }, 
   "ULM2": {
     "badCompEvents": 0, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 34.42211055276382, 
       "R": 1.7314070351758792, 
@@ -8361,6 +8670,7 @@
   }, 
   "UWOO": {
     "badCompEvents": 0, 
+    "geoprov": "St. Lawrence Platform", 
     "lat": 43.011, 
     "lon": -81.2724, 
     "network": "POLARIS", 
@@ -8379,6 +8689,7 @@
   }, 
   "VABQ": {
     "badCompEvents": 41, 
+    "geoprov": "Grenville Province", 
     "hk": {
       "H": 41.70854271356784, 
       "R": 1.7374371859296482, 
@@ -8414,6 +8725,7 @@
   }, 
   "VDBQ": {
     "badCompEvents": 18, 
+    "geoprov": "Grenville Province", 
     "lat": 45.92769, 
     "lon": -75.56966, 
     "network": "CNSN", 
@@ -8431,6 +8743,7 @@
     }
   }, 
   "VGZ": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.4139, 
     "lon": -123.3244, 
     "network": "CNSN", 
@@ -8441,10 +8754,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "VIB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 53.2522, 
     "lon": -132.5406, 
     "network": "CNSN", 
@@ -8460,6 +8774,7 @@
   }, 
   "VIMO": {
     "badCompEvents": 15, 
+    "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 40.95477386934674, 
       "R": 1.8309045226130654, 
@@ -8495,6 +8810,7 @@
   }, 
   "VLDQ": {
     "badCompEvents": 10, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 36.05527638190955, 
       "R": 1.7525125628140703, 
@@ -8530,6 +8846,7 @@
   }, 
   "VTIN": {
     "badCompEvents": 0, 
+    "geoprov": "Bear Province", 
     "hk": {
       "H": 25.87939698492462, 
       "R": 1.6635678391959798, 
@@ -8557,6 +8874,7 @@
   }, 
   "WAGN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 32.663316582914575, 
       "R": 1.7374371859296482, 
@@ -8592,6 +8910,7 @@
   }, 
   "WALA": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.386934673366834, 
       "R": 1.7706030150753769, 
@@ -8619,6 +8938,7 @@
   }, 
   "WAPA": {
     "badCompEvents": 1, 
+    "geoprov": "Interior Platform", 
     "hk": {
       "H": 41.959798994974875, 
       "R": 1.785678391959799, 
@@ -8646,6 +8966,7 @@
   }, 
   "WBHL": {
     "badCompEvents": 1, 
+    "geoprov": "Grenville Province", 
     "lat": 52.90296, 
     "lon": -66.86634, 
     "network": "POLARIS", 
@@ -8664,6 +8985,7 @@
   }, 
   "WEMQ": {
     "badCompEvents": 6, 
+    "geoprov": "Superior Province", 
     "lat": 53.0535, 
     "lon": -77.9737, 
     "network": "POLARIS", 
@@ -8682,6 +9004,7 @@
   }, 
   "WHFN": {
     "badCompEvents": 3, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 45.60301507537689, 
       "R": 1.7660804020100502, 
@@ -8717,6 +9040,7 @@
   }, 
   "WHY": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.4321608040201, 
       "R": 1.7841708542713568, 
@@ -8751,6 +9075,7 @@
     }
   }, 
   "WISB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.1265, 
     "lon": -122.9212, 
     "network": "CNSN", 
@@ -8761,11 +9086,12 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "WLVO": {
     "badCompEvents": 1, 
+    "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.33165829145729, 
       "R": 1.729899497487437, 
@@ -8801,6 +9127,7 @@
   }, 
   "WSLR": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.7178391959798993, 
@@ -8823,10 +9150,11 @@
       "H": 40.0, 
       "R": 1.7717508055853919, 
       "Vp": 6.598, 
-      "type": "continental arc, Southern Ande"
+      "type": "continental arc, Southern Andes"
     }
   }, 
   "WTRB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 50.12979, 
     "lon": -126.03526, 
     "network": "ETS", 
@@ -8837,11 +9165,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YBKN": {
     "badCompEvents": 5, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 35.050251256281406, 
       "R": 1.728391959798995, 
@@ -8877,6 +9206,7 @@
   }, 
   "YKW1": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 37.93969849246231, 
       "R": 1.7555276381909546, 
@@ -8904,6 +9234,7 @@
   }, 
   "YKW2": {
     "badCompEvents": 3, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 35.552763819095475, 
       "R": 1.8052763819095476, 
@@ -8939,6 +9270,7 @@
   }, 
   "YKW3": {
     "badCompEvents": 1102, 
+    "geoprov": "Slave Province", 
     "lat": 62.49322, 
     "lon": -114.60528, 
     "network": "CNSN", 
@@ -8957,6 +9289,7 @@
   }, 
   "YKW4": {
     "badCompEvents": 7, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 37.814070351758794, 
       "R": 1.699748743718593, 
@@ -8992,6 +9325,7 @@
   }, 
   "YKW5": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 33.417085427135675, 
       "R": 1.8685929648241206, 
@@ -9027,6 +9361,7 @@
   }, 
   "YMBN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 36.55778894472362, 
       "R": 1.7268844221105526, 
@@ -9062,6 +9397,7 @@
   }, 
   "YNEN": {
     "badCompEvents": 0, 
+    "geoprov": "Slave Province", 
     "hk": {
       "H": 38.5678391959799, 
       "R": 1.7314070351758792, 
@@ -9097,6 +9433,7 @@
   }, 
   "YOSQ": {
     "badCompEvents": 10, 
+    "geoprov": "Superior Province", 
     "hk": {
       "H": 39.07035175879397, 
       "R": 1.7238693467336683, 
@@ -9131,6 +9468,7 @@
     }
   }, 
   "YOUB": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 48.90095, 
     "lon": -124.26183, 
     "network": "CNSN", 
@@ -9141,11 +9479,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YRTN": {
     "badCompEvents": 0, 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.80904522613065, 
       "R": 1.7359296482412059, 
@@ -9181,6 +9520,7 @@
   }, 
   "YUK1": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 40.32663316582915, 
       "R": 1.65, 
@@ -9211,11 +9551,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YUK2": {
     "badCompEvents": 1, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 45.22613065326633, 
       "R": 1.701256281407035, 
@@ -9246,11 +9587,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YUK3": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 34.04522613065326, 
       "R": 1.758542713567839, 
@@ -9281,10 +9623,11 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YUK4": {
+    "geoprov": "Cordilleran Orogen", 
     "lat": 61.4348, 
     "lon": -138.5463, 
     "network": "CNSN", 
@@ -9295,11 +9638,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YUK5": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 37.93969849246231, 
       "R": 1.65, 
@@ -9335,6 +9679,7 @@
   }, 
   "YUK6": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 28.266331658291456, 
       "R": 1.7163316582914572, 
@@ -9365,11 +9710,12 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }, 
   "YUK7": {
     "badCompEvents": 0, 
+    "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.256281407035175, 
       "R": 1.8128140703517588, 
@@ -9400,7 +9746,7 @@
       "H": 34.0, 
       "R": 1.7712435932020503, 
       "Vp": 6.566, 
-      "type": "thin continental arc, Cordille"
+      "type": "thin continental arc, Cordilleras"
     }
   }
 }
