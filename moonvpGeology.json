@@ -1,0 +1,6852 @@
+{
+  "100": {
+    "H": 30.39, 
+    "Vp": 6.360605462323132, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 53.01, 
+    "lon": -128.5, 
+    "lower": 488.3, 
+    "upper": 199.6
+  }, 
+  "101": {
+    "H": 51.2, 
+    "Vp": 6.6416015625, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.0, 
+    "lon": -125.0, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "102": {
+    "H": 35.6, 
+    "Vp": 6.325842696629214, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 53.01, 
+    "lon": -123.19, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "103": {
+    "H": 37.5, 
+    "Vp": 6.308800000000001, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 53.02, 
+    "lon": -122.43, 
+    "lower": 251, 
+    "upper": 145.5
+  }, 
+  "104": {
+    "H": 43.4, 
+    "Vp": 6.405990783410139, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.3, 
+    "lon": -113.61, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "105": {
+    "H": 46.0, 
+    "Vp": 6.490913043478261, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.5, 
+    "lon": -112.75, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "106": {
+    "H": 44.0, 
+    "Vp": 6.575, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.2, 
+    "lon": -112.58, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "107": {
+    "H": 47.3, 
+    "Vp": 6.593488372093024, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.0, 
+    "lon": -112.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "108": {
+    "H": 47.5, 
+    "Vp": 6.465684210526316, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.5, 
+    "lon": -111.85, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "1087": {
+    "H": 8.94, 
+    "Vp": 6.058277404921701, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 49.58, 
+    "lon": -130.5, 
+    "lower": 2.58, 
+    "upper": 2.588
+  }, 
+  "1089": {
+    "H": 7.13, 
+    "Vp": 5.6425245441795235, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 49.5, 
+    "lon": -130.0, 
+    "lower": 2.58, 
+    "upper": 2.588
+  }, 
+  "109": {
+    "H": 48.2, 
+    "Vp": 6.590477178423235, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.0, 
+    "lon": -109.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "11": {
+    "H": 48.5, 
+    "Vp": 6.601030927835052, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.48, 
+    "lon": -111.29, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "110": {
+    "H": 34.0, 
+    "Vp": 6.509705882352941, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.1, 
+    "lon": -96.5, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "111": {
+    "H": 38.6, 
+    "Vp": 6.568134715025906, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.0, 
+    "lon": -94.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "112": {
+    "H": 31.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 52.93, 
+    "lon": -92.04, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "114": {
+    "H": 38.0, 
+    "Vp": 6.41578947368421, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 59.58, 
+    "lon": -135.25, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "1144": {
+    "H": 5.98, 
+    "Vp": 5.511137123745819, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 54.43, 
+    "lon": -136.07, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "1145": {
+    "H": 6.53, 
+    "Vp": 5.469846860643185, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 53.97, 
+    "lon": -135.92, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "1146": {
+    "H": 6.97, 
+    "Vp": 5.289311334289814, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 54.53, 
+    "lon": -135.63, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "1147": {
+    "H": 8.96, 
+    "Vp": 5.360167410714285, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 54.63, 
+    "lon": -135.32, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "115": {
+    "H": 26.46, 
+    "Vp": 6.462207105064248, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 54.74, 
+    "lon": -132.76, 
+    "lower": 488.3, 
+    "upper": 416
+  }, 
+  "1150": {
+    "H": 9.27, 
+    "Vp": 4.996472491909385, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 54.65, 
+    "lon": -134.88, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "1151": {
+    "H": 11.58, 
+    "Vp": 5.772927461139897, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 53.4, 
+    "lon": -133.9, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "11612": {
+    "H": 6.69, 
+    "Vp": 5.381240657698056, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 53.87, 
+    "lon": -136.36, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "11613": {
+    "H": 6.37, 
+    "Vp": 5.555588697017269, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 54.07, 
+    "lon": -135.48, 
+    "lower": 23, 
+    "upper": 5.33
+  }, 
+  "1176": {
+    "H": 12.33, 
+    "Vp": 5.301200324412003, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 58.33, 
+    "lon": -140.05, 
+    "lower": 33.9, 
+    "upper": 23
+  }, 
+  "120": {
+    "H": 33.8, 
+    "Vp": 6.296449704142012, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.4, 
+    "lon": -114.83, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12059": {
+    "H": 36.0, 
+    "Vp": 6.305833333333333, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.51, 
+    "lon": -76.55, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "12060": {
+    "H": 36.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.51, 
+    "lon": -76.55, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "12061": {
+    "H": 47.5, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.51, 
+    "lon": -76.55, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "121": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 66.0, 
+    "lon": -135.0, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "122": {
+    "H": 37.8, 
+    "Vp": 6.12063492063492, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 78.0, 
+    "lon": -98.0, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "12349": {
+    "H": 35.0, 
+    "Vp": 6.594285714285714, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.51, 
+    "lon": -73.67, 
+    "lower": 1400, 
+    "upper": 1000
+  }, 
+  "12350": {
+    "H": 35.0, 
+    "Vp": 6.542857142857143, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.14, 
+    "lon": -74.68, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12353": {
+    "H": 40.0, 
+    "Vp": 6.55, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 44.84, 
+    "lon": -64.29, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "12354": {
+    "H": 40.0, 
+    "Vp": 6.525, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.93, 
+    "lon": -72.95, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "12355": {
+    "H": 45.3, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.93, 
+    "lon": -72.95, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "12356": {
+    "H": 35.0, 
+    "Vp": 6.399999999999999, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.26, 
+    "lon": -74.65, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12370": {
+    "H": 41.0, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.75, 
+    "lon": -65.16, 
+    "lower": 1000, 
+    "upper": 542
+  }, 
+  "12402": {
+    "H": 41.0, 
+    "Vp": 6.6, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.76, 
+    "lon": -111.52, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12403": {
+    "H": 33.0, 
+    "Vp": 6.6, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.22, 
+    "lon": -113.35, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12486": {
+    "H": 35.0, 
+    "Vp": 6.380000000000001, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 44.23, 
+    "lon": -77.24, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "12495": {
+    "H": 39.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.25, 
+    "lon": -94.75, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12505": {
+    "H": 45.6, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.25, 
+    "lon": -84.75, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "12509": {
+    "H": 45.8, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 43.25, 
+    "lon": -81.75, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "12513": {
+    "H": 38.8, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.25, 
+    "lon": -73.75, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12515": {
+    "H": 40.0, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 44.5, 
+    "lon": -80.5, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12615": {
+    "H": 36.9, 
+    "Vp": 6.510054200542006, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.93, 
+    "lon": -75.12, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12617": {
+    "H": 37.9, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.93, 
+    "lon": -75.12, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12643": {
+    "H": 32.0, 
+    "Vp": 6.275, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.31, 
+    "lon": -71.38, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "12645": {
+    "H": 35.3, 
+    "Vp": 6.6, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.5, 
+    "lon": -74.73, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12662": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.87, 
+    "lon": -78.9, 
+    "lower": 2500, 
+    "upper": 1600
+  }, 
+  "12668": {
+    "H": 35.0, 
+    "Vp": 6.4637142857142855, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.31, 
+    "lon": -71.38, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "12669": {
+    "H": 41.31, 
+    "Vp": 6.659501331396757, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 48.12, 
+    "lon": -71.18, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "12672": {
+    "H": 39.2, 
+    "Vp": 6.9195408163265295, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 43.52, 
+    "lon": -73.05, 
+    "lower": 488.3, 
+    "upper": 443.7
+  }, 
+  "12674": {
+    "H": 38.1, 
+    "Vp": 6.695406824146982, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.66, 
+    "lon": -70.24, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "12676": {
+    "H": 32.7, 
+    "Vp": 6.523669724770642, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 44.74, 
+    "lon": -67.49, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "12678": {
+    "H": 40.6, 
+    "Vp": 6.794334975369457, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.7, 
+    "lon": -75.48, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "12679": {
+    "H": 43.3, 
+    "Vp": 6.524249422632796, 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.85, 
+    "lon": -64.81, 
+    "lower": 1000, 
+    "upper": 542
+  }, 
+  "12680": {
+    "H": 35.0, 
+    "Vp": 6.242857142857142, 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 68.31, 
+    "lon": -133.52, 
+    "lower": 1200, 
+    "upper": 542
+  }, 
+  "12681": {
+    "H": 44.5, 
+    "Vp": 6.7921348314606735, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 48.65, 
+    "lon": -123.45, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "12682": {
+    "H": 37.0, 
+    "Vp": 6.322702702702703, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.22, 
+    "lon": -113.35, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12683": {
+    "H": 37.0, 
+    "Vp": 6.232162162162162, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.22, 
+    "lon": -113.35, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12731": {
+    "H": 37.0, 
+    "Vp": 6.52, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.73, 
+    "lon": -95.59, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12732": {
+    "H": 33.1, 
+    "Vp": 6.428640483383686, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.76, 
+    "lon": -96.3, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12733": {
+    "H": 33.4, 
+    "Vp": 6.3532934131736525, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.42, 
+    "lon": -96.11, 
+    "lower": 3200, 
+    "upper": 2800
+  }, 
+  "12734": {
+    "H": 30.9, 
+    "Vp": 6.313398058252428, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.52, 
+    "lon": -96.88, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12735": {
+    "H": 36.8, 
+    "Vp": 6.347826086956522, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.93, 
+    "lon": -95.85, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12736": {
+    "H": 37.0, 
+    "Vp": 6.39545945945946, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.8, 
+    "lon": -96.52, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12737": {
+    "H": 31.2, 
+    "Vp": 6.363076923076923, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.07, 
+    "lon": -97.35, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12738": {
+    "H": 31.1, 
+    "Vp": 6.438199356913183, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.74, 
+    "lon": -98.0, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12739": {
+    "H": 33.6, 
+    "Vp": 6.482857142857142, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.72, 
+    "lon": -97.25, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12740": {
+    "H": 30.0, 
+    "Vp": 6.4816, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.24, 
+    "lon": -98.33, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12741": {
+    "H": 30.95, 
+    "Vp": 6.430549273021002, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 53.5, 
+    "lon": -96.81, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12742": {
+    "H": 32.44, 
+    "Vp": 6.541750924784218, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.23, 
+    "lon": -98.59, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12743": {
+    "H": 32.55, 
+    "Vp": 6.474086021505377, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.49, 
+    "lon": -98.41, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12744": {
+    "H": 33.45, 
+    "Vp": 6.488505231689087, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.98, 
+    "lon": -97.88, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "12745": {
+    "H": 33.85, 
+    "Vp": 6.500457902511078, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.42, 
+    "lon": -95.6, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12746": {
+    "H": 30.95, 
+    "Vp": 6.452714054927302, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.46, 
+    "lon": -100.1, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12747": {
+    "H": 31.65, 
+    "Vp": 6.430979462875197, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.28, 
+    "lon": -100.78, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12748": {
+    "H": 31.35, 
+    "Vp": 6.439760765550238, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.58, 
+    "lon": -100.05, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12749": {
+    "H": 34.95, 
+    "Vp": 6.397353361945636, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.09, 
+    "lon": -98.35, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12750": {
+    "H": 35.45, 
+    "Vp": 6.417390691114245, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.08, 
+    "lon": -99.2, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12751": {
+    "H": 34.05, 
+    "Vp": 6.434552129221733, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.93, 
+    "lon": -99.83, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12752": {
+    "H": 31.65, 
+    "Vp": 6.413254344391785, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.33, 
+    "lon": -100.92, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12753": {
+    "H": 34.0, 
+    "Vp": 6.474705882352941, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 52.5, 
+    "lon": -97.0, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "12789": {
+    "H": 40.0, 
+    "Vp": 6.546875, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.48, 
+    "lon": -67.81, 
+    "lower": 488.3, 
+    "upper": 416
+  }, 
+  "12790": {
+    "H": 50.0, 
+    "Vp": 6.630400000000001, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.01, 
+    "lon": -74.46, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12791": {
+    "H": 54.0, 
+    "Vp": 6.662037037037037, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.06, 
+    "lon": -74.86, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12793": {
+    "H": 36.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.55, 
+    "lon": -74.53, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "12794": {
+    "H": 44.0, 
+    "Vp": 6.542727272727274, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.44, 
+    "lon": -93.43, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12795": {
+    "H": 42.0, 
+    "Vp": 6.244999999999998, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.18, 
+    "lon": -94.21, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12797": {
+    "H": 44.0, 
+    "Vp": 6.52840909090909, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.93, 
+    "lon": -114.59, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "12798": {
+    "H": 40.0, 
+    "Vp": 6.468500000000002, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.73, 
+    "lon": -115.14, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12799": {
+    "H": 38.0, 
+    "Vp": 6.324736842105263, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.83, 
+    "lon": -115.35, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12800": {
+    "H": 38.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.92, 
+    "lon": -115.56, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12801": {
+    "H": 40.0, 
+    "Vp": 6.4475, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 46.89, 
+    "lon": -71.28, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "12809": {
+    "H": 39.4, 
+    "Vp": 6.536040609137056, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 45.5, 
+    "lon": -75.46, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "12810": {
+    "H": 46.0, 
+    "Vp": 6.63195652173913, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.06, 
+    "lon": -67.19, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "12817": {
+    "H": 24.0, 
+    "Vp": 5.166666666666667, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 44.69, 
+    "lon": -56.51, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "12818": {
+    "H": 16.0, 
+    "Vp": 5.453125, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 44.69, 
+    "lon": -55.62, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "12826": {
+    "H": 37.1, 
+    "Vp": 6.033423180592992, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.72, 
+    "lon": -101.98, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12827": {
+    "H": 37.2, 
+    "Vp": 6.264381720430107, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.9, 
+    "lon": -103.37, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12828": {
+    "H": 42.2, 
+    "Vp": 6.587582938388625, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.58, 
+    "lon": -103.61, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "12829": {
+    "H": 40.2, 
+    "Vp": 6.01818407960199, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.3, 
+    "lon": -104.69, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "12830": {
+    "H": 42.3, 
+    "Vp": 6.033829787234042, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.09, 
+    "lon": -102.8, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12831": {
+    "H": 43.95, 
+    "Vp": 6.320898748577929, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.42, 
+    "lon": -104.58, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "12832": {
+    "H": 44.6, 
+    "Vp": 6.516255605381166, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.59, 
+    "lon": -104.68, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "12833": {
+    "H": 46.6, 
+    "Vp": 6.247457081545065, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.9, 
+    "lon": -103.93, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12834": {
+    "H": 42.8, 
+    "Vp": 6.333084112149534, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.14, 
+    "lon": -106.69, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "12835": {
+    "H": 38.1, 
+    "Vp": 6.222440944881889, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.04, 
+    "lon": -105.29, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "12836": {
+    "H": 40.7, 
+    "Vp": 6.172800982800982, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.18, 
+    "lon": -105.4, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "12837": {
+    "H": 38.5, 
+    "Vp": 6.159506493506493, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.82, 
+    "lon": -102.23, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12838": {
+    "H": 46.6, 
+    "Vp": 6.32049356223176, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.34, 
+    "lon": -106.37, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "12839": {
+    "H": 47.5, 
+    "Vp": 6.375378947368421, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.26, 
+    "lon": -106.06, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "12840": {
+    "H": 52.0, 
+    "Vp": 6.384653846153846, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.23, 
+    "lon": -104.09, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12841": {
+    "H": 42.1, 
+    "Vp": 6.277909738717339, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.72, 
+    "lon": -102.59, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12842": {
+    "H": 39.4, 
+    "Vp": 5.986738578680203, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.29, 
+    "lon": -104.44, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12843": {
+    "H": 47.6, 
+    "Vp": 6.234138655462185, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.2, 
+    "lon": -106.4, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12844": {
+    "H": 41.5, 
+    "Vp": 5.990361445783133, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.85, 
+    "lon": -104.34, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "12847": {
+    "H": 42.0, 
+    "Vp": 6.585714285714285, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.94, 
+    "lon": -75.38, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12849": {
+    "H": 35.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.14, 
+    "lon": -74.68, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "12910": {
+    "H": 35.2, 
+    "Vp": 6.302130681818181, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.18, 
+    "lon": -79.31, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12912": {
+    "H": 38.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.18, 
+    "lon": -79.31, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12919": {
+    "H": 42.2, 
+    "Vp": 6.547796208530805, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.18, 
+    "lon": -79.31, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12920": {
+    "H": 72.6, 
+    "Vp": 7.181005509641874, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.18, 
+    "lon": -79.31, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "12950": {
+    "H": 38.0, 
+    "Vp": 6.57, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 43.28, 
+    "lon": -79.12, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "12951": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 44.94, 
+    "lon": -75.66, 
+    "lower": 488.3, 
+    "upper": 471.8
+  }, 
+  "12952": {
+    "H": 35.0, 
+    "Vp": 6.57, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 45.05, 
+    "lon": -73.59, 
+    "lower": 488.3, 
+    "upper": 471.8
+  }, 
+  "12953": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "era": "precambrian", 
+    "geoprov": "Province de Grenville", 
+    "lat": 46.67, 
+    "lon": -70.84, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "12954": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.37, 
+    "lon": -66.85, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "12955": {
+    "H": 42.0, 
+    "Vp": 6.57, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.84, 
+    "lon": -77.65, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "12956": {
+    "H": 35.0, 
+    "Vp": 6.507571428571428, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.84, 
+    "lon": -75.02, 
+    "lower": 1800, 
+    "upper": 1000
+  }, 
+  "12957": {
+    "H": 40.3, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.74, 
+    "lon": -95.18, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "13056": {
+    "H": 40.0, 
+    "Vp": 6.2, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 52.0, 
+    "lon": -60.0, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "13072": {
+    "H": 43.0, 
+    "Vp": 6.24186046511628, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.91, 
+    "lon": -65.93, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "13073": {
+    "H": 35.0, 
+    "Vp": 6.228571428571429, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 62.07, 
+    "lon": -94.31, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "13074": {
+    "H": 38.0, 
+    "Vp": 6.2631578947368425, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 77.81, 
+    "lon": -92.2, 
+    "lower": 99.6, 
+    "upper": 83.5
+  }, 
+  "13075": {
+    "H": 44.0, 
+    "Vp": 6.570454545454545, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.97, 
+    "lon": -107.66, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "13076": {
+    "H": 30.0, 
+    "Vp": 5.92, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.75, 
+    "lon": -123.69, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "13090": {
+    "H": 42.7, 
+    "Vp": 6.690854800936767, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.95, 
+    "lon": -70.71, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "13091": {
+    "H": 41.1, 
+    "Vp": 6.659099756690996, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.8, 
+    "lon": -70.57, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "13105": {
+    "H": 37.0, 
+    "Vp": 6.355675675675675, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.39, 
+    "lon": -92.45, 
+    "lower": 3200, 
+    "upper": 2800
+  }, 
+  "13106": {
+    "H": 37.3, 
+    "Vp": 6.239839142091153, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.34, 
+    "lon": -91.34, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "1408": {
+    "H": 50.0, 
+    "Vp": 6.5249999999999995, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.0, 
+    "lon": -118.2, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "1409": {
+    "H": 44.0, 
+    "Vp": 6.494318181818182, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.67, 
+    "lon": -117.3, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "1410": {
+    "H": 50.0, 
+    "Vp": 6.5249999999999995, 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 52.0, 
+    "lon": -119.0, 
+    "lower": 1000, 
+    "upper": 542
+  }, 
+  "1415": {
+    "H": 32.0, 
+    "Vp": 6.05, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 71.4, 
+    "lon": -72.5, 
+    "lower": 2800, 
+    "upper": 1600
+  }, 
+  "1416": {
+    "H": 17.0, 
+    "Vp": 5.338470588235293, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 71.55, 
+    "lon": -70.75, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "1417": {
+    "H": 13.0, 
+    "Vp": 5.4048461538461545, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 71.6, 
+    "lon": -70.25, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "1418": {
+    "H": 11.8, 
+    "Vp": 5.731694915254236, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 71.7, 
+    "lon": -69.3, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "1419": {
+    "H": 8.5, 
+    "Vp": 4.7737058823529415, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 72.0, 
+    "lon": -68.65, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "1420": {
+    "H": 8.5, 
+    "Vp": 4.777411764705882, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 71.93, 
+    "lon": -66.3, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "1430": {
+    "H": 12.0, 
+    "Vp": 6.335000000000001, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 49.5, 
+    "lon": -130.33, 
+    "lower": 2.58, 
+    "upper": 2.588
+  }, 
+  "1443": {
+    "H": 50.0, 
+    "Vp": 0.0, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.7, 
+    "lon": -125.5, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "1446": {
+    "H": 36.0, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.3, 
+    "lon": -118.6, 
+    "lower": 1000, 
+    "upper": 253.8
+  }, 
+  "1449": {
+    "H": 33.0, 
+    "Vp": 0.0, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 52.6, 
+    "lon": -122.0, 
+    "lower": 251, 
+    "upper": 145.5
+  }, 
+  "1476": {
+    "H": 48.3, 
+    "Vp": 6.437898550724639, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.91, 
+    "lon": -86.85, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "1508": {
+    "H": 6.7, 
+    "Vp": 5.658208955223881, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 50.15, 
+    "lon": -130.5, 
+    "lower": 5.33, 
+    "upper": 2.588
+  }, 
+  "1532": {
+    "H": 36.0, 
+    "Vp": 6.143575, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.0, 
+    "lon": -75.0, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "1569": {
+    "H": 35.0, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.33, 
+    "lon": -90.83, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "1570": {
+    "H": 35.0, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.0, 
+    "lon": -81.67, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "1571": {
+    "H": 35.0, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.0, 
+    "lon": -87.5, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "1572": {
+    "H": 32.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.67, 
+    "lon": -115.33, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "1573": {
+    "H": 38.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 49.33, 
+    "lon": -71.0, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "1574": {
+    "H": 43.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 51.67, 
+    "lon": -65.33, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "1575": {
+    "H": 35.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.0, 
+    "lon": -77.5, 
+    "lower": 2500, 
+    "upper": 1600
+  }, 
+  "1576": {
+    "H": 32.5, 
+    "Vp": 0.0, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.0, 
+    "lon": -101.0, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "1577": {
+    "H": 42.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 52.83, 
+    "lon": -77.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "1578": {
+    "H": 36.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.67, 
+    "lon": -66.33, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "1579": {
+    "H": 36.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 51.5, 
+    "lon": -72.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "1580": {
+    "H": 50.0, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 53.0, 
+    "lon": -66.5, 
+    "lower": 1800, 
+    "upper": 1600
+  }, 
+  "1581": {
+    "H": 38.57, 
+    "Vp": 6.816053927923257, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 50.5, 
+    "lon": -55.0, 
+    "lower": 359.2, 
+    "upper": 318.1
+  }, 
+  "1582": {
+    "H": 30.0, 
+    "Vp": 6.1, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 50.75, 
+    "lon": -57.25, 
+    "lower": 488.3, 
+    "upper": 471.8
+  }, 
+  "1583": {
+    "H": 32.3, 
+    "Vp": 6.598266253869969, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 48.83, 
+    "lon": -61.62, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "1584": {
+    "H": 43.43, 
+    "Vp": 6.505065622841354, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.75, 
+    "lon": -64.42, 
+    "lower": 318.1, 
+    "upper": 251.0
+  }, 
+  "1585": {
+    "H": 39.43, 
+    "Vp": 6.577504438244992, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.33, 
+    "lon": -61.0, 
+    "lower": 326.4, 
+    "upper": 318.1
+  }, 
+  "1586": {
+    "H": 55.71, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 49.25, 
+    "lon": -68.25, 
+    "lower": 1800, 
+    "upper": 1000
+  }, 
+  "1644": {
+    "H": 19.0, 
+    "Vp": 6.0, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 48.08, 
+    "lon": -123.12, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "1993": {
+    "H": 36.0, 
+    "Vp": 6.28, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.42, 
+    "lon": -73.94, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "1994": {
+    "H": 34.8, 
+    "Vp": 6.43, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.17, 
+    "lon": -75.06, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "1995": {
+    "H": 37.2, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.42, 
+    "lon": -73.94, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "2081": {
+    "H": 32.0, 
+    "Vp": 6.13, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.32, 
+    "lon": -119.62, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2150": {
+    "H": 46.0, 
+    "Vp": 6.470152173913043, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.48, 
+    "lon": -108.18, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2151": {
+    "H": 46.5, 
+    "Vp": 6.4855053763440855, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.5, 
+    "lon": -110.65, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2152": {
+    "H": 35.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.8, 
+    "lon": -89.94, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2153": {
+    "H": 32.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.75, 
+    "lon": -90.52, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2154": {
+    "H": 30.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.99, 
+    "lon": -91.4, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2155": {
+    "H": 28.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 53.86, 
+    "lon": -93.25, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2156": {
+    "H": 31.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.71, 
+    "lon": -93.84, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2157": {
+    "H": 32.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 55.54, 
+    "lon": -94.67, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "2158": {
+    "H": 34.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.52, 
+    "lon": -95.32, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2159": {
+    "H": 42.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 57.39, 
+    "lon": -96.4, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2160": {
+    "H": 41.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.15, 
+    "lon": -97.07, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2161": {
+    "H": 49.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.01, 
+    "lon": -98.03, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2162": {
+    "H": 45.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.68, 
+    "lon": -98.66, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "2163": {
+    "H": 34.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.21, 
+    "lon": -87.91, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2164": {
+    "H": 40.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.42, 
+    "lon": -85.82, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2165": {
+    "H": 40.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.04, 
+    "lon": -86.78, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2166": {
+    "H": 38.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.76, 
+    "lon": -85.22, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2167": {
+    "H": 33.0, 
+    "Vp": 6.3, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 50.09, 
+    "lon": -84.16, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "2168": {
+    "H": 26.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.55, 
+    "lon": -82.96, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2169": {
+    "H": 26.0, 
+    "Vp": 6.3, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.29, 
+    "lon": -81.07, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2186": {
+    "H": 38.1, 
+    "Vp": 6.293149606299213, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.37, 
+    "lon": -100.0, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "2187": {
+    "H": 40.3, 
+    "Vp": 6.368759305210918, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.05, 
+    "lon": -100.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2188": {
+    "H": 46.5, 
+    "Vp": 6.518881720430108, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.61, 
+    "lon": -100.67, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2189": {
+    "H": 47.8, 
+    "Vp": 6.433305439330544, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.62, 
+    "lon": -102.58, 
+    "lower": 65.5, 
+    "upper": 55.8
+  }, 
+  "2230": {
+    "H": 37.6, 
+    "Vp": 6.4695744680851055, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 50.95, 
+    "lon": -72.99, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2231": {
+    "H": 31.1, 
+    "Vp": 6.366623794212218, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.77, 
+    "lon": -76.46, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2232": {
+    "H": 34.9, 
+    "Vp": 6.3735243553008605, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.08, 
+    "lon": -73.94, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2233": {
+    "H": 37.7, 
+    "Vp": 6.377718832891246, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 49.73, 
+    "lon": -73.75, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2234": {
+    "H": 32.3, 
+    "Vp": 6.368978328173375, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.81, 
+    "lon": -70.84, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "2297": {
+    "H": 25.0, 
+    "Vp": 5.800000000000001, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 47.88, 
+    "lon": -123.86, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2299": {
+    "H": 30.0, 
+    "Vp": 5.95, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 47.88, 
+    "lon": -123.56, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2301": {
+    "H": 34.0, 
+    "Vp": 6.038235294117647, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 47.88, 
+    "lon": -123.27, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2381": {
+    "H": 13.26, 
+    "Vp": 4.936870286576169, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 57.05, 
+    "lon": -58.01, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2382": {
+    "H": 21.88, 
+    "Vp": 5.860676416819013, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 57.56, 
+    "lon": -58.94, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2383": {
+    "H": 22.32, 
+    "Vp": 5.473454301075269, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 58.68, 
+    "lon": -60.88, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2384": {
+    "H": 23.36, 
+    "Vp": 5.560616438356165, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 59.19, 
+    "lon": -61.38, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2385": {
+    "H": 22.8, 
+    "Vp": 5.214745614035087, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.58, 
+    "lon": -58.82, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2386": {
+    "H": 14.94, 
+    "Vp": 4.447008032128514, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.88, 
+    "lon": -59.16, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2387": {
+    "H": 21.23, 
+    "Vp": 5.020734809232218, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.88, 
+    "lon": -59.16, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2388": {
+    "H": 15.06, 
+    "Vp": 4.329707835325365, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 57.36, 
+    "lon": -59.73, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2391": {
+    "H": 8.92, 
+    "Vp": 5.2242152466367715, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 57.91, 
+    "lon": -55.74, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2392": {
+    "H": 6.86, 
+    "Vp": 4.612172011661808, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 58.29, 
+    "lon": -56.18, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "2393": {
+    "H": 9.37, 
+    "Vp": 4.4968516542155825, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 57.14, 
+    "lon": -56.98, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2394": {
+    "H": 10.49, 
+    "Vp": 4.628360343183985, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 57.75, 
+    "lon": -57.84, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2407": {
+    "H": 44.73, 
+    "Vp": 6.420905432595574, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.64, 
+    "lon": -70.36, 
+    "lower": 1600, 
+    "upper": 1200
+  }, 
+  "2408": {
+    "H": 43.0, 
+    "Vp": 6.822325581395349, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.65, 
+    "lon": -70.87, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "2409": {
+    "H": 41.5, 
+    "Vp": 6.692530120481928, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.61, 
+    "lon": -70.76, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "2414": {
+    "H": 30.6, 
+    "Vp": 6.031372549019608, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 63.5, 
+    "lon": -118.45, 
+    "lower": 416, 
+    "upper": 385.3
+  }, 
+  "2415": {
+    "H": 37.9, 
+    "Vp": 6.044591029023747, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 61.7, 
+    "lon": -113.04, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2416": {
+    "H": 34.5, 
+    "Vp": 6.039130434782608, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 60.63, 
+    "lon": -110.76, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2417": {
+    "H": 34.0, 
+    "Vp": 6.287999999999999, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.18, 
+    "lon": -114.22, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2424": {
+    "H": 48.1, 
+    "Vp": 6.546444906444907, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 52.7, 
+    "lon": -67.87, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2425": {
+    "H": 39.7, 
+    "Vp": 6.418539042821159, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 51.52, 
+    "lon": -71.11, 
+    "lower": 1800, 
+    "upper": 1000
+  }, 
+  "2426": {
+    "H": 44.1, 
+    "Vp": 6.602403628117914, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 51.48, 
+    "lon": -66.46, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "2427": {
+    "H": 41.8, 
+    "Vp": 6.66153110047847, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 50.0, 
+    "lon": -69.36, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "2428": {
+    "H": 38.1, 
+    "Vp": 6.586482939632546, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.49, 
+    "lon": -67.67, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2429": {
+    "H": 47.7, 
+    "Vp": 6.769601677148847, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 52.99, 
+    "lon": -72.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2430": {
+    "H": 29.2, 
+    "Vp": 6.335000000000002, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 52.4, 
+    "lon": -127.22, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "2431": {
+    "H": 28.3, 
+    "Vp": 6.28, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.48, 
+    "lon": -91.17, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2432": {
+    "H": 26.0, 
+    "Vp": 6.32, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.48, 
+    "lon": -91.17, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2433": {
+    "H": 26.4, 
+    "Vp": 6.33, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.48, 
+    "lon": -91.17, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2434": {
+    "H": 30.6, 
+    "Vp": 6.265882352941176, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.18, 
+    "lon": -90.18, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2435": {
+    "H": 29.4, 
+    "Vp": 6.304761904761906, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.18, 
+    "lon": -90.18, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2436": {
+    "H": 34.1, 
+    "Vp": 6.31674486803519, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 63.18, 
+    "lon": -90.18, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2446": {
+    "H": 34.8, 
+    "Vp": 6.26448275862069, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.37, 
+    "lon": -89.75, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2447": {
+    "H": 36.0, 
+    "Vp": 6.304444444444445, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.37, 
+    "lon": -89.75, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2448": {
+    "H": 39.4, 
+    "Vp": 6.315659898477158, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.37, 
+    "lon": -89.75, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2449": {
+    "H": 33.2, 
+    "Vp": 6.25722891566265, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.76, 
+    "lon": -88.83, 
+    "lower": 416, 
+    "upper": 397.5
+  }, 
+  "2450": {
+    "H": 34.2, 
+    "Vp": 6.2970760233918135, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.76, 
+    "lon": -88.83, 
+    "lower": 416, 
+    "upper": 397.5
+  }, 
+  "2451": {
+    "H": 37.9, 
+    "Vp": 6.309129287598945, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.76, 
+    "lon": -88.83, 
+    "lower": 416, 
+    "upper": 397.5
+  }, 
+  "2452": {
+    "H": 39.9, 
+    "Vp": 6.242105263157895, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.12, 
+    "lon": -88.17, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2453": {
+    "H": 41.9, 
+    "Vp": 6.282577565632459, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.12, 
+    "lon": -88.17, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2454": {
+    "H": 42.0, 
+    "Vp": 6.292333333333334, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 61.12, 
+    "lon": -88.17, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2455": {
+    "H": 39.4, 
+    "Vp": 6.230659898477158, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.56, 
+    "lon": -87.67, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2456": {
+    "H": 39.4, 
+    "Vp": 6.268832487309646, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.56, 
+    "lon": -87.67, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2457": {
+    "H": 42.5, 
+    "Vp": 6.2821411764705894, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.56, 
+    "lon": -87.67, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2465": {
+    "H": 36.5, 
+    "Vp": 6.226739726027398, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.01, 
+    "lon": -87.22, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2466": {
+    "H": 36.4, 
+    "Vp": 6.264615384615385, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.01, 
+    "lon": -87.22, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2467": {
+    "H": 39.7, 
+    "Vp": 6.2787657430730475, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 60.01, 
+    "lon": -87.22, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2468": {
+    "H": 33.7, 
+    "Vp": 6.219109792284866, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -86.44, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2469": {
+    "H": 32.8, 
+    "Vp": 6.255121951219513, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -86.44, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2470": {
+    "H": 35.0, 
+    "Vp": 6.268657142857143, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -86.44, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2471": {
+    "H": 37.2, 
+    "Vp": 6.277096774193549, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 55.23, 
+    "lon": -85.13, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2472": {
+    "H": 35.3, 
+    "Vp": 6.3168271954674236, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 55.23, 
+    "lon": -85.13, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2473": {
+    "H": 35.9, 
+    "Vp": 6.326852367688022, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 55.23, 
+    "lon": -85.13, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2474": {
+    "H": 41.3, 
+    "Vp": 6.28, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 58.79, 
+    "lon": -94.22, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "2475": {
+    "H": 40.9, 
+    "Vp": 6.32, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 58.79, 
+    "lon": -94.22, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "2476": {
+    "H": 40.4, 
+    "Vp": 6.33, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 58.79, 
+    "lon": -94.22, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "2477": {
+    "H": 38.2, 
+    "Vp": 6.257382198952879, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.08, 
+    "lon": -93.08, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2478": {
+    "H": 38.6, 
+    "Vp": 6.296787564766839, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.08, 
+    "lon": -93.08, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2479": {
+    "H": 40.9, 
+    "Vp": 6.3078973105134475, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.08, 
+    "lon": -93.08, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2480": {
+    "H": 32.2, 
+    "Vp": 6.243105590062112, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.19, 
+    "lon": -91.32, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2481": {
+    "H": 34.7, 
+    "Vp": 6.284495677233429, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.19, 
+    "lon": -91.32, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2482": {
+    "H": 38.1, 
+    "Vp": 6.29737532808399, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.19, 
+    "lon": -91.32, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2483": {
+    "H": 34.5, 
+    "Vp": 6.2142608695652175, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.33, 
+    "lon": -89.5, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2484": {
+    "H": 34.4, 
+    "Vp": 6.251627906976744, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.33, 
+    "lon": -89.5, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2485": {
+    "H": 38.2, 
+    "Vp": 6.267879581151832, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.33, 
+    "lon": -89.5, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "2486": {
+    "H": 37.4, 
+    "Vp": 6.216470588235294, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -87.62, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2487": {
+    "H": 37.9, 
+    "Vp": 6.254986807387864, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -87.62, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2488": {
+    "H": 41.1, 
+    "Vp": 6.269513381995134, 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.46, 
+    "lon": -87.62, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "2489": {
+    "H": 31.9, 
+    "Vp": 6.225830721003136, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.56, 
+    "lon": -85.64, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2490": {
+    "H": 35.2, 
+    "Vp": 6.269090909090909, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.56, 
+    "lon": -85.64, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2491": {
+    "H": 33.7, 
+    "Vp": 6.2763501483679525, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.56, 
+    "lon": -85.64, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2492": {
+    "H": 30.6, 
+    "Vp": 6.2305882352941175, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.65, 
+    "lon": -83.89, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2493": {
+    "H": 27.7, 
+    "Vp": 6.263393501805055, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.65, 
+    "lon": -83.89, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2494": {
+    "H": 34.9, 
+    "Vp": 6.284670487106018, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.65, 
+    "lon": -83.89, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "2541": {
+    "H": 29.0, 
+    "Vp": 6.2651034482758625, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.7, 
+    "lon": -82.09, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2542": {
+    "H": 28.1, 
+    "Vp": 6.30405693950178, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.7, 
+    "lon": -82.09, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2543": {
+    "H": 31.6, 
+    "Vp": 6.315696202531646, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 59.7, 
+    "lon": -82.09, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2544": {
+    "H": 38.2, 
+    "Vp": 6.28, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.8, 
+    "lon": -80.12, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2545": {
+    "H": 38.0, 
+    "Vp": 6.32, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.8, 
+    "lon": -80.12, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2546": {
+    "H": 36.8, 
+    "Vp": 6.33, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.8, 
+    "lon": -80.12, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "2547": {
+    "H": 41.0, 
+    "Vp": 6.28, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 60.07, 
+    "lon": -77.2, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2548": {
+    "H": 40.8, 
+    "Vp": 6.32, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 60.07, 
+    "lon": -77.2, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2549": {
+    "H": 39.6, 
+    "Vp": 6.33, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 60.07, 
+    "lon": -77.2, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "2550": {
+    "H": 34.0, 
+    "Vp": 6.270470588235295, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.19, 
+    "lon": -83.59, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2551": {
+    "H": 33.0, 
+    "Vp": 6.309818181818182, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.19, 
+    "lon": -83.59, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2552": {
+    "H": 31.3, 
+    "Vp": 6.319169329073483, 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "lat": 62.19, 
+    "lon": -83.59, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "2553": {
+    "H": 33.1, 
+    "Vp": 6.28, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 61.11, 
+    "lon": -94.08, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2554": {
+    "H": 32.2, 
+    "Vp": 6.32, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 61.11, 
+    "lon": -94.08, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2555": {
+    "H": 30.1, 
+    "Vp": 6.33, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 61.11, 
+    "lon": -94.08, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "2556": {
+    "H": 35.2, 
+    "Vp": 6.305767045454546, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.09, 
+    "lon": -118.94, 
+    "lower": 416, 
+    "upper": 318.1
+  }, 
+  "2557": {
+    "H": 28.2, 
+    "Vp": 6.006382978723403, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 52.43, 
+    "lon": -122.55, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2558": {
+    "H": 28.1, 
+    "Vp": 6.006049822064057, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 52.43, 
+    "lon": -122.55, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "2559": {
+    "H": 30.5, 
+    "Vp": 6.027868852459017, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.61, 
+    "lon": -121.23, 
+    "lower": 251, 
+    "upper": 145.5
+  }, 
+  "2560": {
+    "H": 31.2, 
+    "Vp": 6.029487179487179, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.61, 
+    "lon": -121.23, 
+    "lower": 251, 
+    "upper": 145.5
+  }, 
+  "2561": {
+    "H": 30.4, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.61, 
+    "lon": -120.15, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "2562": {
+    "H": 34.0, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.61, 
+    "lon": -120.15, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "2563": {
+    "H": 32.0, 
+    "Vp": 6.06, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.39, 
+    "lon": -119.44, 
+    "lower": 251, 
+    "upper": 145.5
+  }, 
+  "2564": {
+    "H": 33.0, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.09, 
+    "lon": -120.26, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "2565": {
+    "H": 32.5, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.09, 
+    "lon": -120.26, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "2566": {
+    "H": 26.0, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.35, 
+    "lon": -122.24, 
+    "lower": 161.2, 
+    "upper": 145.5
+  }, 
+  "2567": {
+    "H": 28.0, 
+    "Vp": 6.1, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.35, 
+    "lon": -122.24, 
+    "lower": 161.2, 
+    "upper": 145.5
+  }, 
+  "2582": {
+    "H": 48.7, 
+    "Vp": 6.545318275154004, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.67, 
+    "lon": -104.82, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2583": {
+    "H": 46.7, 
+    "Vp": 6.677773019271948, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.96, 
+    "lon": -103.85, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2584": {
+    "H": 45.3, 
+    "Vp": 6.4822737306843266, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.48, 
+    "lon": -103.85, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2585": {
+    "H": 44.4, 
+    "Vp": 6.485810810810811, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.92, 
+    "lon": -101.15, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2586": {
+    "H": 47.1, 
+    "Vp": 6.560955414012739, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.47, 
+    "lon": -101.1, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2587": {
+    "H": 46.0, 
+    "Vp": 6.486369565217392, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.92, 
+    "lon": -101.15, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2588": {
+    "H": 42.6, 
+    "Vp": 6.410281690140846, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.47, 
+    "lon": -101.1, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2589": {
+    "H": 44.4, 
+    "Vp": 6.429054054054055, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.96, 
+    "lon": -103.85, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2590": {
+    "H": 41.8, 
+    "Vp": 6.43299043062201, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.48, 
+    "lon": -103.85, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2591": {
+    "H": 44.9, 
+    "Vp": 6.426258351893096, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.58, 
+    "lon": -105.21, 
+    "lower": 65.5, 
+    "upper": 55.8
+  }, 
+  "2592": {
+    "H": 42.7, 
+    "Vp": 6.359367681498829, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.56, 
+    "lon": -103.1, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2593": {
+    "H": 41.6, 
+    "Vp": 6.383076923076922, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.37, 
+    "lon": -100.0, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "2594": {
+    "H": 44.0, 
+    "Vp": 6.443113636363638, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.05, 
+    "lon": -100.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "2595": {
+    "H": 42.5, 
+    "Vp": 6.382258823529411, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.62, 
+    "lon": -102.58, 
+    "lower": 65.5, 
+    "upper": 55.8
+  }, 
+  "2596": {
+    "H": 44.3, 
+    "Vp": 6.411376975169301, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.61, 
+    "lon": -100.67, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "297": {
+    "H": 33.9, 
+    "Vp": 6.0380530973451325, 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "lat": 62.47, 
+    "lon": -114.63, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "300": {
+    "H": 32.5, 
+    "Vp": 6.634, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.0, 
+    "lon": -101.4, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "3002": {
+    "H": 56.8, 
+    "Vp": 6.630985915492957, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.87, 
+    "lon": -85.37, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3003": {
+    "H": 55.3, 
+    "Vp": 6.583001808318264, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.74, 
+    "lon": -86.29, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "301": {
+    "H": 42.3, 
+    "Vp": 6.490780141843973, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.73, 
+    "lon": -116.9, 
+    "lower": 130, 
+    "upper": 85.8
+  }, 
+  "3011": {
+    "H": 47.93, 
+    "Vp": 6.518422699770498, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 48.24, 
+    "lon": -87.33, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3018": {
+    "H": 45.6, 
+    "Vp": 6.642543859649122, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 48.75, 
+    "lon": -87.18, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "302": {
+    "H": 46.3, 
+    "Vp": 6.522138228941685, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.5, 
+    "lon": -64.95, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "3023": {
+    "H": 50.6, 
+    "Vp": 6.504545454545454, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 48.18, 
+    "lon": -86.51, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3024": {
+    "H": 55.0, 
+    "Vp": 6.382, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.92, 
+    "lon": -86.6, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3025": {
+    "H": 54.9, 
+    "Vp": 6.593260473588343, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.74, 
+    "lon": -86.66, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "303": {
+    "H": 43.3, 
+    "Vp": 6.612933025404157, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.68, 
+    "lon": -61.0, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "304": {
+    "H": 34.7, 
+    "Vp": 6.245994236311239, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.68, 
+    "lon": -59.21, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "305": {
+    "H": 31.3, 
+    "Vp": 6.14, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 51.05, 
+    "lon": -57.15, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "306": {
+    "H": 30.1, 
+    "Vp": 6.01, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 51.32, 
+    "lon": -55.6, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "307": {
+    "H": 41.5, 
+    "Vp": 6.864987951807229, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.2, 
+    "lon": -53.55, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "308": {
+    "H": 31.0, 
+    "Vp": 6.019354838709678, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.75, 
+    "lon": -118.33, 
+    "lower": 1000, 
+    "upper": 253.8
+  }, 
+  "309": {
+    "H": 58.0, 
+    "Vp": 6.927586206896552, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.5, 
+    "lon": -117.0, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "310": {
+    "H": 51.0, 
+    "Vp": 7.070588235294117, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.67, 
+    "lon": -116.0, 
+    "lower": 488.3, 
+    "upper": 416
+  }, 
+  "3135": {
+    "H": 52.4, 
+    "Vp": 6.548091603053434, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.91, 
+    "lon": -86.85, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3136": {
+    "H": 50.0, 
+    "Vp": 6.6608, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.06, 
+    "lon": -85.99, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3137": {
+    "H": 38.3, 
+    "Vp": 6.2463185378590085, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.37, 
+    "lon": -100.0, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "3138": {
+    "H": 41.7, 
+    "Vp": 6.2896402877697835, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.05, 
+    "lon": -100.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "3139": {
+    "H": 44.2, 
+    "Vp": 6.28814479638009, 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.63, 
+    "lon": -102.58, 
+    "lower": 65.5, 
+    "upper": 55.8
+  }, 
+  "314": {
+    "H": 30.0, 
+    "Vp": 6.19, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 53.75, 
+    "lon": -132.5, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "3140": {
+    "H": 41.8, 
+    "Vp": 6.3393301435406695, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.61, 
+    "lon": -100.67, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "3144": {
+    "H": 49.1, 
+    "Vp": 6.87010183299389, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.32, 
+    "lon": -82.98, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3145": {
+    "H": 49.1, 
+    "Vp": 6.9122403258655805, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.61, 
+    "lon": -83.93, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3146": {
+    "H": 47.8, 
+    "Vp": 6.91418410041841, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.85, 
+    "lon": -82.42, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3147": {
+    "H": 51.5, 
+    "Vp": 6.85221359223301, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.56, 
+    "lon": -83.81, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3148": {
+    "H": 43.7, 
+    "Vp": 6.84608695652174, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.83, 
+    "lon": -81.34, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3149": {
+    "H": 39.6, 
+    "Vp": 6.784671717171717, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.53, 
+    "lon": -82.62, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3150": {
+    "H": 43.8, 
+    "Vp": 6.713082191780822, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.73, 
+    "lon": -83.31, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3151": {
+    "H": 42.6, 
+    "Vp": 6.855516431924883, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.0, 
+    "lon": -81.3, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3152": {
+    "H": 53.7, 
+    "Vp": 6.982513966480447, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.24, 
+    "lon": -82.98, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3153": {
+    "H": 45.6, 
+    "Vp": 6.815657894736842, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.42, 
+    "lon": -81.49, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3154": {
+    "H": 47.0, 
+    "Vp": 6.5017021276595734, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.71, 
+    "lon": -86.4, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3157": {
+    "H": 37.6, 
+    "Vp": 6.647606382978724, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.28, 
+    "lon": -94.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3159": {
+    "H": 38.0, 
+    "Vp": 6.716631578947369, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.51, 
+    "lon": -94.45, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3160": {
+    "H": 38.0, 
+    "Vp": 6.647815789473684, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.24, 
+    "lon": -94.03, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3162": {
+    "H": 37.7, 
+    "Vp": 6.557161803713527, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.0, 
+    "lon": -93.5, 
+    "lower": 3200, 
+    "upper": 2800
+  }, 
+  "3164": {
+    "H": 38.6, 
+    "Vp": 6.514248704663212, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.0, 
+    "lon": -95.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3165": {
+    "H": 33.3, 
+    "Vp": 6.400750750750751, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.0, 
+    "lon": -95.5, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3166": {
+    "H": 32.5, 
+    "Vp": 6.308461538461538, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -93.5, 
+    "lower": 3200, 
+    "upper": 2800
+  }, 
+  "3167": {
+    "H": 33.1, 
+    "Vp": 6.318277945619335, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -94.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3168": {
+    "H": 33.1, 
+    "Vp": 6.318277945619335, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -94.5, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3169": {
+    "H": 32.6, 
+    "Vp": 6.32239263803681, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -95.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3170": {
+    "H": 31.7, 
+    "Vp": 6.239274447949526, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -95.5, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3171": {
+    "H": 32.1, 
+    "Vp": 6.21448598130841, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 50.5, 
+    "lon": -96.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3172": {
+    "H": 33.1, 
+    "Vp": 6.335196374622356, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.0, 
+    "lon": -94.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3173": {
+    "H": 32.4, 
+    "Vp": 6.373456790123457, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.0, 
+    "lon": -94.5, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3174": {
+    "H": 33.2, 
+    "Vp": 6.384939759036144, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.0, 
+    "lon": -95.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3175": {
+    "H": 33.4, 
+    "Vp": 6.318263473053892, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.0, 
+    "lon": -95.5, 
+    "lower": 3200, 
+    "upper": 2800
+  }, 
+  "3176": {
+    "H": 33.2, 
+    "Vp": 6.298192771084336, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.0, 
+    "lon": -96.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3177": {
+    "H": 38.5, 
+    "Vp": 6.473896103896104, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 51.5, 
+    "lon": -94.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3178": {
+    "H": 40.1, 
+    "Vp": 6.683291770573565, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.82, 
+    "lon": -87.16, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3179": {
+    "H": 48.7, 
+    "Vp": 6.470739219712525, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 48.16, 
+    "lon": -87.35, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "3181": {
+    "H": 35.0, 
+    "Vp": 6.433714285714284, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.0, 
+    "lon": -81.67, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3182": {
+    "H": 36.0, 
+    "Vp": 6.442666666666666, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 46.72, 
+    "lon": -81.35, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3183": {
+    "H": 42.7, 
+    "Vp": 6.497798594847774, 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "lat": 46.45, 
+    "lon": -80.97, 
+    "lower": 2500, 
+    "upper": 2150
+  }, 
+  "3184": {
+    "H": 43.9, 
+    "Vp": 6.540888382687927, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.04, 
+    "lon": -80.66, 
+    "lower": 2800, 
+    "upper": 1600
+  }, 
+  "3186": {
+    "H": 37.6, 
+    "Vp": 6.564627659574468, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 45.43, 
+    "lon": -82.26, 
+    "lower": 422.9, 
+    "upper": 416
+  }, 
+  "3187": {
+    "H": 41.2, 
+    "Vp": 6.585825242718446, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 45.33, 
+    "lon": -81.61, 
+    "lower": 422.9, 
+    "upper": 416
+  }, 
+  "3188": {
+    "H": 44.6, 
+    "Vp": 6.61134529147982, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 45.13, 
+    "lon": -80.34, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "3189": {
+    "H": 40.0, 
+    "Vp": 6.5464, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.04, 
+    "lon": -80.63, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "319": {
+    "H": 36.0, 
+    "Vp": 5.996111111111111, 
+    "era": "paleozoic", 
+    "geoprov": "Arctic Platform", 
+    "lat": 74.92, 
+    "lon": -110.5, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "3190": {
+    "H": 39.6, 
+    "Vp": 6.512045454545455, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.99, 
+    "lon": -79.96, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "320": {
+    "H": 36.5, 
+    "Vp": 5.976027397260274, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 76.25, 
+    "lon": -119.17, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "3203": {
+    "H": 35.6, 
+    "Vp": 6.209578651685392, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 50.64, 
+    "lon": -118.0, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3204": {
+    "H": 32.1, 
+    "Vp": 6.375809968847351, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.69, 
+    "lon": -55.18, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "3205": {
+    "H": 34.4, 
+    "Vp": 6.398691860465117, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 49.5, 
+    "lon": -57.65, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "3206": {
+    "H": 34.8, 
+    "Vp": 6.35330459770115, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.52, 
+    "lon": -55.44, 
+    "lower": 416, 
+    "upper": 326.4
+  }, 
+  "3207": {
+    "H": 35.0, 
+    "Vp": 6.390614285714286, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.46, 
+    "lon": -55.73, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "3208": {
+    "H": 36.6, 
+    "Vp": 6.427882513661203, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.36, 
+    "lon": -57.81, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "3209": {
+    "H": 43.0, 
+    "Vp": 6.705581395348839, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 44.42, 
+    "lon": -77.16, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "321": {
+    "H": 36.0, 
+    "Vp": 5.990277777777777, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 77.83, 
+    "lon": -112.25, 
+    "lower": 199.6, 
+    "upper": 65.5
+  }, 
+  "3210": {
+    "H": 31.2, 
+    "Vp": 6.573878205128206, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.57, 
+    "lon": -123.81, 
+    "lower": 161.2, 
+    "upper": 145.5
+  }, 
+  "3211": {
+    "H": 36.1, 
+    "Vp": 6.523684210526315, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.3, 
+    "lon": -121.86, 
+    "lower": 199.6, 
+    "upper": 161.2
+  }, 
+  "3212": {
+    "H": 40.0, 
+    "Vp": 6.225, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.81, 
+    "lon": -120.22, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3213": {
+    "H": 39.5, 
+    "Vp": 6.28987341772152, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.4, 
+    "lon": -116.9, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3214": {
+    "H": 35.9, 
+    "Vp": 6.22075208913649, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.17, 
+    "lon": -119.04, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "3215": {
+    "H": 41.0, 
+    "Vp": 6.296585365853658, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.5, 
+    "lon": -117.6, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3216": {
+    "H": 37.5, 
+    "Vp": 6.306666666666667, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.98, 
+    "lon": -118.65, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3217": {
+    "H": 33.3, 
+    "Vp": 6.269819819819819, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.5, 
+    "lon": -124.4, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "3218": {
+    "H": 44.0, 
+    "Vp": 6.774886363636364, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 44.48, 
+    "lon": -77.66, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "3219": {
+    "H": 44.9, 
+    "Vp": 6.752527839643653, 
+    "era": "paleozoic", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.3, 
+    "lon": -75.93, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "3220": {
+    "H": 40.8, 
+    "Vp": 6.57310049019608, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.64, 
+    "lon": -58.26, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "3224": {
+    "H": 40.0, 
+    "Vp": 6.55575, 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 44.07, 
+    "lon": -72.93, 
+    "lower": 1000, 
+    "upper": 542
+  }, 
+  "3225": {
+    "H": 40.0, 
+    "Vp": 6.675625, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 44.15, 
+    "lon": -72.58, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "3226": {
+    "H": 39.1, 
+    "Vp": 6.758056265984654, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.0, 
+    "lon": -74.49, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "3227": {
+    "H": 39.1, 
+    "Vp": 6.73849104859335, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.0, 
+    "lon": -73.66, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "3228": {
+    "H": 38.9, 
+    "Vp": 6.4874035989717225, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.37, 
+    "lon": -70.61, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "3231": {
+    "H": 47.0, 
+    "Vp": 6.912765957446808, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.95, 
+    "lon": -84.4, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "3232": {
+    "H": 39.0, 
+    "Vp": 6.292307692307691, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.1, 
+    "lon": -119.3, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3233": {
+    "H": 38.0, 
+    "Vp": 6.444736842105263, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 78.4, 
+    "lon": -96.5, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "3234": {
+    "H": 38.0, 
+    "Vp": 6.380263157894737, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 76.4, 
+    "lon": -109.0, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3242": {
+    "H": 41.95, 
+    "Vp": 6.631918951132301, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.85, 
+    "lon": -83.73, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3243": {
+    "H": 44.75, 
+    "Vp": 6.780670391061452, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.43, 
+    "lon": -82.51, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3244": {
+    "H": 40.43, 
+    "Vp": 6.771778382389316, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.0, 
+    "lon": -81.33, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3245": {
+    "H": 46.57, 
+    "Vp": 6.885312432896715, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.13, 
+    "lon": -83.81, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3246": {
+    "H": 46.0, 
+    "Vp": 6.834782608695653, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.32, 
+    "lon": -82.23, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3294": {
+    "H": 35.0, 
+    "Vp": 5.545714285714285, 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "lat": 69.55, 
+    "lon": -135.2, 
+    "lower": 2.588, 
+    "upper": 0
+  }, 
+  "3295": {
+    "H": 37.5, 
+    "Vp": 5.936, 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "lat": 68.85, 
+    "lon": -134.0, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "3296": {
+    "H": 35.0, 
+    "Vp": 6.137142857142857, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.95, 
+    "lon": -117.25, 
+    "lower": 130, 
+    "upper": 85.8
+  }, 
+  "3297": {
+    "H": 36.0, 
+    "Vp": 6.237500000000001, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.0, 
+    "lon": -118.0, 
+    "lower": 416, 
+    "upper": 318.1
+  }, 
+  "3298": {
+    "H": 34.0, 
+    "Vp": 6.420588235294117, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.1, 
+    "lon": -120.7, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3299": {
+    "H": 35.0, 
+    "Vp": 6.141428571428572, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.1, 
+    "lon": -119.3, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "3300": {
+    "H": 37.5, 
+    "Vp": 6.317333333333333, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.2, 
+    "lon": -117.8, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3301": {
+    "H": 35.0, 
+    "Vp": 6.102857142857142, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.2, 
+    "lon": -118.2, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3302": {
+    "H": 36.0, 
+    "Vp": 6.2875, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.2, 
+    "lon": -118.0, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "3303": {
+    "H": 33.0, 
+    "Vp": 6.261363636363637, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.0, 
+    "lon": -120.9, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3304": {
+    "H": 31.0, 
+    "Vp": 6.377419354838709, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.0, 
+    "lon": -120.75, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3305": {
+    "H": 34.5, 
+    "Vp": 6.366666666666667, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.25, 
+    "lon": -124.0, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "3306": {
+    "H": 35.5, 
+    "Vp": 6.392957746478873, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.5, 
+    "lon": -123.0, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3309": {
+    "H": 40.0, 
+    "Vp": 6.724375, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.95, 
+    "lon": -126.4, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "3310": {
+    "H": 45.0, 
+    "Vp": 6.775555555555556, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.25, 
+    "lon": -125.15, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3311": {
+    "H": 32.0, 
+    "Vp": 6.2749999999999995, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.2, 
+    "lon": -120.25, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3312": {
+    "H": 34.5, 
+    "Vp": 6.178260869565218, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.25, 
+    "lon": -118.9, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3313": {
+    "H": 36.0, 
+    "Vp": 6.08611111111111, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.4, 
+    "lon": -117.5, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "3314": {
+    "H": 32.5, 
+    "Vp": 6.616923076923078, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.5, 
+    "lon": -123.7, 
+    "lower": 161.2, 
+    "upper": 145.5
+  }, 
+  "3315": {
+    "H": 36.0, 
+    "Vp": 6.767361111111111, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.25, 
+    "lon": -122.5, 
+    "lower": 161.2, 
+    "upper": 145.5
+  }, 
+  "3316": {
+    "H": 35.0, 
+    "Vp": 6.357142857142858, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.6, 
+    "lon": -117.7, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "3317": {
+    "H": 34.0, 
+    "Vp": 6.155882352941177, 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.6, 
+    "lon": -116.3, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "3318": {
+    "H": 40.0, 
+    "Vp": 6.246874999999999, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.55, 
+    "lon": -114.95, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3319": {
+    "H": 35.5, 
+    "Vp": 6.715492957746479, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 48.8, 
+    "lon": -125.1, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "3320": {
+    "H": 39.0, 
+    "Vp": 6.582692307692309, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.7, 
+    "lon": -124.1, 
+    "lower": 130, 
+    "upper": 85.8
+  }, 
+  "3321": {
+    "H": 34.0, 
+    "Vp": 6.48345588235294, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.65, 
+    "lon": -123.7, 
+    "lower": 130, 
+    "upper": 85.8
+  }, 
+  "3322": {
+    "H": 34.5, 
+    "Vp": 6.446376811594202, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 50.3, 
+    "lon": -122.75, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3323": {
+    "H": 45.0, 
+    "Vp": 6.276666666666666, 
+    "era": "paleozoic-mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 51.0, 
+    "lon": -121.7, 
+    "lower": 359.2, 
+    "upper": 145.5
+  }, 
+  "3324": {
+    "H": 37.5, 
+    "Vp": 6.374666666666666, 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 77.0, 
+    "lon": -95.0, 
+    "lower": 299, 
+    "upper": 251
+  }, 
+  "3325": {
+    "H": 37.5, 
+    "Vp": 6.468, 
+    "era": "paleozoic", 
+    "geoprov": "Arctic Platform", 
+    "lat": 76.0, 
+    "lon": -95.0, 
+    "lower": 416, 
+    "upper": 385.3
+  }, 
+  "3446": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 60.12, 
+    "lon": -73.6, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3448": {
+    "H": 34.6, 
+    "Vp": 6.193554913294797, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 64.06, 
+    "lon": -139.39, 
+    "lower": 416, 
+    "upper": 251
+  }, 
+  "3449": {
+    "H": 38.5, 
+    "Vp": 6.196909090909091, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 60.66, 
+    "lon": -134.88, 
+    "lower": 251, 
+    "upper": 199.6
+  }, 
+  "3472": {
+    "H": 42.3, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.89, 
+    "lon": -107.71, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3473": {
+    "H": 42.7, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.82, 
+    "lon": -106.98, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3474": {
+    "H": 40.5, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.79, 
+    "lon": -106.26, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3475": {
+    "H": 44.5, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.77, 
+    "lon": -105.53, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3476": {
+    "H": 43.1, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.75, 
+    "lon": -104.8, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3477": {
+    "H": 41.0, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.73, 
+    "lon": -104.07, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3478": {
+    "H": 40.6, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.71, 
+    "lon": -103.35, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "3479": {
+    "H": 40.7, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.69, 
+    "lon": -102.62, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3480": {
+    "H": 41.9, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.66, 
+    "lon": -101.89, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3481": {
+    "H": 43.3, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.64, 
+    "lon": -101.16, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3482": {
+    "H": 44.3, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.62, 
+    "lon": -100.43, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "3483": {
+    "H": 45.3, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.6, 
+    "lon": -99.71, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "3484": {
+    "H": 45.1, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.58, 
+    "lon": -98.98, 
+    "lower": 3800, 
+    "upper": 2500
+  }, 
+  "3485": {
+    "H": 45.2, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 54.56, 
+    "lon": -98.25, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3486": {
+    "H": 40.6, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.45, 
+    "lon": -101.14, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "3487": {
+    "H": 41.4, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.89, 
+    "lon": -101.14, 
+    "lower": 385.3, 
+    "upper": 359.2
+  }, 
+  "3488": {
+    "H": 42.7, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.33, 
+    "lon": -101.15, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "3489": {
+    "H": 43.3, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.77, 
+    "lon": -101.16, 
+    "lower": 443.7, 
+    "upper": 428.2
+  }, 
+  "3490": {
+    "H": 43.1, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.21, 
+    "lon": -101.17, 
+    "lower": 460.9, 
+    "upper": 443.7
+  }, 
+  "3491": {
+    "H": 43.8, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.09, 
+    "lon": -101.18, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3492": {
+    "H": 43.9, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.53, 
+    "lon": -101.19, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3493": {
+    "H": 43.9, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.98, 
+    "lon": -101.2, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3494": {
+    "H": 49.6, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.42, 
+    "lon": -101.2, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3495": {
+    "H": 52.0, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.78, 
+    "lon": -103.95, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "3496": {
+    "H": 49.2, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.21, 
+    "lon": -103.94, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3497": {
+    "H": 46.9, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.64, 
+    "lon": -103.93, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3498": {
+    "H": 41.8, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.08, 
+    "lon": -103.92, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3499": {
+    "H": 38.2, 
+    "Vp": 6.5, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.51, 
+    "lon": -103.9, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "3500": {
+    "H": 41.5, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.95, 
+    "lon": -103.89, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3501": {
+    "H": 46.1, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.38, 
+    "lon": -103.88, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3502": {
+    "H": 48.5, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 55.81, 
+    "lon": -103.87, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3503": {
+    "H": 44.6, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.25, 
+    "lon": -103.86, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3504": {
+    "H": 42.6, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.68, 
+    "lon": -103.85, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3505": {
+    "H": 43.0, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 57.11, 
+    "lon": -103.84, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "3506": {
+    "H": 41.2, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 57.55, 
+    "lon": -103.83, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "3507": {
+    "H": 39.6, 
+    "Vp": 6.5, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 57.98, 
+    "lon": -103.82, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "3508": {
+    "H": 42.2, 
+    "Vp": 6.078637440758294, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.38, 
+    "lon": -109.68, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "3511": {
+    "H": 20.9, 
+    "Vp": 6.007081339712919, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 76.29, 
+    "lon": -76.11, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "3516": {
+    "H": 20.6, 
+    "Vp": 6.081650485436892, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 76.22, 
+    "lon": -76.31, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "3519": {
+    "H": 22.3, 
+    "Vp": 5.763273542600896, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Arctic Platform", 
+    "lat": 75.02, 
+    "lon": -77.93, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "3520": {
+    "H": 14.7, 
+    "Vp": 5.058027210884354, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Arctic Platform", 
+    "lat": 74.71, 
+    "lon": -76.85, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "3521": {
+    "H": 14.4, 
+    "Vp": 4.630208333333333, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 74.4, 
+    "lon": -75.77, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "3782": {
+    "H": 42.94, 
+    "Vp": 6.792454587796927, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.42, 
+    "lon": -78.61, 
+    "lower": 1600, 
+    "upper": 1200
+  }, 
+  "3783": {
+    "H": 39.77, 
+    "Vp": 6.665225044003018, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.01, 
+    "lon": -77.3, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "3784": {
+    "H": 38.8, 
+    "Vp": 6.671701030927835, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.5, 
+    "lon": -76.07, 
+    "lower": 1200, 
+    "upper": 1000
+  }, 
+  "3785": {
+    "H": 38.22, 
+    "Vp": 6.561538461538461, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.68, 
+    "lon": -75.69, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "3786": {
+    "H": 35.56, 
+    "Vp": 6.530764904386951, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.23, 
+    "lon": -75.92, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3787": {
+    "H": 40.0, 
+    "Vp": 6.386149999999999, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.92, 
+    "lon": -76.71, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3788": {
+    "H": 37.16, 
+    "Vp": 6.6833692142088275, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.04, 
+    "lon": -77.32, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "3789": {
+    "H": 35.33, 
+    "Vp": 6.673761675629777, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.87, 
+    "lon": -76.53, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "3790": {
+    "H": 37.25, 
+    "Vp": 6.5613422818791935, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.54, 
+    "lon": -75.89, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "4161": {
+    "H": 38.1, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.17, 
+    "lon": -75.06, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "4165": {
+    "H": 37.2, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 43.42, 
+    "lon": -73.94, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "4166": {
+    "H": 38.1, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.17, 
+    "lon": -75.06, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "4172": {
+    "H": 49.1, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.32, 
+    "lon": -82.98, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "4173": {
+    "H": 42.6, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.0, 
+    "lon": -81.3, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "4236": {
+    "H": 40.2, 
+    "Vp": 6.488855721393035, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.49, 
+    "lon": -77.84, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "4268": {
+    "H": 37.27, 
+    "Vp": 6.111041051784277, 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 75.09, 
+    "lon": -111.68, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "4269": {
+    "H": 39.27, 
+    "Vp": 6.035408708938121, 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 75.78, 
+    "lon": -115.49, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "4270": {
+    "H": 35.45, 
+    "Vp": 6.088042313117066, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 76.19, 
+    "lon": -118.18, 
+    "lower": 199.6, 
+    "upper": 145.5
+  }, 
+  "4271": {
+    "H": 34.36, 
+    "Vp": 6.17570430733411, 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 75.52, 
+    "lon": -111.06, 
+    "lower": 397.5, 
+    "upper": 385.3
+  }, 
+  "4272": {
+    "H": 38.18, 
+    "Vp": 5.997105814562598, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 76.25, 
+    "lon": -112.88, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "4273": {
+    "H": 38.18, 
+    "Vp": 5.892679413305396, 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 77.03, 
+    "lon": -116.31, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "4310": {
+    "H": 38.7, 
+    "Vp": 6.464444444444443, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 54.7, 
+    "lon": -67.0, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "4311": {
+    "H": 43.8, 
+    "Vp": 6.645262557077626, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 49.68, 
+    "lon": -70.0, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "4312": {
+    "H": 47.5, 
+    "Vp": 6.668599999999999, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 51.9, 
+    "lon": -65.39, 
+    "lower": 2500, 
+    "upper": 1600
+  }, 
+  "4313": {
+    "H": 46.9, 
+    "Vp": 6.4957782515991465, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 52.62, 
+    "lon": -73.0, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "4841": {
+    "H": 37.0, 
+    "Vp": 6.172972972972973, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.5, 
+    "lon": -111.5, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4842": {
+    "H": 40.0, 
+    "Vp": 6.182499999999999, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.5, 
+    "lon": -111.3, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4843": {
+    "H": 37.5, 
+    "Vp": 6.174666666666666, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 53.0, 
+    "lon": -111.4, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4844": {
+    "H": 44.0, 
+    "Vp": 6.145454545454546, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.5, 
+    "lon": -111.1, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4845": {
+    "H": 44.0, 
+    "Vp": 6.145454545454546, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 52.0, 
+    "lon": -111.2, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4846": {
+    "H": 46.0, 
+    "Vp": 6.238043478260869, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.5, 
+    "lon": -110.9, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4847": {
+    "H": 44.0, 
+    "Vp": 6.136363636363637, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 51.0, 
+    "lon": -111.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4848": {
+    "H": 50.0, 
+    "Vp": 6.6659999999999995, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.5, 
+    "lon": -110.7, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4849": {
+    "H": 47.5, 
+    "Vp": 6.647368421052631, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 50.0, 
+    "lon": -110.8, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "4851": {
+    "H": 49.5, 
+    "Vp": 6.686363636363635, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 49.0, 
+    "lon": -110.5, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "508": {
+    "H": 29.7, 
+    "Vp": 5.877946127946128, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 51.82, 
+    "lon": -51.62, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "5214": {
+    "H": 38.7, 
+    "Vp": 6.45219638242894, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.7, 
+    "lon": -65.0, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "5215": {
+    "H": 40.2, 
+    "Vp": 6.578109452736317, 
+    "era": "precambrian", 
+    "geoprov": "Nain Province", 
+    "lat": 59.7, 
+    "lon": -64.1, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "5216": {
+    "H": 40.7, 
+    "Vp": 6.543488943488944, 
+    "era": "precambrian", 
+    "geoprov": "Nain Province", 
+    "lat": 59.1, 
+    "lon": -63.5, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "5217": {
+    "H": 48.3, 
+    "Vp": 6.623954451345756, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.1, 
+    "lon": -65.0, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "5218": {
+    "H": 38.6, 
+    "Vp": 6.593523316062176, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 60.05, 
+    "lon": -64.67, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "5219": {
+    "H": 43.5, 
+    "Vp": 6.587241379310345, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.5, 
+    "lon": -64.67, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "5220": {
+    "H": 51.4, 
+    "Vp": 6.641342412451362, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 58.95, 
+    "lon": -64.67, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "5222": {
+    "H": 39.2, 
+    "Vp": 6.472627551020407, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.68, 
+    "lon": -52.37, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "5223": {
+    "H": 39.3, 
+    "Vp": 6.506692111959288, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.11, 
+    "lon": -52.16, 
+    "lower": 488.3, 
+    "upper": 443.7
+  }, 
+  "5224": {
+    "H": 39.4, 
+    "Vp": 6.419911167512691, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.8, 
+    "lon": -52.8, 
+    "lower": 488.3, 
+    "upper": 443.7
+  }, 
+  "5225": {
+    "H": 39.2, 
+    "Vp": 6.424056122448979, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.26, 
+    "lon": -52.58, 
+    "lower": 416, 
+    "upper": 359.2
+  }, 
+  "5226": {
+    "H": 31.0, 
+    "Vp": 6.363096774193547, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 50.98, 
+    "lon": -53.02, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "5227": {
+    "H": 30.4, 
+    "Vp": 6.263996710526317, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 51.37, 
+    "lon": -52.66, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "5228": {
+    "H": 32.0, 
+    "Vp": 6.401562499999999, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 50.21, 
+    "lon": -53.75, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "5229": {
+    "H": 30.0, 
+    "Vp": 6.1295, 
+    "era": "mesozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 50.61, 
+    "lon": -53.39, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "5230": {
+    "H": 34.5, 
+    "Vp": 6.439072463768117, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.1, 
+    "lon": -54.79, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "5231": {
+    "H": 35.2, 
+    "Vp": 6.46609375, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.48, 
+    "lon": -54.44, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "5232": {
+    "H": 30.1, 
+    "Vp": 6.338936877076412, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.34, 
+    "lon": -55.49, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "5233": {
+    "H": 33.7, 
+    "Vp": 6.43513353115727, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.72, 
+    "lon": -55.14, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "5234": {
+    "H": 39.5, 
+    "Vp": 6.5121772151898725, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.93, 
+    "lon": -59.07, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "5235": {
+    "H": 39.7, 
+    "Vp": 6.515894206549118, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.29, 
+    "lon": -58.66, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "5236": {
+    "H": 39.4, 
+    "Vp": 6.409010152284265, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 49.17, 
+    "lon": -58.43, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "5237": {
+    "H": 45.0, 
+    "Vp": 6.487222222222222, 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "lat": 49.88, 
+    "lon": -60.22, 
+    "lower": 471.8, 
+    "upper": 460.9
+  }, 
+  "6484": {
+    "H": 40.0, 
+    "Vp": 6.53625, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.5, 
+    "lon": -64.0, 
+    "lower": 2800, 
+    "upper": 1600
+  }, 
+  "6485": {
+    "H": 40.0, 
+    "Vp": 6.53625, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.48, 
+    "lon": -63.15, 
+    "lower": 3200, 
+    "upper": 2500
+  }, 
+  "6486": {
+    "H": 34.0, 
+    "Vp": 6.560294117647059, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 56.43, 
+    "lon": -62.35, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "6487": {
+    "H": 33.0, 
+    "Vp": 6.637878787878789, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 56.4, 
+    "lon": -61.5, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "6488": {
+    "H": 31.5, 
+    "Vp": 6.565079365079365, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 56.55, 
+    "lon": -60.35, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "6500": {
+    "H": 38.0, 
+    "Vp": 6.292105263157895, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.7, 
+    "lon": -118.4, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "6501": {
+    "H": 36.0, 
+    "Vp": 6.322222222222223, 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.5, 
+    "lon": -117.9, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "6502": {
+    "H": 34.0, 
+    "Vp": 6.217647058823529, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.45, 
+    "lon": -117.0, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "6503": {
+    "H": 37.0, 
+    "Vp": 6.124324324324325, 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.4, 
+    "lon": -116.08, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "6504": {
+    "H": 40.0, 
+    "Vp": 6.08, 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.4, 
+    "lon": -115.7, 
+    "lower": 1600, 
+    "upper": 1000
+  }, 
+  "6505": {
+    "H": 41.0, 
+    "Vp": 6.288780487804878, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.39, 
+    "lon": -114.85, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "6515": {
+    "H": 30.0, 
+    "Vp": 6.416333333333333, 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 56.33, 
+    "lon": -130.5, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "6516": {
+    "H": 31.6, 
+    "Vp": 6.524683544303795, 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 55.93, 
+    "lon": -130.65, 
+    "lower": 145.5, 
+    "upper": 2.588
+  }, 
+  "6517": {
+    "H": 27.0, 
+    "Vp": 6.415555555555556, 
+    "era": "paleozoic-mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 55.6, 
+    "lon": -131.25, 
+    "lower": 299, 
+    "upper": 65.5
+  }, 
+  "6595": {
+    "H": 22.0, 
+    "Vp": 6.163636363636364, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 61.95, 
+    "lon": -58.6, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "66": {
+    "H": 34.8, 
+    "Vp": 6.73, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.17, 
+    "lon": -75.06, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "67": {
+    "H": 36.3, 
+    "Vp": 6.0706887052341605, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 43.77, 
+    "lon": -64.84, 
+    "lower": 542, 
+    "upper": 359.2
+  }, 
+  "68": {
+    "H": 32.8, 
+    "Vp": 5.932987804878049, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 44.45, 
+    "lon": -63.56, 
+    "lower": 542, 
+    "upper": 359.2
+  }, 
+  "6960": {
+    "H": 40.0, 
+    "Vp": 6.48, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.2, 
+    "lon": -119.25, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "6961": {
+    "H": 40.0, 
+    "Vp": 6.571249999999999, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.5, 
+    "lon": -117.0, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "6962": {
+    "H": 43.0, 
+    "Vp": 6.147674418604651, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 54.7, 
+    "lon": -117.0, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "6963": {
+    "H": 43.5, 
+    "Vp": 6.6643678160919535, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.5, 
+    "lon": -117.2, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "6964": {
+    "H": 40.0, 
+    "Vp": 6.25875, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.8, 
+    "lon": -119.7, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "6965": {
+    "H": 43.5, 
+    "Vp": 6.456321839080459, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.5, 
+    "lon": -117.3, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "6966": {
+    "H": 37.5, 
+    "Vp": 6.283333333333333, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 55.5, 
+    "lon": -118.7, 
+    "lower": 83.5, 
+    "upper": 65.5
+  }, 
+  "6967": {
+    "H": 38.0, 
+    "Vp": 6.543421052631579, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 56.6, 
+    "lon": -118.7, 
+    "lower": 99.6, 
+    "upper": 65.5
+  }, 
+  "6987": {
+    "H": 42.0, 
+    "Vp": 6.3464285714285715, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.8, 
+    "lon": -62.8, 
+    "lower": 318.1, 
+    "upper": 251.0
+  }, 
+  "6988": {
+    "H": 42.0, 
+    "Vp": 6.366071428571429, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 46.2, 
+    "lon": -61.7, 
+    "lower": 318.1, 
+    "upper": 251.0
+  }, 
+  "6989": {
+    "H": 36.7, 
+    "Vp": 6.06267029972752, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.45, 
+    "lon": -64.5, 
+    "lower": 318.1, 
+    "upper": 251.0
+  }, 
+  "6990": {
+    "H": 37.0, 
+    "Vp": 6.181081081081082, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.35, 
+    "lon": -63.6, 
+    "lower": 318.1, 
+    "upper": 251.0
+  }, 
+  "7003": {
+    "H": 38.0, 
+    "Vp": 6.725986842105263, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 53.43, 
+    "lon": -55.15, 
+    "lower": 542, 
+    "upper": 488.3
+  }, 
+  "7005": {
+    "H": 32.0, 
+    "Vp": 6.448437500000001, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.45, 
+    "lon": -59.8, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7006": {
+    "H": 33.0, 
+    "Vp": 6.425000000000001, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 56.05, 
+    "lon": -59.65, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7007": {
+    "H": 36.0, 
+    "Vp": 6.439583333333333, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 55.65, 
+    "lon": -58.3, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "72": {
+    "H": 32.5, 
+    "Vp": 6.13, 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 49.59, 
+    "lon": -120.0, 
+    "lower": 175.6, 
+    "upper": 161.2
+  }, 
+  "7312": {
+    "H": 35.0, 
+    "Vp": 6.322, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 60.1, 
+    "lon": -128.8, 
+    "lower": 416, 
+    "upper": 199.6
+  }, 
+  "7313": {
+    "H": 36.0, 
+    "Vp": 6.352222222222222, 
+    "era": "precambrian-paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 59.95, 
+    "lon": -127.9, 
+    "lower": 1000, 
+    "upper": 488.3
+  }, 
+  "7314": {
+    "H": 36.0, 
+    "Vp": 6.289999999999999, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 59.65, 
+    "lon": -127.15, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7315": {
+    "H": 37.0, 
+    "Vp": 6.5675675675675675, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 59.45, 
+    "lon": -126.2, 
+    "lower": 416, 
+    "upper": 318.1
+  }, 
+  "7316": {
+    "H": 39.8, 
+    "Vp": 6.448492462311558, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 59.0, 
+    "lon": -125.75, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7317": {
+    "H": 35.1, 
+    "Vp": 6.4743589743589745, 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "lat": 58.7, 
+    "lon": -124.85, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "7318": {
+    "H": 37.7, 
+    "Vp": 5.9230769230769225, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 58.65, 
+    "lon": -123.8, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "7319": {
+    "H": 41.2, 
+    "Vp": 6.379611650485437, 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "lat": 58.8, 
+    "lon": -122.9, 
+    "lower": 145.5, 
+    "upper": 99.6
+  }, 
+  "7529": {
+    "H": 39.1, 
+    "Vp": 6.554092071611254, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.1, 
+    "lon": -65.55, 
+    "lower": 2500, 
+    "upper": 2050
+  }, 
+  "7530": {
+    "H": 34.8, 
+    "Vp": 6.662068965517241, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 60.57, 
+    "lon": -64.67, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7545": {
+    "H": 37.3, 
+    "Vp": 6.434182305630027, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.4, 
+    "lon": -57.4, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7546": {
+    "H": 36.9, 
+    "Vp": 6.408672086720868, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.8, 
+    "lon": -56.8, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7547": {
+    "H": 35.4, 
+    "Vp": 6.417937853107344, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.1, 
+    "lon": -56.3, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7549": {
+    "H": 33.6, 
+    "Vp": 6.419672619047619, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.3, 
+    "lon": -57.5, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "7550": {
+    "H": 35.8, 
+    "Vp": 6.465810055865923, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.9, 
+    "lon": -57.1, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "7551": {
+    "H": 36.3, 
+    "Vp": 6.427410468319559, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.6, 
+    "lon": -57.7, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "7552": {
+    "H": 34.9, 
+    "Vp": 6.301146131805157, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 48.2, 
+    "lon": -57.25, 
+    "lower": 443.7, 
+    "upper": 359.2
+  }, 
+  "7553": {
+    "H": 34.6, 
+    "Vp": 6.308670520231214, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.8, 
+    "lon": -56.9, 
+    "lower": 542, 
+    "upper": 443.7
+  }, 
+  "7558": {
+    "H": 27.5, 
+    "Vp": 6.147890909090909, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 53.35, 
+    "lon": -131.3, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7559": {
+    "H": 28.7, 
+    "Vp": 6.567891986062718, 
+    "era": "unknown", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 53.57, 
+    "lon": -130.82, 
+    "lower": 0, 
+    "upper": 0
+  }, 
+  "7561": {
+    "H": 26.4, 
+    "Vp": 6.112594696969698, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 52.79, 
+    "lon": -131.02, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7562": {
+    "H": 25.9, 
+    "Vp": 6.180965250965251, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 53.03, 
+    "lon": -130.59, 
+    "lower": 2.588, 
+    "upper": 0
+  }, 
+  "7564": {
+    "H": 26.3, 
+    "Vp": 6.451330798479088, 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "lat": 52.8, 
+    "lon": -131.83, 
+    "lower": 2.588, 
+    "upper": 0
+  }, 
+  "7565": {
+    "H": 25.0, 
+    "Vp": 5.252800000000001, 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "lat": 80.9, 
+    "lon": -101.48, 
+    "lower": 23.03, 
+    "upper": 0
+  }, 
+  "7566": {
+    "H": 25.0, 
+    "Vp": 5.5604, 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "lat": 81.4, 
+    "lon": -100.02, 
+    "lower": 23.03, 
+    "upper": 0
+  }, 
+  "7569": {
+    "H": 27.3, 
+    "Vp": 6.568498168498168, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.45, 
+    "lon": -59.7, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7570": {
+    "H": 27.0, 
+    "Vp": 0.0, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.45, 
+    "lon": -59.7, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7571": {
+    "H": 27.5, 
+    "Vp": 6.311454545454545, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 55.9, 
+    "lon": -59.0, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7572": {
+    "H": 23.8, 
+    "Vp": 6.343928571428572, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 55.3, 
+    "lon": -58.25, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7573": {
+    "H": 23.8, 
+    "Vp": 0.0, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 55.3, 
+    "lon": -58.25, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7574": {
+    "H": 8.5, 
+    "Vp": 5.58, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 60.02, 
+    "lon": -51.42, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7575": {
+    "H": 8.5, 
+    "Vp": 5.183529411764705, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 60.21, 
+    "lon": -50.68, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7578": {
+    "H": 8.74, 
+    "Vp": 5.684839816933639, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 59.83, 
+    "lon": -51.82, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "7589": {
+    "H": 38.2, 
+    "Vp": 6.546727748691099, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.18, 
+    "lon": -67.59, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7590": {
+    "H": 38.4, 
+    "Vp": 6.550911458333333, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.18, 
+    "lon": -67.16, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7591": {
+    "H": 38.0, 
+    "Vp": 6.571473684210527, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.12, 
+    "lon": -66.76, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7592": {
+    "H": 36.7, 
+    "Vp": 6.548705722070844, 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "lat": 59.17, 
+    "lon": -66.33, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7593": {
+    "H": 36.2, 
+    "Vp": 6.545718232044198, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 59.09, 
+    "lon": -62.86, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "7594": {
+    "H": 18.3, 
+    "Vp": 5.500765027322404, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 59.06, 
+    "lon": -62.43, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7595": {
+    "H": 16.8, 
+    "Vp": 5.044107142857143, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 59.03, 
+    "lon": -62.01, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7596": {
+    "H": 17.1, 
+    "Vp": 4.8923976608187125, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 59.0, 
+    "lon": -61.55, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7597": {
+    "H": 13.0, 
+    "Vp": 4.526153846153846, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.56, 
+    "lon": -57.25, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7598": {
+    "H": 12.6, 
+    "Vp": 4.5591269841269835, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.28, 
+    "lon": -56.98, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7599": {
+    "H": 13.4, 
+    "Vp": 4.553358208955223, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 55.99, 
+    "lon": -56.78, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7600": {
+    "H": 19.4, 
+    "Vp": 5.563144329896907, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 55.98, 
+    "lon": -58.52, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7601": {
+    "H": 16.9, 
+    "Vp": 4.842603550295859, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 56.13, 
+    "lon": -57.88, 
+    "lower": 23, 
+    "upper": 2.59
+  }, 
+  "7602": {
+    "H": 13.3, 
+    "Vp": 4.421052631578947, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.3, 
+    "lon": -57.22, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7603": {
+    "H": 11.2, 
+    "Vp": 4.790178571428572, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.45, 
+    "lon": -56.66, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7604": {
+    "H": 10.9, 
+    "Vp": 5.014678899082568, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.59, 
+    "lon": -56.04, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7605": {
+    "H": 9.3, 
+    "Vp": 4.946774193548387, 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.73, 
+    "lon": -55.38, 
+    "lower": 145.5, 
+    "upper": 65.5
+  }, 
+  "7606": {
+    "H": 7.8, 
+    "Vp": 5.286602564102564, 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "lat": 56.96, 
+    "lon": -54.31, 
+    "lower": 65.5, 
+    "upper": 23
+  }, 
+  "7823": {
+    "H": 41.0, 
+    "Vp": 6.606731707317073, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.53, 
+    "lon": -77.45, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "7824": {
+    "H": 40.8, 
+    "Vp": 6.7024509803921575, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.94, 
+    "lon": -77.76, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "7825": {
+    "H": 40.8, 
+    "Vp": 6.72764705882353, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.38, 
+    "lon": -78.05, 
+    "lower": 1600, 
+    "upper": 1200
+  }, 
+  "7826": {
+    "H": 45.2, 
+    "Vp": 6.755353982300884, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.8, 
+    "lon": -78.36, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "7827": {
+    "H": 46.0, 
+    "Vp": 6.730782608695653, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.28, 
+    "lon": -78.25, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "7828": {
+    "H": 39.5, 
+    "Vp": 6.526329113924051, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.69, 
+    "lon": -78.57, 
+    "lower": 1800, 
+    "upper": 1400
+  }, 
+  "7829": {
+    "H": 35.4, 
+    "Vp": 6.368305084745762, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 47.1, 
+    "lon": -78.93, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7830": {
+    "H": 38.3, 
+    "Vp": 6.4016449086161895, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.58, 
+    "lon": -79.2, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7831": {
+    "H": 42.1, 
+    "Vp": 6.46833729216152, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.04, 
+    "lon": -78.9, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7832": {
+    "H": 39.9, 
+    "Vp": 6.48406015037594, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.49, 
+    "lon": -79.03, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7833": {
+    "H": 38.1, 
+    "Vp": 6.474908136482939, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.97, 
+    "lon": -79.18, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7834": {
+    "H": 37.7, 
+    "Vp": 6.487533156498673, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.41, 
+    "lon": -79.02, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7835": {
+    "H": 40.7, 
+    "Vp": 6.556019656019655, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.03, 
+    "lon": -80.8, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7836": {
+    "H": 50.3, 
+    "Vp": 6.840258449304175, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 49.08, 
+    "lon": -80.11, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7837": {
+    "H": 40.7, 
+    "Vp": 6.597985257985258, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.96, 
+    "lon": -79.44, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7838": {
+    "H": 40.6, 
+    "Vp": 6.615369458128078, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 48.96, 
+    "lon": -78.76, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7839": {
+    "H": 46.7, 
+    "Vp": 6.740706638115633, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 45.7, 
+    "lon": -80.48, 
+    "lower": 2500, 
+    "upper": 1600
+  }, 
+  "7840": {
+    "H": 46.1, 
+    "Vp": 6.721475054229934, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 46.16, 
+    "lon": -80.74, 
+    "lower": 2800, 
+    "upper": 1600
+  }, 
+  "7841": {
+    "H": 40.6, 
+    "Vp": 6.473645320197043, 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "lat": 46.58, 
+    "lon": -81.15, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "7842": {
+    "H": 37.1, 
+    "Vp": 6.490862533692722, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 46.85, 
+    "lon": -81.62, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7843": {
+    "H": 37.2, 
+    "Vp": 6.5263440860215045, 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "lat": 47.29, 
+    "lon": -81.78, 
+    "lower": 2800, 
+    "upper": 2500
+  }, 
+  "7844": {
+    "H": 39.3, 
+    "Vp": 6.576488549618321, 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "lat": 46.4, 
+    "lon": -81.64, 
+    "lower": 2500, 
+    "upper": 2150
+  }, 
+  "7845": {
+    "H": 39.4, 
+    "Vp": 6.485862944162436, 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "lat": 46.64, 
+    "lon": -81.13, 
+    "lower": 2300, 
+    "upper": 1800
+  }, 
+  "7846": {
+    "H": 39.5, 
+    "Vp": 6.588455696202532, 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "lat": 46.87, 
+    "lon": -80.56, 
+    "lower": 2500, 
+    "upper": 2150
+  }, 
+  "7892": {
+    "H": 25.0, 
+    "Vp": 6.5, 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "lat": 82.5, 
+    "lon": -62.35, 
+    "lower": 443.7, 
+    "upper": 416
+  }, 
+  "8387": {
+    "H": 35.0, 
+    "Vp": 6.380000000000001, 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "lat": 44.45, 
+    "lon": -76.85, 
+    "lower": 1400, 
+    "upper": 1200
+  }, 
+  "89": {
+    "H": 52.5, 
+    "Vp": 6.708571428571428, 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "lat": 47.91, 
+    "lon": -86.85, 
+    "lower": 3800, 
+    "upper": 542
+  }, 
+  "93": {
+    "H": 32.6, 
+    "Vp": 6.045889570552146, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 45.27, 
+    "lon": -60.68, 
+    "lower": 542, 
+    "upper": 359.2
+  }, 
+  "94": {
+    "H": 45.0, 
+    "Vp": 6.524222222222221, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.93, 
+    "lon": -64.01, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "95": {
+    "H": 35.0, 
+    "Vp": 5.607885714285715, 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "lat": 43.94, 
+    "lon": -59.85, 
+    "lower": 2.588, 
+    "upper": 0
+  }, 
+  "97": {
+    "H": 30.9, 
+    "Vp": 6.224660194174757, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 47.54, 
+    "lon": -58.68, 
+    "lower": 318.1, 
+    "upper": 299
+  }, 
+  "98": {
+    "H": 36.7, 
+    "Vp": 6.334168937329699, 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "lat": 49.36, 
+    "lon": -55.57, 
+    "lower": 542, 
+    "upper": 443.7
+  }
+}

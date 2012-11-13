@@ -5,6 +5,8 @@ addpath functions
 addpath([userdir,'/programming/matlab/jsonlab'])
 addpath(genpath([userdir,'/programming/matlab/mpt/']));
 
+%% Get stations.json data
+%{
 %json = loadjson([userdir,'/thesis/stations.json']);
 load stnsjson.mat
 s = json;
@@ -28,20 +30,37 @@ for strng = fn'
         end
     end
 end
+%}
 
+%% Get Mooney Vp shot data R = Vp (cutoff @ Vp < 5.6)
+% 
+s = loadjson([userdir,'/thesis/moonvpGeology.json']);
+fn = fieldnames(s);
+lat = []; lon = [];
+R = []; H = [];
+stn = {};
+for strng = fn'
+    str = char(strng);
+    if s.(str).Vp < 5.6
+        continue
+    end
+    stn{end+1} = str;
+    lat(end+1) = s.(str).lat;
+    lon(end+1) = s.(str).lon;
+    R(end + 1) = s.(str).Vp;
+    H(end+1) = s.(str).H;
+end
+%}
 rads = degtorad([lat', lon']);
-
 poisson = @(R) ( (R^2 - 2) / (2*(R^2 - 1)));
 
-radius = 1;
 
+vects = @(V) [
+    cos(V(:,1)) .* cos(V(:,2)),...
+    cos(V(:,1)) .* sin(V(:,2)),...
+    sin(V(:,1)) ];
 
-vects = @(V, radius) [
-    radius * cos(V(:,1)) .* cos(V(:,2)),...
-    radius * cos(V(:,1)) .* sin(V(:,2)),...
-    radius * sin(V(:,1)) ];
-
-[X,IA,IC] = unique(vects(rads, 1), 'rows');
+[X,IA,IC] = unique(vects(rads), 'rows');
 
 
 %{
@@ -118,8 +137,8 @@ options.pbound = polytope( cvx );
 V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
 area = volume(V);
 area = area./sum(area);
-R = R(IA)' .* area;
-H = H(IA)' .* area;
+Rv = R(IA)' .* area;
+Hv = H(IA)' .* area;
 
 plot(V)
 hold on
@@ -129,8 +148,8 @@ Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
        'bold', 'HorizontalAlignment','center', ...
        'BackgroundColor', 'none');
 
-fprintf('Average Vp/Vs = %f\n', sum(R));
-fprintf('Average H = %f\n', sum(H));
+fprintf('Voronoi average Vp/Vs = %f\n', sum(Rv));
+fprintf('Voronoi average H = %f\n', sum(Hv));
    
    %}
 %3D MPT
