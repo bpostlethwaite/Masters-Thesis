@@ -4,9 +4,12 @@ rfmodel/*
 shellscripts/rdseedv5.2/*
 shellscripts/get_tt
 
-# Matlab Backups
+# Matlab
 ###################
 *~
+*.mexa32
+*.mexa64
+*.mat
 
 # Compiled source #
 ###################
@@ -17,8 +20,6 @@ shellscripts/get_tt
 *.o
 *.so
 *.pyc
-*.mexa32
-*.mexa64
 
 # Packages #
 ############
