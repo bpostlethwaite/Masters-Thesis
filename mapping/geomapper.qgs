@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-154.500000</xmin>
-            <ymin>32.748691</ymin>
-            <xmax>-49.500000</xmax>
-            <ymax>97.251309</ymax>
+            <xmin>-105.335006</xmin>
+            <ymin>42.525148</ymin>
+            <xmax>-79.085006</xmax>
+            <ymax>58.650802</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,9 +29,9 @@
                 <legendlayerfile isInOverview="0" layerid="moonVpGeology20121112134602141" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="0" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20121110193030485" visible="1"/>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stations20121113111354546" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="1" open="true" checked="Qt::Unchecked" name="mooneyShots" showFeatureCount="0">
@@ -39,9 +39,9 @@
                 <legendlayerfile isInOverview="0" layerid="mooneyShots20121020212751052" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="2" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stationGeology20121111133935273" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="stationGeology20121113111542837" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="4" open="true" checked="Qt::Unchecked" name="stationMooney" showFeatureCount="0">
@@ -54,14 +54,14 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="6" open="false" checked="Qt::Checked" name="crust2layer" showFeatureCount="0">
+        <legendlayer drawingOrder="6" open="false" checked="Qt::Unchecked" name="crust2layer" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust2layer20121112132507982" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="crust2layer20121112132507982" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="7" open="false" checked="Qt::Checked" name="politicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="7" open="false" checked="Qt::Unchecked" name="politicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="8" open="false" checked="Qt::Unchecked" name="VoronoiTest" showFeatureCount="0">
@@ -69,9 +69,9 @@
                 <legendlayerfile isInOverview="0" layerid="VoronoiTest20121111132921846" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="9" open="false" checked="Qt::Unchecked" name="geologicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="9" open="false" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="10" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
@@ -118,22 +118,6 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
-                <LayerItem layerId="stations20121110193030485" text="stations">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="94,92,177,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
                 <LayerItem layerId="VoronoiTest20121111132921846" text="VoronoiTest">
                     <VectorClassificationItemNg text="">
                         <symbols>
@@ -145,22 +129,6 @@
                                     <prop k="style" v="solid"/>
                                     <prop k="style_border" v="solid"/>
                                     <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="stationGeology20121111133935273" text="stationGeology">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="176,214,239,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
                                 </layer>
                             </symbol>
                         </symbols>
@@ -205,6 +173,38 @@
                                 <layer pass="0" class="SimpleMarker" locked="0">
                                     <prop k="angle" v="0"/>
                                     <prop k="color" v="216,123,9,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+                <LayerItem layerId="stations20121113111354546" text="stations">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="224,144,156,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+                <LayerItem layerId="stationGeology20121113111542837" text="stationGeology">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="183,132,56,255"/>
                                     <prop k="color_border" v="0,0,0,255"/>
                                     <prop k="name" v="circle"/>
                                     <prop k="offset" v="0,0"/>
@@ -593,8 +593,40 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
+                <LayerItem layerId="stations20121113111354546" text="stations">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="224,144,156,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+                <LayerItem layerId="stationGeology20121113111542837" text="stationGeology">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="183,132,56,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
             </Model>
-            <ComposerItem width="61" x="8.81657" y="27.7722" rotation="0" height="198.3" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="1" id="" positionLock="false">
+            <ComposerItem width="4" x="8.81657" y="27.7722" rotation="0" height="197.5" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="1" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
@@ -944,8 +976,40 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
+                <LayerItem layerId="stations20121113111354546" text="stations">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="224,144,156,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+                <LayerItem layerId="stationGeology20121113111542837" text="stationGeology">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="183,132,56,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
             </Model>
-            <ComposerItem width="61" x="9.6391" y="25.9497" rotation="0" height="179.9" frame="true" outlineWidth="0.3" zValue="5" lastValidViewScaleFactor="2" id="" positionLock="false">
+            <ComposerItem width="4" x="9.6391" y="25.9497" rotation="0" height="177.5" frame="true" outlineWidth="0.3" zValue="5" lastValidViewScaleFactor="2" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
@@ -962,8 +1026,16 @@
         <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="210" printAsRaster="0"/>
     </Composer>
     <Composer title="Composer 9" visible="0">
+        <ComposerLabel valign="32" labelText="Bimodal Vp Peaks&#xa;Political Provinces" halign="4" margin="1">
+            <LabelFont description="Ubuntu,36,-1,5,50,0,0,0,0,0"/>
+            <FontColor red="0" blue="0" green="0"/>
+            <ComposerItem width="156.935" x="67.4467" y="5.28994" rotation="0" height="33.0621" frame="true" outlineWidth="0.3" zValue="5" lastValidViewScaleFactor="4.96209" id="" positionLock="false">
+                <FrameColor alpha="255" red="255" blue="255" green="255"/>
+                <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="40.5938" xmin="-136.278" ymax="88.2938" xmax="-52.5782"/>
+            <Extent ymin="40.5938" xmin="-136.278" ymax="88.2937" xmax="-52.5782"/>
             <LayerSet/>
             <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
                 <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
@@ -979,14 +1051,6 @@
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
         </ComposerPicture>
-        <ComposerLabel valign="32" labelText="Bimodal Vp Peaks&#xa;Political Provinces" halign="4" margin="1">
-            <LabelFont description="Ubuntu,36,-1,5,50,0,0,0,0,0"/>
-            <FontColor red="0" blue="0" green="0"/>
-            <ComposerItem width="156.935" x="67.4467" y="5.28994" rotation="0" height="33.0621" frame="true" outlineWidth="0.3" zValue="5" lastValidViewScaleFactor="4.96209" id="" positionLock="false">
-                <FrameColor alpha="255" red="255" blue="255" green="255"/>
-                <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-            </ComposerItem>
-        </ComposerLabel>
         <ComposerLegend symbolWidth="7" title="Legend" boxSpace="2" titleFont="Ubuntu,16,-1,5,50,0,0,0,0,0" map="0" groupFont="Ubuntu,14,-1,5,50,0,0,0,0,0" layerFont="Ubuntu,12,-1,5,50,0,0,0,0,0" groupSpace="2" symbolSpace="2" symbolHeight="2" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,12,-1,5,50,0,0,0,0,0">
             <Model autoUpdate="1">
                 <LayerItem layerId="moonVpGeology20121112134602141" text="moonVpGeology">
@@ -1019,8 +1083,40 @@
                         </symbols>
                     </VectorClassificationItemNg>
                 </LayerItem>
+                <LayerItem layerId="stations20121113111354546" text="stations">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="224,144,156,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
+                <LayerItem layerId="stationGeology20121113111542837" text="stationGeology">
+                    <VectorClassificationItemNg text="">
+                        <symbols>
+                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="183,132,56,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="circle"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="size" v="2"/>
+                                </layer>
+                            </symbol>
+                        </symbols>
+                    </VectorClassificationItemNg>
+                </LayerItem>
             </Model>
-            <ComposerItem width="71" x="10.1391" y="26.4497" rotation="0" height="31.7" frame="true" outlineWidth="0.3" zValue="6" lastValidViewScaleFactor="4.96209" id="" positionLock="false">
+            <ComposerItem width="4" x="10.1391" y="26.4497" rotation="0" height="34.8" frame="true" outlineWidth="0.3" zValue="6" lastValidViewScaleFactor="4.96209" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
@@ -4185,7 +4281,7 @@
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stationGeology20121111133935273</id>
+            <id>stationGeology20121113111542837</id>
             <datasource>./stationGeology.shp</datasource>
             <title></title>
             <abstract></abstract>
@@ -4210,7 +4306,7 @@
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="176,214,239,255"/>
+                            <prop k="color" v="183,132,56,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
@@ -4222,7 +4318,7 @@
                 <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield>station</displayfield>
+            <displayfield></displayfield>
             <label>0</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
@@ -4244,9 +4340,9 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform>.</editform>
+            <editform></editform>
             <editforminit></editforminit>
-            <annotationform>.</annotationform>
+            <annotationform></annotationform>
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
@@ -4315,7 +4411,7 @@
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
-            <id>stations20121110193030485</id>
+            <id>stations20121113111354546</id>
             <datasource>./stations.shp</datasource>
             <title></title>
             <abstract></abstract>
@@ -4335,121 +4431,25 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 attr="status" symbollevels="0" type="categorizedSymbol">
-                <categories>
-                    <category symbol="0" value="bad station" label="bad station"/>
-                    <category symbol="1" value="data corruption" label="data corruption"/>
-                    <category symbol="2" value="not aquired" label="not aquired"/>
-                    <category symbol="3" value="processed-notok" label="processed-notok"/>
-                    <category symbol="4" value="processed-ok" label="processed-ok"/>
-                    <category symbol="5" value="aquired" label="aquired"/>
-                    <category symbol="6" value="picked" label="picked"/>
-                    <category symbol="7" value="" label=""/>
-                </categories>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="228,26,28,255"/>
+                            <prop k="color" v="224,144,156,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="1">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="170,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="2">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="0,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="3">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="255,127,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="4">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="0,255,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="5">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="85,0,127,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="6">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="170,85,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="7">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="166,86,40,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="size" v="2"/>
                         </layer>
                     </symbol>
                 </symbols>
-                <source-symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="170,255,255,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="2"/>
-                        </layer>
-                    </symbol>
-                </source-symbol>
-                <colorramp type="colorbrewer" name="[source]">
-                    <prop k="colors" v="7"/>
-                    <prop k="schemeName" v="Set1"/>
-                </colorramp>
                 <rotation field=""/>
                 <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield>network</displayfield>
-            <label>1</label>
+            <displayfield></displayfield>
+            <label>0</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
                 <family fieldname="" name="Ubuntu"/>
@@ -4458,38 +4458,21 @@
                 <italic fieldname="" on="0"/>
                 <underline fieldname="" on="0"/>
                 <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="255" blue="0" green="255"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
                 <x fieldname=""/>
                 <y fieldname=""/>
                 <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
                 <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="above"/>
+                <alignment fieldname="" value="center"/>
                 <buffercolor fieldname="" red="255" blue="255" green="255"/>
                 <buffersize fieldname="" units="pt" value="1"/>
                 <bufferenabled fieldname="" on=""/>
                 <multilineenabled fieldname="" on=""/>
-                <selectedonly on="1"/>
+                <selectedonly on=""/>
             </labelattributes>
-            <edittypes>
-                <edittype type="0" name="H"/>
-                <edittype type="0" name="R"/>
-                <edittype type="0" name="Vp"/>
-                <edittype type="0" name="hk::H"/>
-                <edittype type="0" name="hk::R"/>
-                <edittype type="0" name="hk::stdH"/>
-                <edittype type="0" name="hk::stdR"/>
-                <edittype type="0" name="network"/>
-                <edittype type="0" name="station"/>
-                <edittype type="0" name="status"/>
-                <edittype type="0" name="stdH"/>
-                <edittype type="0" name="stdR"/>
-                <edittype type="0" name="stdVp"/>
-                <edittype type="0" name="wm::R"/>
-                <edittype type="0" name="wm::Vp"/>
-            </edittypes>
-            <editform>.</editform>
+            <editform></editform>
             <editforminit></editforminit>
-            <annotationform>.</annotationform>
+            <annotationform></annotationform>
             <attributeactions/>
         </maplayer>
     </projectlayers>

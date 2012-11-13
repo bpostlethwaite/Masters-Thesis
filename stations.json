@@ -835,11 +835,11 @@
     "lon": -126.755, 
     "network": "CNSN", 
     "numEvents": 618, 
-    "poorEvents": 0, 
+    "poorEvents": 30, 
     "start": 20071206.17, 
     "status": "bad station", 
     "stop": 0, 
-    "usableEvents": 580, 
+    "usableEvents": 550, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -2949,7 +2949,7 @@
   }, 
   "FRB": {
     "badCompEvents": 4, 
-    "geoprov": "", 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 42.21105527638191, 
       "R": 1.7600502512562812, 
@@ -2957,7 +2957,7 @@
       "stdR": 0.012958968192077506
     }, 
     "km": {}, 
-    "lat": 63.746917, 
+    "lat": 63.7783, 
     "lon": -68.545117, 
     "mb": {
       "H": 42.21105527638191, 
@@ -5923,9 +5923,9 @@
   }, 
   "NANL": {
     "badCompEvents": 0, 
-    "geoprov": "", 
-    "lat": 56.53712, 
-    "lon": -61.68843, 
+    "geoprov": "Churchill Province", 
+    "lat": 56.5113, 
+    "lon": -61.7299, 
     "network": "POLARIS", 
     "numEvents": 13, 
     "poorEvents": 2, 
@@ -6864,14 +6864,14 @@
   }, 
   "PNGN": {
     "badCompEvents": 0, 
-    "geoprov": "", 
+    "geoprov": "Churchill Province", 
     "hk": {
       "H": 35.050251256281406, 
       "R": 1.707286432160804, 
       "stdH": 0.15941222094178972, 
       "stdR": 0.00854074156916517
     }, 
-    "lat": 66.14347076416016, 
+    "lat": 63.1356, 
     "lon": -65.7115478515625, 
     "mb": {
       "H": 31.78391959798995, 
