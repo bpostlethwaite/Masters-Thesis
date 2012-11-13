@@ -5,62 +5,47 @@ addpath functions
 addpath([userdir,'/programming/matlab/jsonlab'])
 addpath(genpath([userdir,'/programming/matlab/mpt/']));
 
-%% Get stations.json data
-%{
-%json = loadjson([userdir,'/thesis/stations.json']);
-load stnsjson.mat
-s = json;
-fn = fieldnames(s);
-lat = []; lon = [];
-R = []; H = [];
-stn = {};
-for strng = fn'
-    str = char(strng);
-    if isfield(s.(str), 'hk')
-        if s.(str).hk.stdR < 0.041
-            if any(strcmp(str, {'YKW2','YKW4','YKW5'}))
-                fprintf('Skipping A YKWn station\n')
-                continue
-            end
-            stn{end+1} = str;
-            lat(end+1) = s.(str).lat;
-            lon(end+1) = s.(str).lon;
-            R(end+1) = s.(str).hk.R;
-            H(end+1) = s.(str).hk.H;
-        end
-    end
-end
-%}
+provinces = {
+    'Bear Province'             % 1
+    'Churchill Province'        % 2
+    'Grenville Province'        % 3
+    'Province de Grenville'     % 4
+    'Nain Province'             % 5
+    'Slave Province'            % 6
+    'Southern Province'         % 7
+    'Superior Province'         % 8 
+    'Arctic Platform'           % 9
+    'Interior Platform'         % 10
+    'St. Lawrence Platform'     % 11
+    'Arctic Continental Shelf'  % 12
+    'Atlantic Continental Shelf'% 13
+    'Pacific Continental Shelf' % 14
+    'Appalachian Orogen'        % 15
+    'Cordilleran Orogen'        % 16
+    'Innuitian Orogen'          % 17
+    'Hudson Bay Lowlands'       % 18
+    };
 
-%% Get Mooney Vp shot data R = Vp (cutoff @ Vp < 5.6)
-% 
-s = loadjson([userdir,'/thesis/moonvpGeology.json']);
-fn = fieldnames(s);
-lat = []; lon = [];
-R = []; H = [];
-stn = {};
-for strng = fn'
-    str = char(strng);
-    if s.(str).Vp < 5.6
-        continue
-    end
-    stn{end+1} = str;
-    lat(end+1) = s.(str).lat;
-    lon(end+1) = s.(str).lon;
-    R(end + 1) = s.(str).Vp;
-    H(end+1) = s.(str).H;
-end
+
 %}
-rads = degtorad([lat', lon']);
+%% Helper Funcs
 poisson = @(R) ( (R^2 - 2) / (2*(R^2 - 1)));
-
 
 vects = @(V) [
     cos(V(:,1)) .* cos(V(:,2)),...
     cos(V(:,1)) .* sin(V(:,2)),...
     sin(V(:,1)) ];
+%% Get Data
+%json = '../stations.json';
+%cutoff = 0.041;
+json = '../moonvpGeology.json';
+cutoff = 5.6;
+data = getStationData(json, provinces, 0.041);
+rads = degtorad([data.lat', data.lon']);
+%% Perform conversions, computations
 
 [X,IA,IC] = unique(vects(rads), 'rows');
+
 
 
 %{
@@ -137,17 +122,17 @@ options.pbound = polytope( cvx );
 V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
 area = volume(V);
 area = area./sum(area);
-Rv = R(IA)' .* area;
-Hv = H(IA)' .* area;
+Rv = data.R(IA)' .* area;
+Hv = data.H(IA)' .* area;
 
 plot(V)
 hold on
 arealabel = arrayfun(@(n) {sprintf(' %2.3f', n)}, area*100);
-plabel = strcat(stn(IA)', arealabel);
+plabel = strcat(data.stn(IA)', arealabel);
 Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
        'bold', 'HorizontalAlignment','center', ...
        'BackgroundColor', 'none');
-
+hold off
 fprintf('Voronoi average Vp/Vs = %f\n', sum(Rv));
 fprintf('Voronoi average H = %f\n', sum(Hv));
    

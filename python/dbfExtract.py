@@ -10,7 +10,7 @@ import os, json
 import dbf
 
 
-# # Extracting Geological Province Data
+# Extracting Geological Province Data
 # stnjson = os.environ['HOME'] + "/thesis/stations.json"
 # stnd = json.loads( open(stnjson).read() )
 # #Load geological time data
@@ -21,8 +21,8 @@ import dbf
 #     stnd[rec["station"]]["geoprov"] = (rec["geolprov"])
 
 
-# #print json.dumps(stnd, sort_keys = True, indent = 2 )
-# open(stnjson,'w').write( json.dumps(stnd, sort_keys = True, indent = 2 ))
+#print json.dumps(stnd, sort_keys = True, indent = 2 )
+##open(stnjson,'w').write( json.dumps(stnd, sort_keys = True, indent = 2 ))
 
 
 # # Extracting Mooney Crust 2.0 Data
