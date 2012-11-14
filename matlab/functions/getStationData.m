@@ -15,18 +15,16 @@ if ~isempty(strfind(json, 'stations.json'))
         str = char(strng);
         % All stns should have geoprov field (ie within Canada)
         if ~isfield(s.(str), 'geoprov')
-            fprintf('Skipping %s station\n', str)
             continue
         end
         % Skip mirror stations (take the best one)
         % Could average these stations.
         if any(strcmp(str, {'YKW2','YKW4','YKW5'}))
-            fprintf('Skipping %s station\n', str)
+            %fprintf('Skipping %s station\n', str)
             continue
         end
         % Skip stations not within region of interest
         if ~any(strcmp(s.(str).geoprov, regions))
-            fprintf('Skipping %s station\n', str)
             continue
         end
         if isfield(s.(str), 'hk')
@@ -59,7 +57,7 @@ else
         end
         if s.(str).Vp < cutoff
             continue
-        end        
+        end
         data.stn{end+1} = str;
         data.lat(end+1) = s.(str).lat;
         data.lon(end+1) = s.(str).lon;
