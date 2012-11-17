@@ -20,10 +20,10 @@ import scipy.io as sio
 # CONFIGS
 databasedir = '/media/TerraS/database'
 netdir = '/media/TerraS/CN'
-dbfile = os.environ['HOME'] + '/thesis/stations.json'
+dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
 shpfile = os.environ['HOME'] + '/thesis/mapping/stations'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
-updtime = os.environ['HOME'] + '/thesis/updtime.data'
+updtime = os.environ['HOME'] + '/thesis/data/updtime.data'
 
 
 def flattenlist(a, result=None):
@@ -275,7 +275,8 @@ def compare(A, B, op):
         'lt': lambda A, B: A < B,
         'lte': lambda A, B: A <= B,
         'ne': lambda A, B: A != B,
-        'in': lambda A, B: B in A
+        'in': lambda A, B: B in A,
+        'not in': lambda A, B: B not in A
         }[op](A, B)
 
 def queryStns(stdict, args, scp):
