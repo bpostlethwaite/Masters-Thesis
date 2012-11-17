@@ -13,7 +13,7 @@ import json
 
 shpfile = os.environ['HOME'] + '/thesis/mapping/mooney/mooneyShots'
 dat = os.environ['HOME'] + '/thesis/mapping/mooney/Canada.dat'
-moonf = os.environ['HOME'] + '/thesis/moonShots.json'
+moonf = os.environ['HOME'] + '/thesis/data/moonShots.json'
 readings = []
 
     # ratio = h / ht
@@ -74,7 +74,12 @@ def process(r):
         h = np.array(h)
         vp = np.array(vp)
         assert (np.sum(h) - htotal) < 0.001
-        return code, -float(lon[:-1]), float(lat[:-1]) , np.dot(vp, h / htotal), htotal
+        # If Vp == 0 cast out, probably means it's a Vs reading
+        vpsum = np.dot(vp, h / htotal)
+        if vpsum == 0:
+            return None
+        else:
+            return code, -float(lon[:-1]), float(lat[:-1]) , vpsum, htotal
 
     else:
         return None
@@ -126,6 +131,6 @@ with open(dat) as f:
 #for d in data:
 #    print d[1]
 
-#mooney2shapefile(data)
+mooney2shapefile(data)
 #print json.dumps(data, sort_keys = True, indent = 2 )
 open(moonf,'w').write( json.dumps(data, sort_keys = True, indent = 2 ))

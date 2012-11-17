@@ -17,34 +17,13 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'WALA';
+station = 'CTLN';
 
 %{
-
-HNB
-WALA
-KJKQ
-VIMO
-EUNU
-BMRO
-MNTQ
-PIMB
-TALB
-EA06
-KASO
-DMCQ
-COQB
-VLDQ
-CBB
-ATKO
-PKRO
-ALRB
-OZB
-ELFO
-A64
-RSPO
-EDZN
-PLIO
+SLEB
+MUMO
+CTLN
+NMSQ
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );

@@ -3,13 +3,13 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 
 %% Main Control
-npb = 4; % Average number of traces per bin
+npb = 3; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3; % Upper frequency cutoff
-
+snrlim = 0.35;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -67,6 +67,7 @@ end
 % if discardBad flag set simdecf will return Nan arrays where it did not
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.
+clear wft vft
 %% Renew
 % So we don't have to run simdecf again to renew variables in manual rerun
 rec = Rec;
@@ -85,7 +86,34 @@ clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
 brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
-
+%% RF SnR
+if snrlim > 0
+    snr = zeros(size(brec,1), 1);
+    for ii = 1:size(brec,1)
+        v = detrend(brec(ii, round(1/dt):round(45/dt)));
+        delta = 0.1 * max(abs(v));
+        [maxtab, mintab] = peakdet(v, delta);
+        [~,I] = sort(maxtab(:,2),'descend');
+        peakmax = maxtab(I,:);
+        [~ ,I] = sort(mintab(:,2),'ascend');
+        peakmin = mintab(I,:);
+        bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
+        noisepeak = (norm(peakmax(3:end,2)) + norm(peakmin(2 : end, 2))) / 2 ;
+        snr(ii) = bigpeak / noisepeak;
+        
+%         plot(v);
+%         hold on
+%         plot(peakmax(:,1), peakmax(:,2), 'ro')
+%         plot(peakmin(:,1), peakmin(:,2), 'ro')
+%         title(sprintf('delta %1.3f SNR = %1.3f', delta, snr))
+%         hold off
+    end
+    
+    ind = snr < snrlim;
+    brec( ind  , : ) = [];
+    pslow( ind ) = [];
+end
+clear maxtab mintab delta v bigpeak noisepeak
 %% Run Processing suite
 vp = json.(station).wm.Vp;
 % Load Mooney Crust 2.0 database Vp estimate

@@ -50,12 +50,14 @@ class Args(object):
 
     def addQuery(self, attr, op, value):
         self.query = [attr, op, value]
+        return self
 
     def addKeys(self):
         self.keys = True
+        return self
 
 class Params(object):
-    def __init__(self, fname, args, plist):
+    def __init__(self, fname, plist, args = None):
         """ Takes a file name to json formatted data
         with a bunch of stations as primary attributes, each with
         a value that is also an attribute. whatever"""
@@ -66,16 +68,23 @@ class Params(object):
         # accessing deep json structures
         self.scp = Scoper("::")
 
-        rawdata = json.loads( open(fname).read() )
-        filtdata = queryStns(rawdata, args, self.scp)
+        self.data = json.loads( open(fname).read() )
+        if args:
+            self.filter(args)
+        else:
+            self.setBaseData(self.data)
 
-        for stn in filtdata.keys():
+
+    def setBaseData(self, data):
+        """ Set data as base data from which a reset() will return state"""
+        self._stns = []
+        for stn in data.keys():
             # Make sure all parameters exist for each station
             # If they do, add station to list.
             # Use the scoper to flatten json so we can check if
             # scoped keys are in the dictionary. (allows us to search with
             # depth into dictionary a::b = d['a']['b']
-            if len([p for p in plist if p in self.scp.flattendict(filtdata[stn])]) == len(plist):
+            if len([p for p in self.plist if p in self.scp.flattendict(data[stn])]) == len(self.plist):
                 self._stns.append(stn)
 
         # Make self._stns immutable
@@ -84,20 +93,28 @@ class Params(object):
         # Create a temporary dictionary of all
         # station data.
         temp = {}
-        for p in plist:
+        for p in self.plist:
             temp[p] = np.zeros(len(self._stns))
         for ii, stn in enumerate(self._stns):
-            for p in plist:
-                temp[p][ii] = self.scp.flattendict(filtdata[stn])[p]
+            for p in self.plist:
+                temp[p][ii] = self.scp.flattendict(data[stn])[p]
 
         # Build base data variables with _ prefix as
         # numpy data extracted from json data.
-        for p in plist:
+        for p in self.plist:
             setattr(self, '_' + self.scp.normscope(p), temp[p])
 
         # Build variable list, initial array order is just
         # station order
         self.reset()
+
+
+    def filter(self, args):
+        """ Use querystns function from dbutils to refine basedata."""
+        self.data = queryStns(self.data, args, self.scp)
+        if not len(self.data):
+            print "Query returned empty dictionary"
+        self.setBaseData(self.data)
 
     def sync(self, pobj):
         """ Filter by list of stations only, useful for syncing

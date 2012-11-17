@@ -10,24 +10,14 @@ import sys, os, json
 #from dbutils import queryStats, getStats
 from plotTools import Args, Params
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 from scipy.signal import detrend
 from scipy.stats import pearsonr, norm
 #from matplotlib.backends.backend_pdf import PdfPages
-import matplotlib.mlab as mlab
+
 
 plotnum = [False for i in range(15)]
 # Figure Properties
-width = 12
-height = 9
-legsize = width + 3
-pnmin = 0.22
-pnmax = 0.3
-dpn = 0.002
-vpmin = 6
-vpmax = 7.0
-dvp = 0.02
 
 
 help = '''
@@ -40,10 +30,6 @@ plots.py 2  Comparing some errors in Kanamori approach and new vs old bostock da
 plots.py 3  Compare values between bostock, kanamori and Mooney
 plots.py 4  Investigation into effect of new auto processing
 plots.py 5  Plot Mooney Vp shot data against stations of close proximity
-plots.py 6  Canada Wide Histogram
-plots.py 7  Canadian Shield Province Histograms (Provinces)
-plots.py 8  Canadian Shield Aggregate
-plots.py 9  Cordilleran Orogen
 ######################
 '''
 if len(sys.argv) < 2:
@@ -55,21 +41,6 @@ else:
 def poisson(R):
     ''' Function to go from Vp/Vs -> Poisson's ratio '''
     return  ( (R**2 - 2) / (2*(R**2 - 1)))
-
-
-def addtext(data, ax, n, arclen):
-    for ii, v in enumerate(data):
-        txt = r'$\sigma=$'+"{:0.3f}".format(v)
-        ax.annotate(txt, xy = (v , 0.85 * max(n)) if ii else (v , 0.7 * max(n)),  xycoords='data', size = 16,
-                     xytext=(arclen, 10), textcoords='offset points',
-                     arrowprops=dict(arrowstyle="->",lw = 3,
-                                     connectionstyle="arc3,rad=.2"))
-
-def distfunc(data, bins):
-    (mu, sigma) = norm.fit(data)
-    # add a 'best fit' line
-    return mlab.normpdf( bins, mu, sigma)
-
 
 #######################################################################
 # F0
@@ -141,9 +112,9 @@ if plotnum[1]:
     arg1.addQuery("usable", "eq", "1")
     arg2 = Args()
     # Load station params
-    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
+    d = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["hk::H","hk::R"])
     # Load geochron data
-    g = Params(os.environ["HOME"] + "/thesis/stnChrons.json", arg2, ["lower", "upper"] )
+    g = Params(os.environ["HOME"] + "/thesis/data/stnChrons.json", arg2, ["lower", "upper"] )
     # Sync up data
     d.sync(g)
 
@@ -177,9 +148,9 @@ if plotnum[2]:
     arg1.addQuery("usable", "eq", "1")
     arg2 = Args()
     # Load station params
-    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
-    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
-    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
+    k = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
+    b = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["mb::stdH","mb::stdR","mb::stdVp","mb::H","mb::R","mb::Vp"])
+    ob = Params(os.environ['HOME'] + '/thesis/data/stations_old.json', arg2 , ["stdVp","stdR","stdH","Vp","R","H"])
 
     k.sync(b.sync(ob.sync(k.sync(b.sync(ob)))))
 
@@ -286,9 +257,9 @@ if plotnum[3]:
     arg1 = Args()
     arg1.addQuery("usable", "eq", "1")
     # Load station params
-    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    m = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","wm::R","wm::Vp"])
-    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["mb::H","mb::R","mb::Vp"])
+    k = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["hk::H","hk::R"])
+    m = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["wm::H","wm::R","wm::Vp"])
+    b = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["mb::H","mb::R","mb::Vp"])
 
     m.sync(b.sync(k.sync(m.sync(b.sync(k)))))
 
@@ -331,9 +302,9 @@ if plotnum[4]:
     arg3.addQuery("hk::stdH", "lt", "100")
 
     # Load station params
-    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
-    ok = Params(os.environ['HOME'] + '/thesis/stations.old.json', arg2 ,["hk::stdH","hk::stdR","hk::R","hk::H"])
-    kall = Params(os.environ['HOME'] + '/thesis/stations.json', arg3, ["hk::stdH","hk::stdR","hk::R","hk::H"])
+    k = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["hk::stdH","hk::stdR","hk::R","hk::H"])
+    ok = Params(os.environ['HOME'] + '/thesis/data/stations.old.json', arg2 ,["hk::stdH","hk::stdR","hk::R","hk::H"])
+    kall = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg3, ["hk::stdH","hk::stdR","hk::R","hk::H"])
 
     k.sync(ok.sync(k))
     t = np.arange(len(k.hk_H))
@@ -378,10 +349,10 @@ if plotnum[5]:
     arg1.addQuery("usable", "eq", "1")
     arg2 = Args()
     arg2.addQuery("Vp", "gt", "4")
-    b = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["wm::H","mb::stdVp","mb::H","mb::R","mb::Vp"])
-    k = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    ob = Params(os.environ['HOME'] + '/thesis/stations_old.json', Args() , ["stdVp","stdR","stdH","Vp","R","H"])
-    m = Params(os.environ['HOME'] + '/thesis/moonStations.json', arg2 , ["Vp","H"])
+    b = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["wm::H","mb::stdVp","mb::H","mb::R","mb::Vp"])
+    k = Params(os.environ['HOME'] + '/thesis/data/stations.json', arg1, ["hk::H","hk::R"])
+    ob = Params(os.environ['HOME'] + '/thesis/data/stations_old.json', Args() , ["stdVp","stdR","stdH","Vp","R","H"])
+    m = Params(os.environ['HOME'] + '/thesis/data/moonStations.json', arg2 , ["Vp","H"])
 
 
 
@@ -427,375 +398,6 @@ if plotnum[5]:
                     arrowprops=dict(arrowstyle="->",
                                     connectionstyle="arc3,rad=.2"))
     plt.legend()
-
-
-
-#######################################################################
-# F6
-if plotnum[6]:
-
-## Kanamori Poisson Histogram
-    plt.figure( figsize = (width, height) )
-    arg1 = Args()
-    arg1.addQuery("hk::stdR", "lt", "0.041")
-    # Load station params
-    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-
-    d.hk_P = poisson(d.hk_R)
-    d.avgvn = poisson(1.746516)
-    d.avgpNik = 0.265
-
-
-    ax1 = plt.subplot(111)
-
-    # the histogram of the data
-    bins = np.arange(pnmin, pnmax, dpn)
-    n, bins, patches = plt.hist(d.hk_P, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Poisson ratio')
-
-    # add a 'best fit' line
-    y = distfunc(d.hk_P, bins)
-
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = d.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nPoisson Average")
-    plt.axvline(x = d.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canada Wide Poisson Ratio Histogram", size = 22)
-    plt.xlabel("Poisson Ratio", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size':legsize})
-    plt.grid(True)
-
-    for tick in ax1.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-
-    addtext([d.avgvn, d.avgpNik], ax1, n, -180)
-
-## Mooney Vp Histogram
-    plt.figure( figsize = (width, height) )
-    ax2 = plt.subplot(111)
-    arg2 = Args()
-    arg2.addQuery("Vp", "gt", "5.6")
-    m = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg2, ["H","Vp"])
-    # Voronoi average Vp/Vs = 6.289357
-    # Voronoi average H = 34.700373
-    m.avgvn = 6.289
-    m.avgpNik = 6.454
-
-    # the histogram of the data
-    bins = np.arange(vpmin, vpmax, dvp)
-    n, bins, patches = plt.hist(m.Vp, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Mooney Vp')
-
-    # add a 'best fit' line
-    y = distfunc(m.Vp, bins)
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = m.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nMooney Vp")
-    plt.axvline(x = m.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canada Wide Mooney Vp Data", size = 22)
-    plt.xlabel("Mooney Vp", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size': legsize})
-    plt.grid(True)
-
-    for tick in ax2.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-
-    addtext([m.avgvn, m.avgpNik], ax2, n, -100)
-
-
-#######################################################################
-# F7
-if plotnum[7]:
-
-    fig = plt.figure( figsize = (width, height) )
-
-    # province: voronoiR, vonoroiH, voronoiMooneyVp, voronoiMooneyH
-    provinces = {
-        "Churchill Province": [1.7325, 38.9727, 6.3775, 38.3817],
-        "Superior Province": [1.7249, 39.8632,  6.4350, 37.7152],
-        "Slave Province": [1.7392, 38.4625, 6.4144 , 42.1742],
-        "Grenville Province": [1.8250, 41.7257, 6.4794, 40.9236]
-        }
-
-    provs = [
-        "Superior Province",
-        "Churchill Province",
-        "Slave Province",
-        "Grenville Province"
-        ]
-
-    color = ['b', 'g', 'm', 'y', 'k', 'c']
-    bins = np.arange(pnmin, pnmax, dpn)
-    handles = ()
-    labels = ()
-
-    plt.subplots_adjust(left= None, bottom=None, right = 0.75, top=None,
-                        wspace=None, hspace=0.05)
-
-    for (ii, province) in enumerate(provs):
-        arg1 = Args()
-        arg1.addQuery("hk::stdR", "lt", "0.041")
-        # Load station params
-        d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-
-        arg1 = Args()
-        arg1.addQuery("geoprov", "in", province)
-        d2 = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-
-        d.sync(d2)
-        #print province, len(d.stns)
-
-        d.hk_P = poisson(d.hk_R)
-        d.avgvn = poisson(provinces[province][0])
-        d.avgpNik = 0.265
-
-        ax = ( plt.subplot(4,1,ii + 1) )
-
-        n, bins, patches = plt.hist(d.hk_P, bins = bins, histtype = "bar", normed = True,
-                 color = color[ii], rwidth = 1, alpha = 0.6,
-                 label = province)
-        handle, label = ax.get_legend_handles_labels()
-        handles += (handle[0],)
-        labels += (label[0],)
-
-        y = distfunc(d.hk_P, bins)
-        distc = plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-        abgvn = plt.axvline(x = d.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nPoisson Average")
-        avgpNik = plt.axvline(x = d.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-        plt.setp( ax.get_xticklabels(), visible=False)
-
-        addtext([d.avgvn, d.avgpNik], ax, n, -80)
-        plt.grid(True)
-
-    handles += (distc, abgvn, avgpNik)
-    labels += ('Distribution curve', 'Area Weighted\nPoisson Average', "Avg Cont. Crust N.\nChristensen ('96)")
-    fig.legend(handles, labels, 'right', prop={'size': legsize})
-    plt.setp( ax.get_xticklabels(), visible= True)
-    plt.suptitle('Poisson Ratio Histogram\n Major Canadian Shield Provinces', size = 22)
-
-    for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize(14)
-
-## Mooney Vp ##
-    fig = plt.figure( figsize = (width, height) )
-
-    plt.subplots_adjust(left = None, bottom=None, right = 0.75, top= None,
-                        wspace=None, hspace=0.05)
-
-    bins = np.arange(vpmin, vpmax, dvp)
-    handles = ()
-    labels = ()
-
-    for (ii, province) in enumerate(provs):
-
-
-        arg2 = Args()
-        arg2.addQuery("geoprov", "in", province)
-        m = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg2, ["H","Vp"])
-        arg3 = Args()
-        arg3.addQuery("Vp", "gt", "5.6")
-        m2 = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg3, ["H","Vp"])
-
-        m.sync(m2)
-
-        m.avgvn = provinces[province][2]
-        m.avgpNik = 6.454
-
-        ax = ( plt.subplot(4,1,ii + 1) )
-
-        n, bins, patches = plt.hist(m.Vp, bins = bins, histtype = "bar", normed = True,
-                 color = color[ii], rwidth = 1, alpha = 0.6,
-                 label = province)
-        handle, label = ax.get_legend_handles_labels()
-        handles += (handle[0],)
-        labels += (label[0],)
-
-        y = distfunc(m.Vp, bins)
-        distc = plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-        abgvn = plt.axvline(x = m.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nPoisson Average")
-        avgpNik = plt.axvline(x = m.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-        plt.setp( ax.get_xticklabels(), visible=False)
-
-        addtext([m.avgvn, m.avgpNik], ax, n, -180)
-
-        plt.grid(True)
-
-
-#    ax = plt.subplot(4,1,4)
-    handles += (distc, abgvn, avgpNik)
-    labels += ('Distribution curve', 'Area Weighted\nPoisson Average', "Avg Cont. Crust N.\nChristensen ('96)")
-    fig.legend(handles, labels, 'right', prop={'size': legsize})
-    plt.setp( ax.get_xticklabels(), visible= True)
-    plt.suptitle('Mooney Vp Histogram\n Major Canadian Shield Provinces', size = 22)
-
-    for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize(14)
-
-
-#######################################################################
-# F8 Sheild as a whole
-if plotnum[8]:
-
-### Vp/Vs Estimates
-# Voronoi average Vp/Vs = 1.734761
-# Voronoi average H = 39.107447
-    plt.figure( figsize = (width, height) )
-    arg1 = Args()
-    arg1.addQuery("hk::stdR", "lt", "0.041")
-    # Load station params
-    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    arg2 = Args()
-    arg2.addQuery("geoprov", "in", "Province")
-    d2 = Params(os.environ['HOME'] + '/thesis/stations.json', arg2, ["hk::H","hk::R"])
-
-    d.sync(d2)
-
-    d.hk_P = poisson(d.hk_R)
-    d.avgvn = poisson(1.734)
-    d.avgpNik = 0.265
-
-    ax = plt.subplot(111)
-    # best fit of data
-    (mu, sigma) = norm.fit(d.hk_P)
-    # the histogram of the data
-    bins = np.arange(pnmin, pnmax, dpn)
-    n, bins, patches = plt.hist(d.hk_P, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Poisson ratio')
-
-    # add a 'best fit' line
-    y = mlab.normpdf( bins, mu, sigma)
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = d.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nPoisson Average")
-    plt.axvline(x = d.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canadian Shield - Poisson Ratio Histogram", size = 22)
-    plt.xlabel("Poisson Ratio", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size': legsize})
-    plt.grid(True)
-
-    for tick in ax.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-    addtext([d.avgvn, d.avgpNik], ax, n, -100)
-
-## Mooney Vp Histogram
-# Voronoi average Vp = 6.406250
-# Voronoi average H = 38.169429
-    plt.figure( figsize = (width, height) )
-    ax2 = plt.subplot(111)
-    arg2 = Args()
-    arg2.addQuery("Vp", "gt", "5.6")
-    m = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg2, ["H","Vp"])
-    arg3 = Args()
-    arg3.addQuery("geoprov", "in", "Province")
-    m2 = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg3, ["H","Vp"])
-
-    m.sync(m2)
-
-    m.avgvn = 6.40625
-    m.avgpNik = 6.454
-
-    # the histogram of the data
-    bins = np.arange(vpmin, vpmax, dvp)
-    n, bins, patches = plt.hist(m.Vp, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Mooney Vp')
-
-    # add a 'best fit' line
-    y = distfunc(m.Vp, bins)
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = m.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nMooney Vp")
-    plt.axvline(x = m.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canadian Shield - Mooney Vp Data", size = 22)
-    plt.xlabel("Mooney Vp", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size': legsize})
-    plt.grid(True)
-
-    for tick in ax2.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-    addtext([m.avgvn, m.avgpNik], ax2, n, -120)
-
-#######################################################################
-# F9
-if plotnum[9]:
-# Kanamori Poisson Histogram
-# Voronoi average Vp/Vs = 1.757236
-# Voronoi average H = 33.755679
-    plt.figure( figsize = (width, height) )
-    arg1 = Args()
-    arg1.addQuery("hk::stdR", "lt", "0.041")
-    # Load station params
-    d = Params(os.environ['HOME'] + '/thesis/stations.json', arg1, ["hk::H","hk::R"])
-    arg2 = Args()
-    arg2.addQuery("geoprov", "in", "Cordilleran Orogen")
-    d2 = Params(os.environ['HOME'] + '/thesis/stations.json', arg2, ["hk::H","hk::R"])
-
-    d.sync(d2)
-
-    d.hk_P = poisson(d.hk_R)
-    d.avgvn = poisson(1.734)
-    d.avgpNik = 0.265
-
-    ax = plt.subplot(111)
-    # best fit of data
-    (mu, sigma) = norm.fit(d.hk_P)
-    # the histogram of the data
-    bins = np.arange(pnmin, pnmax, dpn)
-    n, bins, patches = plt.hist(d.hk_P, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Poisson ratio')
-
-    # add a 'best fit' line
-    y = mlab.normpdf( bins, mu, sigma)
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = d.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nPoisson Average")
-    plt.axvline(x = d.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canadian Shield - Poisson Ratio Histogram", size = 22)
-    plt.xlabel("Poisson Ratio", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size': legsize})
-    plt.grid(True)
-
-    for tick in ax.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-    addtext([d.avgvn, d.avgpNik], ax, n, -100)
-
-# Mooney Vp histogram
-# Voronoi average Vp/Vs = 6.364002
-# Voronoi average H = 36.249304
-    plt.figure( figsize = (width, height) )
-    ax2 = plt.subplot(111)
-    arg2 = Args()
-    arg2.addQuery("Vp", "gt", "5.6")
-    m = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg2, ["H","Vp"])
-    arg3 = Args()
-    arg3.addQuery("geoprov", "in", "Cordilleran Orogen")
-    m2 = Params(os.environ['HOME'] + '/thesis/moonvpGeology.json', arg3, ["H","Vp"])
-
-    m.sync(m2)
-
-    #Voronoi average Vp/Vs = 6.289357
-    #Voronoi average H = 34.700373
-    m.avgvn = 6.40625
-    m.avgpNik = 6.454
-
-    # the histogram of the data
-    bins = np.arange(vpmin, vpmax, dvp)
-    n, bins, patches = plt.hist(m.Vp, bins = bins, normed = True,  facecolor='green', alpha=0.75, label='Mooney Vp')
-
-    # add a 'best fit' line
-    y = distfunc(m.Vp, bins)
-    plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
-    plt.axvline(x = m.avgvn, linewidth = 4, color = 'r', label = "Area Weighted\nMooney Vp")
-    plt.axvline(x = m.avgpNik, linewidth = 4, color = 'b', label = "Avg Cont. Crust\nN. Christensen ('96)")
-    plt.title("Canadian Shield - Mooney Vp Data", size = 22)
-    plt.xlabel("Mooney Vp", size = 16)
-    plt.ylabel("Probability", size = 16)
-    plt.legend(prop={'size': legsize})
-    plt.grid(True)
-
-    for tick in ax2.xaxis.get_major_ticks():
-                tick.label.set_fontsize(14)
-
-    addtext([m.avgvn, m.avgpNik], ax2, n, -120)
 
 
 #######################################################################
