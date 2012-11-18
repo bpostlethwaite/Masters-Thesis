@@ -194,7 +194,7 @@ def printClusters(clusterd):
 
 if __name__== '__main__' :
 
-    dbfile = os.environ['HOME']+'/thesis/stations.json'
+    dbfile = os.environ['HOME']+'/thesis/data/stations.json'
     stdict = json.loads( open(dbfile).read() )
     stndir = "/media/TerraS/CN"
 
@@ -220,16 +220,16 @@ if __name__== '__main__' :
 
     if not args.number:
         # Default behaviour
-        args.number = 2
+        args.number = [2]
 
     if args.stations:
+        stations = []
         # trick to seperate a newline or space seperated list. Always returns list.
         # Insert stations at beginning of arg list matching case where stations are included after flag
         if not sys.stdin.isatty():
-            stations = []
-            stations.insert(0,re.findall(r'\w+', sys.stdin.read() ))
+            stations =  re.findall(r'\w+', sys.stdin.read() )
         else:
-            stations = args.stations
+            stations.append(args.stations)
 
         stnd = {k:v for k,v in stdict.items() if k in stations[0]}
         clusterd = clusterStations(stnd, args.number[0], showmap = args.map)
@@ -239,11 +239,12 @@ if __name__== '__main__' :
     if args.events:
         stations = []
         if not sys.stdin.isatty():
-            stations.insert(0,re.findall(r'\w+', sys.stdin.read() ))
+            stations =  re.findall(r'\w+', sys.stdin.read() )
         else:
             stations.append(args.events)
 
         for stn in stations:
+            print stn
             evdict, cldict = clusterEvents(os.path.join(stndir,stn), args.number[0], showmap = args.map)
 
             if args.printc:

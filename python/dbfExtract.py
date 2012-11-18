@@ -11,7 +11,7 @@ import dbf
 
 
 # Extracting Geological Province Data
-# stnjson = os.environ['HOME'] + "/thesis/stations.json"
+# stnjson = os.environ['HOME'] + "/thesis/data/stations.json"
 # stnd = json.loads( open(stnjson).read() )
 # #Load geological time data
 
@@ -26,7 +26,7 @@ import dbf
 
 
 # # Extracting Mooney Crust 2.0 Data
-# stnjson = os.environ['HOME'] + "/thesis/stations.json"
+# stnjson = os.environ['HOME'] + "/thesis/data/stations.json"
 # stnd = json.loads( open(stnjson).read() )
 # #Load geological time data
 
@@ -45,9 +45,9 @@ import dbf
 
 
 ##Extracting Station Chrons
-# datafile = os.environ['HOME'] + "/thesis/stnChrons.json"
-#epochdata = open(os.environ['HOME'] + '/thesis/epoch.json')
-#epochdict = json.loads( epochdata.read() )
+# datafile = os.environ['HOME'] + "/thesis/data/stnChrons.json"
+epochdata = open(os.environ['HOME'] + '/thesis/data/epoch.json')
+epochdict = json.loads( epochdata.read() )
 
 ##     #Load geological time data
 # db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeology.dbf")
@@ -64,20 +64,20 @@ import dbf
 
 
 # # Extracting VpmoonGeology data -> VpmoonShots.json
-# moonvpGeology = os.environ['HOME'] + "/thesis/moonvpGeology.json"
-# moonjson = os.environ['HOME'] + "/thesis/moonShots.json"
-# d = json.loads( open(moonjson).read() )
+moonvpGeology = os.environ['HOME'] + "/thesis/data/moonvpGeology.json"
+moonjson = os.environ['HOME'] + "/thesis/data/moonShots.json"
+d = json.loads( open(moonjson).read() )
 
-# #Load geological time data
+#Load geological time data
 
-# db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/moonVpGeology.dbf")
-# m = {}
-# for rec in db:
-#     m[rec['mcode']] = d[rec['mcode']]
-#     m[rec['mcode']]['geoprov'] = rec['geolprov']
-#     m[rec["mcode"]]["lower"] = epochdict[rec["epoch"]][0]
-#     m[rec["mcode"]]["upper"] = epochdict[rec["epoch"]][1]
-#     m[rec["mcode"]]["era"] = rec["era"].lower()
+db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/moonVpGeology.dbf")
+m = {}
+for rec in db:
+    m[rec['mcode']] = d[rec['mcode']]
+    m[rec['mcode']]['geoprov'] = rec['geolprov']
+    m[rec["mcode"]]["lower"] = epochdict[rec["epoch"]][0]
+    m[rec["mcode"]]["upper"] = epochdict[rec["epoch"]][1]
+    m[rec["mcode"]]["era"] = rec["era"].lower()
 
-# #print json.dumps(m, sort_keys = True, indent = 2 )
-# open(moonvpGeology,'w').write( json.dumps(m, sort_keys = True, indent = 2 ))
+#print json.dumps(m, sort_keys = True, indent = 2 )
+open(moonvpGeology,'w').write( json.dumps(m, sort_keys = True, indent = 2 ))

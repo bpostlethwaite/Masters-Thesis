@@ -8,8 +8,8 @@ discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 3; % Upper frequency cutoff
-snrlim = 0.35;
+fHigh = 2.6; % Upper frequency cutoff
+snrlim = 0.30;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results

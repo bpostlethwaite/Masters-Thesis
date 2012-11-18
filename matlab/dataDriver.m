@@ -17,13 +17,27 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'CTLN';
+station = 'VLDQ';
 
 %{
-SLEB
-MUMO
-CTLN
+
+DMCQ
+EA06
+EUNU
+HNB
+KASO
+KILO
+MNTQ
+MOBC
 NMSQ
+OZB
+PIMB
+PKRO
+PLIO
+RSPO
+VIMO
+VLDQ
+WALA
 
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
@@ -86,8 +100,8 @@ end
 notes = input('Enter Processing Notes: ', 's');
 db.processnotes = notes;
 % Enter use / ignore flag
-%db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
-db.usable = 1;
+db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
+%db.usable = 1;
 % Save entrydbold.mb.
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)

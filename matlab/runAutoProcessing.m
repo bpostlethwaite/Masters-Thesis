@@ -6,7 +6,7 @@ addpath([userdir,'/programming/matlab/jsonlab'])
 sacfolder = '/media/TerraS/CN';
 databasedir = '/media/TerraS/database';
 
-json = loadjson('../stations.json');
+json = loadjson('../data/stations.json');
 
 %%  Select Station to Process and load station data
 method = 'kanamori';
@@ -16,8 +16,7 @@ logfile = fopen('logfile','w');
 for ii = 1 : length(s)
 
     station = s{ii};
-    
-   % try
+   try
         % Get rid of . and .. names
         if length(s{ii}) < 3
             fprinf('skipping %s\n', station)
@@ -32,8 +31,8 @@ for ii = 1 : length(s)
                 load(dbfile)
                 dbold = db;
             else
-                continue
                 %db = struct();
+                continue
             end
             
         else
@@ -41,23 +40,34 @@ for ii = 1 : length(s)
             continue    
         end
         
-       
+        if isfield(dbold.hk,'c0R')
+            continue
+        end
+        
         workingdir = fullfile(sacfolder,station);
         vp = json.(station).wm.Vp;
-        db = process(db, station, workingdir, method, vp);
- 
-        db.usable = 1;
+        for qq = 1:2
+            db0 = process(db, station, workingdir, method, vp, 0);
+            db1 = process(db, station, workingdir, method, vp, 1); 
+        end
+       
+        db.hk.c0R = db0.hk.rbest;
+        db.hk.c1R = db1.hk.rbest;
         
-        if (dbold.hk.stdR - db.hk.stdR) > 0.01
+     	fprintf('station: %s\n c0 R: %1.3f\n c1 R: %1.3f\n stdR: %1.3f\n',...
+                station,db0.hk.rbest, db1.hk.rbest, dbold.hk.stdR )
+%        db.usable = 1;
+        
+%        if (dbold.hk.stdR - db.hk.stdR) > 0.01
         % Save sequence
-            save(dbfile,'db')
-            fprintf('%s - pass %1.2f\n', station,...
-                dbold.hk.stdR - db.hk.stdR);
-        end    
-        clear db dbold
+         save(dbfile,'db')
+%            fprintf('%s - pass %1.2f\n', station,...
+%                dbold.hk.stdR - db.hk.stdR);
+%        end    
         
-   % catch ME
+   catch ME
    %     fprintf(logfile, '%s - fail\n',station);
-   %     fprintf('%s %s\n', station, ME.message)
-   % end
+         fprintf('%s %s\n', station, ME.message)
+         continue
+   end
 end
