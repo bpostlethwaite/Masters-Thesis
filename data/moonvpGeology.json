@@ -289,26 +289,6 @@
     "lower": 1800, 
     "upper": 1400
   }, 
-  "12060": {
-    "H": 36.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 46.51, 
-    "lon": -76.55, 
-    "lower": 1800, 
-    "upper": 1400
-  }, 
-  "12061": {
-    "H": 47.5, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 46.51, 
-    "lon": -76.55, 
-    "lower": 1800, 
-    "upper": 1400
-  }, 
   "121": {
     "H": 36.0, 
     "Vp": 6.2, 
@@ -369,16 +349,6 @@
     "lower": 1600, 
     "upper": 1000
   }, 
-  "12355": {
-    "H": 45.3, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 43.93, 
-    "lon": -72.95, 
-    "lower": 1600, 
-    "upper": 1000
-  }, 
   "12356": {
     "H": 35.0, 
     "Vp": 6.399999999999999, 
@@ -429,69 +399,9 @@
     "lower": 471.8, 
     "upper": 460.9
   }, 
-  "12495": {
-    "H": 39.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Superior Province", 
-    "lat": 49.25, 
-    "lon": -94.75, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "12505": {
-    "H": 45.6, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "", 
-    "lat": 47.25, 
-    "lon": -84.75, 
-    "lower": 3800, 
-    "upper": 542
-  }, 
-  "12509": {
-    "H": 45.8, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "St. Lawrence Platform", 
-    "lat": 43.25, 
-    "lon": -81.75, 
-    "lower": 397.5, 
-    "upper": 385.3
-  }, 
-  "12513": {
-    "H": 38.8, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 43.25, 
-    "lon": -73.75, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "12515": {
-    "H": 40.0, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "St. Lawrence Platform", 
-    "lat": 44.5, 
-    "lon": -80.5, 
-    "lower": 460.9, 
-    "upper": 443.7
-  }, 
   "12615": {
     "H": 36.9, 
     "Vp": 6.510054200542006, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 43.93, 
-    "lon": -75.12, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "12617": {
-    "H": 37.9, 
-    "Vp": 0.0, 
     "era": "precambrian", 
     "geoprov": "Grenville Province", 
     "lat": 43.93, 
@@ -899,16 +809,6 @@
     "lower": 1400, 
     "upper": 1200
   }, 
-  "12793": {
-    "H": 36.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 44.55, 
-    "lon": -74.53, 
-    "lower": 1200, 
-    "upper": 1000
-  }, 
   "12794": {
     "H": 44.0, 
     "Vp": 6.542727272727274, 
@@ -956,16 +856,6 @@
     "geoprov": "Slave Province", 
     "lat": 62.83, 
     "lon": -115.35, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "12800": {
-    "H": 38.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Slave Province", 
-    "lat": 62.92, 
-    "lon": -115.56, 
     "lower": 2800, 
     "upper": 2500
   }, 
@@ -1219,29 +1109,9 @@
     "lower": 1400, 
     "upper": 1200
   }, 
-  "12849": {
-    "H": 35.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 44.14, 
-    "lon": -74.68, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
   "12910": {
     "H": 35.2, 
     "Vp": 6.302130681818181, 
-    "era": "precambrian", 
-    "geoprov": "Churchill Province", 
-    "lat": 58.18, 
-    "lon": -79.31, 
-    "lower": 2300, 
-    "upper": 1800
-  }, 
-  "12912": {
-    "H": 38.0, 
-    "Vp": 0.0, 
     "era": "precambrian", 
     "geoprov": "Churchill Province", 
     "lat": 58.18, 
@@ -1338,16 +1208,6 @@
     "lon": -75.02, 
     "lower": 1800, 
     "upper": 1000
-  }, 
-  "12957": {
-    "H": 40.3, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Superior Province", 
-    "lat": 51.74, 
-    "lon": -95.18, 
-    "lower": 2800, 
-    "upper": 2500
   }, 
   "13056": {
     "H": 40.0, 
@@ -1549,36 +1409,6 @@
     "lower": 2.58, 
     "upper": 2.588
   }, 
-  "1443": {
-    "H": 50.0, 
-    "Vp": 0.0, 
-    "era": "mesozoic", 
-    "geoprov": "Cordilleran Orogen", 
-    "lat": 49.7, 
-    "lon": -125.5, 
-    "lower": 251, 
-    "upper": 199.6
-  }, 
-  "1446": {
-    "H": 36.0, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "Cordilleran Orogen", 
-    "lat": 50.3, 
-    "lon": -118.6, 
-    "lower": 1000, 
-    "upper": 253.8
-  }, 
-  "1449": {
-    "H": 33.0, 
-    "Vp": 0.0, 
-    "era": "mesozoic", 
-    "geoprov": "Cordilleran Orogen", 
-    "lat": 52.6, 
-    "lon": -122.0, 
-    "lower": 251, 
-    "upper": 145.5
-  }, 
   "1476": {
     "H": 48.3, 
     "Vp": 6.437898550724639, 
@@ -1608,126 +1438,6 @@
     "lon": -75.0, 
     "lower": 1400, 
     "upper": 1200
-  }, 
-  "1569": {
-    "H": 35.0, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "Hudson Bay Lowlands", 
-    "lat": 59.33, 
-    "lon": -90.83, 
-    "lower": 397.5, 
-    "upper": 385.3
-  }, 
-  "1570": {
-    "H": 35.0, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "Hudson Bay Lowlands", 
-    "lat": 60.0, 
-    "lon": -81.67, 
-    "lower": 443.7, 
-    "upper": 428.2
-  }, 
-  "1571": {
-    "H": 35.0, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "Hudson Bay Lowlands", 
-    "lat": 62.0, 
-    "lon": -87.5, 
-    "lower": 443.7, 
-    "upper": 359.2
-  }, 
-  "1572": {
-    "H": 32.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Slave Province", 
-    "lat": 62.67, 
-    "lon": -115.33, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "1573": {
-    "H": 38.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 49.33, 
-    "lon": -71.0, 
-    "lower": 1200, 
-    "upper": 1000
-  }, 
-  "1574": {
-    "H": 43.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 51.67, 
-    "lon": -65.33, 
-    "lower": 1200, 
-    "upper": 1000
-  }, 
-  "1575": {
-    "H": 35.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 47.0, 
-    "lon": -77.5, 
-    "lower": 2500, 
-    "upper": 1600
-  }, 
-  "1576": {
-    "H": 32.5, 
-    "Vp": 0.0, 
-    "era": "paleozoic", 
-    "geoprov": "Interior Platform", 
-    "lat": 53.0, 
-    "lon": -101.0, 
-    "lower": 397.5, 
-    "upper": 385.3
-  }, 
-  "1577": {
-    "H": 42.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Superior Province", 
-    "lat": 52.83, 
-    "lon": -77.0, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "1578": {
-    "H": 36.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Churchill Province", 
-    "lat": 55.67, 
-    "lon": -66.33, 
-    "lower": 2500, 
-    "upper": 2050
-  }, 
-  "1579": {
-    "H": 36.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 51.5, 
-    "lon": -72.0, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "1580": {
-    "H": 50.0, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 53.0, 
-    "lon": -66.5, 
-    "lower": 1800, 
-    "upper": 1600
   }, 
   "1581": {
     "H": 38.57, 
@@ -1779,16 +1489,6 @@
     "lower": 326.4, 
     "upper": 318.1
   }, 
-  "1586": {
-    "H": 55.71, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 49.25, 
-    "lon": -68.25, 
-    "lower": 1800, 
-    "upper": 1000
-  }, 
   "1644": {
     "H": 19.0, 
     "Vp": 6.0, 
@@ -1816,16 +1516,6 @@
     "geoprov": "Grenville Province", 
     "lat": 44.17, 
     "lon": -75.06, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "1995": {
-    "H": 37.2, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 43.42, 
-    "lon": -73.94, 
     "lower": 1400, 
     "upper": 1200
   }, 
@@ -5169,56 +4859,6 @@
     "lower": 1400, 
     "upper": 1200
   }, 
-  "4161": {
-    "H": 38.1, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 44.17, 
-    "lon": -75.06, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "4165": {
-    "H": 37.2, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 43.42, 
-    "lon": -73.94, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "4166": {
-    "H": 38.1, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Grenville Province", 
-    "lat": 44.17, 
-    "lon": -75.06, 
-    "lower": 1400, 
-    "upper": 1200
-  }, 
-  "4172": {
-    "H": 49.1, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Superior Province", 
-    "lat": 49.32, 
-    "lon": -82.98, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
-  "4173": {
-    "H": 42.6, 
-    "Vp": 0.0, 
-    "era": "precambrian", 
-    "geoprov": "Superior Province", 
-    "lat": 49.0, 
-    "lon": -81.3, 
-    "lower": 2800, 
-    "upper": 2500
-  }, 
   "4236": {
     "H": 40.2, 
     "Vp": 6.488855721393035, 
@@ -6279,16 +5919,6 @@
     "lower": 23, 
     "upper": 2.59
   }, 
-  "7570": {
-    "H": 27.0, 
-    "Vp": 0.0, 
-    "era": "cenozoic", 
-    "geoprov": "Atlantic Continental Shelf", 
-    "lat": 56.45, 
-    "lon": -59.7, 
-    "lower": 23, 
-    "upper": 2.59
-  }, 
   "7571": {
     "H": 27.5, 
     "Vp": 6.311454545454545, 
@@ -6302,16 +5932,6 @@
   "7572": {
     "H": 23.8, 
     "Vp": 6.343928571428572, 
-    "era": "precambrian", 
-    "geoprov": "", 
-    "lat": 55.3, 
-    "lon": -58.25, 
-    "lower": 3800, 
-    "upper": 542
-  }, 
-  "7573": {
-    "H": 23.8, 
-    "Vp": 0.0, 
     "era": "precambrian", 
     "geoprov": "", 
     "lat": 55.3, 

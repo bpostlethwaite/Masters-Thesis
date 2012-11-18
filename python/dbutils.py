@@ -213,6 +213,11 @@ def matStats(statdict, modtime, force = False):
                 statdict[station]['hk']['H'] = float(db['hk']['hbest'])
                 statdict[station]['hk']['stdR'] = float(db['hk']['stdR'])
                 statdict[station]['hk']['stdH'] = float(db['hk']['stdH'])
+                try:
+                    statdict[station]['hk']['c0R'] = float(db['hk']['c0R'])
+                    statdict[station]['hk']['c1R'] = float(db['hk']['c1R'])
+                except ValueError:
+                    pass
             except IndexError:
                 pass
 
@@ -228,7 +233,7 @@ def setStatus(s, stdict):
             status = "picked"
         # CHANGE THIS BELOW TO A KANAMORI STATISTIC
         if 'hk' in s[k]: # Set processing status by Kan R result
-            if s[k]['hk']['stdR'] < 0.04:
+            if (s[k]['hk']['stdR'] < 0.055) and s[k]['usable']:
                 status = "processed-ok"
             else:
                 status = "processed-notok"

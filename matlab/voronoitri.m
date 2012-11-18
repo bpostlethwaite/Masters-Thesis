@@ -36,12 +36,12 @@ vect = @(V) [
     cos(V(:,1)) .* sin(V(:,2)),...
     sin(V(:,1)) ];
 %% Get Data
-%json = '../stations.json';
-%cutoff = 0.041;
-json = '../moonvpGeology.json';
-cutoff = 5.6;
-data = getStationData(json, provinces(16), cutoff);
-bound = chooseBounding(provinces(16));
+json = '../data/stations.json';
+cutoff = 0.041;
+%json = '../data/moonvpGeology.json';
+%cutoff = 4.9;
+data = getStationData(json, provinces([1:11,15:18]), cutoff);
+bound = chooseBounding('canada');
 
 %% Perform conversions, computations
 
