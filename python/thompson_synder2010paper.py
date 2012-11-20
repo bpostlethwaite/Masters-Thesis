@@ -34,6 +34,8 @@ Rsnyd = []
 R = []
 stdR = []
 stdRsnyd = []
+Rchili = []
+Rjapan = []
 stns = []
 for stn in snyd.keys():
     if "hk" in stdict[stn]:
@@ -41,7 +43,9 @@ for stn in snyd.keys():
         Rsnyd.append(float(snyd[stn]['R']))
         R.append(float(stdict[stn]["hk"]["R"]))
         stdRsnyd.append(float(snyd[stn]['stdR']))
-        stdR.append(float(stdict[stn]["hk"]["stdR"]))
+        stdR.append( 2 * float(stdict[stn]["hk"]["stdR"]) )
+        Rjapan.append(float(stdict[stn]["hk"]['c0R']))
+        Rchili.append(float(stdict[stn]["hk"]["c1R"]) )
         diff =  float(snyd[stn]['R']) - float(stdict[stn]["hk"]["R"])
         #print diff
 
@@ -54,28 +58,36 @@ Rsnyd = np.array(Rsnyd)
 stdR = np.array(stdR)
 stdRsnyd = np.array(stdRsnyd)
 stns = np.array(stns)
+Rchili = np.array(Rchili)
+Rjapan = np.array(Rjapan)
 
 ind = (R > 1.8) | (Rsnyd > 1.8)
 R = R[~ind]
+Rjapan = Rjapan[~ind]
+Rchili = Rchili[~ind]
 Rsnyd = Rsnyd[~ind]
 stdR = stdR[~ind]
 stdRsnyd = stdRsnyd[~ind]
 stns = stns[~ind]
 
 print np.mean(R), np.mean(Rsnyd)
+print len(Rchili), len(Rjapan), len(R)
 
 t = np.arange(len(R))
-plt.plot(t, R, '-o', lw = 4, ms = 12, label = "Vp/Vs estimate - Ben P. - ours")
-plt.plot(t, Rsnyd, '-o', lw = 4, ms = 12, label = "Vp/Vs estimate Snyder et al.")
-plt.errorbar(t, R, yerr=stdR, xerr=None, fmt=None,
-             elinewidth = 2, capsize = 6, capthick = 4, label = "1 std dev BP")
-plt.errorbar(t, Rsnyd, yerr=stdRsnyd, xerr=None, fmt=None,
-             elinewidth = 2, capsize = 6, capthick = 4, label = "1 std error Eaton et. al. 2006")
+plt.plot(t, R, '-ob', lw = 4, ms = 12, label = "Vp/Vs estimate -  current data set")
+plt.plot(t, Rsnyd, '-og', lw = 4, ms = 12, label = "Vp/Vs estimate Thompson et al.")
+plt.plot(t, Rjapan, '*',  ms = 13, color = 'orange',  label = "Vp/Vs estimate Japan Source Region")
+plt.plot(t, Rchili, '*',  ms = 13, color = 'yellow', label = "Vp/Vs estimate Chili Source Region")
+plt.errorbar(t, R, yerr=stdR, xerr=None, fmt=None, ecolor = 'blue',
+             elinewidth = 2, capsize = 7, mew = 2, label = "2 std dev Bootstrap")
+plt.errorbar(t, Rsnyd, yerr=stdRsnyd, xerr=None, fmt=None, ecolor = 'green',
+             elinewidth = 2, capsize = 7, mew = 2, label = "1 std error Eaton et. al. 2006")
 plt.legend()
 plt.title("Comparison for given Can. Shield Stations\n" +
-          "between Thompson, Snyder, Eaton et al (2010) and our Current Data",
+          "between Thompson, Helffrich, Snyder, Eaton et al (2010) and our Current Data.\n" +
+          "Including source region filtered estimates",
           size = 18)
-plt.xticks(t,stns, size = 14)
+plt.xticks(t,stns, size = 12)
 plt.ylabel('Vp/Vs', size = 16)
 plt.grid(True)
 plt.show()

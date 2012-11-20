@@ -13,7 +13,7 @@ from plotTools import Args, Params
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 #stdict = json.loads( dbfile.read() )
 
-lim = 0.065
+lim = 0.055
 
 arg = Args()
 arg.addQuery("hk::stdR", "lt", "0.055")
@@ -53,6 +53,6 @@ def printinfo(msg, ixs, d, details):
 
 
 details = False
-#printinfo(msg, ixs, d, details)
-for stn in d.stns[ixs[0]]:
-    print stn
+printinfo(msg, ixs, d, details)
+# for stn in d.stns[ixs[0]]:
+#     print stn
