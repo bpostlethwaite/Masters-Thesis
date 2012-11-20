@@ -21,7 +21,7 @@ moonfile = os.environ['HOME'] + '/thesis/data/moonvpGeology.json'
 
 def poisson(R):
     ''' Function to go from Vp/Vs -> Poisson's ratio '''
-    return  ( (R**2 - 2) / (2*(R**2 - 1)))
+    return 0.5 * ( 1 - 1 / (R**2 - 1) )
 
 
 def addtext(data, ax, n, arclen):
@@ -59,6 +59,7 @@ if __name__  == "__main__":
     plotnum = [False for i in range(15)]
     if len(sys.argv) < 2:
         print help
+        exit()
     else:
         plotnum[int(sys.argv[1])] = True
     ####################################################
