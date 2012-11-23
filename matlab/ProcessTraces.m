@@ -3,13 +3,13 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 
 %% Main Control
-npb = 1; % Average number of traces per bin
+npb = 4; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 2.6; % Upper frequency cutoff
-snrlim = 0;
+fHigh = 3; % Upper frequency cutoff
+snrlim = 0.35;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -18,7 +18,7 @@ dlist = filterEventDirs(workingdir, printinfo);
 %
 picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 splitAzimuth = 0;
-cluster = 0;
+cluster = 1;
 [ptrace, strace, header, pslows, ~] = ...
     ConvertFilterTraces(dlist, pfile, sfile,...
     picktol, printinfo, splitAzimuth, cluster);
@@ -27,6 +27,7 @@ clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
 numbin = round((1/npb) * size(ptrace, 1));
+%numbin = 50;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
@@ -35,15 +36,15 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(Pslow); % Number of bins we now have.
 clear numbin pbinLimits checkind
 %% 4) Normalize
+printwdiag = 0;
 dt = header{1}.DELTA;
-
-%wdiag = 0;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
-%wdiag = normtrace( ptrace, header, dt );
-%ptrace = wdiag * ptrace;
-%strace = wdiag * strace;
-clear wdiag
+wdiag = 1 * normtrace( ptrace, strace, header, dt , printwdiag);
+ptrace = wdiag * ptrace;
+strace = wdiag * strace;
+
+clear printwdiag
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
@@ -90,7 +91,7 @@ brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 if snrlim > 0
     snr = zeros(size(brec,1), 1);
     for ii = 1:size(brec,1)
-        v = detrend(brec(ii, round(1/dt):round(45/dt)));
+        v = detrend(brec(ii, round(2.5/dt):round(45/dt)));
         delta = 0.1 * max(abs(v));
         [maxtab, mintab] = peakdet(v, delta);
         [~,I] = sort(maxtab(:,2),'descend');

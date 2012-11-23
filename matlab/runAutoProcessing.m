@@ -1,6 +1,7 @@
 clear all; close all
 loadtools;
 addpath functions
+addpath ../sac
 addpath([userdir,'/programming/matlab/jsonlab'])
 %% Variables
 sacfolder = '/media/TerraS/CN';
@@ -10,13 +11,17 @@ json = loadjson('../data/stations.json');
 
 %%  Select Station to Process and load station data
 method = 'kanamori';
-s = fieldnames(json);
+%s = fieldnames(json);
 logfile = fopen('logfile','w');
+
+s = {
+    'RSPO'
+    };
 
 for ii = 1 : length(s)
 
     station = s{ii};
-   try
+%   try
         % Get rid of . and .. names
         if length(s{ii}) < 3
             fprinf('skipping %s\n', station)
@@ -40,9 +45,9 @@ for ii = 1 : length(s)
             continue    
         end
         
-        if isfield(dbold.hk,'c0R')
-            continue
-        end
+        %if isfield(dbold.hk,'c0R')
+        %    continue
+        %end
         
         workingdir = fullfile(sacfolder,station);
         vp = json.(station).wm.Vp;
@@ -65,9 +70,9 @@ for ii = 1 : length(s)
 %                dbold.hk.stdR - db.hk.stdR);
 %        end    
         
-   catch ME
+%   catch ME
    %     fprintf(logfile, '%s - fail\n',station);
-         fprintf('%s %s\n', station, ME.message)
-         continue
-   end
+%         fprintf('%s %s\n', station, ME.message)
+%         continue
+   %end
 end

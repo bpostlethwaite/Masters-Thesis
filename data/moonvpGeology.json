@@ -7,7 +7,10 @@
     "lat": 53.01, 
     "lon": -128.5, 
     "lower": 488.3, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "101": {
     "H": 51.2, 
@@ -17,7 +20,10 @@
     "lat": 50.0, 
     "lon": -125.0, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "102": {
     "H": 35.6, 
@@ -27,7 +33,10 @@
     "lat": 53.01, 
     "lon": -123.19, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "103": {
     "H": 37.5, 
@@ -37,7 +46,10 @@
     "lat": 53.02, 
     "lon": -122.43, 
     "lower": 251, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "104": {
     "H": 43.4, 
@@ -47,7 +59,10 @@
     "lat": 51.3, 
     "lon": -113.61, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "105": {
     "H": 46.0, 
@@ -57,7 +72,10 @@
     "lat": 50.5, 
     "lon": -112.75, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "106": {
     "H": 44.0, 
@@ -67,7 +85,10 @@
     "lat": 50.2, 
     "lon": -112.58, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "107": {
     "H": 47.3, 
@@ -77,7 +98,10 @@
     "lat": 50.0, 
     "lon": -112.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "108": {
     "H": 47.5, 
@@ -87,7 +111,10 @@
     "lat": 50.5, 
     "lon": -111.85, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "1087": {
     "H": 8.94, 
@@ -97,7 +124,10 @@
     "lat": 49.58, 
     "lon": -130.5, 
     "lower": 2.58, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1089": {
     "H": 7.13, 
@@ -107,7 +137,10 @@
     "lat": 49.5, 
     "lon": -130.0, 
     "lower": 2.58, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "109": {
     "H": 48.2, 
@@ -117,7 +150,10 @@
     "lat": 50.0, 
     "lon": -109.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "11": {
     "H": 48.5, 
@@ -127,7 +163,10 @@
     "lat": 50.48, 
     "lon": -111.29, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "110": {
     "H": 34.0, 
@@ -137,7 +176,10 @@
     "lat": 50.1, 
     "lon": -96.5, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "111": {
     "H": 38.6, 
@@ -147,7 +189,10 @@
     "lat": 50.0, 
     "lon": -94.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "112": {
     "H": 31.0, 
@@ -157,7 +202,10 @@
     "lat": 52.93, 
     "lon": -92.04, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "114": {
     "H": 38.0, 
@@ -167,7 +215,10 @@
     "lat": 59.58, 
     "lon": -135.25, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "1144": {
     "H": 5.98, 
@@ -177,7 +228,10 @@
     "lat": 54.43, 
     "lon": -136.07, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1145": {
     "H": 6.53, 
@@ -187,7 +241,10 @@
     "lat": 53.97, 
     "lon": -135.92, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1146": {
     "H": 6.97, 
@@ -197,7 +254,10 @@
     "lat": 54.53, 
     "lon": -135.63, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "1147": {
     "H": 8.96, 
@@ -207,7 +267,10 @@
     "lat": 54.63, 
     "lon": -135.32, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "115": {
     "H": 26.46, 
@@ -217,7 +280,10 @@
     "lat": 54.74, 
     "lon": -132.76, 
     "lower": 488.3, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "1150": {
     "H": 9.27, 
@@ -227,7 +293,10 @@
     "lat": 54.65, 
     "lon": -134.88, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "1151": {
     "H": 11.58, 
@@ -237,7 +306,10 @@
     "lat": 53.4, 
     "lon": -133.9, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "11612": {
     "H": 6.69, 
@@ -247,7 +319,10 @@
     "lat": 53.87, 
     "lon": -136.36, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "11613": {
     "H": 6.37, 
@@ -257,7 +332,10 @@
     "lat": 54.07, 
     "lon": -135.48, 
     "lower": 23, 
-    "upper": 5.33
+    "upper": 5.33, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "1176": {
     "H": 12.33, 
@@ -267,7 +345,10 @@
     "lat": 58.33, 
     "lon": -140.05, 
     "lower": 33.9, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "120": {
     "H": 33.8, 
@@ -277,7 +358,10 @@
     "lat": 62.4, 
     "lon": -114.83, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12059": {
     "H": 36.0, 
@@ -287,7 +371,10 @@
     "lat": 46.51, 
     "lon": -76.55, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "121": {
     "H": 36.0, 
@@ -297,7 +384,10 @@
     "lat": 66.0, 
     "lon": -135.0, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "thin Archean"
+    }
   }, 
   "122": {
     "H": 37.8, 
@@ -307,7 +397,10 @@
     "lat": 78.0, 
     "lon": -98.0, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12349": {
     "H": 35.0, 
@@ -317,7 +410,10 @@
     "lat": 44.51, 
     "lon": -73.67, 
     "lower": 1400, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12350": {
     "H": 35.0, 
@@ -327,7 +423,10 @@
     "lat": 44.14, 
     "lon": -74.68, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12353": {
     "H": 40.0, 
@@ -337,7 +436,10 @@
     "lat": 44.84, 
     "lon": -64.29, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/38km, Alps and Foreland"
+    }
   }, 
   "12354": {
     "H": 40.0, 
@@ -347,7 +449,10 @@
     "lat": 43.93, 
     "lon": -72.95, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12356": {
     "H": 35.0, 
@@ -357,7 +462,10 @@
     "lat": 43.26, 
     "lon": -74.65, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12370": {
     "H": 41.0, 
@@ -367,7 +475,10 @@
     "lat": 45.75, 
     "lon": -65.16, 
     "lower": 1000, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "orogen/38km, Alps and Foreland"
+    }
   }, 
   "12402": {
     "H": 41.0, 
@@ -377,7 +488,10 @@
     "lat": 50.76, 
     "lon": -111.52, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12403": {
     "H": 33.0, 
@@ -387,7 +501,10 @@
     "lat": 53.22, 
     "lon": -113.35, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12486": {
     "H": 35.0, 
@@ -397,7 +514,10 @@
     "lat": 44.23, 
     "lon": -77.24, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12615": {
     "H": 36.9, 
@@ -407,7 +527,10 @@
     "lat": 43.93, 
     "lon": -75.12, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12643": {
     "H": 32.0, 
@@ -417,7 +540,10 @@
     "lat": 45.31, 
     "lon": -71.38, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12645": {
     "H": 35.3, 
@@ -427,7 +553,10 @@
     "lat": 44.5, 
     "lon": -74.73, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12662": {
     "H": 36.0, 
@@ -437,7 +566,10 @@
     "lat": 46.87, 
     "lon": -78.9, 
     "lower": 2500, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "12668": {
     "H": 35.0, 
@@ -447,7 +579,10 @@
     "lat": 45.31, 
     "lon": -71.38, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12669": {
     "H": 41.31, 
@@ -457,7 +592,10 @@
     "lat": 48.12, 
     "lon": -71.18, 
     "lower": 1200, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "12672": {
     "H": 39.2, 
@@ -467,7 +605,10 @@
     "lat": 43.52, 
     "lon": -73.05, 
     "lower": 488.3, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12674": {
     "H": 38.1, 
@@ -477,7 +618,10 @@
     "lat": 45.66, 
     "lon": -70.24, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12676": {
     "H": 32.7, 
@@ -487,7 +631,10 @@
     "lat": 44.74, 
     "lon": -67.49, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12678": {
     "H": 40.6, 
@@ -497,7 +644,10 @@
     "lat": 45.7, 
     "lon": -75.48, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12679": {
     "H": 43.3, 
@@ -507,7 +657,10 @@
     "lat": 45.85, 
     "lon": -64.81, 
     "lower": 1000, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "orogen/38km, Alps and Foreland"
+    }
   }, 
   "12680": {
     "H": 35.0, 
@@ -517,7 +670,10 @@
     "lat": 68.31, 
     "lon": -133.52, 
     "lower": 1200, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "thin Archean"
+    }
   }, 
   "12681": {
     "H": 44.5, 
@@ -527,7 +683,10 @@
     "lat": 48.65, 
     "lon": -123.45, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "12682": {
     "H": 37.0, 
@@ -537,7 +696,10 @@
     "lat": 53.22, 
     "lon": -113.35, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12683": {
     "H": 37.0, 
@@ -547,7 +709,10 @@
     "lat": 53.22, 
     "lon": -113.35, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12731": {
     "H": 37.0, 
@@ -557,7 +722,10 @@
     "lat": 51.73, 
     "lon": -95.59, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12732": {
     "H": 33.1, 
@@ -567,7 +735,10 @@
     "lat": 51.76, 
     "lon": -96.3, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12733": {
     "H": 33.4, 
@@ -577,7 +748,10 @@
     "lat": 51.42, 
     "lon": -96.11, 
     "lower": 3200, 
-    "upper": 2800
+    "upper": 2800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12734": {
     "H": 30.9, 
@@ -587,7 +761,10 @@
     "lat": 51.52, 
     "lon": -96.88, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12735": {
     "H": 36.8, 
@@ -597,7 +774,10 @@
     "lat": 50.93, 
     "lon": -95.85, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12736": {
     "H": 37.0, 
@@ -607,7 +787,10 @@
     "lat": 50.8, 
     "lon": -96.52, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12737": {
     "H": 31.2, 
@@ -617,7 +800,10 @@
     "lat": 51.07, 
     "lon": -97.35, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12738": {
     "H": 31.1, 
@@ -627,7 +813,10 @@
     "lat": 51.74, 
     "lon": -98.0, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12739": {
     "H": 33.6, 
@@ -637,7 +826,10 @@
     "lat": 50.72, 
     "lon": -97.25, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12740": {
     "H": 30.0, 
@@ -647,7 +839,10 @@
     "lat": 52.24, 
     "lon": -98.33, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12741": {
     "H": 30.95, 
@@ -657,7 +852,10 @@
     "lat": 53.5, 
     "lon": -96.81, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12742": {
     "H": 32.44, 
@@ -667,7 +865,10 @@
     "lat": 53.23, 
     "lon": -98.59, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12743": {
     "H": 32.55, 
@@ -677,7 +878,10 @@
     "lat": 54.49, 
     "lon": -98.41, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12744": {
     "H": 33.45, 
@@ -687,7 +891,10 @@
     "lat": 54.98, 
     "lon": -97.88, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12745": {
     "H": 33.85, 
@@ -697,7 +904,10 @@
     "lat": 51.42, 
     "lon": -95.6, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12746": {
     "H": 30.95, 
@@ -707,7 +917,10 @@
     "lat": 54.46, 
     "lon": -100.1, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12747": {
     "H": 31.65, 
@@ -717,7 +930,10 @@
     "lat": 54.28, 
     "lon": -100.78, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12748": {
     "H": 31.35, 
@@ -727,7 +943,10 @@
     "lat": 56.58, 
     "lon": -100.05, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12749": {
     "H": 34.95, 
@@ -737,7 +956,10 @@
     "lat": 56.09, 
     "lon": -98.35, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12750": {
     "H": 35.45, 
@@ -747,7 +969,10 @@
     "lat": 55.08, 
     "lon": -99.2, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12751": {
     "H": 34.05, 
@@ -757,7 +982,10 @@
     "lat": 54.93, 
     "lon": -99.83, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12752": {
     "H": 31.65, 
@@ -767,7 +995,10 @@
     "lat": 54.33, 
     "lon": -100.92, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12753": {
     "H": 34.0, 
@@ -777,7 +1008,10 @@
     "lat": 52.5, 
     "lon": -97.0, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12789": {
     "H": 40.0, 
@@ -787,7 +1021,10 @@
     "lat": 46.48, 
     "lon": -67.81, 
     "lower": 488.3, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12790": {
     "H": 50.0, 
@@ -797,7 +1034,10 @@
     "lat": 44.01, 
     "lon": -74.46, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12791": {
     "H": 54.0, 
@@ -807,7 +1047,10 @@
     "lat": 44.06, 
     "lon": -74.86, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12794": {
     "H": 44.0, 
@@ -817,7 +1060,10 @@
     "lat": 50.44, 
     "lon": -93.43, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12795": {
     "H": 42.0, 
@@ -827,7 +1073,10 @@
     "lat": 51.18, 
     "lon": -94.21, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12797": {
     "H": 44.0, 
@@ -837,7 +1086,10 @@
     "lat": 62.93, 
     "lon": -114.59, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12798": {
     "H": 40.0, 
@@ -847,7 +1099,10 @@
     "lat": 62.73, 
     "lon": -115.14, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12799": {
     "H": 38.0, 
@@ -857,7 +1112,10 @@
     "lat": 62.83, 
     "lon": -115.35, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12801": {
     "H": 40.0, 
@@ -867,7 +1125,10 @@
     "lat": 46.89, 
     "lon": -71.28, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12809": {
     "H": 39.4, 
@@ -877,7 +1138,10 @@
     "lat": 45.5, 
     "lon": -75.46, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12810": {
     "H": 46.0, 
@@ -887,7 +1151,10 @@
     "lat": 47.06, 
     "lon": -67.19, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12817": {
     "H": 24.0, 
@@ -897,7 +1164,10 @@
     "lat": 44.69, 
     "lon": -56.51, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "melt affected o.c. and oceanic plateaus"
+    }
   }, 
   "12818": {
     "H": 16.0, 
@@ -907,7 +1177,10 @@
     "lat": 44.69, 
     "lon": -55.62, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "12826": {
     "H": 37.1, 
@@ -917,7 +1190,10 @@
     "lat": 54.72, 
     "lon": -101.98, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12827": {
     "H": 37.2, 
@@ -927,7 +1203,10 @@
     "lat": 54.9, 
     "lon": -103.37, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12828": {
     "H": 42.2, 
@@ -937,7 +1216,10 @@
     "lat": 53.58, 
     "lon": -103.61, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12829": {
     "H": 40.2, 
@@ -947,7 +1229,10 @@
     "lat": 54.3, 
     "lon": -104.69, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12830": {
     "H": 42.3, 
@@ -957,7 +1242,10 @@
     "lat": 53.09, 
     "lon": -102.8, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12831": {
     "H": 43.95, 
@@ -967,7 +1255,10 @@
     "lat": 53.42, 
     "lon": -104.58, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12832": {
     "H": 44.6, 
@@ -977,7 +1268,10 @@
     "lat": 53.59, 
     "lon": -104.68, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12833": {
     "H": 46.6, 
@@ -987,7 +1281,10 @@
     "lat": 52.9, 
     "lon": -103.93, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12834": {
     "H": 42.8, 
@@ -997,7 +1294,10 @@
     "lat": 54.14, 
     "lon": -106.69, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12835": {
     "H": 38.1, 
@@ -1007,7 +1307,10 @@
     "lat": 53.04, 
     "lon": -105.29, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12836": {
     "H": 40.7, 
@@ -1017,7 +1320,10 @@
     "lat": 53.18, 
     "lon": -105.4, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12837": {
     "H": 38.5, 
@@ -1027,7 +1333,10 @@
     "lat": 51.82, 
     "lon": -102.23, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12838": {
     "H": 46.6, 
@@ -1037,7 +1346,10 @@
     "lat": 53.34, 
     "lon": -106.37, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12839": {
     "H": 47.5, 
@@ -1047,7 +1359,10 @@
     "lat": 53.26, 
     "lon": -106.06, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12840": {
     "H": 52.0, 
@@ -1057,7 +1372,10 @@
     "lat": 52.23, 
     "lon": -104.09, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "12841": {
     "H": 42.1, 
@@ -1067,7 +1385,10 @@
     "lat": 50.72, 
     "lon": -102.59, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12842": {
     "H": 39.4, 
@@ -1077,7 +1398,10 @@
     "lat": 51.29, 
     "lon": -104.44, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12843": {
     "H": 47.6, 
@@ -1087,7 +1411,10 @@
     "lat": 52.2, 
     "lon": -106.4, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12844": {
     "H": 41.5, 
@@ -1097,7 +1424,10 @@
     "lat": 50.85, 
     "lon": -104.34, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "12847": {
     "H": 42.0, 
@@ -1107,7 +1437,10 @@
     "lat": 43.94, 
     "lon": -75.38, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12910": {
     "H": 35.2, 
@@ -1117,7 +1450,10 @@
     "lat": 58.18, 
     "lon": -79.31, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12919": {
     "H": 42.2, 
@@ -1127,7 +1463,10 @@
     "lat": 58.18, 
     "lon": -79.31, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12920": {
     "H": 72.6, 
@@ -1137,7 +1476,10 @@
     "lat": 58.18, 
     "lon": -79.31, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "12950": {
     "H": 38.0, 
@@ -1147,7 +1489,10 @@
     "lat": 43.28, 
     "lon": -79.12, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/41.5km"
+    }
   }, 
   "12951": {
     "H": 39.0, 
@@ -1157,7 +1502,10 @@
     "lat": 44.94, 
     "lon": -75.66, 
     "lower": 488.3, 
-    "upper": 471.8
+    "upper": 471.8, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12952": {
     "H": 35.0, 
@@ -1167,7 +1515,10 @@
     "lat": 45.05, 
     "lon": -73.59, 
     "lower": 488.3, 
-    "upper": 471.8
+    "upper": 471.8, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12953": {
     "H": 39.0, 
@@ -1177,7 +1528,10 @@
     "lat": 46.67, 
     "lon": -70.84, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "12954": {
     "H": 39.0, 
@@ -1187,7 +1541,10 @@
     "lat": 54.37, 
     "lon": -66.85, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "12955": {
     "H": 42.0, 
@@ -1197,7 +1554,10 @@
     "lat": 54.84, 
     "lon": -77.65, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "12956": {
     "H": 35.0, 
@@ -1207,7 +1567,10 @@
     "lat": 47.84, 
     "lon": -75.02, 
     "lower": 1800, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "13056": {
     "H": 40.0, 
@@ -1217,7 +1580,10 @@
     "lat": 52.0, 
     "lon": -60.0, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "13072": {
     "H": 43.0, 
@@ -1227,7 +1593,10 @@
     "lat": 47.91, 
     "lon": -65.93, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "13073": {
     "H": 35.0, 
@@ -1237,7 +1606,10 @@
     "lat": 62.07, 
     "lon": -94.31, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "13074": {
     "H": 38.0, 
@@ -1247,7 +1619,10 @@
     "lat": 77.81, 
     "lon": -92.2, 
     "lower": 99.6, 
-    "upper": 83.5
+    "upper": 83.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "13075": {
     "H": 44.0, 
@@ -1257,7 +1632,10 @@
     "lat": 53.97, 
     "lon": -107.66, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "13076": {
     "H": 30.0, 
@@ -1267,7 +1645,10 @@
     "lat": 50.75, 
     "lon": -123.69, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "13090": {
     "H": 42.7, 
@@ -1277,7 +1658,10 @@
     "lat": 46.95, 
     "lon": -70.71, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "13091": {
     "H": 41.1, 
@@ -1287,7 +1671,10 @@
     "lat": 46.8, 
     "lon": -70.57, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "13105": {
     "H": 37.0, 
@@ -1297,7 +1684,10 @@
     "lat": 50.39, 
     "lon": -92.45, 
     "lower": 3200, 
-    "upper": 2800
+    "upper": 2800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "13106": {
     "H": 37.3, 
@@ -1307,7 +1697,10 @@
     "lat": 49.34, 
     "lon": -91.34, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "1408": {
     "H": 50.0, 
@@ -1317,7 +1710,10 @@
     "lat": 54.0, 
     "lon": -118.2, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "orogen/50km, Rockies"
+    }
   }, 
   "1409": {
     "H": 44.0, 
@@ -1327,7 +1723,10 @@
     "lat": 54.67, 
     "lon": -117.3, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "1410": {
     "H": 50.0, 
@@ -1337,7 +1736,10 @@
     "lat": 52.0, 
     "lon": -119.0, 
     "lower": 1000, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "1415": {
     "H": 32.0, 
@@ -1347,7 +1749,10 @@
     "lat": 71.4, 
     "lon": -72.5, 
     "lower": 2800, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "1416": {
     "H": 17.0, 
@@ -1357,7 +1762,10 @@
     "lat": 71.55, 
     "lon": -70.75, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "1417": {
     "H": 13.0, 
@@ -1367,7 +1775,10 @@
     "lat": 71.6, 
     "lon": -70.25, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "1418": {
     "H": 11.8, 
@@ -1377,7 +1788,10 @@
     "lat": 71.7, 
     "lon": -69.3, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1419": {
     "H": 8.5, 
@@ -1387,7 +1801,10 @@
     "lat": 72.0, 
     "lon": -68.65, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1420": {
     "H": 8.5, 
@@ -1397,7 +1814,10 @@
     "lat": 71.93, 
     "lon": -66.3, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1430": {
     "H": 12.0, 
@@ -1407,7 +1827,10 @@
     "lat": 49.5, 
     "lon": -130.33, 
     "lower": 2.58, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "1476": {
     "H": 48.3, 
@@ -1417,7 +1840,10 @@
     "lat": 47.91, 
     "lon": -86.85, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "1508": {
     "H": 6.7, 
@@ -1427,7 +1853,10 @@
     "lat": 50.15, 
     "lon": -130.5, 
     "lower": 5.33, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "1532": {
     "H": 36.0, 
@@ -1437,7 +1866,10 @@
     "lat": 44.0, 
     "lon": -75.0, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "1581": {
     "H": 38.57, 
@@ -1447,7 +1879,10 @@
     "lat": 50.5, 
     "lon": -55.0, 
     "lower": 359.2, 
-    "upper": 318.1
+    "upper": 318.1, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "1582": {
     "H": 30.0, 
@@ -1457,7 +1892,10 @@
     "lat": 50.75, 
     "lon": -57.25, 
     "lower": 488.3, 
-    "upper": 471.8
+    "upper": 471.8, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "1583": {
     "H": 32.3, 
@@ -1467,7 +1905,10 @@
     "lat": 48.83, 
     "lon": -61.62, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "orogen/38km, Alps and Foreland"
+    }
   }, 
   "1584": {
     "H": 43.43, 
@@ -1477,7 +1918,10 @@
     "lat": 47.75, 
     "lon": -64.42, 
     "lower": 318.1, 
-    "upper": 251.0
+    "upper": 251.0, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "1585": {
     "H": 39.43, 
@@ -1487,7 +1931,10 @@
     "lat": 46.33, 
     "lon": -61.0, 
     "lower": 326.4, 
-    "upper": 318.1
+    "upper": 318.1, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "1644": {
     "H": 19.0, 
@@ -1497,7 +1944,10 @@
     "lat": 48.08, 
     "lon": -123.12, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "1993": {
     "H": 36.0, 
@@ -1507,7 +1957,10 @@
     "lat": 43.42, 
     "lon": -73.94, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "1994": {
     "H": 34.8, 
@@ -1517,7 +1970,10 @@
     "lat": 44.17, 
     "lon": -75.06, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2081": {
     "H": 32.0, 
@@ -1527,7 +1983,10 @@
     "lat": 49.32, 
     "lon": -119.62, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "orogen/41km"
+    }
   }, 
   "2150": {
     "H": 46.0, 
@@ -1537,7 +1996,10 @@
     "lat": 50.48, 
     "lon": -108.18, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2151": {
     "H": 46.5, 
@@ -1547,7 +2009,10 @@
     "lat": 50.5, 
     "lon": -110.65, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2152": {
     "H": 35.0, 
@@ -1557,7 +2022,10 @@
     "lat": 49.8, 
     "lon": -89.94, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2153": {
     "H": 32.0, 
@@ -1567,7 +2035,10 @@
     "lat": 50.75, 
     "lon": -90.52, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2154": {
     "H": 30.0, 
@@ -1577,7 +2048,10 @@
     "lat": 51.99, 
     "lon": -91.4, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2155": {
     "H": 28.0, 
@@ -1587,7 +2061,10 @@
     "lat": 53.86, 
     "lon": -93.25, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2156": {
     "H": 31.0, 
@@ -1597,7 +2074,10 @@
     "lat": 54.71, 
     "lon": -93.84, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2157": {
     "H": 32.0, 
@@ -1607,7 +2087,10 @@
     "lat": 55.54, 
     "lon": -94.67, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2158": {
     "H": 34.0, 
@@ -1617,7 +2100,10 @@
     "lat": 56.52, 
     "lon": -95.32, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2159": {
     "H": 42.0, 
@@ -1627,7 +2113,10 @@
     "lat": 57.39, 
     "lon": -96.4, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2160": {
     "H": 41.0, 
@@ -1637,7 +2126,10 @@
     "lat": 58.15, 
     "lon": -97.07, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2161": {
     "H": 49.0, 
@@ -1647,7 +2139,10 @@
     "lat": 59.01, 
     "lon": -98.03, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2162": {
     "H": 45.0, 
@@ -1657,7 +2152,10 @@
     "lat": 59.68, 
     "lon": -98.66, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2163": {
     "H": 34.0, 
@@ -1667,7 +2165,10 @@
     "lat": 50.21, 
     "lon": -87.91, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2164": {
     "H": 40.0, 
@@ -1677,7 +2178,10 @@
     "lat": 49.42, 
     "lon": -85.82, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2165": {
     "H": 40.0, 
@@ -1687,7 +2191,10 @@
     "lat": 50.04, 
     "lon": -86.78, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2166": {
     "H": 38.0, 
@@ -1697,7 +2204,10 @@
     "lat": 49.76, 
     "lon": -85.22, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2167": {
     "H": 33.0, 
@@ -1707,7 +2217,10 @@
     "lat": 50.09, 
     "lon": -84.16, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2168": {
     "H": 26.0, 
@@ -1717,7 +2230,10 @@
     "lat": 49.55, 
     "lon": -82.96, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2169": {
     "H": 26.0, 
@@ -1727,7 +2243,10 @@
     "lat": 49.29, 
     "lon": -81.07, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2186": {
     "H": 38.1, 
@@ -1737,7 +2256,10 @@
     "lat": 51.37, 
     "lon": -100.0, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2187": {
     "H": 40.3, 
@@ -1747,7 +2269,10 @@
     "lat": 50.05, 
     "lon": -100.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2188": {
     "H": 46.5, 
@@ -1757,7 +2282,10 @@
     "lat": 49.61, 
     "lon": -100.67, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2189": {
     "H": 47.8, 
@@ -1767,7 +2295,10 @@
     "lat": 49.62, 
     "lon": -102.58, 
     "lower": 65.5, 
-    "upper": 55.8
+    "upper": 55.8, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2230": {
     "H": 37.6, 
@@ -1777,7 +2308,10 @@
     "lat": 50.95, 
     "lon": -72.99, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2231": {
     "H": 31.1, 
@@ -1787,7 +2321,10 @@
     "lat": 50.77, 
     "lon": -76.46, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2232": {
     "H": 34.9, 
@@ -1797,7 +2334,10 @@
     "lat": 50.08, 
     "lon": -73.94, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2233": {
     "H": 37.7, 
@@ -1807,7 +2347,10 @@
     "lat": 49.73, 
     "lon": -73.75, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2234": {
     "H": 32.3, 
@@ -1817,7 +2360,10 @@
     "lat": 47.81, 
     "lon": -70.84, 
     "lower": 1200, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2297": {
     "H": 25.0, 
@@ -1827,7 +2373,10 @@
     "lat": 47.88, 
     "lon": -123.86, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "2299": {
     "H": 30.0, 
@@ -1837,7 +2386,10 @@
     "lat": 47.88, 
     "lon": -123.56, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "2301": {
     "H": 34.0, 
@@ -1847,7 +2399,10 @@
     "lat": 47.88, 
     "lon": -123.27, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "2381": {
     "H": 13.26, 
@@ -1857,7 +2412,10 @@
     "lat": 57.05, 
     "lon": -58.01, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2382": {
     "H": 21.88, 
@@ -1867,7 +2425,10 @@
     "lat": 57.56, 
     "lon": -58.94, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2383": {
     "H": 22.32, 
@@ -1877,7 +2438,10 @@
     "lat": 58.68, 
     "lon": -60.88, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2384": {
     "H": 23.36, 
@@ -1887,7 +2451,10 @@
     "lat": 59.19, 
     "lon": -61.38, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2385": {
     "H": 22.8, 
@@ -1897,7 +2464,10 @@
     "lat": 56.58, 
     "lon": -58.82, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2386": {
     "H": 14.94, 
@@ -1907,7 +2477,10 @@
     "lat": 56.88, 
     "lon": -59.16, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2387": {
     "H": 21.23, 
@@ -1917,7 +2490,10 @@
     "lat": 56.88, 
     "lon": -59.16, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2388": {
     "H": 15.06, 
@@ -1927,7 +2503,10 @@
     "lat": 57.36, 
     "lon": -59.73, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "2391": {
     "H": 8.92, 
@@ -1937,7 +2516,10 @@
     "lat": 57.91, 
     "lon": -55.74, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "2392": {
     "H": 6.86, 
@@ -1947,7 +2529,10 @@
     "lat": 58.29, 
     "lon": -56.18, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "2393": {
     "H": 9.37, 
@@ -1957,7 +2542,10 @@
     "lat": 57.14, 
     "lon": -56.98, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "2394": {
     "H": 10.49, 
@@ -1967,7 +2555,10 @@
     "lat": 57.75, 
     "lon": -57.84, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "2407": {
     "H": 44.73, 
@@ -1977,7 +2568,10 @@
     "lat": 47.64, 
     "lon": -70.36, 
     "lower": 1600, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2408": {
     "H": 43.0, 
@@ -1987,7 +2581,10 @@
     "lat": 46.65, 
     "lon": -70.87, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2409": {
     "H": 41.5, 
@@ -1997,7 +2594,10 @@
     "lat": 46.61, 
     "lon": -70.76, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2414": {
     "H": 30.6, 
@@ -2007,7 +2607,10 @@
     "lat": 63.5, 
     "lon": -118.45, 
     "lower": 416, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2415": {
     "H": 37.9, 
@@ -2017,7 +2620,10 @@
     "lat": 61.7, 
     "lon": -113.04, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2416": {
     "H": 34.5, 
@@ -2027,7 +2633,10 @@
     "lat": 60.63, 
     "lon": -110.76, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2417": {
     "H": 34.0, 
@@ -2037,7 +2646,10 @@
     "lat": 62.18, 
     "lon": -114.22, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2424": {
     "H": 48.1, 
@@ -2047,7 +2659,10 @@
     "lat": 52.7, 
     "lon": -67.87, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2425": {
     "H": 39.7, 
@@ -2057,7 +2672,10 @@
     "lat": 51.52, 
     "lon": -71.11, 
     "lower": 1800, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2426": {
     "H": 44.1, 
@@ -2067,7 +2685,10 @@
     "lat": 51.48, 
     "lon": -66.46, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2427": {
     "H": 41.8, 
@@ -2077,7 +2698,10 @@
     "lat": 50.0, 
     "lon": -69.36, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "2428": {
     "H": 38.1, 
@@ -2087,7 +2711,10 @@
     "lat": 54.49, 
     "lon": -67.67, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2429": {
     "H": 47.7, 
@@ -2097,7 +2724,10 @@
     "lat": 52.99, 
     "lon": -72.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "2430": {
     "H": 29.2, 
@@ -2107,7 +2737,10 @@
     "lat": 52.4, 
     "lon": -127.22, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "2431": {
     "H": 28.3, 
@@ -2117,7 +2750,10 @@
     "lat": 63.48, 
     "lon": -91.17, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2432": {
     "H": 26.0, 
@@ -2127,7 +2763,10 @@
     "lat": 63.48, 
     "lon": -91.17, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2433": {
     "H": 26.4, 
@@ -2137,7 +2776,10 @@
     "lat": 63.48, 
     "lon": -91.17, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2434": {
     "H": 30.6, 
@@ -2147,7 +2789,10 @@
     "lat": 63.18, 
     "lon": -90.18, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2435": {
     "H": 29.4, 
@@ -2157,7 +2802,10 @@
     "lat": 63.18, 
     "lon": -90.18, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2436": {
     "H": 34.1, 
@@ -2167,7 +2815,10 @@
     "lat": 63.18, 
     "lon": -90.18, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2446": {
     "H": 34.8, 
@@ -2177,7 +2828,10 @@
     "lat": 62.37, 
     "lon": -89.75, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2447": {
     "H": 36.0, 
@@ -2187,7 +2841,10 @@
     "lat": 62.37, 
     "lon": -89.75, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2448": {
     "H": 39.4, 
@@ -2197,7 +2854,10 @@
     "lat": 62.37, 
     "lon": -89.75, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2449": {
     "H": 33.2, 
@@ -2207,7 +2867,10 @@
     "lat": 61.76, 
     "lon": -88.83, 
     "lower": 416, 
-    "upper": 397.5
+    "upper": 397.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2450": {
     "H": 34.2, 
@@ -2217,7 +2880,10 @@
     "lat": 61.76, 
     "lon": -88.83, 
     "lower": 416, 
-    "upper": 397.5
+    "upper": 397.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2451": {
     "H": 37.9, 
@@ -2227,7 +2893,10 @@
     "lat": 61.76, 
     "lon": -88.83, 
     "lower": 416, 
-    "upper": 397.5
+    "upper": 397.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2452": {
     "H": 39.9, 
@@ -2237,7 +2906,10 @@
     "lat": 61.12, 
     "lon": -88.17, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2453": {
     "H": 41.9, 
@@ -2247,7 +2919,10 @@
     "lat": 61.12, 
     "lon": -88.17, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2454": {
     "H": 42.0, 
@@ -2257,7 +2932,10 @@
     "lat": 61.12, 
     "lon": -88.17, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2455": {
     "H": 39.4, 
@@ -2267,7 +2945,10 @@
     "lat": 60.56, 
     "lon": -87.67, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2456": {
     "H": 39.4, 
@@ -2277,7 +2958,10 @@
     "lat": 60.56, 
     "lon": -87.67, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2457": {
     "H": 42.5, 
@@ -2287,7 +2971,10 @@
     "lat": 60.56, 
     "lon": -87.67, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2465": {
     "H": 36.5, 
@@ -2297,7 +2984,10 @@
     "lat": 60.01, 
     "lon": -87.22, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2466": {
     "H": 36.4, 
@@ -2307,7 +2997,10 @@
     "lat": 60.01, 
     "lon": -87.22, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2467": {
     "H": 39.7, 
@@ -2317,7 +3010,10 @@
     "lat": 60.01, 
     "lon": -87.22, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2468": {
     "H": 33.7, 
@@ -2327,7 +3023,10 @@
     "lat": 59.46, 
     "lon": -86.44, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2469": {
     "H": 32.8, 
@@ -2337,7 +3036,10 @@
     "lat": 59.46, 
     "lon": -86.44, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2470": {
     "H": 35.0, 
@@ -2347,7 +3049,10 @@
     "lat": 59.46, 
     "lon": -86.44, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2471": {
     "H": 37.2, 
@@ -2357,7 +3062,10 @@
     "lat": 55.23, 
     "lon": -85.13, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2472": {
     "H": 35.3, 
@@ -2367,7 +3075,10 @@
     "lat": 55.23, 
     "lon": -85.13, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2473": {
     "H": 35.9, 
@@ -2377,7 +3088,10 @@
     "lat": 55.23, 
     "lon": -85.13, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2474": {
     "H": 41.3, 
@@ -2387,7 +3101,10 @@
     "lat": 58.79, 
     "lon": -94.22, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2475": {
     "H": 40.9, 
@@ -2397,7 +3114,10 @@
     "lat": 58.79, 
     "lon": -94.22, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2476": {
     "H": 40.4, 
@@ -2407,7 +3127,10 @@
     "lat": 58.79, 
     "lon": -94.22, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2477": {
     "H": 38.2, 
@@ -2417,7 +3140,10 @@
     "lat": 59.08, 
     "lon": -93.08, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2478": {
     "H": 38.6, 
@@ -2427,7 +3153,10 @@
     "lat": 59.08, 
     "lon": -93.08, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2479": {
     "H": 40.9, 
@@ -2437,7 +3166,10 @@
     "lat": 59.08, 
     "lon": -93.08, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2480": {
     "H": 32.2, 
@@ -2447,7 +3179,10 @@
     "lat": 59.19, 
     "lon": -91.32, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2481": {
     "H": 34.7, 
@@ -2457,7 +3192,10 @@
     "lat": 59.19, 
     "lon": -91.32, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2482": {
     "H": 38.1, 
@@ -2467,7 +3205,10 @@
     "lat": 59.19, 
     "lon": -91.32, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2483": {
     "H": 34.5, 
@@ -2477,7 +3218,10 @@
     "lat": 59.33, 
     "lon": -89.5, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2484": {
     "H": 34.4, 
@@ -2487,7 +3231,10 @@
     "lat": 59.33, 
     "lon": -89.5, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2485": {
     "H": 38.2, 
@@ -2497,7 +3244,10 @@
     "lat": 59.33, 
     "lon": -89.5, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2486": {
     "H": 37.4, 
@@ -2507,7 +3257,10 @@
     "lat": 59.46, 
     "lon": -87.62, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2487": {
     "H": 37.9, 
@@ -2517,7 +3270,10 @@
     "lat": 59.46, 
     "lon": -87.62, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2488": {
     "H": 41.1, 
@@ -2527,7 +3283,10 @@
     "lat": 59.46, 
     "lon": -87.62, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2489": {
     "H": 31.9, 
@@ -2537,7 +3296,10 @@
     "lat": 59.56, 
     "lon": -85.64, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2490": {
     "H": 35.2, 
@@ -2547,7 +3309,10 @@
     "lat": 59.56, 
     "lon": -85.64, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2491": {
     "H": 33.7, 
@@ -2557,7 +3322,10 @@
     "lat": 59.56, 
     "lon": -85.64, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2492": {
     "H": 30.6, 
@@ -2567,7 +3335,10 @@
     "lat": 59.65, 
     "lon": -83.89, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2493": {
     "H": 27.7, 
@@ -2577,7 +3348,10 @@
     "lat": 59.65, 
     "lon": -83.89, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2494": {
     "H": 34.9, 
@@ -2587,7 +3361,10 @@
     "lat": 59.65, 
     "lon": -83.89, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2541": {
     "H": 29.0, 
@@ -2597,7 +3374,10 @@
     "lat": 59.7, 
     "lon": -82.09, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2542": {
     "H": 28.1, 
@@ -2607,7 +3387,10 @@
     "lat": 59.7, 
     "lon": -82.09, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2543": {
     "H": 31.6, 
@@ -2617,7 +3400,10 @@
     "lat": 59.7, 
     "lon": -82.09, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2544": {
     "H": 38.2, 
@@ -2627,7 +3413,10 @@
     "lat": 59.8, 
     "lon": -80.12, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2545": {
     "H": 38.0, 
@@ -2637,7 +3426,10 @@
     "lat": 59.8, 
     "lon": -80.12, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2546": {
     "H": 36.8, 
@@ -2647,7 +3439,10 @@
     "lat": 59.8, 
     "lon": -80.12, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2547": {
     "H": 41.0, 
@@ -2657,7 +3452,10 @@
     "lat": 60.07, 
     "lon": -77.2, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2548": {
     "H": 40.8, 
@@ -2667,7 +3465,10 @@
     "lat": 60.07, 
     "lon": -77.2, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2549": {
     "H": 39.6, 
@@ -2677,7 +3478,10 @@
     "lat": 60.07, 
     "lon": -77.2, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2550": {
     "H": 34.0, 
@@ -2687,7 +3491,10 @@
     "lat": 62.19, 
     "lon": -83.59, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2551": {
     "H": 33.0, 
@@ -2697,7 +3504,10 @@
     "lat": 62.19, 
     "lon": -83.59, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2552": {
     "H": 31.3, 
@@ -2707,7 +3517,10 @@
     "lat": 62.19, 
     "lon": -83.59, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2553": {
     "H": 33.1, 
@@ -2717,7 +3530,10 @@
     "lat": 61.11, 
     "lon": -94.08, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2554": {
     "H": 32.2, 
@@ -2727,7 +3543,10 @@
     "lat": 61.11, 
     "lon": -94.08, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2555": {
     "H": 30.1, 
@@ -2737,7 +3556,10 @@
     "lat": 61.11, 
     "lon": -94.08, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2556": {
     "H": 35.2, 
@@ -2747,7 +3569,10 @@
     "lat": 51.09, 
     "lon": -118.94, 
     "lower": 416, 
-    "upper": 318.1
+    "upper": 318.1, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "2557": {
     "H": 28.2, 
@@ -2757,7 +3582,10 @@
     "lat": 52.43, 
     "lon": -122.55, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2558": {
     "H": 28.1, 
@@ -2767,7 +3595,10 @@
     "lat": 52.43, 
     "lon": -122.55, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2559": {
     "H": 30.5, 
@@ -2777,7 +3608,10 @@
     "lat": 50.61, 
     "lon": -121.23, 
     "lower": 251, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2560": {
     "H": 31.2, 
@@ -2787,7 +3621,10 @@
     "lat": 50.61, 
     "lon": -121.23, 
     "lower": 251, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2561": {
     "H": 30.4, 
@@ -2797,7 +3634,10 @@
     "lat": 49.61, 
     "lon": -120.15, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2562": {
     "H": 34.0, 
@@ -2807,7 +3647,10 @@
     "lat": 49.61, 
     "lon": -120.15, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2563": {
     "H": 32.0, 
@@ -2817,7 +3660,10 @@
     "lat": 50.39, 
     "lon": -119.44, 
     "lower": 251, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "2564": {
     "H": 33.0, 
@@ -2827,7 +3673,10 @@
     "lat": 50.09, 
     "lon": -120.26, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2565": {
     "H": 32.5, 
@@ -2837,7 +3686,10 @@
     "lat": 50.09, 
     "lon": -120.26, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "2566": {
     "H": 26.0, 
@@ -2847,7 +3699,10 @@
     "lat": 49.35, 
     "lon": -122.24, 
     "lower": 161.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "2567": {
     "H": 28.0, 
@@ -2857,7 +3712,10 @@
     "lat": 49.35, 
     "lon": -122.24, 
     "lower": 161.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "2582": {
     "H": 48.7, 
@@ -2867,7 +3725,10 @@
     "lat": 49.67, 
     "lon": -104.82, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2583": {
     "H": 46.7, 
@@ -2877,7 +3738,10 @@
     "lat": 50.96, 
     "lon": -103.85, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2584": {
     "H": 45.3, 
@@ -2887,7 +3751,10 @@
     "lat": 49.48, 
     "lon": -103.85, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2585": {
     "H": 44.4, 
@@ -2897,7 +3764,10 @@
     "lat": 50.92, 
     "lon": -101.15, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "2586": {
     "H": 47.1, 
@@ -2907,7 +3777,10 @@
     "lat": 49.47, 
     "lon": -101.1, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2587": {
     "H": 46.0, 
@@ -2917,7 +3790,10 @@
     "lat": 50.92, 
     "lon": -101.15, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "2588": {
     "H": 42.6, 
@@ -2927,7 +3803,10 @@
     "lat": 49.47, 
     "lon": -101.1, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2589": {
     "H": 44.4, 
@@ -2937,7 +3816,10 @@
     "lat": 50.96, 
     "lon": -103.85, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "2590": {
     "H": 41.8, 
@@ -2947,7 +3829,10 @@
     "lat": 49.48, 
     "lon": -103.85, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2591": {
     "H": 44.9, 
@@ -2957,7 +3842,10 @@
     "lat": 49.58, 
     "lon": -105.21, 
     "lower": 65.5, 
-    "upper": 55.8
+    "upper": 55.8, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2592": {
     "H": 42.7, 
@@ -2967,7 +3855,10 @@
     "lat": 49.56, 
     "lon": -103.1, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2593": {
     "H": 41.6, 
@@ -2977,7 +3868,10 @@
     "lat": 51.37, 
     "lon": -100.0, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2594": {
     "H": 44.0, 
@@ -2987,7 +3881,10 @@
     "lat": 50.05, 
     "lon": -100.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "2595": {
     "H": 42.5, 
@@ -2997,7 +3894,10 @@
     "lat": 49.62, 
     "lon": -102.58, 
     "lower": 65.5, 
-    "upper": 55.8
+    "upper": 55.8, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "2596": {
     "H": 44.3, 
@@ -3007,7 +3907,10 @@
     "lat": 49.61, 
     "lon": -100.67, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "297": {
     "H": 33.9, 
@@ -3017,7 +3920,10 @@
     "lat": 62.47, 
     "lon": -114.63, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "300": {
     "H": 32.5, 
@@ -3027,7 +3933,10 @@
     "lat": 54.0, 
     "lon": -101.4, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3002": {
     "H": 56.8, 
@@ -3037,7 +3946,10 @@
     "lat": 47.87, 
     "lon": -85.37, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3003": {
     "H": 55.3, 
@@ -3047,7 +3959,10 @@
     "lat": 47.74, 
     "lon": -86.29, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "301": {
     "H": 42.3, 
@@ -3057,7 +3972,10 @@
     "lat": 50.73, 
     "lon": -116.9, 
     "lower": 130, 
-    "upper": 85.8
+    "upper": 85.8, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3011": {
     "H": 47.93, 
@@ -3067,7 +3985,10 @@
     "lat": 48.24, 
     "lon": -87.33, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3018": {
     "H": 45.6, 
@@ -3077,7 +3998,10 @@
     "lat": 48.75, 
     "lon": -87.18, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "302": {
     "H": 46.3, 
@@ -3087,7 +4011,10 @@
     "lat": 47.5, 
     "lon": -64.95, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3023": {
     "H": 50.6, 
@@ -3097,7 +4024,10 @@
     "lat": 48.18, 
     "lon": -86.51, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3024": {
     "H": 55.0, 
@@ -3107,7 +4037,10 @@
     "lat": 47.92, 
     "lon": -86.6, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3025": {
     "H": 54.9, 
@@ -3117,7 +4050,10 @@
     "lat": 47.74, 
     "lon": -86.66, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "303": {
     "H": 43.3, 
@@ -3127,7 +4063,10 @@
     "lat": 46.68, 
     "lon": -61.0, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "304": {
     "H": 34.7, 
@@ -3137,7 +4076,10 @@
     "lat": 48.68, 
     "lon": -59.21, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "305": {
     "H": 31.3, 
@@ -3147,7 +4089,10 @@
     "lat": 51.05, 
     "lon": -57.15, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "306": {
     "H": 30.1, 
@@ -3157,7 +4102,10 @@
     "lat": 51.32, 
     "lon": -55.6, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "307": {
     "H": 41.5, 
@@ -3167,7 +4115,10 @@
     "lat": 49.2, 
     "lon": -53.55, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "308": {
     "H": 31.0, 
@@ -3177,7 +4128,10 @@
     "lat": 50.75, 
     "lon": -118.33, 
     "lower": 1000, 
-    "upper": 253.8
+    "upper": 253.8, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "309": {
     "H": 58.0, 
@@ -3187,7 +4141,10 @@
     "lat": 51.5, 
     "lon": -117.0, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "310": {
     "H": 51.0, 
@@ -3197,7 +4154,10 @@
     "lat": 50.67, 
     "lon": -116.0, 
     "lower": 488.3, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3135": {
     "H": 52.4, 
@@ -3207,7 +4167,10 @@
     "lat": 47.91, 
     "lon": -86.85, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3136": {
     "H": 50.0, 
@@ -3217,7 +4180,10 @@
     "lat": 48.06, 
     "lon": -85.99, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3137": {
     "H": 38.3, 
@@ -3227,7 +4193,10 @@
     "lat": 51.37, 
     "lon": -100.0, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3138": {
     "H": 41.7, 
@@ -3237,7 +4206,10 @@
     "lat": 50.05, 
     "lon": -100.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3139": {
     "H": 44.2, 
@@ -3247,7 +4219,10 @@
     "lat": 49.63, 
     "lon": -102.58, 
     "lower": 65.5, 
-    "upper": 55.8
+    "upper": 55.8, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "314": {
     "H": 30.0, 
@@ -3257,7 +4232,10 @@
     "lat": 53.75, 
     "lon": -132.5, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3140": {
     "H": 41.8, 
@@ -3267,7 +4245,10 @@
     "lat": 49.61, 
     "lon": -100.67, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3144": {
     "H": 49.1, 
@@ -3277,7 +4258,10 @@
     "lat": 49.32, 
     "lon": -82.98, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3145": {
     "H": 49.1, 
@@ -3287,7 +4271,10 @@
     "lat": 48.61, 
     "lon": -83.93, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3146": {
     "H": 47.8, 
@@ -3297,7 +4284,10 @@
     "lat": 48.85, 
     "lon": -82.42, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3147": {
     "H": 51.5, 
@@ -3307,7 +4297,10 @@
     "lat": 47.56, 
     "lon": -83.81, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3148": {
     "H": 43.7, 
@@ -3317,7 +4310,10 @@
     "lat": 48.83, 
     "lon": -81.34, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3149": {
     "H": 39.6, 
@@ -3327,7 +4323,10 @@
     "lat": 47.53, 
     "lon": -82.62, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3150": {
     "H": 43.8, 
@@ -3337,7 +4336,10 @@
     "lat": 49.73, 
     "lon": -83.31, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3151": {
     "H": 42.6, 
@@ -3347,7 +4349,10 @@
     "lat": 49.0, 
     "lon": -81.3, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3152": {
     "H": 53.7, 
@@ -3357,7 +4362,10 @@
     "lat": 48.24, 
     "lon": -82.98, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3153": {
     "H": 45.6, 
@@ -3367,7 +4375,10 @@
     "lat": 48.42, 
     "lon": -81.49, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3154": {
     "H": 47.0, 
@@ -3377,7 +4388,10 @@
     "lat": 48.71, 
     "lon": -86.4, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3157": {
     "H": 37.6, 
@@ -3387,7 +4401,10 @@
     "lat": 49.28, 
     "lon": -94.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3159": {
     "H": 38.0, 
@@ -3397,7 +4414,10 @@
     "lat": 49.51, 
     "lon": -94.45, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3160": {
     "H": 38.0, 
@@ -3407,7 +4427,10 @@
     "lat": 49.24, 
     "lon": -94.03, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3162": {
     "H": 37.7, 
@@ -3417,7 +4440,10 @@
     "lat": 50.0, 
     "lon": -93.5, 
     "lower": 3200, 
-    "upper": 2800
+    "upper": 2800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3164": {
     "H": 38.6, 
@@ -3427,7 +4453,10 @@
     "lat": 50.0, 
     "lon": -95.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3165": {
     "H": 33.3, 
@@ -3437,7 +4466,10 @@
     "lat": 50.0, 
     "lon": -95.5, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3166": {
     "H": 32.5, 
@@ -3447,7 +4479,10 @@
     "lat": 50.5, 
     "lon": -93.5, 
     "lower": 3200, 
-    "upper": 2800
+    "upper": 2800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3167": {
     "H": 33.1, 
@@ -3457,7 +4492,10 @@
     "lat": 50.5, 
     "lon": -94.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3168": {
     "H": 33.1, 
@@ -3467,7 +4505,10 @@
     "lat": 50.5, 
     "lon": -94.5, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3169": {
     "H": 32.6, 
@@ -3477,7 +4518,10 @@
     "lat": 50.5, 
     "lon": -95.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3170": {
     "H": 31.7, 
@@ -3487,7 +4531,10 @@
     "lat": 50.5, 
     "lon": -95.5, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3171": {
     "H": 32.1, 
@@ -3497,7 +4544,10 @@
     "lat": 50.5, 
     "lon": -96.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3172": {
     "H": 33.1, 
@@ -3507,7 +4557,10 @@
     "lat": 51.0, 
     "lon": -94.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3173": {
     "H": 32.4, 
@@ -3517,7 +4570,10 @@
     "lat": 51.0, 
     "lon": -94.5, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3174": {
     "H": 33.2, 
@@ -3527,7 +4583,10 @@
     "lat": 51.0, 
     "lon": -95.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3175": {
     "H": 33.4, 
@@ -3537,7 +4596,10 @@
     "lat": 51.0, 
     "lon": -95.5, 
     "lower": 3200, 
-    "upper": 2800
+    "upper": 2800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3176": {
     "H": 33.2, 
@@ -3547,7 +4609,10 @@
     "lat": 51.0, 
     "lon": -96.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3177": {
     "H": 38.5, 
@@ -3557,7 +4622,10 @@
     "lat": 51.5, 
     "lon": -94.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3178": {
     "H": 40.1, 
@@ -3567,7 +4635,10 @@
     "lat": 48.82, 
     "lon": -87.16, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3179": {
     "H": 48.7, 
@@ -3577,7 +4648,10 @@
     "lat": 48.16, 
     "lon": -87.35, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3181": {
     "H": 35.0, 
@@ -3587,7 +4661,10 @@
     "lat": 47.0, 
     "lon": -81.67, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3182": {
     "H": 36.0, 
@@ -3597,7 +4674,10 @@
     "lat": 46.72, 
     "lon": -81.35, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3183": {
     "H": 42.7, 
@@ -3607,7 +4687,10 @@
     "lat": 46.45, 
     "lon": -80.97, 
     "lower": 2500, 
-    "upper": 2150
+    "upper": 2150, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3184": {
     "H": 43.9, 
@@ -3617,7 +4700,10 @@
     "lat": 46.04, 
     "lon": -80.66, 
     "lower": 2800, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3186": {
     "H": 37.6, 
@@ -3627,7 +4713,10 @@
     "lat": 45.43, 
     "lon": -82.26, 
     "lower": 422.9, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3187": {
     "H": 41.2, 
@@ -3637,7 +4726,10 @@
     "lat": 45.33, 
     "lon": -81.61, 
     "lower": 422.9, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3188": {
     "H": 44.6, 
@@ -3647,7 +4739,10 @@
     "lat": 45.13, 
     "lon": -80.34, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3189": {
     "H": 40.0, 
@@ -3657,7 +4752,10 @@
     "lat": 49.04, 
     "lon": -80.63, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "319": {
     "H": 36.0, 
@@ -3667,7 +4765,10 @@
     "lat": 74.92, 
     "lon": -110.5, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3190": {
     "H": 39.6, 
@@ -3677,7 +4778,10 @@
     "lat": 48.99, 
     "lon": -79.96, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "320": {
     "H": 36.5, 
@@ -3687,7 +4791,10 @@
     "lat": 76.25, 
     "lon": -119.17, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "3203": {
     "H": 35.6, 
@@ -3697,7 +4804,10 @@
     "lat": 50.64, 
     "lon": -118.0, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3204": {
     "H": 32.1, 
@@ -3707,7 +4817,10 @@
     "lat": 48.69, 
     "lon": -55.18, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3205": {
     "H": 34.4, 
@@ -3717,7 +4830,10 @@
     "lat": 49.5, 
     "lon": -57.65, 
     "lower": 1200, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3206": {
     "H": 34.8, 
@@ -3727,7 +4843,10 @@
     "lat": 47.52, 
     "lon": -55.44, 
     "lower": 416, 
-    "upper": 326.4
+    "upper": 326.4, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "3207": {
     "H": 35.0, 
@@ -3737,7 +4856,10 @@
     "lat": 49.46, 
     "lon": -55.73, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3208": {
     "H": 36.6, 
@@ -3747,7 +4869,10 @@
     "lat": 48.36, 
     "lon": -57.81, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3209": {
     "H": 43.0, 
@@ -3757,7 +4882,10 @@
     "lat": 44.42, 
     "lon": -77.16, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "321": {
     "H": 36.0, 
@@ -3767,7 +4895,10 @@
     "lat": 77.83, 
     "lon": -112.25, 
     "lower": 199.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Margin /shield transition, East Siberia"
+    }
   }, 
   "3210": {
     "H": 31.2, 
@@ -3777,7 +4908,10 @@
     "lat": 49.57, 
     "lon": -123.81, 
     "lower": 161.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3211": {
     "H": 36.1, 
@@ -3787,7 +4921,10 @@
     "lat": 49.3, 
     "lon": -121.86, 
     "lower": 199.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3212": {
     "H": 40.0, 
@@ -3797,7 +4934,10 @@
     "lat": 55.81, 
     "lon": -120.22, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "orogen/46km"
+    }
   }, 
   "3213": {
     "H": 39.5, 
@@ -3807,7 +4947,10 @@
     "lat": 56.4, 
     "lon": -116.9, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3214": {
     "H": 35.9, 
@@ -3817,7 +4960,10 @@
     "lat": 55.17, 
     "lon": -119.04, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3215": {
     "H": 41.0, 
@@ -3827,7 +4973,10 @@
     "lat": 55.5, 
     "lon": -117.6, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3216": {
     "H": 37.5, 
@@ -3837,7 +4986,10 @@
     "lat": 56.98, 
     "lon": -118.65, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3217": {
     "H": 33.3, 
@@ -3847,7 +4999,10 @@
     "lat": 51.5, 
     "lon": -124.4, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3218": {
     "H": 44.0, 
@@ -3857,7 +5012,10 @@
     "lat": 44.48, 
     "lon": -77.66, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3219": {
     "H": 44.9, 
@@ -3867,7 +5025,10 @@
     "lat": 44.3, 
     "lon": -75.93, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3220": {
     "H": 40.8, 
@@ -3877,7 +5038,10 @@
     "lat": 49.64, 
     "lon": -58.26, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "3224": {
     "H": 40.0, 
@@ -3887,7 +5051,10 @@
     "lat": 44.07, 
     "lon": -72.93, 
     "lower": 1000, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3225": {
     "H": 40.0, 
@@ -3897,7 +5064,10 @@
     "lat": 44.15, 
     "lon": -72.58, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3226": {
     "H": 39.1, 
@@ -3907,7 +5077,10 @@
     "lat": 44.0, 
     "lon": -74.49, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3227": {
     "H": 39.1, 
@@ -3917,7 +5090,10 @@
     "lat": 44.0, 
     "lon": -73.66, 
     "lower": 1200, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3228": {
     "H": 38.9, 
@@ -3927,7 +5103,10 @@
     "lat": 45.37, 
     "lon": -70.61, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3231": {
     "H": 47.0, 
@@ -3937,7 +5116,10 @@
     "lat": 47.95, 
     "lon": -84.4, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3232": {
     "H": 39.0, 
@@ -3947,7 +5129,10 @@
     "lat": 56.1, 
     "lon": -119.3, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3233": {
     "H": 38.0, 
@@ -3957,7 +5142,10 @@
     "lat": 78.4, 
     "lon": -96.5, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "3234": {
     "H": 38.0, 
@@ -3967,7 +5155,10 @@
     "lat": 76.4, 
     "lon": -109.0, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "3242": {
     "H": 41.95, 
@@ -3977,7 +5168,10 @@
     "lat": 49.85, 
     "lon": -83.73, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3243": {
     "H": 44.75, 
@@ -3987,7 +5181,10 @@
     "lat": 49.43, 
     "lon": -82.51, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3244": {
     "H": 40.43, 
@@ -3997,7 +5194,10 @@
     "lat": 49.0, 
     "lon": -81.33, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3245": {
     "H": 46.57, 
@@ -4007,7 +5207,10 @@
     "lat": 48.13, 
     "lon": -83.81, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3246": {
     "H": 46.0, 
@@ -4017,7 +5220,10 @@
     "lat": 48.32, 
     "lon": -82.23, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3294": {
     "H": 35.0, 
@@ -4027,7 +5233,10 @@
     "lat": 69.55, 
     "lon": -135.2, 
     "lower": 2.588, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "thin Archean"
+    }
   }, 
   "3295": {
     "H": 37.5, 
@@ -4037,7 +5246,10 @@
     "lat": 68.85, 
     "lon": -134.0, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "thin Archean"
+    }
   }, 
   "3296": {
     "H": 35.0, 
@@ -4047,7 +5259,10 @@
     "lat": 50.95, 
     "lon": -117.25, 
     "lower": 130, 
-    "upper": 85.8
+    "upper": 85.8, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3297": {
     "H": 36.0, 
@@ -4057,7 +5272,10 @@
     "lat": 51.0, 
     "lon": -118.0, 
     "lower": 416, 
-    "upper": 318.1
+    "upper": 318.1, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3298": {
     "H": 34.0, 
@@ -4067,7 +5285,10 @@
     "lat": 50.1, 
     "lon": -120.7, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3299": {
     "H": 35.0, 
@@ -4077,7 +5298,10 @@
     "lat": 50.1, 
     "lon": -119.3, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3300": {
     "H": 37.5, 
@@ -4087,7 +5311,10 @@
     "lat": 50.2, 
     "lon": -117.8, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3301": {
     "H": 35.0, 
@@ -4097,7 +5324,10 @@
     "lat": 51.2, 
     "lon": -118.2, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3302": {
     "H": 36.0, 
@@ -4107,7 +5337,10 @@
     "lat": 50.2, 
     "lon": -118.0, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3303": {
     "H": 33.0, 
@@ -4117,7 +5350,10 @@
     "lat": 51.0, 
     "lon": -120.9, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3304": {
     "H": 31.0, 
@@ -4127,7 +5363,10 @@
     "lat": 50.0, 
     "lon": -120.75, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3305": {
     "H": 34.5, 
@@ -4137,7 +5376,10 @@
     "lat": 51.25, 
     "lon": -124.0, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "3306": {
     "H": 35.5, 
@@ -4147,7 +5389,10 @@
     "lat": 50.5, 
     "lon": -123.0, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "3309": {
     "H": 40.0, 
@@ -4157,7 +5402,10 @@
     "lat": 49.95, 
     "lon": -126.4, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "3310": {
     "H": 45.0, 
@@ -4167,7 +5415,10 @@
     "lat": 49.25, 
     "lon": -125.15, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3311": {
     "H": 32.0, 
@@ -4177,7 +5428,10 @@
     "lat": 50.2, 
     "lon": -120.25, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3312": {
     "H": 34.5, 
@@ -4187,7 +5441,10 @@
     "lat": 50.25, 
     "lon": -118.9, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/50km, Tibet"
+    }
   }, 
   "3313": {
     "H": 36.0, 
@@ -4197,7 +5454,10 @@
     "lat": 50.4, 
     "lon": -117.5, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3314": {
     "H": 32.5, 
@@ -4207,7 +5467,10 @@
     "lat": 49.5, 
     "lon": -123.7, 
     "lower": 161.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3315": {
     "H": 36.0, 
@@ -4217,7 +5480,10 @@
     "lat": 49.25, 
     "lon": -122.5, 
     "lower": 161.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3316": {
     "H": 35.0, 
@@ -4227,7 +5493,10 @@
     "lat": 49.6, 
     "lon": -117.7, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3317": {
     "H": 34.0, 
@@ -4237,7 +5506,10 @@
     "lat": 49.6, 
     "lon": -116.3, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3318": {
     "H": 40.0, 
@@ -4247,7 +5519,10 @@
     "lat": 49.55, 
     "lon": -114.95, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "3319": {
     "H": 35.5, 
@@ -4257,7 +5532,10 @@
     "lat": 48.8, 
     "lon": -125.1, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3320": {
     "H": 39.0, 
@@ -4267,7 +5545,10 @@
     "lat": 49.7, 
     "lon": -124.1, 
     "lower": 130, 
-    "upper": 85.8
+    "upper": 85.8, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3321": {
     "H": 34.0, 
@@ -4277,7 +5558,10 @@
     "lat": 49.65, 
     "lon": -123.7, 
     "lower": 130, 
-    "upper": 85.8
+    "upper": 85.8, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3322": {
     "H": 34.5, 
@@ -4287,7 +5571,10 @@
     "lat": 50.3, 
     "lon": -122.75, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "continental arc, Southern Andes"
+    }
   }, 
   "3323": {
     "H": 45.0, 
@@ -4297,7 +5584,10 @@
     "lat": 51.0, 
     "lon": -121.7, 
     "lower": 359.2, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3324": {
     "H": 37.5, 
@@ -4307,7 +5597,10 @@
     "lat": 77.0, 
     "lon": -95.0, 
     "lower": 299, 
-    "upper": 251
+    "upper": 251, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3325": {
     "H": 37.5, 
@@ -4317,7 +5610,10 @@
     "lat": 76.0, 
     "lon": -95.0, 
     "lower": 416, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3446": {
     "H": 36.0, 
@@ -4327,7 +5623,10 @@
     "lat": 60.12, 
     "lon": -73.6, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3448": {
     "H": 34.6, 
@@ -4337,7 +5636,10 @@
     "lat": 64.06, 
     "lon": -139.39, 
     "lower": 416, 
-    "upper": 251
+    "upper": 251, 
+    "wm": {
+      "type": "thin continental arc, Cordilleras"
+    }
   }, 
   "3449": {
     "H": 38.5, 
@@ -4347,7 +5649,10 @@
     "lat": 60.66, 
     "lon": -134.88, 
     "lower": 251, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3472": {
     "H": 42.3, 
@@ -4357,7 +5662,10 @@
     "lat": 54.89, 
     "lon": -107.71, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3473": {
     "H": 42.7, 
@@ -4367,7 +5675,10 @@
     "lat": 54.82, 
     "lon": -106.98, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3474": {
     "H": 40.5, 
@@ -4377,7 +5688,10 @@
     "lat": 54.79, 
     "lon": -106.26, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3475": {
     "H": 44.5, 
@@ -4387,7 +5701,10 @@
     "lat": 54.77, 
     "lon": -105.53, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3476": {
     "H": 43.1, 
@@ -4397,7 +5714,10 @@
     "lat": 54.75, 
     "lon": -104.8, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3477": {
     "H": 41.0, 
@@ -4407,7 +5727,10 @@
     "lat": 54.73, 
     "lon": -104.07, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3478": {
     "H": 40.6, 
@@ -4417,7 +5740,10 @@
     "lat": 54.71, 
     "lon": -103.35, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3479": {
     "H": 40.7, 
@@ -4427,7 +5753,10 @@
     "lat": 54.69, 
     "lon": -102.62, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3480": {
     "H": 41.9, 
@@ -4437,7 +5766,10 @@
     "lat": 54.66, 
     "lon": -101.89, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3481": {
     "H": 43.3, 
@@ -4447,7 +5779,10 @@
     "lat": 54.64, 
     "lon": -101.16, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3482": {
     "H": 44.3, 
@@ -4457,7 +5792,10 @@
     "lat": 54.62, 
     "lon": -100.43, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3483": {
     "H": 45.3, 
@@ -4467,7 +5805,10 @@
     "lat": 54.6, 
     "lon": -99.71, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3484": {
     "H": 45.1, 
@@ -4477,7 +5818,10 @@
     "lat": 54.58, 
     "lon": -98.98, 
     "lower": 3800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3485": {
     "H": 45.2, 
@@ -4487,7 +5831,10 @@
     "lat": 54.56, 
     "lon": -98.25, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3486": {
     "H": 40.6, 
@@ -4497,7 +5844,10 @@
     "lat": 52.45, 
     "lon": -101.14, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3487": {
     "H": 41.4, 
@@ -4507,7 +5857,10 @@
     "lat": 52.89, 
     "lon": -101.14, 
     "lower": 385.3, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3488": {
     "H": 42.7, 
@@ -4517,7 +5870,10 @@
     "lat": 53.33, 
     "lon": -101.15, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3489": {
     "H": 43.3, 
@@ -4527,7 +5883,10 @@
     "lat": 53.77, 
     "lon": -101.16, 
     "lower": 443.7, 
-    "upper": 428.2
+    "upper": 428.2, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3490": {
     "H": 43.1, 
@@ -4537,7 +5896,10 @@
     "lat": 54.21, 
     "lon": -101.17, 
     "lower": 460.9, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3491": {
     "H": 43.8, 
@@ -4547,7 +5909,10 @@
     "lat": 55.09, 
     "lon": -101.18, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3492": {
     "H": 43.9, 
@@ -4557,7 +5922,10 @@
     "lat": 55.53, 
     "lon": -101.19, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3493": {
     "H": 43.9, 
@@ -4567,7 +5935,10 @@
     "lat": 55.98, 
     "lon": -101.2, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3494": {
     "H": 49.6, 
@@ -4577,7 +5948,10 @@
     "lat": 56.42, 
     "lon": -101.2, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3495": {
     "H": 52.0, 
@@ -4587,7 +5961,10 @@
     "lat": 52.78, 
     "lon": -103.95, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3496": {
     "H": 49.2, 
@@ -4597,7 +5974,10 @@
     "lat": 53.21, 
     "lon": -103.94, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3497": {
     "H": 46.9, 
@@ -4607,7 +5987,10 @@
     "lat": 53.64, 
     "lon": -103.93, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3498": {
     "H": 41.8, 
@@ -4617,7 +6000,10 @@
     "lat": 54.08, 
     "lon": -103.92, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3499": {
     "H": 38.2, 
@@ -4627,7 +6013,10 @@
     "lat": 54.51, 
     "lon": -103.9, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3500": {
     "H": 41.5, 
@@ -4637,7 +6026,10 @@
     "lat": 54.95, 
     "lon": -103.89, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3501": {
     "H": 46.1, 
@@ -4647,7 +6039,10 @@
     "lat": 55.38, 
     "lon": -103.88, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3502": {
     "H": 48.5, 
@@ -4657,7 +6052,10 @@
     "lat": 55.81, 
     "lon": -103.87, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "3503": {
     "H": 44.6, 
@@ -4667,7 +6065,10 @@
     "lat": 56.25, 
     "lon": -103.86, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3504": {
     "H": 42.6, 
@@ -4677,7 +6078,10 @@
     "lat": 56.68, 
     "lon": -103.85, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3505": {
     "H": 43.0, 
@@ -4687,7 +6091,10 @@
     "lat": 57.11, 
     "lon": -103.84, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3506": {
     "H": 41.2, 
@@ -4697,7 +6104,10 @@
     "lat": 57.55, 
     "lon": -103.83, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3507": {
     "H": 39.6, 
@@ -4707,7 +6117,10 @@
     "lat": 57.98, 
     "lon": -103.82, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "3508": {
     "H": 42.2, 
@@ -4717,7 +6130,10 @@
     "lat": 51.38, 
     "lon": -109.68, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "3511": {
     "H": 20.9, 
@@ -4727,7 +6143,10 @@
     "lat": 76.29, 
     "lon": -76.11, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3516": {
     "H": 20.6, 
@@ -4737,7 +6156,10 @@
     "lat": 76.22, 
     "lon": -76.31, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3519": {
     "H": 22.3, 
@@ -4747,7 +6169,10 @@
     "lat": 75.02, 
     "lon": -77.93, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3520": {
     "H": 14.7, 
@@ -4757,7 +6182,10 @@
     "lat": 74.71, 
     "lon": -76.85, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3521": {
     "H": 14.4, 
@@ -4767,7 +6195,10 @@
     "lat": 74.4, 
     "lon": -75.77, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "3782": {
     "H": 42.94, 
@@ -4777,7 +6208,10 @@
     "lat": 46.42, 
     "lon": -78.61, 
     "lower": 1600, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "3783": {
     "H": 39.77, 
@@ -4787,7 +6221,10 @@
     "lat": 46.01, 
     "lon": -77.3, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3784": {
     "H": 38.8, 
@@ -4797,7 +6234,10 @@
     "lat": 45.5, 
     "lon": -76.07, 
     "lower": 1200, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3785": {
     "H": 38.22, 
@@ -4807,7 +6247,10 @@
     "lat": 46.68, 
     "lon": -75.69, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3786": {
     "H": 35.56, 
@@ -4817,7 +6260,10 @@
     "lat": 47.23, 
     "lon": -75.92, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3787": {
     "H": 40.0, 
@@ -4827,7 +6273,10 @@
     "lat": 47.92, 
     "lon": -76.71, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3788": {
     "H": 37.16, 
@@ -4837,7 +6286,10 @@
     "lat": 45.04, 
     "lon": -77.32, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "3789": {
     "H": 35.33, 
@@ -4847,7 +6299,10 @@
     "lat": 46.87, 
     "lon": -76.53, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "3790": {
     "H": 37.25, 
@@ -4857,7 +6312,10 @@
     "lat": 46.54, 
     "lon": -75.89, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "4236": {
     "H": 40.2, 
@@ -4867,7 +6325,10 @@
     "lat": 46.49, 
     "lon": -77.84, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "4268": {
     "H": 37.27, 
@@ -4877,7 +6338,10 @@
     "lat": 75.09, 
     "lon": -111.68, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "4269": {
     "H": 39.27, 
@@ -4887,7 +6351,10 @@
     "lat": 75.78, 
     "lon": -115.49, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "4270": {
     "H": 35.45, 
@@ -4897,7 +6364,10 @@
     "lat": 76.19, 
     "lon": -118.18, 
     "lower": 199.6, 
-    "upper": 145.5
+    "upper": 145.5, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "4271": {
     "H": 34.36, 
@@ -4907,7 +6377,10 @@
     "lat": 75.52, 
     "lon": -111.06, 
     "lower": 397.5, 
-    "upper": 385.3
+    "upper": 385.3, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "4272": {
     "H": 38.18, 
@@ -4917,7 +6390,10 @@
     "lat": 76.25, 
     "lon": -112.88, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "thick Margin /shield transition, East Siberia"
+    }
   }, 
   "4273": {
     "H": 38.18, 
@@ -4927,7 +6403,10 @@
     "lat": 77.03, 
     "lon": -116.31, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "4310": {
     "H": 38.7, 
@@ -4937,7 +6416,10 @@
     "lat": 54.7, 
     "lon": -67.0, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "4311": {
     "H": 43.8, 
@@ -4947,7 +6429,10 @@
     "lat": 49.68, 
     "lon": -70.0, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "4312": {
     "H": 47.5, 
@@ -4957,7 +6442,10 @@
     "lat": 51.9, 
     "lon": -65.39, 
     "lower": 2500, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "4313": {
     "H": 46.9, 
@@ -4967,7 +6455,10 @@
     "lat": 52.62, 
     "lon": -73.0, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "4841": {
     "H": 37.0, 
@@ -4977,7 +6468,10 @@
     "lat": 53.5, 
     "lon": -111.5, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4842": {
     "H": 40.0, 
@@ -4987,7 +6481,10 @@
     "lat": 52.5, 
     "lon": -111.3, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4843": {
     "H": 37.5, 
@@ -4997,7 +6494,10 @@
     "lat": 53.0, 
     "lon": -111.4, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4844": {
     "H": 44.0, 
@@ -5007,7 +6507,10 @@
     "lat": 51.5, 
     "lon": -111.1, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4845": {
     "H": 44.0, 
@@ -5017,7 +6520,10 @@
     "lat": 52.0, 
     "lon": -111.2, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4846": {
     "H": 46.0, 
@@ -5027,7 +6533,10 @@
     "lat": 50.5, 
     "lon": -110.9, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4847": {
     "H": 44.0, 
@@ -5037,7 +6546,10 @@
     "lat": 51.0, 
     "lon": -111.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "4848": {
     "H": 50.0, 
@@ -5047,7 +6559,10 @@
     "lat": 49.5, 
     "lon": -110.7, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "4849": {
     "H": 47.5, 
@@ -5057,7 +6572,10 @@
     "lat": 50.0, 
     "lon": -110.8, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "4851": {
     "H": 49.5, 
@@ -5067,17 +6585,10 @@
     "lat": 49.0, 
     "lon": -110.5, 
     "lower": 83.5, 
-    "upper": 65.5
-  }, 
-  "508": {
-    "H": 29.7, 
-    "Vp": 5.877946127946128, 
-    "era": "cenozoic", 
-    "geoprov": "Atlantic Continental Shelf", 
-    "lat": 51.82, 
-    "lon": -51.62, 
-    "lower": 23, 
-    "upper": 2.59
+    "upper": 65.5, 
+    "wm": {
+      "type": "early/mid Proter. shield, Africa"
+    }
   }, 
   "5214": {
     "H": 38.7, 
@@ -5087,7 +6598,10 @@
     "lat": 59.7, 
     "lon": -65.0, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "5215": {
     "H": 40.2, 
@@ -5097,7 +6611,10 @@
     "lat": 59.7, 
     "lon": -64.1, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "5216": {
     "H": 40.7, 
@@ -5107,7 +6624,10 @@
     "lat": 59.1, 
     "lon": -63.5, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5217": {
     "H": 48.3, 
@@ -5117,7 +6637,10 @@
     "lat": 59.1, 
     "lon": -65.0, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "5218": {
     "H": 38.6, 
@@ -5127,7 +6650,10 @@
     "lat": 60.05, 
     "lon": -64.67, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5219": {
     "H": 43.5, 
@@ -5137,7 +6663,10 @@
     "lat": 59.5, 
     "lon": -64.67, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "5220": {
     "H": 51.4, 
@@ -5147,7 +6676,10 @@
     "lat": 58.95, 
     "lon": -64.67, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "5222": {
     "H": 39.2, 
@@ -5157,7 +6689,10 @@
     "lat": 47.68, 
     "lon": -52.37, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5223": {
     "H": 39.3, 
@@ -5167,7 +6702,10 @@
     "lat": 48.11, 
     "lon": -52.16, 
     "lower": 488.3, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5224": {
     "H": 39.4, 
@@ -5177,7 +6715,10 @@
     "lat": 46.8, 
     "lon": -52.8, 
     "lower": 488.3, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5225": {
     "H": 39.2, 
@@ -5187,7 +6728,10 @@
     "lat": 47.26, 
     "lon": -52.58, 
     "lower": 416, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5226": {
     "H": 31.0, 
@@ -5197,7 +6741,10 @@
     "lat": 50.98, 
     "lon": -53.02, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5227": {
     "H": 30.4, 
@@ -5207,7 +6754,10 @@
     "lat": 51.37, 
     "lon": -52.66, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5228": {
     "H": 32.0, 
@@ -5217,7 +6767,10 @@
     "lat": 50.21, 
     "lon": -53.75, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5229": {
     "H": 30.0, 
@@ -5227,7 +6780,10 @@
     "lat": 50.61, 
     "lon": -53.39, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "5230": {
     "H": 34.5, 
@@ -5237,7 +6793,10 @@
     "lat": 49.1, 
     "lon": -54.79, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "5231": {
     "H": 35.2, 
@@ -5247,7 +6806,10 @@
     "lat": 49.48, 
     "lon": -54.44, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "5232": {
     "H": 30.1, 
@@ -5257,7 +6819,10 @@
     "lat": 48.34, 
     "lon": -55.49, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "5233": {
     "H": 33.7, 
@@ -5267,7 +6832,10 @@
     "lat": 48.72, 
     "lon": -55.14, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "5234": {
     "H": 39.5, 
@@ -5277,7 +6845,10 @@
     "lat": 48.93, 
     "lon": -59.07, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "5235": {
     "H": 39.7, 
@@ -5287,7 +6858,10 @@
     "lat": 49.29, 
     "lon": -58.66, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "5236": {
     "H": 39.4, 
@@ -5297,7 +6871,10 @@
     "lat": 49.17, 
     "lon": -58.43, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "5237": {
     "H": 45.0, 
@@ -5307,7 +6884,10 @@
     "lat": 49.88, 
     "lon": -60.22, 
     "lower": 471.8, 
-    "upper": 460.9
+    "upper": 460.9, 
+    "wm": {
+      "type": "orogen/38km, Alps and Foreland"
+    }
   }, 
   "6484": {
     "H": 40.0, 
@@ -5317,7 +6897,10 @@
     "lat": 56.5, 
     "lon": -64.0, 
     "lower": 2800, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "6485": {
     "H": 40.0, 
@@ -5327,7 +6910,10 @@
     "lat": 56.48, 
     "lon": -63.15, 
     "lower": 3200, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "6486": {
     "H": 34.0, 
@@ -5337,7 +6923,10 @@
     "lat": 56.43, 
     "lon": -62.35, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "6487": {
     "H": 33.0, 
@@ -5347,7 +6936,10 @@
     "lat": 56.4, 
     "lon": -61.5, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "6488": {
     "H": 31.5, 
@@ -5357,7 +6949,10 @@
     "lat": 56.55, 
     "lon": -60.35, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "6500": {
     "H": 38.0, 
@@ -5367,7 +6962,10 @@
     "lat": 49.7, 
     "lon": -118.4, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "orogen/41km"
+    }
   }, 
   "6501": {
     "H": 36.0, 
@@ -5377,7 +6975,10 @@
     "lat": 49.5, 
     "lon": -117.9, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "6502": {
     "H": 34.0, 
@@ -5387,7 +6988,10 @@
     "lat": 49.45, 
     "lon": -117.0, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "6503": {
     "H": 37.0, 
@@ -5397,7 +7001,10 @@
     "lat": 49.4, 
     "lon": -116.08, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "6504": {
     "H": 40.0, 
@@ -5407,7 +7014,10 @@
     "lat": 49.4, 
     "lon": -115.7, 
     "lower": 1600, 
-    "upper": 1000
+    "upper": 1000, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "6505": {
     "H": 41.0, 
@@ -5417,7 +7027,10 @@
     "lat": 49.39, 
     "lon": -114.85, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "6515": {
     "H": 30.0, 
@@ -5427,7 +7040,10 @@
     "lat": 56.33, 
     "lon": -130.5, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "continental arc, Cordilleras"
+    }
   }, 
   "6516": {
     "H": 31.6, 
@@ -5437,7 +7053,10 @@
     "lat": 55.93, 
     "lon": -130.65, 
     "lower": 145.5, 
-    "upper": 2.588
+    "upper": 2.588, 
+    "wm": {
+      "type": "thin continental arc, Mexico"
+    }
   }, 
   "6517": {
     "H": 27.0, 
@@ -5447,7 +7066,10 @@
     "lat": 55.6, 
     "lon": -131.25, 
     "lower": 299, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thin continental arc, Mexico"
+    }
   }, 
   "6595": {
     "H": 22.0, 
@@ -5457,7 +7079,10 @@
     "lat": 61.95, 
     "lon": -58.6, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "66": {
     "H": 34.8, 
@@ -5467,7 +7092,10 @@
     "lat": 44.17, 
     "lon": -75.06, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "67": {
     "H": 36.3, 
@@ -5477,7 +7105,10 @@
     "lat": 43.77, 
     "lon": -64.84, 
     "lower": 542, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "68": {
     "H": 32.8, 
@@ -5487,7 +7118,10 @@
     "lat": 44.45, 
     "lon": -63.56, 
     "lower": 542, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "6960": {
     "H": 40.0, 
@@ -5497,7 +7131,10 @@
     "lat": 55.2, 
     "lon": -119.25, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6961": {
     "H": 40.0, 
@@ -5507,7 +7144,10 @@
     "lat": 55.5, 
     "lon": -117.0, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6962": {
     "H": 43.0, 
@@ -5517,7 +7157,10 @@
     "lat": 54.7, 
     "lon": -117.0, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6963": {
     "H": 43.5, 
@@ -5527,7 +7170,10 @@
     "lat": 56.5, 
     "lon": -117.2, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6964": {
     "H": 40.0, 
@@ -5537,7 +7183,10 @@
     "lat": 55.8, 
     "lon": -119.7, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6965": {
     "H": 43.5, 
@@ -5547,7 +7196,10 @@
     "lat": 56.5, 
     "lon": -117.3, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6966": {
     "H": 37.5, 
@@ -5557,7 +7209,10 @@
     "lat": 55.5, 
     "lon": -118.7, 
     "lower": 83.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "thick Platform"
+    }
   }, 
   "6967": {
     "H": 38.0, 
@@ -5567,7 +7222,10 @@
     "lat": 56.6, 
     "lon": -118.7, 
     "lower": 99.6, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "Platform"
+    }
   }, 
   "6987": {
     "H": 42.0, 
@@ -5577,7 +7235,10 @@
     "lat": 46.8, 
     "lon": -62.8, 
     "lower": 318.1, 
-    "upper": 251.0
+    "upper": 251.0, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "6988": {
     "H": 42.0, 
@@ -5587,7 +7248,10 @@
     "lat": 46.2, 
     "lon": -61.7, 
     "lower": 318.1, 
-    "upper": 251.0
+    "upper": 251.0, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "6989": {
     "H": 36.7, 
@@ -5597,7 +7261,10 @@
     "lat": 47.45, 
     "lon": -64.5, 
     "lower": 318.1, 
-    "upper": 251.0
+    "upper": 251.0, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "6990": {
     "H": 37.0, 
@@ -5607,7 +7274,10 @@
     "lat": 47.35, 
     "lon": -63.6, 
     "lower": 318.1, 
-    "upper": 251.0
+    "upper": 251.0, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "7003": {
     "H": 38.0, 
@@ -5617,7 +7287,10 @@
     "lat": 53.43, 
     "lon": -55.15, 
     "lower": 542, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7005": {
     "H": 32.0, 
@@ -5627,7 +7300,10 @@
     "lat": 56.45, 
     "lon": -59.8, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "7006": {
     "H": 33.0, 
@@ -5637,7 +7313,10 @@
     "lat": 56.05, 
     "lon": -59.65, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "7007": {
     "H": 36.0, 
@@ -5647,7 +7326,10 @@
     "lat": 55.65, 
     "lon": -58.3, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "72": {
     "H": 32.5, 
@@ -5657,7 +7339,10 @@
     "lat": 49.59, 
     "lon": -120.0, 
     "lower": 175.6, 
-    "upper": 161.2
+    "upper": 161.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7312": {
     "H": 35.0, 
@@ -5667,7 +7352,10 @@
     "lat": 60.1, 
     "lon": -128.8, 
     "lower": 416, 
-    "upper": 199.6
+    "upper": 199.6, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "7313": {
     "H": 36.0, 
@@ -5677,7 +7365,10 @@
     "lat": 59.95, 
     "lon": -127.9, 
     "lower": 1000, 
-    "upper": 488.3
+    "upper": 488.3, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "7314": {
     "H": 36.0, 
@@ -5687,7 +7378,10 @@
     "lat": 59.65, 
     "lon": -127.15, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "7315": {
     "H": 37.0, 
@@ -5697,7 +7391,10 @@
     "lat": 59.45, 
     "lon": -126.2, 
     "lower": 416, 
-    "upper": 318.1
+    "upper": 318.1, 
+    "wm": {
+      "type": "orogen/43km, Orogen"
+    }
   }, 
   "7316": {
     "H": 39.8, 
@@ -5707,7 +7404,10 @@
     "lat": 59.0, 
     "lon": -125.75, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "7317": {
     "H": 35.1, 
@@ -5717,7 +7417,10 @@
     "lat": 58.7, 
     "lon": -124.85, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "7318": {
     "H": 37.7, 
@@ -5727,7 +7430,10 @@
     "lat": 58.65, 
     "lon": -123.8, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "7319": {
     "H": 41.2, 
@@ -5737,7 +7443,10 @@
     "lat": 58.8, 
     "lon": -122.9, 
     "lower": 145.5, 
-    "upper": 99.6
+    "upper": 99.6, 
+    "wm": {
+      "type": "orogen/43km"
+    }
   }, 
   "7529": {
     "H": 39.1, 
@@ -5747,7 +7456,10 @@
     "lat": 59.1, 
     "lon": -65.55, 
     "lower": 2500, 
-    "upper": 2050
+    "upper": 2050, 
+    "wm": {
+      "type": "Margin /shield transition, East Siberia"
+    }
   }, 
   "7530": {
     "H": 34.8, 
@@ -5757,7 +7469,10 @@
     "lat": 60.57, 
     "lon": -64.67, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7545": {
     "H": 37.3, 
@@ -5767,7 +7482,10 @@
     "lat": 48.4, 
     "lon": -57.4, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7546": {
     "H": 36.9, 
@@ -5777,7 +7495,10 @@
     "lat": 48.8, 
     "lon": -56.8, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7547": {
     "H": 35.4, 
@@ -5787,7 +7508,10 @@
     "lat": 49.1, 
     "lon": -56.3, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7549": {
     "H": 33.6, 
@@ -5797,7 +7521,10 @@
     "lat": 49.3, 
     "lon": -57.5, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7550": {
     "H": 35.8, 
@@ -5807,7 +7534,10 @@
     "lat": 48.9, 
     "lon": -57.1, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7551": {
     "H": 36.3, 
@@ -5817,7 +7547,10 @@
     "lat": 48.6, 
     "lon": -57.7, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7552": {
     "H": 34.9, 
@@ -5827,7 +7560,10 @@
     "lat": 48.2, 
     "lon": -57.25, 
     "lower": 443.7, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7553": {
     "H": 34.6, 
@@ -5837,7 +7573,10 @@
     "lat": 47.8, 
     "lon": -56.9, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7558": {
     "H": 27.5, 
@@ -5847,7 +7586,10 @@
     "lat": 53.35, 
     "lon": -131.3, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7559": {
     "H": 28.7, 
@@ -5857,7 +7599,10 @@
     "lat": 53.57, 
     "lon": -130.82, 
     "lower": 0, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7561": {
     "H": 26.4, 
@@ -5867,7 +7612,10 @@
     "lat": 52.79, 
     "lon": -131.02, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7562": {
     "H": 25.9, 
@@ -5877,7 +7625,10 @@
     "lat": 53.03, 
     "lon": -130.59, 
     "lower": 2.588, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7564": {
     "H": 26.3, 
@@ -5887,7 +7638,10 @@
     "lat": 52.8, 
     "lon": -131.83, 
     "lower": 2.588, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "7565": {
     "H": 25.0, 
@@ -5897,7 +7651,10 @@
     "lat": 80.9, 
     "lon": -101.48, 
     "lower": 23.03, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7566": {
     "H": 25.0, 
@@ -5907,7 +7664,10 @@
     "lat": 81.4, 
     "lon": -100.02, 
     "lower": 23.03, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7569": {
     "H": 27.3, 
@@ -5917,7 +7677,10 @@
     "lat": 56.45, 
     "lon": -59.7, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "7571": {
     "H": 27.5, 
@@ -5927,7 +7690,10 @@
     "lat": 55.9, 
     "lon": -59.0, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7572": {
     "H": 23.8, 
@@ -5937,37 +7703,10 @@
     "lat": 55.3, 
     "lon": -58.25, 
     "lower": 3800, 
-    "upper": 542
-  }, 
-  "7574": {
-    "H": 8.5, 
-    "Vp": 5.58, 
-    "era": "mesozoic", 
-    "geoprov": "oceanic crust", 
-    "lat": 60.02, 
-    "lon": -51.42, 
-    "lower": 145.5, 
-    "upper": 65.5
-  }, 
-  "7575": {
-    "H": 8.5, 
-    "Vp": 5.183529411764705, 
-    "era": "mesozoic", 
-    "geoprov": "oceanic crust", 
-    "lat": 60.21, 
-    "lon": -50.68, 
-    "lower": 145.5, 
-    "upper": 65.5
-  }, 
-  "7578": {
-    "H": 8.74, 
-    "Vp": 5.684839816933639, 
-    "era": "cenozoic", 
-    "geoprov": "oceanic crust", 
-    "lat": 59.83, 
-    "lon": -51.82, 
-    "lower": 65.5, 
-    "upper": 23
+    "upper": 542, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7589": {
     "H": 38.2, 
@@ -5977,7 +7716,10 @@
     "lat": 59.18, 
     "lon": -67.59, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "7590": {
     "H": 38.4, 
@@ -5987,7 +7729,10 @@
     "lat": 59.18, 
     "lon": -67.16, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "7591": {
     "H": 38.0, 
@@ -5997,7 +7742,10 @@
     "lat": 59.12, 
     "lon": -66.76, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "7592": {
     "H": 36.7, 
@@ -6007,7 +7755,10 @@
     "lat": 59.17, 
     "lon": -66.33, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "7593": {
     "H": 36.2, 
@@ -6017,7 +7768,10 @@
     "lat": 59.09, 
     "lon": -62.86, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7594": {
     "H": 18.3, 
@@ -6027,7 +7781,10 @@
     "lat": 59.06, 
     "lon": -62.43, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7595": {
     "H": 16.8, 
@@ -6037,7 +7794,10 @@
     "lat": 59.03, 
     "lon": -62.01, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7596": {
     "H": 17.1, 
@@ -6047,7 +7807,10 @@
     "lat": 59.0, 
     "lon": -61.55, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental slope, margin, transition"
+    }
   }, 
   "7597": {
     "H": 13.0, 
@@ -6057,7 +7820,10 @@
     "lat": 56.56, 
     "lon": -57.25, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7598": {
     "H": 12.6, 
@@ -6067,7 +7833,10 @@
     "lat": 56.28, 
     "lon": -56.98, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7599": {
     "H": 13.4, 
@@ -6077,7 +7846,10 @@
     "lat": 55.99, 
     "lon": -56.78, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7600": {
     "H": 19.4, 
@@ -6087,7 +7859,10 @@
     "lat": 55.98, 
     "lon": -58.52, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "7601": {
     "H": 16.9, 
@@ -6097,7 +7872,10 @@
     "lat": 56.13, 
     "lon": -57.88, 
     "lower": 23, 
-    "upper": 2.59
+    "upper": 2.59, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7602": {
     "H": 13.3, 
@@ -6107,7 +7885,10 @@
     "lat": 56.3, 
     "lon": -57.22, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7603": {
     "H": 11.2, 
@@ -6117,7 +7898,10 @@
     "lat": 56.45, 
     "lon": -56.66, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7604": {
     "H": 10.9, 
@@ -6127,7 +7911,10 @@
     "lat": 56.59, 
     "lon": -56.04, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7605": {
     "H": 9.3, 
@@ -6137,7 +7924,10 @@
     "lat": 56.73, 
     "lon": -55.38, 
     "lower": 145.5, 
-    "upper": 65.5
+    "upper": 65.5, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7606": {
     "H": 7.8, 
@@ -6147,7 +7937,10 @@
     "lat": 56.96, 
     "lon": -54.31, 
     "lower": 65.5, 
-    "upper": 23
+    "upper": 23, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "7823": {
     "H": 41.0, 
@@ -6157,7 +7950,10 @@
     "lat": 44.53, 
     "lon": -77.45, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7824": {
     "H": 40.8, 
@@ -6167,7 +7963,10 @@
     "lat": 44.94, 
     "lon": -77.76, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "7825": {
     "H": 40.8, 
@@ -6177,7 +7976,10 @@
     "lat": 45.38, 
     "lon": -78.05, 
     "lower": 1600, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7826": {
     "H": 45.2, 
@@ -6187,7 +7989,10 @@
     "lat": 45.8, 
     "lon": -78.36, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7827": {
     "H": 46.0, 
@@ -6197,7 +8002,10 @@
     "lat": 46.28, 
     "lon": -78.25, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7828": {
     "H": 39.5, 
@@ -6207,7 +8015,10 @@
     "lat": 46.69, 
     "lon": -78.57, 
     "lower": 1800, 
-    "upper": 1400
+    "upper": 1400, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7829": {
     "H": 35.4, 
@@ -6217,7 +8028,10 @@
     "lat": 47.1, 
     "lon": -78.93, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7830": {
     "H": 38.3, 
@@ -6227,7 +8041,10 @@
     "lat": 47.58, 
     "lon": -79.2, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7831": {
     "H": 42.1, 
@@ -6237,7 +8054,10 @@
     "lat": 48.04, 
     "lon": -78.9, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7832": {
     "H": 39.9, 
@@ -6247,7 +8067,10 @@
     "lat": 48.49, 
     "lon": -79.03, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7833": {
     "H": 38.1, 
@@ -6257,7 +8080,10 @@
     "lat": 48.97, 
     "lon": -79.18, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7834": {
     "H": 37.7, 
@@ -6267,7 +8093,10 @@
     "lat": 49.41, 
     "lon": -79.02, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7835": {
     "H": 40.7, 
@@ -6277,7 +8106,10 @@
     "lat": 49.03, 
     "lon": -80.8, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7836": {
     "H": 50.3, 
@@ -6287,7 +8119,10 @@
     "lat": 49.08, 
     "lon": -80.11, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7837": {
     "H": 40.7, 
@@ -6297,7 +8132,10 @@
     "lat": 48.96, 
     "lon": -79.44, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7838": {
     "H": 40.6, 
@@ -6307,7 +8145,10 @@
     "lat": 48.96, 
     "lon": -78.76, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter."
+    }
   }, 
   "7839": {
     "H": 46.7, 
@@ -6317,7 +8158,10 @@
     "lat": 45.7, 
     "lon": -80.48, 
     "lower": 2500, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7840": {
     "H": 46.1, 
@@ -6327,7 +8171,10 @@
     "lat": 46.16, 
     "lon": -80.74, 
     "lower": 2800, 
-    "upper": 1600
+    "upper": 1600, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7841": {
     "H": 40.6, 
@@ -6337,7 +8184,10 @@
     "lat": 46.58, 
     "lon": -81.15, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7842": {
     "H": 37.1, 
@@ -6347,7 +8197,10 @@
     "lat": 46.85, 
     "lon": -81.62, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7843": {
     "H": 37.2, 
@@ -6357,7 +8210,10 @@
     "lat": 47.29, 
     "lon": -81.78, 
     "lower": 2800, 
-    "upper": 2500
+    "upper": 2500, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7844": {
     "H": 39.3, 
@@ -6367,7 +8223,10 @@
     "lat": 46.4, 
     "lon": -81.64, 
     "lower": 2500, 
-    "upper": 2150
+    "upper": 2150, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7845": {
     "H": 39.4, 
@@ -6377,7 +8236,10 @@
     "lat": 46.64, 
     "lon": -81.13, 
     "lower": 2300, 
-    "upper": 1800
+    "upper": 1800, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7846": {
     "H": 39.5, 
@@ -6387,7 +8249,10 @@
     "lat": 46.87, 
     "lon": -80.56, 
     "lower": 2500, 
-    "upper": 2150
+    "upper": 2150, 
+    "wm": {
+      "type": "early/mid Proter. shield, Finland"
+    }
   }, 
   "7892": {
     "H": 25.0, 
@@ -6397,7 +8262,10 @@
     "lat": 82.5, 
     "lon": -62.35, 
     "lower": 443.7, 
-    "upper": 416
+    "upper": 416, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "8387": {
     "H": 35.0, 
@@ -6407,7 +8275,10 @@
     "lat": 44.45, 
     "lon": -76.85, 
     "lower": 1400, 
-    "upper": 1200
+    "upper": 1200, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }, 
   "89": {
     "H": 52.5, 
@@ -6417,7 +8288,10 @@
     "lat": 47.91, 
     "lon": -86.85, 
     "lower": 3800, 
-    "upper": 542
+    "upper": 542, 
+    "wm": {
+      "type": "Archean"
+    }
   }, 
   "93": {
     "H": 32.6, 
@@ -6427,7 +8301,10 @@
     "lat": 45.27, 
     "lon": -60.68, 
     "lower": 542, 
-    "upper": 359.2
+    "upper": 359.2, 
+    "wm": {
+      "type": "continental shelf"
+    }
   }, 
   "94": {
     "H": 45.0, 
@@ -6437,7 +8314,10 @@
     "lat": 47.93, 
     "lon": -64.01, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "orogen/46km, Orogen"
+    }
   }, 
   "95": {
     "H": 35.0, 
@@ -6447,7 +8327,10 @@
     "lat": 43.94, 
     "lon": -59.85, 
     "lower": 2.588, 
-    "upper": 0
+    "upper": 0, 
+    "wm": {
+      "type": "normal oceanic"
+    }
   }, 
   "97": {
     "H": 30.9, 
@@ -6457,7 +8340,10 @@
     "lat": 47.54, 
     "lon": -58.68, 
     "lower": 318.1, 
-    "upper": 299
+    "upper": 299, 
+    "wm": {
+      "type": "Margin /shield transition"
+    }
   }, 
   "98": {
     "H": 36.7, 
@@ -6467,6 +8353,9 @@
     "lat": 49.36, 
     "lon": -55.57, 
     "lower": 542, 
-    "upper": 443.7
+    "upper": 443.7, 
+    "wm": {
+      "type": "orogen/39km"
+    }
   }
 }

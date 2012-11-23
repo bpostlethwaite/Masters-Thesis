@@ -5,6 +5,8 @@ function plotStack(db, method)
 set(0, 'DefaultFigureRendererMode', 'manual')
 set(0,'DefaultFigureRenderer','zbuffer')
 
+startsec = 0;
+
 hfig = figure(23);
 pos = get(hfig,'OuterPosition');
 pos1 = pos; % save backup for next window
@@ -53,12 +55,12 @@ if strcmp(method,'bostock')
        hfig = figure(29);
         pos1(1) = floor(pos(1)/4);
         set(hfig,'OuterPosition',pos1)
-        csection(db.rec(:,1:round(26/db.dt)),0,db.dt);
+        csection(db.rec(:, 1 : round(26/db.dt)), startsec, db.dt);
         hold on
         plot(db.mb.tps,'k+')
         plot(db.mb.tpps,'k+')
         plot(db.mb.tpss,'k+')
-        title(sprintf('%s',db.station) )
+        title(sprintf('%s', db.station) )
         hold off
 
         
@@ -87,7 +89,7 @@ elseif strcmp(method,'kanamori')
         hfig = figure(29);
         pos1(1) = floor(pos(1)/4);
         set(hfig,'OuterPosition',pos1)
-        csection(db.rec(:,1:round(26/db.dt)),0,db.dt);
+        csection(db.rec(:, 1 : round(26/db.dt)), startsec,db.dt);
         hold on
         plot(db.hk.tps,'k+')
         plot(db.hk.tpps,'k+')
