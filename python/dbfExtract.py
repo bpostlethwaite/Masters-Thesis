@@ -78,6 +78,8 @@ for rec in db:
     m[rec["mcode"]]["lower"] = epochdict[rec["epoch"]][0]
     m[rec["mcode"]]["upper"] = epochdict[rec["epoch"]][1]
     m[rec["mcode"]]["era"] = rec["era"].lower()
+    m[rec["mcode"]]['wm'] = {}
+    m[rec["mcode"]]['wm']['type'] = rec['geotype']
 
 #print json.dumps(m, sort_keys = True, indent = 2 )
 open(moonvpGeology,'w').write( json.dumps(m, sort_keys = True, indent = 2 ))

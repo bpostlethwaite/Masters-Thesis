@@ -74,6 +74,7 @@ for ii = 1:length(dlist)
         bad = true;
         emsg = sprintf('Identifier: { %s }\nMessage: { %s } ',...
             exception.identifier,exception.message);
+        disp(emsg)
     end
     
     if bad

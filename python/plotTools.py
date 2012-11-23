@@ -43,10 +43,7 @@ def isin(seq, pattern):
 
 class Args(object):
     def __init__(self):
-        self.stationList = False
-        self.attribute = False
-        self.query = False
-        self.Keys = False
+        self.reset()
 
     def addQuery(self, attr, op, value):
         self.query = [attr, op, value]
@@ -54,6 +51,17 @@ class Args(object):
 
     def addKeys(self):
         self.keys = True
+        return self
+
+    def stations(self, stations):
+        self.stationList = stations
+        return self
+
+    def reset(self):
+        self.stationList = False
+        self.attribute = False
+        self.query = False
+        self.Keys = False
         return self
 
 class Params(object):
@@ -69,6 +77,7 @@ class Params(object):
         self.scp = Scoper("::")
 
         self.data = json.loads( open(fname).read() )
+
         if args:
             self.filter(args)
         else:

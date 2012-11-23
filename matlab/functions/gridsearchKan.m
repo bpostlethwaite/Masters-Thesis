@@ -8,7 +8,7 @@ function [ results ] = gridsearchKan(rec, dt, pslow, v)
 %% Grip parameters
 % Vp/Vs Ratio
 nr = 200;
-r1 = 1.65;
+r1 = 1.65; %1.65
 r2 = 1.95;
 dr = (r2 - r1)/(nr - 1);
 r = r1:dr:r2;

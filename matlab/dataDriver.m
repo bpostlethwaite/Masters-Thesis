@@ -17,28 +17,38 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'NOTN';
+station = 'FNBB';
 
 %{
-
-DMCQ
-EA06
-EUNU
-HNB
-KASO
-KILO
-MNTQ
-MOBC
-NMSQ
-OZB
-PIMB
-PKRO
-PLIO
-RSPO
-VIMO
-VLDQ
-WALA
-
+reprocessed & reprocessed
+FNBC
+SMPN
+EDZN
+BMBC
+FSMA
+RSNT
+MEDA
+YUK1
+YUK3
+YUK6
+ALRB
+TALB
+LLLB
+RAMB
+SHB
+DRLN
+NATG
+ELFO
+BELQ
+KAPO
+PNPO
+KNGQ
+EUNU 
+ELEF
+VTIN
+MATQ
+EPLO
+INK
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);

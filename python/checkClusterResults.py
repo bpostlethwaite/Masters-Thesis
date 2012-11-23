@@ -7,6 +7,7 @@
 ###########################################################################
 import os, json
 import numpy as np
+import matplotlib.pyplot as plt
 from plotTools import Args, Params
 
 
@@ -15,11 +16,9 @@ stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 
 lim = 0.055
 
-arg = Args()
-arg.addQuery("hk::stdR", "lt", "0.055")
 # Load station params
-d = Params(stnfile, ["hk::H","hk::R", "hk::stdR", "hk::c0R", "hk::c1R"], arg)
-d.filter(arg.addQuery("usable", "eq", "1"))
+d = Params(stnfile, ["hk::H","hk::R", "hk::stdR", "hk::c0R", "hk::c1R"])
+d.filter(Args().addQuery("status", "in", "processed"))
 
 ix1 = np.abs(d.hk_c0R - d.hk_R) < 2*d.hk_stdR
 ix2 = np.abs(d.hk_c1R - d.hk_R) < 2*d.hk_stdR
@@ -52,7 +51,30 @@ def printinfo(msg, ixs, d, details):
         print "number of stations:", len(d.stns[ix])
 
 
-details = False
-printinfo(msg, ixs, d, details)
-# for stn in d.stns[ixs[0]]:
-#     print stn
+#details = False
+#printinfo(msg, ixs, d, details)
+arg = Args().stations( list(d.stns[ixs[2]]) )
+arg.addQuery("status", "eq", "processed-notok")
+d.filter(arg)
+for stn in d.stns:
+    print stn
+
+d = Params(stnfile, ["hk::H","hk::R", "hk::stdR", "hk::c0R", "hk::c1R"])
+d.filter(Args().addQuery("status", "in", "processed"))
+arg = Args()
+arg.stations(list(d.stns[ixs[0]]))
+arg.addQuery("status", "eq", "processed-ok")
+d.filter(arg)
+
+#for station in d.stns:
+#    print station
+#print np.fabs(d.hk_c1R - d.hk_c0R)
+
+t = np.arange(len(d.stns))
+plt.plot(t, d.hk_R, '-ob', lw = 4, ms = 12, label = "Vp/Vs estimate -  current data set")
+plt.plot(t, d.hk_c0R, '*',  ms = 13, color = 'orange',  label = "Vp/Vs estimate Japan Source Region")
+plt.plot(t, d.hk_c1R, '*',  ms = 13, color = 'yellow', label = "Vp/Vs estimate Chili Source Region")
+plt.plot(t, d.hk_stdR * 5 + 1.6, '-or', lw = 4, ms = 12, label = "Vp/Vs Error estimate")
+plt.xticks(t,d.stns, size = 12)
+
+#plt.show()

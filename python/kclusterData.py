@@ -84,9 +84,11 @@ def clusterEvents(stdir, k, showmap = True):
     # around Chile.
     vects = vectorize(data)
 
-    if k == 2:
+    if k == 3:
         initguess = vectorize(np.array( [ [58., 149.],
-                                          [-7., -74.] ] ))
+                                          [-7., -74.],
+                                          [37., 11.]
+                                          ] ))
     else:
         initguess = "k-means++"
     # Perform Kmeans
@@ -246,12 +248,11 @@ if __name__== '__main__' :
         for stn in stations:
             print stn
             evdict, cldict = clusterEvents(os.path.join(stndir,stn), args.number[0], showmap = args.map)
-
             if args.printc:
                 for key in cldict.keys():
                     print key, ":", cldict[key]
-                    for key in evdict.keys():
-                        print key, ":", evdict[key]
+                for key in evdict.keys():
+                    print key, ":", evdict[key]
 
             if args.write:
                 reg2 = re.compile(r'^stack_(\w)\.sac')

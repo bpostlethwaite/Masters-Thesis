@@ -13,7 +13,7 @@ provinces = {
     'Nain Province'             % 5
     'Slave Province'            % 6
     'Southern Province'         % 7
-    'Superior Province'         % 8 
+    'Superior Province'         % 8
     'Arctic Platform'           % 9
     'Interior Platform'         % 10
     'St. Lawrence Platform'     % 11
@@ -26,8 +26,14 @@ provinces = {
     'Hudson Bay Lowlands'       % 18
     };
 
-
-%}
+region = {
+    provinces([1:11,15:18]), 'canada'
+    provinces(2), provinces{2}
+    provinces(3), provinces{3}
+    provinces(6), provinces{6}
+    provinces(8), provinces{8}
+    provinces(1:8), 'Shield'
+    };
 %% Helper Funcs
 poisson = @(R) ( (R^2 - 2) / (2*(R^2 - 1)));
 
@@ -35,57 +41,80 @@ vect = @(V) [
     cos(V(:,1)) .* cos(V(:,2)),...
     cos(V(:,1)) .* sin(V(:,2)),...
     sin(V(:,1)) ];
+
+despace = @(str) str(str ~= ' ');
+%% Parameters
+plotbounds = 0;
+plotvoronoi = 0;
+
+%% Output Data & file
+json = struct();
+fid = fopen([userdir,'/thesis/data/voronoi.data'], 'w');
 %% Get Data
-json = '../data/stations.json';
-cutoff = 0.041;
-%json = '../data/moonvpGeology.json';
-%cutoff = 4.9;
-data = getStationData(json, provinces([1:11,15:18]), cutoff);
-bound = chooseBounding('canada');
+datafiles = {
+    '../data/stations.json'
+    '../data/moonvpGeology.json'
+    };
+dsource = {
+    'kanamori'
+    'mooney'
+    };
+dtype = {
+    'R'
+    'Vp'
+    };
 
-%% Perform conversions, computations
-
-vects = vect(degtorad([data.lat', data.lon']));
-bound(end + 1, :) = bound(1, :);
-VB = vect(deg2rad(bound));
-
-figure(1)
-plot(vects(:,1), vects(:,2), '.')
-hold on
-plot(VB(:,1), VB(:,2), 'r')
-
-nump = size(VB,1);
-% Label vertices
-plabels = arrayfun(@(n) {sprintf('B%d', n)}, (1:nump)');
-Hpl = text(VB(:,1), VB(:,2), plabels, 'FontWeight', ...
-        'bold', 'HorizontalAlignment','center', ...
-        'BackgroundColor', 'none');
-% label stations
-Hpl = text(vects(:,1), vects(:,2), char(data.stn), 'FontWeight', ...
-        'bold', 'HorizontalAlignment','center', ...
-        'BackgroundColor', 'none');
-
-title('Initial Bounding Box')
-hold off
-
-% Remove Points outside boundary. Only do if it really isn't worth
-% extending the boundary.
-out = ~inpolygon(vects(:,1), vects(:,2), VB(:,1), VB(:,2));
-if any(out)
-    fprintf('Cutting out %i stations\n', sum(out))
-    data.R(out) = [];
-    data.H(out) = [];
-    data.stn(out) = [];
-    data.lat(out) = [];
-    data.lon(out) = [];
-    vects = vect(degtorad([data.lat', data.lon']));
-end
-
-[X,IA,IC] = unique(vects, 'rows');
-
-
-%}
-%{
+for jj = 1:size(region, 1)
+    for qq = 1:2
+        
+        data = getStationData( datafiles{qq}, region{jj,1} );
+        bound = chooseBounding( region{jj,2} );
+        
+        %% Perform conversions, computations
+        
+        vects = vect(degtorad([data.lat', data.lon']));
+        %bound(end + 1, :) = bound(1, :);
+        %VB = vect(deg2rad(bound));
+        
+        
+        if plotbounds
+            figure()
+            plot(vects(:,1), vects(:,2), '.')
+            hold on
+            plot(VB(:,1), VB(:,2), 'r')
+            
+            nump = size(VB,1);
+            % Label vertices
+            plabels = arrayfun(@(n) {sprintf('B%d', n)}, (1:nump)');
+            Hpl = text(VB(:,1), VB(:,2), plabels, 'FontWeight', ...
+                'bold', 'HorizontalAlignment','center', ...
+                'BackgroundColor', 'none');
+            % label stations
+            Hpl = text(vects(:,1), vects(:,2), char(data.stn), 'FontWeight', ...
+                'bold', 'HorizontalAlignment','center', ...
+                'BackgroundColor', 'none');
+            
+            title('Initial Bounding Box')
+            hold off
+        end
+        % Remove Points outside boundary. Only do if it really isn't worth
+        % extending the boundary.
+%         out = ~inpolygon(vects(:,1), vects(:,2), VB(:,1), VB(:,2));
+%         if any(out)
+%             fprintf('Cutting out %i stations\n', sum(out))
+%             data.R(out) = [];
+%             data.H(out) = [];
+%             data.stn(out) = [];
+%             data.lat(out) = [];
+%             data.lon(out) = [];
+%             vects = vect(degtorad([data.lat', data.lon']));
+%         end
+        
+        [X,IA,IC] = unique(vects, 'rows');
+        
+        
+        %}
+        %{
 % Perform edits
 % VB([1,6:8, 15],:) = [];
 % VB(end + 1, :) = VB(1, :);
@@ -94,7 +123,7 @@ end
 % plot(X(:,1),X(:,2), '.')
 % hold on
 % plot(VB(:,1),VB(:,2), 'r')
-% 
+%
 % nump = size(VB,1);
 % plabels = arrayfun(@(n) {sprintf('B%d', n)}, (1:nump)');
 % Hpl = text(VB(:,1), VB(:,2), plabels, 'FontWeight', ...
@@ -108,38 +137,51 @@ end
 %k = convexHull(dt);
 %cvx = [dt.X(k,1), dt.X(k,2)];
 %cvx = cvx + cvx.*0.1;
-%}
-% MPT TOOLBOX VERSION 2D
-%
+        %}
+        % MPT TOOLBOX VERSION 2D
+        %
+        
+        % Convex Hull
+        dt = DelaunayTri(X(:,1:2));
+        k = convexHull(dt);
+        cvx = [dt.X(k,1), dt.X(k,2)];
+        % or
+        % cvx = [VB(:,1), VB(:,2)];
+        
 
-% Convex Hull
-%dt = DelaunayTri(X(:,1:2));
-%k = convexHull(dt);
-%cvx = [dt.X(k,1), dt.X(k,2)];
-% or
-cvx = [VB(:,1), VB(:,2)];
+        options.plot = 0;
+        %options.pbound = polytope( VB(:,1:2) );
+        options.pbound = polytope( cvx );
+        V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
+        area = volume(V);
+        area = area./sum(area);
+        Rv = data.R(IA)' .* area;
+        Hv = data.H(IA)' .* area;
+        
+        if plotvoronoi
+            figure()
+            plot(V)
+            hold on
+            arealabel = arrayfun(@(n) {sprintf(' %2.3f', n)}, area*100);
+            plabel = strcat(data.stn(IA)', arealabel);
+            Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
+                'bold', 'HorizontalAlignment','center', ...
+                'BackgroundColor', 'none');
+            hold off
+        end
+        
+        json.( despace(region{jj,2}) ).(dsource{qq}).(dtype{qq}) = sum(Rv);
+        json.( despace(region{jj,2}) ).(dsource{qq}).H = sum(Hv);
+        
+    end
+end
 
-figure(2)
-options.plot = 0;
-%options.pbound = polytope( VB(:,1:2) );
-options.pbound = polytope( cvx );
-V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
-area = volume(V);
-area = area./sum(area);
-Rv = data.R(IA)' .* area;
-Hv = data.H(IA)' .* area;
+opt.FileName = [userdir,'/thesis/data/voronoi.data'];
+opt.ForceRootName = 0;
+savejson('', json, opt);
 
-plot(V)
-hold on
-arealabel = arrayfun(@(n) {sprintf(' %2.3f', n)}, area*100);
-plabel = strcat(data.stn(IA)', arealabel);
-Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
-       'bold', 'HorizontalAlignment','center', ...
-       'BackgroundColor', 'none');
-hold off
-fprintf('Voronoi average Vp/Vs = %f\n', sum(Rv));
-fprintf('Voronoi average H = %f\n', sum(Hv));
-   
+        
+
    %}
 %3D MPT
 %{
