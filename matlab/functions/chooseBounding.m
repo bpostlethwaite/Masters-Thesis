@@ -1,7 +1,7 @@
 function bounding = chooseBounding(region)
 % Outputs desired convex bounds in lat and lon.
 
-if strcmp(region, 'canada')
+if strcmp(region, 'Canada')
     bounding = [
         46.8 -124
         52.8 -134
