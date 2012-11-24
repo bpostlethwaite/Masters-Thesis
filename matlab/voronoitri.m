@@ -27,7 +27,7 @@ provinces = {
     };
 
 region = {
-    provinces([1:11,15:18]), 'canada'
+    provinces([1:11,15:18]), 'Canada'
     provinces(2), provinces{2}
     provinces(3), provinces{3}
     provinces(6), provinces{6}

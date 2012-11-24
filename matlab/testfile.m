@@ -105,3 +105,14 @@ savejson('', sts, opt);
 %load 3Dpolytopes.mat
 
 
+%% Tern testing
+addpath functions
+
+br = 7.84;
+qz = 6.05;
+an = 6.35;
+vp = 7.0;
+
+[ A, B, C ] = terntransform(an, br, qz, vp, 100);
+
+disp(C)
