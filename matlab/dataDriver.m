@@ -16,39 +16,45 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'kanamori';
-station = 'HPLN';
+method = 'bostock';
+station = 'MEDO';
 
 %{
-reprocessed & reprocessed
-FNBC
-SMPN
-EDZN
-BMBC
-FSMA
-RSNT
-MEDA
-YUK1
-YUK3
-YUK6
-ALRB
-TALB
-LLLB
-RAMB
-SHB
-DRLN
-NATG
-ELFO
-BELQ
-KAPO
-PNPO
-KNGQ
-EUNU 
-ELEF
-VTIN
-MATQ
-EPLO
-INK
+controlled source proximity
+ARVN *
+BANO *
+CBRQ *
+DELO *
+FCC *
+HAL *
+INUQ *
+LMN *
+MANN *** Investigate why mcode isn't nearby
+MEDO *** Investigate why mcode isn't nearby
+MNT
+ORIO *
+PEMO
+PLVO
+PTCO
+SUNO
+ULM *
+ULM2
+WAPA *
+WHY *
+WSLR *
+YKW1
+YOSQ
+
+nine best stations
+BULN 
+GIFN
+HAL
+ILON
+SILO 
+TYNO
+ULM
+WSLR
+YBKN
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);

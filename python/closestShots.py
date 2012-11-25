@@ -21,8 +21,8 @@ distf = os.environ['HOME']+'/thesis/mapping/mooney/distance_stations2shots.csv'
 # Dictionary of all of Mooney's canadian data which
 # passed through the parser mooneyraw2shape.py
 # It has keynumber, lat lon and Vp and H averages for the crust.
-moonstns = os.environ['HOME'] + '/thesis/moonStations.json'
-moonf = os.environ['HOME'] + '/thesis/moonShots.json'
+moonstns = os.environ['HOME'] + '/thesis/data/moonStations.json'
+moonf = os.environ['HOME'] + '/thesis/data/moonShots.json'
 mshots = json.loads( open(moonf).read() )
 
 stns = []
@@ -76,21 +76,23 @@ for ind, stn in enumerate(stns):
     if len(mcodes) > 0:
         Vp = 0
         H = 0
+        mcodedict = {}
         for i, m in enumerate(mcodes):
             Vp += mshots[m]['Vp'] * weights[i]
             H += mshots[m]['H'] * weights[i]
+            mcodedict[m] = [mshots[m]['Vp'],mshots[m]['H']]
         # Print information for visual inspection
-        print "--------"
-        print "station:", stn
-        print "MooneyCodes:", mcodes
-        print "Radius limit [degrees]:", ddeg
-        print "Vp:", Vp, "H:", H
+        # print "--------"
+        # print "station:", stn
+        # print "MooneyCodes:", mcodes
+        # print "Radius limit [degrees]:", ddeg
+        # print "Vp:", Vp, "H:", H
 
         # Build dictionary
         mdict[stn] = {}
         mdict[stn]["Vp"] = Vp
         mdict[stn]["H"] = H
-        mdict[stn]["mcodes"] = list(mcodes)
+        mdict[stn]["mcodes"] = mcodedict
 
     else:
         continue

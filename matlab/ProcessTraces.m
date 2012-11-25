@@ -8,8 +8,8 @@ discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 3.4; % Upper frequency cutoff
-snrlim = 0.35;
+fHigh = 3; % Upper frequency cutoff
+snrlim = 0.30;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -121,11 +121,11 @@ vp = json.(station).wm.Vp;
 % from stations.json database
 %[brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
 
-%[results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
-%TTps = results.tps;
-%TTps = Tps';
+
 TTps = [];
 if strcmp(method, 'bostock')
+    [results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
+    TTps = results.tps;
     [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
 
 elseif strcmp(method, 'kanamori')      
