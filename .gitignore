@@ -11,6 +11,10 @@ shellscripts/get_tt
 *.mexa64
 *.mat
 
+# Node
+####################
+node/node_modules/*
+
 # Compiled source #
 ###################
 *.com

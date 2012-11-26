@@ -237,7 +237,7 @@ def setStatus(s, stdict):
                 status = "processed-ok"
             else:
                 status = "processed-notok"
-        if 'usableEvents' in s[k] and s[k]['usableEvents'] < 15:
+        if 'usableEvents' in s[k] and s[k]['usableEvents'] < 5:
             status = "data corruption"
         if 'badCompEvents' in s[k] and s[k]['badCompEvents'] > 99:
             status = "data corruption"
