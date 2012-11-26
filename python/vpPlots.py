@@ -33,6 +33,8 @@ print len(c.stns)
 stdVp = 2 * m.mb_stdVp # 2 stdError
 
 t = np.arange(len(m.mb_Vp))
+
+figure()
 plt.plot(t, m.mb_Vp, '-ob', lw = 4, ms = 12, label = "Bostock (2010) Vp estimate")
 plt.errorbar(t, m.mb_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
              elinewidth = 2, capsize = 7, mew = 2, label = "2 std dev Bootstrap")
@@ -42,4 +44,8 @@ plt.legend()
 plt.xticks(t, c.stns, size = 12)
 plt.grid(True)
 
+
+#####
+# Show corrlation between H and Vp. Maybe better.
+#####
 plt.show()

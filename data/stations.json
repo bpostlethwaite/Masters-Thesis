@@ -502,7 +502,12 @@
   "ANMB": {
     "badCompEvents": 0, 
     "geoprov": "Cordilleran Orogen", 
-    "hk": "{}", 
+    "hk": {
+      "H": 43.09045226130653, 
+      "R": 1.8188442211055276, 
+      "stdH": 7.037810354244302e-13, 
+      "stdR": 3.021282222781645e-14
+    }, 
     "lat": 49.31868, 
     "lon": -122.85853, 
     "mb": {}, 
@@ -714,14 +719,23 @@
   "B2NU": {
     "badCompEvents": 0, 
     "geoprov": "Churchill Province", 
+    "hk": {
+      "H": 42.462311557788944, 
+      "R": 1.7103015075376884, 
+      "stdH": 0.5361931077752703, 
+      "stdR": 0.016690435400140143
+    }, 
     "lat": 68.9216, 
     "lon": -73.1966, 
+    "mb": {}, 
     "network": "CHASME", 
     "numEvents": 16, 
     "poorEvents": 8, 
+    "processnotes": "", 
     "start": 20000724.1502, 
-    "status": "data corruption", 
+    "status": "processed-ok", 
     "stop": "20001223.0000", 
+    "usable": 1, 
     "usableEvents": 8, 
     "wm": {
       "H": 37.0, 
@@ -1631,15 +1645,24 @@
   "CLVB": {
     "badCompEvents": 0, 
     "geoprov": "Cordilleran Orogen", 
+    "hk": {
+      "H": 35.175879396984925, 
+      "R": 1.6711055276381908, 
+      "stdH": 4.318477364385852, 
+      "stdR": 0.09847705345024656
+    }, 
     "lat": 49.38167, 
     "lon": -123.14468, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 137, 
-    "poorEvents": 0, 
+    "poorEvents": 42, 
+    "processnotes": "", 
     "start": 20021117.18, 
-    "status": "aquired", 
+    "status": "processed-notok", 
     "stop": "20050804.1519", 
-    "usableEvents": 119, 
+    "usable": 1, 
+    "usableEvents": 77, 
     "wm": {
       "H": 34.0, 
       "R": 1.7712435932020503, 
@@ -3382,14 +3405,23 @@
   "GFNU": {
     "badCompEvents": 0, 
     "geoprov": "Churchill Province", 
+    "hk": {
+      "H": 36.93467336683417, 
+      "R": 1.7374371859296482, 
+      "stdH": 2.8726591597221227, 
+      "stdR": 0.09456919626138544
+    }, 
     "lat": 76.418, 
     "lon": -82.8998, 
+    "mb": {}, 
     "network": "CHASME", 
     "numEvents": 21, 
     "poorEvents": 9, 
+    "processnotes": "", 
     "start": 20000901.2107, 
-    "status": "data corruption", 
+    "status": "processed-notok", 
     "stop": "20010628.1317", 
+    "usable": 1, 
     "usableEvents": 12, 
     "wm": {
       "H": 37.0, 
@@ -4048,14 +4080,23 @@
   "IGLN": {
     "badCompEvents": 0, 
     "geoprov": "Arctic Platform", 
+    "hk": {
+      "H": 37.311557788944725, 
+      "R": 1.7389447236180904, 
+      "stdH": 1.3663454380163709, 
+      "stdR": 0.026581611913686447
+    }, 
     "lat": 69.369, 
     "lon": -81.8175, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 35, 
     "poorEvents": 11, 
+    "processnotes": "", 
     "start": 20040902.2108, 
-    "status": "data corruption", 
+    "status": "processed-ok", 
     "stop": "20050822.2016", 
+    "usable": 1, 
     "usableEvents": 13, 
     "wm": {
       "H": 37.0, 
@@ -4810,14 +4851,23 @@
   "KRSQ": {
     "badCompEvents": 0, 
     "geoprov": "Churchill Province", 
+    "hk": {
+      "H": 43.21608040201005, 
+      "R": 1.7962311557788944, 
+      "stdH": 8.44053993935002, 
+      "stdR": 0.08820781298030415
+    }, 
     "lat": 60.02204, 
     "lon": -69.99115, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 30, 
     "poorEvents": 21, 
+    "processnotes": "", 
     "start": 20110807.0, 
-    "status": "data corruption", 
+    "status": "processed-notok", 
     "stop": 0, 
+    "usable": 1, 
     "usableEvents": 8, 
     "wm": {
       "H": 39.0, 
@@ -6223,14 +6273,23 @@
   "NANL": {
     "badCompEvents": 0, 
     "geoprov": "Churchill Province", 
+    "hk": {
+      "H": 27.63819095477387, 
+      "R": 1.95, 
+      "stdH": 2.863014253881909, 
+      "stdR": 0.09271263153856445
+    }, 
     "lat": 56.5113, 
     "lon": -61.7299, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 13, 
     "poorEvents": 2, 
+    "processnotes": "", 
     "start": 20110724.0, 
-    "status": "data corruption", 
+    "status": "processed-notok", 
     "stop": 0, 
+    "usable": 1, 
     "usableEvents": 11, 
     "wm": {
       "H": 32.0, 
@@ -7543,7 +7602,7 @@
     "numEvents": 11, 
     "poorEvents": 0, 
     "start": 20040613.17, 
-    "status": "data corruption", 
+    "status": "aquired", 
     "stop": "20041119.0000", 
     "usableEvents": 11, 
     "wm": {
@@ -8258,7 +8317,7 @@
     "numEvents": 11, 
     "poorEvents": 0, 
     "start": 20110317.19, 
-    "status": "data corruption", 
+    "status": "aquired", 
     "stop": 0, 
     "usableEvents": 10, 
     "wm": {
@@ -9077,14 +9136,23 @@
   }, 
   "UPNG": {
     "badCompEvents": 0, 
+    "hk": {
+      "H": 30.276381909547737, 
+      "R": 1.8836683417085427, 
+      "stdH": 2.81187494409518, 
+      "stdR": 0.07013773640212462
+    }, 
     "lat": 72.7848, 
     "lon": -56.1408, 
+    "mb": {}, 
     "network": "CHASME", 
     "numEvents": 15, 
     "poorEvents": 7, 
+    "processnotes": "", 
     "start": 20000719.2238, 
-    "status": "data corruption", 
+    "status": "processed-notok", 
     "stop": "20001127.0719", 
+    "usable": 1, 
     "usableEvents": 8, 
     "wm": {
       "H": 37.0, 
@@ -9411,14 +9479,23 @@
   "WBHL": {
     "badCompEvents": 1, 
     "geoprov": "Grenville Province", 
+    "hk": {
+      "H": 48.99497487437186, 
+      "R": 1.8384422110552763, 
+      "stdH": 8.593512893077724, 
+      "stdR": 0.09186847948503007
+    }, 
     "lat": 52.90296, 
     "lon": -66.86634, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 30, 
     "poorEvents": 22, 
+    "processnotes": "", 
     "start": 20110718.0, 
-    "status": "data corruption", 
+    "status": "processed-notok", 
     "stop": 0, 
+    "usable": 1, 
     "usableEvents": 7, 
     "wm": {
       "H": 40.0, 

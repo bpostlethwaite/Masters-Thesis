@@ -3,12 +3,12 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
 npb = 2; % Average number of traces per bin
-discardBad = 1; % Discard traces that do not find minimum during decon
+discardBad = 0; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
-snrlim = 3.0;
+snrlim = 0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -25,8 +25,8 @@ cluster = 1;
 clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
-numbin = round((1/npb) * size(ptrace, 1));
-%numbin = 40;
+%numbin = round((1/npb) * size(ptrace, 1));
+numbin = 40;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);

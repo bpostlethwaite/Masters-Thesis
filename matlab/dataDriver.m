@@ -17,41 +17,10 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'SEDN';
+station = 'WBHL';
 
 %{
 controlled source proximity
-ALE *
-ALGO *
-ARVN *
-BANO *
-CBRQ *
-DAWY *
-DELO *
-FCC *
-FFC *
-HAL *
-KGNO *
-KSVO *
-LMN *
-MBC *
-MNT *
-MOBC *
-ORIO *
-PEMO
-PGC
-PLVO
-PMB
-PTCO
-SJNN
-SUNO
-ULM *
-ULM2
-WAPA *
-WHY *
-WSLR *
-YKW1
-YOSQ
 
 
 nine best stations
