@@ -11,17 +11,14 @@ json = loadjson('../data/stations.json');
 
 %%  Select Station to Process and load station data
 method = 'kanamori';
-%s = fieldnames(json);
-logfile = fopen('logfile','w');
+s = fieldnames(json);
+%logfile = fopen('logfile','w');
 
-s = {
-    'RSPO'
-    };
 
 for ii = 1 : length(s)
 
     station = s{ii};
-%   try
+   try
         % Get rid of . and .. names
         if length(s{ii}) < 3
             fprinf('skipping %s\n', station)
@@ -70,9 +67,9 @@ for ii = 1 : length(s)
 %                dbold.hk.stdR - db.hk.stdR);
 %        end    
         
-%   catch ME
+   catch ME
    %     fprintf(logfile, '%s - fail\n',station);
-%         fprintf('%s %s\n', station, ME.message)
-%         continue
-   %end
+         fprintf('%s %s\n', station, ME.message)
+         continue
+   end
 end

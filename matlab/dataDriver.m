@@ -16,26 +16,34 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'bostock';
-station = 'MEDO';
+method = 'kanamori';
+station = 'SEDN';
 
 %{
 controlled source proximity
+ALE *
+ALGO *
 ARVN *
 BANO *
 CBRQ *
+DAWY *
 DELO *
 FCC *
+FFC *
 HAL *
-INUQ *
+KGNO *
+KSVO *
 LMN *
-MANN *** Investigate why mcode isn't nearby
-MEDO *** Investigate why mcode isn't nearby
-MNT
+MBC *
+MNT *
+MOBC *
 ORIO *
 PEMO
+PGC
 PLVO
+PMB
 PTCO
+SJNN
 SUNO
 ULM *
 ULM2
@@ -44,6 +52,7 @@ WHY *
 WSLR *
 YKW1
 YOSQ
+
 
 nine best stations
 BULN 
@@ -62,7 +71,6 @@ clear db dbold
 if exist(dbfile, 'file')
     load(dbfile)
     dbold = db;
-    display(dbold.processnotes)
 else
     db = struct();
 end
@@ -113,8 +121,8 @@ if strcmp(method, 'kanamori')
 end
 
 %% Enter Finishing commands:
-notes = input('Enter Processing Notes: ', 's');
-db.processnotes = notes;
+%notes = input('Enter Processing Notes: ', 's');
+%db.processnotes = notes;
 % Enter use / ignore flag
 db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
 %db.usable = 1;

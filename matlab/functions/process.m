@@ -8,8 +8,8 @@ discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 2.4; % Upper frequency cutoff
-snrlim = 0.3;
+fHigh = 3.0; % Upper frequency cutoff
+snrlim = 3.0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -84,7 +84,7 @@ brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 if snrlim > 0
     snr = zeros(size(brec,1), 1);
     for ii = 1:size(brec,1)
-        v = detrend(brec(ii, round(1/dt):round(45/dt)));
+        v = detrend(brec(ii, round(2.5/dt):round(45/dt)));
         delta = 0.1 * max(abs(v));
         [maxtab, mintab] = peakdet(v, delta);
         [~,I] = sort(maxtab(:,2),'descend');
@@ -92,10 +92,19 @@ if snrlim > 0
         [~ ,I] = sort(mintab(:,2),'ascend');
         peakmin = mintab(I,:);
         bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
-        noisepeak = (norm(peakmax(3:end,2)) + norm(peakmin(2 : end, 2))) / 2 ;
+        noisepeak = mean(peakmax(3:end,2)) ;
         snr(ii) = bigpeak / noisepeak;
+%{        
+         plot(v);
+         hold on
+         plot(peakmax(:,1), peakmax(:,2), 'ro')
+         plot(peakmin(:,1), peakmin(:,2), 'mo')
+         title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
+         hold off
+         pause()   
+%}
     end
-    
+    %brec = diag(snr) * brec;
     ind = snr < snrlim;
     brec( ind  , : ) = [];
     pslow( ind ) = [];

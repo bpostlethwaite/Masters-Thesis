@@ -70,8 +70,6 @@ stdR = stdR[~ind]
 stdRsnyd = stdRsnyd[~ind]
 stns = stns[~ind]
 
-print np.mean(R), np.mean(Rsnyd)
-print len(Rchili), len(Rjapan), len(R)
 
 t = np.arange(len(R))
 plt.plot(t, R, '-ob', lw = 4, ms = 12, label = "Vp/Vs estimate -  current data set")

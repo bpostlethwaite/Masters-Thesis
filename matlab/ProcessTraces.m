@@ -1,15 +1,14 @@
 %ProcessTraces
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
-
 %% Main Control
 npb = 2; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 3; % Upper frequency cutoff
-snrlim = 0.30;
+fHigh = 3.0; % Upper frequency cutoff
+snrlim = 3.0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -27,7 +26,7 @@ clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
 numbin = round((1/npb) * size(ptrace, 1));
-%numbin = 50;
+%numbin = 40;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
@@ -99,22 +98,24 @@ if snrlim > 0
         [~ ,I] = sort(mintab(:,2),'ascend');
         peakmin = mintab(I,:);
         bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
-        noisepeak = (norm(peakmax(3:end,2)) + norm(peakmin(2 : end, 2))) / 2 ;
+        noisepeak = mean(peakmax(3:end,2)) ;
         snr(ii) = bigpeak / noisepeak;
-        
-%         plot(v);
-%         hold on
-%         plot(peakmax(:,1), peakmax(:,2), 'ro')
-%         plot(peakmin(:,1), peakmin(:,2), 'ro')
-%         title(sprintf('delta %1.3f SNR = %1.3f', delta, snr))
-%         hold off
+%{        
+         plot(v);
+         hold on
+         plot(peakmax(:,1), peakmax(:,2), 'ro')
+         plot(peakmin(:,1), peakmin(:,2), 'mo')
+         title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
+         hold off
+         pause()   
+%}
     end
-    
+    %brec = diag(snr) * brec;
     ind = snr < snrlim;
     brec( ind  , : ) = [];
     pslow( ind ) = [];
 end
-clear maxtab mintab delta v bigpeak noisepeak
+clear maxtab mintab delta v bigpeak noisepeak peakmin peakmax
 %% Run Processing suite
 vp = json.(station).wm.Vp;
 % Load Mooney Crust 2.0 database Vp estimate

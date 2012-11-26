@@ -61,11 +61,11 @@ parfor iv=1:nv
      tpps=(f1+f2)./(f1-f2).*tps;
      tpss=2*f1./(f1-f2).*tps;
      stpps(iv,ir) = mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
-     stpss(iv,ir) = -mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
+     stpss(iv,ir) = mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
   end
 end
 %stackvr=(stpps+stpss)/2;
-stackvr=(adjtpps*stpps + adjtpss*stpss);
+stackvr=(adjtpps*stpps - adjtpss*stpss);
 % Find max values indices
 smax=max(max(stackvr));
 [iv,ir]=find(stackvr == smax);
@@ -73,21 +73,20 @@ vbest=v(iv);
 rbest=r(ir);
 
 %% Line search for H.
-
 f1 = sqrt((rbest/vbest)^2-p2);
 f2 = sqrt((1/vbest)^2-p2);
 for ih=1:nh
   tps=h(ih)*(f1-f2);
   tpps=h(ih)*(f1+f2);
   tpss=h(ih)*2*f1;
-  htps(ih)=mean(gvr(round(tps/dt)+1+[0:np-1]*nt));
-  htpps(ih)=mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
-  htpss(ih)=-mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
+  htps(ih) = mean(gvr(round(tps/dt)+1+[0:np-1]*nt));
+  htpps(ih) = mean(gvr(round(tpps/dt)+1+[0:np-1]*nt));
+  htpss(ih) = mean(gvr(round(tpss/dt)+1+[0:np-1]*nt));
 end
 
 % Find max values indices
 %stackh=(htps+htpps+htpss)/3;
-stackh = (0.5*htps + 0.3*htpps + 0.2*htpss);
+stackh = (0.5*htps + 0.3*htpps - 0.2*htpss);
 [hmax,ih]=max(stackh);
 hbest=h(ih);
 

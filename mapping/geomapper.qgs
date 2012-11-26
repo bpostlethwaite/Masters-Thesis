@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-184.603731</xmin>
-            <ymin>29.166797</ymin>
-            <xmax>-55.101976</xmax>
-            <ymax>108.721104</ymax>
+            <xmin>-140.062520</xmin>
+            <ymin>48.172636</ymin>
+            <xmax>-123.874800</xmax>
+            <ymax>58.116924</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -3798,47 +3798,24 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="RuleRenderer">
-                <rules>
-                    <rule filter=" &quot;m2Vp&quot;  &lt; 6.287 OR  &quot;m2Vp&quot;  > 6.528  OR (&quot;m2Vp&quot;  > 6.317 AND  &quot;m2Vp&quot;  &lt; 6.497)" symbol="0" label="Outside Ranges"/>
-                    <rule filter=" &quot;m2Vp&quot;  >= 6.497 AND  &quot;m2Vp&quot;  &lt;= 6.528" symbol="1" label="Upper Peak"/>
-                    <rule filter=" &quot;m2Vp&quot;  >= 6.287 AND  &quot;m2Vp&quot;  &lt;= 6.317" symbol="2" label="Lower Peak"/>
-                </rules>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="0" type="marker" name="0">
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="8,1,134,255"/>
+                            <prop k="color" v="255,255,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="star"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="3"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="1">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="0,0,255,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="star"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="3"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="2">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="255,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="star"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="3"/>
+                            <prop k="size" v="2"/>
                         </layer>
                     </symbol>
                 </symbols>
+                <rotation field=""/>
+                <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield>mcode</displayfield>
+            <displayfield>SYMBOL</displayfield>
             <label>0</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
@@ -3891,7 +3868,7 @@
                 <edittype type="0" name="mcode"/>
                 <edittype type="0" name="mcode_2"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
             <attributeactions/>
@@ -4416,7 +4393,7 @@
                 <edittype type="0" name="wm::R"/>
                 <edittype type="0" name="wm::Vp"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
             <attributeactions/>
