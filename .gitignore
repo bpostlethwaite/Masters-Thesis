@@ -3,6 +3,7 @@
 rfmodel/*
 shellscripts/rdseedv5.2/*
 shellscripts/get_tt
+figures/*
 
 # Matlab
 ###################
