@@ -16,8 +16,8 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'kanamori';
-station = 'WBHL';
+method = 'bostock';
+station = 'FFC';
 
 %{
 controlled source proximity

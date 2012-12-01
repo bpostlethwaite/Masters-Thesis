@@ -14,6 +14,8 @@
 import json, os, math
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import pearsonr, spearmanr
+
 
 dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
 stdict = json.loads( open(dbfile).read() )
@@ -38,7 +40,7 @@ Rchili = []
 Rjapan = []
 stns = []
 for stn in snyd.keys():
-    if "hk" in stdict[stn]:
+    if ("hk" in stdict[stn]) and ("c0R" in stdict[stn]["hk"]):
         stns.append(stn)
         Rsnyd.append(float(snyd[stn]['R']))
         R.append(float(stdict[stn]["hk"]["R"]))
@@ -51,7 +53,6 @@ for stn in snyd.keys():
 
 #    if (math.fabs(diff) > float(stdict[stn]["hk"]["stdR"])):
 #        print stn, float(snyd[stn]['R']), float(stdict[stn]["hk"]["R"]), diff > float(snyd[stn]['stdR']) , diff > float(stdict[stn]["hk"]["stdR"])
-
 
 R = np.array(R)
 Rsnyd = np.array(Rsnyd)
@@ -70,6 +71,8 @@ stdR = stdR[~ind]
 stdRsnyd = stdRsnyd[~ind]
 stns = stns[~ind]
 
+corr = pearsonr(R, Rsnyd)
+print corr
 
 t = np.arange(len(R))
 plt.plot(t, R, '-ob', lw = 4, ms = 12, label = "Vp/Vs estimate -  current data set")
@@ -81,9 +84,9 @@ plt.errorbar(t, R, yerr=stdR, xerr=None, fmt=None, ecolor = 'blue',
 plt.errorbar(t, Rsnyd, yerr=stdRsnyd, xerr=None, fmt=None, ecolor = 'green',
              elinewidth = 2, capsize = 7, mew = 2, label = "1 std error Eaton et. al. 2006")
 plt.legend()
-plt.title("Comparison for given Can. Shield Stations\n" +
-          "between Thompson, Helffrich, Snyder, Eaton et al (2010) and our Current Data.\n" +
-          "Including source region filtered estimates",
+plt.title("Comparison for given Canadian Shield Stations - " +
+          "Thompson et al (2010) data.\n" +
+          "Correlation: {0:2.3f}".format(corr[0]),
           size = 18)
 plt.xticks(t,stns, size = 12)
 plt.ylabel('Vp/Vs', size = 16)

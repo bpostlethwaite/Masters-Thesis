@@ -1,9 +1,7 @@
 var f = require('findit')
-var ncp = require('ncp').ncp
+var fs = require('fs')
 var path = require('path')
-
-ncp.limit = 16
-
+var rmdir = require('rimraf')
 
 var stations = ["DPQ","GAC","YKW3","OTT"]
 var stn = "DPQ"
@@ -16,18 +14,22 @@ finder.on('directory', function (dir, stat) {
 
   var head = path.dirname(dir)
   var tail = path.basename(dir)
-  tail = tail.slice(0,9)
-  if (tail.length > 10) {
-    console.log(tail + '/')
-    ncp(dir, path.join(head, tail), function (err) {
-      if (err) {
-        return console.error(err)
-      }
+  if (tail.length === 9) {
+    rmdir(dir, function (err) {
+      if (err) throw err
     })
-    console.log('Done!')
+    return
+  }
+  if (tail.length > 10) {
+    tail = tail.slice(0,10)
+    fs.rename(dir, path.join(head, tail), function (err) {
+      console.log(dir)
+      if (err) throw err
+    })
   }
 })
 
-finder.on('file', function (file, stat) {
 
+finder.on('file', function (file, stat) {
+  console.log(file)
 })

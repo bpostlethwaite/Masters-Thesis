@@ -3,7 +3,7 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
 npb = 2; % Average number of traces per bin
-discardBad = 0; % Discard traces that do not find minimum during decon
+discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
@@ -39,9 +39,9 @@ printwdiag = 0;
 dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
-wdiag = 1 * normtrace( ptrace, strace, header, dt , printwdiag);
-ptrace = wdiag * ptrace;
-strace = wdiag * strace;
+%wdiag = 1 * normtrace( ptrace, strace, header, dt , printwdiag);
+%ptrace = wdiag * ptrace;
+%strace = wdiag * strace;
 
 clear printwdiag
 %% Setup parallel toolbox
@@ -117,6 +117,7 @@ if snrlim > 0
 end
 clear maxtab mintab delta v bigpeak noisepeak peakmin peakmax
 %% Run Processing suite
+
 vp = json.(station).wm.Vp;
 % Load Mooney Crust 2.0 database Vp estimate
 % from stations.json database

@@ -13,14 +13,16 @@ json = loadjson('../data/stations.json');
 method = 'kanamori';
 s = fieldnames(json);
 %logfile = fopen('logfile','w');
-
+s = {
+    'B2NU'
+    };
 
 for ii = 1 : length(s)
 
     station = s{ii};
    try
         % Get rid of . and .. names
-        if length(s{ii}) < 3
+        if length(station) < 3
             fprinf('skipping %s\n', station)
             continue
         end
