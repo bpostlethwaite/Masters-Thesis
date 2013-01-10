@@ -19,7 +19,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="1">
@@ -29,7 +29,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="2">
@@ -39,7 +39,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="3">
@@ -49,7 +49,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="4">
@@ -59,7 +59,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="5">
@@ -69,7 +69,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
       <symbol outputUnit="MM" alpha="1" type="marker" name="6">
@@ -79,7 +79,7 @@
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="3"/>
         </layer>
       </symbol>
     </symbols>
@@ -105,9 +105,8 @@
   <customproperties/>
   <displayfield>network</displayfield>
   <label>1</label>
-  <labelfield>Vp</labelfield>
   <labelattributes>
-    <label fieldname="Vp" text="Label"/>
+    <label fieldname="" text="Label"/>
     <family fieldname="" name="Ubuntu"/>
     <size fieldname="" units="pt" value="12"/>
     <bold fieldname="" on="0"/>
@@ -130,14 +129,20 @@
     <edittype type="0" name="H"/>
     <edittype type="0" name="R"/>
     <edittype type="0" name="Vp"/>
+    <edittype type="0" name="hk::H"/>
+    <edittype type="0" name="hk::R"/>
+    <edittype type="0" name="hk::stdH"/>
+    <edittype type="0" name="hk::stdR"/>
     <edittype type="0" name="network"/>
     <edittype type="0" name="station"/>
     <edittype type="0" name="status"/>
     <edittype type="0" name="stdH"/>
     <edittype type="0" name="stdR"/>
     <edittype type="0" name="stdVp"/>
+    <edittype type="0" name="wm::R"/>
+    <edittype type="0" name="wm::Vp"/>
   </edittypes>
-  <editform></editform>
+  <editform>.</editform>
   <editforminit></editforminit>
   <annotationform>.</annotationform>
   <attributeactions/>

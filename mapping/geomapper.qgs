@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-143.022258</xmin>
-            <ymin>18.820277</ymin>
-            <xmax>-21.526370</xmax>
-            <ymax>93.456495</ymax>
+            <xmin>-119.707824</xmin>
+            <ymin>59.513392</ymin>
+            <xmax>-109.094192</xmax>
+            <ymax>66.077700</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -59,14 +59,14 @@
                 <legendlayerfile isInOverview="0" layerid="VoronoiTest20121111132921846" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="9" open="false" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="9" open="false" checked="Qt::Unchecked" name="geologicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="10" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="0"/>
+        <legendlayer drawingOrder="10" open="true" checked="Qt::Checked" name="bedrockGeology" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="1"/>
             </filegroup>
         </legendlayer>
     </legend>
@@ -1011,9 +1011,9 @@
         </ComposerLegend>
         <Composition printResolution="300" paperWidth="297" snapGridOffsetX="3" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="210" printAsRaster="0"/>
     </Composer>
-    <Composer title="Composer 10" visible="1">
+    <Composer title="Composer 10" visible="0">
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="40.91" xmin="-141.653" ymax="84.464" xmax="-48.7308"/>
+            <Extent ymin="40.91" xmin="-141.653" ymax="84.4641" xmax="-48.7308"/>
             <LayerSet/>
             <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
                 <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
@@ -3608,7 +3608,7 @@
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="star"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="6"/>
+                            <prop k="size" v="3"/>
                         </layer>
                     </symbol>
                 </symbols>
@@ -3834,22 +3834,106 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="RuleRenderer">
-                <rules>
-                    <rule filter=" &quot;status&quot;  = 'processed-ok'" symbol="0" label="Processed Seismic Stations"/>
-                </rules>
+            <renderer-v2 attr="status" symbollevels="0" type="categorizedSymbol">
+                <categories>
+                    <category symbol="0" value="bad station" label="bad station"/>
+                    <category symbol="1" value="data corruption" label="data corruption"/>
+                    <category symbol="2" value="not aquired" label="not aquired"/>
+                    <category symbol="3" value="processed-notok" label="processed-notok"/>
+                    <category symbol="4" value="processed-ok" label="processed-ok"/>
+                    <category symbol="5" value="aquired" label="aquired"/>
+                    <category symbol="6" value="picked" label="picked"/>
+                </categories>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="0,229,0,255"/>
+                            <prop k="color" v="228,26,28,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="10"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="1">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="170,0,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="2">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="3">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="255,127,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="4">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="0,255,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="5">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="85,0,127,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="6">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="170,85,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="3"/>
                         </layer>
                     </symbol>
                 </symbols>
+                <source-symbol>
+                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="170,255,255,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="size" v="2"/>
+                        </layer>
+                    </symbol>
+                </source-symbol>
+                <colorramp type="colorbrewer" name="[source]">
+                    <prop k="colors" v="7"/>
+                    <prop k="schemeName" v="Set1"/>
+                </colorramp>
+                <rotation field=""/>
+                <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
             <displayfield>network</displayfield>
