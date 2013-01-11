@@ -1,0 +1,3432 @@
+{
+  "_0007201839": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0007210153": [
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0007301225": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0008090008": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0008091141": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0009111717": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0009120027": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0010060430": [
+    "YKW1", 
+    "YKW4"
+  ], 
+  "_0010270421": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0012061711": [
+    "YKW1", 
+    "YKW4"
+  ], 
+  "_0012062257": [
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0012210101": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0101091649": [
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0102131422": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0102250221": [
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0103240627": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0104142327": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0104192058": [
+    "YKW1", 
+    "YKW4"
+  ], 
+  "_0105200421": [
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0105292337": [
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0107031310": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0107051353": [
+    "YKW1", 
+    "YKW4"
+  ], 
+  "_0107081754": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0107240500": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0107260021": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0108022341": [
+    "YKW1", 
+    "YKW4"
+  ], 
+  "_0108132011": [
+    "YKW1", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0110092353": [
+    "YKW1", 
+    "EKTN", 
+    "YKW2", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0111140926": [
+    "EKTN", 
+    "ACKN"
+  ], 
+  "_0112021301": [
+    "EKTN", 
+    "ACKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0112180403": [
+    "EKTN", 
+    "YKW2"
+  ], 
+  "_0112232252": [
+    "YKW2", 
+    "YKW5"
+  ], 
+  "_0201162310": [
+    "EKTN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0201220453": [
+    "YKW1", 
+    "EKTN", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0201281350": [
+    "YKW1", 
+    "EKTN", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0202012155": [
+    "YKW1", 
+    "EKTN", 
+    "YKW2", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0202280150": [
+    "YKW1", 
+    "YMBN", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4"
+  ], 
+  "_0203251456": [
+    "EKTN", 
+    "ACKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0203260345": [
+    "EKTN", 
+    "ACKN", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0203280456": [
+    "EKTN", 
+    "YKW2", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0203310652": [
+    "EKTN", 
+    "ACKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0204112156": [
+    "YKW2", 
+    "YKW5"
+  ], 
+  "_0204180502": [
+    "EKTN", 
+    "ACKN", 
+    "YKW5"
+  ], 
+  "_0204260715": [
+    "EKTN", 
+    "ACKN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0204261606": [
+    "EKTN", 
+    "ACKN", 
+    "YKW5"
+  ], 
+  "_0205281645": [
+    "EKTN", 
+    "ACKN", 
+    "YKW2", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0206062353": [
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0206102248": [
+    "YKW2", 
+    "EKTN", 
+    "ACKN", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0206160246": [
+    "EKTN", 
+    "YKW5"
+  ], 
+  "_0206220258": [
+    "EKTN", 
+    "ACKN", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0206281719": [
+    "YKW1", 
+    "EKTN", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0207310016": [
+    "YKW5", 
+    "EKTN", 
+    "LGSN", 
+    "COWN", 
+    "YMBN"
+  ], 
+  "_0208141312": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "SNPN", 
+    "KNDN", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0208141357": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "SNPN", 
+    "KNDN", 
+    "YNEN", 
+    "CAMN", 
+    "IHLN", 
+    "YKW5", 
+    "LDGN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0210122009": [
+    "YKW1", 
+    "BOXN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0210161012": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "YKW1", 
+    "KNDN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0211030337": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "KNDN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0211071514": [
+    "BOXN", 
+    "CAMN", 
+    "NODN"
+  ], 
+  "_0211170453": [
+    "EKTN", 
+    "LGSN", 
+    "COWN"
+  ], 
+  "_0211202132": [
+    "SNPN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "IHLN", 
+    "YMBN", 
+    "DVKN"
+  ], 
+  "_0301270526": [
+    "NODN", 
+    "CAMN"
+  ], 
+  "_0302151101": [
+    "MLON", 
+    "YKW5", 
+    "CAMN"
+  ], 
+  "_0302240203": [
+    "MLON", 
+    "BOXN", 
+    "LGSN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN"
+  ], 
+  "_0303122341": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "SNPN"
+  ], 
+  "_0303171636": [
+    "YKW2", 
+    "DVKN", 
+    "MGTN", 
+    "CAMN"
+  ], 
+  "_0304170048": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "MCKN", 
+    "DVKN"
+  ], 
+  "_0304291353": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "SNPN", 
+    "YKW4", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "MCKN", 
+    "DVKN"
+  ], 
+  "_0305010027": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "SNPN", 
+    "YKW4", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "MCKN", 
+    "DVKN"
+  ], 
+  "_0305030503": [
+    "MLON", 
+    "IHLN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "YMBN", 
+    "MCKN", 
+    "DVKN"
+  ], 
+  "_0305140603": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "SNPN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "YMBN", 
+    "DVKN"
+  ], 
+  "_0305211844": [
+    "MLON", 
+    "BOXN", 
+    "CAMN", 
+    "MGTN"
+  ], 
+  "_0305260924": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "DVKN"
+  ], 
+  "_0306070032": [
+    "MLON", 
+    "SNPN", 
+    "BOXN", 
+    "COWN", 
+    "YKW4", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "YMBN", 
+    "DVKN"
+  ], 
+  "_0306120859": [
+    "MLON", 
+    "COWN", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "YMBN"
+  ], 
+  "_0306151924": [
+    "BOXN", 
+    "COWN", 
+    "DVKN", 
+    "YKW5", 
+    "CAMN", 
+    "SNPN"
+  ], 
+  "_0306162208": [
+    "MLON", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW4", 
+    "YKW1", 
+    "YKW5", 
+    "SNPN", 
+    "MGTN", 
+    "YMBN", 
+    "DVKN"
+  ], 
+  "_0306200619": [
+    "LGSN", 
+    "COWN", 
+    "YKW1", 
+    "YKW5", 
+    "CAMN", 
+    "YMBN"
+  ], 
+  "_0306231212": [
+    "LGSN", 
+    "DVKN"
+  ], 
+  "_0307250937": [
+    "MLON", 
+    "SNPN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW2", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "KNDN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "LDGN", 
+    "IHLN", 
+    "YMBN", 
+    "MCKN", 
+    "DSMN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0307252213": [
+    "EKTN", 
+    "BOXN", 
+    "DVKN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "MLON", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "SNPN", 
+    "DSMN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN", 
+    "IHLN"
+  ], 
+  "_0307270625": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "ACKN", 
+    "YKW1", 
+    "YNEN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN"
+  ], 
+  "_0308140514": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "YKW2", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "KNDN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "DSMN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0309021828": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW2", 
+    "ACKN", 
+    "KNDN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "DSMN", 
+    "LDGN"
+  ], 
+  "_0309172134": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "YKW2", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "KNDN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN", 
+    "DSMN", 
+    "MCKN"
+  ], 
+  "_0309220445": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "NODN", 
+    "YKW4", 
+    "KNDN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "LDGN", 
+    "DSMN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0309271133": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "YKW2", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "DSMN", 
+    "LDGN", 
+    "MCKN"
+  ], 
+  "_0309271852": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "KNDN", 
+    "YKW2", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "DSMN", 
+    "YKW4"
+  ], 
+  "_0309290236": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "DSMN", 
+    "MCKN", 
+    "LDGN"
+  ], 
+  "_0310010103": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0310070455": [
+    "MLON", 
+    "ILKN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW1", 
+    "GBLN", 
+    "CAMN", 
+    "DSMN", 
+    "IHLN"
+  ], 
+  "_0310080906": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "LUPN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "YKW4", 
+    "GBLN", 
+    "YKW5", 
+    "CAMN", 
+    "LDGN", 
+    "IHLN", 
+    "DSMN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0310110111": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "LDGN"
+  ], 
+  "_0310171019": [
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "SNPN"
+  ], 
+  "_0310282148": [
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0310310106": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW2", 
+    "ACKN", 
+    "NODN", 
+    "LUPN", 
+    "SNPN", 
+    "MGTN", 
+    "IHLN", 
+    "DSMN", 
+    "LDGN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0311120826": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0311170643": [
+    "GBLN", 
+    "EKTN", 
+    "ACKN", 
+    "SNPN", 
+    "IHLN"
+  ], 
+  "_0311181714": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "YKW1", 
+    "KNDN", 
+    "YKW2", 
+    "YKW5", 
+    "IHLN", 
+    "DSMN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0312052126": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "ACKN", 
+    "NODN", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "LDGN", 
+    "SNPN"
+  ], 
+  "_0312100438": [
+    "MLON", 
+    "ILKN", 
+    "ACKN", 
+    "KNDN", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "YKW5", 
+    "IHLN"
+  ], 
+  "_0312250711": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "DVKN", 
+    "YKW2", 
+    "YKW4", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "DSMN", 
+    "SNPN"
+  ], 
+  "_0312260156": [
+    "MLON", 
+    "EKTN", 
+    "LUPN", 
+    "DVKN", 
+    "GBLN", 
+    "YKW4", 
+    "IHLN"
+  ], 
+  "_0312290130": [
+    "SNPN", 
+    "LUPN", 
+    "DVKN", 
+    "YKW5", 
+    "IHLN", 
+    "YKW4"
+  ], 
+  "_0401251143": [
+    "MLON", 
+    "IHLN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN"
+  ], 
+  "_0402240227": [
+    "BOXN", 
+    "DVKN", 
+    "GBLN", 
+    "LUPN", 
+    "GLWN", 
+    "MLON", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "SNPN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "IHLN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0403271847": [
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "YKW5", 
+    "CAMN", 
+    "IHLN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0404052124": [
+    "MLON", 
+    "ILKN", 
+    "SNPN", 
+    "LUPN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "LDGN", 
+    "IHLN", 
+    "YMBN", 
+    "MCKN", 
+    "DSMN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0404140154": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "YKW2", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "CAMN", 
+    "IHLN", 
+    "DSMN", 
+    "LDGN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0404290057": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "IHLN", 
+    "YMBN", 
+    "DSMN", 
+    "DVKN"
+  ], 
+  "_0405130958": [
+    "ILKN", 
+    "DSMN", 
+    "YKW5", 
+    "YKW4", 
+    "IHLN"
+  ], 
+  "_0405190704": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "YKW1", 
+    "KNDN", 
+    "LUPN", 
+    "YKW5", 
+    "YKW4", 
+    "YKW2"
+  ], 
+  "_0405281238": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0405292056": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "KNDN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "DSMN", 
+    "MCKN"
+  ], 
+  "_0406101519": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "IHLN", 
+    "DSMN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0407112308": [
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "YKW5", 
+    "CAMN", 
+    "DSMN", 
+    "MCKN"
+  ], 
+  "_0407112346": [
+    "EKTN", 
+    "COWN", 
+    "GBLN", 
+    "SNPN", 
+    "IHLN", 
+    "DSMN", 
+    "GLWN", 
+    "LDGN"
+  ], 
+  "_0407220945": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0409051007": [
+    "BOXN", 
+    "YKW5", 
+    "COWN", 
+    "MGTN", 
+    "CAMN"
+  ], 
+  "_0409062329": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "DSMN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "SNPN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0409081458": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "MCKN", 
+    "NODN", 
+    "KNDN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0409130300": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "YKW2", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "YKW4", 
+    "KNDN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0409151910": [
+    "MLON", 
+    "ILKN", 
+    "LUPN", 
+    "ACKN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "DSMN", 
+    "YKW4"
+  ], 
+  "_0410081436": [
+    "MLON", 
+    "ILKN", 
+    "SNPN", 
+    "LUPN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "GBLN", 
+    "YKW5", 
+    "CAMN", 
+    "LDGN", 
+    "DVKN"
+  ], 
+  "_0410092126": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "GBLN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "LDGN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0410150408": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0410230855": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "IHLN", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0410230903": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "NODN", 
+    "GBLN", 
+    "SNPN", 
+    "MGTN", 
+    "DVKN"
+  ], 
+  "_0410230934": [
+    "EKTN", 
+    "ACKN", 
+    "COWN"
+  ], 
+  "_0411092358": [
+    "ILKN", 
+    "IHLN", 
+    "LUPN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "YKW5", 
+    "YMBN", 
+    "YKW4"
+  ], 
+  "_0411111002": [
+    "ILKN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "GBLN", 
+    "YKW2", 
+    "YMBN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0411150906": [
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "LUPN", 
+    "YKW5", 
+    "SNPN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0411200807": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "KNDN", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "YKW5", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "YKW4"
+  ], 
+  "_0411202201": [
+    "ILKN", 
+    "EKTN", 
+    "COWN", 
+    "ACKN", 
+    "YNEN", 
+    "CAMN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0411211141": [
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "IHLN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0411281832": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "DSMN", 
+    "LDGN"
+  ], 
+  "_0412061415": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YKW2", 
+    "LDGN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0412142320": [
+    "MLON", 
+    "LUPN", 
+    "LGSN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "GLWN", 
+    "IHLN"
+  ], 
+  "_0412180646": [
+    "MLON", 
+    "CAMN"
+  ], 
+  "_0501162017": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "ACKN", 
+    "NODN", 
+    "YKW4", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0501181409": [
+    "MLON", 
+    "EKTN", 
+    "LUPN", 
+    "DVKN", 
+    "KNDN", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "IHLN", 
+    "LDGN"
+  ], 
+  "_0501222030": [
+    "MLON", 
+    "IHLN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "YKW2", 
+    "YKW5", 
+    "CAMN", 
+    "YMBN", 
+    "YKW4"
+  ], 
+  "_0502050334": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "KNDN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN", 
+    "LDGN"
+  ], 
+  "_0502091846": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "DVKN", 
+    "KNDN", 
+    "YKW2", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN", 
+    "DSMN", 
+    "SNPN"
+  ], 
+  "_0502142338": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0502220225": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "YKW2", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0502252304": [
+    "EKTN", 
+    "BOXN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "MLON", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "SNPN", 
+    "NODN", 
+    "KNDN", 
+    "YNEN", 
+    "IHLN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN"
+  ], 
+  "_0503060521": [
+    "EKTN", 
+    "LUPN", 
+    "YKW5", 
+    "YKW4"
+  ], 
+  "_0503200153": [
+    "BOXN", 
+    "COWN", 
+    "LUPN", 
+    "MGTN", 
+    "GLWN", 
+    "DVKN", 
+    "MLON", 
+    "LGSN", 
+    "ACKN", 
+    "CAMN", 
+    "YMBN", 
+    "NODN", 
+    "KNDN", 
+    "SNPN", 
+    "DSMN", 
+    "ILKN", 
+    "YKW1", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4", 
+    "LDGN", 
+    "IHLN"
+  ], 
+  "_0504072004": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "LDGN"
+  ], 
+  "_0504102222": [
+    "MLON", 
+    "ILKN", 
+    "SNPN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "NODN", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0504111454": [
+    "MLON", 
+    "ILKN", 
+    "SNPN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "NODN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0505181027": [
+    "BOXN", 
+    "COWN", 
+    "NODN", 
+    "YKW5", 
+    "CAMN", 
+    "YMBN", 
+    "GLWN", 
+    "YKW4"
+  ], 
+  "_0505210511": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "SNPN", 
+    "NODN", 
+    "YKW4", 
+    "YKW1", 
+    "YKW2", 
+    "YNEN", 
+    "CAMN", 
+    "MGTN", 
+    "IHLN", 
+    "YKW5", 
+    "YMBN", 
+    "DSMN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0506141710": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "NODN", 
+    "CAMN", 
+    "MGTN", 
+    "DSMN", 
+    "LDGN", 
+    "DVKN"
+  ], 
+  "_0508031103": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "MGTN", 
+    "LDGN", 
+    "YKW5", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0508160246": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "YNEN", 
+    "YKW4", 
+    "MGTN", 
+    "YKW5", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0509090726": [
+    "SNPN", 
+    "YKW4"
+  ], 
+  "_0509210225": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "SNPN", 
+    "LDGN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0509291550": [
+    "ILKN", 
+    "YKW4"
+  ], 
+  "_0510080350": [
+    "YKW1", 
+    "GBLN", 
+    "EKTN", 
+    "ACKN"
+  ], 
+  "_0510081046": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "SNPN", 
+    "LDGN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0510151006": [
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "YKW4", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0510151551": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YKW5", 
+    "SNPN", 
+    "LDGN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0510191144": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "YKW5", 
+    "YMBN", 
+    "LDGN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0511142138": [
+    "EKTN", 
+    "LGSN", 
+    "GBLN", 
+    "YKW5", 
+    "SNPN", 
+    "YKW4"
+  ], 
+  "_0511271022": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "LUPN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "YNEN", 
+    "SNPN", 
+    "YKW5", 
+    "YMBN", 
+    "YKW4"
+  ], 
+  "_0511281641": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "LUPN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW1", 
+    "GBLN", 
+    "YNEN", 
+    "YKW4", 
+    "YKW5", 
+    "YMBN", 
+    "MCKN"
+  ], 
+  "_0512021313": [
+    "MLON", 
+    "EKTN", 
+    "LUPN", 
+    "LGSN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "GBLN", 
+    "YKW5", 
+    "SNPN", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0512031610": [
+    "MLON", 
+    "EKTN", 
+    "LUPN", 
+    "LGSN", 
+    "KNDN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "YNEN", 
+    "SNPN", 
+    "YKW5", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0512122147": [
+    "MLON", 
+    "EKTN", 
+    "ACKN", 
+    "YKW1", 
+    "KNDN", 
+    "YNEN", 
+    "YKW4", 
+    "YKW5", 
+    "MCKN"
+  ], 
+  "_0601040832": [
+    "EKTN", 
+    "LUPN"
+  ], 
+  "_0601081134": [
+    "EKTN", 
+    "LUPN", 
+    "YKW1", 
+    "KNDN", 
+    "YKW2", 
+    "YKW5", 
+    "YKW4"
+  ], 
+  "_0601232050": [
+    "YKW2", 
+    "YKW5", 
+    "YKW4"
+  ], 
+  "_0602141527": [
+    "MLON", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "YKW4", 
+    "YKW1", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "YKW5", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0602181559": [
+    "GBLN", 
+    "YKW2", 
+    "LUPN", 
+    "ACKN"
+  ], 
+  "_0602280731": [
+    "GBLN", 
+    "ACKN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0604011002": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "YKW4", 
+    "YMBN", 
+    "LDGN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0604070830": [
+    "EKTN", 
+    "ACKN"
+  ], 
+  "_0604210432": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "LDGN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0604211114": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "LUPN", 
+    "YNEN", 
+    "YKW4", 
+    "MCKN"
+  ], 
+  "_0604291658": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "COWN", 
+    "ACKN", 
+    "YKW4", 
+    "KNDN", 
+    "YKW2", 
+    "YNEN", 
+    "SNPN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0604301917": [
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "YKW4", 
+    "GBLN", 
+    "YNEN", 
+    "SNPN", 
+    "MCKN"
+  ], 
+  "_0605221112": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "YKW4", 
+    "YKW2", 
+    "YNEN", 
+    "SNPN", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0605221308": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "YKW4", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0605280312": [
+    "ILKN", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0606140418": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "KNDN", 
+    "YKW2", 
+    "ACKN", 
+    "GBLN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "YMBN", 
+    "MCKN", 
+    "GLWN", 
+    "DVKN"
+  ], 
+  "_0606221053": [
+    "MLON", 
+    "ILKN", 
+    "EKTN", 
+    "BOXN", 
+    "LGSN", 
+    "COWN", 
+    "ACKN", 
+    "KNDN", 
+    "LUPN", 
+    "YNEN", 
+    "SNPN", 
+    "YMBN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0607082039": [
+    "YNEN", 
+    "COWN", 
+    "GLWN", 
+    "SNPN"
+  ], 
+  "_0608061816": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "SNPN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0608111430": [
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0608171520": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0608242150": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "SNPN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0609011018": [
+    "MLON", 
+    "BOXN", 
+    "JERN"
+  ], 
+  "_0609280622": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "JERN", 
+    "YKW4", 
+    "YKW2", 
+    "MCKN"
+  ], 
+  "_0609301750": [
+    "MLON", 
+    "ILKN", 
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "SNPN", 
+    "GLWN", 
+    "YKW4"
+  ], 
+  "_0610010906": [
+    "ILKN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "YKW2", 
+    "SNPN", 
+    "YKW4"
+  ], 
+  "_0610091001": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "YKW4", 
+    "YKW2", 
+    "SNPN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0610151707": [
+    "MLON", 
+    "ILKN", 
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "BOXN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0610170125": [
+    "ILKN", 
+    "YKW2", 
+    "YKW4"
+  ], 
+  "_0610201048": [
+    "MLON", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0610232117": [
+    "MLON", 
+    "ILKN", 
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "BOXN", 
+    "SNPN", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0611122127": [
+    "MLON", 
+    "ILKN", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0611171803": [
+    "MLON", 
+    "KNDN", 
+    "BOXN", 
+    "ILKN", 
+    "GLWN"
+  ], 
+  "_0612071910": [
+    "MLON", 
+    "KNDN", 
+    "MCKN"
+  ], 
+  "_0701302137": [
+    "MLON", 
+    "JERN", 
+    "KNDN", 
+    "GBLN", 
+    "YKW2", 
+    "MCKN"
+  ], 
+  "_0702121035": [
+    "MLON", 
+    "BOXN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "YKW4", 
+    "YKW2", 
+    "MCKN"
+  ], 
+  "_0702170002": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0702240236": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "GBLN", 
+    "JERN", 
+    "YKW4", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0703090322": [
+    "JERN", 
+    "COWN", 
+    "GLWN"
+  ], 
+  "_0703180211": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "JERN", 
+    "YKW4", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0703250041": [
+    "MLON", 
+    "BOXN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "YKW2", 
+    "GLWN"
+  ], 
+  "_0704040634": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0704050356": [
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "BOXN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0704200026": [
+    "YKW2", 
+    "BOXN", 
+    "COWN", 
+    "JERN", 
+    "MCKN"
+  ], 
+  "_0704200031": [
+    "KNDN", 
+    "YKW2"
+  ], 
+  "_0704200145": [
+    "BOXN", 
+    "COWN", 
+    "YKW1", 
+    "KNDN", 
+    "JERN", 
+    "YKW2", 
+    "MCKN"
+  ], 
+  "_0704291241": [
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "BOXN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0705160856": [
+    "BOXN", 
+    "COWN", 
+    "MCKN"
+  ], 
+  "_0705302022": [
+    "JERN", 
+    "COWN", 
+    "KNDN", 
+    "GBLN", 
+    "BOXN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0706022134": [
+    "BOXN", 
+    "COWN", 
+    "JERN", 
+    "MCKN"
+  ], 
+  "_0706180618": [
+    "BOXN", 
+    "COWN"
+  ], 
+  "_0707160113": [
+    "JERN", 
+    "COWN", 
+    "GBLN", 
+    "BOXN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0707161417": [
+    "JERN", 
+    "COWN", 
+    "GBLN", 
+    "BOXN", 
+    "SNPN", 
+    "YKW2", 
+    "GLWN", 
+    "MCKN"
+  ], 
+  "_0707211327": [
+    "GBLN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0707290454": [
+    "YKW2", 
+    "JERN", 
+    "COWN", 
+    "SNPN"
+  ], 
+  "_0708020237": [
+    "JERN", 
+    "COWN", 
+    "SNPN"
+  ], 
+  "_0708020321": [
+    "YKW2", 
+    "JERN", 
+    "COWN", 
+    "SNPN"
+  ], 
+  "_0708152022": [
+    "ILKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0708160516": [
+    "ILKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0708180252": [
+    "ILKN", 
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0708201346": [
+    "ILKN", 
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0708202242": [
+    "ILKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0709031614": [
+    "ILKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0709061751": [
+    "ILKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0709100149": [
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0709260443": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0709300208": [
+    "YKW2", 
+    "JERN", 
+    "COWN", 
+    "YKW4"
+  ], 
+  "_0710251350": [
+    "YKW1", 
+    "YKW2", 
+    "JERN", 
+    "COWN", 
+    "YKW4"
+  ], 
+  "_0710310330": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0711141540": [
+    "COWN", 
+    "YKW4"
+  ], 
+  "_0711160313": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0711291900": [
+    "YKW1", 
+    "YKW2", 
+    "JERN", 
+    "COWN", 
+    "YKW4"
+  ], 
+  "_0801060514": [
+    "YKW1", 
+    "JERN"
+  ], 
+  "_0802041701": [
+    "YKW1", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0802080938": [
+    "JERN", 
+    "COWN", 
+    "YKW4"
+  ], 
+  "_0802141009": [
+    "YKW1", 
+    "COWN"
+  ], 
+  "_0802141208": [
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0802201827": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0802210246": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0802270654": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0803031349": [
+    "YKW1", 
+    "COWN"
+  ], 
+  "_0803031411": [
+    "YKW1", 
+    "COWN"
+  ], 
+  "_0803202232": [
+    "YKW1", 
+    "COWN"
+  ], 
+  "_0804152259": [
+    "YKW1", 
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0804160554": [
+    "YKW1", 
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805071602": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805071616": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805092151": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805201353": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805231935": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805250821": [
+    "JERN", 
+    "COWN"
+  ], 
+  "_0805291546": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0806081225": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0806132343": [
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0806222356": [
+    "YKW1", 
+    "YKW2", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0807080742": [
+    "ILKN", 
+    "YKW1", 
+    "JERN", 
+    "COWN"
+  ], 
+  "_0807131458": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1"
+  ], 
+  "_0807150326": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "COWN", 
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0807190239": [
+    "ILKN", 
+    "COKN", 
+    "YKW2", 
+    "COWN", 
+    "ARTN"
+  ], 
+  "_0807190927": [
+    "ILKN", 
+    "JERN", 
+    "COWN", 
+    "ARTN"
+  ], 
+  "_0807231526": [
+    "ILKN", 
+    "COKN", 
+    "YKW2", 
+    "COWN"
+  ], 
+  "_0807240143": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "COWN", 
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0808050949": [
+    "YKW1", 
+    "COKN", 
+    "YKW2", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0808251321": [
+    "ILKN", 
+    "COKN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0808262100": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0808270135": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0809101100": [
+    "ILKN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0809101308": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0809110020": [
+    "ILKN", 
+    "ARTN"
+  ], 
+  "_0809240233": [
+    "ILKN", 
+    "COKN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0810051552": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0810060830": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0810282309": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0810291132": [
+    "YKW1", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0811100121": [
+    "ILKN", 
+    "YKW1", 
+    "JERN"
+  ], 
+  "_0901151749": [
+    "YKW1", 
+    "YKW2", 
+    "ARTN"
+  ], 
+  "_0902150924": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0902151004": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0903061050": [
+    "YKW1", 
+    "COKN", 
+    "ARTN"
+  ], 
+  "_0903122323": [
+    "YKW1", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0903301207": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0904040531": [
+    "ILKN", 
+    "JERN"
+  ], 
+  "_0904060132": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0904070423": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0904170208": [
+    "ILKN", 
+    "COKN", 
+    "JERN"
+  ], 
+  "_0904181917": [
+    "ILKN", 
+    "COKN", 
+    "JERN"
+  ], 
+  "_0904210526": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0905031621": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0905100116": [
+    "COKN", 
+    "JERN"
+  ], 
+  "_0905280824": [
+    "COKN", 
+    "ARTN"
+  ], 
+  "_0906050330": [
+    "YKW1", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0906062033": [
+    "ILKN", 
+    "COKN", 
+    "JERN", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0907010930": [
+    "ILKN", 
+    "COKN", 
+    "YKW2", 
+    "YKW1", 
+    "ARTN"
+  ], 
+  "_0907031100": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0907040649": [
+    "YKW1", 
+    "COKN", 
+    "YKW2", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0907061453": [
+    "YKW1", 
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0907062235": [
+    "YKW1", 
+    "COKN", 
+    "YKW2", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0907120612": [
+    "COKN", 
+    "YKW2", 
+    "ARTN"
+  ], 
+  "_0907131805": [
+    "YKW1", 
+    "COKN", 
+    "YKW2", 
+    "ARTN"
+  ], 
+  "_0908050017": [
+    "COKN", 
+    "YKW2"
+  ], 
+  "_0908091055": [
+    "COKN", 
+    "YKW2", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0908122248": [
+    "COKN", 
+    "YKW2", 
+    "ARTN"
+  ], 
+  "_0908170005": [
+    "COKN", 
+    "ARTN"
+  ], 
+  "_0908171010": [
+    "COKN", 
+    "YKW2", 
+    "ARTN"
+  ], 
+  "_0908200635": [
+    "COKN", 
+    "YKW2", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0908280152": [
+    "COKN", 
+    "JERN"
+  ], 
+  "_0909031326": [
+    "COKN", 
+    "JERN", 
+    "ARTN"
+  ], 
+  "_0909100246": [
+    "COKN", 
+    "ARTN"
+  ], 
+  "_0909122006": [
+    "COKN", 
+    "ARTN"
+  ], 
+  "_0909210853": [
+    "COKN", 
+    "JERN"
+  ], 
+  "_0910192249": [
+    "COKN", 
+    "YKW2"
+  ], 
+  "_0910221951": [
+    "YKW1", 
+    "COKN", 
+    "YKW2"
+  ], 
+  "_0910291744": [
+    "YKW1", 
+    "COKN", 
+    "YKW2"
+  ], 
+  "_0910300703": [
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0911130305": [
+    "YKW1", 
+    "COKN", 
+    "YKW2"
+  ], 
+  "_0912100230": [
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_0912191302": [
+    "YKW1", 
+    "YKW2"
+  ], 
+  "_1002060444": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1002262031": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1003040018": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1003042239": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1003080947": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1003140808": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1005031027": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1005060242": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1005190415": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1005232246": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1006180223": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1006300722": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1007042155": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1007101143": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1007120011": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1008041258": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1008121154": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1008140730": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1009171921": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1010041328": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1010211753": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1103160352": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1103171254": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1103190956": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1104300819": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1105132247": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1105132335": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1105142107": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1106030005": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1106201636": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1106222150": [
+    "YKW1", 
+    "COKN"
+  ], 
+  "_1107191935": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1107230434": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1107241851": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1107261744": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1107301853": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1108011458": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1108041351": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1108190536": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1108241746": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1109141810": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1110061112": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1202260617": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1203271100": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1204281008": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1205012243": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1205141000": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1205200203": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1205231502": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1205242247": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206040045": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206051931": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206071603": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206092100": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206162218": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206170343": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206172032": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206191556": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206240315": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1206292107": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1207022331": [
+    "YKW1", 
+    "HFRN"
+  ], 
+  "_1207081133": [
+    "YKW1", 
+    "HFRN"
+  ]
+}

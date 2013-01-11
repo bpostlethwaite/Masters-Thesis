@@ -26,7 +26,8 @@ for ii = 1:length(dlist)
     % TRY I/O: Read info from sac files
     try
         S1  = readsac(fullfile(dlist{ii}, pfile));
-        [~,p] = readsac(fullfile(dlist{ii}, pfile));
+        p = S1.DATA1;
+        S1 = rmfield(S1, 'DATA1');
         [~,s] = readsac(fullfile(dlist{ii}, sfile));
         % Convert Each trace (rotate coordinates)
         %[p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);

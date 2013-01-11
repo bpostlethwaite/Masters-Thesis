@@ -1,4 +1,4 @@
-function [tdel,rmean,sigr] = mccc(seis,dt,twin)
+function [tdel,rmean,sigr] = mccc(seis, dt, twin)
 
 % FUNCTION [TDEL] = MCCC(SEIS,DT,TWIN);
 % Function MCCC determines optimum relative delay times for a
@@ -6,7 +6,8 @@ function [tdel,rmean,sigr] = mccc(seis,dt,twin)
 % cross-correlation algorithm. SEIS is the set of seismograms. It
 % is assumed that this set includes the window of interest and
 % nothing more since we calculate the correlation functions in the
-% Fourier domain. DT is the sample interval and TWIN is the window
+% Fourier domain. DT is the sample interval, which may be a vector of
+% length size(seis, 1) and TWIN is the window
 % about zero in which the maximum search is performed (if TWIN is
 % not specified, the search is performed over the entire correlation
 % interval).
@@ -17,8 +18,12 @@ function [tdel,rmean,sigr] = mccc(seis,dt,twin)
 nt = size(seis, 2) * 2;
 ns = size(seis, 1);
 tcc = zeros(ns);
-
-% Set width of window around 0 time to search for maximum.
+% if length(dt) == 1
+%     dt = ones(1, ns) * dt;
+% else
+%     dt = dt(:)'; 
+% end
+%Set width of window around 0 time to search for maximum.
 mask=ones(1,nt);
 if nargin == 3
   itw = fix(twin/(2*dt));
@@ -66,7 +71,7 @@ tcc(ix) = tcc(ix) - (nt + 1);
 tcc = tcc * dt;
 
 % Use sum rule to assemble optimal delay times with zero mean.
-for is=1:ns
+for is = 1 : ns
   tdel(is)=(-sum(tcc(1 : is - 1, is)) + sum( tcc(is, is + 1 : ns) )) / ns;
 end
 

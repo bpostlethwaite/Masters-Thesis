@@ -22,12 +22,12 @@ station = 'FFC';
 %{
 controlled source proximity
 
-
 nine best stations
 BULN 
 GIFN
 HAL
 ILON
+
 SILO 
 TYNO
 ULM

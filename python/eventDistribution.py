@@ -6,7 +6,7 @@
 ###########################################################################
 # IMPORTS
 ###########################################################################
-import sys, os, re
+import sys, os, re, json
 from collections import defaultdict
 from dbutils import is_number
 import matplotlib.pyplot as plt
@@ -25,14 +25,35 @@ class CrossEvent( object ):
     def numStations(self):
         return len(self.stationSet)
 
+def getdt(stns):
+    from obspy.core import read
+    dt = []
+    for ind, stn in enumerate(stns):
+        stdir = os.path.join(stationdir, stn)
+        events = os.listdir(stdir)
+        events = filter(is_number, events)
+        st = read( os.path.join(stdir, events[0], "stack_P.sac") )
+        dt.append(st[0].stats.delta)
+
+    return dt
 
 if __name__== '__main__' :
 
-    if not sys.stdin.isatty():
-        stations =  re.findall(r'\w+', sys.stdin.read() )
-    else:
-        print "You need to pipe in stations yo"
-        exit()
+    # if not sys.stdin.isatty():
+    #     stations =  re.findall(r'\w+', sys.stdin.read() )
+    # else:
+    #     print "You need to pipe in stations yo"
+    #     exit()
+
+    stations = ['EKTN','BOXN','COWN','GBLN','LUPN','MGTN','GLWN','DVKN','MLON','LGSN','ACKN','RSNT','CAMN','YMBN','MCKN','COKN','JERN','NODN','KNDN','HFRN','YNEN','SNPN','LDGN','DSMN','ILKN','YKW1','YKW2','YKW5','YKW4','ARTN','IHLN']
+
+
+    deltas = getdt(stations)
+
+    for (stn, dt) in zip(stations, deltas):
+        print stn + ": " + str(dt)
+
+    exit()
 
     d = {}
     q = defaultdict(int)
@@ -68,3 +89,12 @@ if __name__== '__main__' :
     sys.stdout.write("}\n")
     # plt.plot( sorted(data, reverse = True) )
     # plt.show()
+
+
+## Save event: [station list] as JSON
+    j = {}
+    j = {"_"+key: list( d[key].stationSet ) for key in d.keys() if d[key].numStations() > 1}
+
+
+    fd = os.environ['HOME'] + '/thesis/data/eventSources.json'
+    open(fd, 'w').write( json.dumps(j, sort_keys = True, indent = 2 ))
