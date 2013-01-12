@@ -17,7 +17,7 @@ if __name__== '__main__' :
 
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
-    events = open("depthPoorEvent.list",'r').read().split('\n')
+    events = open("../data/repicks.txt",'r').read().split('\n')
 
 
     index = 0

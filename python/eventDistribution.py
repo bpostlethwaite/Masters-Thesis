@@ -45,15 +45,15 @@ if __name__== '__main__' :
     #     print "You need to pipe in stations yo"
     #     exit()
 
-    stations = ['EKTN','BOXN','COWN','GBLN','LUPN','MGTN','GLWN','DVKN','MLON','LGSN','ACKN','RSNT','CAMN','YMBN','MCKN','COKN','JERN','NODN','KNDN','HFRN','YNEN','SNPN','LDGN','DSMN','ILKN','YKW1','YKW2','YKW5','YKW4','ARTN','IHLN']
-
+    stations = ['EKTN','BOXN','COWN','GBLN','LUPN','MGTN','GLWN','DVKN','MLON','LGSN','ACKN','CAMN','YMBN','MCKN','COKN','RSNT','JERN','NODN','KNDN','HFRN','YNEN','YKW1','YKW3','YKW2','YKW4','SNPN','LDGN','DSMN','ILKN','ARTN','IHLN']
 
     deltas = getdt(stations)
 
-    for (stn, dt) in zip(stations, deltas):
-        print stn + ": " + str(dt)
+#     for (stn, dt) in zip(stations, deltas):
+#        if dt != 0.025:
+#         print stn + ": " + str(dt)
 
-    exit()
+
 
     d = {}
     q = defaultdict(int)
