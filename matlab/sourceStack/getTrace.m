@@ -2,7 +2,7 @@ function [trace, header] = getTrace(files)
 
 N = 16384;
 for ii = 1:length(files)
-    
+
     % TRY I/O: Read info from sac files
     S  = readsac(files{ii});
    

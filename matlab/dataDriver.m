@@ -17,22 +17,42 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'bostock';
-station = 'FFC';
+station = 'EKTN';
 
 %{
-controlled source proximity
+Need to find which stations go with which events.
+EKTN
+BOXN
+COWN
+GBLN
+LUPN
+MGTN
+GLWN
+DVKN
+MLON
+IHLN
+LGSN
+ACKN
+RSNT
+CAMN
+YMBN
+MCKN
+COKN
+JERN
+NODN
+KNDN
+HFRN
+YNEN
+SNPN
+DSMN
+ILKN
+YKW1
+YKW2
+YKW5
+YKW4
+ARTN
+LDGN
 
-nine best stations
-BULN 
-GIFN
-HAL
-ILON
-
-SILO 
-TYNO
-ULM
-WSLR
-YBKN
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
@@ -45,12 +65,13 @@ else
 end
 
 %% Run ToolChain
-ProcessTraces
-
+%ProcessTraces
+vp = json.(station).wm.Vp;
+db = processStack(db, station, workingdir, method, vp);
 %% Assign Data
 
-[ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
-    pslow, dt, npb, fLow, fHigh, results, boot);
+%[ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
+%    pslow, dt, npb, fLow, fHigh, results, boot);
 
 %% Plot the results if we completed the processing
 close all
