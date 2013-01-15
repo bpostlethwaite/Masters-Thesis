@@ -1,4 +1,4 @@
-function db = processStack(db, station, workingdir, method, vp)
+function db = processStack(db, events, station, workingdir, method, vp)
 %ProcessTraces
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
@@ -14,15 +14,12 @@ snrlim = 0;
 %
 printinfo = 0; % On and off flag to print out processing results
 
-events = dir('/media/TerraS/SLAVE');
+
 dlist = {};
 slist = {};
 
 for ii = 1:length(events)
-    if length(events(ii).name) < 3
-        continue
-    end
-    d = events(ii).name;
+    d = events{ii};
     dlist{end+1} = fullfile(workingdir, d);  %#ok<*AGROW>
     slist{end+1} = fullfile('/media/TerraS/SLAVE', d);
 end
@@ -30,11 +27,12 @@ end
 assert(length(dlist) > 1,'No Directories accumulated in Dlist!')
 
 %% Load Stacks and re-filter dlist
-pfile = 'stack_P.sac';
+pfile = 'stack.mat';
 sfile = 'stack_S.sac';
 picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 [strace, header, ptrace, pheader, pslows, badpick] = ...
-    loadStacktraces(dlist, sfile, slist, picktol, printinfo);
+    loadStacktraces(dlist, pfile, slist, sfile, picktol, printinfo);
+    
 
 %% 3) Bin by p value (build pIndex)
 %
@@ -126,7 +124,7 @@ end
 %% Run Processing suite
 TTps = [];
 if strcmp(method, 'bostock')
-    [results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
+    [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
     TTps = results.tps;
     [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
 
@@ -136,10 +134,8 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-boot.RHx = 0;
-boot.R = 0;
-boot.H = 0;
-%[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024 , method, TTps', vp);   
+
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024 , method, TTps', vp);   
 
 %% Assign Data
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...

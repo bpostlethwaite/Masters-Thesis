@@ -16,8 +16,8 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'bostock';
-station = 'EKTN';
+method = 'kanamori';
+station = 'ACKN';
 
 %{
 Need to find which stations go with which events.
@@ -65,11 +65,22 @@ else
 end
 
 %% Run ToolChain
-%ProcessTraces
+% attempt to get two side by side comparisons of events - one using the
+% souce stack approach, one using the regular method. If there are problems
+% need to get it to compare singular event as it moves  thorugh procssing
+% chain.
 vp = json.(station).wm.Vp;
-db = processStack(db, station, workingdir, method, vp);
-%% Assign Data
+js = loadjson( [userdir,'/thesis/data/stationStackedEvents.json']);
+events = cellstr(js.(station));
+%db = processStack(db, events, station, workingdir, method, vp);
 
+dlist = {};
+for ii = 1:length(events)
+    dlist{end+1} = fullfile(workingdir, events{ii});
+end
+db = process(db, dlist, station, workingdir, method, vp, 0);
+%% Assign Data
+%ProcessTraces
 %[ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
 %    pslow, dt, npb, fLow, fHigh, results, boot);
 

@@ -1,5 +1,5 @@
 function [strace, header, ptrace, pheader, pslows, badpick] = ...
-    loadStacktraces(dlist, sfile, slist, picktol, printinfo)
+    loadStacktraces(dlist, pfile, slist, sfile, picktol, printinfo)
 
 % FUNCTION CONVERTFILTERTRACES(DLIST,STATION)
 % Converts from sac to Matlab format, rotates coords, collects headers.
@@ -27,25 +27,24 @@ for ii = 1:length(dlist)
         S1  = readsac(fullfile(dlist{ii}, sfile));
         s = S1.DATA1;
         S1 = rmfield(S1, 'DATA1');
-        p = load(slist{ii});
-        p.data = p.data .* tukeywin( length(p.data) );
-        % Convert Each trace (rotate coordinates)
-        %[p,s] = freetran(rcomp',zcomp',S1.USER0,6.06,3.5,1);
+        ph = load( fullfile(slist{ii}, pfile));
+        p = ph.stack.data' .* tukeywin( length(ph.stack.data) );
         
         % On first pass set N
         if ii == 1
             N = 16384;
         end
         % Truncate if longer
-        if length(s) > N
+        if length(s) > N || length(p) > N
             s(N+1:end) = [];
-            p.data(N+1:end) = [];
+            p(N+1:end) = [];
         end
         % Pad with zeros if shorter
-        if length(s) < N
+        if length(s) < N || length(p) < N
             s(end+1 : N) = 0;
-            p.data(end+1 : N) = 0;
+            p(end+1 : N) = 0;
         end
+        
         % Check to make sure picked time interval greater than picktol and
         % That the starting time in the record header matches the picks (make
         % sure it makes sense (Both T1 and T3 must be greater that record
@@ -94,8 +93,9 @@ for ii = 1:length(dlist)
         header{ind1} = S1;
         pslows(ind1) = S1.USER0; %#ok<*AGROW>
         strace(ind1,:) = s;
-        ptrace(ind1,:) = p.data ;
-        pheader{ind1} = struct('T1', p.T1, 'T3', p.T3, 'dt', p.dt);
+        ptrace(ind1,:) = p ;
+        pheader{ind1} = struct('T1', ph.stack.T1,...
+            'T3', ph.stack.T3, 'dt', ph.stack.dt);
         ind1 = ind1 + 1;
     end
     

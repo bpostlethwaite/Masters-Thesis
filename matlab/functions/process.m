@@ -1,4 +1,4 @@
-function db = process(db, station, workingdir, method, vp, clstr)
+function db = process(db, dlist, station, workingdir, method, vp, clstr)
 %ProcessTraces
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
@@ -13,13 +13,15 @@ snrlim = 3.0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
-dlist = filterEventDirs(workingdir, printinfo);
+if ~iscell(dlist)
+    dlist = filterEventDirs(workingdir, printinfo);
+end
 %% 2)  Convert sac file format, filter bad picks
 %
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
-splitAzimuth = 1;
+splitAzimuth = 0;
 cluster = clstr;
 [ptrace, strace, header, pslows, ~] = ...
     ConvertFilterTraces(dlist, pfile, sfile,...
@@ -120,10 +122,7 @@ elseif strcmp(method, 'kanamori')
 end
 
 % Run Bootstrap
-boot.RHx = 0;
-boot.R = 0;
-boot.H = 0;
-%[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024 , method, TTps', vp);   
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024 , method, TTps', vp);   
 
 %% Assign Data
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...

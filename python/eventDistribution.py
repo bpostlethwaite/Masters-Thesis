@@ -69,6 +69,7 @@ if __name__== '__main__' :
                 d[event] = CrossEvent(station)
 
 
+
     # singleEventStations = [list(d[event].stationSet)[0] for event in d.keys() if d[event].numStations() == 1]
 
     # for ses in singleEventStations:
@@ -96,5 +97,23 @@ if __name__== '__main__' :
     j = {"_"+key: list( d[key].stationSet ) for key in d.keys() if d[key].numStations() > 1}
 
 
-    fd = os.environ['HOME'] + '/thesis/data/eventSources.json'
-    open(fd, 'w').write( json.dumps(j, sort_keys = True, indent = 2 ))
+#    fd = os.environ['HOME'] + '/thesis/data/eventSources.json'
+#    open(fd, 'w').write( json.dumps(j, sort_keys = True, indent = 2 ))
+
+
+
+
+
+    evs = os.listdir("/media/TerraS/SLAVE")
+
+    # Re-sort data to get dictionary with station keys and listed multiple events
+    s = {}
+    for ev in evs:
+        for stn in d[ev].stationSet:
+            if stn not in s:
+                s[stn] = []
+            s[stn].append(ev)
+
+    fd = os.environ["HOME"] + '/thesis/data/stationStackedEvents.json'
+    open(fd, 'w').write( json.dumps(s, sort_keys = True, indent = 2) )
+#    print json.dumps(s, sort_keys = True, indent = 2)
