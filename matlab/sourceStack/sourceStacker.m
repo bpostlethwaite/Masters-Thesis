@@ -90,15 +90,13 @@ for num = 1:length(events);
     wtrace = (diag(1./max( abs(trace(:, w1 : w2)), [], 2)) ) * trace(:, w1 : w2 );
     
     %% Get lags
-    [tdel, rmean, sigr] = mccc(wtrace, dt);
+    [tdel, ~, ~] = mccc(wtrace, dt);
     %% Shift unwindowed traces
     strace = lagshift(trace, tdel, dt);
     
     %% Stack
-    stack.T1 = -12345;
-    stack.T3 = -12345;
-    stack.dt = dt;
-    stack.data = sum( strace(:, w1 : w3) ) / size(strace, 1);
+    %stack.dt = dt;
+    stack = sum( strace(:, w1 : w3) ) / size(strace, 1);
     
     %% Get new windows
     %{

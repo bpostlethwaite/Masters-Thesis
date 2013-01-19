@@ -35,7 +35,6 @@ pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(Pslow); % Number of bins we now have.
 clear numbin pbinLimits checkind
 %% 4) Normalize
-printwdiag = 0;
 dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
@@ -43,7 +42,13 @@ strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
 %ptrace = wdiag * ptrace;
 %strace = wdiag * strace;
 
-clear printwdiag
+%% Filter seismograms
+% numPoles = 2;
+% ptrace = fbpfilt(ptrace, dt, fLow, fHigh, numPoles, 0);
+% strace = fbpfilt(strace, dt, fLow, fHigh, numPoles, 0);
+% 
+% clear numPoles
+
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;

@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-119.707824</xmin>
-            <ymin>59.513392</ymin>
-            <xmax>-109.094192</xmax>
-            <ymax>66.077700</ymax>
+            <xmin>-136.785699</xmin>
+            <ymin>35.090697</ymin>
+            <xmax>-51.876641</xmax>
+            <ymax>87.605161</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -59,14 +59,14 @@
                 <legendlayerfile isInOverview="0" layerid="VoronoiTest20121111132921846" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="9" open="false" checked="Qt::Unchecked" name="geologicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="9" open="false" checked="Qt::Checked" name="geologicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="10" open="true" checked="Qt::Checked" name="bedrockGeology" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="1"/>
+        <legendlayer drawingOrder="10" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="0"/>
             </filegroup>
         </legendlayer>
     </legend>
