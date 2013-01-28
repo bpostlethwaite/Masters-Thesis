@@ -1,5 +1,4 @@
 function shifted = lagshift(seis, lags, dt)
-
 % LAGSHIFT shift all traces by lag times given in array lags.
 % It is assumed that length(lags) == size(seis, 1) and dt is either a
 % scalar or a size(seis, 1) vector.
