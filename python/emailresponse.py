@@ -13,8 +13,9 @@ def extract_body(payload):
         return '\n'.join([extract_body(part.get_payload()) for part in payload])
 
 conn = imaplib.IMAP4_SSL("imap.gmail.com", 993)
-conn.login("post.ben.here", "dance magic")
+conn.login(EMAIL, PASSWD)
 conn.select('seisftp')
+
 while True:
     typ, data = conn.search(None, 'FROM', '"autoDRM"', 'UNDELETED')
     # ITERATE THRU ALL MATCHED ITEMS
@@ -37,7 +38,7 @@ while True:
     conn.expunge()
     sleep(20)
 
-# Prob Never Get here.    
+# Prob Never Get here.
 try:
     conn.close()
 except:
