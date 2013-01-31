@@ -8,6 +8,7 @@ close all
 loadtools;
 addpath ../sac
 addpath functions
+addpath sourceStack
 addpath([userdir,'/programming/matlab/jsonlab'])
 %% Variables
 sacfolder = '/media/TerraS/CN';
@@ -79,8 +80,9 @@ end
 %     dlist{end+1} = fullfile(workingdir, events{ii});
 % end
 % db = process(db, dlist, station, workingdir, method, vp, 0);
+ProcessStack
 %% Assign Data
-ProcessTraces
+
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
     pslow, dt, npb, fLow, fHigh, results, boot);
 

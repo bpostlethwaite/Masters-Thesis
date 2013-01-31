@@ -13,6 +13,11 @@ databasedir = '/media/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load ../stnsjson.mat
+%% Setup parallel toolbox
+if ~matlabpool('size')
+    workers = 4;
+    matlabpool('local', workers)
+end
 %%  Select Station to Process and load station data
 method = 'kanamori';
 station = 'ACKN';
@@ -71,14 +76,12 @@ N = 16384;
 vp = json.(station).wm.Vp;
 
 %% Select trace and Load.
-for ii = 1:length(event);
+parfor ii = 1:length(event);
 
 hdr = readsac( fullfile(event{ii}, 'stack_P.sac'));
 evp = hdr.DATA1;
 hdr = rmfield(hdr, 'DATA1');
 [~, s] = readsac( fullfile(event{ii}, 'stack_S.sac'));
-
-dt = hdr.DELTA;
 
 if length(s) > N
     s(N+1:end) = [];
@@ -102,67 +105,97 @@ ptrace(ii,:) = evp;
 strace(ii,:) = s;
 
 end
+%% Sort by pslows
+% Sort by ascending pslows
+[pslows,I] = sort(pslows);
+header = header(I);
+ptrace = ptrace(I,:);
+strace = strace(I,:);
+stack = stack(I,:);
 %% Normalize
+dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
 stack =  (diag(1./max( abs(stack), [], 2)) ) * stack;
 
 %% Align Events
-fp = fft(ptrace, N);
-fs = fft(stack, N);
+fp = fft(ptrace', N);
+fs = fft(stack', N);
 ccf = real( ifft(conj(fp) .* fs, N) );
-[~, tcc] = max(ccf);
+[~, ncc] = max(ccf);
 
-stack = lagshift(stack, -tcc, dt);
-
-%% Window with Taper
-b = round( (header.T1 - header.B)/dt );
-e = round( (header.T3 - header.B)/dt );
-e = e;
-evp = [zeros(b - 1, 1);...
-    evp(b:e) .* tukeywin(length(evp(b:e)), 0.1); ...
-    zeros(N - e, 1)];
-
-stp = [zeros(b - 1, 1);...
-    stp(b:e) .* tukeywin(length(stp(b:e)), 0.1); ...
-    zeros(N - e, 1)];
+stack = lagshift(stack, ncc);
 
 %% Initial plots
-%{
-    figure()
-    plot(evp, 'b')
+%
+ind = 4;
+figure()
+    plot(ptrace(ind, :), 'b')
     hold on
-    plot(stp, 'r')
+    plot(stack(ind, :), 'r')
     hold off
 %}
-%% Fourier transform
-wevent = fft(evp);
-wstack = fft(stp);
-vft = fft(s);
+%% Window with Taper
+parfor ii = 1 : size( stack, 1)
+    
+    pt = ptrace(ii, :)';
+    st = stack(ii, :)';
+    s = strace(ii, :)';    
+    hdr = header{ii};
+    
+    b = round( (hdr.T1 - hdr.B)/dt );
+    e = round( (hdr.T3 - hdr.B)/dt );
+    
+    pt = [zeros(b - 1, 1);...
+        pt(b:e) .* tukeywin(length(pt(b:e)), 0.1); ...
+        zeros(N - e, 1)];
+    
+    st = [zeros(b - 1, 1);...
+        st(b:e) .* tukeywin(length(st(b:e)), 0.1); ...
+        zeros(N - e, 1)];
+    
+
+    %% Fourier transform
+    wevent(ii, :) = fft(pt);
+    wstack(ii, :) = fft(st);
+    vft(ii, :) = fft(s);
+end
+
+%% 3) Bin by p value (build pIndex)
+%
+%numbin = round((1/npb) * size(ptrace, 1));
+numbin = 50;
+pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
+checkind = 1;
+[pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
+Pslow = pbin(any(pIndex)); % Strip out pbins with no traces
+pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
+nbins = length(Pslow); % Number of bins we now have.
 
 %% Deconvolve
-[fre, ~, betare] = simdecf(wevent, vft, -1);
-[frs, ~, betars] = simdecf(wstack, vft, -1);
+parfor ii = 1 : nbins
+[fre, ~, betare(ii)] = simdecf(wevent(ii, :), vft(ii, :), -1);
+[frs, ~, betars(ii)] = simdecf(wstack(ii, :), vft(ii, :), -1);
 
-re = real(ifft(fre));
-rs = real(ifft(frs));
-
+re(ii, :) = real(ifft(fre));
+rs(ii, :) = real(ifft(frs));
+end
 %% Filter
-re = fbpfilt(re', dt, 0.04, 3, 2, 0);
-rs = fbpfilt(rs', dt, 0.04, 3, 2, 0);
+re = fbpfilt(re, dt, 0.04, 3, 2, 0);
+rs = fbpfilt(rs, dt, 0.04, 3, 2, 0);
 
 %% Plot
 %{
 t1 = round(2 / dt);
 t2 = round(30 / dt);
 
-% figure(13353)
-% subplot(2,1,1)
-% plot(re(t1 : t2), 'b')
-% title(sprintf('\beta = %f', betare))
-% subplot(2,1,2)
-% plot(rs(t1 : t2), 'r')
-% title(sprintf('\beta = %f', betars))
+figure(13353)
+subplot(2,1,1)
+plot(re(t1 : t2), 'b')
+title(sprintf('\beta = %f', betare))
+subplot(2,1,2)
+plot(rs(t1 : t2), 'r')
+title(sprintf('\beta = %f', betars))
 %}
 %% Wavelets
 %{
@@ -209,8 +242,84 @@ for T = 0.01:0.01:0.2
     pause(0.5)
 end
 %}
-%%
-%pause
-%% GridSearch
+%% Run Processing suite
+TTps = [];
+pslow = Pslow;
+brec = re;
+fLow = 1;
+fHigh = 1;
+
+if strcmp(method, 'bostock')
+    [results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
+    TTps = results.tps;
+    [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
+
+elseif strcmp(method, 'kanamori')      
+    [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
+
+end
+
+% Run Bootstrap
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1048, method, TTps', vp); 
+
+[ dbre ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
+    pslow, dt, npb, fLow, fHigh, results, boot);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+brec = rs;
+if strcmp(method, 'bostock')
+    [results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
+    TTps = results.tps;
+    [ results ] = gridsearchMB(brec(:, 1:round(45/dt)), dt, pslow, TTps);
+
+elseif strcmp(method, 'kanamori')      
+    [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
+
+end
+
+% Run Bootstrap
+[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1048, method, TTps', vp); 
+
+
+[ dbrs ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...
+    pslow, dt, npb, fLow, fHigh, results, boot);
+
 
 %% Plot and compare
+
+close all
+plotStack(dbrs, method);
+
+if strcmp(method, 'bostock')
+    fprintf('Vp is %f +/- %1.3f \n',db.mb.vbest, db.mb.stdVp )
+    fprintf('R is %f +/- %1.3f \n',db.mb.rbest, db.mb.stdR )
+    fprintf('H is %f +/- %1.3f \n',db.mb.hbest, db.mb.stdH )
+    if exist('dbold','var')
+        if isfield(dbold,'mb')
+            fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+            fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
+            fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
+        end
+        if isfield(dbold,'hk')
+            fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
+            fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
+        end
+    end
+end
+
+if strcmp(method, 'kanamori')
+    fprintf('R is %f +/- %1.3f \n',db.hk.rbest, db.hk.stdR )
+    fprintf('H is %f +/- %1.3f \n',db.hk.hbest, db.hk.stdH )
+    if exist('dbold','var')
+        if isfield(dbold,'hk')
+            fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
+            fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
+        end
+        if isfield(dbold,'mb')
+            fprintf('Old MB R is %f +/- %1.3f \n',dbold.mb.rbest, dbold.mb.stdR )
+            fprintf('Old MB H is %f +/- %1.3f \n',dbold.mb.hbest, dbold.mb.stdH )
+            fprintf('Old MB Vp is %f +/- %1.3f \n',dbold.mb.vbest, dbold.mb.stdVp )
+        end
+    end
+end
+

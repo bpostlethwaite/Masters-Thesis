@@ -8,11 +8,11 @@ q = figure(fh);
 p2 = p.^2;
 %x = 1:length(p);
 while (iter < round(itermax)) && (deltaTps > tol);
-    
+
     % Partials %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     sqrtA = sqrt(1/a^2 - p2);
     sqrtB = sqrt(1/b^2 - p2);
-    
+
     % Jacobian %%%%%%
     dfda = (-2*h* (h*(sqrtA - sqrtB) + t)' * (1./( a^3 * sqrtA )));
     dfdb =  (2*h* (h*(sqrtA - sqrtB) + t)' * (1./( b^3 * sqrtB )));
@@ -22,12 +22,12 @@ while (iter < round(itermax)) && (deltaTps > tol);
     dfah = -2* ( 2*h* (sqrtA - sqrtB) + t)' * (1./(a^3 * sqrtA)) ;
     dfbh =  2* ( 2*h* (sqrtA - sqrtB) + t)' * (1./(b^3 * sqrtB)) ;
     dfaa = 2*h *( h*(-3*a^2*p2.*sqrtB + 3*a^2*p2.*sqrtA - 3*sqrtA + 2*sqrtB) + ...
-        t .* (3*a^2 *p2 - 2) )' * (1./(a^4 * sqrtA .* (a^2* p2 - 1))); 
+        t .* (3*a^2 *p2 - 2) )' * (1./(a^4 * sqrtA .* (a^2* p2 - 1)));
     dfbb = 2*h *( h*(-2*b^2 *(sqrtA.*sqrtB + 3*p2) + ...
         3*b^4*(p2 .* sqrtA.*sqrtB + p.^4) + 3) + ...
-        b^2.*t.*sqrtB.*(3*b^2 .*p2 - 2))' * (1./(b^4 * (b^2*p2 - 1).^2));   
+        b^2.*t.*sqrtB.*(3*b^2 .*p2 - 2))' * (1./(b^4 * (b^2*p2 - 1).^2));
     dfab = sum( -2*h^2 ./ ( a^2 * b^2 * sqrt(1-a^2*p2).*sqrt(1-b^2*p2)));
-      
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     J = [dfda; dfdb; dfdh]; % Jacobian
     H = [dfaa, dfab, dfah
@@ -40,9 +40,9 @@ while (iter < round(itermax)) && (deltaTps > tol);
     %    fprintf('Eig(H)\n')
     %    eig(H)
     %end
-        
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    delm = (IRLSsolver(-H,J,40,0.001*tol)); % Linear reweighted solution with 10x tolerance of Newton
+    delm = (IRLSsolver(-H,J,40,0.001*tol)); % Linear reweighted solution
     %delm = -H\J(:); %L2 Solver
     a = (a + s*delm(1));
     b = (b + s*delm(2)); % move in direction of residual
@@ -54,7 +54,7 @@ while (iter < round(itermax)) && (deltaTps > tol);
     iter = iter+1;
     % Real Time Fit %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %
-    
+
     plot(p, t, '*', p, Tps, 'g')
     title('residual vector and Minimum norm solution')
     xlabel('pslow')
