@@ -27,10 +27,8 @@
 %% -----------------------------------------------%%
 \section{Data and method}
    Seismic data utilized in this study comes from 343 stations across Canada from all available networks. Of these stations 146 were used for analysis. All stations are broadband with data being used between the years 2000 and 2012. Receiver function analysis has been widely employed over many years to investigate the earths structure.
-   Two derivations have been used in this study, one well tested stacking approach (Zhu and Kanamori, 2000) and the other a recent method that has not been employed at scale (Bostock, 2010). Both methods rely on the fact that the incoming S-wave contains energy from the direct arrival as well as reflected phases resulting from sharp velocity contrasts. Deconvolution of the P-wave energy arrival, used as an estimate for the source function, from the S-wave signal produces a Green's function with energy peaks at the times of the main and reflected arrivals. For better separation of P and S wave energy all components are rotated into radial and transverse dimensions and transformed into P, SV and SH components with a wave field decomposition transfer matrix (Bostock, 1998).
-   Deconvolution is performed by minimizing the general cross validation function $GCV(\delta)$ where $\delta$ is used the regularizer (Bostock, 1998; Golub et al., 1979). This method is an $L_2$ frequency domain deconvolution which performs quickly and makes no assumptions on the noise in the data. All deconvolved signals are filtered between 0.04hz and 3.0hz and are stacked with weights $w_1=0.5$, $w_1=0.3$, $w_1=0.2$ for the Ps, PpPs and PpSs phases respectively.
-
-   <Error Calculations>
+   Two derivations have been used in this study, one well tested stacking approach (Zhu and Kanamori, 2000) and the other a recent method that has not yet been employed at scale (Bostock, 2010). Both methods rely on the fact that the incoming S-wave contains energy from the direct arrival as well as reflected phases resulting from sharp velocity contrasts. Deconvolution of the P-wave energy arrival, used as an estimate for the source function, from the S-wave signal produces a Green's function with energy peaks at the times of the main and reflected arrivals. For better separation of P and S wave energy all components are rotated into radial and transverse dimensions and transformed into P, SV and SH components with a wave field decomposition transfer matrix (Bostock, 1998).
+   Deconvolution is performed by minimizing the general cross validation function $GCV(\delta)$ where $\delta$ is used the regularizer (Bostock, 1998; Golub et al., 1979). This method is an $L_2$ frequency domain deconvolution which performs quickly and makes no assumptions on the noise in the data. All deconvolved signals are filtered between 0.04hz and 3.0hz and are stacked with weights $w_1=0.5$, $w_1=0.3$, $w_1=0.2$ for the Ps, PpPs and PpSs phases respectively. Error calculations are performed with bootstrap resampling by rerunning the processing with randomly chosen receiver functions - allowing multiples - 1024 times. The error is obtained by taking the standard deviation of the results.
 
 \subsection{Vp methods}
    The stacking approach outlined above provides estimates for the parameters $R=\frac{V_P}{V_S}$ as well as crustal thickness $H$ - which gives the depth of the Moho. A method which estimates $V_P$ and $V_S$ separately (Bostock, 2010) is also employed for select stations. This method makes use of the fact the dependence on $H$ in the travel time equations can be removed if we divide the reflected phases by the main arrival.
@@ -40,10 +38,16 @@ This has the advantage that no assumptions on $V_P$ are necessary to perform the
 
 Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ should contain the largest fraction of energy out of the other phases and the moveout, depending on Moho depth, should be in the order of 3 to 6 seconds. Given this it is trivial to define a window and select the time corripsonding to maximum amplitude. Another approach is to use max amplitude estimates as data in a non-linear optimization to find the $R$, $V_P$, and $H$ which minimizes the residual between $t_{Ps}$ and the data. The travel time equations are twice-differentiable so the quadratically convergent Newton's method may be employed. This approach has the advantage that noise leading to poor maximum amplitude picks are effectively collapsed onto the curve corrisponding to the travel time function. A third approach which offers picks along a travel time curve but better stability than the non-linear method is to perform a gridsearch with all three travel time functions, a full Kanamori stack. With the best estimates for $R$ and $H$ the $t_{Ps}$ function can be found and used as input into the Bostock method. The trade-off is that the requirement for an initial $V_P$ estimate for the initial stack introduces secondary $V_P$ dependence into the system.
 
-
 %% -----------------------------------------------%%
 \section{Results}
-<Results go here>
+Canada data
+
+
+Data across geological provinces
+
+
+Archean versus Proterozoic
+
 
 %% -----------------------------------------------%%
 \section{Discussion}

@@ -8,6 +8,7 @@ discardBad = 1; % Discard traces that do not find minimum during decon
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
+wavelet = 0;
 snrlim = 0;
 %% 1) Filter Event Directories
 %
@@ -84,20 +85,76 @@ if discardBad
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
+%% Wavelet denoise
+
+if wavelet > 0
+    Jmin = 4;
+    options.ti = 1;
+    m = 4;    
+    T = wavelet;
+    
+    parfor jj = 1:size(rec,1)
+        
+        rs = rec(jj, :)';
+        
+        fTI = zeros(length(rs), 1);
+        %T = 0.1;
+        % Shift invariant wavelet thresholding
+        
+        for ii = 1:m;
+            %Apply the shift, using circular boundary conditions.
+            fS = circshift(rs, ii)';
+            
+            %Apply here the denoising to fS.
+            a = perform_wavelet_transf(fS, Jmin, 1, options);
+            aT = perform_thresholding(a, T, 'soft');
+            fS = perform_wavelet_transf(aT, Jmin, -1, options);
+            
+            %After denoising, do the inverse shift.
+            fS = circshift(fS, -ii);
+            
+            %Accumulate the result to obtain at the end the denoised image that
+            % average the translated results.
+            fTI = (ii-1)/ii*fTI + 1/ii*fS;
+        end
+        
+        wrec(jj, :) = fTI';
+        
+    end
+    %     figure(12234)
+    %     subplot(2,1,1)
+    %     plot(re(t1 : t2), 'b')
+    %     title(sprintf('\beta = %f', betare))
+    %     subplot(2,1,2)
+    %     plot(fTI(t1 : t2), 'r')
+    %     title(sprintf('T = %f', T))
+    %     pause(0.5)
+    brec = wrec;
+end
+clear wavelet Jmin options m T
 %% 6) Filter Impulse Response
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
-brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
+brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2) + 0.001 ) * brec;
 %% RF SnR
 if snrlim > 0
     snr = zeros(size(brec,1), 1);
     for ii = 1:size(brec,1)
-        v = detrend(brec(ii, round(2.5/dt):round(45/dt)));
-        delta = 0.1 * max(abs(v));
+        v = detrend(brec(ii, round(2/dt):round(45/dt)));
+        delta = 0.1 * max(abs(v)) + 0.001;
         [maxtab, mintab] = peakdet(v, delta);
+        if isempty(maxtab)
+            snr(ii) = 0;
+            continue
+        end
+        % To much frequency for given length of signal window
+        if length(maxtab) > 60 || size(maxtab,1) < 5
+            snr(ii) = 0;
+            continue
+        end
         [~,I] = sort(maxtab(:,2),'descend');
         peakmax = maxtab(I,:);
         [~ ,I] = sort(mintab(:,2),'ascend');
@@ -105,15 +162,16 @@ if snrlim > 0
         bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
         noisepeak = mean(peakmax(3:end,2)) ;
         snr(ii) = bigpeak / noisepeak;
-%{        
+        %{
          plot(v);
          hold on
          plot(peakmax(:,1), peakmax(:,2), 'ro')
          plot(peakmin(:,1), peakmin(:,2), 'mo')
          title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
          hold off
-         pause()   
-%}
+         
+         pause()
+        %}
     end
     %brec = diag(snr) * brec;
     ind = snr < snrlim;

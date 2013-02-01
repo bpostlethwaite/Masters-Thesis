@@ -51,7 +51,7 @@ while read event; do
 
   echo  "Processing event" $event
   echo "BEGIN" > $event"_request"
-  echo "EMAIL post.ben.here@gmail.com" >> $event"_request"
+  echo "EMAIL auto.iris.response@gmail.com" >> $event"_request"
   echo "OUT_FILE " $event".seed" >> $event"_request"
   echo "TITLE EVENT "$event  >> $event"_request"
 # THESE ARE CNSN BH STATIONS.

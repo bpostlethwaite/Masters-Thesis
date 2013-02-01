@@ -185,7 +185,7 @@ end
 % Pslow indices.
 clear wft vft
 
-rec = recStack;
+%rec = recStack;
 
 %% Weed out poor rf results
 % Cut out traces where no betax was found during simdecf
