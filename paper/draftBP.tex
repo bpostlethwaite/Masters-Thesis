@@ -38,6 +38,8 @@ This has the advantage that no assumptions on $V_P$ are necessary to perform the
 
 Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ should contain the largest fraction of energy out of the other phases and the moveout, depending on Moho depth, should be in the order of 3 to 6 seconds. Given this it is trivial to define a window and select the time corripsonding to maximum amplitude. Another approach is to use max amplitude estimates as data in a non-linear optimization to find the $R$, $V_P$, and $H$ which minimizes the residual between $t_{Ps}$ and the data. The travel time equations are twice-differentiable so the quadratically convergent Newton's method may be employed. This approach has the advantage that noise leading to poor maximum amplitude picks are effectively collapsed onto the curve corrisponding to the travel time function. A third approach which offers picks along a travel time curve but better stability than the non-linear method is to perform a gridsearch with all three travel time functions, a full Kanamori stack. With the best estimates for $R$ and $H$ the $t_{Ps}$ function can be found and used as input into the Bostock method. The trade-off is that the requirement for an initial $V_P$ estimate for the initial stack introduces secondary $V_P$ dependence into the system.
 
+
+
 %% -----------------------------------------------%%
 \section{Results}
 Ideas:
@@ -46,11 +48,12 @@ Reliability of methods:
   Compare Kan approach values to others in literature
   Canada wide -> Regional
 
-The bulk crustal composition of Canada shows a $frac{V_P}{V_S}$ ratio of $Z$. When compared to the granite - tonalitic - mafic gneiss spectrum this value in very close to the tonalitic gneiss value of $Y$. Compared to other bulk crustal averages this value appears to be X. [Find estimates of bulk averages].
+  The preliminary interrogation of the data set yields the observation that the bulk Canadian crust is more felsic than originally anticipated. Previous experiments show crustal averages of 0.265 (Christensen and Mooney, 1995) or have averages of at least 0.27 for shields, platforms and paleozoic units (Zandt and Ammon, 1995). The weighted average for this data set shows a Poisson' ratio of 0.258 with the weighting for each station given by the calculation of the stations inverse Voronoi cell area. At the regional scale we have values of 0.251. 0.254, 0.260, 0.275 for the Churchill, Superior, Slave and Grenville Provinces Poisson's ratios respectively. Most of the Canadian Shield stations also appear to have low Poisson values with the exception of the Grenville Province which has a high Poisson Ratio of 0.275.
 
-Data across geological provinces
+  The data bears out earlier results showing Proterozoic crust to have a higher Poisson's ratio than Archean crust, likely the result of a more mafic composition. The increased crustal thickness of Proterozoic crust is clearly seen in the active source data while it not visible in data from processed seismic stations. The most likely reason for not seeing the signal of thicker crust in the station data is owing to poor station coverage in Proterozoic regions.
 
-Archean versus Proterozoic
+  Further work on the Bostock-Kumar stacking approach is warranted from a look at the cleanest stations. Before it can be employed in large scale analysis additional denoising methods or alternative deconvolution techniques will need to be investigated to reduce the noise in the data.
+
 
 
 %% -----------------------------------------------%%
@@ -82,6 +85,8 @@ Archean versus Proterozoic
 %...has been shown [{\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
 %...has been shown [e.g., {\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
 
+
+
 %...as shown by \citet{jskilby}.
 %...as shown by \citet{lewin76}, \citet{carson86}, \citet{bartoldy02}, and \citet{rinaldi03}.
 %...has been shown \citep{jskilbye}.
@@ -98,6 +103,14 @@ Archean versus Proterozoic
 
 %% ------------------------------------------------------------------------ %%
 
+
+M. G. Bostock, M. R. Kumar, 2010. Bias in seismic estimates of crustal properties, Geophys. J. Int., 182, 403-407.
+N. I. Christensen, 1996. Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156,
+R. J. Durrheim, W. D. Mooney, 1991. Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+W. D. Mooney. 2012. Personal communication. Compiled GSC active source data for the Canada.
+D.A. Thompson, I.D. Bastow, G. Helffrich, J-M. Kendall, J. Wookey, D.B. Snyder, D.W. Eaton, 2010. Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, Volume 297, Issues 3–4, 1 September 2010, Pages 655–666
+L. Zhu, H. Kanamori, 2000. Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys Res, 105, 2969-2980.
+G. Zandt, C. J. Ammon, 1995. Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
 
 More Information and Advice:
 
