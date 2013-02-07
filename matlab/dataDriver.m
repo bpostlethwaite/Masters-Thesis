@@ -18,7 +18,7 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'ARTN'; %
+station = 'SNPN'; %
 
 %{
 Need to find which stations go with which events.
@@ -80,8 +80,8 @@ end
 %     dlist{end+1} = fullfile(workingdir, events{ii});
 % end
 % db = process(db, dlist, station, workingdir, method, vp, 0);
-%ProcessStack
-ProcessTraces
+ProcessStack
+%ProcessTraces
 %% Assign Data
 
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...

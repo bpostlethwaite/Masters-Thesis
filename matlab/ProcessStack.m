@@ -3,7 +3,7 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
 npb = 2; % Average number of traces per bin
-discardBad = 0; % Discard traces that do not find minimum during decon
+discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
@@ -36,9 +36,10 @@ events = cellfun(cut, dlist, 'UniformOutput', false);
 % Note if you set the fid, all the traces with NANs will be written to a
 % file given with the fid. Note this thing appends,,, so turn it off before
 % repeates, or use sort & uniq to parse it back.
+%fid = fopen([userdir, '/thesis/data/nanfiles.list'], 'a');
 fid = 0;
 %fid = fopen('/home/bpostlet/thesis/data/nanfiles.list','a');
-[stack, event] = stackSources(events, station, stns, fid);
+[stack, event, lags] = stackSources(events, station, stns, fid);
 
 %% filter dlist??
 % Either filter list and do not include events that have only 1 stn data or
@@ -83,29 +84,17 @@ header = header(I);
 ptrace = ptrace(I,:);
 strace = strace(I,:);
 stack = stack(I,:);
+lags = lags(I, :);
 %% Align Events
-fp = fft(ptrace', N);
-fs = fft(stack', N);
-ccf = real( ifft(conj(fp) .* fs, N) );
-[~, ncc] = max(ccf);
+dt = header{1}.DELTA;
+%fp = fft(ptrace', N);
+%fs = fft(stack', N);
+%ccf = real( ifft(conj(fp) .* fs, N) );
+%[~, ncc] = max(ccf);
 
-stack = lagshift(stack, ncc);
-%% 1) Filter Event Directories
-%{
-printinfo = 0; % On and off flag to print out processing results
-dlist = filterEventDirs(workingdir, printinfo);
-%% 2)  Convert sac file format, filter bad picks
-%
-picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
-splitAzimuth = 0;
-cluster = 1;
-[ptrace, strace, header, pslows, sortBySlowness] = ...
-    ConvertFilterTraces(dlist, pfile, sfile,...
-    picktol, printinfo, splitAzimuth, cluster);
-%fclose('all'); % Close all open files from reading
-clear picktol printinfo dlist splitAzimuth cluster
-%}
-%% 3) Bin by p value (build pIndex)
+stack = lagshift(stack, lags, dt);
+%clear lags
+%% Bin by p value (build pIndex)
 %
 %numbin = round((1/npb) * size(ptrace, 1));
 numbin = 40;
@@ -116,12 +105,7 @@ pslow = pbin(any(pIndex)); % Strip out pbins with no traces
 pIndex = pIndex(:,any(pIndex)); % Strip out indices with no traces
 nbins = length(pslow); % Number of bins we now have.
 clear numbin pbinLimits checkind
-
-
-
-
 %% 4) Normalize
-dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
 stack = (diag(1./max( abs(stack), [], 2)) ) * stack;
@@ -134,7 +118,7 @@ if ~matlabpool('size')
     workers = 4;
     matlabpool('local', workers)
 end
-%% 5)  Window with Taper and fourier transform signal.
+%% Window with Taper and fourier transform signal.
 
 pad = 0.1;    % make taper x% wider so we don't cut out source function signal
 steps = size(ptrace,1);
@@ -177,7 +161,7 @@ end
 parfor ii = 1:nbins
     [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
     rec(ii,:) = real(ifft(r));
-    [rs,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1);
+    [rs,~,betax(ii)] = simdecf(sft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
     recStack(ii,:) = real(ifft(rs));
 end
 % if discardBad flag set simdecf will return Nan arrays where it did not
@@ -206,9 +190,18 @@ brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
 if snrlim > 0
     snr = zeros(size(brec,1), 1);
     for ii = 1:size(brec,1)
-        v = detrend(brec(ii, round(2.5/dt):round(45/dt)));
-        delta = 0.1 * max(abs(v));
+        v = detrend(brec(ii, round(2/dt):round(45/dt)));
+        delta = 0.1 * max(abs(v)) + 0.001;
         [maxtab, mintab] = peakdet(v, delta);
+        if isempty(maxtab)
+            snr(ii) = 0;
+            continue
+        end
+        % To much frequency for given length of signal window
+        if length(maxtab) > 60 || size(maxtab,1) < 5
+            snr(ii) = 0;
+            continue
+        end
         [~,I] = sort(maxtab(:,2),'descend');
         peakmax = maxtab(I,:);
         [~ ,I] = sort(mintab(:,2),'ascend');
@@ -216,15 +209,16 @@ if snrlim > 0
         bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
         noisepeak = mean(peakmax(3:end,2)) ;
         snr(ii) = bigpeak / noisepeak;
-%{        
+        %{
          plot(v);
          hold on
          plot(peakmax(:,1), peakmax(:,2), 'ro')
          plot(peakmin(:,1), peakmin(:,2), 'mo')
          title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
          hold off
-         pause()   
-%}
+         
+         pause()
+        %}
     end
     %brec = diag(snr) * brec;
     ind = snr < snrlim;

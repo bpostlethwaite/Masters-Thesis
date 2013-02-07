@@ -1,4 +1,4 @@
-function [stack] = sourceStacker(files, fid)
+function [stack, lags] = sourceStacker(files, fid)
 
 stack = [];
 lags = [];
@@ -65,6 +65,7 @@ wtrace = (diag(1./max( abs(trace(:, w1 : w2)), [], 2)) ) * trace(:, w1 : w2 );
 %% Get lags
 [lags, ~, ~] = mccc(wtrace, dt);
 %% Shift unwindowed traces
+
 strace = lagshift(trace, lags, dt);
 
 %% Stack
@@ -81,7 +82,7 @@ stack = sum( strace ) / size(strace, 1);
     pause()
 %}
 %% Write data to .mat
-%
+%{
 %folder = fullfile('/media/TerraS/SLAVE', events{num});
 %if ~exist( folder, 'dir')
 %    mkdir( folder )
@@ -89,6 +90,7 @@ stack = sum( strace ) / size(strace, 1);
 %save(fullfile( folder, 'stack.mat'), 'stack')
 %}
 %% PLOT
+%{
 %figure(2)
 
 %Y = norm(var(strace, 0, 1));
@@ -99,4 +101,5 @@ stack = sum( strace ) / size(strace, 1);
 %line([w1, w2; w1, w2] , [-1, -1; 1, 1])
 %subplot(2,1,2)
 %plot(sum(strace(:, w1: round(max(endtimes) /dt) )) / numt )
+%}
 end

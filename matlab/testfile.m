@@ -106,6 +106,7 @@ savejson('', sts, opt);
 
 
 %% Tern testing
+%{
 addpath functions
 
 br = 7.84;
@@ -116,3 +117,12 @@ vp = 7.0;
 [ A, B, C ] = terntransform(an, br, qz, vp, 100);
 
 disp(C)
+%}
+
+for ii = 1:size(ptrace, 1)
+    plot(ptrace(ii,2000:4000))
+    hold on
+    plot(stack(ii, 2000:4000), 'r')
+    pause
+    clf
+end
