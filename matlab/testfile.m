@@ -119,10 +119,39 @@ vp = 7.0;
 disp(C)
 %}
 
-for ii = 1:size(ptrace, 1)
-    plot(ptrace(ii,2000:4000))
-    hold on
-    plot(stack(ii, 2000:4000), 'r')
+N = round(40/dt);
+fs = 1/dt;
+df = fs / N;
+N2 = round(N/2);
+% calculate unshifted frequency vector
+f = (0:(N-1))*df;
+
+close all
+for ii = 1:size(brec, 1)
+    s = brec(ii, 1:N );
+    Fs = fft(s');
+    Fs = conj(Fs(1:N2)) .* Fs(1:N2);
+    Fs = Fs / max(Fs); 
+    f = f(1:N2);
+    
+    subplot(2,1,1)
+    plot(brec(ii, 1:N))
+    
+    subplot(2,1,2)
+    plot(f, Fs)
+
+
+    imp = sum(Fs( f < 3 )) / sum(Fs);
+    
+    title(sprintf('impulsivness = %2.4f', imp))
+    
     pause
-    clf
 end
+% 
+% for ii = 1:size(ptrace, 1)
+%     plot(ptrace(ii,2000:4000))
+%     hold on
+%     plot(stack(ii, 2000:4000), 'r')
+%     pause
+%     clf
+% end
