@@ -1,4 +1,4 @@
-function [Crec] = performCurveletDenoise(brec,dt,thresh,options)
+function [Crec] = performCurveletDenoise(brec,dt,thresh)
 
 % Process only first 30 seconds of reciever plot
 len = round(30/dt);
@@ -14,7 +14,7 @@ options.n = nn;
 options.m = mm;
 
 %% For testing proper thresholds
-%{
+%
 MW = perform_curvelet_transform(M, options);
 
 TT = 0.01:0.1:4;

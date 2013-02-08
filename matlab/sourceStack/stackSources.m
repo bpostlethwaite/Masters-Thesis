@@ -37,9 +37,8 @@ for ii = 1 : length(events)
     
     end
     %% STACK
-    if size(evlist, 2) > 1
-        [stx, lags] = sourceStacker(evlist, fid);
-    end
+    [stx, lags] = sourceStacker(evlist, fid);
+
     if ~isempty(stx)
         stack(stxind, :) = stx; %#ok<*SAGROW>
         event{stxind} = events{ii}; %#ok<*AGROW>
@@ -95,6 +94,8 @@ end
 
 if size(trace, 1) < 2
     fprintf('Only %i trace in. Skipping\n', size(trace, 1) )
+    %stack = trace;
+    %lags(1) = 0;
     return
 end
 dt = unique( dts );

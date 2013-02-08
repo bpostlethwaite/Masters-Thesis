@@ -141,7 +141,7 @@ for ii = 1:size(brec, 1)
     plot(f, Fs)
 
 
-    imp = sum(Fs( f < 3 )) / sum(Fs);
+    imp = sum(Fs( f < 2 )) / sum(Fs);
     
     title(sprintf('impulsivness = %2.4f', imp))
     

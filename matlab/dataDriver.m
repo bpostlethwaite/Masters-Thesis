@@ -9,6 +9,8 @@ loadtools;
 addpath ../sac
 addpath functions
 addpath sourceStack
+addpath([userdir,'/programming/matlab/toolbox_general'])
+addpath([userdir,'/programming/matlab/toolbox_signal'])
 addpath([userdir,'/programming/matlab/jsonlab'])
 %% Variables
 sacfolder = '/media/TerraS/CN';
@@ -18,7 +20,7 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'SNPN'; %
+station = 'PNPO'; %
 
 %{
 Need to find which stations go with which events.

@@ -3,12 +3,12 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
 npb = 2; % Average number of traces per bin
-discardBad = 0; % Discard traces that do not find minimum during decon
-%pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
-pscale = @(pslow) 1;
+discardBad = 1; % Discard traces that do not find minimum during decon
+pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
+%pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
-snrlim = 0.9;
+snrlim = 0.995;
 %% Get list of stations within bounds
 mindist = 250;
 maxdist = 1200;
@@ -179,6 +179,10 @@ if discardBad
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
+%% Curvelets
+
+%thresh = 0.3;
+%[brec] = performCurveletDenoise(rec, dt, thresh);
 
 %% 6) Filter Impulse Response
 numPoles = 2;
@@ -186,7 +190,7 @@ brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 clear numPoles
 %% Rescale by slowness
 % Scale by increasing p value
-brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2)) * brec;
+brec =  diag( pscale(pslow) ./ (max(abs(brec(:, 1:1200)), [], 2) + 0.01)) * brec;
 %% RF SnR
 if snrlim > 0
     N = round(45 / dt);
@@ -196,11 +200,11 @@ if snrlim > 0
     Fs = conj(Fs(1:N2, :)) .* Fs(1:N2, :);
     Fs = (diag( 1./ max(Fs) ) * Fs')';
     imp = sum(Fs( f(1: N2) < 3, : )) ./ sum(Fs);
-    imp = imp < snrlim;
-    brec( imp , : ) = [];
-    pslow( imp ) = [];
+    brec( imp < snrlim , : ) = [];
+    pslow( imp < snrlim ) = [];
     clear N N2 f Fs imp
 end
+
 %% Run Processing suite
 
 vp = json.(station).wm.Vp;

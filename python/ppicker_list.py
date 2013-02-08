@@ -17,13 +17,13 @@ if __name__== '__main__' :
 
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
-    events = open("../data/repicks.txt",'r').read().split('\n')
+    events = open("../data/nanfiles.list",'r').read().split('\n')
 
 
     index = 0
 
     while index < len(events):
-        event = events[index]
+        event = events[index][:-12]
         print "{}/{} {}".format(index + 1, len(events), event )
         comps = []
         try:
