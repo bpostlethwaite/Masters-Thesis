@@ -72,23 +72,45 @@ stdRsnyd = stdRsnyd[~ind]
 stns = stns[~ind]
 
 corr = pearsonr(R, Rsnyd)
-print corr
+print "Correlation between datasets is {0:.2f}".format(corr[0])
 
 t = np.arange(len(R))
-plt.plot(t, R, '-ob', lw = 4, ms = 12, label = "Vp/Vs estimate -  current data set")
-plt.plot(t, Rsnyd, '-og', lw = 4, ms = 12, label = "Vp/Vs estimate Thompson et al.")
-plt.plot(t, Rjapan, '*',  ms = 13, color = 'orange',  label = "Vp/Vs estimate Japan Source Region")
-plt.plot(t, Rchili, '*',  ms = 13, color = 'yellow', label = "Vp/Vs estimate Chili Source Region")
+
+#######################
+# Plotting formatter
+#######################
+ratio = 1.5
+lw = 4 / ratio# line width
+ms = 12 / ratio# marker size
+caplen = 7 / ratio
+capwid = 2 / ratio
+elw = 2 / ratio
+ticks = 16 / ratio
+label = 16 / ratio
+title = 18 / ratio
+leg = 16 / ratio
+
+ax = plt.subplot(111)
+plt.plot(t, R, '-ob', lw = lw, ms = ms, label = "Vp/Vs estimate -  current data set")
+plt.plot(t, Rsnyd, '-og', lw = lw, ms = ms, label = "Vp/Vs estimate Thompson et al.")
+plt.plot(t, Rjapan, '*',  ms = ms, color = 'orange',  label = "Vp/Vs estimate Japan Source Region")
+plt.plot(t, Rchili, '*',  ms = ms, color = 'yellow', label = "Vp/Vs estimate Chili Source Region")
 plt.errorbar(t, R, yerr=stdR, xerr=None, fmt=None, ecolor = 'blue',
-             elinewidth = 2, capsize = 7, mew = 2, label = "2 std dev Bootstrap")
+             elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
 plt.errorbar(t, Rsnyd, yerr=stdRsnyd, xerr=None, fmt=None, ecolor = 'green',
-             elinewidth = 2, capsize = 7, mew = 2, label = "1 std error Eaton et. al. 2006")
-plt.legend()
-plt.title("Comparison for given Canadian Shield Stations - " +
-          "Thompson et al (2010) data.\n" +
-          "Correlation: {0:2.3f}".format(corr[0]),
-          size = 18)
-plt.xticks(t,stns, size = 12)
-plt.ylabel('Vp/Vs', size = 16)
+             elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
+plt.legend(prop={'size': leg})
+# plt.title("Comparison for given Canadian Shield Stations - " +
+#           "Thompson et al (2010) data.\n" +
+#           "Correlation: {0:2.3f}".format(corr[0]),
+#           size = title)
+plt.xticks(t,stns, size = ticks)
+for tick in ax.xaxis.get_major_ticks():
+                tick.label.set_fontsize( ticks )
+                # specify integer or one of preset strings, e.g.
+                #tick.label.set_fontsize('x-small')
+                tick.label.set_rotation('vertical')
+plt.yticks(size = ticks)
+plt.ylabel('Vp/Vs', size = label)
 plt.grid(True)
 plt.show()
