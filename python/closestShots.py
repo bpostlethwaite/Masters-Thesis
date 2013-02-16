@@ -48,7 +48,7 @@ if __name__  == "__main__":
 # Filter dictionary to stations of this dist or less
 # And also provide a wieghted average Vp and H
 
-    ddeg = 0.5
+    ddeg = 1.0
     mdict = {}
 
     for stn in distd:

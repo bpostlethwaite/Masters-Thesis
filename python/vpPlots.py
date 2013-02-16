@@ -32,15 +32,25 @@ def princomp(A,numpc=0):
 
 if __name__  == "__main__":
 
-    m = Params(stnfile, ["mb::H","mb::Vp", "mb::stdVp"])
+    m = Params(stnfile, ["mb::H","mb::Vp", "mb::stdVp", "hk::stdR"])
     # m = Params(stnfile, ["hk::H","hk::R", "hk::stdR"])
     # m.mb_H = m.hk_H
     # m.mb_Vp = m.hk_R
 
     ## Figure Properties #######
-    width = 12
-    height = 9
-    legsize = width + 3
+    figwidth = 12
+    figheight = figwidth / 1.618
+    ratio = 1.5
+    lw = 4 / ratio# line width
+    ms = 12 / ratio# marker size
+    caplen = 7 / ratio
+    capwid = 2 / ratio
+    elw = 2 / ratio
+    ticks = 16 / ratio
+    label = 16 / ratio
+    title = 18 / ratio
+    leg = 16 / ratio
+
     ###########################
 
 
@@ -66,46 +76,57 @@ if __name__  == "__main__":
     xpt = [hmin, hmax]
     ypt = np.array([slope * xpt[0] + b, slope * xpt[1] + b])
 
-
-    #print xpt, ypt
-
-    fig = plt.figure( figsize = (width, height) )
-    plt.plot(m.mb_H, m.mb_Vp, 'ob', lw = 4, ms = 12, label = "Bostock (2010) Vp against H estimate")
-    plt.plot(xpt, ypt,'--r', lw = 4, label="Principal Component Vector")
+    fig = plt.figure( figsize = (figwidth, figheight) )
+    plt.plot(m.mb_H, m.mb_Vp, 'ob', lw = lw, ms = ms, label = "Bostock (2010) Vp against H estimate")
+    plt.plot(xpt, ypt,'--r', lw = lw, label="Principal Component Vector")
 #    plt.plot([0, coeff[1,0] * 2] + am[0], [0, coeff[1,1]*2] + am[1],'--k', lw = 4)
 
     plt.title("Correlated Error in Dataset: Moving up the Vp, H Trade Off Curve", size = 18)
-    plt.legend(loc= 2)
-    plt.ylabel("Station Vp [km/s]")
-    plt.xlabel("Station Thickness H [km]")
+    plt.legend(loc= 2, prop={'size': leg})
+    plt.ylabel("Station Vp [km/s]", size = label)
+    plt.xlabel("Station Thickness H [km]", size = label)
     plt.grid(True)
 
 
     #############################################################################
     # Vp estimates and controlled source
     ##############################################################################
-    arg = Args().stations(["ALE","ALGO","ARVN","BANO","CBRQ","DAWY","DELO","FCC","FFC","HAL","KGNO","KSVO","LMN","MBC","MNT","MOBC","ORIO","PEMO","PGC","PLVO","PMB","PTCO","SJNN","SUNO","ULM","ULM2","WAPA ","WHY","WSLR ","YKW1","YOSQ"])
-    m.filter(arg)
+
+#    arg = Args().stations(["ALE","ALGO","ARVN","BANO","CBRQ","DAWY","DELO","FCC","FFC","HAL","KGNO","KSVO","LMN","MBC","MNT","MOBC","ORIO","PEMO","PGC","PLVO","PMB","PTCO","SJNN","SUNO","ULM","ULM2","WAPA ","WHY","WSLR ","YKW1","YOSQ"])
+#    m.filter(arg)
     m.filter(Args().addQuery("mb::Vp", "gt", "5.5"))
-    m.filter(Args().addQuery("mb::stdVp", "lt", "0.8"))
+    m.filter(Args().addQuery("mb::Vp", "lt", "7.0"))
 
     c = Params(csfile, ["H","Vp"])
     c.sync(m)
 
     stdVp = 2 * m.mb_stdVp # 2 stdError
-    t = np.arange(len(m.mb_Vp[0:11]))
+    t = np.arange(len(m.mb_Vp))
 
-    corr = spearmanr(m.mb_Vp[0:11], c.Vp[0:11])
-    fig = plt.figure( figsize = (width, height) )
-    plt.plot(t, m.mb_Vp[0:11], '-ob', lw = 4, ms = 12, label = "Bostock (2010) Vp estimate")
-    plt.errorbar(t, m.mb_Vp[0:11], yerr=stdVp[0:11], xerr=None, fmt=None, ecolor = 'blue',
-                 elinewidth = 2, capsize = 7, mew = 2, label = "2 std dev Bootstrap")
-    plt.plot(t, c.Vp[0:11], '-og', lw = 4, ms = 12, label = "Proximal active source estimate")
-    plt.title("Active Source P-wave velocity comparison\n Correlation = {0:2.3f}".format(corr[0]), size = 18)
-    plt.legend()
-    plt.xlabel("Stations")
-    plt.ylabel("Vp [km/s]")
-    plt.xticks(t, c.stns[0:11], size = 12)
+    corr = pearsonr(m.mb_Vp, c.Vp)
+    print "correlation = {}".format(corr[0])
+
+    fig = plt.figure( figsize = (figwidth, figheight) )
+    ax = plt.subplot(111)
+
+    plt.plot(t, m.mb_Vp, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp estimate")
+    plt.errorbar(t, m.mb_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+    plt.plot(t, c.Vp, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
+#   plt.title("Active Source P-wave velocity comparison\n Correlation = {0:2.3f}".format(corr[0]), size = title)
+    plt.legend(prop={'size': leg})
+    plt.xlabel("Stations", size = label)
+    plt.ylabel("Vp [km/s]", size = label)
+
+    plt.axis("tight")
+
+    for tick in ax.xaxis.get_major_ticks():
+        tick.label.set_fontsize( ticks )
+        # specify integer or one of preset strings, e.g.
+        #tick.label.set_fontsize('x-small')
+        tick.label.set_rotation('vertical')
+
+    plt.xticks(t, c.stns, size = ticks)
     plt.grid(True)
 
     # #############################################################################
@@ -121,6 +142,49 @@ if __name__  == "__main__":
     # plt.xlabel("Vp [km/s]")
     # plt.ylabel("Thickness H [km]")
     # plt.grid(True)
+
+    # #############################################################################
+    # # MB Vp/Vs versus Kan Vp/Vs
+    # ##############################################################################
+    m = Params(stnfile, ["mb::H","mb::R", "mb::stdR"])
+    k = Params(stnfile, ["hk::H","hk::R", "hk::stdR"])
+
+    maxerr = 0.01
+    m.filter(Args().addQuery("mb::stdR", "lt", str(maxerr)))
+#    k.filter
+
+    k.sync(m)
+
+    stdR = 2 * m.mb_stdR # 2 stdError
+    t = np.arange(len(m.mb_R))
+
+    corr = pearsonr(m.mb_R, k.hk_R)
+    print "with stddev limit {} and {} stations, correlation = {}".format(maxerr, len(k.stns), corr[0])
+
+    fig = plt.figure( figsize = (figwidth, figheight) )
+    ax = plt.subplot(111)
+
+    plt.plot(t, m.mb_R, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp/Vs estimate")
+    plt.errorbar(t, m.mb_R, yerr= stdR, xerr=None, fmt=None, ecolor = 'blue',
+                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+    plt.plot(t, k.hk_R, '-og', lw = lw, ms = ms, label = "Kanamori Vp/Vs estimate")
+    plt.errorbar(t, k.hk_R, yerr=2 * k.hk_stdR, xerr=None, fmt=None, ecolor = 'green',
+                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+
+    plt.legend(prop={'size': leg})
+    plt.xlabel("Stations", size = label)
+    plt.ylabel("Vp/Vs", size = label)
+
+    plt.axis("tight")
+
+    for tick in ax.xaxis.get_major_ticks():
+        tick.label.set_fontsize( ticks )
+        # specify integer or one of preset strings, e.g.
+        #tick.label.set_fontsize('x-small')
+        tick.label.set_rotation('vertical')
+
+    plt.xticks(t, k.stns, size = ticks)
+    plt.grid(True)
 
 
 
