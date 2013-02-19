@@ -1,0 +1,31 @@
+-> Introduction
+  -> thank David and audience
+  -> Provide brief outline of talk
+    -> Going to walk through processed data
+    -> Compare it to other datasets
+    -> Show regional trends - averages
+    -> Discuss attempt to isolate Vp
+  -> How does it fit in with the GEM conference
+
+-> Data
+  -> Where it came from
+  -> What it is
+  -> Mooney's Database
+
+-> Methods
+  -> Really brief intro to what an RF is
+  -> Discuss how 2 algorithms were employed
+
+-> Results:
+  -> Walk through of the map
+  -> Good to Bad stations
+    -> Examples of the what the RF data looks like
+  -> Comparison of Vp/Vs with other Datasets
+  -> Comparison of Vp with Active source data
+  -> Look at the regions
+
+-> Discussion
+  -> Any interesting things to note pulled from the data
+
+-> Conclusions
+

@@ -22,7 +22,7 @@ stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 moonfile = os.environ['HOME'] + '/thesis/data/moonvpGeology.json'
 vfile = os.environ['HOME'] + '/thesis/data/voronoi.data'
 
-parameterType = 'velocity'
+parameterType = 'thickness'
 
 def poisson(R, reverse = False):
     ''' Function to go from Vp/Vs -> Poisson's ratio '''

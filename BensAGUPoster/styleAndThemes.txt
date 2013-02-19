@@ -1,0 +1,12 @@
+Style and Theme ideas:
+
+BaseMap needs some transparency or an overlay filter to wash out it's color.
+
+Background: I don't know. Probably some sort of fill, even if it's just an off-white or similar, though bolder backgrounds might look good.
+
+TextBoxes: I have no special attachment to square corners, or even visible boxes. My .pdf template was built using a single Google Presentation slide, so my options were limited.
+
+UBC symbol, I can send it or just steal it from Google, which is what I did anyway.
+
+Overall spacing: I find that the Archean vs Proterozoic section and the multi-histograms on the lower right is a little dense. If there was a way that these could feel less clustered that would be cool. The poster is big 4'x6' so maybe the map can be smaller.
+

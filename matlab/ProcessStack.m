@@ -10,7 +10,7 @@ fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
 snrlim = 0.995;
 %% Get list of stations within bounds
-mindist = 250;
+mindist = 100;
 maxdist = 1200;
 stns = distantStations(station, mindist, maxdist);
 clear mindist maxdist

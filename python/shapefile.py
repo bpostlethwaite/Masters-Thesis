@@ -737,6 +737,8 @@ class Writer:
                     value = str(value)[0].upper()
                 else:
                     value = str(value)[:size].ljust(size)
+                if len(value) != size:
+                    print "value", value, "is not equal to size", size
                 assert len(value) == size
                 value = b(value)
                 f.write(value)

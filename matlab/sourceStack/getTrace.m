@@ -5,7 +5,6 @@ for ii = 1:length(files)
 
     % TRY I/O: Read info from sac files
     S  = readsac(files{ii});
-   
     % Truncate if longer
     if S.NPTS > N
         S.DATA1(N+1:end) = [];

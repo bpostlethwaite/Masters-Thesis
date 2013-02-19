@@ -1,0 +1,11 @@
+References
+M. G. Bostock, M. R. Kumar, 2010. Bias in seismic estimates of crustal properties, Geophys. J. Int., 182, 403-407.
+N. I. Christensen, 1996. Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156,
+R. J. Durrheim, W. D. Mooney, 1991. Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+W. D. Mooney. 2012. Personal communication. Compiled GSC active source data for the Canada.
+D.A. Thompson, I.D. Bastow, G. Helffrich, J-M. Kendall, J. Wookey, D.B. Snyder, D.W. Eaton, 2010. Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, Volume 297, Issues 3–4, 1 September 2010, Pages 655–666
+L. Zhu, H. Kanamori, 2000. Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys Res, 105, 2969-2980.
+
+Footnotes
+1. Earth and Ocean Sciences, UBC, Vancouver BC, Canada.
+2. Geological Survey Canada, Natural Resources Canada, Ottawa ON, Canada.

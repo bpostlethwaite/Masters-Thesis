@@ -182,9 +182,9 @@ def mooney2shapefile(mooney):
 
     w.field("mcode", 'C', '3')
     w.field("Geotype", 'C', '45')
-    w.field("mVp", 'C', '6')
-    w.field("mVs", 'C', '6')
-    w.field("mH", 'C', '6')
+    w.field("mVp", 'N', 7, 4)
+    w.field("mVs", 'N', 7, 4)
+    w.field("mH", 'N', 7, 4)
 
     for (lon, lat), key, txt, (vp, vs, ht) in mooney:
         # Set lon & lat
@@ -198,9 +198,9 @@ def mooney2shapefile(mooney):
 
         w.record( key,
                   txt,
-                  "{0:2.3f}".format(vp),
-                  "{0:2.3f}".format(vs),
-                  "{0:2.3f}".format(ht))
+                  "{0:2.4f}".format(vp),
+                  "{0:2.4f}".format(vs),
+                  "{0:2.4f}".format(ht))
 
 
     w.save(shpfile)

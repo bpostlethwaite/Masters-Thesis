@@ -21,7 +21,6 @@ import scipy.io as sio
 databasedir = '/media/TerraS/database'
 netdir = '/media/TerraS/CN'
 dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
-shpfile = os.environ['HOME'] + '/thesis/mapping/stations'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
 updtime = os.environ['HOME'] + '/thesis/data/updtime.data'
 
@@ -116,10 +115,14 @@ def buildStations(stdict, cnsnlist):
 
     open(dbfile,'w').write( json.dumps(stdict, sort_keys = True, indent = 2 ))
 
-def json2shapefile(stdict, sc):
+def json2shapefile(stdict, fout, sc):
     ''' Converts the stations.json data into a shapefile for usage with
     GIS programs such as QGIS'''
 
+    if fout == None:
+        fout = os.environ['HOME'] + '/thesis/mapping/stations'
+    else:
+        fout = os.environ['HOME'] + '/thesis/mapping/' + fout
     w = shapefile.Writer( shapeType = 1 )
     # Set fields for attribute table
 
@@ -129,14 +132,14 @@ def json2shapefile(stdict, sc):
     w.field("status", 'C', '16')
     #w.field("Vp", "C", "5")
     for field in fields:
-        w.field(field, 'C', '6')
+        w.field(field, 'N', 7, 4)
 
     for key in stdict.keys():
         # Set lon & lat
         w.point( stdict[key]["lon"], stdict[key]["lat"] )
         values = []
         for f in fields:
-            values.append( '{0:2.3f}'.format(sc.flattendict(stdict[key])[f]) if f in sc.flattendict(stdict[key]) else "None ")
+            values.append( '{0:2.4f}'.format(sc.flattendict(stdict[key])[f]) if f in sc.flattendict(stdict[key]) else "None   ")
         w.record( key,
                   stdict[key]["network"],
                   stdict[key]["status"],
@@ -147,7 +150,7 @@ def json2shapefile(stdict, sc):
                   values[4],
                   values[5])
 
-    w.save(shpfile)
+    w.save(fout)
 
 def missingComps(s):
     if "MissingComponents" in s:
@@ -409,8 +412,8 @@ if __name__== '__main__' :
     group.add_argument('-u','--update', action = 'store_true',
                         help = "updates database with statistics from data files")
 
-    group.add_argument('-s',"--shape", action = "store_true",
-                       help = "creates shapefile from stations.json")
+    parser.add_argument('-s',"--shape", nargs = "?",
+                       help = "Creates shapefile from stations.json. Use with query to filter before converting. Note this will overwrite stations.shp unless you provide a filename.")
 
     group.add_argument('-b',"--build", action = "store_true",
                        help = "Builds stations from CNSN station list. Won't overwrite existing database stations")
@@ -425,7 +428,7 @@ if __name__== '__main__' :
         dbf =  open(dbfile)
 
     stdict = json.loads( dbf.read() )
-
+    qdict = {}
 
     # Append piped data if there is any
     # If we pipe a bunch of stations to program, query only these stations
@@ -455,8 +458,14 @@ if __name__== '__main__' :
     if args.modify:
         modifyData(stdict, args)
 
-    if args.shape:
-        json2shapefile(stdict, scp)
+    if args.shape != None:
+        fout = None
+        if args.shape:
+            fout = args.shape
+        if qdict:
+            json2shapefile(qdict, fout, scp)
+        else:
+            json2shapefile(stdict, fout, scp)
 
     if args.build:
         buildStations(stdict, stationlist)
