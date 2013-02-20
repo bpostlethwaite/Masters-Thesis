@@ -22,7 +22,7 @@ stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 moonfile = os.environ['HOME'] + '/thesis/data/moonvpGeology.json'
 vfile = os.environ['HOME'] + '/thesis/data/voronoi.data'
 
-parameterType = 'thickness'
+parameterType = 'velocity'
 
 def poisson(R, reverse = False):
     ''' Function to go from Vp/Vs -> Poisson's ratio '''
@@ -38,8 +38,8 @@ def addtext(data, ax, n, arclen):
     for ii, v in enumerate(data):
         txt = "{:0.3f}".format(v)
         ax.annotate(txt, xy = (v , 0.85 * max(n)) if ii else (v , 0.7 * max(n)),  xycoords='data', size = 16,
-                     xytext=(-200 - ii*50, 10), textcoords='offset points',
-                     arrowprops=dict(arrowstyle="->",lw = 3,
+                     xytext=(-100 - ii*50, 2), textcoords='offset points',
+                     arrowprops=dict(arrowstyle="->",lw = 1,
                                      connectionstyle="arc3,rad=0.2"))
 
 def distfunc(data, bins, n = None):
@@ -60,9 +60,9 @@ def plotlines(plt, data, pt):
         biot = 6.302
         mafc = 6.942
     elif pt.dbtype == 'kan' and not pt.H:
-        gran = 0.250
-        biot = 0.257
-        mafc = 0.283
+        gran = 1.73
+        biot = 1.75
+        mafc = 1.82
     elif pt.H:
         pass
     else:
@@ -76,22 +76,23 @@ def plotlines(plt, data, pt):
 
 def formatplot(plt, ax, legendsize, pt):
     if pt.title:
-        plt.title(pt.title, size = 22)
+        pass
+    #plt.title(pt.title, size = 22)
     if pt.xlabel:
-        plt.xlabel(pt.xlabel, size = 16)
-    plt.ylabel("# of Data", size = 16)
+        plt.xlabel(pt.xlabel, size = 12)
+    plt.ylabel("# of Data", size = 12)
     if legendsize:
         plt.legend(prop={'size':legendsize})
     plt.grid(True)
 
     for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize(14)
+        tick.label.set_fontsize(8)
 
 
 def plottern(plt, alpha, vp):
-    gran = np.array([6.208, 0.25])
-    mafc = np.array([6.942, 0.283])
-    gray = np.array([6.302, 0.257])
+    gran = np.array([6.208, poisson(0.25, True)])
+    mafc = np.array([6.942, poisson(0.283, True)])
+    gray = np.array([6.302, poisson(0.257, True)])
     vp = np.array([vp, alpha])
 
     a = gran
@@ -132,8 +133,8 @@ def plottern(plt, alpha, vp):
 
 def getdata(dtype, d, m, vdict, vdictregion):
     # Poisson Ratio bar control
-    pnmin = 0.22
-    pnmax = 0.30
+    pnmin = poisson(0.22, True)
+    pnmax = poisson(0.30, True)
     dpn = (pnmax - pnmin) / 25
     # Vp bar control
     vpmin = 5.8
@@ -153,13 +154,14 @@ def getdata(dtype, d, m, vdict, vdictregion):
 
     if pt.Vp | pt.R:
         if pt.dbtype == "kan":
-            data = poisson(d.hk_R)
+            #data = poisson(d.hk_R)
+            data = d.hk_R
             bins = np.arange(pnmin, pnmax, dpn)
             if vdictregion in vdict:
                 pt.avgmethod = "weighted"
-                avgd = poisson(vdict[vdictregion]['kanamori']['R'])
+                avgd = vdict[vdictregion]['kanamori']['R']
             else:
-                avgd = np.mean(poisson(d.hk_R))
+                avgd = np.mean(d.hk_R)
         if pt.dbtype == 'moon':
             data = m.Vp
             bins = np.arange(vpmin, vpmax, dvp)
@@ -210,7 +212,7 @@ class Ptype(object):
             header = "Crustal Thickness"
             self.xlabel = header + " H [km]"
         if (self.dbtype == 'kan') and not self.H:
-            header = "Poisson's Ratio"
+            header = "Vp/Vs Ratio"
             self.xlabel = header
         if self.dbtype == 'moon' and not self.H:
             header = "P-wave Velocity"
@@ -257,8 +259,8 @@ if __name__  == "__main__":
 
     ## Figure Properties #######
     width = 12
-    height = 9
-    legsize = width + 3
+    height = 5
+    legsize = height + 3
     ###########################
     ## Prep Data
     arg = Args()
@@ -560,7 +562,7 @@ if __name__  == "__main__":
         ptype.settitle("Archean and Proterozoic")
         d2k, avgd2k, dum1, ptype2 = getdata("kan", d2, [], vdict, 'Proter')
 
-        ax = plt.subplot(111)
+        ax = plt.subplot(121)
         n, bins, patches = plt.hist(dk, bins = bins, facecolor='green', alpha=1, label= "Archean")
         n2, bins2, patches2 = plt.hist(d2k, bins = bins, facecolor='blue', alpha=0.65, label= "Proterozoic")
         # add a 'best fit' line
@@ -577,8 +579,8 @@ if __name__  == "__main__":
 
 #############    # Mooney Vp histogram ###############
 
-        plt.figure( figsize = (width, height) )
-        ax = plt.subplot(111)
+        #plt.figure( figsize = (width, height) )
+        ax = plt.subplot(122)
         arg = Args()
         arg.addQuery("wm::type", "in", "Archean")
 
@@ -608,6 +610,71 @@ if __name__  == "__main__":
         #ptype.title = "Archean and Proterozoic\n Crustal Thickness from W. Mooney et. al. (2004) Data"
         formatplot(plt, ax, legsize, ptype)
         addtext([avgdm, avgd2m], ax, n, 0.3)
+
+
+
+    ###################################################
+    # F6 Shield Provinces in seperate figures
+    if plotnum[6]:
+        provs = [
+            "Churchill Province",
+            "Superior Province",
+            "Slave Province",
+            "Grenville Province"
+            ]
+
+        color = ['b', 'g', 'm', 'y', 'k', 'c']
+
+        for (ii, province) in enumerate(provs):
+
+    ### Vp/Vs Estimates
+
+            plt.figure( figsize = (width, height) )
+
+
+            d.reset()
+            arg = Args()
+            arg.addQuery("geoprov", "in", province)
+            d2 = Params(stnfile,  ["hk::H","hk::R"], arg)
+            d.sync(d2)
+
+            prov = province.replace(" ", "")
+            dk, avgdk, bins, ptype = getdata("kan", d, m, vdict, prov)
+
+            ptype.settitle("Canadian Shield")
+            ax = plt.subplot(121)
+            n, bins, patches = plt.hist(dk, bins = bins, facecolor=color[ii], alpha=0.75, label=ptype.histlabel)
+
+            # add a 'best fit' line
+            y = distfunc(dk, bins, n)
+            plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
+            plotlines(plt, avgdk, ptype)
+            formatplot(plt, ax, legsize, ptype)
+            addtext(avgdk, ax, n, 0.3)
+
+        ## Mooney Vp Histogram
+
+
+            m.reset()
+            arg = Args()
+            arg.addQuery("geoprov", "in", province)
+            m2 = Params(moonfile,  ["H","Vp"], arg)
+
+            m.sync(m2)
+            prov = province.replace(" ", "")
+            dm, avgdm, bins, ptype = getdata("moon", d, m, vdict, prov)
+
+            ax = plt.subplot(122)
+
+            n, bins, patches = plt.hist(dm, bins = bins, normed = True,  facecolor=color[ii], alpha=0.75, label='Mooney Vp')
+
+            # add a 'best fit' line
+            y = distfunc(dm, bins, n)
+            plt.plot(bins, y, 'r--', linewidth=2, label='Distribution curve')
+            plotlines(plt, avgdm, ptype)
+            formatplot(plt, ax, legsize, ptype)
+            addtext(avgdm, ax, n, 0.3)
+
 
 
 
