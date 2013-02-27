@@ -15,7 +15,6 @@
 
 %% ------------------------------------------------------------------------ %%
 \begin{abstract}
-   It has been suggested that processes driving crustal formation in the Archean and Proterozoic were dissimilar and produced crusts with unique bulk properties and average thicknesses. Existing models based on fractionating mantle composition or evolving mantle convection require accurate estimates of the geological and geophysical properties of crustal provinces to better understand the details of early continental formation (R. Durrheim, W. Mooney, 1991). Fifteen years of publicly accessible teleseismic data from all available Canadian seismic stations are binned in horizontal slowness and deconvolved into receiver functions. We apply a new stacking method (Bostock and Kumar, 2010) to retrieve estimates of bulk crustal velocities (Vp, Vs) and thickness H from these data under the assumption of 1-D structure. Bootstrap error analysis is performed for each station dataset and results are compared to the results produced from alternate methods (Zhu and Kanamori, 2000). Cross-analyzing these results with the mineral and rock seismic property database of Christensen (1996) will afford improved constraints on bulk geological composition of the Canadian landmass. These results will be used to evaluate competing models of early crustal formation.
 \end{abstract}
 
 %% ------------------------------------------------------------------------ %%
@@ -31,9 +30,11 @@
 
 %% -----------------------------------------------%%
 \section{Data and method}
-   Seismic data utilized in this study come from 343 stations across Canada from all available networks. Of these stations 146 are of sufficient quality to be useful for study. All stations are broadband with data selected between the years 2000 and 2012, for a total of more than 700 earthquake sources. All teleseismic events outside of the 30 to 100 degrees of epicentral distance are removed before processing. Data is selected for reasonable signal to noise ratioand sufficient impulsiveness that arrival times can be calculated. All data is analyzed using receiver function methods, an approach which has been widely employed over many years to investigate the earths structure.
+   Seismic data utilized in this study come from 343 stations across Canada from all available networks. Of these stations 146 are of sufficient quality to be useful for study. All stations are broadband with data selected between the years 2000 and 2012, for a total of more than 700 earthquake sources. All teleseismic events outside of the 30 to 100 degrees of epicentral distance are removed before processing. Data is selected for reasonable signal to noise ratio and sufficient impulsiveness that arrival times can be calculated. All data is analyzed using receiver function methods, an approach which has been widely employed over many years to investigate the earths structure.
 
    Two derivations of receiver function analysis have been used in this study, one well tested stacking approach and the other a recent method that has not yet been employed at scale. Both methods rely on the fact that the incoming S-wave contains energy from the direct arrival as well as reflected phases resulting from sharp velocity contrasts. Deconvolution of the P-wave energy arrival, used as an estimate for the source function, from the S-wave signal produces a Green's function with energy peaks at the times of the main and reflected arrivals. For better separation of P and S wave energy all components are rotated into radial and transverse dimensions and transformed into P, SV and SH components with a wave field decomposition transfer matrix (Bostock, 1998).
+
+
    Deconvolution is performed by minimizing the general cross validation function $GCV(\delta)$ where $\delta$ is used the regularizer (Bostock, 1998; Golub et al., 1979). This method is an $L_2$ frequency domain deconvolution which performs quickly and makes no assumptions on the noise in the data. All deconvolved signals are filtered between 0.04hz and 3.0hz and are stacked with weights $w_1=0.5$, $w_1=0.3$, $w_1=0.2$ for the Ps, PpPs and PpSs phases respectively. Error calculations are performed with bootstrap resampling by rerunning the processing with randomly chosen receiver functions - allowing multiples - 1024 times. The error is obtained by taking the standard deviation of the results.
 
 \subsection{Vp/Vs method}
@@ -45,7 +46,9 @@ $$ t_{Pps}(p_i) = \frac{ \sqrt{R^2-p_i^2V_P^2} + \sqrt{1-p_i^2V_P^2} } {\sqrt{R^
 $$ t_{Pss}(p_i) = \frac{2\sqrt{R^2-p_i^2V_P^2}} {\sqrt{R^2-p_i^2V_P^2} + \sqrt{1-p_i^2V_P^2} } t_{Ps}(p_i) $$
 This has the advantage that no assumptions on $V_P$ are necessary to perform the gridsearch and stack. A similar stacking method as the Zhu and Kanamori approach may be employed for $t_{Pps}$ and $t_{Pss}$ as long as an estimate for $t_{Ps}$ exists. With estimates for $R$ and $V_P$ a simple line search along $H$ can be made using all three undivided travel time equations.
 
-Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ should contain the largest fraction of energy out of the other phases and the moveout, depending on Moho depth, should be in the order of 3 to 6 seconds. Given this it is trivial to define a window and select the time corripsonding to maximum amplitude. Another approach is to use max amplitude estimates as data in a non-linear optimization to find the $R$, $V_P$, and $H$ which minimizes the residual between $t_{Ps}$ and the data. The travel time equations are twice-differentiable so the quadratically convergent Newton's method may be employed. This approach has the advantage that noise leading to poor maximum amplitude picks are effectively collapsed onto the curve corrisponding to the travel time function. A third approach which offers picks along a travel time curve but better stability than the non-linear method is to perform a gridsearch with all three travel time functions, a full Kanamori stack. With the best estimates for $R$ and $H$ the $t_{Ps}$ function can be found and used as input into the Bostock method. The trade-off is that the requirement for an initial $V_P$ estimate for the initial stack introduces secondary $V_P$ dependence into the system.
+
+(MOST LIKELY UNNECESSARY INFO)
+Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ should contain the largest fraction of energy out of the other phases and the moveout, depending on Moho depth, should be in the order of 3 to 6 seconds. Given this it is trivial to define a window and select the time corresponding to maximum amplitude. Another approach is to use max amplitude estimates as data in a non-linear optimization to find the $R$, $V_P$, and $H$ which minimizes the residual between $t_{Ps}$ and the data. The travel time equations are twice-differentiable so the quadratically convergent Newton's method may be employed. This approach has the advantage that noise leading to poor maximum amplitude picks are effectively collapsed onto the curve corresponding to the travel time function. A third approach which offers picks along a travel time curve but better stability than the non-linear method is to perform a gridsearch with all three travel time functions, a full Kanamori stack. With the best estimates for $R$ and $H$ the $t_{Ps}$ function can be found and used as input into the Bostock method. The trade-off is that the requirement for an initial $V_P$ estimate for the initial stack introduces secondary $V_P$ dependence into the system.
 
 \subsection{Vp database}
    Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
@@ -53,15 +56,24 @@ Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ sho
 
 %% -----------------------------------------------%%
 \section{Results}
-As regional studies exist which utilize similar methods and have corrisponding parameter estimates for some of the stations used in this study it is possilbe to directly compare values to those previously published. A comprehensive study in the Hudson Bay region of the Canadian Shield (Thomson et. al., 2010) uses an approach similar to the Zhu and Kanamori method provides estimates for $H$ and $R=/frac{V_P}{V_S}$ for 35 stations. 5 stations with $R$ estimates above 1.8 are removed due to the uncertainty surrounding these high values. Both datasets are plotted in Figure~\ref{fig:thompsonComp}. The Pearson correlation coefficient between these datasets is 0.49. [Compare this value to uncertainty / deviation in the data? ].
 
-Directly comparing $V_P$ estimates processed with the MB algorithm is not possible as this method has not been employed in publication. However, comparisons can be made to active source records for experiments within close proximity to a given seismic station (Figure~ \ref{fig:activeComp}. The correlation between these datasets is 0.235. [This is low, explain here?]. Another method of determining the reliability of estimates is to check the $/frac{V_P}{V_S}$ ratio taken from the Kanamori approach to the $/frac{V_P}{V_S}$ value computed from the MB approach. These values, working with the same data, preprocessed using the same methods and tools should be equal. Selecting only those stations who have an error of less than +/-0.05 $R$, 132 stations, we get a correlation of 0.57. Reducing the error tolerance and selecting stations with less than +/-0.01 $R$, leaving 31 of the cleanest stations, we get a correlation coefficient of 0.95.
+\subsection{Comparisons}
+As regional studies exist which utilize similar methods and have corresponding parameter estimates for some of the stations used in this study it is possible to directly compare values to those previously published. A comprehensive study in the Hudson Bay region of the Canadian Shield (Thomson et. al., 2010) uses an approach similar to the Zhu and Kanamori method published estimates for $H$ and $R=\frac{V_P}{V_S}$ for 35 stations. 5 stations with $R$ estimates above 1.8 are removed due to the uncertainty surrounding these high values. There is strong correlation of 0.95 between crustal thickness values for both datasets (Figure~\ref{fig:thompsonCompH}). The velocity ratio data has a lower correlation of 0.5 (Figure~\ref{fig:thompsonCompR}). [Compare this value to uncertainty / deviation in the data? ].
+
+Directly comparing $V_P$ estimates processed with the MB algorithm is not possible as this method has not been employed in publication. However, comparisons can be made to active source records for experiments within close proximity to a given seismic station (Figure~\ref{fig:activeComp}. The correlation between these datasets is 0.235. [This is low, explain here?]. Another method of determining the reliability of estimates is to check the $\frac{V_P}{V_S}$ ratio taken from the Kanamori approach to the $\frac{V_P}{V_S}$ value computed from the MB approach. These values, working with the same data, preprocessed using the same methods and tools should be equal. Selecting only those stations with an error of less than +/-0.05 $R$, 132 stations, we get a correlation of 0.57. Reducing the error tolerance and selecting stations with less than +/-0.01 $R$, leaving 31 of the cleanest stations, we get a correlation coefficient of 0.95.
 
 \begin{figure}
   \centering
-    \includegraphics[width=\textwidth]{thompsonComparison}
-  \caption{Comparison of $\frac{V_P}{V_R}$ data processed for this study with data from Thomspson et. al. (2010).}
-  \label{fig:thompsonComp}
+    \includegraphics[width=\textwidth]{thompsonComparisonH}
+  \caption{Comparison of crustal thickness $H$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.95}
+  \label{fig:thompsonCompH}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{thompsonComparisonR}
+  \caption{Comparison of $\frac{V_P}{V_R}$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.5}
+  \label{fig:thompsonCompR}
 \end{figure}
 
 \begin{figure}
@@ -71,19 +83,50 @@ Directly comparing $V_P$ estimates processed with the MB algorithm is not possib
   \label{fig:activeComp}
 \end{figure}
 
+\subsection{Crustal Thickness}
+ (MAY NOT INCLUDE)
+\begin{itemize}
+  \item Jump in crustal thickness over the fault as you go from the Slave to the Rae or Churchill Province.
+  \item Trend in Southern Ontario as we move north and up the St Lawrence Seaway.
+  \item Appears to be secular variation in the North Eastern Churchill. As we move North and East we have thickening of continental crust.
+\end{itemize}
 
-  The preliminary interrogation of the data set yields the observation that the bulk Canadian crust is more felsic than originally anticipated. Previous experiments show crustal averages of 0.265 (Christensen and Mooney, 1995) or have averages of at least 0.27 for shields, platforms and paleozoic units (Zandt and Ammon, 1995). The weighted average for this data set shows a Poisson' ratio of 0.258 with the weighting for each station given by the calculation of the stations inverse Voronoi cell area. At the regional scale we have values of 0.251. 0.254, 0.260, 0.275 for the Churchill, Superior, Slave and Grenville Provinces Poisson's ratios respectively. Most of the Canadian Shield stations also appear to have low Poisson values with the exception of the Grenville Province which has a high Poisson Ratio of 0.275.
+\subsection{Vp/Vs}
+\begin{itemize}
+  \item reference Figure~\ref{fig:VpVsMap}
+  \item For perspective, the value for Quartzite is 1.65 and Basalt is 1.85.
+  \item North East of the Slave province, has cluster of low Vp/Vs values in a semi circle of high values.
+  \item Appears to be an shift throughout the Superior province from high Vp/Vs in the South to low Vp/Vs in the North East.
+  \item Compare to Crust 2.0 overlay (Figure~\ref{fig:VpVsMapCrust}).  Average value for Churchill province Vp/Vs is 1.73 while average value computed from Crust 2.0 is 1.77.
+\end{itemize}
 
-  The data bears out earlier results showing Proterozoic crust to have a higher Poisson's ratio than Archean crust, likely the result of a more mafic composition. The increased crustal thickness of Proterozoic crust is clearly seen in the active source data while it not visible in data from processed seismic stations. The most likely reason for not seeing the signal of thicker crust in the station data is owing to poor station coverage in Proterozoic regions.
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{VpVsMap}
+  \caption{}
+  \label{fig:VpVsMap}
+\end{figure}
 
-  Further work on the Bostock-Kumar stacking approach is warranted from a look at the cleanest stations. Before it can be employed in large scale analysis additional denoising methods or alternative deconvolution techniques will need to be investigated to reduce the noise in the data.
-
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{VpVsMapCrust}
+  \caption{}
+  \label{fig:VpVsMapCrust}
+\end{figure}
 
 
 %% -----------------------------------------------%%
 \section{Discussion}
 \subsection{Canada}
-<Discussion on larger - Canada wide - regions>
+
+  The preliminary interrogation of the data set yields the observation that the bulk Canadian Shield has lower Vp/Vs than anticipated. Previous experiments show crustal averages of 1.77 (Christensen and Mooney, 1995) and 1.78 (Zandt and Ammon, 1995). This compares to computed values of 1.73, 1.74, 1.795 for the Churchill, Superior and Grenville Provinces Vp/Vs ratios respectively.
+
+
+(MIGHT NOT INCLUDE)  The data bears out earlier results showing Proterozoic crust to have a higher seismic velocity ratio than Archean crust. This follows previous studies on crustal formation that have noted this trend in other regions (Durrheim and Mooney, 1991) . The increased crustal thickness of Proterozoic crust is clearly seen in the active source data while it not visible in data from processed seismic stations.
+
+  Further work on the Bostock-Kumar stacking approach is warranted from a look at the cleanest stations. Before it can be employed in large scale analysis additional denoising methods or alternative deconvolution techniques will need to be investigated to reduce the noise in the data.
+
+
 \subsection{Slave Province}
 <Discussion on Slave Province>
 
@@ -136,13 +179,15 @@ D.A. Thompson, I.D. Bastow, G. Helffrich, J-M. Kendall, J. Wookey, D.B. Snyder, 
 L. Zhu, H. Kanamori, 2000. Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys Res, 105, 2969-2980.
 G. Zandt, C. J. Ammon, 1995. Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
 
-More Information and Advice:
-
-
 %
 %  SECTION HEADS
 %
 %% ------------------------------------------------------------------------ %%
+
+ABSTRACT
+   It has been suggested that processes driving crustal formation in the Archean and Proterozoic were dissimilar and produced crusts with unique bulk properties and average thicknesses. Existing models based on fractionating mantle composition or evolving mantle convection require accurate estimates of the geological and geophysical properties of crustal provinces to better understand the details of early continental formation (R. Durrheim, W. Mooney, 1991). Fifteen years of publicly accessible teleseismic data from all available Canadian seismic stations are binned in horizontal slowness and deconvolved into receiver functions. We apply a new stacking method (Bostock and Kumar, 2010) to retrieve estimates of bulk crustal velocities (Vp, Vs) and thickness H from these data under the assumption of 1-D structure. Bootstrap error analysis is performed for each station dataset and results are compared to the results produced from alternate methods (Zhu and Kanamori, 2000). Cross-analyzing these results with the mineral and rock seismic property database of Christensen (1996) will afford improved constraints on bulk geological composition of the Canadian landmass. These results will be used to evaluate competing models of early crustal formation.
+
+
 
 % Capitalize the first letter of each word (except for
 % prepositions, conjunctions, and articles that are

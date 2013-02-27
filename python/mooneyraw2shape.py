@@ -91,15 +91,15 @@ def mooney2shapefile(moon):
     # Set fields for attribute table
 
     w.field("mcode", 'C', '5')
-    w.field("m2Vp", 'C', '6')
-    w.field("m2H", 'C', '6')
+    w.field("mVp", 'N', 7, 3)
+    w.field("mH", 'N', 7, 3)
 
     for k in moon.keys():
         # Set lon & lat
         w.point( moon[k]["lon"], moon[k]["lat"] )
         w.record( k,
-                  "{0:2.3f}".format(moon[k]["Vp"]),
-                  "{0:2.3f}".format(moon[k]["H"]))
+                  "{0:3.3f}".format(moon[k]["Vp"]),
+                  "{0:3.3f}".format(moon[k]["H"]))
 
     w.save(shpfile)
 
