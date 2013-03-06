@@ -1,0 +1,79 @@
+- Introduction
+  - Geology of Canada
+  - Problem?
+    -
+  - Large Scale overview
+  -
+
+- Geological Background
+
+
+
+- Data and Methods
+  - (What is the data)
+    - Analysis of bulk Canadian continental crust require parameter estimates
+    - Estimates come from processing of seismograms into receiver functions
+    - Additional estimates from Crust 2.0 database and an active source compilation.
+
+  - Parameter Estimates from Teleseismic Data
+    - P-wave Teleseismic
+    - Broadband
+    - When 2000 to 2012
+    - All networks including CNSN, Polaris, FedNor and Chasme
+    - 343 Seismic stations
+    - More than 700 EQ sources
+    - at each station sources selected if within 30 to 100 degree epicentral distance window
+    - Total of 80,000 events
+    - Transformed into RFs
+
+  - (How)
+    - Two RF transformation algorithms used, one well tested, another not yet employed at scale
+    - Both methods utilize the S-wave reflected phases and the travel time difference to the
+      direct P-wave arrival
+    - [!Figure: Reflected phases]
+    - [!Equation: Travel Times]
+    - Strong Reflected phases at sharp velocity contrasts, for this study the boundary of interest is the Moho
+    - Seperation of P and S wave energy is performed by rotating coordinates into radial and transverse
+      dimensions and then transforming them in to P, SV and SH components with a wave field decomposition
+      transfer matrix (Bostock, 1998).
+    - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
+    - Deconvolution approach is an L2 freq domain which preforms quickly and makes no assumptions on
+      the noise in the data
+    - [!Equation: Deconvolution]
+    - Method minimize GCV(r) where r is used as ... explain Equation. (Bostock, 1998; Golub et al., 1979)
+    - Decon produces an approximation to the S-component of the Earth's Green's function.
+    - This Receiver function has energy located at the times corrisponding to the reflected S-wave arrivals
+      in the seismogram
+    - RF is filtered between 0.04Hz and 3.0Hz
+    - These RF's are used as the data for two parameter estimation methods
+
+    - Vp/Vs method
+      - Zhu and Kanamori (2000), hereafter ZK, proposed a method for extracting the ratio, R, of P-wave
+        velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H, from receiver functions.
+      - Method involves stacking RFs along trial moveout curves for a range of candidate models of R and H.
+      - Model requires an apriori assumption on crustal P-velocity, Vp, and will tradeoff to some degree with
+        crustal thickness H.
+      - Each phase is weighted based on the general trend in quality, with direct arrivals usually carrying
+        the best signal followed by the PpPs and finally PpSs.
+      - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
+        phases respectively.
+      - The model which stacks the most coherent energy is used to provide the best estimates for R and H.
+
+
+    - Vp method
+      -
+    - Error calculations
+
+  - Vp database
+
+  - Crust 2.0
+
+- Results
+
+  - Comparisons
+
+  - Crustal Thickness
+
+  - Vp/Vs
+
+- Discussion

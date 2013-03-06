@@ -1,0 +1,5 @@
+
+int main() {
+
+      const int numBits = 1;
+  const int numBins = 1 << numBits;

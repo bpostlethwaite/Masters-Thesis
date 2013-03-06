@@ -6,9 +6,8 @@ var rmdir = require('rimraf')
 var stations = ["DPQ","GAC","YKW3","OTT"]
 var stn = "DPQ"
 
+
 var finder = f.find("/media/TerraS/CN/" + stn)
-
-
 
 finder.on('directory', function (dir, stat) {
 
