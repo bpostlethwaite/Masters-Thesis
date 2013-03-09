@@ -52,7 +52,7 @@
         velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H, from receiver functions.
       - Method involves stacking RFs along trial moveout curves for a range of candidate models of R and H.
       - Model requires an apriori assumption on crustal P-velocity, Vp, and will tradeoff to some degree with
-        crustal thickness H.
+        crustal thickness H. Using the Crust 2.0 Vp estimate at each station.
       - Each phase is weighted based on the general trend in quality, with direct arrivals usually carrying
         the best signal followed by the PpPs and finally PpSs.
       - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
@@ -61,12 +61,41 @@
 
 
     - Vp method
-      -
+      - Method which allows for estimates of Vp and Vs uniquely (Bostock and Kumar, 2010) hereafter BK
+      - Does not require apriori assumption on Vp
+      - Linear dependence on H in equations can be removed by dividing reflected phases with the direct arrival
+      - [!Equation: BK travel time equations]
+      - Similar to stacking method of ZK, requires an estimate for tps
+      - Grid search for R and Vp
+      - Line search for H
+      - Several methods for choosing tps are available
+        - tps should represent the most prominent phase of the ____ and its arrival, depending on Moho depth,
+          should fall within the window of 3 to 6 seconds. With low moveout one may therefore select the
+          time corresponding to maximum amplitude within a given window as an estimate of tps.
+        - An alternative approach is to use max amplititude estimates as data in a non-linear optimization
+          to find the R, Vp and H which mimimize the residual between tps and the data. The travel time
+          equations are twice-differentiable so the quadratically convergent Newton's method may be employed.
+          This approach has the advantage that noise leading to poor maximum amplitude picks are effectively
+          collapsed onto the curve corresponding to the travel time function.
+        - The problem size is relatively small and performing a full 3D gridsearch over Vp Vs and H affords
+          the advantages of both the HK and BK approaches. No requirements for an estimate of tps or Vp and
+          provides estimates for Vp and Vs uniquely as well as H. The computational expense is felt computing
+          statistical estimates for the error
+
     - Error calculations
+      - Error calculations are performed with bootstrap resampling by rerunning the processing with randomly
+        receiver functions, with replacement, 1024 times. The error is obtained by taking the standard
+        deviation of the results
 
   - Vp database
+    - Estimates for Vp and H from compiled active source data
+    - Walter Mooney (Personal communication 2012)
+    - Provides some information in areas with sparse seismic station coverage
 
   - Crust 2.0
+    - Crust 2.0 provides statistically averaged estimates of Vp, Vs and H.
+    - Data relies on many sources, active and teleseismic
+    - Provides reference values for locally computed estimates
 
 - Results
 
