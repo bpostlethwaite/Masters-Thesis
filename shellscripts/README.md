@@ -6,7 +6,7 @@
 4. Run following command to generate a file showing azimuths and epicentral distances to Location given after rdneic
 5. Use UNIX awk to cull events to include only those of interest (for teleseismic P, from 30 to 100 degrees distance)
 
-    weed2spyder.sh dum.weed | rdneic -s -126.71, 52.35 | sort -nk1 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
+    weed2spyder.sh dum.weed | rdneic -s -77.87, 45.94 | sort -nk1 | awk '{ if ( ($7 >= 30 && $7 <= 100) ) print $0}' > event.list
 
 >> This outputs the following columns: name dum lat lon depth mag GCARC BackAZ
 

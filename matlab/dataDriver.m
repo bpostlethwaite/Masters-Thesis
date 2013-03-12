@@ -20,42 +20,44 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'KNDN'; %
+station = 'RSPO'; %
 
 %{
 Need to find which stations go with which events.
-EKTN
-BOXN
-COWN
-GBLN
-LUPN
-MGTN
-GLWN
-DVKN
-MLON
-IHLN
-LGSN
-ACKN
-RSNT
-CAMN
-YMBN
-MCKN
-COKN
-JERN
-NODN
-KNDN
-HFRN
-YNEN
-SNPN
-DSMN
-ILKN
-YKW1
-YKW2
-YKW5
-YKW4
-ARTN
-LDGN
-
+AP3N 
+ARVN 
+B1NU 
+B2NU 
+BULN 
+CRLN 
+CTSN 
+DORN 
+FCC 
+FRB 
+GIFN 
+ILON 
+INUQ 
+IVKQ 
+JOSN 
+KIMN 
+KUGN 
+LAIN 
+MANN 
+MNGN 
+NOTN 
+NUNN 
+PINU 
+PNGN 
+QILN 
+SBNU 
+SEDN 
+SHMN 
+SHWN 
+SRLN
+STLN
+WAGN
+YBKN
+YRTN
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);
@@ -72,18 +74,8 @@ end
 % souce stack approach, one using the regular method. If there are problems
 % need to get it to compare singular event as it moves  thorugh procssing
 % chain.
-% vp = json.(station).wm.Vp;
-% js = loadjson( [userdir,'/thesis/data/stationStackedEvents.json']);
-% events = cellstr(js.(station));
-% %db = processStack(db, events, station, workingdir, method, vp);
-% 
-% dlist = {};
-% for ii = 1:length(events)
-%     dlist{end+1} = fullfile(workingdir, events{ii});
-% end
-% db = process(db, dlist, station, workingdir, method, vp, 0);
-ProcessStack
-%ProcessTraces
+%ProcessStack
+ProcessTraces
 %% Assign Data
 
 [ db ] = assigndb( db, method, station, brec(:,1:round(45/dt)), ...

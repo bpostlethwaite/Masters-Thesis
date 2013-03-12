@@ -197,9 +197,9 @@ if snrlim > 0
     N2 = round(N/2);
     f = (0:(N-1)) * 1 / (N*dt);
     Fs = fft(brec(:, 1:round(45/dt))');
-    Fs = conj(Fs(1:N2, :)) .* Fs(1:N2, :);
+    Fs = conj(Fs(2:N2, :)) .* Fs(2:N2, :);
     Fs = (diag( 1./ max(Fs) ) * Fs')';
-    imp = sum(Fs( f(1: N2) < 3, : )) ./ sum(Fs);
+    imp = sum(Fs( f(2: N2) < 3, : )) ./ sum(Fs);
     brec( imp < snrlim , : ) = [];
     pslow( imp < snrlim ) = [];
     clear N N2 f Fs imp

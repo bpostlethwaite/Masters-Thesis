@@ -15,6 +15,6 @@ while read event; do
     curl ftp.seismo.NRCan.gc.ca/pub/autodrm/$event.seed \
     	--user ftp:$EMAIL -o $SEEDDIR/$event.seed
 
-    sleep 5
+    sleep 55
 
 done

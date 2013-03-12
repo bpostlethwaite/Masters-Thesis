@@ -45,7 +45,12 @@ parfor ir = 1:nr
         r1 = mean(gvr(round(t1/dt)+1+[0:np-1]*nt));
         r2 = mean(gvr(round(t2/dt)+1+[0:np-1]*nt));
         r3 = mean(gvr(round(t3/dt)+1+[0:np-1]*nt));
-        stackhr(ir,ih) = w1*r1 + w2*r2 - w3*r3;
+        
+        S1 = sum(gvr(round(t1/dt)+1+[0:np-1]*nt))^2 / sum(gvr(round(t1/dt)+1+[0:np-1]*nt).^2);
+        S2 = sum(gvr(round(t2/dt)+1+[0:np-1]*nt))^2 / sum(gvr(round(t2/dt)+1+[0:np-1]*nt).^2);
+        S3 = sum(gvr(round(t3/dt)+1+[0:np-1]*nt))^2 / sum(gvr(round(t3/dt)+1+[0:np-1]*nt).^2);
+        
+        stackhr(ir,ih) = S1*w1*r1 + S2*w2*r2 - S3*w3*r3;
     end
 end
 

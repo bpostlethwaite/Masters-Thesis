@@ -50,6 +50,7 @@ for ii = 1 : length(s)
         
         workingdir = fullfile(sacfolder,station);
         vp = json.(station).wm.Vp;
+        
         for qq = 1:2
             db0 = process(db, station, workingdir, method, vp, 0);
             db1 = process(db, station, workingdir, method, vp, 1); 

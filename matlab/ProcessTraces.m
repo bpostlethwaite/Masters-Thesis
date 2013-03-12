@@ -9,7 +9,7 @@ pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
 wavelet = 0;
-snrlim = 0;
+snrlim = .99;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -18,7 +18,8 @@ dlist = filterEventDirs(workingdir, printinfo);
 %
 picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 splitAzimuth = 0;
-cluster = 1;
+cluster = 0;
+printinfo = 1; % On and off flag to print out processing results
 [ptrace, strace, header, pslows, ~] = ...
     ConvertFilterTraces(dlist, pfile, sfile,...
     picktol, printinfo, splitAzimuth, cluster);
@@ -26,8 +27,8 @@ cluster = 1;
 clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
-%numbin = round((1/npb) * size(ptrace, 1));
-numbin = 40;
+numbin = round((1/npb) * size(ptrace, 1));
+%numbin = 40;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
@@ -39,16 +40,10 @@ clear numbin pbinLimits checkind
 dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
+
 %wdiag = 1 * normtrace( ptrace, strace, header, dt , printwdiag);
 %ptrace = wdiag * ptrace;
 %strace = wdiag * strace;
-
-%% Filter seismograms
-% numPoles = 2;
-% ptrace = fbpfilt(ptrace, dt, fLow, fHigh, numPoles, 0);
-% strace = fbpfilt(strace, dt, fLow, fHigh, numPoles, 0);
-% 
-% clear numPoles
 
 %% Setup parallel toolbox
 if ~matlabpool('size')
@@ -91,8 +86,7 @@ if wavelet > 0
     Jmin = 4;
     options.ti = 1;
     m = 4;    
-    T = wavelet;
-    
+    T = wavelet;    
     parfor jj = 1:size(rec,1)
         
         rs = rec(jj, :)';
@@ -121,14 +115,6 @@ if wavelet > 0
         wrec(jj, :) = fTI';
         
     end
-    %     figure(12234)
-    %     subplot(2,1,1)
-    %     plot(re(t1 : t2), 'b')
-    %     title(sprintf('\beta = %f', betare))
-    %     subplot(2,1,2)
-    %     plot(fTI(t1 : t2), 'r')
-    %     title(sprintf('T = %f', T))
-    %     pause(0.5)
     brec = wrec;
 end
 clear wavelet Jmin options m T
@@ -141,44 +127,17 @@ clear numPoles
 brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2) + 0.001 ) * brec;
 %% RF SnR
 if snrlim > 0
-    snr = zeros(size(brec,1), 1);
-    for ii = 1:size(brec,1)
-        v = detrend(brec(ii, round(2/dt):round(45/dt)));
-        delta = 0.1 * max(abs(v)) + 0.001;
-        [maxtab, mintab] = peakdet(v, delta);
-        if isempty(maxtab)
-            snr(ii) = 0;
-            continue
-        end
-        % To much frequency for given length of signal window
-        if length(maxtab) > 60 || size(maxtab,1) < 5
-            snr(ii) = 0;
-            continue
-        end
-        [~,I] = sort(maxtab(:,2),'descend');
-        peakmax = maxtab(I,:);
-        [~ ,I] = sort(mintab(:,2),'ascend');
-        peakmin = mintab(I,:);
-        bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
-        noisepeak = mean(peakmax(3:end,2)) ;
-        snr(ii) = bigpeak / noisepeak;
-        %{
-         plot(v);
-         hold on
-         plot(peakmax(:,1), peakmax(:,2), 'ro')
-         plot(peakmin(:,1), peakmin(:,2), 'mo')
-         title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
-         hold off
-         
-         pause()
-        %}
-    end
-    %brec = diag(snr) * brec;
-    ind = snr < snrlim;
-    brec( ind  , : ) = [];
-    pslow( ind ) = [];
+    N = round(45 / dt);
+    N2 = round(N/2);
+    f = (0:(N-1)) * 1 / (N*dt);
+    Fs = fft(brec(:, 1:round(45/dt))');
+    Fs = conj(Fs(2:N2, :)) .* Fs(2:N2, :);
+    Fs = (diag( 1./ max(Fs) ) * Fs')';
+    imp = sum(Fs( f(2: N2) < 3, : )) ./ sum(Fs);
+    brec( imp < snrlim , : ) = [];
+    pslow( imp < snrlim ) = [];
 end
-clear maxtab mintab delta v bigpeak noisepeak peakmin peakmax
+
 %% Run Processing suite
 
 vp = json.(station).wm.Vp;

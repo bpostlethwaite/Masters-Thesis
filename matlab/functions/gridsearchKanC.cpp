@@ -82,6 +82,9 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   double sumps = 0;
   double sumpps = 0.;
   double sumpss = 0.;
+  double Sps = 0;
+  double Spps = 0.;
+  double Spss = 0.;
   double stackhr[nh][nr];
 
   for(ih = 0; ih < nh; ih++ ) {
@@ -95,14 +98,27 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
         tps = round( h[ih] * (f1 - f2) / dt );
         tpps = round( h[ih] * (f1 + f2) / dt );
         tpss = round( h[ih] * 2. * f1 / dt );
-        sumps = sumps + rec[i * N + (int)tps];
-        sumpps = sumpps + rec[i * N + (int)tpps];
-        sumpss = sumpss + rec[i * N + (int)tpss];
-
+        sumps += rec[i * N + (int)tps];
+        sumpps += rec[i * N + (int)tpps];
+        sumpss += rec[i * N + (int)tpss];
+        
+        // Semblance Weighting
+        Sps += rec[i * N + (int)tps] * rec[i * N + (int)tps];
+        Spps += rec[i * N + (int)tpps] * rec[i * N + (int)tpps];
+        Spss += rec[i * N + (int)tpss] * rec[i * N + (int)tpss];
+         
       }
+      
+      Sps = sumps * sumps / Sps;
+      Spps = sumpps * sumpps / Spps;
+      Spss = sumpss * sumpss / Spss;
+      
       // add the mean of the two wieghted impulse estimate sums.
-      stackhr[ih][ir] = (adjtps * sumps + adjtpps * sumpps + adjtpss * sumpss) / nrecs;
+      stackhr[ih][ir] = (Sps * adjtps * sumps +
+                         Spps * adjtpps * sumpps +
+                         Spss * adjtpss * sumpss) / nrecs;
       sumps = sumpps = sumpss = 0;
+      Sps = Spps = Spss = 0;
 
     }
   }

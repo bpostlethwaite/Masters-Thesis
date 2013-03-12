@@ -57,6 +57,12 @@
         the best signal followed by the PpPs and finally PpSs.
       - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
         phases respectively.
+      - Semblance weighting (Eaton, 2006) used to reduce the effect of spurious large amplitude noise in
+        the data.
+      - [!Equation: Semblance]
+      - Semblance function ranges between zero for incoherent noise and one for a coherent signal
+      - Adding this additional wieghting shown by Eaton to provide sharper resolution when selecting between
+        stacked models.
       - The model which stacks the most coherent energy is used to provide the best estimates for R and H.
 
 
@@ -93,14 +99,17 @@
     - Provides some information in areas with sparse seismic station coverage
 
   - Crust 2.0
-    - Crust 2.0 provides statistically averaged estimates of Vp, Vs and H.
+    - Crust 2.0 provides statistically averaged estimates of Vp, Vs and H
     - Data relies on many sources, active and teleseismic
     - Provides reference values for locally computed estimates
 
 - Results
 
   - Comparisons
-
+    - Several regional studies have been published that utilize similar method to those described above in 2.1,
+      and contain parameter estimates of R and H for some of the stations used in this study.
+    - make direct comparison
+    - Comprehensive study in Hudson Bay region of Canadian Shield (Thompson et. al., 2010)
   - Crustal Thickness
 
   - Vp/Vs

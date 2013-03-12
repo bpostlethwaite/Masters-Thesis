@@ -30,7 +30,7 @@ class Getch:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch
 
-def ppicker(eventdir, pname, sname, repick = False):
+def ppicker(eventdir, pname, sname, unpicked = False):
     """ Function ppicker is a ginput based arrival picker
     allowing for 3 time picks which are saved in SAC data headers"""
 
@@ -50,7 +50,7 @@ def ppicker(eventdir, pname, sname, repick = False):
     t7 = (pt.stats.sac['t7'] - b ) / dt
 
     # Skip if T1 and T3 are greater than zero. The default is a large negative number
-    if repick:
+    if unpicked:
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
             return 's'
 
