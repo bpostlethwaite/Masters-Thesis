@@ -1,55 +1,36 @@
 /*jshint asi: true*/
 /*jshint laxcomma: true*/
 "use strict";
-var server = require("node-static")
-  , app = require("http").createServer(handler)
-  , io = require("socket.io").listen(app)
+
+var st = require("st")
+  , http = require("http")
+  , io = require("socket.io")
   , fs = require("fs")
 
 // Listen on port
-var port = 80
-app.listen(port)
-console.log("Static server listening on " + port)
+var PORT = 8082
+  , STATIC = 'public'
+  , mount = st(
+    { path: './' + STATIC
+    , url: '/'
+    , index: 'index.html'
+    })
+var server = http.createServer( mount ).listen(PORT)
 
-// Minimal logging level
+console.log("Static server listening on " + PORT)
+
+/*
+ * socket.io setup
+ */
+io = io.listen(server)
 io.set('log level', 0)
 
-//
-// BORING SERVER
-//
-var clientFiles = new server.Server("./public")
-function handler(request, response) {
-  request.addListener('end', function() {
-    //
-    // Serve files!
-    //
-    clientFiles.serve(request, response, function(err, res) {
-      if (err) { // An error as occured
-        console.log("> Error serving " + request.url + " - " + err.message)
-        response.writeHead(err.status, err.headers);
-        response.end()
-      }
-      else { // The file was served successfully
-        console.log("> " + request.url + " - " + res.message)
-      }
-    })
-  })
-}
 
 //
 // Load up station data into memory
 //
-var jsonternary
 var jsonstation
-fs.readFile("../../ternplots.json", 'utf8', function (err, data) {
-  if (err) throw err
-  try {
-    jsonternary = JSON.parse(data)
-  } catch (err) {
-    throw err
-  }
-})
-fs.readFile("../../stations.json", 'utf8', function (err, data) {
+fs.readFile("../../data/stations.json", 'utf8', function (err, data) {
   if (err) throw err
   try {
     jsonstation = JSON.parse(data)
@@ -58,16 +39,27 @@ fs.readFile("../../stations.json", 'utf8', function (err, data) {
   }
 })
 
-
-//
-//
-// SOCKETS!
-//
+/*
+ * We are assuming the async read is completed before a connection attempt.
+ * In this simple application that assumption is completely valid
+ */
 io.sockets.on('connection', function(socket) {
-  //
-  // Connect content
-  //
-  socket.emit('ternJson', jsonternary )
-  socket.emit('stationsJson', jsonstation )
+  /*
+   * On connection fire off all the stations, plus the image
+   * data if there is any.
+   */
+
+  Object.keys(jsonstation).forEach(function(key) {
+    var fig = "csect_"+key+".png"
+    var data = {
+      stn : jsonstation[key]
+    , stname : key
+    , fig : fs.existsSync("public/images/"+fig) ? fig : ""
+    }
+    socket.emit('stationsJson', data )
+  })
+
+
+
 
 })

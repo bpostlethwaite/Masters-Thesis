@@ -13,9 +13,7 @@ json = loadjson('../data/stations.json');
 method = 'kanamori';
 s = fieldnames(json);
 %logfile = fopen('logfile','w');
-s = {
-    'B2NU'
-    };
+
 
 for ii = 1 : length(s)
 

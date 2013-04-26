@@ -115,8 +115,22 @@ end
 w1 = round((min(picktimes) - 2) / dt); % 2 seconds before earliest
 w2 = round(( 0.75 * max(endtimes) + 0.25 * w1 * dt ) / dt);
 w3 = round( max(endtimes) / dt) ; % max end of envelope
+% Check w1, w2, w3 are real
+if any(w1 < 0)
+   kill = any(w1 < 0);
+   trace(kill, :) = [];
+   dt(kill) = [];
+   disp(kill)
+   fprintf('%i %i %i', w1,w2,w3);
+   w1(kill) = [];
+   w2(kill) = [];
+   w3(kill) = [];
+   if length(w1) < 1
+       return
+   end
+end
 %% normalize traces
-wtrace = (diag(1./max( abs(trace(:, w1 : w2)), [], 2)) ) * trace(:, w1 : w2 );
+wtrace = (diag(1./max( abs(trace(:, w1 : w3)), [], 2)) ) * trace(:, w1 : w3 );
 
 %% Get lags
 [lags, ~, ~] = mccc(wtrace, dt);

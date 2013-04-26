@@ -8,9 +8,9 @@ pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slown
 %pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
-snrlim = 0.995;
+snrlim = 0.99;
 %% Get list of stations within bounds
-mindist = 100;
+mindist = 50;
 maxdist = 1200;
 stns = distantStations(station, mindist, maxdist);
 clear mindist maxdist
@@ -96,8 +96,8 @@ stack = lagshift(stack, -lags, dt);
 %clear lags
 %% Bin by p value (build pIndex)
 %
-%numbin = round((1/npb) * size(ptrace, 1));
-numbin = 40;
+numbin = round((1/npb) * size(ptrace, 1));
+%numbin = 40;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
@@ -169,7 +169,6 @@ end
 % Pslow indices.
 clear wft vft
 
-%rec = recStack;
 
 %% Weed out poor rf results
 % Cut out traces where no betax was found during simdecf
@@ -179,10 +178,7 @@ if discardBad
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
-%% Curvelets
 
-%thresh = 0.3;
-%[brec] = performCurveletDenoise(rec, dt, thresh);
 
 %% 6) Filter Impulse Response
 numPoles = 2;
@@ -224,48 +220,3 @@ end
 % Run Bootstrap
 [ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1048, method, TTps', vp);    
 
-
-
-
-%% Old SNR
-%{
-% if snrlim > 0
-%     snr = zeros(size(brec,1), 1);
-%     for ii = 1:size(brec,1)
-%         v = detrend(brec(ii, round(2/dt):round(45/dt)));
-%         delta = 0.1 * max(abs(v)) + 0.001;
-%         [maxtab, mintab] = peakdet(v, delta);
-%         if isempty(maxtab)
-%             snr(ii) = 0;
-%             continue
-%         end
-%         % To much frequency for given length of signal window
-%         if length(maxtab) > 60 || size(maxtab,1) < 5
-%             snr(ii) = 0;
-%             continue
-%         end
-%         [~,I] = sort(maxtab(:,2),'descend');
-%         peakmax = maxtab(I,:);
-%         [~ ,I] = sort(mintab(:,2),'ascend');
-%         peakmin = mintab(I,:);
-%         bigpeak = (0.5 * peakmax(1,2) + 0.3 * peakmax(2, 2) - 0.2 * peakmin(1,2));
-%         noisepeak = mean(peakmax(3:end,2)) ;
-%         snr(ii) = bigpeak / noisepeak;
-%         %{
-%          plot(v);
-%          hold on
-%          plot(peakmax(:,1), peakmax(:,2), 'ro')
-%          plot(peakmin(:,1), peakmin(:,2), 'mo')
-%          title(sprintf('delta %1.3f SNR = %1.3f', delta, snr(ii)))
-%          hold off
-%          
-%          pause()
-%         %}
-%     end
-%     %brec = diag(snr) * brec;
-%     ind = snr < snrlim;
-%     brec( ind  , : ) = [];
-%     pslow( ind ) = [];
-% end
-% clear maxtab mintab delta v bigpeak noisepeak peakmin peakmax
-%}

@@ -118,7 +118,6 @@ def buildStations(stdict, cnsnlist):
 def json2shapefile(stdict, fout, sc):
     ''' Converts the stations.json data into a shapefile for usage with
     GIS programs such as QGIS'''
-
     if fout == None:
         fout = os.environ['HOME'] + '/thesis/mapping/stations'
     else:
@@ -412,7 +411,7 @@ if __name__== '__main__' :
     group.add_argument('-u','--update', action = 'store_true',
                         help = "updates database with statistics from data files")
 
-    parser.add_argument('-s',"--shape", nargs = "?",
+    parser.add_argument('-s',"--shape", nargs = "*",
                        help = "Creates shapefile from stations.json. Use with query to filter before converting. Note this will overwrite stations.shp unless you provide a filename.")
 
     group.add_argument('-b',"--build", action = "store_true",
@@ -450,7 +449,7 @@ if __name__== '__main__' :
     if args.printer != None:
         # if it has command line options (meaning its not an empty list)
         # assume there are stations after it, though piped stations should take
-        # presedence.
+        # precedence.
         if args.printer and not args.stationList:
             args.stationList = args.printer
         printStns(stdict, queryStns(stdict, args, scp), args, scp)

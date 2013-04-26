@@ -20,44 +20,10 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'RSPO'; %
-
+station = 'GBLN'; %
+% KGNO
 %{
-Need to find which stations go with which events.
-AP3N 
-ARVN 
-B1NU 
-B2NU 
-BULN 
-CRLN 
-CTSN 
-DORN 
-FCC 
-FRB 
-GIFN 
-ILON 
-INUQ 
-IVKQ 
-JOSN 
-KIMN 
-KUGN 
-LAIN 
-MANN 
-MNGN 
-NOTN 
-NUNN 
-PINU 
-PNGN 
-QILN 
-SBNU 
-SEDN 
-SHMN 
-SHWN 
-SRLN
-STLN
-WAGN
-YBKN
-YRTN
+
 %}
 dbfile = fullfile(databasedir, [station,'.mat'] );
 workingdir = fullfile(sacfolder,station);

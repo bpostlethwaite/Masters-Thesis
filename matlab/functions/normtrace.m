@@ -17,13 +17,13 @@ for ii = 1:length(header)
     B = sqrt( (b * b') / length(b)) ;
     C = sqrt( (c * c') / length(c));
     
-    weight(ii) = A / ( B + C );
+    weight(ii) = (2*A - B) / C;
     
     if plotflag
         subplot(2,1,1)
         minp = min(ptrace(ii, :));
         maxp = max(ptrace(ii, :));
-        plot( ptrace(ii, :) )
+        plot( ptrace(ii, 1:t3 + 200) )
         title(sprintf('A = %2.2f, B = %2.2f, C = %2.2f\nweight %2.2f',...
             A, B, C, weight(ii)))
         hold on

@@ -2,13 +2,12 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
-npb = 2; % Average number of traces per bin
+npb = 3; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
-wavelet = 0;
 snrlim = .99;
 %% 1) Filter Event Directories
 %
@@ -41,10 +40,11 @@ dt = header{1}.DELTA;
 ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
 strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
 
-%wdiag = 1 * normtrace( ptrace, strace, header, dt , printwdiag);
+%printwdiag = false;
+%wdiag = 4 * normtrace( ptrace, strace, header, dt , printwdiag);
 %ptrace = wdiag * ptrace;
 %strace = wdiag * strace;
-
+clear printwdiag wdiag
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
@@ -80,51 +80,11 @@ if discardBad
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
-%% Wavelet denoise
 
-if wavelet > 0
-    Jmin = 4;
-    options.ti = 1;
-    m = 4;    
-    T = wavelet;    
-    parfor jj = 1:size(rec,1)
-        
-        rs = rec(jj, :)';
-        
-        fTI = zeros(length(rs), 1);
-        %T = 0.1;
-        % Shift invariant wavelet thresholding
-        
-        for ii = 1:m;
-            %Apply the shift, using circular boundary conditions.
-            fS = circshift(rs, ii)';
-            
-            %Apply here the denoising to fS.
-            a = perform_wavelet_transf(fS, Jmin, 1, options);
-            aT = perform_thresholding(a, T, 'soft');
-            fS = perform_wavelet_transf(aT, Jmin, -1, options);
-            
-            %After denoising, do the inverse shift.
-            fS = circshift(fS, -ii);
-            
-            %Accumulate the result to obtain at the end the denoised image that
-            % average the translated results.
-            fTI = (ii-1)/ii*fTI + 1/ii*fS;
-        end
-        
-        wrec(jj, :) = fTI';
-        
-    end
-    brec = wrec;
-end
-clear wavelet Jmin options m T
 %% 6) Filter Impulse Response
 numPoles = 2;
 brec = fbpfilt(rec, dt, fLow, fHigh, numPoles, 0);
 clear numPoles
-%% Rescale by slowness
-% Scale by increasing p value
-brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:1200)), [], 2) + 0.001 ) * brec;
 %% RF SnR
 if snrlim > 0
     N = round(45 / dt);
@@ -137,6 +97,11 @@ if snrlim > 0
     brec( imp < snrlim , : ) = [];
     pslow( imp < snrlim ) = [];
 end
+
+%% Rescale by slowness
+% Scale by increasing p value
+brec =  diag( pscale(pslow) ./ max(abs(brec(:, 1:round(45/dt)) ), [], 2) + 0.001 ) * brec;
+
 
 %% Run Processing suite
 

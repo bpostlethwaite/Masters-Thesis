@@ -20,7 +20,7 @@ class Getch:
         import tty, sys
 
     def __call__(self):
-        import sys, tty, termios
+        import termios # sys, tty
         fd = sys.stdin.fileno()
         old_settings = termios.tcgetattr(fd)
         try:
@@ -30,7 +30,7 @@ class Getch:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch
 
-def ppicker(eventdir, pname, sname, unpicked = False):
+def ppicker(eventdir, pname, sname, get, args):
     """ Function ppicker is a ginput based arrival picker
     allowing for 3 time picks which are saved in SAC data headers"""
 
@@ -50,7 +50,7 @@ def ppicker(eventdir, pname, sname, unpicked = False):
     t7 = (pt.stats.sac['t7'] - b ) / dt
 
     # Skip if T1 and T3 are greater than zero. The default is a large negative number
-    if unpicked:
+    if args.unpicked:
         if float(pt.stats.sac['t1']) > 0 and float(pt.stats.sac['t3']) > 0:
             return 's'
 
@@ -58,8 +58,6 @@ def ppicker(eventdir, pname, sname, unpicked = False):
     right = round(t0 + 140/dt)
     t = np.around(np.arange(-t0*dt, (N - t0)*dt, dt)) # Time axis
     nn = np.arange(0,N)
-
-    get = Getch()
 
     plt.figure( num = None, figsize = (22,6) )
     plt.plot(p, label = 'Pcomp')
@@ -74,22 +72,34 @@ def ppicker(eventdir, pname, sname, unpicked = False):
     plt.xlim(left, right)
     plt.xlabel('Time \n P arrival is zero seconds')
     plt.legend()
-    x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
-
-    try:
-        T1 = x[0][0]*dt + b
-        T3 = x[1][0]*dt + b
-
-    except IndexError:
-        print "Not all picks made in", eventdir
-        print "Please retry the picks"
-        return 'r'
-
-    plt.close()
 
     print "Keep trace? 'n' for no, 'r' for redo, 'p' for previous, 's' for skip and any other for yes: "
 
-    inp = get()
+    if args.sort:
+
+        plt.show(block=False)
+        inp = get()
+        plt.close()
+        return inp
+
+    else:
+        x = plt.ginput(n = 2, timeout = 0, show_clicks = True)
+
+        try:
+            T1 = x[0][0]*dt + b
+            T3 = x[1][0]*dt + b
+
+        except IndexError:
+            print "Not all picks made in", eventdir
+            print "Please retry the picks"
+            return 'r'
+
+        plt.close()
+        inp = get()
+
+
+
+
 
     if inp not in ['n','r','p','s']:
         # Assume yes and save
@@ -110,6 +120,8 @@ def isEitherPoorOrNumber(s):
 
 if __name__== '__main__' :
 
+    get = Getch()
+
     reg2 = re.compile(r'^stack_(\w)\.sac')
 
     # Create top-level parser
@@ -128,6 +140,9 @@ if __name__== '__main__' :
 
     parser.add_argument('-r','--reset', action = 'store_true',
                         help = "unpicks all folders by renaming them back to numeric event folder names")
+
+    parser.add_argument('-s','--sort', action = 'store_true',
+                        help = "quickly run through all picked folders and use yes or no to keep or discard")
 
     args = parser.parse_args()
 
@@ -175,7 +190,8 @@ if __name__== '__main__' :
         comps.sort()
         _ , sacfiles = zip(*comps)
 
-        cmd = ppicker(eventdir,sacfiles[0],sacfiles[1], args.unpicked)
+
+        cmd = ppicker(eventdir,sacfiles[0],sacfiles[1], get, args)
 
     ###########################################################################
     # This is the control switch board. If function returns n, rename folder.

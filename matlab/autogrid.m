@@ -10,7 +10,7 @@ databasedir = '/media/TerraS/database';
 json = loadjson([userdir,'/thesis/data/thompsonPaper.json']);
 stns = fieldnames(json);
 
-fhout = fopen([userdir,'/thesis/data/thompsonProcessed.json'], 'w');
+fhout = fopen([userdir,'/thesis/data/thomsponProcessed.json'], 'w');
             
 %Setup parallel toolbox
 if ~matlabpool('size')
@@ -56,9 +56,6 @@ for stn = stns'
     s.(station).('stdH') = std(boot.H);
     
 end
-
-
-
 
 opt.ForceRootName = 0;
 json = savejson('', s, opt);
