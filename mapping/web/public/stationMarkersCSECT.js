@@ -9,14 +9,14 @@ function initialize() {
     center: myLatlng,
     mapTypeId: google.maps.MapTypeId.HYBRID
   }
-  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
 
 
   // Create the legend and display on the map
-  var legendDiv = document.createElement('DIV');
-  appendlegend(legendDiv);
-  legendDiv.index = 1;
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legendDiv);
+  var legendDiv = document.createElement('DIV')
+    , legendEntry = appendlegend(legendDiv)
+  legendDiv.index = 1
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legendDiv)
 
 
 // Connect sockets to server and receiver station data
@@ -25,17 +25,27 @@ function initialize() {
   // Get station data
   socket.on('stationsJson', function(data) {
     // Send station data to marker function
-    addMarker(map, data)
+    addMarker(map, data, legendEntry)
   })
 }
 
-var icon = [
-  { status: "processed-ok"
-                     ,
+var icobj = {
+  "processed-ok": "http://maps.google.com/mapfiles/marker_green.png"
+, "processed-notok": "http://maps.google.com/mapfiles/marker_orange.png"
+, "picked": "http://maps.google.com/mapfiles/marker_yellow.png"
+, "bad station": "http://maps.google.com/mapfiles/marker.png"
+, "aquired": "http://maps.google.com/mapfiles/marker_grey.png"
+, "not aquired": "http://maps.google.com/mapfiles/marker_black.png"
+, "data corruption": "http://maps.google.com/mapfiles/marker_purple.png"
+}
 
+var seenIcons = {}
+Object.keys(icobj).forEach( function (key) {
+  seenIcons[key] = false
+})
 // PUT ICONS AND STATUS IN A STRUCTURE AND CALL FROM LEGEND AND ADDMARKER //
 
-function addMarker(map, data) {
+function addMarker(map, data, lentry) {
   // Run though station data and create a marker for each
   // entry. We have the base station.json as well as the
   // built up ternplots.json. Need to distinguish.
@@ -45,23 +55,7 @@ function addMarker(map, data) {
   var stn = data.stn
   var stname = data.stname
   var img = data.fig ? '<img border="0" align="left" src="images/' + data.fig + '">' : ''
-  var icon
-  if(stn.status === "processed-ok")
-    icon = "http://maps.google.com/mapfiles/marker_green.png"
-  else if(stn.status === "processed-notok")
-    icon = "http://maps.google.com/mapfiles/marker_orange.png"
-  else if(stn.status === "picked")
-    icon = "http://maps.google.com/mapfiles/marker_yellow.png"
-  else if(stn.status === "bad station")
-    icon = "http://maps.google.com/mapfiles/marker.png"
-  else if(stn.status === "aquired")
-    icon = "http://maps.google.com/mapfiles/marker_grey.png"
-  else if(stn.status === "not aquired")
-    icon = "http://maps.google.com/mapfiles/marker_black.png"
-  else
-    icon = "http://maps.google.com/mapfiles/marker_white.png"
-
-
+  var icon = icobj[stn.status]
   var stncoords = new google.maps.LatLng(stn.lat, stn.lon);
 
   var content = '<div class="content">' +
@@ -70,6 +64,17 @@ function addMarker(map, data) {
     '</p> </div>'
 
   createMarker(stname, stncoords, content, map, icon);
+  /*
+   * Add to Legend
+   */
+  if (!seenIcons[stn.status]) {
+    lentry.innerHTML += '<img src=' + icobj[stn.status] + '> ' + stn.status + '<br/>'
+    /*
+     * Keep track of what is on the map for the legend
+     */
+    seenIcons[stn.status] = true
+  }
+
 }
 
 
@@ -115,10 +120,18 @@ function appendlegend(controlDiv) {
   controlText.style.paddingRight = '4px';
 
   // Add the text
-  controlText.innerHTML = '<b>Legend - Station Status</b><br /></br>' +
-    	'<img src="http://maps.google.com/mapfiles/ms/micons/green-dot.png" /> Ternary Plot + Mooney<br />' +
-  	'<img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png" /> Processed - Good <br />' +
-  	'<img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png" /> Processed - Bad data <br />' +
-  	'<img src="http://maps.google.com/mapfiles/ms/micons/purple-dot.png" /> Not aquired <br />'
-  controlUI.appendChild(controlText);
+  controlText.innerHTML = '<b>Legend - Station Status</b><br /></br>'
+  controlText.id = "legendEntry"
+//  Object.keys(usedIcons).forEach( function (key) {
+//    controlText.innerHTML += '<img src=' + usedIcons[key] + '/> ' + key + '<br/>'
+//  })
+//  controlText.innerHTML = innerHTML
+  controlUI.appendChild(controlText)
+
+  /*
+   * Return Text so we can
+   * dynamically add entries
+   */
+  return controlText
+
 }
