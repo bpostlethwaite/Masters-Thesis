@@ -8,7 +8,7 @@ var st = require("st")
   , fs = require("fs")
 
 // Listen on port
-var PORT = 8082
+var PORT = 8080
   , STATIC = 'public'
   , mount = st(
     { path: './' + STATIC

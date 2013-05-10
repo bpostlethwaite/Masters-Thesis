@@ -37,12 +37,12 @@
       dimensions and then transforming them in to P, SV and SH components with a wave field decomposition
       transfer matrix (Bostock, 1998).
     - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
-    - Deconvolution approach is an L2 freq domain which preforms quickly and makes no assumptions on
+    - Deconvolution approach is an L2 freq domain which performs quickly and makes no assumptions on
       the noise in the data
     - [!Equation: Deconvolution]
     - Method minimize GCV(r) where r is used as ... explain Equation. (Bostock, 1998; Golub et al., 1979)
-    - Decon produces an approximation to the S-component of the Earth's Green's function.
-    - This Receiver function has energy located at the times corrisponding to the reflected S-wave arrivals
+    - Decon produces an approximation to the S-component of the Earth's Green's function, (receiver function).
+    - This receiver function has energy located at the times corrisponding to the reflected S-wave arrivals
       in the seismogram
     - RF is filtered between 0.04Hz and 3.0Hz
     - These RF's are used as the data for two parameter estimation methods
@@ -108,10 +108,25 @@
   - Comparisons
     - Several regional studies have been published that utilize similar method to those described above in 2.1,
       and contain parameter estimates of R and H for some of the stations used in this study.
-    - make direct comparison
     - Comprehensive study in Hudson Bay region of Canadian Shield (Thompson et. al., 2010)
-  - Crustal Thickness
+    - Study focusing on Crustal thickness and Vp/Vs variation in the Grenville Orogen (Eaton et al, 2006)
+    - Lithosphere study in the Superior Province - (Darbyshire et. al. 2007)
+    - Ensure use same Vp as papers.
+    - All employ semblance weighting.
+    - Comparison Results
+      - Correlation between Thompson et. al. Vp/Vs datasets is 0.54
+      - Correlation between Thompson et. al. H datasets is 0.96
+      - Correlation between Eaton et. al. Vp/Vs datasets is 0.36
+      - Correlation between Eaton et. al. H datasets is 0.85
+      - Correlation between Darbyshire et. al. Vp/Vs datasets is 0.43
+      - Correlation between Darbyshire et. al. H datasets is 0.95
+    - Comparison Discussion
+      - Crustal Thickness
 
-  - Vp/Vs
+
+      - Vp/Vs
+
+
+
 
 - Discussion

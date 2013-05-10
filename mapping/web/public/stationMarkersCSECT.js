@@ -20,7 +20,7 @@ function initialize() {
 
 
 // Connect sockets to server and receiver station data
-  var socket = io.connect("http://137.82.49.27:8082")
+  var socket = io.connect("http://137.82.49.27:8080")
 
   // Get station data
   socket.on('stationsJson', function(data) {

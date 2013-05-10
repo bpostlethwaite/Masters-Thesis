@@ -7,10 +7,10 @@ addpath([userdir,'/programming/matlab/jsonlab']);
 databasedir = '/media/TerraS/database';
 
 
-json = loadjson([userdir,'/thesis/data/thompsonPaper.json']);
+json = loadjson([userdir,'/thesis/data/darbyshirePaper.json']);
 stns = fieldnames(json);
 
-fhout = fopen([userdir,'/thesis/data/thomsponProcessed.json'], 'w');
+fhout = fopen([userdir,'/thesis/data/darbyshireProcessed.json'], 'w');
             
 %Setup parallel toolbox
 if ~matlabpool('size')
@@ -22,7 +22,8 @@ for stn = stns'
 
     station = stn{1};
     load(fullfile(databasedir, station));
-    vp = 6.39;
+    vp = 6.39; %Eaton & DARBYshire
+    %vp = 6.5; % Thompson
     
     method = 'kanamori';
     [ results ] = gridsearchKan(db.rec, db.dt, db.pslow, vp);

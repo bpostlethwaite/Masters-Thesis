@@ -3,7 +3,7 @@
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
 npb = 3; % Average number of traces per bin
-discardBad = 1; % Discard traces that do not find minimum during decon
+discardBad = 0; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff

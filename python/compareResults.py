@@ -25,8 +25,8 @@ data = ['/thesis/data/thompsonPaper.json',
         '/thesis/data/darbyshireProcessed.json']
 
 leglabel = ["Thompson et. al.",
-         "Eaton et. al.",
-         "Darbyshire et. al."]
+            "Eaton et. al.",
+            "Darbyshire et. al."]
 
 #######################
 # Plotting formatter
@@ -45,7 +45,7 @@ title = 18 / ratio
 leg = 16 / ratio
 
 
-for i in range(2):
+for i in range(3):
 
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
@@ -58,9 +58,9 @@ for i in range(2):
     p1.sync(p2)
 
     Rcorr = pearsonr(p1.R, p2.R)
-    print "Correlation between Vp/Vs datasets is {0:.2f}".format(Rcorr[0])
+    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0])
     Hcorr = pearsonr(p1.H, p2.H)
-    print "Correlation between H datasets is {0:.2f}".format(Hcorr[0])
+    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0])
 
 
     t = np.arange(len(p1.R))
@@ -109,4 +109,4 @@ for i in range(2):
     plt.axis("tight")
 
 
-plt.show()
+#plt.show()
