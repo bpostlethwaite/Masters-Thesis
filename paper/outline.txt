@@ -36,13 +36,13 @@
       is the Moho
     - Seperation of P and S wave energy is performed by rotating coordinates into radial and
       transverse dimensions and then transforming them in to P, SV and SH components with a
-      wave field decomposition transfer matrix (Bostock, 1998).
+      wave field decomposition transfer matrix [Bostock, 1998].
     - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
     - Deconvolution approach is an L2 freq domain which performs quickly and makes no
       assumptions on the noise in the data
     - [!Equation: Deconvolution]
     - Method minimize GCV(r) where r is used as ... explain Equation.
-      (Bostock, 1998; Golub et al., 1979)
+      [Bostock, 1998; Golub et al., 1979]
     - Decon produces an approximation to the S-component of the Earth's Green's function,
       (receiver function).
     - This receiver function has energy located at the times corrisponding to the reflected
@@ -51,7 +51,7 @@
     - These RF's are used as the data for two parameter estimation methods
 
     - Vp/Vs method
-      - Zhu and Kanamori (2000), hereafter ZK, proposed a method for extracting the ratio, R,
+      - Zhu and Kanamori [2000], hereafter ZK, proposed a method for extracting the ratio, R,
         of P-wave velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H,
         from receiver functions.
       - Method involves stacking RFs along trial moveout curves for a range of candidate models
@@ -62,7 +62,7 @@
         usually carrying the best signal followed by the PpPs and finally PpSs.
       - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
         phases respectively.
-      - Semblance weighting (Eaton, 2006) used to reduce the effect of spurious large amplitude
+      - Semblance weighting [Eaton, 2006] used to reduce the effect of spurious large amplitude
         noise in the data.
       - [!Equation: Semblance]
       - Semblance function ranges between zero for incoherent noise and one for a coherent signal
@@ -73,7 +73,7 @@
 
 
     - Vp method
-      - Method which allows for estimates of Vp and Vs uniquely (Bostock and Kumar, 2010)
+      - Method which allows for estimates of Vp and Vs uniquely [Bostock and Kumar, 2010]
         hereafter BK
       - Does not require apriori assumption on Vp
       - Linear dependence on H in equations can be removed by dividing reflected phases with
@@ -122,20 +122,20 @@
     - Comparisons made using only those stations with less than 0.06 bootstrap error.
     - Ensure processing runs use the correct value for the assumed Vp in respective papers.
     - All comparisons made using ZK approach with semblance wieghting
-    - Comprehensive study in Hudson Bay region of Canadian Shield (Thompson et. al., 2010)
+    - Comprehensive study in Hudson Bay region of Canadian Shield [Thompson et al., 2010]
       - Utilizing 30 stations
       - Correlation between Thompson et. al. Vp/Vs datasets is 0.54
       - Correlation between Thompson et. al. H datasets is 0.96
       - [!Figure Thompson comparison H]
       - [!Figure Thompson comparison Vp/Vs]
     - Study focusing on Crustal thickness and Vp/Vs variation in the Grenville
-      Orogen (Eaton et al, 2006)
+      Orogen [Eaton et al., 2006]
       - Utilizing 29 stations
       - Correlation between Eaton et. al. Vp/Vs datasets is 0.36
       - Correlation between Eaton et. al. H datasets is 0.85
       - [!Figure Eaton comparison H]
       - [!Figure Eaton comparison Vp/Vs]
-    - Lithosphere study in the Superior Province - (Darbyshire et. al. 2007)
+    - Lithosphere study in the Superior Province - [Darbyshire et al., 2007]
       - Utilizing 10 stations
       - Correlation between Darbyshire et. al. Vp/Vs datasets is 0.43
       - Correlation between Darbyshire et. al. H datasets is 0.95
@@ -169,12 +169,28 @@
           total area of the bounding region is computed and used as the weighting value.
         - Station parameter values are multiplied by the wieghts and then summed.
     - Canada wieghted crustal thickness average is 37.0 km.
-      - Previous estimates for Canadian Crustal averages are 38 km (Perry, 2002) and
-
+      - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust 2.0
+        average is 38km as well, however this is expected since Crust2.0 data for Canada
+        is based on the same data as that of Lith5.0
+      - ??? Make some comparison to global average ???
+    - Canada wieghted bulk crustal Vp/Vs is 1.75
 
 - Discussion
 
 
 
 
-Refs
+Refs (AGU style)
+
+Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21,183-21,200.
+Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
+Christensen, N. I. (1996), Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156.
+Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New insights into the lithosphere beneath the Superior Province from Rayleigh wave dispersion and receiver function analysis, J. Geophys. Int., 169, 1043-1068.
+Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic receiver functions, Tectonophysics, 420, 223-238.
+Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
+Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
+Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
+Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, 297, 655–666.
+Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
+Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.

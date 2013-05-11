@@ -59,9 +59,9 @@
                 <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="crust2geology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="crust2geology" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust2geology20130226140546451" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="crust2geology20130226140546451" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Crust 2.0" showFeatureCount="0">
@@ -3885,7 +3885,7 @@
                 <edittype type="0" name="wm::R"/>
                 <edittype type="0" name="wm::Vp"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
             <attributeactions/>
