@@ -34,7 +34,7 @@
     - [!Equation: Travel Times]
     - Strong Reflected phases at sharp velocity contrasts, for this study the boundary of interest
       is the Moho
-    - Seperation of P and S wave energy is performed by rotating coordinates into radial and
+    - Separation of P and S wave energy is performed by rotating coordinates into radial and
       transverse dimensions and then transforming them in to P, SV and SH components with a
       wave field decomposition transfer matrix [Bostock, 1998].
     - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
@@ -45,7 +45,7 @@
       [Bostock, 1998; Golub et al., 1979]
     - Decon produces an approximation to the S-component of the Earth's Green's function,
       (receiver function).
-    - This receiver function has energy located at the times corrisponding to the reflected
+    - This receiver function has energy located at the times corresponding to the reflected
       S-wave arrivals in the seismogram
     - RF is filtered between 0.04Hz and 3.0Hz
     - These RF's are used as the data for two parameter estimation methods
@@ -66,7 +66,7 @@
         noise in the data.
       - [!Equation: Semblance]
       - Semblance function ranges between zero for incoherent noise and one for a coherent signal
-      - Adding this additional wieghting shown by Eaton to provide sharper resolution when
+      - Adding this additional weighting shown by Eaton to provide sharper resolution when
         selecting between stacked models.
       - The model which stacks the most coherent energy is used to provide the best estimates
         for R and H.
@@ -87,8 +87,8 @@
           depending on Moho depth, should fall within the window of 3 to 6 seconds.
           With low moveout one may therefore select the time corresponding to maximum
           amplitude within a given window as an estimate of tps.
-        - An alternative approach is to use max amplititude estimates as data in a
-          non-linear optimization to find the R, Vp and H which mimimize the residual
+        - An alternative approach is to use max amplitude estimates as data in a
+          non-linear optimization to find the R, Vp and H which minimize the residual
           between tps and the data. The travel time equations are twice-differentiable so
           the quadratically convergent Newton's method may be employed. This approach has
           the advantage that noise leading to poor maximum amplitude picks are effectively
@@ -121,28 +121,28 @@
       stations used in this study.
     - Comparisons made using only those stations with less than 0.06 bootstrap error.
     - Ensure processing runs use the correct value for the assumed Vp in respective papers.
-    - All comparisons made using ZK approach with semblance wieghting
+    - All comparisons made using ZK approach with semblance weighting
     - Comprehensive study in Hudson Bay region of Canadian Shield [Thompson et al., 2010]
       - Utilizing 30 stations
-      - Correlation between Thompson et. al. Vp/Vs datasets is 0.54
-      - Correlation between Thompson et. al. H datasets is 0.96
+      - Correlation between Thompson et. al. Vp/Vs dataset is 0.54
+      - Correlation between Thompson et. al. H dataset is 0.96
       - [!Figure Thompson comparison H]
       - [!Figure Thompson comparison Vp/Vs]
     - Study focusing on Crustal thickness and Vp/Vs variation in the Grenville
       Orogen [Eaton et al., 2006]
       - Utilizing 29 stations
-      - Correlation between Eaton et. al. Vp/Vs datasets is 0.36
-      - Correlation between Eaton et. al. H datasets is 0.85
+      - Correlation between Eaton et. al. Vp/Vs dataset is 0.36
+      - Correlation between Eaton et. al. H dataset is 0.85
       - [!Figure Eaton comparison H]
       - [!Figure Eaton comparison Vp/Vs]
     - Lithosphere study in the Superior Province - [Darbyshire et al., 2007]
       - Utilizing 10 stations
-      - Correlation between Darbyshire et. al. Vp/Vs datasets is 0.43
-      - Correlation between Darbyshire et. al. H datasets is 0.95
+      - Correlation between Darbyshire et. al. Vp/Vs dataset is 0.43
+      - Correlation between Darbyshire et. al. H dataset is 0.95
       - [!Figure Darbyshire comparison H]
       - [!Figure Darbyshire comparison Vp/Vs]
 
-    - Comparison Discussion
+    - Comparison Discussion ??? Here or in the discussion section ???
       - Crustal Thickness
         - Very good correlation in thickness estimates with all three datasets.
       - Vp/Vs
@@ -153,7 +153,7 @@
             search for Vp/Vs and hence higher degree of relative error.
           - ??? Utilizing different sources, applying different deconvolution and
             filtering techniques will therefore have a greater impact on the
-            uncertainty of picking Vp/Vs than that of crustal thickness H.
+            uncertainty of picking Vp/Vs than that of crustal thickness H. ???
 
   - Regional Bulk Crustal Parameters
     - All following data has been utilized using only those stations with less than
@@ -167,15 +167,33 @@
         - A voronoi diagram is calculated for all projected station locations.
         - The ratio between the voronoi cell surface encompassing each station and the
           total area of the bounding region is computed and used as the weighting value.
-        - Station parameter values are multiplied by the wieghts and then summed.
-    - Canada wieghted crustal thickness average is 37.0 km.
+        - Station parameter values are multiplied by the weights and then summed.
+    - Canada weighted crustal thickness average is 37.0 km.
+    - Canada bulk crustal Vp/Vs weighted average is 1.75 which gives a Poisson ratio of 0.258
+    - [!Figure Histogram Canada H]
+    - [!Figure Histogram Canada Vp/Vs]
+    - Slave, Churchill, Superior, Grenville Provinces have weighted crustal thicknesses of
+      38.2km, 38.9km, 39.71km and 41.7km and Vp/Vs values of 1.74, 1,73, 1.74 and 1.78
+      respectively.
+    - The Canadian Shield as a whole has a crustal thickness weighted average of 39.2 and a
+      Vp/Vs weighted average of 1.74.
+    - ??? JUST GIVE ALL POISSON OR VP/VS AS WELL ???
+    - [!Figure Histogram Slave, Churchill, Superior, Grenville H]
+    - [!Figure Histogram Slave, Churchill, Superior, Grenville Vp/Vs]
+    - [!Figure Histogram Canadian Shield H]
+    - [!Figure Histogram Canadian Shield Vp/Vs]
+
+  - Comparison with Crust2.0 Data
+    - <<< EXTRACT STUFF FROM LAST PRESENTATION HERE >>>
+
+
+- Discussion
+  - Regional Bulk Crustal parameter Discussion
+    - Canada H & Vp/Vs
       - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust 2.0
         average is 38km as well, however this is expected since Crust2.0 data for Canada
         is based on the same data as that of Lith5.0
       - ??? Make some comparison to global average ???
-    - Canada wieghted bulk crustal Vp/Vs is 1.75
-
-- Discussion
 
 
 
