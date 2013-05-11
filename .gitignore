@@ -15,6 +15,7 @@ figures/*
 # Node
 ####################
 node/node_modules/*
+python/node_modules/*
 
 # Compiled source #
 ###################

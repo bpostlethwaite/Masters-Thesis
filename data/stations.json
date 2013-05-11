@@ -6857,7 +6857,7 @@
     "poorEvents": 473, 
     "processnotes": "", 
     "start": 20020906.19, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
     "usableEvents": 82, 
@@ -7687,12 +7687,12 @@
     "badCompEvents": 0, 
     "geoprov": "Superior Province", 
     "hk": {
-      "H": 41.582914572864325, 
-      "R": 1.7464824120603015, 
+      "H": 42.21105527638191, 
+      "R": 1.7344221105527637, 
       "c0R": 1.7374371859296482, 
       "c1R": 1.7374371859296482, 
-      "stdH": 2.0273760990991634, 
-      "stdR": 0.0398734595790294
+      "stdH": 0.44261828167124506, 
+      "stdR": 0.010711649343995551
     }, 
     "lat": 51.0704, 
     "lon": -93.7585, 
@@ -7789,8 +7789,8 @@
       "R": 1.8233668341708542, 
       "c0R": 1.8972361809045226, 
       "c1R": 1.728391959798995, 
-      "stdH": 2.6362363693593323, 
-      "stdR": 0.05387037854708178
+      "stdH": 2.5046700810698312, 
+      "stdR": 0.051767288749593056
     }, 
     "km": {}, 
     "lat": 46.0734, 
@@ -8752,7 +8752,7 @@
     "poorEvents": 110, 
     "processnotes": "", 
     "start": 20060828.01, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": "20080611.1200", 
     "usable": 1, 
     "usableEvents": 57, 
@@ -8918,7 +8918,7 @@
     "poorEvents": 325, 
     "processnotes": "", 
     "start": 20030729.1543, 
-    "status": "processed-notok", 
+    "status": "processed-ok", 
     "stop": 0, 
     "usable": 1, 
     "usableEvents": 223, 
@@ -9555,14 +9555,23 @@
   "WEMQ": {
     "badCompEvents": 6, 
     "geoprov": "Superior Province", 
+    "hk": {
+      "H": 40.201005025125625, 
+      "R": 1.7253768844221105, 
+      "stdH": 5.279941690721263, 
+      "stdR": 0.06469860681737985
+    }, 
     "lat": 53.0535, 
     "lon": -77.9737, 
+    "mb": {}, 
     "network": "POLARIS", 
     "numEvents": 328, 
     "poorEvents": 237, 
+    "processnotes": "", 
     "start": 20050623.16, 
     "status": "bad station", 
     "stop": "20070923.1800", 
+    "usable": 1, 
     "usableEvents": 78, 
     "wm": {
       "H": 40.0, 

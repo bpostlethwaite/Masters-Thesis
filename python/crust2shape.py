@@ -12,7 +12,6 @@ import shapefile, os
 import numpy as np
 from plotTools import find
 
-
 shpfile = os.environ['HOME'] + '/thesis/mapping/mooney/crust2layer'
 crusttypes = os.environ['HOME'] + '/thesis/mapping/mooney/TypeGrid.txt'
 typekeys = os.environ['HOME'] + '/thesis/mapping/mooney/TypeGrid_key.txt'
@@ -175,7 +174,7 @@ for coords, key in mtypes:
 
 ## Build Shapefile
 
-def mooney2shapefile(mooney):
+def crust2shape(mooney):
     """ transfer mooney data into a shapefile + attribute table """
     w = shapefile.Writer( shapefile.POLYGON )
     # Set fields for attribute table
@@ -206,6 +205,4 @@ def mooney2shapefile(mooney):
     w.save(shpfile)
 
 
-
-
-mooney2shapefile(mooney)
+crust2shape(mooney)

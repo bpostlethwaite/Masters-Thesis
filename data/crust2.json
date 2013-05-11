@@ -1,0 +1,7283 @@
+{
+  "block_611": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -71.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_303": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -63.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 69.0
+  }, 
+  "block_803": {
+    "geoprov": "oceanic crust", 
+    "H": 16.5, 
+    "lon": -55.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 43.0
+  }, 
+  "block_802": {
+    "geoprov": "oceanic crust", 
+    "H": 16.5, 
+    "lon": -57.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 43.0
+  }, 
+  "block_801": {
+    "geoprov": "oceanic crust", 
+    "H": 17.5, 
+    "lon": -59.0, 
+    "Vs": 1.8969, 
+    "Vp": 3.9703, 
+    "R": 2.093, 
+    "lat": 43.0
+  }, 
+  "block_726": {
+    "geoprov": "Superior Province", 
+    "H": 39.0, 
+    "lon": -97.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 49.0
+  }, 
+  "block_807": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 16.5, 
+    "lon": -67.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 41.0
+  }, 
+  "block_806": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -69.0, 
+    "Vs": 3.113, 
+    "Vp": 5.6574, 
+    "R": 1.8173, 
+    "lat": 41.0
+  }, 
+  "block_805": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.4846, 
+    "Vp": 6.1205, 
+    "R": 1.7564, 
+    "lat": 41.0
+  }, 
+  "block_804": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 46.0, 
+    "lon": -83.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 41.0
+  }, 
+  "block_798": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 27.5, 
+    "lon": -65.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 43.0
+  }, 
+  "block_808": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 15.5, 
+    "lon": -65.0, 
+    "Vs": 1.8255, 
+    "Vp": 3.9116, 
+    "R": 2.1428, 
+    "lat": 41.0
+  }, 
+  "block_661": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -57.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 53.0
+  }, 
+  "block_799": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 27.0, 
+    "lon": -63.0, 
+    "Vs": 3.113, 
+    "Vp": 5.6574, 
+    "R": 1.8173, 
+    "lat": 43.0
+  }, 
+  "block_155": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -109.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_154": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -111.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_157": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -105.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_156": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -107.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_151": {
+    "geoprov": "Arctic Platform", 
+    "H": 32.0, 
+    "lon": -117.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 75.0
+  }, 
+  "block_150": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -119.0, 
+    "Vs": 3.4344, 
+    "Vp": 6.1594, 
+    "R": 1.7934, 
+    "lat": 75.0
+  }, 
+  "block_153": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -113.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 75.0
+  }, 
+  "block_152": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -115.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 75.0
+  }, 
+  "block_652": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -75.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_653": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -73.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_650": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_651": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -77.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_159": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -101.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 75.0
+  }, 
+  "block_158": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -103.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_654": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -71.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_655": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -69.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_421": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_800": {
+    "geoprov": "oceanic crust", 
+    "H": 19.5, 
+    "lon": -61.0, 
+    "Vs": 2.0074, 
+    "Vp": 4.1195, 
+    "R": 2.0522, 
+    "lat": 43.0
+  }, 
+  "block_724": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -101.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 49.0
+  }, 
+  "block_420": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_423": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_422": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_425": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_356": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -129.0, 
+    "Vs": 3.5065, 
+    "Vp": 6.1587, 
+    "R": 1.7564, 
+    "lat": 65.0
+  }, 
+  "block_793": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 43.0
+  }, 
+  "block_759": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -81.0, 
+    "Vs": 3.7289, 
+    "Vp": 6.6222, 
+    "R": 1.7759, 
+    "lat": 47.0
+  }, 
+  "block_427": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_792": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 41.5, 
+    "lon": -79.0, 
+    "Vs": 3.6747, 
+    "Vp": 6.4759, 
+    "R": 1.7623, 
+    "lat": 43.0
+  }, 
+  "block_426": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_568": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -69.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_758": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -83.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 47.0
+  }, 
+  "block_358": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 41.0, 
+    "lon": -125.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 65.0
+  }, 
+  "block_33": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -63.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 83.0
+  }, 
+  "block_32": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -65.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 83.0
+  }, 
+  "block_31": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -67.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 83.0
+  }, 
+  "block_30": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_37": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -127.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 81.0
+  }, 
+  "block_36": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -129.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 81.0
+  }, 
+  "block_35": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 25.5, 
+    "lon": -59.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 83.0
+  }, 
+  "block_34": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 25.5, 
+    "lon": -61.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 83.0
+  }, 
+  "block_476": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_477": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_39": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -123.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_38": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -125.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 81.0
+  }, 
+  "block_472": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_473": {
+    "geoprov": "Superior Province", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_470": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 61.0
+  }, 
+  "block_471": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_577": {
+    "geoprov": "oceanic crust", 
+    "H": 12.0, 
+    "lon": -139.0, 
+    "Vs": 1.9037, 
+    "Vp": 4.1567, 
+    "R": 2.1835, 
+    "lat": 55.0
+  }, 
+  "block_576": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -53.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 57.0
+  }, 
+  "block_575": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -55.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 57.0
+  }, 
+  "block_574": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 15.5, 
+    "lon": -57.0, 
+    "Vs": 1.8255, 
+    "Vp": 3.9116, 
+    "R": 2.1428, 
+    "lat": 57.0
+  }, 
+  "block_573": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 27.5, 
+    "lon": -59.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 57.0
+  }, 
+  "block_572": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.1906, 
+    "Vp": 5.7797, 
+    "R": 1.8115, 
+    "lat": 57.0
+  }, 
+  "block_571": {
+    "geoprov": "Churchill Province", 
+    "H": 30.0, 
+    "lon": -63.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 57.0
+  }, 
+  "block_570": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -65.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 57.0
+  }, 
+  "block_579": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -135.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 55.0
+  }, 
+  "block_578": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -137.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 55.0
+  }, 
+  "block_582": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -129.0, 
+    "Vs": 3.6235, 
+    "Vp": 6.4382, 
+    "R": 1.7768, 
+    "lat": 55.0
+  }, 
+  "block_756": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 45.0, 
+    "lon": -87.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 47.0
+  }, 
+  "block_583": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -127.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 55.0
+  }, 
+  "block_581": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -131.0, 
+    "Vs": 3.6235, 
+    "Vp": 6.4382, 
+    "R": 1.7768, 
+    "lat": 55.0
+  }, 
+  "block_689": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -87.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 51.0
+  }, 
+  "block_688": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -89.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 51.0
+  }, 
+  "block_685": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_684": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_687": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -91.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_686": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_681": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -103.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 51.0
+  }, 
+  "block_680": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -105.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 51.0
+  }, 
+  "block_683": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_682": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -101.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 51.0
+  }, 
+  "block_274": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 69.0
+  }, 
+  "block_275": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -119.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 69.0
+  }, 
+  "block_276": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -117.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_277": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -115.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_270": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -129.0, 
+    "Vs": 3.6016, 
+    "Vp": 6.3629, 
+    "R": 1.7667, 
+    "lat": 69.0
+  }, 
+  "block_271": {
+    "geoprov": "Interior Platform", 
+    "H": 37.0, 
+    "lon": -127.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_88": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -101.0, 
+    "Vs": 3.0852, 
+    "Vp": 5.5167, 
+    "R": 1.7881, 
+    "lat": 79.0
+  }, 
+  "block_89": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -99.0, 
+    "Vs": 3.0407, 
+    "Vp": 5.55, 
+    "R": 1.8252, 
+    "lat": 79.0
+  }, 
+  "block_86": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -105.0, 
+    "Vs": 3.113, 
+    "Vp": 5.6574, 
+    "R": 1.8173, 
+    "lat": 79.0
+  }, 
+  "block_87": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -103.0, 
+    "Vs": 3.0852, 
+    "Vp": 5.5167, 
+    "R": 1.7881, 
+    "lat": 79.0
+  }, 
+  "block_84": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 16.5, 
+    "lon": -109.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 79.0
+  }, 
+  "block_85": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -107.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 79.0
+  }, 
+  "block_278": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -113.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_83": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 16.5, 
+    "lon": -111.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 79.0
+  }, 
+  "block_80": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 20.5, 
+    "lon": -117.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 79.0
+  }, 
+  "block_81": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.5, 
+    "lon": -115.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 79.0
+  }, 
+  "block_440": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -143.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 61.0
+  }, 
+  "block_588": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -117.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 55.0
+  }, 
+  "block_734": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -81.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 49.0
+  }, 
+  "block_782": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_589": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -115.0, 
+    "Vs": 3.6293, 
+    "Vp": 6.4439, 
+    "R": 1.7755, 
+    "lat": 55.0
+  }, 
+  "block_767": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 44.0, 
+    "lon": -65.0, 
+    "Vs": 3.4227, 
+    "Vp": 6.008, 
+    "R": 1.7553, 
+    "lat": 47.0
+  }, 
+  "block_298": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_299": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_424": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_292": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -85.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_293": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_290": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -89.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_291": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -87.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_296": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -77.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_297": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -75.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_294": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_295": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_720": {
+    "geoprov": "Interior Platform", 
+    "H": 48.0, 
+    "lon": -109.0, 
+    "Vs": 3.6125, 
+    "Vp": 6.4375, 
+    "R": 1.782, 
+    "lat": 49.0
+  }, 
+  "block_562": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_191": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -117.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_190": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -119.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_193": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -113.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_192": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -115.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_195": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -109.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_194": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -111.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_197": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -105.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_196": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -107.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_199": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -101.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_198": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -103.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_658": {
+    "geoprov": "Churchill Province", 
+    "H": 40.0, 
+    "lon": -63.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_201": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 73.0
+  }, 
+  "block_200": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -99.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_203": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -93.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_202": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -95.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_205": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_204": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -91.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_207": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_206": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_209": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_208": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_755": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 50.0, 
+    "lon": -89.0, 
+    "Vs": 3.668, 
+    "Vp": 6.472, 
+    "R": 1.7644, 
+    "lat": 47.0
+  }, 
+  "block_754": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -123.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 47.0
+  }, 
+  "block_753": {
+    "geoprov": "oceanic crust", 
+    "H": 34.0, 
+    "lon": -125.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 47.0
+  }, 
+  "block_752": {
+    "geoprov": "oceanic crust", 
+    "H": 31.0, 
+    "lon": -127.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 47.0
+  }, 
+  "block_618": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -57.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 55.0
+  }, 
+  "block_619": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -55.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 55.0
+  }, 
+  "block_659": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -61.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_569": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 57.0
+  }, 
+  "block_656": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -67.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_657": {
+    "geoprov": "Churchill Province", 
+    "H": 40.0, 
+    "lon": -65.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_108": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -133.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 77.0
+  }, 
+  "block_109": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -131.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 77.0
+  }, 
+  "block_102": {
+    "geoprov": "Churchill Province", 
+    "H": 29.5, 
+    "lon": -73.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 79.0
+  }, 
+  "block_103": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 79.0
+  }, 
+  "block_100": {
+    "geoprov": "Arctic Platform", 
+    "H": 29.5, 
+    "lon": -77.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 79.0
+  }, 
+  "block_101": {
+    "geoprov": "Churchill Province", 
+    "H": 30.0, 
+    "lon": -75.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 79.0
+  }, 
+  "block_106": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -137.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 77.0
+  }, 
+  "block_107": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -135.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 77.0
+  }, 
+  "block_104": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.5, 
+    "lon": -69.0, 
+    "Vs": 3.6419, 
+    "Vp": 6.4241, 
+    "R": 1.7639, 
+    "lat": 79.0
+  }, 
+  "block_105": {
+    "geoprov": "oceanic crust", 
+    "H": 17.5, 
+    "lon": -139.0, 
+    "Vs": 1.8969, 
+    "Vp": 3.9703, 
+    "R": 2.093, 
+    "lat": 77.0
+  }, 
+  "block_79": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -119.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_78": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -121.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_77": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -123.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_76": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -125.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_75": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -127.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_74": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -129.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 79.0
+  }, 
+  "block_73": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -131.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 79.0
+  }, 
+  "block_72": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -133.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 79.0
+  }, 
+  "block_71": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -135.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 79.0
+  }, 
+  "block_70": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.5, 
+    "lon": -61.0, 
+    "Vs": 3.6419, 
+    "Vp": 6.4241, 
+    "R": 1.7639, 
+    "lat": 81.0
+  }, 
+  "block_533": {
+    "geoprov": "oceanic crust", 
+    "H": 31.0, 
+    "lon": -139.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 57.0
+  }, 
+  "block_532": {
+    "geoprov": "oceanic crust", 
+    "H": 24.0, 
+    "lon": -141.0, 
+    "Vs": 3.3396, 
+    "Vp": 6.0479, 
+    "R": 1.811, 
+    "lat": 57.0
+  }, 
+  "block_531": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -53.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 59.0
+  }, 
+  "block_530": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -55.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 59.0
+  }, 
+  "block_537": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 35.0, 
+    "lon": -131.0, 
+    "Vs": 3.4386, 
+    "Vp": 6.0957, 
+    "R": 1.7727, 
+    "lat": 57.0
+  }, 
+  "block_536": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -133.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 57.0
+  }, 
+  "block_535": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -135.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 57.0
+  }, 
+  "block_534": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -137.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 57.0
+  }, 
+  "block_613": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -67.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_539": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 50.0, 
+    "lon": -127.0, 
+    "Vs": 3.612, 
+    "Vp": 6.353, 
+    "R": 1.7589, 
+    "lat": 57.0
+  }, 
+  "block_538": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -129.0, 
+    "Vs": 3.5859, 
+    "Vp": 6.3026, 
+    "R": 1.7576, 
+    "lat": 57.0
+  }, 
+  "block_768": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 43.0, 
+    "lon": -63.0, 
+    "Vs": 3.5767, 
+    "Vp": 6.2907, 
+    "R": 1.7588, 
+    "lat": 47.0
+  }, 
+  "block_769": {
+    "geoprov": "Grenville Province", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.5719, 
+    "Vp": 6.3906, 
+    "R": 1.7891, 
+    "lat": 47.0
+  }, 
+  "block_563": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_407": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -117.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_406": {
+    "geoprov": "Interior Platform", 
+    "H": 39.0, 
+    "lon": -119.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_405": {
+    "geoprov": "Interior Platform", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_404": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -123.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_403": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -125.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 63.0
+  }, 
+  "block_402": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -127.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_401": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -129.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 63.0
+  }, 
+  "block_400": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -131.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 63.0
+  }, 
+  "block_766": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 47.0
+  }, 
+  "block_409": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -113.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_408": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -115.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_399": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -133.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 63.0
+  }, 
+  "block_398": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -135.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 63.0
+  }, 
+  "block_397": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -137.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 63.0
+  }, 
+  "block_396": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -139.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 63.0
+  }, 
+  "block_395": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -141.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 63.0
+  }, 
+  "block_394": {
+    "geoprov": "oceanic crust", 
+    "H": 37.0, 
+    "lon": -53.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_393": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -55.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 65.0
+  }, 
+  "block_392": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -57.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 65.0
+  }, 
+  "block_391": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -59.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 65.0
+  }, 
+  "block_390": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 24.0, 
+    "lon": -61.0, 
+    "Vs": 3.3396, 
+    "Vp": 6.0479, 
+    "R": 1.811, 
+    "lat": 65.0
+  }, 
+  "block_735": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -79.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 49.0
+  }, 
+  "block_641": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_718": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 50.0, 
+    "lon": -113.0, 
+    "Vs": 3.546, 
+    "Vp": 6.242, 
+    "R": 1.7603, 
+    "lat": 49.0
+  }, 
+  "block_249": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_248": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_729": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -91.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 49.0
+  }, 
+  "block_245": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -93.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_244": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_247": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_246": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_241": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -101.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_240": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -103.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_243": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 71.0
+  }, 
+  "block_242": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -99.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_322": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -111.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_323": {
+    "geoprov": "Slave Province", 
+    "H": 37.0, 
+    "lon": -109.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_320": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -115.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_321": {
+    "geoprov": "Slave Province", 
+    "H": 37.0, 
+    "lon": -113.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_326": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_327": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_324": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_325": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_498": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -119.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 59.0
+  }, 
+  "block_499": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -117.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 59.0
+  }, 
+  "block_328": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_329": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_730": {
+    "geoprov": "Southern Province", 
+    "H": 50.0, 
+    "lon": -89.0, 
+    "Vs": 3.668, 
+    "Vp": 6.472, 
+    "R": 1.7644, 
+    "lat": 49.0
+  }, 
+  "block_733": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -83.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 49.0
+  }, 
+  "block_732": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -85.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 49.0
+  }, 
+  "block_778": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_668": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 32.0, 
+    "lon": -129.0, 
+    "Vs": 3.6656, 
+    "Vp": 6.5453, 
+    "R": 1.7856, 
+    "lat": 51.0
+  }, 
+  "block_482": {
+    "geoprov": "oceanic crust", 
+    "H": 14.5, 
+    "lon": -59.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 61.0
+  }, 
+  "block_146": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -127.0, 
+    "Vs": 3.2172, 
+    "Vp": 5.8172, 
+    "R": 1.8082, 
+    "lat": 75.0
+  }, 
+  "block_147": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -125.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_144": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -131.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 75.0
+  }, 
+  "block_145": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.5, 
+    "lon": -129.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 75.0
+  }, 
+  "block_142": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -135.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 75.0
+  }, 
+  "block_143": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -133.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 75.0
+  }, 
+  "block_140": {
+    "geoprov": "oceanic crust", 
+    "H": 19.5, 
+    "lon": -139.0, 
+    "Vs": 2.0074, 
+    "Vp": 4.1195, 
+    "R": 2.0522, 
+    "lat": 75.0
+  }, 
+  "block_141": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -137.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 75.0
+  }, 
+  "block_667": {
+    "geoprov": "oceanic crust", 
+    "H": 30.0, 
+    "lon": -131.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 51.0
+  }, 
+  "block_377": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_665": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -135.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 51.0
+  }, 
+  "block_664": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -137.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 51.0
+  }, 
+  "block_663": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -53.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 53.0
+  }, 
+  "block_662": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -55.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 53.0
+  }, 
+  "block_148": {
+    "geoprov": "Arctic Platform", 
+    "H": 32.0, 
+    "lon": -123.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_149": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -121.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_707": {
+    "geoprov": "oceanic crust", 
+    "H": 11.57, 
+    "lon": -135.0, 
+    "Vs": 1.9404, 
+    "Vp": 4.2399, 
+    "R": 2.1851, 
+    "lat": 49.0
+  }, 
+  "block_700": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 40.0, 
+    "lon": -65.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_721": {
+    "geoprov": "Interior Platform", 
+    "H": 48.0, 
+    "lon": -107.0, 
+    "Vs": 3.6125, 
+    "Vp": 6.4375, 
+    "R": 1.782, 
+    "lat": 49.0
+  }, 
+  "block_701": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 40.0, 
+    "lon": -63.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_702": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -61.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_704": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -57.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 51.0
+  }, 
+  "block_703": {
+    "geoprov": "Province de Grenville", 
+    "H": 40.0, 
+    "lon": -59.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_371": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_705": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -55.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 51.0
+  }, 
+  "block_443": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -137.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 61.0
+  }, 
+  "block_442": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -139.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 61.0
+  }, 
+  "block_441": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -141.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 61.0
+  }, 
+  "block_370": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_447": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -129.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 61.0
+  }, 
+  "block_446": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -131.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 61.0
+  }, 
+  "block_445": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -133.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 61.0
+  }, 
+  "block_444": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -135.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 61.0
+  }, 
+  "block_560": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 57.0
+  }, 
+  "block_561": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 57.0
+  }, 
+  "block_449": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 41.0, 
+    "lon": -125.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 61.0
+  }, 
+  "block_448": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -127.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_564": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -77.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_565": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -75.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_566": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_567": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_368": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_369": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_587": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -119.0, 
+    "Vs": 3.613, 
+    "Vp": 6.4261, 
+    "R": 1.7786, 
+    "lat": 55.0
+  }, 
+  "block_366": {
+    "geoprov": "Slave Province", 
+    "H": 37.0, 
+    "lon": -109.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_367": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_737": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -75.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 49.0
+  }, 
+  "block_698": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -69.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_699": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 40.0, 
+    "lon": -67.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_696": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -73.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_697": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -71.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_694": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -77.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_695": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -75.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 51.0
+  }, 
+  "block_692": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_693": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 51.0
+  }, 
+  "block_690": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -85.0, 
+    "Vs": 3.6133, 
+    "Vp": 6.3844, 
+    "R": 1.7669, 
+    "lat": 51.0
+  }, 
+  "block_691": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -83.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 51.0
+  }, 
+  "block_91": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -95.0, 
+    "Vs": 3.4122, 
+    "Vp": 6.0293, 
+    "R": 1.767, 
+    "lat": 79.0
+  }, 
+  "block_90": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -97.0, 
+    "Vs": 3.0407, 
+    "Vp": 5.55, 
+    "R": 1.8252, 
+    "lat": 79.0
+  }, 
+  "block_93": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -91.0, 
+    "Vs": 3.4293, 
+    "Vp": 6.0695, 
+    "R": 1.7699, 
+    "lat": 79.0
+  }, 
+  "block_92": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -93.0, 
+    "Vs": 3.4293, 
+    "Vp": 6.0695, 
+    "R": 1.7699, 
+    "lat": 79.0
+  }, 
+  "block_95": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -87.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 79.0
+  }, 
+  "block_94": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -89.0, 
+    "Vs": 3.4768, 
+    "Vp": 6.1841, 
+    "R": 1.7787, 
+    "lat": 79.0
+  }, 
+  "block_97": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 79.0
+  }, 
+  "block_96": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 79.0
+  }, 
+  "block_99": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 79.0
+  }, 
+  "block_98": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 79.0
+  }, 
+  "block_364": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -113.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_365": {
+    "geoprov": "Slave Province", 
+    "H": 37.0, 
+    "lon": -111.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_362": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -117.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_363": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -115.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 65.0
+  }, 
+  "block_360": {
+    "geoprov": "Interior Platform", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_361": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -119.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_595": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -103.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 55.0
+  }, 
+  "block_594": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -105.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 55.0
+  }, 
+  "block_597": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_596": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_591": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -111.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 55.0
+  }, 
+  "block_590": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -113.0, 
+    "Vs": 3.6293, 
+    "Vp": 6.4439, 
+    "R": 1.7755, 
+    "lat": 55.0
+  }, 
+  "block_593": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -107.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 55.0
+  }, 
+  "block_592": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -109.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 55.0
+  }, 
+  "block_599": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_598": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_731": {
+    "geoprov": "Superior Province", 
+    "H": 50.0, 
+    "lon": -87.0, 
+    "Vs": 3.668, 
+    "Vp": 6.472, 
+    "R": 1.7644, 
+    "lat": 49.0
+  }, 
+  "block_742": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 43.0, 
+    "lon": -65.0, 
+    "Vs": 3.5767, 
+    "Vp": 6.2907, 
+    "R": 1.7588, 
+    "lat": 49.0
+  }, 
+  "block_182": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -135.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 73.0
+  }, 
+  "block_183": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -133.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 73.0
+  }, 
+  "block_180": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -139.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 73.0
+  }, 
+  "block_181": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -137.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 73.0
+  }, 
+  "block_186": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -127.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 73.0
+  }, 
+  "block_187": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -125.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 73.0
+  }, 
+  "block_184": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.5, 
+    "lon": -131.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 73.0
+  }, 
+  "block_185": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -129.0, 
+    "Vs": 3.2172, 
+    "Vp": 5.8172, 
+    "R": 1.8082, 
+    "lat": 73.0
+  }, 
+  "block_623": {
+    "geoprov": "oceanic crust", 
+    "H": 31.0, 
+    "lon": -133.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 53.0
+  }, 
+  "block_622": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -135.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 53.0
+  }, 
+  "block_188": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 41.0, 
+    "lon": -123.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_189": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 41.0, 
+    "lon": -121.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 73.0
+  }, 
+  "block_627": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -125.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 53.0
+  }, 
+  "block_626": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -127.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 53.0
+  }, 
+  "block_625": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -129.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 53.0
+  }, 
+  "block_624": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -131.0, 
+    "Vs": 3.6656, 
+    "Vp": 6.5453, 
+    "R": 1.7856, 
+    "lat": 53.0
+  }, 
+  "block_212": {
+    "geoprov": "Churchill Province", 
+    "H": 32.0, 
+    "lon": -75.0, 
+    "Vs": 3.2656, 
+    "Vp": 5.9016, 
+    "R": 1.8072, 
+    "lat": 73.0
+  }, 
+  "block_213": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -73.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 73.0
+  }, 
+  "block_210": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 73.0
+  }, 
+  "block_211": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -77.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 73.0
+  }, 
+  "block_216": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -67.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 73.0
+  }, 
+  "block_217": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -65.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 73.0
+  }, 
+  "block_214": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 27.5, 
+    "lon": -71.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 73.0
+  }, 
+  "block_215": {
+    "geoprov": "oceanic crust", 
+    "H": 27.5, 
+    "lon": -69.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 73.0
+  }, 
+  "block_748": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -53.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 49.0
+  }, 
+  "block_749": {
+    "geoprov": "oceanic crust", 
+    "H": 11.57, 
+    "lon": -133.0, 
+    "Vs": 1.9404, 
+    "Vp": 4.2399, 
+    "R": 2.1851, 
+    "lat": 47.0
+  }, 
+  "block_218": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -63.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 73.0
+  }, 
+  "block_219": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 73.0
+  }, 
+  "block_478": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_479": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 32.0, 
+    "lon": -65.0, 
+    "Vs": 3.1906, 
+    "Vp": 5.7797, 
+    "R": 1.8115, 
+    "lat": 61.0
+  }, 
+  "block_474": {
+    "geoprov": "Superior Province", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_649": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_475": {
+    "geoprov": "Superior Province", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_648": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_787": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 21.0, 
+    "lon": -57.0, 
+    "Vs": 2.6429, 
+    "Vp": 5.0429, 
+    "R": 1.9081, 
+    "lat": 45.0
+  }, 
+  "block_139": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -141.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 75.0
+  }, 
+  "block_138": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -73.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 77.0
+  }, 
+  "block_137": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -75.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 77.0
+  }, 
+  "block_136": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -77.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 77.0
+  }, 
+  "block_135": {
+    "geoprov": "Churchill Province", 
+    "H": 31.0, 
+    "lon": -79.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 77.0
+  }, 
+  "block_134": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 77.0
+  }, 
+  "block_133": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 77.0
+  }, 
+  "block_132": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -85.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 77.0
+  }, 
+  "block_131": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -87.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 77.0
+  }, 
+  "block_130": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -89.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 77.0
+  }, 
+  "block_42": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -117.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_43": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -115.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_40": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -121.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_41": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -119.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_46": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -109.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_47": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -107.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_44": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -113.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_45": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 21.5, 
+    "lon": -111.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 81.0
+  }, 
+  "block_48": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 20.5, 
+    "lon": -105.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 81.0
+  }, 
+  "block_49": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 20.5, 
+    "lon": -103.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 81.0
+  }, 
+  "block_524": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 59.0
+  }, 
+  "block_525": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 32.0, 
+    "lon": -65.0, 
+    "Vs": 3.5719, 
+    "Vp": 6.3906, 
+    "R": 1.7891, 
+    "lat": 59.0
+  }, 
+  "block_526": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -63.0, 
+    "Vs": 3.1906, 
+    "Vp": 5.7797, 
+    "R": 1.8115, 
+    "lat": 59.0
+  }, 
+  "block_527": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -61.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 59.0
+  }, 
+  "block_520": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -75.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_521": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_522": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_523": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -69.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_528": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 17.5, 
+    "lon": -59.0, 
+    "Vs": 2.2254, 
+    "Vp": 4.5589, 
+    "R": 2.0486, 
+    "lat": 59.0
+  }, 
+  "block_529": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -57.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 59.0
+  }, 
+  "block_728": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -93.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 49.0
+  }, 
+  "block_646": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -87.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_418": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_419": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -93.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_791": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 43.0
+  }, 
+  "block_790": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 46.0, 
+    "lon": -83.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 43.0
+  }, 
+  "block_797": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 31.0, 
+    "lon": -67.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 43.0
+  }, 
+  "block_796": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 30.0, 
+    "lon": -69.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 43.0
+  }, 
+  "block_795": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 43.0
+  }, 
+  "block_794": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 43.0
+  }, 
+  "block_410": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -111.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_411": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -109.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_412": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_413": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_414": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_415": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_416": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 63.0
+  }, 
+  "block_417": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -97.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_551": {
+    "geoprov": "Churchill Province", 
+    "H": 41.5, 
+    "lon": -103.0, 
+    "Vs": 3.6627, 
+    "Vp": 6.4554, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_550": {
+    "geoprov": "Churchill Province", 
+    "H": 45.0, 
+    "lon": -105.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 57.0
+  }, 
+  "block_553": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_552": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_555": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_554": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_557": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 57.0
+  }, 
+  "block_556": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_559": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 57.0
+  }, 
+  "block_558": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 57.0
+  }, 
+  "block_380": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_381": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_382": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_383": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_384": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_385": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_386": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_387": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_388": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 39.0, 
+    "lon": -65.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_389": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -63.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 65.0
+  }, 
+  "block_629": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -121.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 53.0
+  }, 
+  "block_771": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 32.0, 
+    "lon": -57.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 47.0
+  }, 
+  "block_628": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -123.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 53.0
+  }, 
+  "block_770": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 32.0, 
+    "lon": -59.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 47.0
+  }, 
+  "block_640": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_708": {
+    "geoprov": "oceanic crust", 
+    "H": 11.57, 
+    "lon": -133.0, 
+    "Vs": 1.9404, 
+    "Vp": 4.2399, 
+    "R": 2.1851, 
+    "lat": 49.0
+  }, 
+  "block_709": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -131.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 49.0
+  }, 
+  "block_258": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -67.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 71.0
+  }, 
+  "block_259": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -65.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 71.0
+  }, 
+  "block_256": {
+    "geoprov": "Churchill Province", 
+    "H": 29.5, 
+    "lon": -71.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 71.0
+  }, 
+  "block_257": {
+    "geoprov": "Churchill Province", 
+    "H": 24.0, 
+    "lon": -69.0, 
+    "Vs": 3.3396, 
+    "Vp": 6.0479, 
+    "R": 1.811, 
+    "lat": 71.0
+  }, 
+  "block_254": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_255": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 71.0
+  }, 
+  "block_252": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_253": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_250": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_251": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_317": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -121.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_316": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -123.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_315": {
+    "geoprov": "Interior Platform", 
+    "H": 37.0, 
+    "lon": -125.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_314": {
+    "geoprov": "Interior Platform", 
+    "H": 37.0, 
+    "lon": -127.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_313": {
+    "geoprov": "Interior Platform", 
+    "H": 34.0, 
+    "lon": -129.0, 
+    "Vs": 3.55, 
+    "Vp": 6.2853, 
+    "R": 1.7705, 
+    "lat": 67.0
+  }, 
+  "block_312": {
+    "geoprov": "Interior Platform", 
+    "H": 34.0, 
+    "lon": -131.0, 
+    "Vs": 3.55, 
+    "Vp": 6.2853, 
+    "R": 1.7705, 
+    "lat": 67.0
+  }, 
+  "block_311": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 35.0, 
+    "lon": -133.0, 
+    "Vs": 3.4814, 
+    "Vp": 6.1714, 
+    "R": 1.7727, 
+    "lat": 67.0
+  }, 
+  "block_310": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 35.0, 
+    "lon": -135.0, 
+    "Vs": 3.4814, 
+    "Vp": 6.1714, 
+    "R": 1.7727, 
+    "lat": 67.0
+  }, 
+  "block_776": {
+    "geoprov": "Grenville Province", 
+    "H": 45.5, 
+    "lon": -79.0, 
+    "Vs": 3.7011, 
+    "Vp": 6.5769, 
+    "R": 1.777, 
+    "lat": 45.0
+  }, 
+  "block_621": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -137.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 53.0
+  }, 
+  "block_319": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -117.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_318": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -119.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_620": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 14.5, 
+    "lon": -53.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 55.0
+  }, 
+  "block_779": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_740": {
+    "geoprov": "Grenville Province", 
+    "H": 43.0, 
+    "lon": -69.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 49.0
+  }, 
+  "block_179": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -141.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 73.0
+  }, 
+  "block_178": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -143.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 73.0
+  }, 
+  "block_741": {
+    "geoprov": "Grenville Province", 
+    "H": 43.0, 
+    "lon": -67.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 49.0
+  }, 
+  "block_173": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -73.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 75.0
+  }, 
+  "block_172": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -75.0, 
+    "Vs": 3.2172, 
+    "Vp": 5.8172, 
+    "R": 1.8082, 
+    "lat": 75.0
+  }, 
+  "block_171": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -77.0, 
+    "Vs": 3.2172, 
+    "Vp": 5.8172, 
+    "R": 1.8082, 
+    "lat": 75.0
+  }, 
+  "block_170": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -79.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 75.0
+  }, 
+  "block_177": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -65.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_176": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -67.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_175": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -69.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 75.0
+  }, 
+  "block_174": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -71.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 75.0
+  }, 
+  "block_670": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -125.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 51.0
+  }, 
+  "block_671": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -123.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 51.0
+  }, 
+  "block_672": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 51.0
+  }, 
+  "block_673": {
+    "geoprov": "Churchill Province", 
+    "H": 50.0, 
+    "lon": -119.0, 
+    "Vs": 3.612, 
+    "Vp": 6.353, 
+    "R": 1.7589, 
+    "lat": 51.0
+  }, 
+  "block_674": {
+    "geoprov": "Churchill Province", 
+    "H": 46.0, 
+    "lon": -117.0, 
+    "Vs": 3.4978, 
+    "Vp": 6.1783, 
+    "R": 1.7663, 
+    "lat": 51.0
+  }, 
+  "block_675": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -115.0, 
+    "Vs": 3.613, 
+    "Vp": 6.4261, 
+    "R": 1.7786, 
+    "lat": 51.0
+  }, 
+  "block_676": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -113.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 51.0
+  }, 
+  "block_677": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -111.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 51.0
+  }, 
+  "block_678": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -109.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 51.0
+  }, 
+  "block_679": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -107.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 51.0
+  }, 
+  "block_773": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 29.5, 
+    "lon": -53.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 47.0
+  }, 
+  "block_772": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 32.0, 
+    "lon": -55.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 47.0
+  }, 
+  "block_775": {
+    "geoprov": "Grenville Province", 
+    "H": 45.5, 
+    "lon": -81.0, 
+    "Vs": 3.7011, 
+    "Vp": 6.5769, 
+    "R": 1.777, 
+    "lat": 45.0
+  }, 
+  "block_774": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 46.0, 
+    "lon": -83.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 45.0
+  }, 
+  "block_777": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_745": {
+    "geoprov": "Grenville Province", 
+    "H": 43.0, 
+    "lon": -59.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 49.0
+  }, 
+  "block_736": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -77.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 49.0
+  }, 
+  "block_746": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -57.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 49.0
+  }, 
+  "block_747": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 39.0, 
+    "lon": -55.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 49.0
+  }, 
+  "block_719": {
+    "geoprov": "Interior Platform", 
+    "H": 48.0, 
+    "lon": -111.0, 
+    "Vs": 3.6125, 
+    "Vp": 6.4375, 
+    "R": 1.782, 
+    "lat": 49.0
+  }, 
+  "block_780": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_781": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 45.0
+  }, 
+  "block_713": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 34.0, 
+    "lon": -123.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 49.0
+  }, 
+  "block_712": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -125.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 49.0
+  }, 
+  "block_711": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -127.0, 
+    "Vs": 3.5719, 
+    "Vp": 6.3906, 
+    "R": 1.7891, 
+    "lat": 49.0
+  }, 
+  "block_19": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 15.5, 
+    "lon": -91.0, 
+    "Vs": 1.8255, 
+    "Vp": 3.9116, 
+    "R": 2.1428, 
+    "lat": 83.0
+  }, 
+  "block_18": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 16.5, 
+    "lon": -93.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 83.0
+  }, 
+  "block_710": {
+    "geoprov": "oceanic crust", 
+    "H": 30.0, 
+    "lon": -129.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 49.0
+  }, 
+  "block_11": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -107.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_10": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -109.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_13": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -103.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 83.0
+  }, 
+  "block_12": {
+    "geoprov": "oceanic crust", 
+    "H": 20.5, 
+    "lon": -105.0, 
+    "Vs": 2.0949, 
+    "Vp": 4.2015, 
+    "R": 2.0056, 
+    "lat": 83.0
+  }, 
+  "block_15": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 18.5, 
+    "lon": -99.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_14": {
+    "geoprov": "oceanic crust", 
+    "H": 19.5, 
+    "lon": -101.0, 
+    "Vs": 2.0074, 
+    "Vp": 4.1195, 
+    "R": 2.0522, 
+    "lat": 83.0
+  }, 
+  "block_17": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 16.5, 
+    "lon": -95.0, 
+    "Vs": 1.8482, 
+    "Vp": 3.917, 
+    "R": 2.1194, 
+    "lat": 83.0
+  }, 
+  "block_16": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 18.5, 
+    "lon": -97.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_454": {
+    "geoprov": "Slave Province", 
+    "H": 37.0, 
+    "lon": -115.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_455": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -113.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_456": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -111.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_457": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -109.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_450": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 41.0, 
+    "lon": -123.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 61.0
+  }, 
+  "block_451": {
+    "geoprov": "Interior Platform", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_452": {
+    "geoprov": "Interior Platform", 
+    "H": 39.0, 
+    "lon": -119.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_453": {
+    "geoprov": "Interior Platform", 
+    "H": 37.0, 
+    "lon": -117.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_515": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 59.0
+  }, 
+  "block_514": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 59.0
+  }, 
+  "block_517": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_516": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 59.0
+  }, 
+  "block_458": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_459": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_513": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 41.0, 
+    "lon": -89.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 59.0
+  }, 
+  "block_512": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 41.0, 
+    "lon": -91.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 59.0
+  }, 
+  "block_490": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -135.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 59.0
+  }, 
+  "block_491": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 40.0, 
+    "lon": -133.0, 
+    "Vs": 3.7235, 
+    "Vp": 6.5975, 
+    "R": 1.7719, 
+    "lat": 59.0
+  }, 
+  "block_492": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -131.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 59.0
+  }, 
+  "block_493": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -129.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 59.0
+  }, 
+  "block_494": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -127.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 59.0
+  }, 
+  "block_495": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -125.0, 
+    "Vs": 3.5767, 
+    "Vp": 6.2907, 
+    "R": 1.7588, 
+    "lat": 59.0
+  }, 
+  "block_496": {
+    "geoprov": "Interior Platform", 
+    "H": 43.0, 
+    "lon": -123.0, 
+    "Vs": 3.5767, 
+    "Vp": 6.2907, 
+    "R": 1.7588, 
+    "lat": 59.0
+  }, 
+  "block_497": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -121.0, 
+    "Vs": 3.6293, 
+    "Vp": 6.4439, 
+    "R": 1.7755, 
+    "lat": 59.0
+  }, 
+  "block_469": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 61.0
+  }, 
+  "block_727": {
+    "geoprov": "Superior Province", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 49.0
+  }, 
+  "block_379": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_717": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -115.0, 
+    "Vs": 3.4978, 
+    "Vp": 6.1783, 
+    "R": 1.7663, 
+    "lat": 49.0
+  }, 
+  "block_378": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_353": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -135.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 65.0
+  }, 
+  "block_352": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -137.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 65.0
+  }, 
+  "block_351": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -139.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 65.0
+  }, 
+  "block_350": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 34.0, 
+    "lon": -141.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 65.0
+  }, 
+  "block_357": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 41.0, 
+    "lon": -127.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 65.0
+  }, 
+  "block_272": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -125.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_355": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -131.0, 
+    "Vs": 3.5065, 
+    "Vp": 6.1587, 
+    "R": 1.7564, 
+    "lat": 65.0
+  }, 
+  "block_354": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 38.0, 
+    "lon": -133.0, 
+    "Vs": 3.5342, 
+    "Vp": 6.2316, 
+    "R": 1.7632, 
+    "lat": 65.0
+  }, 
+  "block_429": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_428": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_359": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -123.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_273": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -123.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_586": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -121.0, 
+    "Vs": 3.5109, 
+    "Vp": 6.1609, 
+    "R": 1.7548, 
+    "lat": 55.0
+  }, 
+  "block_375": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_584": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -125.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 55.0
+  }, 
+  "block_585": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -123.0, 
+    "Vs": 3.5859, 
+    "Vp": 6.3026, 
+    "R": 1.7576, 
+    "lat": 55.0
+  }, 
+  "block_9": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -111.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_8": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -113.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_580": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 32.0, 
+    "lon": -133.0, 
+    "Vs": 3.6656, 
+    "Vp": 6.5453, 
+    "R": 1.7856, 
+    "lat": 55.0
+  }, 
+  "block_374": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -93.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_5": {
+    "geoprov": "oceanic crust", 
+    "H": 17.5, 
+    "lon": -119.0, 
+    "Vs": 1.8969, 
+    "Vp": 3.9703, 
+    "R": 2.093, 
+    "lat": 83.0
+  }, 
+  "block_4": {
+    "geoprov": "oceanic crust", 
+    "H": 14.5, 
+    "lon": -89.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 85.0
+  }, 
+  "block_7": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -115.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_6": {
+    "geoprov": "oceanic crust", 
+    "H": 18.5, 
+    "lon": -117.0, 
+    "Vs": 1.9619, 
+    "Vp": 4.0503, 
+    "R": 2.0645, 
+    "lat": 83.0
+  }, 
+  "block_1": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -95.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 85.0
+  }, 
+  "block_0": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -97.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 85.0
+  }, 
+  "block_3": {
+    "geoprov": "oceanic crust", 
+    "H": 13.5, 
+    "lon": -91.0, 
+    "Vs": 1.8404, 
+    "Vp": 3.9985, 
+    "R": 2.1726, 
+    "lat": 85.0
+  }, 
+  "block_2": {
+    "geoprov": "oceanic crust", 
+    "H": 12.5, 
+    "lon": -93.0, 
+    "Vs": 1.8716, 
+    "Vp": 4.0824, 
+    "R": 2.1812, 
+    "lat": 85.0
+  }, 
+  "block_376": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_82": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.5, 
+    "lon": -113.0, 
+    "Vs": 3.1564, 
+    "Vp": 5.7382, 
+    "R": 1.818, 
+    "lat": 79.0
+  }, 
+  "block_279": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -111.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_373": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_372": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -97.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 65.0
+  }, 
+  "block_716": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 45.0, 
+    "lon": -117.0, 
+    "Vs": 3.7289, 
+    "Vp": 6.6222, 
+    "R": 1.7759, 
+    "lat": 49.0
+  }, 
+  "block_638": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -103.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 53.0
+  }, 
+  "block_639": {
+    "geoprov": "Interior Platform", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_634": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -111.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 53.0
+  }, 
+  "block_635": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -109.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 53.0
+  }, 
+  "block_636": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -107.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 53.0
+  }, 
+  "block_637": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -105.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 53.0
+  }, 
+  "block_630": {
+    "geoprov": "Churchill Province", 
+    "H": 50.0, 
+    "lon": -119.0, 
+    "Vs": 3.486, 
+    "Vp": 6.142, 
+    "R": 1.7619, 
+    "lat": 53.0
+  }, 
+  "block_631": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -117.0, 
+    "Vs": 3.613, 
+    "Vp": 6.4261, 
+    "R": 1.7786, 
+    "lat": 53.0
+  }, 
+  "block_632": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 46.0, 
+    "lon": -115.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 53.0
+  }, 
+  "block_633": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -113.0, 
+    "Vs": 3.6478, 
+    "Vp": 6.4826, 
+    "R": 1.7771, 
+    "lat": 53.0
+  }, 
+  "block_227": {
+    "geoprov": "Arctic Platform", 
+    "H": 31.0, 
+    "lon": -129.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 71.0
+  }, 
+  "block_226": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -131.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 71.0
+  }, 
+  "block_225": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.5, 
+    "lon": -133.0, 
+    "Vs": 3.1892, 
+    "Vp": 5.7508, 
+    "R": 1.8032, 
+    "lat": 71.0
+  }, 
+  "block_224": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 28.0, 
+    "lon": -135.0, 
+    "Vs": 3.0321, 
+    "Vp": 5.4518, 
+    "R": 1.798, 
+    "lat": 71.0
+  }, 
+  "block_223": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 33.0, 
+    "lon": -137.0, 
+    "Vs": 3.1333, 
+    "Vp": 5.6955, 
+    "R": 1.8177, 
+    "lat": 71.0
+  }, 
+  "block_222": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 28.0, 
+    "lon": -139.0, 
+    "Vs": 3.0321, 
+    "Vp": 5.4518, 
+    "R": 1.798, 
+    "lat": 71.0
+  }, 
+  "block_221": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.5, 
+    "lon": -141.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 71.0
+  }, 
+  "block_220": {
+    "geoprov": "oceanic crust", 
+    "H": 32.5, 
+    "lon": -143.0, 
+    "Vs": 3.1785, 
+    "Vp": 5.7385, 
+    "R": 1.8054, 
+    "lat": 71.0
+  }, 
+  "block_744": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 38.0, 
+    "lon": -61.0, 
+    "Vs": 3.5342, 
+    "Vp": 6.2316, 
+    "R": 1.7632, 
+    "lat": 49.0
+  }, 
+  "block_715": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -119.0, 
+    "Vs": 3.7348, 
+    "Vp": 6.5707, 
+    "R": 1.7593, 
+    "lat": 49.0
+  }, 
+  "block_739": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 43.0, 
+    "lon": -71.0, 
+    "Vs": 3.6093, 
+    "Vp": 6.35, 
+    "R": 1.7593, 
+    "lat": 49.0
+  }, 
+  "block_738": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -73.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 49.0
+  }, 
+  "block_229": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 29.5, 
+    "lon": -125.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 71.0
+  }, 
+  "block_228": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 30.0, 
+    "lon": -127.0, 
+    "Vs": 3.4667, 
+    "Vp": 6.24, 
+    "R": 1.8, 
+    "lat": 71.0
+  }, 
+  "block_432": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -67.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_433": {
+    "geoprov": "Churchill Province", 
+    "H": 31.0, 
+    "lon": -65.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 63.0
+  }, 
+  "block_430": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_431": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 63.0
+  }, 
+  "block_436": {
+    "geoprov": "oceanic crust", 
+    "H": 24.0, 
+    "lon": -59.0, 
+    "Vs": 3.3396, 
+    "Vp": 6.0479, 
+    "R": 1.811, 
+    "lat": 63.0
+  }, 
+  "block_437": {
+    "geoprov": "oceanic crust", 
+    "H": 24.0, 
+    "lon": -57.0, 
+    "Vs": 3.3396, 
+    "Vp": 6.0479, 
+    "R": 1.811, 
+    "lat": 63.0
+  }, 
+  "block_784": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 31.0, 
+    "lon": -63.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 45.0
+  }, 
+  "block_434": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -63.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 63.0
+  }, 
+  "block_785": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 45.0
+  }, 
+  "block_435": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -61.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 63.0
+  }, 
+  "block_786": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 27.0, 
+    "lon": -59.0, 
+    "Vs": 3.113, 
+    "Vp": 5.6574, 
+    "R": 1.8173, 
+    "lat": 45.0
+  }, 
+  "block_120": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -109.0, 
+    "Vs": 3.3797, 
+    "Vp": 5.9813, 
+    "R": 1.7698, 
+    "lat": 77.0
+  }, 
+  "block_121": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 30.0, 
+    "lon": -107.0, 
+    "Vs": 3.38, 
+    "Vp": 6.035, 
+    "R": 1.7855, 
+    "lat": 77.0
+  }, 
+  "block_122": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -105.0, 
+    "Vs": 3.4768, 
+    "Vp": 6.1841, 
+    "R": 1.7787, 
+    "lat": 77.0
+  }, 
+  "block_123": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -103.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 77.0
+  }, 
+  "block_124": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -101.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 77.0
+  }, 
+  "block_125": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -99.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 77.0
+  }, 
+  "block_126": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -97.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 77.0
+  }, 
+  "block_127": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 77.0
+  }, 
+  "block_128": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -93.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 77.0
+  }, 
+  "block_129": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 77.0
+  }, 
+  "block_643": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_642": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_645": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -89.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_644": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -91.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_647": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -85.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 53.0
+  }, 
+  "block_468": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 61.0
+  }, 
+  "block_55": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -91.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 81.0
+  }, 
+  "block_54": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -93.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 81.0
+  }, 
+  "block_57": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -87.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 81.0
+  }, 
+  "block_56": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -89.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 81.0
+  }, 
+  "block_51": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 15.5, 
+    "lon": -99.0, 
+    "Vs": 1.8255, 
+    "Vp": 3.9116, 
+    "R": 2.1428, 
+    "lat": 81.0
+  }, 
+  "block_50": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 17.5, 
+    "lon": -101.0, 
+    "Vs": 1.8969, 
+    "Vp": 3.9703, 
+    "R": 2.093, 
+    "lat": 81.0
+  }, 
+  "block_53": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -95.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 81.0
+  }, 
+  "block_52": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 14.5, 
+    "lon": -97.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 81.0
+  }, 
+  "block_783": {
+    "geoprov": "Appalachian Orogen", 
+    "H": 38.0, 
+    "lon": -65.0, 
+    "Vs": 3.5342, 
+    "Vp": 6.2316, 
+    "R": 1.7632, 
+    "lat": 45.0
+  }, 
+  "block_59": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 41.0, 
+    "lon": -83.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 81.0
+  }, 
+  "block_58": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 81.0
+  }, 
+  "block_465": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -93.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_464": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -95.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_788": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -55.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 45.0
+  }, 
+  "block_789": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -53.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 45.0
+  }, 
+  "block_743": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 38.0, 
+    "lon": -63.0, 
+    "Vs": 3.5342, 
+    "Vp": 6.2316, 
+    "R": 1.7632, 
+    "lat": 49.0
+  }, 
+  "block_20": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -89.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 83.0
+  }, 
+  "block_21": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -87.0, 
+    "Vs": 3.5719, 
+    "Vp": 6.3906, 
+    "R": 1.7891, 
+    "lat": 83.0
+  }, 
+  "block_22": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -85.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 83.0
+  }, 
+  "block_23": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 32.0, 
+    "lon": -83.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 83.0
+  }, 
+  "block_24": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -81.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_25": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 39.0, 
+    "lon": -79.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_26": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 39.0, 
+    "lon": -77.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_27": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -75.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_28": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -73.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_29": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 83.0
+  }, 
+  "block_467": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 61.0
+  }, 
+  "block_466": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 39.0, 
+    "lon": -91.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 61.0
+  }, 
+  "block_461": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_460": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_463": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -97.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 61.0
+  }, 
+  "block_462": {
+    "geoprov": "Churchill Province", 
+    "H": 41.5, 
+    "lon": -99.0, 
+    "Vs": 3.6627, 
+    "Vp": 6.4554, 
+    "R": 1.7625, 
+    "lat": 61.0
+  }, 
+  "block_542": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -121.0, 
+    "Vs": 3.6293, 
+    "Vp": 6.4439, 
+    "R": 1.7755, 
+    "lat": 57.0
+  }, 
+  "block_543": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -119.0, 
+    "Vs": 3.6293, 
+    "Vp": 6.4439, 
+    "R": 1.7755, 
+    "lat": 57.0
+  }, 
+  "block_540": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 38.0, 
+    "lon": -125.0, 
+    "Vs": 3.5342, 
+    "Vp": 6.2316, 
+    "R": 1.7632, 
+    "lat": 57.0
+  }, 
+  "block_541": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 43.0, 
+    "lon": -123.0, 
+    "Vs": 3.5767, 
+    "Vp": 6.2907, 
+    "R": 1.7588, 
+    "lat": 57.0
+  }, 
+  "block_546": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -113.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 57.0
+  }, 
+  "block_547": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -111.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 57.0
+  }, 
+  "block_544": {
+    "geoprov": "Interior Platform", 
+    "H": 46.0, 
+    "lon": -117.0, 
+    "Vs": 3.6804, 
+    "Vp": 6.5304, 
+    "R": 1.7744, 
+    "lat": 57.0
+  }, 
+  "block_545": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -115.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 57.0
+  }, 
+  "block_548": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -109.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 57.0
+  }, 
+  "block_549": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 57.0
+  }, 
+  "block_519": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -77.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_518": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_263": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -57.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 71.0
+  }, 
+  "block_262": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -59.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 71.0
+  }, 
+  "block_261": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.2656, 
+    "Vp": 5.9016, 
+    "R": 1.8072, 
+    "lat": 71.0
+  }, 
+  "block_260": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -63.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 71.0
+  }, 
+  "block_267": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 35.0, 
+    "lon": -135.0, 
+    "Vs": 3.4814, 
+    "Vp": 6.1714, 
+    "R": 1.7727, 
+    "lat": 69.0
+  }, 
+  "block_266": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 30.0, 
+    "lon": -137.0, 
+    "Vs": 3.38, 
+    "Vp": 6.035, 
+    "R": 1.7855, 
+    "lat": 69.0
+  }, 
+  "block_265": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -139.0, 
+    "Vs": 3.3797, 
+    "Vp": 5.9813, 
+    "R": 1.7698, 
+    "lat": 69.0
+  }, 
+  "block_264": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 37.0, 
+    "lon": -141.0, 
+    "Vs": 3.5405, 
+    "Vp": 6.3162, 
+    "R": 1.784, 
+    "lat": 69.0
+  }, 
+  "block_300": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -69.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_301": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -67.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 69.0
+  }, 
+  "block_302": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -65.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 69.0
+  }, 
+  "block_268": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 34.0, 
+    "lon": -133.0, 
+    "Vs": 3.55, 
+    "Vp": 6.2853, 
+    "R": 1.7705, 
+    "lat": 69.0
+  }, 
+  "block_304": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.2656, 
+    "Vp": 5.9016, 
+    "R": 1.8072, 
+    "lat": 69.0
+  }, 
+  "block_305": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -59.0, 
+    "Vs": 3.3172, 
+    "Vp": 5.9891, 
+    "R": 1.8055, 
+    "lat": 69.0
+  }, 
+  "block_306": {
+    "geoprov": "oceanic crust", 
+    "H": 31.0, 
+    "lon": -57.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 69.0
+  }, 
+  "block_307": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 36.5, 
+    "lon": -141.0, 
+    "Vs": 3.6986, 
+    "Vp": 6.5767, 
+    "R": 1.7782, 
+    "lat": 67.0
+  }, 
+  "block_289": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -91.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_288": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_669": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -127.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 51.0
+  }, 
+  "block_281": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_280": {
+    "geoprov": "Bear Province", 
+    "H": 37.0, 
+    "lon": -109.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_283": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_282": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_285": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -99.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_284": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_287": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_286": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -97.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 69.0
+  }, 
+  "block_666": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -133.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 51.0
+  }, 
+  "block_612": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -69.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_168": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -83.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_169": {
+    "geoprov": "Arctic Platform", 
+    "H": 31.0, 
+    "lon": -81.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 75.0
+  }, 
+  "block_164": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -91.0, 
+    "Vs": 3.5683, 
+    "Vp": 6.3098, 
+    "R": 1.7683, 
+    "lat": 75.0
+  }, 
+  "block_165": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -89.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_166": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -87.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_167": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -85.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_160": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 39.0, 
+    "lon": -99.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_161": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -97.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 75.0
+  }, 
+  "block_162": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -95.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_163": {
+    "geoprov": "Arctic Platform", 
+    "H": 41.0, 
+    "lon": -93.0, 
+    "Vs": 3.5134, 
+    "Vp": 6.2268, 
+    "R": 1.7723, 
+    "lat": 75.0
+  }, 
+  "block_605": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_604": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -85.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_607": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_606": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_601": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -91.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_600": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_603": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -87.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_602": {
+    "geoprov": "Superior Province", 
+    "H": 37.0, 
+    "lon": -89.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 55.0
+  }, 
+  "block_762": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -75.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 47.0
+  }, 
+  "block_763": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -73.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 47.0
+  }, 
+  "block_760": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -79.0, 
+    "Vs": 3.7289, 
+    "Vp": 6.6222, 
+    "R": 1.7759, 
+    "lat": 47.0
+  }, 
+  "block_660": {
+    "geoprov": "Grenville Province", 
+    "H": 40.0, 
+    "lon": -59.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 53.0
+  }, 
+  "block_609": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -75.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_608": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -77.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_764": {
+    "geoprov": "St. Lawrence Platform", 
+    "H": 39.0, 
+    "lon": -71.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 47.0
+  }, 
+  "block_765": {
+    "geoprov": "Grenville Province", 
+    "H": 39.0, 
+    "lon": -69.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 47.0
+  }, 
+  "block_714": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 39.0, 
+    "lon": -121.0, 
+    "Vs": 3.659, 
+    "Vp": 6.4192, 
+    "R": 1.7544, 
+    "lat": 49.0
+  }, 
+  "block_616": {
+    "geoprov": "Churchill Province", 
+    "H": 32.0, 
+    "lon": -61.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 55.0
+  }, 
+  "block_617": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -59.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 55.0
+  }, 
+  "block_614": {
+    "geoprov": "Churchill Province", 
+    "H": 40.0, 
+    "lon": -65.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_119": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -111.0, 
+    "Vs": 3.3797, 
+    "Vp": 5.9813, 
+    "R": 1.7698, 
+    "lat": 77.0
+  }, 
+  "block_118": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 35.0, 
+    "lon": -113.0, 
+    "Vs": 3.3914, 
+    "Vp": 6.0557, 
+    "R": 1.7856, 
+    "lat": 77.0
+  }, 
+  "block_615": {
+    "geoprov": "Churchill Province", 
+    "H": 40.0, 
+    "lon": -63.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_111": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 27.0, 
+    "lon": -127.0, 
+    "Vs": 3.0852, 
+    "Vp": 5.5167, 
+    "R": 1.7881, 
+    "lat": 77.0
+  }, 
+  "block_110": {
+    "geoprov": "oceanic crust", 
+    "H": 21.5, 
+    "lon": -129.0, 
+    "Vs": 2.1533, 
+    "Vp": 4.2944, 
+    "R": 1.9943, 
+    "lat": 77.0
+  }, 
+  "block_113": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -123.0, 
+    "Vs": 3.1784, 
+    "Vp": 5.7824, 
+    "R": 1.8193, 
+    "lat": 77.0
+  }, 
+  "block_112": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 28.0, 
+    "lon": -125.0, 
+    "Vs": 3.0875, 
+    "Vp": 5.6268, 
+    "R": 1.8224, 
+    "lat": 77.0
+  }, 
+  "block_115": {
+    "geoprov": "Arctic Platform", 
+    "H": 32.0, 
+    "lon": -119.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 77.0
+  }, 
+  "block_114": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 32.0, 
+    "lon": -121.0, 
+    "Vs": 3.5719, 
+    "Vp": 6.3906, 
+    "R": 1.7891, 
+    "lat": 77.0
+  }, 
+  "block_117": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -115.0, 
+    "Vs": 3.4344, 
+    "Vp": 6.1594, 
+    "R": 1.7934, 
+    "lat": 77.0
+  }, 
+  "block_116": {
+    "geoprov": "Arctic Platform", 
+    "H": 32.0, 
+    "lon": -117.0, 
+    "Vs": 3.5062, 
+    "Vp": 6.2875, 
+    "R": 1.7933, 
+    "lat": 77.0
+  }, 
+  "block_68": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -65.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 81.0
+  }, 
+  "block_69": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 39.0, 
+    "lon": -63.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 81.0
+  }, 
+  "block_64": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_65": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_66": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -69.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_67": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -67.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_60": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_61": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_62": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -77.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_63": {
+    "geoprov": "Innuitian Orogen", 
+    "H": 37.0, 
+    "lon": -75.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 81.0
+  }, 
+  "block_757": {
+    "geoprov": "Superior Province", 
+    "H": 45.0, 
+    "lon": -85.0, 
+    "Vs": 3.6667, 
+    "Vp": 6.4667, 
+    "R": 1.7636, 
+    "lat": 47.0
+  }, 
+  "block_508": {
+    "geoprov": "Churchill Province", 
+    "H": 41.5, 
+    "lon": -99.0, 
+    "Vs": 3.6627, 
+    "Vp": 6.4554, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_509": {
+    "geoprov": "Churchill Province", 
+    "H": 41.5, 
+    "lon": -97.0, 
+    "Vs": 3.6627, 
+    "Vp": 6.4554, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_506": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -103.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_507": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -101.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_504": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -107.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_505": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -105.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_502": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -111.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 59.0
+  }, 
+  "block_503": {
+    "geoprov": "Churchill Province", 
+    "H": 41.0, 
+    "lon": -109.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 59.0
+  }, 
+  "block_500": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -115.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 59.0
+  }, 
+  "block_501": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -113.0, 
+    "Vs": 3.6976, 
+    "Vp": 6.5524, 
+    "R": 1.7721, 
+    "lat": 59.0
+  }, 
+  "block_751": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -129.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 47.0
+  }, 
+  "block_511": {
+    "geoprov": "Churchill Province", 
+    "H": 39.0, 
+    "lon": -93.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 59.0
+  }, 
+  "block_750": {
+    "geoprov": "oceanic crust", 
+    "H": 12.0, 
+    "lon": -131.0, 
+    "Vs": 1.9037, 
+    "Vp": 4.1567, 
+    "R": 2.1835, 
+    "lat": 47.0
+  }, 
+  "block_706": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -53.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 51.0
+  }, 
+  "block_510": {
+    "geoprov": "Churchill Province", 
+    "H": 41.5, 
+    "lon": -95.0, 
+    "Vs": 3.6627, 
+    "Vp": 6.4554, 
+    "R": 1.7625, 
+    "lat": 59.0
+  }, 
+  "block_344": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -67.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_345": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 37.0, 
+    "lon": -65.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_346": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 31.0, 
+    "lon": -63.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 67.0
+  }, 
+  "block_347": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -61.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 67.0
+  }, 
+  "block_340": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -75.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_341": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -73.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_342": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -71.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_343": {
+    "geoprov": "                                                                                                                                                                                                                                                              ", 
+    "H": 37.0, 
+    "lon": -69.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_438": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -55.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 63.0
+  }, 
+  "block_439": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -53.0, 
+    "Vs": 3.6219, 
+    "Vp": 6.4719, 
+    "R": 1.7869, 
+    "lat": 63.0
+  }, 
+  "block_348": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -59.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 67.0
+  }, 
+  "block_349": {
+    "geoprov": "oceanic crust", 
+    "H": 31.0, 
+    "lon": -57.0, 
+    "Vs": 3.4065, 
+    "Vp": 6.1339, 
+    "R": 1.8006, 
+    "lat": 67.0
+  }, 
+  "block_725": {
+    "geoprov": "Interior Platform", 
+    "H": 41.0, 
+    "lon": -99.0, 
+    "Vs": 3.6659, 
+    "Vp": 6.4976, 
+    "R": 1.7724, 
+    "lat": 49.0
+  }, 
+  "block_722": {
+    "geoprov": "Interior Platform", 
+    "H": 48.0, 
+    "lon": -105.0, 
+    "Vs": 3.6125, 
+    "Vp": 6.4375, 
+    "R": 1.782, 
+    "lat": 49.0
+  }, 
+  "block_723": {
+    "geoprov": "Interior Platform", 
+    "H": 48.0, 
+    "lon": -103.0, 
+    "Vs": 3.6125, 
+    "Vp": 6.4375, 
+    "R": 1.782, 
+    "lat": 49.0
+  }, 
+  "block_308": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 37.0, 
+    "lon": -139.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.5216, 
+    "R": 1.7795, 
+    "lat": 67.0
+  }, 
+  "block_489": {
+    "geoprov": "Pacific Continental Shelf", 
+    "H": 34.0, 
+    "lon": -137.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 59.0
+  }, 
+  "block_309": {
+    "geoprov": "Cordilleran Orogen", 
+    "H": 35.0, 
+    "lon": -137.0, 
+    "Vs": 3.4814, 
+    "Vp": 6.1714, 
+    "R": 1.7727, 
+    "lat": 67.0
+  }, 
+  "block_488": {
+    "geoprov": "oceanic crust", 
+    "H": 34.0, 
+    "lon": -139.0, 
+    "Vs": 3.7074, 
+    "Vp": 6.5662, 
+    "R": 1.7711, 
+    "lat": 59.0
+  }, 
+  "block_487": {
+    "geoprov": "oceanic crust", 
+    "H": 23.0, 
+    "lon": -141.0, 
+    "Vs": 3.4217, 
+    "Vp": 6.1826, 
+    "R": 1.8069, 
+    "lat": 59.0
+  }, 
+  "block_761": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -77.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 47.0
+  }, 
+  "block_486": {
+    "geoprov": "oceanic crust", 
+    "H": 32.0, 
+    "lon": -143.0, 
+    "Vs": 3.2328, 
+    "Vp": 5.8453, 
+    "R": 1.8081, 
+    "lat": 59.0
+  }, 
+  "block_238": {
+    "geoprov": "Slave Province", 
+    "H": 39.0, 
+    "lon": -107.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_239": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -105.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_610": {
+    "geoprov": "Superior Province", 
+    "H": 40.0, 
+    "lon": -73.0, 
+    "Vs": 3.725, 
+    "Vp": 6.61, 
+    "R": 1.7745, 
+    "lat": 55.0
+  }, 
+  "block_230": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 29.5, 
+    "lon": -123.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 71.0
+  }, 
+  "block_231": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 29.5, 
+    "lon": -121.0, 
+    "Vs": 3.5068, 
+    "Vp": 6.3068, 
+    "R": 1.7984, 
+    "lat": 71.0
+  }, 
+  "block_232": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -119.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_233": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -117.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_234": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -115.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_235": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -113.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_236": {
+    "geoprov": "Bear Province", 
+    "H": 39.0, 
+    "lon": -111.0, 
+    "Vs": 3.6359, 
+    "Vp": 6.4192, 
+    "R": 1.7655, 
+    "lat": 71.0
+  }, 
+  "block_237": {
+    "geoprov": "Arctic Platform", 
+    "H": 39.0, 
+    "lon": -109.0, 
+    "Vs": 3.6051, 
+    "Vp": 6.3667, 
+    "R": 1.766, 
+    "lat": 71.0
+  }, 
+  "block_331": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -93.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_330": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -95.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_333": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -89.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_332": {
+    "geoprov": "Churchill Province", 
+    "H": 37.0, 
+    "lon": -91.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_335": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -85.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_334": {
+    "geoprov": "Hudson Bay Lowlands", 
+    "H": 37.0, 
+    "lon": -87.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_337": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -81.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_336": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -83.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_339": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -77.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_338": {
+    "geoprov": "Arctic Platform", 
+    "H": 37.0, 
+    "lon": -79.0, 
+    "Vs": 3.6649, 
+    "Vp": 6.4595, 
+    "R": 1.7625, 
+    "lat": 67.0
+  }, 
+  "block_485": {
+    "geoprov": "oceanic crust", 
+    "H": 25.5, 
+    "lon": -53.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 61.0
+  }, 
+  "block_484": {
+    "geoprov": "oceanic crust", 
+    "H": 14.5, 
+    "lon": -55.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 61.0
+  }, 
+  "block_483": {
+    "geoprov": "oceanic crust", 
+    "H": 14.5, 
+    "lon": -57.0, 
+    "Vs": 1.8238, 
+    "Vp": 3.9434, 
+    "R": 2.1622, 
+    "lat": 61.0
+  }, 
+  "block_269": {
+    "geoprov": "Arctic Continental Shelf", 
+    "H": 34.0, 
+    "lon": -131.0, 
+    "Vs": 3.55, 
+    "Vp": 6.2853, 
+    "R": 1.7705, 
+    "lat": 69.0
+  }, 
+  "block_481": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 25.5, 
+    "lon": -61.0, 
+    "Vs": 3.2373, 
+    "Vp": 5.8804, 
+    "R": 1.8165, 
+    "lat": 61.0
+  }, 
+  "block_480": {
+    "geoprov": "Atlantic Continental Shelf", 
+    "H": 32.0, 
+    "lon": -63.0, 
+    "Vs": 3.2172, 
+    "Vp": 5.8172, 
+    "R": 1.8082, 
+    "lat": 61.0
+  }
+}

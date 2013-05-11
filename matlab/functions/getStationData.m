@@ -42,7 +42,7 @@ if ~isempty(strfind(json, 'stations.json'))
         
     %% Get Mooney Vp shot data R = Vp
     %
-else
+elseif ~isempty(strfind(json, 'moonvpGeology.json'))
     for strng = fn'
         str = char(strng);
         % All stns should have geoprov field (ie within Canada)
@@ -57,7 +57,28 @@ else
         data.stn{end+1} = str;
         data.lat(end+1) = s.(str).lat;
         data.lon(end+1) = s.(str).lon;
-        data.R(end + 1) = s.(str).Vp;
+        data.R(end + 1) = s.(str).Vp; % Yes this is on purpose, main script
+        % is just setup to work on two variables - might change it though
+        data.H(end+1) = s.(str).H;
+    end
+    
+    %% Get Crust 2.0 Data
+else
+     for strng = fn'
+        str = char(strng);
+        % All stns should have geoprov field (ie within Canada)
+        if ~isfield(s.(str), 'geoprov')
+            continue
+        end
+        % Skip stations not within region of interest
+        if ~any(strcmp(s.(str).geoprov, regions))
+            continue
+        end
+ 
+        data.stn{end+1} = str;
+        data.lat(end+1) = s.(str).lat;
+        data.lon(end+1) = s.(str).lon;
+        data.R(end + 1) = s.(str).R;
         data.H(end+1) = s.(str).H;
     end
 end

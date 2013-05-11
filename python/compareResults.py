@@ -52,15 +52,25 @@ for i in range(3):
 
     arg = Args().addQuery("stdR", "lt", 0.06)
 
+    p0 = Params(pro,["H", "R", "stdR", "stdH"])
     p1 = Params(pro,["H", "R", "stdR", "stdH"], arg)
     p2 = Params(pub,["H", "R", "stdR", "stdH"])
+
+    # processedFULL = set(p0.stns)
+    # processed = set(p1.stns)
+    # published = set(p2.stns)
+
+    # print "station symmetric difference for", leglabel[i]
+    # sd =  published - processed
+    # for s in sd:
+    #     print "processed:", s, "stdR:", p0.stdR[list(p0.stns).index(s)]
 
     p1.sync(p2)
 
     Rcorr = pearsonr(p1.R, p2.R)
-    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0])
+    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p1.stns), "stations"
     Hcorr = pearsonr(p1.H, p2.H)
-    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0])
+    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p1.stns), "stations"
 
 
     t = np.arange(len(p1.R))

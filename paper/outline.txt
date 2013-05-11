@@ -32,66 +32,76 @@
       direct P-wave arrival
     - [!Figure: Reflected phases]
     - [!Equation: Travel Times]
-    - Strong Reflected phases at sharp velocity contrasts, for this study the boundary of interest is the Moho
-    - Seperation of P and S wave energy is performed by rotating coordinates into radial and transverse
-      dimensions and then transforming them in to P, SV and SH components with a wave field decomposition
-      transfer matrix (Bostock, 1998).
+    - Strong Reflected phases at sharp velocity contrasts, for this study the boundary of interest
+      is the Moho
+    - Seperation of P and S wave energy is performed by rotating coordinates into radial and
+      transverse dimensions and then transforming them in to P, SV and SH components with a
+      wave field decomposition transfer matrix (Bostock, 1998).
     - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
-    - Deconvolution approach is an L2 freq domain which performs quickly and makes no assumptions on
-      the noise in the data
+    - Deconvolution approach is an L2 freq domain which performs quickly and makes no
+      assumptions on the noise in the data
     - [!Equation: Deconvolution]
-    - Method minimize GCV(r) where r is used as ... explain Equation. (Bostock, 1998; Golub et al., 1979)
-    - Decon produces an approximation to the S-component of the Earth's Green's function, (receiver function).
-    - This receiver function has energy located at the times corrisponding to the reflected S-wave arrivals
-      in the seismogram
+    - Method minimize GCV(r) where r is used as ... explain Equation.
+      (Bostock, 1998; Golub et al., 1979)
+    - Decon produces an approximation to the S-component of the Earth's Green's function,
+      (receiver function).
+    - This receiver function has energy located at the times corrisponding to the reflected
+      S-wave arrivals in the seismogram
     - RF is filtered between 0.04Hz and 3.0Hz
     - These RF's are used as the data for two parameter estimation methods
 
     - Vp/Vs method
-      - Zhu and Kanamori (2000), hereafter ZK, proposed a method for extracting the ratio, R, of P-wave
-        velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H, from receiver functions.
-      - Method involves stacking RFs along trial moveout curves for a range of candidate models of R and H.
-      - Model requires an apriori assumption on crustal P-velocity, Vp, and will tradeoff to some degree with
-        crustal thickness H. Using the Crust 2.0 Vp estimate at each station.
-      - Each phase is weighted based on the general trend in quality, with direct arrivals usually carrying
-        the best signal followed by the PpPs and finally PpSs.
+      - Zhu and Kanamori (2000), hereafter ZK, proposed a method for extracting the ratio, R,
+        of P-wave velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H,
+        from receiver functions.
+      - Method involves stacking RFs along trial moveout curves for a range of candidate models
+        of R and H.
+      - Model requires an apriori assumption on crustal P-velocity, Vp, and will tradeoff to
+        some degree with crustal thickness H. Using the Crust 2.0 Vp estimate at each station.
+      - Each phase is weighted based on the general trend in quality, with direct arrivals
+        usually carrying the best signal followed by the PpPs and finally PpSs.
       - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
         phases respectively.
-      - Semblance weighting (Eaton, 2006) used to reduce the effect of spurious large amplitude noise in
-        the data.
+      - Semblance weighting (Eaton, 2006) used to reduce the effect of spurious large amplitude
+        noise in the data.
       - [!Equation: Semblance]
       - Semblance function ranges between zero for incoherent noise and one for a coherent signal
-      - Adding this additional wieghting shown by Eaton to provide sharper resolution when selecting between
-        stacked models.
-      - The model which stacks the most coherent energy is used to provide the best estimates for R and H.
+      - Adding this additional wieghting shown by Eaton to provide sharper resolution when
+        selecting between stacked models.
+      - The model which stacks the most coherent energy is used to provide the best estimates
+        for R and H.
 
 
     - Vp method
-      - Method which allows for estimates of Vp and Vs uniquely (Bostock and Kumar, 2010) hereafter BK
+      - Method which allows for estimates of Vp and Vs uniquely (Bostock and Kumar, 2010)
+        hereafter BK
       - Does not require apriori assumption on Vp
-      - Linear dependence on H in equations can be removed by dividing reflected phases with the direct arrival
+      - Linear dependence on H in equations can be removed by dividing reflected phases with
+        the direct arrival
       - [!Equation: BK travel time equations]
       - Similar to stacking method of ZK, requires an estimate for tps
       - Grid search for R and Vp
       - Line search for H
       - Several methods for choosing tps are available
-        - tps should represent the most prominent phase of the ____ and its arrival, depending on Moho depth,
-          should fall within the window of 3 to 6 seconds. With low moveout one may therefore select the
-          time corresponding to maximum amplitude within a given window as an estimate of tps.
-        - An alternative approach is to use max amplititude estimates as data in a non-linear optimization
-          to find the R, Vp and H which mimimize the residual between tps and the data. The travel time
-          equations are twice-differentiable so the quadratically convergent Newton's method may be employed.
-          This approach has the advantage that noise leading to poor maximum amplitude picks are effectively
+        - tps should represent the most prominent phase of the ____ and its arrival,
+          depending on Moho depth, should fall within the window of 3 to 6 seconds.
+          With low moveout one may therefore select the time corresponding to maximum
+          amplitude within a given window as an estimate of tps.
+        - An alternative approach is to use max amplititude estimates as data in a
+          non-linear optimization to find the R, Vp and H which mimimize the residual
+          between tps and the data. The travel time equations are twice-differentiable so
+          the quadratically convergent Newton's method may be employed. This approach has
+          the advantage that noise leading to poor maximum amplitude picks are effectively
           collapsed onto the curve corresponding to the travel time function.
-        - The problem size is relatively small and performing a full 3D gridsearch over Vp Vs and H affords
-          the advantages of both the HK and BK approaches. No requirements for an estimate of tps or Vp and
-          provides estimates for Vp and Vs uniquely as well as H. The computational expense is felt computing
-          statistical estimates for the error
+        - The problem size is relatively small and performing a full 3D gridsearch over Vp Vs
+          and H affords the advantages of both the ZK and BK approaches. No requirements for
+          an estimate of tps or Vp and provides estimates for Vp and Vs uniquely as well as H.
+          The computational expense is felt computing statistical estimates for the error
 
     - Error calculations
-      - Error calculations are performed with bootstrap resampling by rerunning the processing with randomly
-        receiver functions, with replacement, 1024 times. The error is obtained by taking the standard
-        deviation of the results
+      - Error calculations are performed with bootstrap resampling by rerunning the
+        processing with randomly receiver functions, with replacement, 1024 times.
+        The error is obtained by taking the standard deviation of the results
 
   - Vp database
     - Estimates for Vp and H from compiled active source data
@@ -106,27 +116,65 @@
 - Results
 
   - Comparisons
-    - Several regional studies have been published that utilize similar method to those described above in 2.1,
-      and contain parameter estimates of R and H for some of the stations used in this study.
+    - Several regional studies have been published that utilize similar method to those
+      described above in 2.1, and contain parameter estimates of R and H for some of the
+      stations used in this study.
+    - Comparisons made using only those stations with less than 0.06 bootstrap error.
+    - Ensure processing runs use the correct value for the assumed Vp in respective papers.
+    - All comparisons made using ZK approach with semblance wieghting
     - Comprehensive study in Hudson Bay region of Canadian Shield (Thompson et. al., 2010)
-    - Study focusing on Crustal thickness and Vp/Vs variation in the Grenville Orogen (Eaton et al, 2006)
-    - Lithosphere study in the Superior Province - (Darbyshire et. al. 2007)
-    - Ensure use same Vp as papers.
-    - All employ semblance weighting.
-    - Comparison Results
+      - Utilizing 30 stations
       - Correlation between Thompson et. al. Vp/Vs datasets is 0.54
       - Correlation between Thompson et. al. H datasets is 0.96
+      - [!Figure Thompson comparison H]
+      - [!Figure Thompson comparison Vp/Vs]
+    - Study focusing on Crustal thickness and Vp/Vs variation in the Grenville
+      Orogen (Eaton et al, 2006)
+      - Utilizing 29 stations
       - Correlation between Eaton et. al. Vp/Vs datasets is 0.36
       - Correlation between Eaton et. al. H datasets is 0.85
+      - [!Figure Eaton comparison H]
+      - [!Figure Eaton comparison Vp/Vs]
+    - Lithosphere study in the Superior Province - (Darbyshire et. al. 2007)
+      - Utilizing 10 stations
       - Correlation between Darbyshire et. al. Vp/Vs datasets is 0.43
       - Correlation between Darbyshire et. al. H datasets is 0.95
+      - [!Figure Darbyshire comparison H]
+      - [!Figure Darbyshire comparison Vp/Vs]
+
     - Comparison Discussion
       - Crustal Thickness
-
-
+        - Very good correlation in thickness estimates with all three datasets.
       - Vp/Vs
+        - Lower correlation with the Vp/Vs values.
+          - Expect lower correlation with Vp/Vs since the travel time equations are
+            less sensitive to seismic velocities than they are to crustal thickness.
+            This means that there will be more uncertainty during the parameter
+            search for Vp/Vs and hence higher degree of relative error.
+          - ??? Utilizing different sources, applying different deconvolution and
+            filtering techniques will therefore have a greater impact on the
+            uncertainty of picking Vp/Vs than that of crustal thickness H.
 
-
+  - Regional Bulk Crustal Parameters
+    - All following data has been utilized using only those stations with less than
+      than +/-0.06 stdR bootstrap error.
+    - Averaging station crustal parameter estimates requires a scheme to account for
+      the uneven geographic distribution of stations. Stations that cluster together in
+      space should account for less of the total than those stations who are sampling a
+      much larger region.
+      - A Weighting scheme is calculated as follows:
+        - Stations are projected onto the 2D plane using the Albers equal-area conic projection.
+        - A voronoi diagram is calculated for all projected station locations.
+        - The ratio between the voronoi cell surface encompassing each station and the
+          total area of the bounding region is computed and used as the weighting value.
+        - Station parameter values are multiplied by the wieghts and then summed.
+    - Canada wieghted crustal thickness average is 37.0 km.
+      - Previous estimates for Canadian Crustal averages are 38 km (Perry, 2002) and
 
 
 - Discussion
+
+
+
+
+Refs

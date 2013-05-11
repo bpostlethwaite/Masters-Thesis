@@ -52,7 +52,7 @@ epochdict = json.loads( epochdata.read() )
 ##     #Load geological time data
 # db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeology.dbf")
 
-# stnChrons = {}
+ stnChrons = {}
 # for rec in db:
 #     stnChrons[rec["station"]] = {}
 #     stnChrons[rec["station"]]["lower"] = epochdict[rec["epoch"]][0]
