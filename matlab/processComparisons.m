@@ -31,25 +31,12 @@ for stn = stns'
     % Run Bootstrap
     [ boot ] = bootstrap(db.rec, db.dt, db.pslow, 1048, method, [], vp);    
 
-    %[ kr, kh, ~ ] = fastgridsearchKAN(db.rec', db.dt, db.pslow);
-    %[ bv, br, bh, ~, ~ ] = fastgridsearch(db.rec', db.Tps, db.dt, db.pslow);
-    %[ v, r, h, ~] = G3Dsearch(db.rec', db.dt, db.pslow, 150);
-    
     fprintf('--- %s -----\n', station)
     fprintf('R = %f\n', results.rbest)
     fprintf('H = %f\n', results.hbest)
     fprintf('old R = %f\n', db.hk.rbest)
     fprintf('old H = %f\n', db.hk.hbest)
-    
-%     fprintf('--- Bostock -----\n')
-%     fprintf('Vp = %f\n', bv)
-%     fprintf('R = %f\n', br)
-%     fprintf('H = %f\n', bh)
-%     fprintf('--- 3Dsearch -----\n')
-%     fprintf('Vp = %f\n', v)
-%     fprintf('R = %f\n', r)
-%     fprintf('H = %f\n', h)
-    
+     
 %    s.(station).('Vp') = v;
     s.(station).('R') = results.rbest;
     s.(station).('H') = results.hbest;

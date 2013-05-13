@@ -1,19 +1,27 @@
+BEN POSTLETHWAITE
+THESIS ARTICLE OUTLINE
+notes on structure:
+  - Section headers and indentation reflect intended structure of draft article
+  - Figures and equations to be included in article are given with the syntax
+    [!Figure figname]
+  - Points surrounded by triple question marks ??? text ??? are either outstanding
+    questions or material for which a decision to include it in the Paper has not yet
+    been made.
+  - Comments surrounded by <<< comment >>> are comments or questions about structure
+
+BEGIN OUTLINE
+
 - Introduction
   - Geology of Canada
   - Problem?
-    -
   - Large Scale overview
-  -
 
 - Geological Background
 
-
-
 - Data and Methods
-  - (What is the data)
-    - Analysis of bulk Canadian continental crust require parameter estimates
-    - Estimates come from processing of seismograms into receiver functions
-    - Additional estimates from Crust 2.0 database and an active source compilation.
+  - Analysis of bulk Canadian continental crust require parameter estimates
+  - Estimates come from processing of seismograms into receiver functions
+  - Additional estimates from Crust 2.0 database and an active source compilation.
 
   - Parameter Estimates from Teleseismic Data
     - P-wave Teleseismic
@@ -22,62 +30,67 @@
     - All networks including CNSN, Polaris, FedNor and Chasme
     - 343 Seismic stations
     - More than 700 EQ sources
-    - at each station sources selected if within 30 to 100 degree epicentral distance window
+    - at each station sources selected if within 30 to 100 degree epicentral distance
+      window
     - Total of 80,000 events
-    - Transformed into RFs
+    - Teleseismic Data Transformed into RFs
 
-  - (How)
-    - Two RF transformation algorithms used, one well tested, another not yet employed at scale
-    - Both methods utilize the S-wave reflected phases and the travel time difference to the
-      direct P-wave arrival
+  - Receiver Function Methods
+    - Two RF transformation algorithms used, one well tested, another not yet employed at
+      scale
+    - Both methods utilize the S-wave reflected phases and the travel time difference to
+      the direct P-wave arrival
     - [!Figure: Reflected phases]
     - [!Equation: Travel Times]
-    - Strong Reflected phases at sharp velocity contrasts, for this study the boundary of interest
-      is the Moho
-    - Separation of P and S wave energy is performed by rotating coordinates into radial and
-      transverse dimensions and then transforming them in to P, SV and SH components with a
-      wave field decomposition transfer matrix [Bostock, 1998].
-    - Direct arrival used as an estimate for the source function and deconvolved from the S-wave
+    - Strong reflected phases at sharp velocity contrasts, for this study the boundary of
+      interest is the Moho
+    - Separation of P and S wave energy is performed by rotating coordinates into radial
+      and transverse dimensions and then transforming them in to P, SV and SH components
+      with a wave field decomposition transfer matrix [Bostock, 1998].
+    - Direct arrival used as an estimate for the source function and deconvolved from the
+      S-wave
     - Deconvolution approach is an L2 freq domain which performs quickly and makes no
       assumptions on the noise in the data
     - [!Equation: Deconvolution]
-    - Method minimize GCV(r) where r is used as ... explain Equation.
+    - Deconvolution method minimizes the general cross validation function GCV(rho)
+      where rho is used as the regulation parameter.
       [Bostock, 1998; Golub et al., 1979]
-    - Decon produces an approximation to the S-component of the Earth's Green's function,
-      (receiver function).
+    - Deconvolution produces an approximation to the S-component of the Earth's
+      Green's function. This function is referred to as a receiver function.
     - This receiver function has energy located at the times corresponding to the reflected
       S-wave arrivals in the seismogram
     - RF is filtered between 0.04Hz and 3.0Hz
     - These RF's are used as the data for two parameter estimation methods
 
     - Vp/Vs method
-      - Zhu and Kanamori [2000], hereafter ZK, proposed a method for extracting the ratio, R,
-        of P-wave velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness, H,
-        from receiver functions.
-      - Method involves stacking RFs along trial moveout curves for a range of candidate models
-        of R and H.
-      - Model requires an apriori assumption on crustal P-velocity, Vp, and will tradeoff to
-        some degree with crustal thickness H. Using the Crust 2.0 Vp estimate at each station.
+      - Zhu and Kanamori [2000], hereafter ZK, proposed a method for extracting the ratio,
+        R, of P-wave velocity to S-wave velocity, R = Vp/Vs, as well as crustal thickness,
+        H, from receiver functions.
+      - Method involves stacking RFs along trial moveout curves for a range of candidate
+        models of R and H.
+      - Model requires an apriori assumption on crustal P-velocity, Vp, and will trade-off
+        to some degree with crustal thickness H. Using the Crust 2.0 Vp estimate at each
+        station.
       - Each phase is weighted based on the general trend in quality, with direct arrivals
         usually carrying the best signal followed by the PpPs and finally PpSs.
-      - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs and PpSs
-        phases respectively.
-      - Semblance weighting [Eaton, 2006] used to reduce the effect of spurious large amplitude
-        noise in the data.
+      - Weights used for all processing are w1 = 0.5, w2 = 0.3, w3 = 0.2 for the Ps, PpPs
+        and PpSs phases respectively.
+      - Semblance weighting [Eaton, 2006] used to reduce the effect of spurious large
+        amplitude noise in the data.
       - [!Equation: Semblance]
-      - Semblance function ranges between zero for incoherent noise and one for a coherent signal
+      - Semblance function ranges between zero for incoherent noise and one for a coherent
+        signal
       - Adding this additional weighting shown by Eaton to provide sharper resolution when
         selecting between stacked models.
-      - The model which stacks the most coherent energy is used to provide the best estimates
-        for R and H.
-
+      - The model which stacks the most coherent energy is used to provide the best
+        estimates for R and H.
 
     - Vp method
       - Method which allows for estimates of Vp and Vs uniquely [Bostock and Kumar, 2010]
         hereafter BK
       - Does not require apriori assumption on Vp
-      - Linear dependence on H in equations can be removed by dividing reflected phases with
-        the direct arrival
+      - Linear dependence on H in equations can be removed by dividing reflected phases
+        with the direct arrival
       - [!Equation: BK travel time equations]
       - Similar to stacking method of ZK, requires an estimate for tps
       - Grid search for R and Vp
@@ -93,10 +106,12 @@
           the quadratically convergent Newton's method may be employed. This approach has
           the advantage that noise leading to poor maximum amplitude picks are effectively
           collapsed onto the curve corresponding to the travel time function.
-        - The problem size is relatively small and performing a full 3D gridsearch over Vp Vs
-          and H affords the advantages of both the ZK and BK approaches. No requirements for
-          an estimate of tps or Vp and provides estimates for Vp and Vs uniquely as well as H.
-          The computational expense is felt computing statistical estimates for the error
+        - The problem size is relatively small and performing a full 3D gridsearch over
+          Vp Vs and H affords the advantages of both the ZK and BK approaches. No
+          requirements for an estimate of tps or Vp and provides estimates for Vp and Vs
+          uniquely as well as H. The computational expense can be prohibitive when
+          computing a statistically signficant number (1000+) random samples for the
+          bootstrap error estimate.
 
     - Error calculations
       - Error calculations are performed with bootstrap resampling by rerunning the
@@ -142,7 +157,8 @@
       - [!Figure Darbyshire comparison H]
       - [!Figure Darbyshire comparison Vp/Vs]
 
-    - Comparison Discussion ??? Here or in the discussion section ???
+    - Comparison Discussion
+    - ??? Here or in the discussion section ???
       - Crustal Thickness
         - Very good correlation in thickness estimates with all three datasets.
       - Vp/Vs
@@ -163,36 +179,85 @@
       space should account for less of the total than those stations who are sampling a
       much larger region.
       - A Weighting scheme is calculated as follows:
-        - Stations are projected onto the 2D plane using the Albers equal-area conic projection.
-        - A voronoi diagram is calculated for all projected station locations.
-        - The ratio between the voronoi cell surface encompassing each station and the
+        - Stations are projected onto the 2D plane using the Albers equal-area conic
+          projection.
+        - A Voronoi diagram is calculated for all projected station locations.
+        - The ratio between the Voronoi cell surface encompassing each station and the
           total area of the bounding region is computed and used as the weighting value.
         - Station parameter values are multiplied by the weights and then summed.
-    - Canada weighted crustal thickness average is 37.0 km.
-    - Canada bulk crustal Vp/Vs weighted average is 1.75 which gives a Poisson ratio of 0.258
     - [!Figure Histogram Canada H]
-    - [!Figure Histogram Canada Vp/Vs]
-    - Slave, Churchill, Superior, Grenville Provinces have weighted crustal thicknesses of
-      38.2km, 38.9km, 39.71km and 41.7km and Vp/Vs values of 1.74, 1,73, 1.74 and 1.78
-      respectively.
-    - The Canadian Shield as a whole has a crustal thickness weighted average of 39.2 and a
-      Vp/Vs weighted average of 1.74.
-    - ??? JUST GIVE ALL POISSON OR VP/VS AS WELL ???
+    - [!Figure Histogram Canada Poisson]
+    - Canada weighted crustal thickness average given by ZK + semblance weighting
+      processing is 37.0 km. The weighted value for Crust2.0 is 38km.
+    - ??? GIVE ALL SEISMIC PARAMETER VALUES AS POISSON OR VP/VS OR BOTH ???
+    - Canada bulk crustal Poisson's ratio is 0.258. The Crust2.0 average is 0.267.
+    - For comparison, at 600 MPa a granite gneiss has a Poisson's ratio of 0.250, a
+      tonalitic gneiss has a Poisson ratio of 0.257 and a higher value of 0.283 is
+      representative of a mafic granulite [Christensen, 1996].
+    - The Crust2.0 Poisson's ratio of 0.267 would compare directly to the Poisson's ratio
+      of a paragranulite at 600 MPa.
     - [!Figure Histogram Slave, Churchill, Superior, Grenville H]
-    - [!Figure Histogram Slave, Churchill, Superior, Grenville Vp/Vs]
+    - [!Figure Histogram Slave, Churchill, Superior, Grenville Poisson]
+    - [!Figure Histogram Churchill, Superior, Grenville Active Source Vp]
+    - Slave, Churchill, Superior, Grenville Provinces have weighted crustal thicknesses of
+      38.2km, 38.9km, 39.71km and 41.7km and Vp/Vs values of 0.253, 0.250, 0.253 and 0.270
+      respectively.
+    - Moving South from the Churchill through the Superior and the Grenville see an
+      increase in both crustal thickness and Poisson's ratio.
+    - The Crust 2.0 values for the same regions are 37.0km, 37.8km, 39.0km and 40.5km for
+      crustal thickness and 0.263, 0.264, 0.264 and 0.265 for Vp/Vs.
+    - Crust2.0 has shows thinner contintental crusts but the same Southward thickening
+      trend.
+    - The southern trend of increasing Poisson's ratio values is not as apparent in the
+      Crust2 data-set.
+    - Using the same weighting scheme, the regional averages for all active source data
+      [Mooney, 2012] are compiled. The Vp averages for the three provinces Churchill,
+      Superior and Grenville are 6.38km/s, 6.43km/s and 6.48km/s.
+    - Active source data shows increasing seismic Vp velocity trend through the
+      Canadian Shield, this is in alignment with the trend in Poisson's ratio values
+      computed via the semblance wieghted ZK method.
     - [!Figure Histogram Canadian Shield H]
-    - [!Figure Histogram Canadian Shield Vp/Vs]
+    - [!Figure Histogram Canadian Shield Poisson]
+    - The Canadian Shield as a whole has a crustal thickness weighted average of 39.2 and a
+      Poisson's ratio of 0.253.
+    - The Crust2.0 average values for the Canadian Shield are 38.8km crustal thickness and
+      a Poisson's ratio of 0.266.
 
-  - Comparison with Crust2.0 Data
-    - <<< EXTRACT STUFF FROM LAST PRESENTATION HERE >>>
-
+  - Detailed comparison with Crust2 Data
+    - Crustal Thickness Comparisons
+      - [!Figure Crust 2.0 vs ZK Crustal Thickness Map]
+      - Good overall alignment between the two data-sets:
+        - The trend from thicker crust, ~43km, in SE Ontario to thinner crust, ~38km,
+          in the NW of the Province.
+        - General homogeneous 37+/-2km in the Slave and Churchill Provinces
+        - Thicker, 41km+, crusts in the Platform regions,
+        - Thinner crusts on the subduction interface on the West Coast of British Columbia.
+        - ??? Results from [Perry, 2002] goes into detail on the isostatic composition of
+          North America - Can I add anything to the results in this paper? Sparse coverage
+          in the cordillera may make this difficult. ???
+      - Some noticeable differences in the data-sets:
+        - The deeper transect profile running NW to SE on the Churchill side of the
+          Great Slave Lake shear zone is absent from the Crust 2.0 data.
+        - Most stations in the South of Baffin Island put the Moho more than 4km deeper
+          than the Crust 2.0 data.
+        - ??? Station ULM & ULM2, best quality, 2km difference than Crust2 data. ???
+  - Poisson's ratio Comparisons
+    - [!Figure Crust 2.0 vs ZK Poisson Map]
+    <<< NEED TO CHANGE OF QGIS FROM VP/VS to POISSONS RATIO >>>
+    - Higher variance in the RMS between the two Vp/Vs data-sets than the H data-sets
+    - Areas of general alignment are in the Eastern Slave and SE Ontario.
+    - Crust 2.0 data gives a value of 1.76 for Churchill and northern Superior Province
+      while the ZK computed Vp/Vs values for many of the stations located in these regions
+      are much lower, between 7.2 and 7.4.
+    - Other lower values for the ZK computed Vp/Vs found in the western Slave Province and
+      in the Western Corderilla, along British Columbia's west coast.
 
 - Discussion
-  - Regional Bulk Crustal parameter Discussion
+  - Explanation of results
     - Canada H & Vp/Vs
-      - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust 2.0
-        average is 38km as well, however this is expected since Crust2.0 data for Canada
-        is based on the same data as that of Lith5.0
+      - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust
+        2.0 average is 38km as well, however this is expected since Crust2.0 data for
+        Canada is based on the same data as that of Lith5.0
       - ??? Make some comparison to global average ???
 
 
@@ -201,14 +266,24 @@
 Refs (AGU style)
 
 Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21,183-21,200.
+
 Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
+
 Christensen, N. I. (1996), Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156.
+
 Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New insights into the lithosphere beneath the Superior Province from Rayleigh wave dispersion and receiver function analysis, J. Geophys. Int., 169, 1043-1068.
+
 Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+
 Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic receiver functions, Tectonophysics, 420, 223-238.
+
 Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
 Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
+
 Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
+
 Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, 297, 655–666.
+
 Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
+
 Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.

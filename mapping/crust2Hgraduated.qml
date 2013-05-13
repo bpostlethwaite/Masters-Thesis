@@ -3,14 +3,14 @@
   <transparencyLevelInt>255</transparencyLevelInt>
   <renderer-v2 attr="mH" symbollevels="0" type="graduatedSymbol">
     <ranges>
-      <range symbol="0" lower="24.6482" upper="25" label="11.5700 - 16.5613"/>
-      <range symbol="1" lower="25" upper="31.407" label="16.5613 - 21.5525"/>
-      <range symbol="2" lower="31.407" upper="34.6734" label="21.5525 - 26.5438"/>
-      <range symbol="3" lower="34.6734" upper="36.5578" label="26.5438 - 31.5350"/>
-      <range symbol="4" lower="36.5263" upper="38.191" label="31.5350 - 36.5263"/>
-      <range symbol="5" lower="38.191" upper="40.3266" label="36.5263 - 41.5175"/>
-      <range symbol="6" lower="40.3266" upper="42.9648" label="41.5175 - 46.5088"/>
-      <range symbol="7" lower="42.9648" upper="46.2312" label="46.5088 - 51.5000"/>
+      <range symbol="0" lower="24.6482" upper="25" label="24.6 - 25.0"/>
+      <range symbol="1" lower="25" upper="31.407" label="25.0 - 31.4"/>
+      <range symbol="2" lower="31.407" upper="34.6734" label="31.4 - 34.7"/>
+      <range symbol="3" lower="34.6734" upper="36.5578" label="34.7 - 36.6"/>
+      <range symbol="4" lower="36.5263" upper="38.191" label="36.6 - 38.2"/>
+      <range symbol="5" lower="38.191" upper="40.3266" label="38.2 - 40.3"/>
+      <range symbol="6" lower="40.3266" upper="42.9648" label="40.3 - 43.0"/>
+      <range symbol="7" lower="42.9648" upper="46.2312" label="43.0 - 46.2"/>
     </ranges>
     <symbols>
       <symbol outputUnit="MM" alpha="1" type="fill" name="0">
@@ -144,6 +144,7 @@
     <edittype type="0" name="hk::stdH"/>
     <edittype type="0" name="hk::stdR"/>
     <edittype type="0" name="mH"/>
+    <edittype type="0" name="mR"/>
     <edittype type="0" name="mVp"/>
     <edittype type="0" name="mVs"/>
     <edittype type="0" name="mcode"/>
