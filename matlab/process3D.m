@@ -1,35 +1,42 @@
 % Automatic Kanamori Algorithm
 
-clear all; close all
-loadtools;
-addpath([userdir,'/thesis/matlab/functions']);
-addpath([userdir,'/programming/matlab/jsonlab']);
-databasedir = '/media/TerraS/database';
+NUM = 1;
+
+fid = fopen('processed-ok.list');
+ix = 1;
+stns{ix} = fgetl(fid);
  
-%Setup parallel toolbox
+while ischar(stns{ix})
+    ix = ix + 1;  
+    stns{ix} = fgetl(fid);
+end
+stns(end) = [];
+fclose(fid);
+
+databasedir = '/mnt/backup/backup/bpostlet/TerraS/database';
+
 if ~matlabpool('size')
-    workers = feature('numCores');
+    workers = 7;
     matlabpool('local', workers)
 end
 
-lim3D = 150;
+ns = round(length(stns) / 3);
 
-stns = {'ULM'};
-
-for stn = stns'
-
-    station = stn{1};
+for ii = ((NUM - 1) * ns + 1) : ns * NUM
+    if (ii > length(stns))
+        continue
+    end
+    station = stns{ii};
+    disp(['processing', station])
     
     load(fullfile(databasedir, station));
         
-    [ v, r, h, ~] = gridsearch3DC(db.rec', db.dt, db.pslow, lim3D);
-    tic
-    [Vp, R, H] = bootstrap3D(db.rec, db.dt, db.pslow, lim3D, 10);    
-    toc
+    [ v, r, h, ~] = gridsearch3DC(db.rec', db.dt, db.pslow, 150);
+    [Vp, R, H] = bootstrap3D(db.rec, db.dt, db.pslow, 150, 1);    
  
-    fprintf('--- 3Dsearch -----\n')
-    fprintf('Vp = %f\n', v)
-    fprintf('R = %f\n', r)
-    fprintf('H = %f\n', h)
-    
+    save(['data/',station,'.mat'], 'v', 'r', 'h', 'Vp', 'R', 'H')
+
 end
+
+
+matlabpool close
