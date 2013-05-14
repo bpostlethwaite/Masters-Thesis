@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-118.923908</xmin>
-            <ymin>59.388385</ymin>
-            <xmax>-101.636561</xmax>
-            <ymax>70.080245</ymax>
+            <xmin>-136.387069</xmin>
+            <ymin>28.430606</ymin>
+            <xmax>-43.795381</xmax>
+            <ymax>85.696615</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,14 +29,14 @@
                 <legendlayerfile isInOverview="0" layerid="stationsThompson20130218155618165" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20130405163833215" visible="1"/>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="stations" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stations20130405163833215" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="0" open="true" checked="Qt::Unchecked" name="Seismic Station Data" showFeatureCount="0">
+        <legendlayer drawingOrder="0" open="true" checked="Qt::Checked" name="Seismic Station Data" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stationsOK20130218151944721" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="stationsOK20130218151944721" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="moonVpGeology" showFeatureCount="0">
@@ -59,14 +59,14 @@
                 <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="crust2geology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="crust2geology" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust2geology20130226140546451" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="crust2geology20130226140546451" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Crust 2.0" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Crust 2.0" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust2layer20130218152924374" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="crust2layer20130218152924374" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="4" open="false" checked="Qt::Unchecked" name="INDEXMAP_GEOLOGY" showFeatureCount="0">
@@ -3738,16 +3738,16 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 attr="hk::R" symbollevels="0" type="graduatedSymbol">
+            <renderer-v2 attr="hk::H" symbollevels="0" type="graduatedSymbol">
                 <ranges>
-                    <range symbol="0" lower="1.6756" upper="1.7103" label="1.6756 - 1.7103"/>
-                    <range symbol="1" lower="1.7103" upper="1.7254" label="1.7103 - 1.7254"/>
-                    <range symbol="2" lower="1.7254" upper="1.7389" label="1.7254 - 1.7389"/>
-                    <range symbol="3" lower="1.7389" upper="1.7555" label="1.7389 - 1.7555"/>
-                    <range symbol="4" lower="1.7555" upper="1.7691" label="1.7555 - 1.7691"/>
-                    <range symbol="5" lower="1.7691" upper="1.7887" label="1.7691 - 1.7887"/>
-                    <range symbol="6" lower="1.7887" upper="1.8143" label="1.7887 - 1.8143"/>
-                    <range symbol="7" lower="1.8143" upper="1.843" label="1.8143 - 1.8430"/>
+                    <range symbol="0" lower="24.6482" upper="25" label="24.6482 - 25.0000"/>
+                    <range symbol="1" lower="25" upper="31.407" label="25.0000 - 31.4070"/>
+                    <range symbol="2" lower="31.407" upper="34.6734" label="31.4070 - 34.6734"/>
+                    <range symbol="3" lower="34.6734" upper="36.5578" label="34.6734 - 36.5578"/>
+                    <range symbol="4" lower="36.5578" upper="38.191" label="36.5578 - 38.1910"/>
+                    <range symbol="5" lower="38.191" upper="40.3266" label="38.1910 - 40.3266"/>
+                    <range symbol="6" lower="40.3266" upper="42.9648" label="40.3266 - 42.9648"/>
+                    <range symbol="7" lower="42.9648" upper="46.2312" label="42.9648 - 46.2312"/>
                 </ranges>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
