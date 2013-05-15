@@ -223,6 +223,18 @@ def matStats(statdict, modtime, force = False):
             except IndexError:
                 pass
 
+            try:
+                statdict[station]['fg'] = {}
+                statdict[station]['fg']['Vp'] = float(db['fg']['vbest'])
+                statdict[station]['fg']['R'] = float(db['fg']['rbest'])
+                statdict[station]['fg']['H'] = float(db['fg']['hbest'])
+                statdict[station]['fg']['stdVp'] = float(db['fg']['stdVp'])
+                statdict[station]['fg']['stdR'] = float(db['fg']['stdR'])
+                statdict[station]['fg']['stdH'] = float(db['fg']['stdH'])
+            except IndexError:
+                pass
+
+
     return statdict
 
 def setStatus(s, stdict):

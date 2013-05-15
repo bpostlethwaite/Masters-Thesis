@@ -4,19 +4,19 @@ close all
 addpath functions
 
 database = '/media/TerraS/database';
-dfullgrid = '/media/TerraS/dfullgrid';
+dbfullgrid = '/media/TerraS/dbfullgrid';
 
-flist=dir([dfullgrid,'/*.mat']); 
+flist=dir([dbfullgrid,'/*.mat']); 
 
-mergeFLAG = false;
+mergeFLAG = true;
 plotFLAG = false;
 
 for ii=1:length(flist)
 
     station = flist(ii).name(1:end-4);
     disp(station)
-    dbfile = fullfile(databasedir, flist(ii).name);
-    fullgfile = fullfile(dfullgrid, flist(ii).name);
+    dbfile = fullfile(database, flist(ii).name);
+    fullgfile = fullfile(dbfullgrid, flist(ii).name);
     load(dbfile)
     S = load(fullgfile); %#ok<NASGU>
 
