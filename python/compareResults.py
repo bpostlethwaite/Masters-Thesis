@@ -28,6 +28,9 @@ leglabel = ["Thompson et. al.",
             "Eaton et. al.",
             "Darbyshire et. al."]
 
+Vp = [6.5, 6.39, 6.39]
+
+stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 #######################
 # Plotting formatter
 #######################
@@ -52,34 +55,29 @@ for i in range(3):
 
     arg = Args().addQuery("stdR", "lt", 0.06)
 
-    p0 = Params(pro,["H", "R", "stdR", "stdH"])
-    p1 = Params(pro,["H", "R", "stdR", "stdH"], arg)
-    p2 = Params(pub,["H", "R", "stdR", "stdH"])
-
-    # processedFULL = set(p0.stns)
-    # processed = set(p1.stns)
-    # published = set(p2.stns)
-
-    # print "station symmetric difference for", leglabel[i]
-    # sd =  published - processed
-    # for s in sd:
-    #     print "processed:", s, "stdR:", p0.stdR[list(p0.stns).index(s)]
+    p0 = Params(pro, ["H", "R", "stdR", "stdH"], arg)
+    p2 = Params(pub, ["H", "R", "stdR", "stdH"])
+    arg = Args().addQuery("fg::stdR", "lt", 0.06)
+    p1 = Params(stnfile, ["fg::H","fg::R", "fg::Vp", "fg::stdVp", "fg::stdR", "fg::stdH"])
 
     p1.sync(p2)
+    # p2.sync(p0)
+    # p0.sync(p1)
+    #p0.sync(p2)
 
-    Rcorr = pearsonr(p1.R, p2.R)
-    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p1.stns), "stations"
-    Hcorr = pearsonr(p1.H, p2.H)
-    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p1.stns), "stations"
+    Rcorr = pearsonr(p1.fg_R, p2.R)
+    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
+    Hcorr = pearsonr(p1.fg_H / p1.fg_Vp, p2.H / Vp[i])
+    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
 
-
-    t = np.arange(len(p1.R))
+    continue
+    t = np.arange(len(p1.fg_R))
 
     plt.figure(figsize = (width, height))
     ax = plt.subplot(111)
-    plt.plot(t, p1.R, '-ob', lw = lw, ms = ms, label = "Vp/Vs estimate -  current data set")
+    plt.plot(t, p1.fg_R, '-ob', lw = lw, ms = ms, label = "Vp/Vs estimate -  current data set")
     plt.plot(t, p2.R, '-og', lw = lw, ms = ms, label = "Vp/Vs estimate " + leglabel[i])
-    plt.errorbar(t, p1.R, yerr = p1.stdR, xerr=None, fmt=None, ecolor = 'blue',
+    plt.errorbar(t, p1.fg_R, yerr = p1.fg_stdR, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
     plt.errorbar(t, p2.R, yerr = p2.stdR, xerr=None, fmt=None, ecolor = 'green',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
@@ -100,9 +98,9 @@ for i in range(3):
     plt.figure(figsize = (width, height))
     ax = plt.subplot(111)
 
-    plt.plot(t, p1.H, '-ob', lw = lw, ms = ms, label = "H estimate -  current data set")
+    plt.plot(t, p1.fg_H, '-ob', lw = lw, ms = ms, label = "H estimate -  current data set")
     plt.plot(t, p2.H, '-og', lw = lw, ms = ms, label = "H estimate " + leglabel[i])
-    plt.errorbar(t, p1.H, yerr = p1.stdH, xerr=None, fmt=None, ecolor = 'blue',
+    plt.errorbar(t, p1.fg_H, yerr = p1.fg_stdH, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
     plt.errorbar(t, p2.H, yerr = p2.stdH, xerr=None, fmt=None, ecolor = 'green',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")

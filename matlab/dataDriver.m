@@ -20,7 +20,7 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'PKLO'; %
+station = 'ULM'; %
 % KGNO
 %{
 

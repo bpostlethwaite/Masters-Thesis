@@ -83,17 +83,17 @@ legend('actual curve','data','L2 solution','L1 solution')
 %}
 
 %% JSON testing
-%{
-opt.FileName = '/media/TerraS/database/test.json';
+%
+opt.FileName = '../data/stations.json';
 opt.ForceRootName = 0;
 
 sts = loadjson(opt.FileName);
 
-results = struct('Vp',10,'R',2.3,'H',37.2);
+%results = struct('Vp',10,'R',2.3,'H',37.2);
 
-sts.('SADO').results = results;
+%sts.('SADO').results = results;
  
-savejson('', sts, opt);
+%savejson('', sts, opt);
 %}
 
 %% Polytope testing

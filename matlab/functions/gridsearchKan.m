@@ -25,9 +25,9 @@ h = h1:dh:h2;
 p2 = pslow.^2;
 np = length(pslow);
 nt = length(rec);
-w1 = .5;
-w2 = .3;
-w3 = .2;
+w1 = 0.5;
+w2 = 0.3;
+w3 =-0.2;
 
 % Reshape for fast access
 gvr = rec'; % rotate
@@ -50,7 +50,7 @@ parfor ir = 1:nr
         S2 = sum(gvr(round(t2/dt)+1+[0:np-1]*nt))^2 / sum(gvr(round(t2/dt)+1+[0:np-1]*nt).^2);
         S3 = sum(gvr(round(t3/dt)+1+[0:np-1]*nt))^2 / sum(gvr(round(t3/dt)+1+[0:np-1]*nt).^2);
         
-        stackhr(ir,ih) = S1*w1*r1 + S2*w2*r2 - S3*w3*r3;
+        stackhr(ir,ih) = S1*w1*r1 + S2*w2*r2 + S3*w3*r3;
     end
 end
 

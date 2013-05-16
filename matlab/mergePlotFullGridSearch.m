@@ -8,8 +8,8 @@ dbfullgrid = '/media/TerraS/dbfullgrid';
 
 flist=dir([dbfullgrid,'/*.mat']); 
 
-mergeFLAG = true;
-plotFLAG = false;
+mergeFLAG = false;
+plotFLAG = true;
 
 for ii=1:length(flist)
 

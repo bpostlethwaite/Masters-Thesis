@@ -32,10 +32,10 @@ def princomp(A,numpc=0):
 
 if __name__  == "__main__":
 
-    m = Params(stnfile, ["mb::H","mb::Vp", "mb::stdVp", "hk::stdR"])
-    # m = Params(stnfile, ["hk::H","hk::R", "hk::stdR"])
-    # m.mb_H = m.hk_H
-    # m.mb_Vp = m.hk_R
+    maxerr = 0.06
+    arg = Args().addQuery("hk::stdR", "lt", str(maxerr))
+    m = Params(stnfile, ["mb::H","mb::Vp", "mb::stdVp", "hk::stdR"], arg)
+    f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdVp", "hk::stdR"], arg)
 
     ## Figure Properties #######
     figwidth = 12
@@ -57,7 +57,12 @@ if __name__  == "__main__":
     #############################################################################
     # Vp estimates against H
     ##############################################################################
-    A = np.vstack( (m.mb_H, m.mb_Vp) )
+    corrmb = pearsonr(m.mb_Vp, m.mb_H)
+    print "MB: stddev = {} with {} stations, correlation between Vp and H is {}".format(maxerr, len(m.stns), corrmb[0])
+    corrfg = pearsonr(f.fg_Vp, f.fg_H)
+    print "FG: stddev = {} with {} stations, correlation between Vp and H is {}".format(maxerr, len(f.stns), corrfg[0])
+
+    A = np.vstack( (f.fg_H, f.fg_Vp) )
 
     coeff, score, latent = princomp(A.T, 2)
     am = np.mean(A, axis = 1)
@@ -71,17 +76,17 @@ if __name__  == "__main__":
 
     slope = -pc[1] / pc[0]
     b = yb - slope * xb
-    hmin = np.min(m.mb_H)
-    hmax = np.max(m.mb_H)
+    hmin = np.min(f.fg_H)
+    hmax = np.max(f.fg_H)
     xpt = [hmin, hmax]
     ypt = np.array([slope * xpt[0] + b, slope * xpt[1] + b])
 
     fig = plt.figure( figsize = (figwidth, figheight) )
-    plt.plot(m.mb_H, m.mb_Vp, 'ob', lw = lw, ms = ms, label = "Bostock (2010) Vp against H estimate")
+    plt.plot(f.fg_H, f.fg_Vp, 'ob', lw = lw, ms = ms, label = "Bostock (2010) Vp against H estimate")
     plt.plot(xpt, ypt,'--r', lw = lw, label="Principal Component Vector")
 #    plt.plot([0, coeff[1,0] * 2] + am[0], [0, coeff[1,1]*2] + am[1],'--k', lw = 4)
 
-    plt.title("Correlated Error in Dataset: Moving up the Vp, H Trade Off Curve", size = 18)
+    plt.title("Correlated Error in Dataset", size = 18)
     plt.legend(loc= 2, prop={'size': leg})
     plt.ylabel("Station Vp [km/s]", size = label)
     plt.xlabel("Station Thickness H [km]", size = label)
@@ -94,23 +99,21 @@ if __name__  == "__main__":
 
 #    arg = Args().stations(["ALE","ALGO","ARVN","BANO","CBRQ","DAWY","DELO","FCC","FFC","HAL","KGNO","KSVO","LMN","MBC","MNT","MOBC","ORIO","PEMO","PGC","PLVO","PMB","PTCO","SJNN","SUNO","ULM","ULM2","WAPA ","WHY","WSLR ","YKW1","YOSQ"])
 #    m.filter(arg)
-    m.filter(Args().addQuery("mb::Vp", "gt", "5.5"))
-    m.filter(Args().addQuery("mb::Vp", "lt", "7.0"))
 
     c = Params(csfile, ["H","Vp"])
-    c.sync(m)
+    c.sync(f)
 
-    stdVp = 2 * m.mb_stdVp # 2 stdError
-    t = np.arange(len(m.mb_Vp))
+    stdVp = 2 * f.fg_stdVp # 2 stdError
+    t = np.arange(len(f.fg_Vp))
 
-    corr = pearsonr(m.mb_Vp, c.Vp)
+    corr = pearsonr(f.fg_Vp, c.Vp)
     print "correlation = {}".format(corr[0])
 
     fig = plt.figure( figsize = (figwidth, figheight) )
     ax = plt.subplot(111)
 
-    plt.plot(t, m.mb_Vp, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp estimate")
-    plt.errorbar(t, m.mb_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+    plt.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp estimate")
+    plt.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
     plt.plot(t, c.Vp, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
 #   plt.title("Active Source P-wave velocity comparison\n Correlation = {0:2.3f}".format(corr[0]), size = title)
@@ -130,42 +133,28 @@ if __name__  == "__main__":
     plt.grid(True)
 
     # #############################################################################
-    # # Select Vp estimates against H
+    # # FG Vp/Vs versus Kan Vp/Vs
     # ##############################################################################
-    # fig = plt.figure( figsize = (width, height) )
-    # plt.plot(m.mb_Vp, m.mb_H, 'ob', lw = 4, ms = 12, label = "Bostock (2010) Vp against H estimate")
-    # # plt.errorbar(t, m.mb_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
-    # #              elinewidth = 2, capsize = 7, mew = 2, label = "2 std dev Bootstrap")
-    # # plt.plot(t, c.Vp, '-og', lw = 4, ms = 12, label = "Proximal Controlled Source estimate")
-    # plt.title("Correlated Error: Moving up the Vp, H Trade Off Curve", size = 18)
-    # plt.legend()
-    # plt.xlabel("Vp [km/s]")
-    # plt.ylabel("Thickness H [km]")
-    # plt.grid(True)
-
-    # #############################################################################
-    # # MB Vp/Vs versus Kan Vp/Vs
-    # ##############################################################################
-    m = Params(stnfile, ["mb::H","mb::R", "mb::stdR"])
+    f = Params(stnfile, ["fg::H","fg::R", "fg::stdR"])
     k = Params(stnfile, ["hk::H","hk::R", "hk::stdR"])
 
-    maxerr = 0.01
-    m.filter(Args().addQuery("mb::stdR", "lt", str(maxerr)))
+    maxerr = 0.06
+    f.filter(Args().addQuery("fg::stdR", "lt", str(maxerr)))
 #    k.filter
 
-    k.sync(m)
+    k.sync(f)
 
-    stdR = 2 * m.mb_stdR # 2 stdError
-    t = np.arange(len(m.mb_R))
+    stdR = 2 * f.fg_stdR # 2 stdError
+    t = np.arange(len(f.fg_R))
 
-    corr = pearsonr(m.mb_R, k.hk_R)
+    corr = pearsonr(f.fg_R, k.hk_R)
     print "with stddev limit {} and {} stations, correlation = {}".format(maxerr, len(k.stns), corr[0])
 
     fig = plt.figure( figsize = (figwidth, figheight) )
     ax = plt.subplot(111)
 
-    plt.plot(t, m.mb_R, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp/Vs estimate")
-    plt.errorbar(t, m.mb_R, yerr= stdR, xerr=None, fmt=None, ecolor = 'blue',
+    plt.plot(t, f.fg_R, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp/Vs estimate")
+    plt.errorbar(t, f.fg_R, yerr= stdR, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
     plt.plot(t, k.hk_R, '-og', lw = lw, ms = ms, label = "Kanamori Vp/Vs estimate")
     plt.errorbar(t, k.hk_R, yerr=2 * k.hk_stdR, xerr=None, fmt=None, ecolor = 'green',
