@@ -1,4 +1,4 @@
-function csection(seis,beg,dt,aflag,xdist);
+function csection(seis,beg,dt,aflag,xdist)
 % CSECTION(SEIS,BEG,DT,AFLAG,XDIST) plots a color seismogram 
 % section of seismograms in 2D array SEIS. BEG is begin time 
 % of section, DT is sample interval and AFLAG determines amplitude 

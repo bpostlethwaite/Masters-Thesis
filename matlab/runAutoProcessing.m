@@ -15,11 +15,10 @@ s = fieldnames(json);
 
 func = @konrad;
 
-for ii = 1 : length(s)
+for ii = 40 : length(s)
 
     station = s{ii};
  %  try
-               
         dbfile = fullfile(databasedir, [station,'.mat'] );
        
         if  numel(strfind(json.(station).status, 'processed'))
