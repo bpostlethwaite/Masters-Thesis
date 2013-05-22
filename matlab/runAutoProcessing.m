@@ -10,15 +10,14 @@ if ~exist('json', 'var')
     json = loadjson('../data/stations.json');
 end
 %%  Select Station to Process and load station data
-method = 'kanamori';
 s = fieldnames(json);
 
-func = @konrad;
-
-for ii = 40 : length(s)
+func = @conrad;
+ind = 1;
+for ii = 1 : length(s)
 
     station = s{ii};
- %  try
+
         dbfile = fullfile(databasedir, [station,'.mat'] );
        
         if  numel(strfind(json.(station).status, 'processed'))
@@ -33,12 +32,16 @@ for ii = 40 : length(s)
             fprintf('skipping %s\n', station)
             continue    
         end
-        
-        func(db)    
-        pause()
-        
-%    catch ME
-%          fprintf('%s %s\n', station, ME.message)
-%          continue
-%    end
+%% Application logic
+        %func(db, dbfile);
+        if isfield(db, 'conrad')
+            if isfield(db.conrad, 'ih')
+                H = db.conrad.H;
+                for jj = 1:length(db.conrad.ih)
+                    hpoints(ind) = H(db.conrad.ih(jj));
+                    ind = ind + 1;
+                end
+            end
+            clear db
+        end
 end
