@@ -24,6 +24,8 @@ dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
 updtime = os.environ['HOME'] + '/thesis/data/updtime.data'
 
+fixerregex = re.compile('(?:[0-9\.]+)')
+fixer = lambda x: [float(item) for item in fixerregex.findall(repr(x))]
 
 def flattenlist(a, result=None):
     """Flattens a nested list.
@@ -232,6 +234,17 @@ def matStats(statdict, modtime, force = False):
                 statdict[station]['fg']['stdR'] = float(db['fg']['stdR'])
                 statdict[station]['fg']['stdH'] = float(db['fg']['stdH'])
             except IndexError:
+                pass
+
+            try:
+                statdict[station]['conrad'] = {}
+                hfixed = fixer(db['conrad']['hdisc'])
+                if hfixed:
+                    statdict[station]['conrad']['hdisc'] = hfixed
+                hpfixed = fixer(db['conrad']['hdiscp'])
+                if hpfixed:
+                    statdict[station]['conrad']['hdiscp'] = hpfixed
+            except (IndexError, ValueError):
                 pass
 
 

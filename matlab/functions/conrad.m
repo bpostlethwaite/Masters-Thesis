@@ -34,7 +34,6 @@ del = 0.5;
 % db.conrad.stackh = stackh;
 % db.conrad.H = H;
 % db.conrad.del = del;
-% db.conrad = rmfield(db.conrad, 'ihauto');
 % save(dbfile, 'db')
 % disp(['saved', dbfile])
 % return
@@ -56,7 +55,7 @@ while menuItem
             db.conrad.flags = del;
          case 3
             %db.conrad.stackh = stackh;
-            db.conrad.ih = ihpicked;
+            db.conrad.ihpicked = ih;
             %db.conrad.H = H;
             %db.conrad.del = del;
             save(dbfile, 'db')

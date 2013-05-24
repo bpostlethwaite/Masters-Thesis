@@ -13,7 +13,11 @@ end
 s = fieldnames(json);
 
 func = @conrad;
-ind = 1;
+indh = 1;
+indhp = 1;
+hcount = 1;
+hpcount = 1;
+
 for ii = 1 : length(s)
 
     station = s{ii};
@@ -32,14 +36,24 @@ for ii = 1 : length(s)
             fprintf('skipping %s\n', station)
             continue    
         end
-%% Application logic
-        %func(db, dbfile);
+        %% Application logic
+        %        func(db, dbfile);
         if isfield(db, 'conrad')
-            if isfield(db.conrad, 'ih')
+            if isfield(db.conrad, 'hdisc')
+                hcount = hcount + 1;
                 H = db.conrad.H;
-                for jj = 1:length(db.conrad.ih)
-                    hpoints(ind) = H(db.conrad.ih(jj));
-                    ind = ind + 1;
+                for jj = 1:length(db.conrad.hdisc)
+                    h(indh) = H(db.conrad.hdisc(jj));
+                    indh = indh + 1;
+                end
+                
+            end
+            if isfield(db.conrad, 'hdiscp')
+                hpcount = hpcount + 1;
+                H = db.conrad.H;
+                for jj = 1:length(db.conrad.hdiscp)
+                    hpicked(indhp) = H(db.conrad.hdiscp(jj));
+                    indhp = indhp + 1;
                 end
             end
             clear db
