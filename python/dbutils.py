@@ -127,7 +127,7 @@ def json2shapefile(stdict, fout, sc):
     w = shapefile.Writer( shapeType = 1 )
     # Set fields for attribute table
 
-    fields = ["wm::Vp","wm::R", "hk::R", "hk::H", "hk::stdR", "hk::stdH"]
+    fields = ["wm::Vp","wm::R", "hk::R", "hk::H", "hk::stdR", "hk::stdH", "conrad::"]
     w.field("station", 'C', '6')
     w.field("network", 'C', '10')
     w.field("status", 'C', '16')
