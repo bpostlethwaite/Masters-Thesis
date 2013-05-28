@@ -127,7 +127,7 @@ def json2shapefile(stdict, fout, sc):
     w = shapefile.Writer( shapeType = 1 )
     # Set fields for attribute table
 
-    fields = ["wm::Vp","wm::R", "hk::R", "hk::H", "hk::stdR", "hk::stdH", "conrad::"]
+    fields = ["wm::Vp","wm::R", "hk::R", "hk::H", "hk::stdR", "hk::stdH"]
     w.field("station", 'C', '6')
     w.field("network", 'C', '10')
     w.field("status", 'C', '16')
@@ -135,12 +135,27 @@ def json2shapefile(stdict, fout, sc):
     for field in fields:
         w.field(field, 'N', 7, 4)
 
+    conradfields = ["hdisc","hdiscp"]
+    for f in conradfields:
+        w.field(f, 'N', 7, 4)
+
     for key in stdict.keys():
         # Set lon & lat
         w.point( stdict[key]["lon"], stdict[key]["lat"] )
         values = []
         for f in fields:
             values.append( '{0:2.4f}'.format(sc.flattendict(stdict[key])[f]) if f in sc.flattendict(stdict[key]) else "None   ")
+
+        # add conrad
+        conradfields = ["conrad::hdisc","conrad::hdiscp"]
+        for f in conradfields:
+            d = None
+            if f in sc.flattendict(stdict[key]) and sc.flattendict(stdict[key])[f]:
+                disc = [disc for disc in sc.flattendict(stdict[key])[f] if (13.0 < disc < 19.0)]
+                if disc:
+                    d = disc[0]
+            values.append('{0:2.4f}'.format(d) if d else 0.0)
+
         w.record( key,
                   stdict[key]["network"],
                   stdict[key]["status"],
@@ -149,7 +164,11 @@ def json2shapefile(stdict, fout, sc):
                   values[2],
                   values[3],
                   values[4],
-                  values[5])
+                  values[5],
+                  values[6],
+                  values[7])
+
+
 
     w.save(fout)
 

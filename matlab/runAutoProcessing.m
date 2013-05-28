@@ -37,25 +37,25 @@ for ii = 1 : length(s)
             continue    
         end
         %% Application logic
-        %        func(db, dbfile);
-        if isfield(db, 'conrad')
-            if isfield(db.conrad, 'hdisc')
-                hcount = hcount + 1;
-                H = db.conrad.H;
-                for jj = 1:length(db.conrad.hdisc)
-                    h(indh) = H(db.conrad.hdisc(jj));
-                    indh = indh + 1;
-                end
-                
-            end
-            if isfield(db.conrad, 'hdiscp')
-                hpcount = hpcount + 1;
-                H = db.conrad.H;
-                for jj = 1:length(db.conrad.hdiscp)
-                    hpicked(indhp) = H(db.conrad.hdiscp(jj));
-                    indhp = indhp + 1;
-                end
-            end
-            clear db
-        end
+        func(db, dbfile);
+%         if isfield(db, 'conrad')
+%             if isfield(db.conrad, 'hdisc')
+%                 hcount = hcount + 1;
+%                 H = db.conrad.H;
+%                 for jj = 1:length(db.conrad.hdisc)
+%                     h(indh) = H(db.conrad.hdisc(jj));
+%                     indh = indh + 1;
+%                 end
+%                 
+%             end
+%             if isfield(db.conrad, 'hdiscp')
+%                 hpcount = hpcount + 1;
+%                 H = db.conrad.H;
+%                 for jj = 1:length(db.conrad.hdiscp)
+%                     hpicked(indhp) = H(db.conrad.hdiscp(jj));
+%                     indhp = indhp + 1;
+%                 end
+%             end
+%             clear db
+%         end
 end

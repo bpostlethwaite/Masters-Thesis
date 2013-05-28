@@ -29,19 +29,21 @@ ihk = find(H > db.hk.hbest, 1, 'first');
 del = 0.5;
 
 
+% Get peaks from generic del = 0.5 without modification
 % ih = conradPeaks(stackh, del, ihk, 2/dh);
-% db.conrad.ih = ih;
-% db.conrad.stackh = stackh;
-% db.conrad.H = H;
-% db.conrad.del = del;
+% db.conrad.hdisc = H(ih);    
+
 % save(dbfile, 'db')
 % disp(['saved', dbfile])
 % return
+
+
 
 menuItem = true;
 while menuItem
 % Get closest index of Moho from ZK estimate
     ih = conradPeaks(stackh, del, ihk, 2/dh);
+        
     conradPlot(db, ih, ihk, stackh, H, f1, f2)
     menuItem = conradMenu(del);
     
@@ -55,7 +57,7 @@ while menuItem
             db.conrad.flags = del;
          case 3
             %db.conrad.stackh = stackh;
-            db.conrad.ihpicked = ih;
+            db.conrad.hdiscp = H(ih);
             %db.conrad.H = H;
             %db.conrad.del = del;
             save(dbfile, 'db')
