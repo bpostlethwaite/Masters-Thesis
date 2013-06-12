@@ -12,21 +12,22 @@ notes on structure:
 BEGIN OUTLINE
 
 - Introduction
-  - Geology of Canada
-  - Problem?
-  - Large Scale overview
+  - Broad overview of problem
+  - include similar previous work
+  - Road-map of paper
 
 - Geological Background
+  - Few sentences on each of the major geological regions under discussion in paper
 
 - Data and Methods
   - Analysis of bulk Canadian continental crust require parameter estimates
   - Estimates come from processing of seismograms into receiver functions
   - Additional estimates from Crust 2.0 database and an active source compilation.
 
-  - Parameter Estimates from Teleseismic Data
-    - P-wave Teleseismic
+  - Teleseismic Data Set
+    - Data are Teleseismic
     - Broadband
-    - When 2000 to 2012
+    - 2000 to 2012
     - All networks including CNSN, Polaris, FedNor and Chasme
     - 343 Seismic stations
     - More than 700 EQ sources
@@ -36,14 +37,6 @@ BEGIN OUTLINE
     - Teleseismic Data Transformed into RFs
 
   - Receiver Function Methods
-    - Two RF transformation algorithms used, one well tested, another not yet employed at
-      scale
-    - Both methods utilize the S-wave reflected phases and the travel time difference to
-      the direct P-wave arrival
-    - [!Figure: Reflected phases]
-    - [!Equation: Travel Times]
-    - Strong reflected phases at sharp velocity contrasts, for this study the boundary of
-      interest is the Moho
     - Separation of P and S wave energy is performed by rotating coordinates into radial
       and transverse dimensions and then transforming them in to P, SV and SH components
       with a wave field decomposition transfer matrix [Bostock, 1998].
@@ -61,6 +54,14 @@ BEGIN OUTLINE
       S-wave arrivals in the seismogram
     - RF is filtered between 0.04Hz and 3.0Hz
     - These RF's are used as the data for two parameter estimation methods
+    - Two RF inversion algorithms used, one well tested, another not yet employed at
+      scale
+    - Both methods utilize the S-wave reflected phases and the travel time difference to
+      the direct P-wave arrival
+    - [!Figure: Reflected phases]
+    - [!Equation: Travel Times]
+    - Strong reflected phases at sharp velocity contrasts, for this study the boundary of
+      interest is the Moho
 
     - Vp/Vs method
       - Zhu and Kanamori [2000], hereafter ZK, proposed a method for extracting the ratio,
@@ -115,7 +116,7 @@ BEGIN OUTLINE
 
     - Error calculations
       - Error calculations are performed with bootstrap resampling by rerunning the
-        processing with randomly receiver functions, with replacement, 1024 times.
+        processing with randomly selected receiver functions, with replacement, 1024 times.
         The error is obtained by taking the standard deviation of the results
 
   - Vp database
@@ -124,7 +125,7 @@ BEGIN OUTLINE
     - Provides some information in areas with sparse seismic station coverage
 
   - Crust 2.0
-    - Crust 2.0 provides statistically averaged estimates of Vp, Vs and H
+    - Crust 2.0 provides statistically averaged estimates of Vp, H and in some cases, Vs.
     - Data relies on many sources, active and teleseismic
     - Provides reference values for locally computed estimates
 
@@ -156,20 +157,6 @@ BEGIN OUTLINE
       - Correlation between Darbyshire et. al. H dataset is 0.95
       - [!Figure Darbyshire comparison H]
       - [!Figure Darbyshire comparison Vp/Vs]
-
-    - Comparison Discussion
-    - ??? Here or in the discussion section ???
-      - Crustal Thickness
-        - Very good correlation in thickness estimates with all three datasets.
-      - Vp/Vs
-        - Lower correlation with the Vp/Vs values.
-          - Expect lower correlation with Vp/Vs since the travel time equations are
-            less sensitive to seismic velocities than they are to crustal thickness.
-            This means that there will be more uncertainty during the parameter
-            search for Vp/Vs and hence higher degree of relative error.
-          - ??? Utilizing different sources, applying different deconvolution and
-            filtering techniques will therefore have a greater impact on the
-            uncertainty of picking Vp/Vs than that of crustal thickness H. ???
 
   - Regional Bulk Crustal Parameters
     - All following data has been utilized using only those stations with less than
@@ -252,7 +239,25 @@ BEGIN OUTLINE
     - Other lower values for the ZK computed Vp/Vs found in the western Slave Province and
       in the Western Corderilla, along British Columbia's west coast.
 
+  - Conrad Discontinuity
+    -
+
+
 - Discussion
+
+  - Comparison Discussion
+    - Crustal Thickness
+      - Very good correlation in thickness estimates with all three datasets.
+    - Vp/Vs
+      - Lower correlation with the Vp/Vs values.
+        - Expect lower correlation with Vp/Vs since the travel time equations are
+          less sensitive to seismic velocities than they are to crustal thickness.
+          This means that there will be more uncertainty during the parameter
+          search for Vp/Vs and hence higher degree of relative error.
+        - ??? Utilizing different sources, applying different deconvolution and
+          filtering techniques will therefore have a greater impact on the
+          uncertainty of picking Vp/Vs than that of crustal thickness H. ???
+
   - Explanation of results
     - Canada H & Vp/Vs
       - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust

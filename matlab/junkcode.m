@@ -64,5 +64,47 @@ end
 %
 %thresh = 0.3;
 %crec = performCurveletDenoise(brec,dt,thresh);
+clear all
+tic;
+m = 30;
+n = 160;
 
+% m = 5;
+% n = 15;
+nwin = n - (m-1);
+
+I = speye(m);
+
+
+tic
+for ii = 1:nwin
+    ind = (ii-1)*m + 1;
+    A( ind : ind + m - 1, ii: m+ii-1) = I;
+end
+toc;
+
+
+
+% A = sparse(A);
+% 
+% 
+% x1 = randn(n,1);
+% x2 = x1 + randn(n,1);
+% 
+% 
+% b1 = A*x1;
+% b2 = A*x2;
+% 
+% B1 = reshape(b1, m, nwin);
+% B2 = reshape(b2, m, nwin);
+% 
+% B1 = B1 ./ kron( ones(m,1), sqrt(sum(B1.^2, 1)));
+% B2 = B2 ./ kron( ones(m,1), sqrt(sum(B2.^2, 1)));
+% 
+% corr = spdiags(B2(:), 0, nwin*m, nwin*m) * B1(:);
+% 
+% C = reshape(corr, m, nwin);
+% 
+% corr = sum(C, 1);
+% toc
 

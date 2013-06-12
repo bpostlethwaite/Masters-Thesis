@@ -151,7 +151,7 @@ def json2shapefile(stdict, fout, sc):
         for f in conradfields:
             d = None
             if f in sc.flattendict(stdict[key]) and sc.flattendict(stdict[key])[f]:
-                disc = [disc for disc in sc.flattendict(stdict[key])[f] if (13.0 < disc < 19.0)]
+                disc = [disc for disc in sc.flattendict(stdict[key])[f] if (13.0 < disc < 21.0)]
                 if disc:
                     d = disc[0]
             values.append('{0:2.4f}'.format(d) if d else 0.0)
