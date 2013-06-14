@@ -1,9 +1,11 @@
 \documentclass[draft, 12pt]{article}
 \usepackage[english]{babel}
 \usepackage[final]{graphicx}
+\usepackage{color}
 \graphicspath{ {figures/} }
 \DeclareGraphicsExtensions{.png}
 
+\newcommand{\cc}[1]{\textcolor{red}{#1}}
 
 \title{Seismic parameter estimation and the Canadian crust}
 \author{Ben Postlethwaite}
@@ -36,13 +38,31 @@
 
   The primary data utilized in this study are computed from teleseismic P-wave seismograms representing discrete seismic events. These events are comprised of seismic records representing more than 700 earthquake sources occuring between the years 2000 and 2012 at 343 broadband seismic stations across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Events are filtered by the epicentral distance from source to receiver with only the events within a 30 to 100 degree window being included. Seismic events are further filtered by hand picking those with reasonable signal to noise ratio and of sufficient impulsiveness that arrival times can be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
 
-  The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the source signal from channels representing ground motion. The resulting waveform contains discrete pulses which corrispond to arrivals of S-wave energy scattered from subsurface discontinuities. The resolution of these pulses has first-order effectsTo gain better resolution of these peaks we follow a wave field decomposition approach to To better focus this energy the North and East channels are rotated into radial and transverse components. Then the radial and vertical components are then decomposed into P, SV and SH components with a wave field decomposition transfer matrix [Bostock, 1998].
+  The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the earthquake source from channels representing ground motion. The resulting waveform contains discrete pulses which corrispond to arrivals of S-wave energy scattered from subsurface discontinuities. Resolving these peaks is essential to the success of this method, therefore it is advantageous to rotate the seismogram components to seperate the P and S wave energy. This is accomplished by first rotating the N and E coordinates into radial and transverse dimensions and then performing a wave field decomposition on the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave componenent is used as an approximation to the source function as P waves are simpler and have a response closer to that of a delta function. This windowed source coda is deconvolved from the S wave component computed from the wave field decomposition.
+
+  An $L_2$ frequency domain deconvolution approach is used which has the advantages of computational efficiency as well as not requiring any assumptions about the noise in the data. This method performs a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $g(t)$.
+
+\begin{equation}
+  g(t) = F^{-1} \left[ G(\omega) \right] = F{^-1}
+ \left[ \frac {\sum_n^N S_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta} \right ],
+\end{equation}
+
+where $F^{-1}$ is the inverse Fourier transform, $S_n$ represents the $n^{th}$ S wave component, $P_n$ is the windowed P wave component, $^*$ denotes the complex conjugatte and $\delta$ is the regularization parameter controlling the trade off between model smoothness and data misfit. The parameter $\delta$ is chosen programatically by minimizing the general cross validation function $GCV(\delta)$ which is given by
+
+\begin{equation}
+  GCV(\delta) = \frac {\sum_n^N\sum_m^M \left( S_n(\omega_m) - P_n(\omega_m)G(\omega_m) \right)^2 }
+                      { \left( NM - \sum_m^M X(\omega_m) \right)^2 },
+\end{equation}
+
+where
+
+\begin{equation}
+  X(\omega) = \frac {\sum_n^N P_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta},
+\end{equation}
+
+and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform. All receiver functions are filtered between 0.04Hz and 3.0Hz and comprise the data for the following parameter inversions.
 
 
- Two derivations of receiver function analysis have been used in this study, one well tested stacking approach and the other a recent method that has not yet been employed at scale. Both methods rely on the fact that the incoming S-wave contains energy from the direct arrival as well as reflected phases resulting from sharp velocity contrasts. Deconvolution of the P-wave energy arrival, used as an estimate for the source function, from the S-wave signal produces a Green's function with energy peaks at the times of the main and reflected arrivals. For better separation of P and S wave energy all components are rotated into radial and transverse dimensions and transformed into P, SV and SH components with a wave field decomposition transfer matrix (Bostock, 1998).
-
-
- Deconvolution is performed by minimizing the general cross validation function $GCV(\delta)$ where $\delta$ is used the regularizer (Bostock, 1998; Golub et al., 1979). This method is an $L_2$ frequency domain deconvolution which performs quickly and makes no assumptions on the noise in the data. All deconvolved signals are filtered between 0.04hz and 3.0hz and are stacked with weights $w_1=0.5$, $w_1=0.3$, $w_1=0.2$ for the Ps, PpPs and PpSs phases respectively. Error calculations are performed with bootstrap resampling by rerunning the processing with randomly chosen receiver functions - allowing multiples - 1024 times. The error is obtained by taking the standard deviation of the results.
 
 \subsection{Vp/Vs method}
    A well tested approach for calculating $R=\frac{V_P}{V_S}$ and $H$ was employed by Zhu and Kanamori (2000). After deconvolution the signals are stacked and a gridsearch is performed using the travel time equations for different values of $R$ and $H$ and a spectrum of slowness. For each parameter combination the travel time functions output estimates for the differential arrival time of the S-component main and reflected phases. These times are used to pick the energy in each receiver function - with the large amplitudes at arrivals stacking to provide an estimate for the optimal parameter estimation.

@@ -86,33 +86,9 @@ BEGIN OUTLINE
       - The model which stacks the most coherent energy is used to provide the best
         estimates for R and H.
 
-    - Vp method
-      - Method which allows for estimates of Vp and Vs uniquely [Bostock and Kumar, 2010]
-        hereafter BK
-      - Does not require apriori assumption on Vp
-      - Linear dependence on H in equations can be removed by dividing reflected phases
-        with the direct arrival
-      - [!Equation: BK travel time equations]
-      - Similar to stacking method of ZK, requires an estimate for tps
-      - Grid search for R and Vp
-      - Line search for H
-      - Several methods for choosing tps are available
-        - tps should represent the most prominent phase of the ____ and its arrival,
-          depending on Moho depth, should fall within the window of 3 to 6 seconds.
-          With low moveout one may therefore select the time corresponding to maximum
-          amplitude within a given window as an estimate of tps.
-        - An alternative approach is to use max amplitude estimates as data in a
-          non-linear optimization to find the R, Vp and H which minimize the residual
-          between tps and the data. The travel time equations are twice-differentiable so
-          the quadratically convergent Newton's method may be employed. This approach has
-          the advantage that noise leading to poor maximum amplitude picks are effectively
-          collapsed onto the curve corresponding to the travel time function.
-        - The problem size is relatively small and performing a full 3D gridsearch over
-          Vp Vs and H affords the advantages of both the ZK and BK approaches. No
-          requirements for an estimate of tps or Vp and provides estimates for Vp and Vs
-          uniquely as well as H. The computational expense can be prohibitive when
-          computing a statistically signficant number (1000+) random samples for the
-          bootstrap error estimate.
+    - Full gridseach method
+      -
+      -
 
     - Error calculations
       - Error calculations are performed with bootstrap resampling by rerunning the
