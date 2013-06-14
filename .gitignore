@@ -52,3 +52,7 @@ python/node_modules/*
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Binaries    #
+###############
+*.png
