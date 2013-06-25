@@ -38,16 +38,16 @@
 
   The primary data utilized in this study are computed from teleseismic P-wave seismograms representing discrete seismic events. These events are comprised of seismic records representing more than 700 earthquake sources occuring between the years 2000 and 2012 at 343 broadband seismic stations across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Events are filtered by the epicentral distance from source to receiver with only the events within a 30 to 100 degree window being included. Seismic events are further filtered by hand picking those with reasonable signal to noise ratio and of sufficient impulsiveness that arrival times can be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
 
-  The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the earthquake source from channels representing ground motion. The resulting waveform contains discrete pulses which corrispond to arrivals of S-wave energy scattered from subsurface discontinuities. Resolving these peaks is essential to the success of this method, therefore it is advantageous to rotate the seismogram components to seperate the P and S wave energy. This is accomplished by first rotating the N and E coordinates into radial and transverse dimensions and then performing a wave field decomposition on the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave componenent is used as an approximation to the source function as P waves are simpler and have a response closer to that of a delta function. This windowed source coda is deconvolved from the S wave component computed from the wave field decomposition.
+  The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the earthquake source from channels representing ground motion. The resulting waveform contains discrete pulses corresponding to the arrivals of S-wave energy scattered from subsurface discontinuities. Resolving these peaks is essential to the success of the following inversion, therefore it is advantageous to rotate the seismogram components to separate the P and S wave energy. This is accomplished by first rotating the N and E coordinates into radial and transverse dimensions and then performing a wave field decomposition on the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave component is used as an approximation to the source function as P waves are simpler and have a response closer to that of a delta function. This windowed source coda is deconvolved from the S wave component computed from the wave field decomposition.
 
   An $L_2$ frequency domain deconvolution approach is used which has the advantages of computational efficiency as well as not requiring any assumptions about the noise in the data. This method performs a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $g(t)$.
-
+% Deconvolution equations
 \begin{equation}
   g(t) = F^{-1} \left[ G(\omega) \right] = F{^-1}
  \left[ \frac {\sum_n^N S_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta} \right ],
 \end{equation}
 
-where $F^{-1}$ is the inverse Fourier transform, $S_n$ represents the $n^{th}$ S wave component, $P_n$ is the windowed P wave component, $^*$ denotes the complex conjugatte and $\delta$ is the regularization parameter controlling the trade off between model smoothness and data misfit. The parameter $\delta$ is chosen programatically by minimizing the general cross validation function $GCV(\delta)$ which is given by
+where $F^{-1}$ is the inverse Fourier transform, $S_n$ represents the $n^{th}$ S wave component, $P_n$ is the windowed P wave component, $^*$ denotes the complex conjugate and $\delta$ is the regularization parameter controlling the trade off between model smoothness and data misfit. The parameter $\delta$ is chosen programatically by minimizing the general cross validation function $GCV(\delta)$ which is given by
 
 \begin{equation}
   GCV(\delta) = \frac {\sum_n^N\sum_m^M \left( S_n(\omega_m) - P_n(\omega_m)G(\omega_m) \right)^2 }
@@ -60,24 +60,50 @@ where
   X(\omega) = \frac {\sum_n^N P_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta},
 \end{equation}
 
-and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform. All receiver functions are filtered between 0.04Hz and 3.0Hz and comprise the data for the following parameter inversions.
+and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform.
+
+  All resulting receiver functions, $g(t)$, are filtered between 0.04Hz and 3.0Hz.
 
 
 
 \subsection{Vp/Vs method}
-   A well tested approach for calculating $R=\frac{V_P}{V_S}$ and $H$ was employed by Zhu and Kanamori (2000). After deconvolution the signals are stacked and a gridsearch is performed using the travel time equations for different values of $R$ and $H$ and a spectrum of slowness. For each parameter combination the travel time functions output estimates for the differential arrival time of the S-component main and reflected phases. These times are used to pick the energy in each receiver function - with the large amplitudes at arrivals stacking to provide an estimate for the optimal parameter estimation.
 
-\subsection{Vp method}
-   The stacking approach outlined above provides estimates for the parameters $R=\frac{V_P}{V_S}$ as well as crustal thickness $H$ - which gives the depth of the Moho. A method which estimates $V_P$ and $V_S$ separately (Bostock, 2010) is also employed for select stations. This method makes use of the fact the dependence on $H$ in the travel time equations can be removed if we divide the reflected phases by the main arrival.
-$$ t_{Pps}(p_i) = \frac{ \sqrt{R^2-p_i^2V_P^2} + \sqrt{1-p_i^2V_P^2} } {\sqrt{R^2-p_i^2V_P^2} + \sqrt{1-p_i^2V_P^2} } t_{Ps}(p_i) $$
-$$ t_{Pss}(p_i) = \frac{2\sqrt{R^2-p_i^2V_P^2}} {\sqrt{R^2-p_i^2V_P^2} + \sqrt{1-p_i^2V_P^2} } t_{Ps}(p_i) $$
-This has the advantage that no assumptions on $V_P$ are necessary to perform the gridsearch and stack. A similar stacking method as the Zhu and Kanamori approach may be employed for $t_{Pps}$ and $t_{Pss}$ as long as an estimate for $t_{Ps}$ exists. With estimates for $R$ and $V_P$ a simple line search along $H$ can be made using all three undivided travel time equations.
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{reflectedPhases}
+  \caption{Schematic diagram illustrating geometry of phases for the velocity contrast representing the Moho}
+  \label{fig:reflectedPhases}
+\end{figure}
 
 
-(MOST LIKELY UNNECESSARY INFO)
-Several methods for choosing $t_{Ps}$ are available. Direct arrival $t_{Ps}$ should contain the largest fraction of energy out of the other phases and the moveout, depending on Moho depth, should be in the order of 3 to 6 seconds. Given this it is trivial to define a window and select the time corresponding to maximum amplitude. Another approach is to use max amplitude estimates as data in a non-linear optimization to find the $R$, $V_P$, and $H$ which minimizes the residual between $t_{Ps}$ and the data. The travel time equations are twice-differentiable so the quadratically convergent Newton's method may be employed. This approach has the advantage that noise leading to poor maximum amplitude picks are effectively collapsed onto the curve corresponding to the travel time function. A third approach which offers picks along a travel time curve but better stability than the non-linear method is to perform a gridsearch with all three travel time functions, a full Kanamori stack. With the best estimates for $R$ and $H$ the $t_{Ps}$ function can be found and used as input into the Bostock method. The trade-off is that the requirement for an initial $V_P$ estimate for the initial stack introduces secondary $V_P$ dependence into the system.
+  A well tested and widely published method for extracting the ratio, $R=\frac{V_P}{V_S}$, where $V_P$ is P-wave velocity and $V_S$ is S-wave velocity and crustal thickness, or depth to Moho, $H$, is outlined by Zhu and Kanamori [2000], hereafter ZK. This method takes advantage of the differential arrival times between the S-wave reflected phases $Ps$, $PpPs$ $PsPs$, $PpSs$ and $PsSs$ and the direct P-wave arrival $Pp$, Figure ~\ref{fig:reflectedPhases}. Note that $PsPs$ and $PpSs$ have an equal number of $P$ and $S$ phases, and the energy for these two phases arrive simultaneously and are indistinguishable. For a range of slowness values, $p$, the differential arrival times, $t(p)$, trace moveout curves for each phase arrival given by
 
-\subsection{Vp database}
+% Travel time equations
+\begin{equation}
+t_{Ps}(p_i)=H \left[ \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2} - \sqrt{1 - p_i^2V_P^2} \right]
+\end{equation}
+
+\begin{equation}
+t_{Pps}(p_i)=H \left[ \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2} + \sqrt{1 - p_i^2V_P^2} \right]
+\end{equation}
+
+\begin{equation}
+t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2}
+\end{equation}
+
+where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
+
+  The travel time equations demand an apriori assumption on crustal P-wave velocity, $V_P$, and will trade-off to some degree with crustal thickness $H$. For this study, each station is assigned a $V_P$ values corrisponding to the Crust 2.0 value for the $2^o$ containing cell. In the specific cases where data is being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
+
+  For a range of candidate models of $R$ and $H$ the RF's are stacked along trial moveout curves. During the stacking procedure each phase is assigned a weight to account for a general trend in the quality of the phases, with direct arrival usually carrying the best signal followed by $PpPs$ and finally $PpSs$. The weights chosen during the stacking are $w1 = 0.5$, $w2 = 0.3$ , $w3 = 0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases respectively. In addition Semblance weighting [Eaton, 2006] is used to reduce the effect of spurious large amplitude noise in the data. The model which stacks the most coherent energy is used to provide the best estimates for the bulk crustal parameters $R$ and $H$ under a given seismic station.
+
+
+\subsection{Full Gridsearch Method}
+
+\subsection{Vp data}
+   Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
+
+\subsection{Crust 2.0 data}
    Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
 
 
