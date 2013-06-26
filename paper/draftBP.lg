@@ -120,13 +120,19 @@ Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
 Css: .abstract p {margin-left:5%; margin-right:5%;}
 Css: div.abstract {width:100%;}
 Css: .figure img.graphics {margin-left:10%;}
---- needs --- draftBP.idv[1] ==> draftBP0x.png ---
---- needs --- draftBP.idv[2] ==> draftBP1x.png ---
---- needs --- draftBP.idv[3] ==> draftBP2x.png ---
---- needs --- draftBP.idv[4] ==> draftBP3x.png ---
---- needs --- draftBP.idv[5] ==> draftBP4x.png ---
---- needs --- draftBP.idv[6] ==> draftBP5x.png ---
---- needs --- draftBP.idv[7] ==> draftBP6x.png ---
+--- needs --- draftBP.idv[2] ==> draftBP0x.png ---
+--- needs --- draftBP.idv[4] ==> draftBP1x.png ---
+--- needs --- draftBP.idv[6] ==> draftBP2x.png ---
+File: figures/reflectedPhases.png
+--- needs --- draftBP.idv[8] ==> draftBP3x.png ---
+--- needs --- draftBP.idv[9] ==> draftBP4x.png ---
+--- needs --- draftBP.idv[11] ==> draftBP5x.png ---
+--- needs --- draftBP.idv[13] ==> draftBP6x.png ---
+--- needs --- draftBP.idv[15] ==> draftBP7x.png ---
+--- needs --- draftBP.idv[17] ==> draftBP8x.png ---
+--- needs --- draftBP.idv[19] ==> draftBP9x.png ---
+--- needs --- draftBP.idv[21] ==> draftBP10x.png ---
+--- needs --- draftBP.idv[22] ==> draftBP11x.png ---
 File: figures/thompsonComparisonH.png
 File: figures/thompsonComparisonR.png
 File: figures/activeSourceComparison.png
@@ -141,3 +147,4 @@ Font("cmmi","12","12","100")
 Font("cmmi","8","8","100")
 Font("cmmi","6","6","100")
 Font("cmsy","10","10","120")
+Font("cmsy","8","8","100")

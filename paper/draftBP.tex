@@ -40,10 +40,10 @@
 
   The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the earthquake source from channels representing ground motion. The resulting waveform contains discrete pulses corresponding to the arrivals of S-wave energy scattered from subsurface discontinuities. Resolving these peaks is essential to the success of the following inversion, therefore it is advantageous to rotate the seismogram components to separate the P and S wave energy. This is accomplished by first rotating the N and E coordinates into radial and transverse dimensions and then performing a wave field decomposition on the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave component is used as an approximation to the source function as P waves are simpler and have a response closer to that of a delta function. This windowed source coda is deconvolved from the S wave component computed from the wave field decomposition.
 
-  An $L_2$ frequency domain deconvolution approach is used which has the advantages of computational efficiency as well as not requiring any assumptions about the noise in the data. This method performs a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $g(t)$.
+  An $L_2$ frequency domain deconvolution approach is used which has the advantages of computational efficiency as well as not requiring any assumptions about the noise in the data. This method performs a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $r(t)$.
 % Deconvolution equations
 \begin{equation}
-  g(t) = F^{-1} \left[ G(\omega) \right] = F{^-1}
+  r(t) = F^{-1} \left[ G(\omega) \right] = F{^-1}
  \left[ \frac {\sum_n^N S_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta} \right ],
 \end{equation}
 
@@ -62,7 +62,7 @@ where
 
 and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform.
 
-  All resulting receiver functions, $g(t)$, are filtered between 0.04Hz and 3.0Hz.
+  All resulting receiver functions, $r(t)$, are filtered between 0.04Hz and 3.0Hz.
 
 
 
@@ -93,12 +93,27 @@ t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2}
 
 where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
-  The travel time equations demand an apriori assumption on crustal P-wave velocity, $V_P$, and will trade-off to some degree with crustal thickness $H$. For this study, each station is assigned a $V_P$ values corrisponding to the Crust 2.0 value for the $2^o$ containing cell. In the specific cases where data is being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
+  The travel time equations demand an apriori assumption on crustal P-wave velocity, $V_P$, and will trade-off to some degree with crustal thickness $H$. For this study, each station is assigned a $V_P$ value corrisponding to the Crust 2.0 value for the $2^o$ containing cell. In the specific cases where data is being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
-  For a range of candidate models of $R$ and $H$ the RF's are stacked along trial moveout curves. During the stacking procedure each phase is assigned a weight to account for a general trend in the quality of the phases, with direct arrival usually carrying the best signal followed by $PpPs$ and finally $PpSs$. The weights chosen during the stacking are $w1 = 0.5$, $w2 = 0.3$ , $w3 = 0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases respectively. In addition Semblance weighting [Eaton, 2006] is used to reduce the effect of spurious large amplitude noise in the data. The model which stacks the most coherent energy is used to provide the best estimates for the bulk crustal parameters $R$ and $H$ under a given seismic station.
+  For a range of candidate models of $R$ and $H$ the RF's are stacked along trial moveout curves. During the stacking procedure each phase is assigned a weight to account for a general trend in the quality of the phases, with direct arrival usually carrying the best signal followed by $PpPs$ and $PpSs$. The weights chosen during the stacking are $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
+\begin{equation}
+s(H,R) = \sum_{j=1}^{3} S_j \sum_{i=1}^N w_jr_i(t_j)
+\end{equation}
 
+where
+
+\begin{equation}
+S_j(H,R) = \frac {\left[ \sum_{i=1}^N r_i(t_j) \right]^2}
+                 { \sum_{i=1}^N r_i^2(t_j) }
+\end{equation}
+
+and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corrisponding travel time function for a given $H$, $R$ as a function of slowness $p_i$ and $N$ is the number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and exhibits better resolution when selecting between stacked models. The model which stacks the most coherent energy is used to provide the best estimates for the bulk crustal parameters $R$ and $H$ under a given seismic station.
+
+  For a given synthetic receiver function
 \subsection{Full Gridsearch Method}
+
+  Owing to increasing computational availability it is now reasonably efficient to extend the ZK approach and perform the stack along all three seismic parameters, $V_P$, $R$ (therefore by definition $V_S$) and $H$.
 
 \subsection{Vp data}
    Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
