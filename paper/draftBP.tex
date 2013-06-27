@@ -36,7 +36,7 @@
 
 \subsection{Teleseismic Data Set}
 
-  The primary data utilized in this study are computed from teleseismic P-wave seismograms representing discrete seismic events. These events are comprised of seismic records representing more than 700 earthquake sources occuring between the years 2000 and 2012 at 343 broadband seismic stations across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Events are filtered by the epicentral distance from source to receiver with only the events within a 30 to 100 degree window being included. Seismic events are further filtered by hand picking those with reasonable signal to noise ratio and of sufficient impulsiveness that arrival times can be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
+  The primary data utilized in this study are computed from teleseismic P-wave seismograms representing discrete seismic events. These events are comprised of seismic records representing more than 700 earthquake sources occurring between the years 2000 and 2012 at 343 broadband seismic stations across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Events are filtered by the epicentral distance from source to receiver with only the events within a 30 to 100 degree window being included. Seismic events are further filtered by hand picking those with reasonable signal to noise ratio and of sufficient impulsiveness that arrival times can be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
 
   The first stage of processing requires the transformation of teleseismic data into receiver functions. In its generic form this transformation involves deconvolving an approximation of the earthquake source from channels representing ground motion. The resulting waveform contains discrete pulses corresponding to the arrivals of S-wave energy scattered from subsurface discontinuities. Resolving these peaks is essential to the success of the following inversion, therefore it is advantageous to rotate the seismogram components to separate the P and S wave energy. This is accomplished by first rotating the N and E coordinates into radial and transverse dimensions and then performing a wave field decomposition on the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave component is used as an approximation to the source function as P waves are simpler and have a response closer to that of a delta function. This windowed source coda is deconvolved from the S wave component computed from the wave field decomposition.
 
@@ -66,7 +66,7 @@ and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform.
 
 
 
-\subsection{Vp/Vs method}
+\subsection{Vp/Vs method} \label{section:VpVsMethod}
 
 \begin{figure}
   \centering
@@ -76,28 +76,36 @@ and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform.
 \end{figure}
 
 
-  A well tested and widely published method for extracting the ratio, $R=\frac{V_P}{V_S}$, where $V_P$ is P-wave velocity and $V_S$ is S-wave velocity and crustal thickness, or depth to Moho, $H$, is outlined by Zhu and Kanamori [2000], hereafter ZK. This method takes advantage of the differential arrival times between the S-wave reflected phases $Ps$, $PpPs$ $PsPs$, $PpSs$ and $PsSs$ and the direct P-wave arrival $Pp$, Figure ~\ref{fig:reflectedPhases}. Note that $PsPs$ and $PpSs$ have an equal number of $P$ and $S$ phases, and the energy for these two phases arrive simultaneously and are indistinguishable. For a range of slowness values, $p$, the differential arrival times, $t(p)$, trace moveout curves for each phase arrival given by
+  A well tested and widely published method for extracting the ratio, $R=\frac{V_P}{V_S}$, where $V_P$ is P-wave velocity and $V_S$ is S-wave velocity and crustal thickness, or depth to Moho, $H$, is outlined by Zhu and Kanamori [2000], hereafter ZK. This method takes advantage of the differential arrival times between the S-wave reflected phases $Ps$, $PpPs$ $PsPs$, $PpSs$ and $PsSs$ and the direct P-wave arrival $Pp$ (Fig \ref{fig:reflectedPhases}). Note that $PsPs$ and $PpSs$ have an equal number of $P$ and $S$ phases, and the energy for these two phases arrive simultaneously and are indistinguishable. For a range of slowness values, $p$, the differential arrival times, $t(p)$, trace moveout curves for each phase arrival given by
 
 % Travel time equations
-\begin{equation}
-t_{Ps}(p_i)=H \left[ \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2} - \sqrt{1 - p_i^2V_P^2} \right]
+\begin{equation} \label{eq:tps}
+t_{Ps}(p_i)=H \left[ \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2} - \sqrt{\frac{1}{V_P^2} - p_i^2} \right]
 \end{equation}
 
 \begin{equation}
-t_{Pps}(p_i)=H \left[ \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2} + \sqrt{1 - p_i^2V_P^2} \right]
+t_{Pps}(p_i)=H \left[ \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2} + \sqrt{\frac{1}{V_P^2} - p_i^2} \right]
 \end{equation}
 
 \begin{equation}
-t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{V_p}{V_s}\right)^2 - p_i^2V_p^2}
+t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2}
 \end{equation}
 
 where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
   The travel time equations demand an apriori assumption on crustal P-wave velocity, $V_P$, and will trade-off to some degree with crustal thickness $H$. For this study, each station is assigned a $V_P$ value corrisponding to the Crust 2.0 value for the $2^o$ containing cell. In the specific cases where data is being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{kinematicRvsH}
+  \caption{Kinematic curves traced out by the stacking function, $s(H,R)$, corrisponding to the mapping of fixed travel times $t_{Ps}$, $t_{PpPs}$ and $t_{PsPs}$ into $H$ and $R$ space.}
+  \label{fig:kinematicRvsH}
+\end{figure}
+
+
   For a range of candidate models of $R$ and $H$ the RF's are stacked along trial moveout curves. During the stacking procedure each phase is assigned a weight to account for a general trend in the quality of the phases, with direct arrival usually carrying the best signal followed by $PpPs$ and $PpSs$. The weights chosen during the stacking are $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
-\begin{equation}
+\begin{equation}  \label{eq:stack}
 s(H,R) = \sum_{j=1}^{3} S_j \sum_{i=1}^N w_jr_i(t_j)
 \end{equation}
 
@@ -108,24 +116,26 @@ S_j(H,R) = \frac {\left[ \sum_{i=1}^N r_i(t_j) \right]^2}
                  { \sum_{i=1}^N r_i^2(t_j) }
 \end{equation}
 
-and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corrisponding travel time function for a given $H$, $R$ as a function of slowness $p_i$ and $N$ is the number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and exhibits better resolution when selecting between stacked models. The model which stacks the most coherent energy is used to provide the best estimates for the bulk crustal parameters $R$ and $H$ under a given seismic station.
+and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corrisponding travel time function for a given $H$, $R$ as a function of slowness $p_i$ and $N$ is the number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and exhibits better resolution when selecting between stacked models. The function $s(H,R)$ can be thought of as a transformation that maps the $Ps$, $PpPs$ and $PpSs+PsPs$ pulses of the receiver function, $r(t)$,  into $R$ and $H$ space as positive bands, via Eq. \ref{eq:stack}. Constructive interference where these bands intersect will produce a maximum in the stacking function (Fig \ref{fig:kinematicRvsH}). The model, $R$ and $H$, which produce this maximum provides the best estimate for the bulk crustal parameters for a given seismic station. The elongate shape about the point of intersection, with the long axis tilted mostly in the $R$ coordinate, conveys the inherent trade-off between $R$ and $H$ and the lower resolution exhibited by the seismic velocity ratio $R$.
 
-  For a given synthetic receiver function
 \subsection{Full Gridsearch Method}
 
-  Owing to increasing computational availability it is now reasonably efficient to extend the ZK approach and perform the stack along all three seismic parameters, $V_P$, $R$ (therefore by definition $V_S$) and $H$.
+  Owing to increasing computational availability it is now reasonably efficient to extend the ZK approach and perform the stack along a range of all three seismic parameters, $V_P$, $R$ (therefore by definition $V_S$) and $H$. This has the advantage of not requiring an assumption on $V_P$ and should produce more accurate estimates, especially above crustal units with anomalous $V_P$. The inherent trade-off between $V_P$ and $R$ is limited, offering reasonable resolution between the two parameters. However, a significant trade-off between $V_P$ and $H$, which is a source of significant correlated error, requires that recovery of $V_P$ should be attempted only in cases where high frequency and high signal-to-noise ratio signals are present in the receiver function data. [[ Could go into more depth here, show the kinematic curves and poor trade-off between $V_P$ and $R$, Figure showing correlation between $V_P$ and $H$]]
 
-\subsection{Vp data}
-   Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
+  These trade-offs, along with other sources of error such as low signal-to-noise signals resulting from complex geology, are quantified by bootstrap resampling [Efron and Tibshirani, 1986]. Estimates are reprocessed using a random selection of receiver functions, with replacement, 1024 times. An estimate for the error is computed by taking the standard deviation from these trial runs.
 
-\subsection{Crust 2.0 data}
-   Accompanying the processed estimates outlines above are data from controlled source experiments collected and compiled by external sources. The data was compiled by Mooney (personal communication, 2012).
+\subsection{Additional data}
+   Accompanying the processed estimates are data from controlled source experiments collected and compiled from GSC (Geological Survey of Canada) references by Walter Mooney (personal communication, 2012). This data provides $V_P$ and a few $V_S$ estimates for hundreds of experiment locations across Canada, many along traversals across geological provincial boundaries, faults and discontinuities. Some of these data are located within close enough proximity to seismic stations being utilized in this study that they may be used to compare with the $V_P$ and $V_S$ estimates resulting from the full parameter gridsearch.
 
+  Whereas the active source data provide high resolution values at specific sites, the Crust 2.0 model, a global dataset widely cited in academic literature, provides complete coverage across Canada with an attendant trade-off in resolution. The data includes estimates of $V_P$ and $V_S$ for $2^o$ longitude and latitude cells as well as information regarding sedimentary thickness and crustal depth. While Crust 2.0 source data is a superset of the aforementioned active source data, the crustal model is also composed of statistically aggregated data from geographically distant but geologically similar regions. It therefore forms a unique dataset well suited for comparison with the crustal estimates calculated in this study.
 
 %% -----------------------------------------------%%
 \section{Results}
 
 \subsection{Comparisons}
+
+  Several published regional studies utilizing the methods outlined in section \ref{section:VpVsMethod} provide parameter estimates for $R$ and $H$ for regionally grouped subsets of Canadian seismic stations.
+
 As regional studies exist which utilize similar methods and have corresponding parameter estimates for some of the stations used in this study it is possible to directly compare values to those previously published. A comprehensive study in the Hudson Bay region of the Canadian Shield (Thomson et. al., 2010) uses an approach similar to the Zhu and Kanamori method published estimates for $H$ and $R=\frac{V_P}{V_S}$ for 35 stations. 5 stations with $R$ estimates above 1.8 are removed due to the uncertainty surrounding these high values. There is strong correlation of 0.95 between crustal thickness values for both datasets (Figure~\ref{fig:thompsonCompH}). The velocity ratio data has a lower correlation of 0.5 (Figure~\ref{fig:thompsonCompR}). [Compare this value to uncertainty / deviation in the data? ].
 
 Directly comparing $V_P$ estimates processed with the MB algorithm is not possible as this method has not been employed in publication. However, comparisons can be made to active source records for experiments within close proximity to a given seismic station (Figure~\ref{fig:activeComp}. The correlation between these datasets is 0.235. [This is low, explain here?]. Another method of determining the reliability of estimates is to check the $\frac{V_P}{V_S}$ ratio taken from the Kanamori approach to the $\frac{V_P}{V_S}$ value computed from the MB approach. These values, working with the same data, preprocessed using the same methods and tools should be equal. Selecting only those stations with an error of less than +/-0.05 $R$, 132 stations, we get a correlation of 0.57. Reducing the error tolerance and selecting stations with less than +/-0.01 $R$, leaving 31 of the cleanest stations, we get a correlation coefficient of 0.95.
@@ -205,210 +215,36 @@ Directly comparing $V_P$ estimates processed with the MB algorithm is not possib
 %% ------------------------------------------------------------------------ %%
 
 
-% AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
+\begin{thebibliography}
+Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21,183-21,200.
 
-\begin{thebibliography}{}
+Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
 
+Christensen, N. I. (1996), Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156.
+
+Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New insights into the lithosphere beneath the Superior Province from Rayleigh wave dispersion and receiver function analysis, J. Geophys. Int., 169, 1043-1068.
+
+Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+
+Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic receiver functions, Tectonophysics, 420, 223-238.
+
+Efron, B., R. Tibshirani (1986), Bootstrap Methods for Standard Errors, Confidence Intervals, and Other Measures of Statistical Accuracy, Statistical Science, 1, 54-75.
+
+Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
+Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
+
+Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
+
+Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, 297, 655–666.
+
+Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
+
+Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
 
 \end{thebibliography}
-
-%Reference citation examples:
-
-%...as shown by \textit{Kilby} [2008].
-%...as shown by {\textit  {Lewin}} [1976], {\textit  {Carson}} [1986], {\textit  {Bartholdy and Billi}} [2002], and {\textit  {Rinaldi}} [2003].
-%...has been shown [\textit{Kilby et al.}, 2008].
-%...has been shown [{\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
-%...has been shown [e.g., {\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
-
-
-
-%...as shown by \citet{jskilby}.
-%...as shown by \citet{lewin76}, \citet{carson86}, \citet{bartoldy02}, and \citet{rinaldi03}.
-%...has been shown \citep{jskilbye}.
-%...has been shown \citep{lewin76,carson86,bartoldy02,rinaldi03}.
-%...has been shown \citep [e.g.,][]{lewin76,carson86,bartoldy02,rinaldi03}.
-%
-% Please use ONLY \citet and \citep for reference citations.
-% DO NOT use other cite commands (e.g., \cite, \citeyear, \nocite, \citealp, etc.).
-
-%% ------------------------------------------------------------------------ %%
 
 
 \end{document}
 
 %% ------------------------------------------------------------------------ %%
 
-
-M. G. Bostock, M. R. Kumar, 2010. Bias in seismic estimates of crustal properties, Geophys. J. Int., 182, 403-407.
-N. I. Christensen, 1996. Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156,
-R. J. Durrheim, W. D. Mooney, 1991. Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
-W. D. Mooney. 2012. Personal communication. Compiled GSC active source data for the Canada.
-D.A. Thompson, I.D. Bastow, G. Helffrich, J-M. Kendall, J. Wookey, D.B. Snyder, D.W. Eaton, 2010. Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, Volume 297, Issues 3–4, 1 September 2010, Pages 655–666
-L. Zhu, H. Kanamori, 2000. Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys Res, 105, 2969-2980.
-G. Zandt, C. J. Ammon, 1995. Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
-
-%
-%  SECTION HEADS
-%
-%% ------------------------------------------------------------------------ %%
-
-ABSTRACT
-   It has been suggested that processes driving crustal formation in the Archean and Proterozoic were dissimilar and produced crusts with unique bulk properties and average thicknesses. Existing models based on fractionating mantle composition or evolving mantle convection require accurate estimates of the geological and geophysical properties of crustal provinces to better understand the details of early continental formation (R. Durrheim, W. Mooney, 1991). Fifteen years of publicly accessible teleseismic data from all available Canadian seismic stations are binned in horizontal slowness and deconvolved into receiver functions. We apply a new stacking method (Bostock and Kumar, 2010) to retrieve estimates of bulk crustal velocities (Vp, Vs) and thickness H from these data under the assumption of 1-D structure. Bootstrap error analysis is performed for each station dataset and results are compared to the results produced from alternate methods (Zhu and Kanamori, 2000). Cross-analyzing these results with the mineral and rock seismic property database of Christensen (1996) will afford improved constraints on bulk geological composition of the Canadian landmass. These results will be used to evaluate competing models of early crustal formation.
-
-
-
-% Capitalize the first letter of each word (except for
-% prepositions, conjunctions, and articles that are
-% three or fewer letters).
-
-% AGU follows standard outline style; therefore, there cannot be a section 1 without
-% a section 2, or a section 2.3.1 without a section 2.3.2.
-% Please make sure your section numbers are balanced.
-% ---------------
-% Level 1 head
-%
-% Use the \section{} command to identify level 1 heads;
-% type the appropriate head wording between the curly
-% brackets, as shown below.
-%
-%An example:
-%\section{Level 1 Head: Introduction}
-%
-% ---------------
-% Level 2 head
-%
-% Use the \subsection{} command to identify level 2 heads.
-%An example:
-%\subsection{Level 2 Head}
-%
-% ---------------
-% Level 3 head
-%
-% Use the \subsubsection{} command to identify level 3 heads
-%An example:
-%\subsubsection{Level 3 Head}
-%
-%---------------
-% Level 4 head
-%
-% Use the \subsubsubsection{} command to identify level 3 heads
-% An example:
-%\subsubsubsection{Level 4 Head} An example.
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  IN-TEXT LISTS
-%
-%% ------------------------------------------------------------------------ %%
-%
-% Do not use bulleted lists; enumerated lists are okay.
-% \begin{enumerate}
-% \item
-% \item
-% \item
-% \end{enumerate}
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATIONS
-%
-%% ------------------------------------------------------------------------ %%
-
-% Single-line equations are centered.
-% Equation arrays will appear left-aligned.
-
-Math coded inside display math mode \[ ...\]
- will not be numbered, e.g.,:
- \[ x^2=y^2 + z^2\]
-
- Math coded inside \begin{equation} and \end{equation} will
- be automatically numbered, e.g.,:
- \begin{equation}
- x^2=y^2 + z^2
- \end{equation}
-
-% IF YOU HAVE MULTI-LINE EQUATIONS, PLEASE
-% BREAK THE EQUATIONS INTO TWO OR MORE LINES
-% OF SINGLE COLUMN WIDTH (20 pc, 8.3 cm)
-% using double backslashes (\\).
-
-% To create multiline equations, use the
-% \begin{eqnarray} and \end{eqnarray} environment
-% as demonstrated below.
-\begin{eqnarray}
-  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
-        && + (y - y_{0}) \sin \Theta  \nonumber \\
-  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
-        && + (y - y_{0}) \cos \Theta.
-\end{eqnarray}
-
-%If you don't want an equation number, use the star form:
-%\begin{eqnarray*}...\end{eqnarray*}
-
-% Break each line at a sign of operation
-% (+, -, etc.) if possible, with the sign of operation
-% on the new line.
-
-% Indent second and subsequent lines to align with
-% the first character following the equal sign on the
-% first line.
-
-% Use an \hspace{} command to insert horizontal space
-% into your equation if necessary. Place an appropriate
-% unit of measure between the curly braces, e.g.
-% \hspace{1in}; you may have to experiment to achieve
-% the correct amount of space.
-
-
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATION NUMBERING: COUNTER
-%
-%% ------------------------------------------------------------------------ %%
-
-% You may change equation numbering by resetting
-% the equation counter or by explicitly numbering
-% an equation.
-
-% To explicitly number an equation, type \eqnum{}
-% (with the desired number between the brackets)
-% after the \begin{equation} or \begin{eqnarray}
-% command.  The \eqnum{} command will affect only
-% the equation it appears with; LaTeX will number
-% any equations appearing later in the manuscript
-% according to the equation counter.
-%
-
-% If you have a multiline equation that needs only
-% one equation number, use a \nonumber command in
-% front of the double backslashes (\\) as shown in
-% the multiline equation above.
-
-%% ------------------------------------------------------------------------ %%
-%
-%  LANDSCAPE/SIDEWAYS FIGURE AND TABLE EXAMPLES
-%
-%% ------------------------------------------------------------------------ %%
-%
-% For figures, add \usepackage{lscape} to the file and the landscape.sty style file
-% to the paper folder.
-%
-% \begin{figure*}[p]
-% \begin{landscapefigure*}
-% Illustration here.
-% \caption{caption here}
-% \end{landscapefigure*}
-% \end{figure*}
-%
-% For tables, add \usepackage{rotating} to the paper and add the rotating.sty file to the folder.
-%
-% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
-%
-% \begin{sidewaystable}
-% \caption{}
-% \begin{tabular}
-% Table layout here.
-% \end{tabular}
-% \end{sidewaystable}
-%
-%
