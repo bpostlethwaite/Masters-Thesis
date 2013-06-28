@@ -2,20 +2,20 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
-npb = 3; % Average number of traces per bin
-discardBad = 0; % Discard traces that do not find minimum during decon
+npb = 2; % Average number of traces per bin
+discardBad = 1; % Discard traces that do not find minimum during decon
 %pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 pscale = @(pslow) 1;
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3.0; % Upper frequency cutoff
-snrlim = .99;
+snrlim = 0;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
 dlist = filterEventDirs(workingdir, printinfo);
 %% 2)  Convert sac file format, filter bad picks
 %
-picktol  = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
+picktol = 1; % The picks should be more than PICKTOL seconds apart, or something may be wrong
 splitAzimuth = 0;
 cluster = 0;
 printinfo = 1; % On and off flag to print out processing results

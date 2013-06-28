@@ -48,7 +48,19 @@ title = 18 / ratio
 leg = 16 / ratio
 
 
-for i in range(3):
+
+def meanDifference(x, y):
+    assert (len(x) == len(y))
+    n = len(x)
+    md = 0
+    for i in range(n):
+        for j in range(n):
+            md += abs(x[i] - y[j])
+
+    return md/(n**2)
+
+
+for i in range(1,2):
 
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
@@ -56,33 +68,48 @@ for i in range(3):
     arg = Args().addQuery("stdR", "lt", 0.06)
 
     p0 = Params(pro, ["H", "R", "stdR", "stdH"], arg)
-    p2 = Params(pub, ["H", "R", "stdR", "stdH"])
-    arg = Args().addQuery("hk::stdR", "lt", 0.06)
+    p2 = Params(pub, ["H", "R", "stdR", "stdH"], arg)
+
     p1 = Params(stnfile, ["hk::H","hk::R", "hk::stdR", "hk::stdH"])
 
-    p1.sync(p2)
-    # p2.sync(p0)
-    # p0.sync(p1)
-    #p0.sync(p2)
+    p0.sync(p2)
 
-    Rcorr = pearsonr(p1.hk_R, p2.R)
-    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
-    Hcorr = pearsonr(p1.hk_H, p2.H)
+    stns = p0.stns
+
+    R1 = p0.R
+    R2 = p2.R
+
+    H1 = p0.H
+    H2 = p2.H
+
+    R1std = p0.stdR
+    R2std = p2.stdR
+
+    H1std = p0.stdH
+    H2std = p2.stdH
+
+
+    Rcorr = pearsonr(R1, R2)
+
+    Hcorr = pearsonr(H1, H2)
     print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
+    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
 
+    print "Mean Difference between", leglabel[i], "H datasets is {0:.2f}".format(meanDifference(H1,H2)), "using", len(p2.stns), "stations"
+    print "Mean Difference between", leglabel[i], "Vp/Vs datasets is {0:.3f}".format(meanDifference(R1,R2)), "using", len(p2.stns), "stations"
 
-    t = np.arange(len(p1.hk_R))
+    t = np.arange(len(R1))
 
     plt.figure(figsize = (width, height))
     ax = plt.subplot(111)
-    plt.plot(t, p1.hk_R, '-ob', lw = lw, ms = ms, label = "Vp/Vs estimate -  current data set")
-    plt.plot(t, p2.R, '-og', lw = lw, ms = ms, label = "Vp/Vs estimate " + leglabel[i])
-    plt.errorbar(t, p1.hk_R, yerr = p1.hk_stdR, xerr=None, fmt=None, ecolor = 'blue',
+    plt.plot(t, R1, '-ob', lw = lw, ms = ms, label = "Vp/Vs estimate -  current data set")
+    plt.plot(t, R2, '-og', lw = lw, ms = ms, label = "Vp/Vs estimate " + leglabel[i])
+    plt.errorbar(t, R1, yerr = R1std, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
-    plt.errorbar(t, p2.R, yerr = p2.stdR, xerr=None, fmt=None, ecolor = 'green',
+    plt.errorbar(t, R2, yerr = R2std, xerr=None, fmt=None, ecolor = 'green',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
     plt.legend(prop={'size': leg})
-    plt.xticks(t, p1.stns, size = ticks)
+    plt.xticks(t, stns, size = ticks)
     for tick in ax.xaxis.get_major_ticks():
                     tick.label.set_fontsize( ticks )
                     # specify integer or one of preset strings, e.g.
@@ -98,14 +125,14 @@ for i in range(3):
     plt.figure(figsize = (width, height))
     ax = plt.subplot(111)
 
-    plt.plot(t, p1.hk_H, '-ob', lw = lw, ms = ms, label = "H estimate -  current data set")
-    plt.plot(t, p2.H, '-og', lw = lw, ms = ms, label = "H estimate " + leglabel[i])
-    plt.errorbar(t, p1.hk_H, yerr = p1.hk_stdH, xerr=None, fmt=None, ecolor = 'blue',
+    plt.plot(t, H1, '-ob', lw = lw, ms = ms, label = "H estimate -  current data set")
+    plt.plot(t, H2, '-og', lw = lw, ms = ms, label = "H estimate " + leglabel[i])
+    plt.errorbar(t, H1, yerr = H1std, xerr=None, fmt=None, ecolor = 'blue',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
-    plt.errorbar(t, p2.H, yerr = p2.stdH, xerr=None, fmt=None, ecolor = 'green',
+    plt.errorbar(t, H2, yerr = H2std, xerr=None, fmt=None, ecolor = 'green',
                  elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std error")
     plt.legend(prop={'size': leg})
-    plt.xticks(t, p1.stns, size = ticks)
+    plt.xticks(t, stns, size = ticks)
     for tick in ax.xaxis.get_major_ticks():
                     tick.label.set_fontsize( ticks )
                     # specify integer or one of preset strings, e.g.
@@ -118,3 +145,6 @@ for i in range(3):
 
 
 plt.show()
+
+
+

@@ -20,7 +20,7 @@ sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'ULM'; %
+station = 'PECO'; %
 % KGNO
 %{
 
@@ -88,7 +88,7 @@ end
 %notes = input('Enter Processing Notes: ', 's');
 %db.processnotes = notes;
 % Enter use / ignore flag
-db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
+%db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
 %db.usable = 1;
 % Save entrydbold.mb.
 saveit = input('Save data to .mat file? (y|n): ','s');

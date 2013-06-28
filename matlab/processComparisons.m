@@ -6,24 +6,30 @@ addpath([userdir,'/thesis/matlab/functions']);
 addpath([userdir,'/programming/matlab/jsonlab']);
 databasedir = '/media/TerraS/database';
 
+author = 'eaton';
 
-json = loadjson([userdir,'/thesis/data/darbyshirePaper.json']);
+json = loadjson([userdir,'/thesis/data/',author,'Paper.json']);
+s = loadjson([userdir,'/thesis/data/', author, 'Processed.json']);
+
+%%
 stns = fieldnames(json);
 
-fhout = fopen([userdir,'/thesis/data/darbyshireProcessed.json'], 'w');
-            
+
 %Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
     matlabpool('local', workers)
 end
-
+%%
 for stn = stns'
 
     station = stn{1};
     load(fullfile(databasedir, station));
-    vp = 6.39; %Eaton & DARBYshire
-    %vp = 6.5; % Thompson
+    if strcmp(author, 'thompson')
+        vp = 6.5;
+    else
+        vp = 6.39;
+    end
     
     method = 'kanamori';
     [ results ] = gridsearchKan(db.rec, db.dt, db.pslow, vp);
@@ -46,8 +52,5 @@ for stn = stns'
 end
 
 opt.ForceRootName = 0;
-json = savejson('', s, opt);
-fprintf('%s',json);
-fprintf(fhout,'%s',json);
-
-fclose(fhout);
+opt.FileName = [userdir, '/thesis/data/',author,'Processed.json'];            
+savejson('', s, opt);

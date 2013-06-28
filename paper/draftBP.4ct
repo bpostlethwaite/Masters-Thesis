@@ -6,21 +6,25 @@
 \doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-50002.1}{QQ2-1-5}{Teleseismic Data Set}}{2}\relax 
 \doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-60002.2}{QQ2-1-6}{Vp/Vs method}}{5}\relax 
 \doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-60011}{}{\ignorespaces Schematic diagram illustrating geometry of phases for the velocity contrast representing the Moho}}{figure}\relax 
-\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-70002.3}{QQ2-1-8}{Full Gridsearch Method}}{11}\relax 
-\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-80002.4}{QQ2-1-9}{Vp data}}{11}\relax 
-\doTocEntry\tocsubsection{2.5}{\csname a:TocLink\endcsname{1}{x1-90002.5}{QQ2-1-10}{Crust 2.0 data}}{11}\relax 
-\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-100003}{QQ2-1-11}{Results}}{11}\relax 
-\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-110003.1}{QQ2-1-12}{Comparisons}}{11}\relax 
-\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-110012}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
-\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-110023}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
-\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-110034}{}{\ignorespaces Comparison of $V_P$ estimates from the MB algorithm with active source $V_P$ recordings. Stations selected if active source experiment locations within 1 degree of latitude / longtitude.}}{figure}\relax 
-\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-120003.2}{QQ2-1-16}{Crustal Thickness}}{21}\relax 
-\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-130003.3}{QQ2-1-17}{Vp/Vs}}{21}\relax 
-\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-130015}{}{}}{figure}\relax 
-\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-130026}{}{}}{figure}\relax 
-\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-140004}{QQ2-1-20}{Discussion}}{28}\relax 
-\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-150004.1}{QQ2-1-21}{Canada}}{28}\relax 
-\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-160004.2}{QQ2-1-22}{Slave Province}}{28}\relax 
-\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-170005}{QQ2-1-23}{Conclusions}}{28}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-180005}{QQ2-1-24}{References}}{29}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-60052}{}{\ignorespaces Kinematic curves traced out by the stacking function, $s(H,R)$, corrisponding to the mapping of fixed travel times $t_{Ps}$, $t_{PpPs}$ and $t_{PsPs}$ into $H$ and $R$ space.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-70002.3}{QQ2-1-9}{Full Gridsearch Method}}{13}\relax 
+\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-80002.4}{QQ2-1-10}{Additional data}}{14}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-90003}{QQ2-1-11}{Results}}{14}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-100003.1}{QQ2-1-12}{Comparisons}}{15}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-100011}{}{\ignorespaces Comparison of $R$ and $H$ estimates with three published studies}}{table}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-100023}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with data from Thompson et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-100034}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-100045}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with from Eaton et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-100056}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Eaton et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-100067}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-100078}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
+\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-100089}{}{\ignorespaces Comparison of $V_P$ estimates from the MB algorithm with active source $V_P$ recordings. Stations selected if active source experiment locations within 1 degree of latitude / longtitude.}}{figure}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-110003.2}{QQ2-1-21}{Regional Bulk Crustal Parameters}}{39}\relax 
+\doTocEntry\toclof{10}{\csname a:TocLink\endcsname{1}{x1-1100110}{}{}}{figure}\relax 
+\doTocEntry\toclof{11}{\csname a:TocLink\endcsname{1}{x1-1100211}{}{}}{figure}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-120004}{QQ2-1-24}{Discussion}}{45}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-130004.1}{QQ2-1-25}{Canada}}{45}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-140004.2}{QQ2-1-26}{Slave Province}}{45}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-150005}{QQ2-1-27}{Conclusions}}{45}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-160005}{QQ2-1-28}{References}}{46}\relax 
 \par 
