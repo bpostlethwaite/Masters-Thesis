@@ -60,7 +60,7 @@ def meanDifference(x, y):
     return md/(n**2)
 
 
-for i in range(1,2):
+for i in range(0,3):
 
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
@@ -144,7 +144,7 @@ for i in range(1,2):
     plt.axis("tight")
 
 
-plt.show()
+#plt.show()
 
 
 
