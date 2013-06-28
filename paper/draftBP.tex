@@ -135,12 +135,7 @@ and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculat
 
 \subsection{Comparisons}
 
-  Several published regional studies utilizing the methods outlined in section \ref{section:VpVsMethod} provide parameter estimates for $R$ and $H$ for regionally grouped subsets of Canadian seismic stations. Comparisons between estimates for particular seismic stations are made for those values which have a corresponding standard error in $R$ of less than 0.06. For each study under comparison, data is reprocessed to use the $V_P$ chosen by the study authors and both correlation and mean difference are calculated (Table \ref{table:comparison}).
-
-  A comprehensive study in the Hudson Bay region of the Canadian Shield [Thomson et. al., 2010] employs data from 35 stations, of which, 27 stations share an error acceptable for comparison in both datasets. There is strong correlation, 0.97, between crustal thickness values (Fig \ref{fig:thompsonCompH}). The velocity ratio data has a lower correlation of 0.49 (Fig \ref{fig:thompsonCompR}) and a mean difference of 0.02. As indicated in section \ref{section:VpVsMethod} there is less resolution in $R$ so the lower correlation for this parameter is not unexpected.
-
- Another study conducted in the Grenville Orogen [Eaton et al., 2006] utilizes data from 29 stations, with two stations being excluded due to low quality and high error. Again, there is strong correlation in $H$, 0.89, and lower correlation in $R$, 0.56 (Figs \ref{fig:eatonCompH}, \ref{fig:eatonCompR}). The mean difference in $R$ between the two datasets is 0.04.
-
+  Several published regional studies utilizing the methods outlined in section \ref{section:VpVsMethod}, ZK + semblance weighting, provide parameter estimates for $R$ and $H$ for regionally grouped subsets of Canadian seismic stations. Comparisons between estimates for particular seismic stations are made for those values which have a corresponding standard error in $R$ of less than 0.06. This error value best partitions the data between those receiver function stacks with visually recognisable energy along phase moveout curves from those where lack of data or poor quality make these moveout curves difficult to resolve. For each study under comparison, data is reprocessed to use the $V_P$ chosen by the study authors and both correlation and mean difference are calculated (Table \ref{table:comparison}).
 
 \begin{table}
   \begin{tabular}{ l l l l l l }
@@ -159,49 +154,13 @@ and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculat
 
 \end{table}
 
+  All three studies provide $H$ estimates that correlate strongly with the computed crustal thickness parameters. [[maximum mean difference, students ttest ? what would be a good stat for actual dataset difference? ]]. The correlation between the seismic velocity ratio is lower, though due to the lower resolution in $R$ this result is not unexpected. Overall there is good correlation between the estimates from the three studies and the computed estimates.
 
-\begin{figure}
-  \centering
-    \includegraphics[width=\textwidth]{thompsonComparisonH}
-  \caption{Comparison of crustal thickness $H$ data from this study with data from Thompson et. al. (2010). Data shows a Pearson correlation of 0.95}
-  \label{fig:thompsonCompH}
-\end{figure}
+[[Comparison between $V_P$ estimates Mooney Active Source estimates]]
 
-\begin{figure}
-  \centering
-    \includegraphics[width=\textwidth]{thompsonComparisonR}
-  \caption{Comparison of $V_P / V_R$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.5}
-  \label{fig:thompsonCompR}
-\end{figure}
-
-\begin{figure}
-  \centering
-    \includegraphics[width=\textwidth]{eatonComparisonH}
-  \caption{Comparison of crustal thickness $H$ data from this study with from Eaton et. al. (2010). Data shows a Pearson correlation of 0.95}
-  \label{fig:eatonCompH}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{eatonComparisonR}
-  \caption{Comparison of $V_P / V_R$ data from this study with data from Eaton et. al. (2010). Data shows a Pearson correlation of 0.5}
-  \label{fig:eatonCompR}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{darbyshireComparisonH}
-  \caption{Comparison of crustal thickness $H$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.95}
-  \label{fig:darbyshireCompH}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{darbyshireComparisonR}
-  \caption{Comparison of $V_P / V_R$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.5}
-  \label{fig:darbyshireCompR}
-\end{figure}
-
+\subsection{Regional Bulk Crustal Parameters}
+[[ Are we using ZK + semblance, or Full Grid Search + semblance ]]
+  Data from X seismic stations across Canada are analyzed, using only those stations with less than 0.06 standard error.
 
 
 \begin{figure}
@@ -210,15 +169,6 @@ and $S_j$ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculat
   \caption{Comparison of $V_P$ estimates from the MB algorithm with active source $V_P$ recordings. Stations selected if active source experiment locations within 1 degree of latitude / longtitude.}
   \label{fig:activeComp}
 \end{figure}
-
-\subsection{Regional Bulk Crustal Parameters}
-(MAY NOT INCLUDE)
-\begin{itemize}
-  \item Jump in crustal thickness over the fault as you go from the Slave to the Rae or Churchill Province.
-  \item Trend in Southern Ontario as we move north and up the St Lawrence Seaway.
-  \item Appears to be secular variation in the North Eastern Churchill. As we move North and East we have thickening of continental crust.
-\end{itemize}
-
 
 \begin{figure}
   \centering

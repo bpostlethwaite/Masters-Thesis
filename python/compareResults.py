@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import pearsonr
 from plotTools import Args, Params
+from scipy.stats import ttest_ind as ttest
+
 
 data = ['/thesis/data/thompsonPaper.json',
         '/thesis/data/thompsonProcessed.json',
@@ -92,6 +94,12 @@ for i in range(0,3):
     Rcorr = pearsonr(R1, R2)
 
     Hcorr = pearsonr(H1, H2)
+
+    ttR  = ttest(R1, R2)
+    ttH  = ttest(H1, H2)
+    print ttR
+    print ttH
+
     print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
     print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
 
