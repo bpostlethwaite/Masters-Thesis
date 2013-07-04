@@ -23,7 +23,7 @@ printinfo = 1; % On and off flag to print out processing results
     ConvertFilterTraces(dlist, pfile, sfile,...
     picktol, printinfo, splitAzimuth, cluster);
 %fclose('all'); % Close all open files from reading
-clear picktol printinfo dlist splitAzimuth cluster
+%clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
 numbin = round((1/npb) * size(ptrace, 1));
@@ -48,7 +48,7 @@ clear printwdiag wdiag
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
-    matlabpool('local', workers)
+    matlabpool('test1');%, workers)
 end
 %% 5)  Window with Taper and fourier transform signal.
 adj = 0.1; % This adjusts the Tukey window used.
@@ -61,10 +61,13 @@ clear adj
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 Rec = zeros(nbins,size(wft,2));
+tic
 parfor ii = 1:nbins
     [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
     Rec(ii,:) = real(ifft(r));
 end
+toc
+return
 % if discardBad flag set simdecf will return Nan arrays where it did not
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.

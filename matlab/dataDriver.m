@@ -13,14 +13,14 @@ addpath([userdir,'/programming/matlab/toolbox_general'])
 addpath([userdir,'/programming/matlab/toolbox_signal'])
 addpath([userdir,'/programming/matlab/jsonlab'])
 %% Variables
-sacfolder = '/media/TerraS/CN';
-databasedir = '/media/TerraS/database';
+sacfolder = '/media/bpostlet/TerraS/CN';
+databasedir = '/media/bpostlet/TerraS/database';
 pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
 method = 'kanamori';
-station = 'PECO'; %
+station = 'KGNO'; %
 % KGNO
 %{
 

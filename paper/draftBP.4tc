@@ -12,17 +12,11 @@
 \doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-90003}{QQ2-1-11}{Results}}{14}\relax 
 \doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-100003.1}{QQ2-1-12}{Comparisons}}{15}\relax 
 \doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-100011}{}{\ignorespaces Comparison of $R$ and $H$ estimates with three published studies}}{table}\relax 
-\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-100023}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with data from Thompson et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
-\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-100034}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Thomspson et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
-\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-100045}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with from Eaton et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
-\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-100056}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Eaton et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
-\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-100067}{}{\ignorespaces Comparison of crustal thickness $H$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.95}}{figure}\relax 
-\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-100078}{}{\ignorespaces Comparison of $V_P / V_R$ data from this study with data from Darbyshire et. al. (2010). Data shows a Pearson correlation of 0.5}}{figure}\relax 
-\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-100089}{}{\ignorespaces Comparison of $V_P$ estimates from the MB algorithm with active source $V_P$ recordings. Stations selected if active source experiment locations within 1 degree of latitude / longtitude.}}{figure}\relax 
-\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-110003.2}{QQ2-1-21}{Regional Bulk Crustal Parameters}}{39}\relax 
-\doTocEntry\toclof{10}{\csname a:TocLink\endcsname{1}{x1-1100110}{}{}}{figure}\relax 
-\doTocEntry\toclof{11}{\csname a:TocLink\endcsname{1}{x1-1100211}{}{}}{figure}\relax 
-\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-120004}{QQ2-1-24}{Discussion}}{45}\relax 
-\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-130004.1}{QQ2-1-25}{Canada}}{45}\relax 
-\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-140004.2}{QQ2-1-26}{Slave Province}}{45}\relax 
-\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-150005}{QQ2-1-27}{Conclusions}}{45}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-110003.2}{QQ2-1-14}{Regional Bulk Crustal Parameters}}{18}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-110012}{}{\ignorespaces Comparison of $R$ and $H$ estimates with three published studies}}{table}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-110023}{}{\ignorespaces Comparison of $V_P$ estimates from the MB algorithm with active source $V_P$ recordings. Stations selected if active source experiment locations within 1 degree of latitude / longtitude.}}{figure}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-110034}{}{}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-110045}{}{}}{figure}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-120004}{QQ2-1-19}{Discussion}}{30}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-130004.1}{QQ2-1-20}{Canada}}{30}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-140005}{QQ2-1-21}{Conclusions}}{30}\relax 
