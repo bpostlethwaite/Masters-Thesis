@@ -2,6 +2,7 @@
 #include <math.h>
 #include <matrix.h>
 
+
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
 {
 
@@ -37,7 +38,6 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   R = mxGetPr(plhs[0]);
   H = mxGetPr(plhs[1]);
   HRx = mxGetPr(plhs[2]); // Output actual value of gridsearch cell for setting contour level
-
 
   // Grid parameters.
   double adjtps = 0.5; // Weights chosen from Precambrian crustal evolution - D.A. Thompson
