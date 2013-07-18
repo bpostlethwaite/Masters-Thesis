@@ -14,9 +14,16 @@ import re, sys
 
 if __name__== '__main__' :
 
+    numbers = re.findall(r'\d+', sys.stdin.read() )
+    numbers = map(int, numbers)
 
-    numbers = sys.stdin.read().split()
-    numbers = map(float, numbers)
-    print sum(numbers)/len(numbers)
-
-
+    sortn = [numbers.pop()]
+    while numbers:
+        hit = False
+        n = numbers.pop()
+        for i, ns in enumerate(sortn):
+            if n < ns:
+                sortn.insert(ind, n)
+                hit = True
+        if not hit:
+            sortn.append(n)
