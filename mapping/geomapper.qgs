@@ -4,15 +4,15 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-143.065194</xmin>
-            <ymin>33.493759</ymin>
-            <xmax>-50.473506</xmax>
-            <ymax>90.759769</ymax>
+            <xmin>-143.501673</xmin>
+            <ymin>33.522858</ymin>
+            <xmax>-50.909984</xmax>
+            <ymax>90.788868</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
             <spatialrefsys>
-                <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                 <srsid>3452</srsid>
                 <srid>4326</srid>
                 <authid>EPSG:4326</authid>
@@ -848,7 +848,7 @@
             <layername>bedrockGeology</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -2584,7 +2584,7 @@
             <layername>cities</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -2669,7 +2669,7 @@
             <layername>Geological Provinces</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3013,7 +3013,7 @@
             <layername>INDEXMAP_GEOLOGY</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3094,7 +3094,7 @@
             <layername>VoronoiTest</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3105,7 +3105,7 @@
                 </spatialrefsys>
             </srs>
             <transparencyLevelInt>255</transparencyLevelInt>
-            <provider encoding="System">ogr</provider>
+            <provider encoding="UTF-8">ogr</provider>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
@@ -3159,7 +3159,7 @@
             <layername>crust2geology</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3170,7 +3170,7 @@
                 </spatialrefsys>
             </srs>
             <transparencyLevelInt>255</transparencyLevelInt>
-            <provider encoding="System">ogr</provider>
+            <provider encoding="UTF-8">ogr</provider>
             <vectorjoins/>
             <renderer-v2 attr="mH" symbollevels="0" type="graduatedSymbol">
                 <ranges>
@@ -3342,7 +3342,7 @@
             <layername>Crust 2.0</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3521,7 +3521,7 @@
             <layername>moonVpGeology</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3532,7 +3532,7 @@
                 </spatialrefsys>
             </srs>
             <transparencyLevelInt>255</transparencyLevelInt>
-            <provider encoding="System">ogr</provider>
+            <provider encoding="UTF-8">ogr</provider>
             <vectorjoins/>
             <renderer-v2 attr="mVp" symbollevels="0" type="graduatedSymbol">
                 <ranges>
@@ -3704,7 +3704,7 @@
             <layername>politicalProvinces</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3778,7 +3778,7 @@
             <layername>stationGeology</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -3789,7 +3789,7 @@
                 </spatialrefsys>
             </srs>
             <transparencyLevelInt>255</transparencyLevelInt>
-            <provider encoding="System">ogr</provider>
+            <provider encoding="UTF-8">ogr</provider>
             <vectorjoins/>
             <renderer-v2 attr="hk::H" symbollevels="0" type="graduatedSymbol">
                 <ranges>
@@ -3951,7 +3951,7 @@
             <layername>stations</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -4113,7 +4113,7 @@
                 <edittype type="0" name="wm::R"/>
                 <edittype type="0" name="wm::Vp"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
             <attributeactions/>
@@ -4126,7 +4126,7 @@
             <layername>Seismic Station Data</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -4305,7 +4305,7 @@
             <layername>Stations Thompson</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>

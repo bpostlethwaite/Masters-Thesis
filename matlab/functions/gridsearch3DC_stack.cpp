@@ -9,7 +9,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   mxArray *recIN, *pslowIN;
   const mwSize *dims;
   double *rec, *pslow, *Tps, *R, *H, *V, *HRx;
-  double dt, *stack3d;
+  double dt, *h, *v, *r, *stack3d;
   int nrecs, i, ir , ih, iv;
   int N, lim;
 
@@ -30,7 +30,11 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   plhs[1] = mxCreateDoubleMatrix(1, 1, mxREAL);
   plhs[2] = mxCreateDoubleMatrix(1, 1, mxREAL);
   plhs[3] = mxCreateDoubleMatrix(1, 1, mxREAL);
-
+  plhs[4] = mxCreateDoubleMatrix(lim, 1, mxREAL);
+  plhs[5] = mxCreateDoubleMatrix(lim, 1, mxREAL);
+  plhs[6] = mxCreateDoubleMatrix(lim, 1, mxREAL);
+  plhs[7] = mxCreateDoubleMatrix(lim*lim*lim, 1, mxREAL);
+  
   //associate pointers
   rec = mxGetPr(recIN);
   pslow = mxGetPr(pslowIN);
@@ -39,7 +43,11 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   R = mxGetPr(plhs[1]);
   H = mxGetPr(plhs[2]);
   HRx = mxGetPr(plhs[3]); // Output actual value of gridsearch cell for setting contour level
-
+  v = mxGetPr(plhs[4]);
+  r = mxGetPr(plhs[5]);
+  h = mxGetPr(plhs[6]);
+  stack3d = mxGetPr(plhs[7]);
+          
 
   // Grid parameters.
   double adjtps = 0.5; // Weights chosen from Precambrian crustal evolution - D.A. Thompson
@@ -51,21 +59,21 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   double r1 = 1.65;
   double r2 = 1.95;
   double dr = (r2 - r1) / ((double) nr - 1.);
-  double r[nr];
+  //double r[nr];
 
   // H limits
   int nh = lim;
   double h1 = 25.;
   double h2 = 50.;
   double dh = (h2 - h1) / ((double) nh - 1.);
-  double h[nh];
+  //double h[nh];
 
   // V limits
   int nv = lim;
   double v1 = 5.;
   double v2 = 8.;
   double dv = (v2 - v1) / ((double) nv - 1.);
-  double v[nv];
+  //double v[nv];
 
   // Build 1-D arrays
   r[0] = r1;
@@ -96,7 +104,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   double Spps = 0.;
   double Spss = 0.;
   
-  stack3d = (double*) mxMalloc( (nh * nr * nv + 1) * sizeof(double));
+  //stack3d = (double*) mxMalloc( (nh * nr * nv + 1) * sizeof(double));
 
   for(ih = 0; ih < nh; ih++ ) {
     for(ir = 0; ir < nr; ir++ ) {
@@ -160,6 +168,6 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[] )
   V[0] = v[ ind[2] ];
   HRx[0] = max;
 
-  mxFree(stack3d);
+  //mxFree(stack3d);
 
 }

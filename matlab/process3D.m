@@ -31,10 +31,10 @@ for ii = ((NUM - 1) * ns + 1) : ns * NUM
     
     load(fullfile(databasedir, station));
         
-    [ v, r, h, ~] = gridsearch3DC(db.rec', db.dt, db.pslow, 150);
-    [Vp, R, H] = bootstrap3D(db.rec, db.dt, db.pslow, 150, 1);    
+    [ v, r, h, smaxss] = gridsearch3DC(db.rec', db.dt, db.pslow, 150);
+    [Vp, R, H, SMax] = bootstrap3D(db.rec, db.dt, db.pslow, 150, 1);    
  
-    save(['data/',station,'.mat'], 'v', 'r', 'h', 'Vp', 'R', 'H')
+    save(['data/',station,'.mat'], 'v', 'r', 'h', 'Vp', 'R', 'H', 'SMax')
 
 end
 

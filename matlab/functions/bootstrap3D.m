@@ -12,11 +12,11 @@ n = size(rec,2);
 R = zeros(1, nmax);
 H = zeros(1, nmax);
 Vp = zeros(1, nmax);
-
+Smax = zeros(1, nmax);
 
 parfor ii = 1:nmax
     ind = randi(n, n, 1);
-    [Vp(ii), R(ii), H(ii), ~] = ...
+    [Vp(ii), R(ii), H(ii), Smax(ii)] = ...
         gridsearch3DC( rec(:, ind), dt, pslow(ind), lim3D);
 end
 

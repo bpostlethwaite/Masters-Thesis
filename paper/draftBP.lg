@@ -1,3 +1,4 @@
+htfcss: cmti  font-style: italic;
 htfcss: cmmi font-style: italic;
 htfcss: cmmib font-style: italic; font-weight: bold;
 htfcss: cmtt font-family: monospace;
@@ -126,12 +127,11 @@ Css: .figure img.graphics {margin-left:10%;}
 --- needs --- draftBP.idv[6] ==> draftBP2x.png ---
 File: figures/reflectedPhases.png
 --- needs --- draftBP.idv[8] ==> draftBP3x.png ---
---- needs --- draftBP.idv[9] ==> draftBP4x.png ---
---- needs --- draftBP.idv[11] ==> draftBP5x.png ---
---- needs --- draftBP.idv[13] ==> draftBP6x.png ---
+--- needs --- draftBP.idv[10] ==> draftBP4x.png ---
+--- needs --- draftBP.idv[12] ==> draftBP5x.png ---
 File: figures/kinematicRvsH.png
---- needs --- draftBP.idv[15] ==> draftBP7x.png ---
---- needs --- draftBP.idv[17] ==> draftBP8x.png ---
+--- needs --- draftBP.idv[14] ==> draftBP6x.png ---
+--- needs --- draftBP.idv[16] ==> draftBP7x.png ---
 File: figures/activeSourceComparison.png
 File: figures/VpVsMap.png
 File: figures/VpVsMapCrust.png
@@ -143,6 +143,6 @@ Font("cmtt","12","12","100")
 Font("cmr","8","8","100")
 Font("cmmi","12","12","100")
 Font("cmmi","8","8","100")
-Font("cmmi","6","6","100")
 Font("cmsy","10","10","120")
 Font("cmsy","8","8","100")
+Font("cmti","12","12","100")

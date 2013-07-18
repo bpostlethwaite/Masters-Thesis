@@ -122,7 +122,7 @@ if strcmp(method, 'bostock')
 
 elseif strcmp(method, 'kanamori')      
     [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
-
+    
 end
 
 % Run Bootstrap

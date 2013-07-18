@@ -3,8 +3,8 @@ close all
 
 addpath functions
 
-database = '/media/TerraS/database';
-dbfullgrid = '/media/TerraS/dbfullgrid';
+database = '/media/bpostlet/TerraS/database';
+dbfullgrid = '/media/bpostlet/TerraS/dbfullgrid';
 
 flist=dir([dbfullgrid,'/*.mat']); 
 

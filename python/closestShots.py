@@ -20,7 +20,6 @@ import itertools as it
 
 
 
-
 if __name__  == "__main__":
 
 
@@ -48,22 +47,23 @@ if __name__  == "__main__":
 # Filter dictionary to stations of this dist or less
 # And also provide a wieghted average Vp and H
 
-    ddeg = 1.0
+    ddeg = 1
     mdict = {}
 
     for stn in distd:
         data = [ [ d[0], d[1] ] for d in distd[stn] if d[1] <= ddeg]
         if not data:
             continue
-        data = [[d[0], d[1], 1 - d[1]/ddeg + 0.3] for d in data]
-        total = sum( d[2] for d in data )
-        data = [[d[0], d[1], d[2] / total]  for d in data]
+        #data = [[d[0], d[1], 1 ] for d in data] # - d[1]/ddeg + 0.3
+        #total = #sum( d[2] for d in data )
+        #data = [[d[0], d[1], d[2] / total]  for d in data]
         mdict[stn] = {}
-        mdict[stn]["Vp"] = sum( cshots[d[0]]['Vp'] * d[2] for d in data)
-        mdict[stn]["H"] = sum( cshots[d[0]]['H'] * d[2] for d in data)
+        mdict[stn]["Vp"] = sum( cshots[d[0]]['Vp'] for d in data) / len(data)
+        mdict[stn]["H"] = sum( cshots[d[0]]['H'] for d in data) / len(data)
         mdict[stn]["mcodes"] = {d[0]:d[1] for d in data}
 
 
 # Write json
 #print json.dumps(mdict, sort_keys = True, indent = 2 )
 open(csstns,'w').write( json.dumps(mdict, sort_keys = True, indent = 2 ))
+0

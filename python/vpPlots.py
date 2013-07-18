@@ -15,27 +15,41 @@ from scipy.stats import pearsonr, spearmanr
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 csfile = os.environ['HOME'] + '/thesis/data/csStations.json'
 
+
 def princomp(A,numpc=0):
      # computing eigenvalues and eigenvectors of covariance matrix
-    M = (A - np.mean(A.T,axis=1)).T # subtract the mean (along columns)
-    [latent,coeff] = np.linalg.eig( np.cov(M))
-    p = np.size(coeff,axis=1)
-    idx = np.argsort(latent) # sorting the eigenvalues
+    C = np.dot(A, A.T) / A.shape[1]
+    [eigValue,eigVect] = np.linalg.eig( C )
+    p = np.size(eigVect,axis=1)
+    idx = np.argsort(eigValue) # sorting the eigenvalues
     idx = idx[::-1]       # in ascending order
     # sorting eigenvectors according to the sorted eigenvalues
-    coeff = coeff[:,idx]
-    latent = latent[idx] # sorting eigenvalues
+    eigVect = eigVect[:,idx]
+    eigValue = eigValue[idx] # sorting eigenvalues
     if numpc < p or numpc >= 0:
-        coeff = coeff[:,range(numpc)] # cutting some PCs
-        score = np.dot(coeff.T, M) # projection of the data in the new space
-        return coeff, score, latent
+        eigVect = eigVect[:,range(numpc)] # cutting some PCs
+        score = np.dot(eigVect, A) # projection of the data in the new space
+        return eigVect, score, eigValue, C
+
+def getPCAvect(pc, xscale):
+    yb = pc[1] #+ am[1]
+    xb = pc[0] #+ am[0]
+    slope = -pc[1] / pc[0]
+    ypt = np.array([slope * xscale[0], slope * xscale[1]]) #+ 1.2
+    return xscale, ypt
+
+
+# def getPCAvect(pc, xscale):
+#     yb = pc[1] #+ am[1]
+#     xb = pc[0] #+ am[0]
+#     slope = -pc[1] / pc[0]
+#     b = yb - slope * xb
+#     ypt = np.array([slope * xscale[0] + b, slope * xscale[1] + b]) #+ 1.2
+#     return xscale, ypt
+
 
 if __name__  == "__main__":
 
-    maxerr = 0.06
-    arg = Args().addQuery("hk::stdR", "lt", str(maxerr))
-    m = Params(stnfile, ["mb::H","mb::Vp", "mb::stdVp", "hk::stdR"], arg)
-    f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdVp", "hk::stdR"], arg)
 
     ## Figure Properties #######
     figwidth = 12
@@ -51,129 +65,214 @@ if __name__  == "__main__":
     title = 18 / ratio
     leg = 16 / ratio
 
-    ###########################
-
 
     #############################################################################
-    # Vp estimates against H
+    # FIG 1: Vp estimates against H
     ##############################################################################
-    corrmb = pearsonr(m.mb_Vp, m.mb_H)
-    print "MB: stddev = {} with {} stations, correlation between Vp and H is {}".format(maxerr, len(m.stns), corrmb[0])
-    corrfg = pearsonr(f.fg_Vp, f.fg_H)
-    print "FG: stddev = {} with {} stations, correlation between Vp and H is {}".format(maxerr, len(f.stns), corrfg[0])
 
-    A = np.vstack( (f.fg_H, f.fg_Vp) )
+    if 0:
+        f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdVp", "hk::stdR"])
 
-    coeff, score, latent = princomp(A.T, 2)
-    am = np.mean(A, axis = 1)
+        corrfg = pearsonr(f.fg_Vp, f.fg_H)
+        print "FG: Vp vs H: {} stations, correlation = {}".format(len(f.stns), corrfg[0])
 
-    var = np.sum(score * score, axis = 1)
-    var /= np.sum(var)
 
-    pc = coeff[0]
-    yb = pc[1] + am[1]
-    xb = pc[0] + am[0]
+        A = np.vstack( (f.fg_H, f.fg_Vp) )
+        M = (A.T - np.mean(A,1)).T
+        M[0] = M[0] /  np.std(M,1)[0]
+        M[1] = M[1] /  np.std(M,1)[1]
+        eigVect, pcomp, eigValue, C = princomp(M, 2)
 
-    slope = -pc[1] / pc[0]
-    b = yb - slope * xb
-    hmin = np.min(f.fg_H)
-    hmax = np.max(f.fg_H)
-    xpt = [hmin, hmax]
-    ypt = np.array([slope * xpt[0] + b, slope * xpt[1] + b])
+        var = np.sum(pcomp * pcomp, axis = 1)
+        var /= np.sum(var)
 
-    fig = plt.figure( figsize = (figwidth, figheight) )
-    plt.plot(f.fg_H, f.fg_Vp, 'ob', lw = lw, ms = ms, label = "Bostock (2010) Vp against H estimate")
-    plt.plot(xpt, ypt,'--r', lw = lw, label="Principal Component Vector")
-#    plt.plot([0, coeff[1,0] * 2] + am[0], [0, coeff[1,1]*2] + am[1],'--k', lw = 4)
+        print "variance of components is {}".format(var)
 
-    plt.title("Correlated Error in Dataset", size = 18)
-    plt.legend(loc= 2, prop={'size': leg})
-    plt.ylabel("Station Vp [km/s]", size = label)
-    plt.xlabel("Station Thickness H [km]", size = label)
-    plt.grid(True)
+        hmin = np.min(M[0])
+        hmax = np.max(M[0])
+        xscale = [hmin, hmax]
+        x1, y1 = getPCAvect(eigVect[1], xscale)
+        x2, y2 = getPCAvect(eigVect[0], xscale)
 
+        fig = plt.figure( figsize = (figwidth, figheight) )
+        plt.plot(M[0], M[1], 'ob', lw = lw, ms = ms, label = "normalized Vp vs H")
+        plt.plot(x1, y1,'--r', lw = lw, label="Primary PCA")
+        plt.plot(x2, y2,'--g', lw = lw, label="Secondary PCA")
+
+        plt.legend(loc= 2, prop={'size': leg})
+        plt.ylabel("normalized Vp", size = label)
+        plt.xlabel("normalized H", size = label)
+        plt.grid(True)
+        plt.axis("equal")
 
     #############################################################################
-    # Vp estimates and controlled source
+    # FIG 2: Vp estimates and controlled source
     ##############################################################################
+    if 1:
+        maxerr = 0.4#0.21
+        arg = Args().addQuery("fg::stdVp", "lt", str(maxerr))
+        f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdH", "fg::stdVp", "hk::stdR"], arg)
 
-#    arg = Args().stations(["ALE","ALGO","ARVN","BANO","CBRQ","DAWY","DELO","FCC","FFC","HAL","KGNO","KSVO","LMN","MBC","MNT","MOBC","ORIO","PEMO","PGC","PLVO","PMB","PTCO","SJNN","SUNO","ULM","ULM2","WAPA ","WHY","WSLR ","YKW1","YOSQ"])
-#    m.filter(arg)
+        c = Params(csfile, ["H","Vp"])
+        c.sync(f)
 
-    c = Params(csfile, ["H","Vp"])
-    c.sync(f)
+        stdVp = 2 * f.fg_stdVp # 2 stdError
+        stdH = 2 * f.fg_stdH
+        t = np.arange(len(f.fg_Vp))
 
-    stdVp = 2 * f.fg_stdVp # 2 stdError
-    t = np.arange(len(f.fg_Vp))
+        corr = pearsonr(f.fg_Vp, c.Vp)
+        print "Active Source vs FG Vp with {} stations: correlation = {}".format(len(f.stns), corr[0])
 
-    corr = pearsonr(f.fg_Vp, c.Vp)
-    print "correlation = {}".format(corr[0])
 
-    fig = plt.figure( figsize = (figwidth, figheight) )
-    ax = plt.subplot(111)
+        fig = plt.figure()
+        ax1 = fig.add_subplot(111)
 
-    plt.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp estimate")
-    plt.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
-                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-    plt.plot(t, c.Vp, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
-#   plt.title("Active Source P-wave velocity comparison\n Correlation = {0:2.3f}".format(corr[0]), size = title)
-    plt.legend(prop={'size': leg})
-    plt.xlabel("Stations", size = label)
-    plt.ylabel("Vp [km/s]", size = label)
 
-    plt.axis("tight")
+        ax1.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
+        ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        ax1.plot(t, c.Vp, ':ob', lw = lw, ms = ms, label = "Proximal active source Vp estimate")
+        ax1.set_xlabel('stations', color='b')
+        ax1.set_ylabel('Vp [km]', color='b')
+        for tl in ax1.get_yticklabels():
+            tl.set_color('b')
 
-    for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize( ticks )
-        # specify integer or one of preset strings, e.g.
-        #tick.label.set_fontsize('x-small')
-        tick.label.set_rotation('vertical')
+        for tick in ax1.xaxis.get_major_ticks():
+            tick.label.set_fontsize( ticks )
+            # specify integer or one of preset strings, e.g.
+            #tick.label.set_fontsize('x-small')
+            tick.label.set_rotation('vertical')
 
-    plt.xticks(t, c.stns, size = ticks)
-    plt.grid(True)
 
-    # #############################################################################
-    # # FG Vp/Vs versus Kan Vp/Vs
-    # ##############################################################################
-    f = Params(stnfile, ["fg::H","fg::R", "fg::stdR"])
-    k = Params(stnfile, ["hk::H","hk::R", "hk::stdR"])
+        plt.xticks(t, c.stns, size = ticks)
 
-    maxerr = 0.06
-    f.filter(Args().addQuery("fg::stdR", "lt", str(maxerr)))
-#    k.filter
 
-    k.sync(f)
 
-    stdR = 2 * f.fg_stdR # 2 stdError
-    t = np.arange(len(f.fg_R))
+        ax2 = ax1.twinx()
 
-    corr = pearsonr(f.fg_R, k.hk_R)
-    print "with stddev limit {} and {} stations, correlation = {}".format(maxerr, len(k.stns), corr[0])
+        ax2.plot(t, f.fg_H, '-or', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
+        ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'blue',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        ax2.plot(t, c.H, ':or', lw = lw, ms = ms, label = "Proximal active source H estimate")
 
-    fig = plt.figure( figsize = (figwidth, figheight) )
-    ax = plt.subplot(111)
+        ax2.set_ylabel('H [km]', color='r')
+        for tl in ax2.get_yticklabels():
+            tl.set_color('r')
 
-    plt.plot(t, f.fg_R, '-ob', lw = lw, ms = ms, label = "Bostock (2010) Vp/Vs estimate")
-    plt.errorbar(t, f.fg_R, yerr= stdR, xerr=None, fmt=None, ecolor = 'blue',
-                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-    plt.plot(t, k.hk_R, '-og', lw = lw, ms = ms, label = "Kanamori Vp/Vs estimate")
-    plt.errorbar(t, k.hk_R, yerr=2 * k.hk_stdR, xerr=None, fmt=None, ecolor = 'green',
-                 elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        plt.grid(True)
+        plt.legend(prop={'size': leg})
 
-    plt.legend(prop={'size': leg})
-    plt.xlabel("Stations", size = label)
-    plt.ylabel("Vp/Vs", size = label)
 
-    plt.axis("tight")
 
-    for tick in ax.xaxis.get_major_ticks():
-        tick.label.set_fontsize( ticks )
-        # specify integer or one of preset strings, e.g.
-        #tick.label.set_fontsize('x-small')
-        tick.label.set_rotation('vertical')
 
-    plt.xticks(t, k.stns, size = ticks)
-    plt.grid(True)
+########################
+        # fig = plt.figure( figsize = (figwidth, figheight) )
+        # ax = plt.subplot(111)
+
+        # plt.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
+        # plt.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+        #              elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        # plt.plot(t, c.Vp, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
+
+        # plt.plot(t, f.fg_H, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
+        # plt.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'blue',
+        #              elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        # plt.plot(t, c.H, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
+
+        # plt.legend(prop={'size': leg})
+        # plt.xlabel("Stations", size = label)
+        # plt.ylabel("Vp [km/s]", size = label)
+
+        # plt.axis("tight")
+
+        # for tick in ax.xaxis.get_major_ticks():
+        #     tick.label.set_fontsize( ticks )
+        #     # specify integer or one of preset strings, e.g.
+        #     #tick.label.set_fontsize('x-small')
+        #     tick.label.set_rotation('vertical')
+
+        # plt.xticks(t, c.stns, size = ticks)
+        # plt.grid(True)
+
+    #############################################################################
+    # FIG 3: FG Vp/Vs versus Kan Vp/Vs
+    ##############################################################################
+    if 0:
+        f = Params(stnfile, ["fg::H","fg::R", "fg::stdR", "fg::stdH", "fg::Vp"])
+        k = Params(stnfile, ["hk::H","hk::R", "hk::stdR", "hk::stdH", "wm::Vp"])
+
+        maxerr = 0.06
+        f.filter(Args().addQuery("fg::stdR", "lt", str(maxerr)))
+        k.sync(f)
+
+        stdR = 2 * f.fg_stdR # 2 stdError
+        t = np.arange(len(f.fg_R))
+
+        corr = pearsonr(f.fg_R, k.hk_R)
+        print "FullGrid to ZK R with stddev limit {} and {} stations, correlation = {}".format(maxerr, len(k.stns), corr[0])
+
+        fig = plt.figure( figsize = (figwidth, figheight) )
+        ax = plt.subplot(111)
+
+        plt.plot(t, f.fg_R, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp/Vs estimate")
+        plt.errorbar(t, f.fg_R, yerr= stdR, xerr=None, fmt=None, ecolor = 'blue',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        plt.plot(t, k.hk_R, '-og', lw = lw, ms = ms, label = "ZK Vp/Vs estimate")
+        plt.errorbar(t, k.hk_R, yerr=2 * k.hk_stdR, xerr=None, fmt=None, ecolor = 'green',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+
+        plt.legend(prop={'size': leg})
+        plt.xlabel("Stations", size = label)
+        plt.ylabel("Vp/Vs", size = label)
+
+        plt.axis("tight")
+
+        for tick in ax.xaxis.get_major_ticks():
+            tick.label.set_fontsize( ticks )
+            # specify integer or one of preset strings, e.g.
+            #tick.label.set_fontsize('x-small')
+            tick.label.set_rotation('vertical')
+
+        plt.xticks(t, k.stns, size = ticks)
+        plt.grid(True)
+
+        #############################################################################
+        # FIG 4: FG H versus Kan H
+        ##############################################################################
+
+        stdH = 2 * f.fg_stdH # 2 stdError
+        t = np.arange(len(f.fg_H))
+
+    #    f.fg_H = f.fg_H / f.fg_Vp
+    #    k.hk_H = k.hk_H / k.wm_Vp
+
+        corr = pearsonr(f.fg_H, k.hk_H)
+        print "FullGrid to ZK H with stddev limit {} and {} stations, correlation = {}".format(maxerr, len(k.stns), corr[0])
+
+        fig = plt.figure( figsize = (figwidth, figheight) )
+        ax = plt.subplot(111)
+
+        plt.plot(t, f.fg_H, '-ob', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
+        plt.errorbar(t, f.fg_H, yerr= stdH, xerr=None, fmt=None, ecolor = 'blue',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        plt.plot(t, k.hk_H, '-og', lw = lw, ms = ms, label = "ZK H estimate")
+        plt.errorbar(t, k.hk_H, yerr=2 * k.hk_stdH, xerr=None, fmt=None, ecolor = 'green',
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+
+        plt.legend(prop={'size': leg})
+        plt.xlabel("Stations", size = label)
+        plt.ylabel("H [km]", size = label)
+
+        plt.axis("tight")
+
+        for tick in ax.xaxis.get_major_ticks():
+            tick.label.set_fontsize( ticks )
+            # specify integer or one of preset strings, e.g.
+            #tick.label.set_fontsize('x-small')
+            tick.label.set_rotation('vertical')
+
+        plt.xticks(t, k.stns, size = ticks)
+        plt.grid(True)
 
 
 
