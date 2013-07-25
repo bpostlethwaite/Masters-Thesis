@@ -4,12 +4,12 @@ close all
 addpath functions
 
 database = '/media/bpostlet/TerraS/database';
-dbfullgrid = '/media/bpostlet/TerraS/dbfullgrid';
+dbfullgrid = '/media/bpostlet/TerraS/data3D';
 
 flist=dir([dbfullgrid,'/*.mat']); 
 
-mergeFLAG = false;
-plotFLAG = true;
+mergeFLAG = true;
+plotFLAG = false;
 
 for ii=1:length(flist)
 
@@ -31,7 +31,7 @@ if mergeFLAG
     db.fg.stdVp = std(S.Vp);
     db.fg.stdR = std(S.R);
     db.fg.stdH = std(S.H);
-    
+    db.fg.stdS = std(S.SMax);
     save(dbfile,'db') % Save .mat file with bulk data
     fprintf('Saved data\n')
     

@@ -121,8 +121,10 @@ is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from th
 
 
 \subsection{Full Gridsearch Method}
+The primary limitation of the ZK approach is the requirement for an initial $V_P$ estimate. This can be resolved by computing the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time makes this method scalable to hundreds of stations.
 
-In addition to employing the ZK approach, we also investigate the feasibility of separately estimating $V_P$ and $H$ through a full 3 parameter grid search involving these parameters and $R$. The trade-off between $V_P$ and $H$ (and other parameter combinations) and the effects of various errors, are quantified for both the full grid search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. Bootstrap standard deviations are produced using 1024 random selections of receiver functions, with replacement, per station.
+[[ Maybe have a subsection for error? ]]
+ The trade-off between $V_P$ and $H$ (and other parameter combinations) and error resulting from data quality are quantified for both the full grid search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An estimate for the error is calculated in a bootstrap resampling approach by taking the standard deviation of 1024 parameter estimates each produced with randomly selected data (RFs), with replacement.
 
 \subsection{Additional data}
 
@@ -166,9 +168,6 @@ All three studies provide $H$ estimates that correlate strongly with the compute
 
 
 \subsection{Full Parameter Search Comparisons}
-The primary limitation of the ZK approach is the requirement for an initial $V_P$ estimate. This can be resolved by computing the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time for this method can be measured in seconds.
-
-
 Comparing the ZK approach with the full parameter search (Table \ref{table:ZKvsFG}) we see that the velocity ratio $R$ has a correlation between the two datasets of 0.76 while $H$ has a correlation of only 0.51. Since $t_{Ps}$ represents the differential travel time between the S and P wave, the dependence of $H$ on $V_P$ is weak. Error in $V_P$ will trade-off with $H$ (Figure \ref{fig:PCA} and can be removed by dividing out $V_P$ from $H$ in both datasets. The $H/V_P$ ratio between the two datasets shows a high correlation of 0.96 as expected.
 
 If the error in $V_P$ is low the trade-off between $V_P$ and $H$ will be kept to a minimum. However, $V_P$ is difficult to resolve and even for clean stations the trade-off is quite large (Figure [slice through Vp space from 3D stack]). Taking the best three stations
@@ -190,7 +189,7 @@ If the error in $V_P$ is low the trade-off between $V_P$ and $H$ will be kept to
 
 
 \subsection{Regional Bulk Crustal Parameters}
-Data from X seismic stations across Canada are analyzed, using only those stations with less than 0.06 standard error. To compensate for the uneven geographic distribution of seismic stations, weights are applied to all crustal parameter estimates before averaging over a given region. Weights are calculated by first projecting station locations onto the 2D plane using the Albers equal-area conic projection. A Voronoi diagram is calculated for all projected station locations. The ratio between the Voronoi cell surface encompassing each station and the total area of the convex hull bounding region is computed and used as the weighting value.
+Parameter estimates for stations assigned less than a 0.6 bootstrap error in the velocity ratio, $R$, are grouped regionally and analyzed. To compensate for the uneven geographic distribution of seismic stations, weights are applied to all crustal parameter estimates before averaging over a given region. Weights are calculated by first projecting station locations onto the 2D plane using the Albers equal-area conic projection. A Voronoi diagram is then calculated using all projected station locations. The ratio between the Voronoi cell surface encompassing each station and the total area of the convex hull bounding region is computed and used as the weighting value.
 
 \begin{table}
   \begin{tabular}{ l l l l l l }
@@ -212,7 +211,7 @@ Data from X seismic stations across Canada are analyzed, using only those statio
 
 \end{table}
 
-Moving South from the Churchill through the Superior and the Grenville there is an increase in the ZK + semblance computed seismic velocity ratio as well as crustal thickness. The trend in increasing values is also seen in the weighted averaged active source $V_P$ data. Generally the Crust 2.0 values show a slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity data is not as apparent in the Crust 2.0 data.
+Moving South and East from the Churchill through the Superior and the Grenville there is an increase in the ZK + semblance computed seismic velocity ratio as well as crustal thickness. The weighted $R$ average is 1.73 in the Churchill Province increasing slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. Similarly the weighted average Moho depth increases from 38.9 km in the Churchill to 39.7 in the Superior and 41.7km in the Grenville. The Southeastern trend towards increasing values is also seen in the weighted averaged active source $V_P$ data.  Generally the Crust 2.0 values show a slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity data is not as apparent in the Crust 2.0 data.
 
 \subsection{Conrad Discontinuity}
 Results and figures showing statistics regarding depth of crustal reflectors.

@@ -70,7 +70,7 @@ if __name__  == "__main__":
     # FIG 1: Vp estimates against H
     ##############################################################################
 
-    if 0:
+    if 1:
         f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdVp", "hk::stdR"])
 
         corrfg = pearsonr(f.fg_Vp, f.fg_H)
@@ -96,8 +96,8 @@ if __name__  == "__main__":
 
         fig = plt.figure( figsize = (figwidth, figheight) )
         plt.plot(M[0], M[1], 'ob', lw = lw, ms = ms, label = "normalized Vp vs H")
-        plt.plot(x1, y1,'--r', lw = lw, label="Primary PCA")
-        plt.plot(x2, y2,'--g', lw = lw, label="Secondary PCA")
+        plt.plot(x2, y2,'--r', lw = lw, label="Primary PCA: variance = {:2.1f}%".format(var[0]*100))
+        plt.plot(x1, y1,'--g', lw = lw, label="Secondary PCA: variance = {:2.1f}%".format(var[1]*100))
 
         plt.legend(loc= 2, prop={'size': leg})
         plt.ylabel("normalized Vp", size = label)
@@ -109,7 +109,7 @@ if __name__  == "__main__":
     # FIG 2: Vp estimates and controlled source
     ##############################################################################
     if 1:
-        maxerr = 0.4#0.21
+        maxerr = 0.21#0.24#0.21
         arg = Args().addQuery("fg::stdVp", "lt", str(maxerr))
         f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdH", "fg::stdVp", "hk::stdR"], arg)
 
@@ -128,10 +128,10 @@ if __name__  == "__main__":
         ax1 = fig.add_subplot(111)
 
 
-        ax1.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
-        ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+        l1=ax1.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
+        l2=ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
                      elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        ax1.plot(t, c.Vp, ':ob', lw = lw, ms = ms, label = "Proximal active source Vp estimate")
+        l3=ax1.plot(t, c.Vp, ':ob', lw = lw, ms = ms, label = "Proximal active source Vp estimate")
         ax1.set_xlabel('stations', color='b')
         ax1.set_ylabel('Vp [km]', color='b')
         for tl in ax1.get_yticklabels():
@@ -150,18 +150,21 @@ if __name__  == "__main__":
 
         ax2 = ax1.twinx()
 
-        ax2.plot(t, f.fg_H, '-or', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
-        ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'blue',
+        l4=ax2.plot(t, f.fg_H, '-or', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
+        l5=ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'red',
                      elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        ax2.plot(t, c.H, ':or', lw = lw, ms = ms, label = "Proximal active source H estimate")
+        l6=ax2.plot(t, c.H, ':or', lw = lw, ms = ms, label = "Proximal active source H estimate")
 
         ax2.set_ylabel('H [km]', color='r')
         for tl in ax2.get_yticklabels():
             tl.set_color('r')
 
-        plt.grid(True)
-        plt.legend(prop={'size': leg})
+        # added these three lines
+        lns = l1+l3+l4+l6
+        labs = [l.get_label() for l in lns]
+        ax1.legend(lns, labs, loc=0, prop={'size': leg})
 
+        plt.grid(True)
 
 
 

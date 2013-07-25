@@ -18,8 +18,8 @@ import shapefile
 import scipy.io as sio
 
 # CONFIGS
-databasedir = '/media/TerraS/database'
-netdir = '/media/TerraS/CN'
+databasedir = '/media/bpostlet/TerraS/database'
+netdir = '/media/bpostlet/TerraS/CN'
 dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
 stationlist = os.environ['HOME'] + '/thesis/shellscripts/cnsn_stn.list'
 updtime = os.environ['HOME'] + '/thesis/data/updtime.data'
@@ -219,16 +219,16 @@ def matStats(statdict, modtime, force = False):
                 pass
 
             # Specific Processing Data
-            try:
-                statdict[station]['mb'] = {}
-                statdict[station]['mb']['Vp'] = float(db['mb']['vbest'])
-                statdict[station]['mb']['R'] = float(db['mb']['rbest'])
-                statdict[station]['mb']['H'] = float(db['mb']['hbest'])
-                statdict[station]['mb']['stdVp'] = float(db['mb']['stdVp'])
-                statdict[station]['mb']['stdR'] = float(db['mb']['stdR'])
-                statdict[station]['mb']['stdH'] = float(db['mb']['stdH'])
-            except IndexError:
-                pass
+            # try:
+            #     statdict[station]['mb'] = {}
+            #     statdict[station]['mb']['Vp'] = float(db['mb']['vbest'])
+            #     statdict[station]['mb']['R'] = float(db['mb']['rbest'])
+            #     statdict[station]['mb']['H'] = float(db['mb']['hbest'])
+            #     statdict[station]['mb']['stdVp'] = float(db['mb']['stdVp'])
+            #     statdict[station]['mb']['stdR'] = float(db['mb']['stdR'])
+            #     statdict[station]['mb']['stdH'] = float(db['mb']['stdH'])
+            # except IndexError:
+            #     pass
 
             try:
                 statdict[station]['hk'] = {}
@@ -252,6 +252,7 @@ def matStats(statdict, modtime, force = False):
                 statdict[station]['fg']['stdVp'] = float(db['fg']['stdVp'])
                 statdict[station]['fg']['stdR'] = float(db['fg']['stdR'])
                 statdict[station]['fg']['stdH'] = float(db['fg']['stdH'])
+                statdict[station]['fg']['stdS'] = float(db['fg']['stdS'])
             except IndexError:
                 pass
 
