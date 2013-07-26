@@ -24,7 +24,7 @@ for ii = 1 : length(s)
     
     dbfile = fullfile(databasedir, [station,'.mat'] );
     
-    if  numel(strfind(json.(station).status, 'processed'))
+    if  numel(strfind(json.(station).status, 'processed-ok'))
         if exist(dbfile, 'file')
             disp(station)
             load(dbfile)
@@ -110,7 +110,7 @@ end
 
 
 %%
-
+close all
 %X = zscore(X);
 figure()
 imagesc([1:length(s)], H, X')
@@ -120,18 +120,33 @@ E = diag(S*S');
  
 disp(E(1:10) ./ sum(E))
  
-%biplot()
- 
-[pc,score, eigs] = princomp(X);
-% biplot(pc(:,1:2),'Scores',score(:,1:2))
+ne = 6;
+
+scale  = 2;%1%5e2;
+Vs = [];
+for ii = 1:ne
+    Vs(:,ii) = S(ii,ii)^2 * V(:,ii);%/(max(abs(V(:,ii)))) ; %
+end
+
+% Flip first component cause its negative
+Vs(:,1) = Vs(:,1) * -1;
+
+shift = kron([1:ne]*scale, ones(length(X), 1));
+
 var = E./sum(E);
 
-figure()
-plot(var(1:10))
-title('Variance captured by first 10 Principal components')
+% figure()
+% plot(var(1:10))
+% title('Variance captured by first 10 Principal components')
+
+Xs = sum(S.^2'*V, 2);
+
 
 figure(34)
-plot(H, V(:,1:5))%, H, pc(:,2))
+plot(Xs, H,'k', 'LineWidth', 3)
+hold on
+%plot(H, sum(Vs'))
+plot(Vs + shift, H, 'LineWidth', 2)%, H, pc(:,2))
 legend(sprintf('PC 1 = %2.1f%%', var(1) *100),...
     sprintf('PC 2 = %2.1f%%', var(2) *100),...
     sprintf('PC 3 = %2.1f%%', var(3) *100),...
@@ -140,4 +155,6 @@ legend(sprintf('PC 1 = %2.1f%%', var(1) *100),...
     'Location', 'Best')
 xlabel('Principal Component Vector')
 ylabel('H [km]')
+set(gca,'YDir','reverse');
+hold off
  
