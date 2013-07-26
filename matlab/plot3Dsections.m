@@ -8,7 +8,7 @@ addpath functions
 database = '/media/bpostlet/TerraS/database';
 
 
-station = 'TYNO';
+station = 'DORN';
 dbfile = fullfile(database, [station, '.mat']);
 
 load(dbfile)

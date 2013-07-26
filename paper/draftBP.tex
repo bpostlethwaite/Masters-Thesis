@@ -36,7 +36,7 @@ This paper presents a comparative tour through the dataset accumulated from proc
 Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source are teleseismic receiver functions (hereafter RFs). The remaining two datasets are Crust 2.0, a widely published statistical average of similar regions with a global two degree resolution and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 2.0 and the active source compilation are used to qualify and compare with the primary dataset.
 
 \subsection{Teleseismic Data Set}
-The primary data utilized in this study are computed from teleseismic P-wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between the years 2000 and 2012 at and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Seismograms are included for analysis if they within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with high enough signal to noise ratios to permit visual observation of the dominant P-wave energy and with sufficient impulsive first arrivals that allow arrival times to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
+The primary data utilized in this study are computed from teleseismic P-wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between the years 2000 and 2012 and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Seismograms are included for analysis if they within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with high enough signal to noise ratios to permit visual observation of the dominant P-wave energy and with sufficient impulsive first arrivals that allow arrival times to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
 
 The first stage of processing requires the transformation of teleseismic data into receiver functions. In general terms, this transformation involves deconvolving an approximation of the earthquake source from horizontal recordings of ground motion [Langston, 1979]. The resulting waveforms contain discrete pulses corresponding to the S-wave arrivals scattered from subsurface discontinuities including the base of the crust, or Moho. Confident identification of these peaks to the estimate of crustal parameters, and improved results can be obtained by transforming the seismogram channels into P and S contributions based on a 1-D model of propagation. This procedure is accomplished by first rotating the N and E coordinates into radial and transverse directions and then performing a wave field decomposition using the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave component is used as an approximation to the source function as P-wave impulse response for teleseismic P approximates a delta function. This windowed source estimate is deconvolved from the S wave component computed from the wave field decomposition.
 
@@ -44,7 +44,7 @@ We employ $L_2$, multichannel, frequency domain approach to perform the deconvol
 
 % Deconvolution equations
 \begin{equation}
-  r(t) = F^{-1} \left[ G(\omega) \right] = F{^-1}
+  r(t) = F^{-1} \left[ G(\omega) \right] = F^{-1}
  \left[ \frac {\sum_n^N S_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta} \right ],
 \end{equation}
 
@@ -94,15 +94,7 @@ t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2}
 
 where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
-The travel time equations, as employed by ZK, assume a value for crustal P-wave velocity, $V_P$, that
-in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approac, each station is assigned a $V_P$ value corrisponding to the Crust 2.0 value for the $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
-
-\begin{figure}
-  \centering
-    \includegraphics[width=\textwidth]{kinematicRvsH}
-  \caption{Kinematic curves traced out by the stacking function, $s(H,R)$, corrisponding to the mapping of fixed travel times $t_{Ps}$, $t_{PpPs}$ and $t_{PsPs}$ into $H$ and $R$ space.}
-  \label{fig:kinematicRvsH}
-\end{figure}
+The travel time equations, as employed by ZK, assume a value for crustal P-wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corrisponding to the Crust 2.0 value for the $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
 RFs are stacked along trial moveout curves for a range of candidate models of $R$ and $H$ to generate a fitness function $s(H,R)$.  Within the stacking procedure, each phase is assigned a weight to account for a general trend in the quality of the phases, with direct conversion $Ps$ usually characterized by the highest quality signal followed by $PpPs$ and $PpSs$. We chose weights of $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases, respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
@@ -117,14 +109,12 @@ S_j(H,R) = \frac {\left[ \sum_{i=1}^N r_i(t_j) \right]^2}
                  { \sum_{i=1}^N r_i^2(t_j) }
 \end{equation}
 
-is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corresponding travel time function for a given $H$, $R$ pair as a function of slowness $p_i$ and $N$ is the total number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and results in better resolution when discriminating between different models. The function $s(H,R)$ can be thought of as a transformation that maps the $Ps$, $PpPs$ and $PpSs+PsPs$ pulses of the receiver function, $r(t)$, into $R$ and $H$ space as positive bands, via Eq. \ref{eq:stack}. Constructive interference where these bands intersect will produce a maximum in the stacking function (Fig \ref{fig:kinematicRvsH}). The model, $R$ and $H$, which produce this maximum provides the best estimate for the bulk crustal parameters for a given seismic station. The elongate shape about the point of intersection, with the long axis tilted mostly in the $R$ coordinate, conveys the inherent trade-off between $R$ and $H$ and the lower resolution exhibited by the seismic velocity ratio $R$.
+is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corresponding travel time function for a given $H$, $R$ pair as a function of slowness $p_i$ and $N$ is the total number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and results in better resolution when discriminating between different models. The function $s(H,R)$ can be thought of as a transformation that maps the $Ps$, $PpPs$ and $PpSs+PsPs$ pulses of the receiver function, $r(t)$, into $R$ and $H$ space as positive bands, via Eq. \ref{eq:stack}. Constructive interference where these bands intersect will produce a maximum in the stacking function. The model, $R$ and $H$, which produce this maximum provides the best estimate for the bulk crustal parameters for a given seismic station.
 
+%% [[\subsection{Full Parameter Method}]]
+A limitation of the ZK approach is the requirement for an initial $V_P$ estimate. This can be resolved by computing the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time makes this method easily scalable to hundreds of stations. This approach, denoted FG, is analyzed to determine the viability of recovering $V_P$.
 
-\subsection{Full Gridsearch Method}
-The primary limitation of the ZK approach is the requirement for an initial $V_P$ estimate. This can be resolved by computing the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time makes this method scalable to hundreds of stations.
-
-[[ Maybe have a subsection for error? ]]
- The trade-off between $V_P$ and $H$ (and other parameter combinations) and error resulting from data quality are quantified for both the full grid search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An estimate for the error is calculated in a bootstrap resampling approach by taking the standard deviation of 1024 parameter estimates each produced with randomly selected data (RFs), with replacement.
+The trade-off between $V_P$ and $H$ (and other parameter combinations) and error resulting from data quality are quantified for both the full parameter search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An estimate for the error is calculated in a bootstrap resampling approach by taking the standard deviation of 1024 parameter estimates each produced with randomly selected RFs, with replacement.
 
 \subsection{Additional data}
 
@@ -159,18 +149,10 @@ Several published regional studies utilizing the methods outlined in section \re
 
 All three studies provide $H$ estimates that correlate strongly with the computed crustal thickness parameters. [[maximum mean difference, students ttest ? what would be a good stat for actual dataset difference? ]]. The correlation between the seismic velocity ratio is lower, though due to the lower resolution in $R$ this result is not unexpected. Overall there is good correlation between the estimates from the three studies and the computed estimates.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{PCA}
-  \caption{Trade-off between $H$ and $V_P$ captures by principal component analysis (PCA) of the full parameter search $V_P$ and $H$ estimates. The principal vector captures 89\% of the variance in the dataset and the correlation between $V_P$ and $H$ is 0.79. Independent random parameters will have zero correlation and principal components of roughly equal variance.}
-  \label{fig:PCA}
-\end{figure}
+\subsection{Full Parameter Search Analysis}
+Comparing the ZK approach with the full parameter search (Table \ref{table:ZKvsFG}) we see that the velocity ratio $R$ has a correlation between the two datasets of 0.76 while $H$ has a correlation of only 0.51. Since $t_{Ps}$ represents the differential travel time between the S and P wave, the dependence of $H$ on $V_P$ is weak. This means that for a given uncertainty in the three dimensional stack $s(H,R,V_P)$, the gradient in the stack-space will be lowest along the kinematic curve in the $H$ and $V_P$ axis (Figure \ref{fig:HVp_ULM}). This conveys the inherent trade-off in resolution between $H$ and $V_P$ and contributes to the low correlation between the two methods. Parity between the ZK and FG methods can be regained by dividing out $V_P$ from $H$. The trade-off between the other parameters is lower, owing to greater dependence between the parameters in the travel time equations (Figures \ref{fig:HR_ULM}-\ref{fig:RVp_ULM}.
 
-
-\subsection{Full Parameter Search Comparisons}
-Comparing the ZK approach with the full parameter search (Table \ref{table:ZKvsFG}) we see that the velocity ratio $R$ has a correlation between the two datasets of 0.76 while $H$ has a correlation of only 0.51. Since $t_{Ps}$ represents the differential travel time between the S and P wave, the dependence of $H$ on $V_P$ is weak. Error in $V_P$ will trade-off with $H$ (Figure \ref{fig:PCA} and can be removed by dividing out $V_P$ from $H$ in both datasets. The $H/V_P$ ratio between the two datasets shows a high correlation of 0.96 as expected.
-
-If the error in $V_P$ is low the trade-off between $V_P$ and $H$ will be kept to a minimum. However, $V_P$ is difficult to resolve and even for clean stations the trade-off is quite large (Figure [slice through Vp space from 3D stack]). Taking the best three stations
+For all but the cleanest stations, the trade-off between $H$ and $V_P$ makes the recoverability of $V_P$ unfeasible using the FG approach. A comparison between two stations, ULM, the station with the highest quality RFs, and DORN, a station exhibiting less resolution in the reflected phases, illustrates this challenge. The horizontally stacked RFs for both stations are ordered by increasing slowness and are shown in figures \ref{fig:RF_ULM} and \ref{fig:RF_DORN}. Cross sections of the three dimensional stack are given for ULM and DORN in figures \ref{fig:HR_ULM}-\ref{fig:HVp_ULM}) and figures \ref{fig:HR_DORN}-\ref{fig:HVp_DORN}. The lower resolution conveyed in the $H$ and $V_P$ cross section for DORN translates into a bootstrap error of $V_P +/- 0.64 km/s$. The station ULM, with cleaner data has a lower absolute trade-off between $H$ and $V_P$ as indicated by the corrisponding cross section and the lower bootstrap error of $V_P +/- 0.16 km/s$.
 
 \begin{table}
   \begin{tabular}{ l l }
@@ -186,6 +168,64 @@ If the error in $V_P$ is low the trade-off between $V_P$ and $H$ will be kept to
 \label{table:ZKvsFG}
 
 \end{table}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{RF_ULM}
+  \caption{}
+  \label{fig:RF_ULM}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackHR_ULM}
+  \caption{}
+  \label{fig:HR_ULM}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackRVp_ULM}
+  \caption{}
+  \label{fig:RVp_ULM}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackHVp_ULM}
+  \caption{}
+  \label{fig:HVp_ULM}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{RF_DORN}
+  \caption{}
+  \label{fig:RF_DORN}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackHR_DORN}
+  \caption{}
+  \label{fig:HR_DORN}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackRVp_DORN}
+  \caption{}
+  \label{fig:RVp_DORN}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stackHVp_DORN}
+  \caption{}
+  \label{fig:HVp_DORN}
+\end{figure}
 
 
 \subsection{Regional Bulk Crustal Parameters}
