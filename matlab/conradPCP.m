@@ -125,7 +125,7 @@ ne = 6;
 scale  = 2;%1%5e2;
 Vs = [];
 for ii = 1:ne
-    Vs(:,ii) = S(ii,ii)^2 * V(:,ii);%/(max(abs(V(:,ii)))) ; %
+    Vs(:,ii) = V(:,ii)/(max(abs(V(:,ii)))) ; %%S(ii,ii)^2 * V(:,ii);
 end
 
 % Flip first component cause its negative
@@ -138,16 +138,16 @@ var = E./sum(E);
 % figure()
 % plot(var(1:10))
 % title('Variance captured by first 10 Principal components')
-
-Xs = sum(S.^2'*V, 2);
-
+Xs = sum(X);
+Xs = Xs/max(abs(Xs));
 
 figure(34)
 plot(Xs, H,'k', 'LineWidth', 3)
 hold on
 %plot(H, sum(Vs'))
 plot(Vs + shift, H, 'LineWidth', 2)%, H, pc(:,2))
-legend(sprintf('PC 1 = %2.1f%%', var(1) *100),...
+legend(sprintf('Average Stack', var(1) *100),...
+sprintf('PC 1 = %2.1f%%', var(1) *100),...
     sprintf('PC 2 = %2.1f%%', var(2) *100),...
     sprintf('PC 3 = %2.1f%%', var(3) *100),...
     sprintf('PC 4 = %2.1f%%', var(4) *100),...
