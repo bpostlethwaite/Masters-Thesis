@@ -112,17 +112,17 @@ end
 %%
 close all
 %X = zscore(X);
-figure()
-imagesc([1:length(s)], H, X')
+%figure()
+%imagesc([1:length(s)], H, X')
 
 [U,S,V] = svd(X);
 E = diag(S*S');
  
 disp(E(1:10) ./ sum(E))
  
-ne = 6;
+ne = 5;
 
-scale  = 2;%1%5e2;
+scale  = 1.5;%1%5e2;
 Vs = [];
 for ii = 1:ne
     Vs(:,ii) = V(:,ii)/(max(abs(V(:,ii)))) ; %%S(ii,ii)^2 * V(:,ii);
@@ -145,16 +145,85 @@ figure(34)
 plot(Xs, H,'k', 'LineWidth', 3)
 hold on
 %plot(H, sum(Vs'))
-plot(Vs + shift, H, 'LineWidth', 2)%, H, pc(:,2))
-legend(sprintf('Average Stack', var(1) *100),...
-sprintf('PC 1 = %2.1f%%', var(1) *100),...
-    sprintf('PC 2 = %2.1f%%', var(2) *100),...
-    sprintf('PC 3 = %2.1f%%', var(3) *100),...
-    sprintf('PC 4 = %2.1f%%', var(4) *100),...
-    sprintf('PC 5 = %2.1f%%', var(5) *100),...
-    'Location', 'Best')
-xlabel('Principal Component Vector')
+plot(Vs + shift, H, 'LineWidth', 2)
+
+axis tight
 ylabel('H [km]')
 set(gca,'YDir','reverse');
+set(gca,'TickLength', [0 0]);
+
+hold on
+% Box 
+lim = xlim;
+H1 = 20;
+H2 = 30;
+p=patch([lim(1) lim(1) lim(2) lim(2)],[H1 H2 H2 H1],'k',...
+     'EdgeColor', 'none','FaceColor',[0.9, 0.9, 0.9],...
+    'FaceAlpha',0.5);
+
+% Vertical Base lines
+line([0,0],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
+for ii = 1:ne
+  line([shift(1,ii),shift(1,ii)],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
+end
+hold off
+
+
+pos = get(gca,'Position');
+set(gca,'Position',[pos(1), .25, pos(3) .65])
+
+
+tickLabels ={ 'Average Stack'};
+for ii = 1:ne
+    tickLabels{ii+1} = sprintf('PC %1.0d = %2.1f%%', ii, var(ii) *100);
+end
+
+% Set xtick points
+Xt = [0, shift(1,:)];
+set(gca,'XTick',Xt);
+
+ax = axis; % Current axis limits
+axis(axis); % Set the axis limit modes (e.g. XLimMode) to manual
+Yl = ax(3:4); % Y-axis limits
+
+% Place the text labels
+t = text(Xt,Yl(2)*ones(1,length(Xt)),tickLabels,'FontSize',14);
+set(t,'HorizontalAlignment','right','VerticalAlignment','top', ...
+'Rotation',45);
+
+% Remove the default labels
+set(gca,'XTickLabel','')
+
+% Get the Extent of each text object. This
+% loop is unavoidable.
+for i = 1:length(t)
+ext(i,:) = get(t(i),'Extent');
+end
+
+% Determine the lowest point. The X-label will be
+% placed so that the top is aligned with this point.
+LowYPoint = min(ext(:,2));
+
+% Place the axis label at this point
+% XMidPoint = lim(1)+abs(diff(lim))/2;
+% tl = text(XMidPoint,LowYPoint,'', ...
+% 'VerticalAlignment','top', ...
+% 'HorizontalAlignment','center');
+
+
+
+
+
+
+% legend('Average Stack',...
+% sprintf('PC 1 = %2.1f%%', var(1) *100),...
+%     sprintf('PC 2 = %2.1f%%', var(2) *100),...
+%     sprintf('PC 3 = %2.1f%%', var(3) *100),...
+%     sprintf('PC 4 = %2.1f%%', var(4) *100),...
+%     sprintf('PC 5 = %2.1f%%', var(5) *100),...
+%     'Homogenous zone',...
+%     'Depth profile zero line',...
+%     'Location', 'BestOutside')
+
 hold off
  

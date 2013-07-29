@@ -94,7 +94,7 @@ t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2}
 
 where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
-The travel time equations, as employed by ZK, assume a value for crustal P-wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corrisponding to the Crust 2.0 value for the $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
+The travel time equations, as employed by ZK, assume a value for crustal P-wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corresponding to the Crust 2.0 value for the $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
 RFs are stacked along trial moveout curves for a range of candidate models of $R$ and $H$ to generate a fitness function $s(H,R)$.  Within the stacking procedure, each phase is assigned a weight to account for a general trend in the quality of the phases, with direct conversion $Ps$ usually characterized by the highest quality signal followed by $PpPs$ and $PpSs$. We chose weights of $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases, respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
@@ -152,7 +152,7 @@ All three studies provide $H$ estimates that correlate strongly with the compute
 \subsection{Full Parameter Search Analysis}
 Comparing the ZK approach with the full parameter search (Table \ref{table:ZKvsFG}) we see that the velocity ratio $R$ has a correlation between the two datasets of 0.76 while $H$ has a correlation of 0.51. The low correlation between crustal thickness estimates can be explained by the weak dependence of $H$ on $V_P$ resulting from $t_{Ps}$. This means that for a given uncertainty in the three dimensional stack $s(H,R,V_P)$, the gradient in the stack-space will be lowest along the kinematic curve in the $H$ and $V_P$ axis (Figure \ref{fig:HVp_ULM}). This conveys the inherent trade-off in resolution between $H$ and $V_P$ and contributes to the low correlation between the two methods. Parity between the ZK and FG methods can be regained by dividing out $V_P$ from $H$. The trade-off between the other parameters is lower as there is greater dependence between the parameters in the travel time equations (Figures \ref{fig:HR_ULM}-\ref{fig:RVp_ULM}.
 
-For all but the cleanest stations, the trade-off between $H$ and $V_P$ makes the recoverability of $V_P$ unfeasible using the FG approach. A comparison between two stations, ULM, the station with the highest quality RFs, and DORN, a station exhibiting less resolution in the reflected phases, illustrates this challenge. The horizontally stacked RFs for both stations are ordered by increasing slowness and are shown in figures \ref{fig:RF_ULM} and \ref{fig:RF_DORN}. Cross sections of the three dimensional stack are given for ULM and DORN in figures \ref{fig:HR_ULM}-\ref{fig:HVp_ULM}) and figures \ref{fig:HR_DORN}-\ref{fig:HVp_DORN}. The lower resolution conveyed in the $H$ and $V_P$ cross section for DORN translates into a bootstrap error of $V_P +/- 0.64 km/s$. The station ULM, with cleaner data has a lower absolute trade-off between $H$ and $V_P$ as indicated by the corrisponding cross section and the lower bootstrap error of $V_P +/- 0.16 km/s$.
+For all but the cleanest stations, the trade-off between $H$ and $V_P$ makes the recoverability of $V_P$ unfeasible using the FG approach. A comparison between two stations, ULM, the station with the highest quality RFs, and DORN, a station exhibiting less resolution in the reflected phases, illustrates this challenge. The horizontally stacked RFs for both stations are ordered by increasing slowness and are shown in figures \ref{fig:RF_ULM} and \ref{fig:RF_DORN}. Cross sections of the three dimensional stack are given for ULM and DORN in figures \ref{fig:HR_ULM}-\ref{fig:HVp_ULM}) and figures \ref{fig:HR_DORN}-\ref{fig:HVp_DORN}. The lower resolution conveyed in the $H$ and $V_P$ cross section for DORN translates into a bootstrap error of $V_P +/- 0.64 km/s$. The station ULM, with cleaner data has a lower absolute trade-off between $H$ and $V_P$ as indicated by the corresponding cross section and the lower bootstrap error of $V_P +/- 0.16 km/s$.
 
 \begin{table}
   \begin{tabular}{ l l }
@@ -255,20 +255,29 @@ Moving South and East from the Churchill through the Superior and the Grenville 
 
 \subsection{Crustal Discontinuities}
 
-
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{VpVsMap}
-  \caption{}
-  \label{fig:VpVsMap}
+  \includegraphics[width=\textwidth]{conradPCA}
+  \caption{The average of all station depth profiles (black) and the SVD singular vectors of the station depth profile matrix. Each vector represents a mode that captures some part of the total variance in the dataset. Vertical lines are the axis each profile and vector is normalized about. A grey horizontal window highlights a region of low energy.}
+  \label{fig:conradPCA}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{VpVsMapCrust}
-  \caption{}
-  \label{fig:VpVsMapCrust}
-\end{figure}
+
+Another feature of interest is the average crustal structure across Canada. We perform a stack along $H$ using the best estimate for $R$ computed via the ZK + semblance method given above. This depth profile contains energy at depths corresponding to velocity discontinuities. Accumulating all station depth profiles into a matrix we then decompose the data via SVD into its major modes. Figure \ref{fig:conradPCA} contains the average depth profile for all stations and the first five major singular vectors or modes accounting for 78\% of the variance in the data. Additional modes have not been included as mode six contains energy at similar depths to modes two and three while modes seven and above appear noisy and represent variances in the dataset that do not account for significant variance or structure in the dataset. Each vector is normalized to its maximum for clarity and centred on an axis given as vertical grey lines. The first profile (black) is the average of all stations depth stacks. The second mode capturing 50\% of the variance in the dataset represent the mean and as expected appears similar to the average depth stack. The second and third modes are dominated by a shallow discontinuity and a deeper discontinuity associated with sedimentary layers and the Moho respectively. The fourth and fifth modes, accounting for a combined 11\% of the variance in the dataset, contain energy at upper-mid crustal depths in the 10km to 20km range. All modes display lower energy within a window roughly stretching from 20km depth to 30km.
+
+ %% \begin{figure}
+%%   \centering
+%%   \includegraphics[width=\textwidth]{VpVsMap}
+%%   \caption{}
+%%   \label{fig:VpVsMap}
+%% \end{figure}
+
+%% \begin{figure}
+%%   \centering
+%%   \includegraphics[width=\textwidth]{VpVsMapCrust}
+%%   \caption{}
+%%   \label{fig:VpVsMapCrust}
+%% \end{figure}
 
 
 %% -----------------------------------------------%%
