@@ -10,20 +10,12 @@
 ###########################################################################
 
 import re, sys
+import numpy as np
 
 
 if __name__== '__main__' :
 
-    numbers = re.findall(r'\d+', sys.stdin.read() )
-    numbers = map(int, numbers)
+    numbers = re.findall(r'\d+.\d+', sys.stdin.read() )
+    numbers = map(float, numbers)
 
-    sortn = [numbers.pop()]
-    while numbers:
-        hit = False
-        n = numbers.pop()
-        for i, ns in enumerate(sortn):
-            if n < ns:
-                sortn.insert(ind, n)
-                hit = True
-        if not hit:
-            sortn.append(n)
+    print np.mean(numbers)

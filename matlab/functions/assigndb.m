@@ -54,7 +54,19 @@ elseif strcmp(method, 'kanamori')
     db.hk.stdsmax = std(boot.RHx);
     db.hk.stdR = std(boot.R);
     db.hk.stdH = std(boot.H);
-
+    
+elseif strcmp(method, 'fullgrid')
+    db.fg.rbest = results.r;
+    db.fg.vbest = results.v;
+    db.fg.hbest = results.h;
+    if (boot)
+        db.fg.stdVp = std(boot.Vp);
+        db.fg.stdR = std(boot.R);
+        db.fg.stdH = std(boot.H);
+        db.fg.stdS = std(boot.SMax);
+    end
+    
+    
 else
      ME = MException('ProcessMethodNotFound', ...
              'Must be "bostock" or "kanamori."');

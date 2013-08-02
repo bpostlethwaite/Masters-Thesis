@@ -122,14 +122,12 @@ disp(E(1:10) ./ sum(E))
  
 ne = 5;
 
-scale  = 1.5;%1%5e2;
-Vs = [];
-for ii = 1:ne
-    Vs(:,ii) = V(:,ii)/(max(abs(V(:,ii)))) ; %%S(ii,ii)^2 * V(:,ii);
-end
 
 % Flip first component cause its negative
-Vs(:,1) = Vs(:,1) * -1;
+Vs = V(:, 1:ne);
+vmax = max(max(abs(Vs)));
+
+scale  = vmax + 0.2*vmax;
 
 shift = kron([1:ne]*scale, ones(length(X), 1));
 
@@ -142,8 +140,8 @@ Xs = sum(X);
 Xs = Xs/max(abs(Xs));
 
 figure(34)
-plot(Xs, H,'k', 'LineWidth', 3)
-hold on
+%plot(Xs, H,'k', 'LineWidth', 3)
+%hold on
 %plot(H, sum(Vs'))
 plot(Vs + shift, H, 'LineWidth', 2)
 
@@ -162,7 +160,7 @@ p=patch([lim(1) lim(1) lim(2) lim(2)],[H1 H2 H2 H1],'k',...
     'FaceAlpha',0.5);
 
 % Vertical Base lines
-line([0,0],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
+%line([0,0],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
 for ii = 1:ne
   line([shift(1,ii),shift(1,ii)],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
 end
@@ -170,16 +168,15 @@ hold off
 
 
 pos = get(gca,'Position');
-set(gca,'Position',[pos(1), .25, pos(3) .65])
+set(gca,'Position',[pos(1), .15, pos(3) .75])
 
-
-tickLabels ={ 'Average Stack'};
+clear tickLabels
 for ii = 1:ne
-    tickLabels{ii+1} = sprintf('PC %1.0d = %2.1f%%', ii, var(ii) *100);
+    tickLabels{ii} = sprintf('PC %1.0d \n %2.1f%%', ii, var(ii) *100);
 end
 
 % Set xtick points
-Xt = [0, shift(1,:)];
+Xt = shift(1,:) + 0.2*vmax;
 set(gca,'XTick',Xt);
 
 ax = axis; % Current axis limits
@@ -188,42 +185,7 @@ Yl = ax(3:4); % Y-axis limits
 
 % Place the text labels
 t = text(Xt,Yl(2)*ones(1,length(Xt)),tickLabels,'FontSize',14);
-set(t,'HorizontalAlignment','right','VerticalAlignment','top', ...
-'Rotation',45);
+set(t,'HorizontalAlignment','right','VerticalAlignment','top');% ...
 
 % Remove the default labels
 set(gca,'XTickLabel','')
-
-% Get the Extent of each text object. This
-% loop is unavoidable.
-for i = 1:length(t)
-ext(i,:) = get(t(i),'Extent');
-end
-
-% Determine the lowest point. The X-label will be
-% placed so that the top is aligned with this point.
-LowYPoint = min(ext(:,2));
-
-% Place the axis label at this point
-% XMidPoint = lim(1)+abs(diff(lim))/2;
-% tl = text(XMidPoint,LowYPoint,'', ...
-% 'VerticalAlignment','top', ...
-% 'HorizontalAlignment','center');
-
-
-
-
-
-
-% legend('Average Stack',...
-% sprintf('PC 1 = %2.1f%%', var(1) *100),...
-%     sprintf('PC 2 = %2.1f%%', var(2) *100),...
-%     sprintf('PC 3 = %2.1f%%', var(3) *100),...
-%     sprintf('PC 4 = %2.1f%%', var(4) *100),...
-%     sprintf('PC 5 = %2.1f%%', var(5) *100),...
-%     'Homogenous zone',...
-%     'Depth profile zero line',...
-%     'Location', 'BestOutside')
-
-hold off
- 

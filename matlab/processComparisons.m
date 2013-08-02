@@ -4,9 +4,9 @@ clear all; close all
 loadtools;
 addpath([userdir,'/thesis/matlab/functions']);
 addpath([userdir,'/programming/matlab/jsonlab']);
-databasedir = '/media/TerraS/database';
+databasedir = '/media/bpostlet/TerraS/database';
 
-author = 'eaton';
+author = 'thompson';
 
 json = loadjson([userdir,'/thesis/data/',author,'Paper.json']);
 s = loadjson([userdir,'/thesis/data/', author, 'Processed.json']);
@@ -32,11 +32,18 @@ for stn = stns'
     end
     
     method = 'kanamori';
-    [ results ] = gridsearchKan(db.rec, db.dt, db.pslow, vp);
+    if strcmp('thompson', author)
+        
+        [ results ] = gridsearchKan_linear(db.rec, db.dt, db.pslow, vp);
+        [ boot ] = bootstrap_linear(db.rec, db.dt, db.pslow, 1048, method, [], vp);    
+        
+    else
+        
+        [ results ] = gridsearchKan(db.rec, db.dt, db.pslow, vp);
+        [ boot ] = bootstrap(db.rec, db.dt, db.pslow, 1048, method, [], vp);    
 
-    % Run Bootstrap
-    [ boot ] = bootstrap(db.rec, db.dt, db.pslow, 1048, method, [], vp);    
-
+    end
+    
     fprintf('--- %s -----\n', station)
     fprintf('R = %f\n', results.rbest)
     fprintf('H = %f\n', results.hbest)

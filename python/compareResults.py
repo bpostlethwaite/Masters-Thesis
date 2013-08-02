@@ -56,10 +56,9 @@ def meanDifference(x, y):
     n = len(x)
     md = 0
     for i in range(n):
-        for j in range(n):
-            md += abs(x[i] - y[j])
+        md += abs(x[i] - y[i])
 
-    return md/(n**2)
+    return md/(n)
 
 
 for i in range(0,3):
@@ -94,11 +93,6 @@ for i in range(0,3):
     Rcorr = pearsonr(R1, R2)
 
     Hcorr = pearsonr(H1, H2)
-
-    ttR  = ttest(R1, R2)
-    ttH  = ttest(H1, H2)
-    print ttR
-    print ttH
 
     print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
     print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"

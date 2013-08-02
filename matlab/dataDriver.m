@@ -19,9 +19,9 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'kanamori';
-station = 'KGNO'; %
-% KGNO
+method = 'fullgrid';
+station = 'ARVN'; %
+
 %{
 
 %}
@@ -84,13 +84,25 @@ if strcmp(method, 'kanamori')
     end
 end
 
+if strcmp(method, 'fullgrid')
+    fprintf('Vp is %f +/- %1.3f \n',db.fg.vbest, db.fg.stdVp )
+    fprintf('R is %f +/- %1.3f \n',db.fg.rbest, db.fg.stdR )
+    fprintf('H is %f +/- %1.3f \n',db.fg.hbest, db.fg.stdH )
+    if exist('dbold','var')
+        if isfield(dbold,'fg')
+            fprintf('Old FG Vp is %f +/- %1.3f \n',dbold.fg.vbest, dbold.fg.stdVp )
+            fprintf('Old FG R is %f +/- %1.3f \n',dbold.fg.rbest, dbold.fg.stdR )
+            fprintf('Old FG H is %f +/- %1.3f \n',dbold.fg.hbest, dbold.fg.stdH )
+        end
+        if isfield(dbold,'hk')
+            fprintf('Old hk R is %f +/- %1.3f \n',dbold.hk.rbest, dbold.hk.stdR )
+            fprintf('Old hk H is %f +/- %1.3f \n',dbold.hk.hbest, dbold.hk.stdH )
+        end
+    end
+end
+
 %% Enter Finishing commands:
-%notes = input('Enter Processing Notes: ', 's');
-%db.processnotes = notes;
-% Enter use / ignore flag
-%db.usable = input('Enter 1 to set as usable or 0 to set as unusable: ');
-%db.usable = 1;
-% Save entrydbold.mb.
+
 saveit = input('Save data to .mat file? (y|n): ','s');
 switch lower(saveit)
     case 'y'

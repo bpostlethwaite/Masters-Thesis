@@ -4,11 +4,10 @@
 %% Main Control
 npb = 2; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
-%pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
-pscale = @(pslow) 1;
+pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 3.0; % Upper frequency cutoff
-snrlim = 0;
+fHigh = 2.7; % Upper frequency cutoff
+snrlim = .99;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results
@@ -22,12 +21,10 @@ printinfo = 1; % On and off flag to print out processing results
 [ptrace, strace, header, pslows, ~] = ...
     ConvertFilterTraces(dlist, pfile, sfile,...
     picktol, printinfo, splitAzimuth, cluster);
-%fclose('all'); % Close all open files from reading
 %clear picktol printinfo dlist splitAzimuth cluster
 %% 3) Bin by p value (build pIndex)
 %
 numbin = round((1/npb) * size(ptrace, 1));
-%numbin = 40;
 pbinLimits = linspace(min(pslows) - 0.001, max(pslows) + 0.001, numbin);
 checkind = 1;
 [pIndex, pbin] = pbinIndexer(pbinLimits, pslows, checkind);
@@ -37,18 +34,16 @@ nbins = length(Pslow); % Number of bins we now have.
 clear numbin pbinLimits checkind
 %% 4) Normalize
 dt = header{1}.DELTA;
-ptrace = (diag(1./max( abs(ptrace), [], 2)) ) * ptrace;
-strace = (diag(1./max( abs(strace), [], 2)) ) * strace;
+w = max( abs(ptrace), [], 2);
+[~, wx] = sort(w, 'descend');
+ptrace = diag(1./w) * ptrace;
+strace = diag(1./w ) * strace;
 
-%printwdiag = false;
-%wdiag = 4 * normtrace( ptrace, strace, header, dt , printwdiag);
-%ptrace = wdiag * ptrace;
-%strace = wdiag * strace;
-clear printwdiag wdiag
+
 %% Setup parallel toolbox
 if ~matlabpool('size')
     workers = 4;
-    matlabpool('test1');%, workers)
+    matlabpool('test1', workers)
 end
 %% 5)  Window with Taper and fourier transform signal.
 adj = 0.1; % This adjusts the Tukey window used.
@@ -61,13 +56,12 @@ clear adj
 % p and put them into bins, all need to be length n
 % Now fft windowed traces
 Rec = zeros(nbins,size(wft,2));
-tic
+
 parfor ii = 1:nbins
     [r,~,betax(ii)] = simdecf(wft(pIndex(:,ii),:), vft(pIndex(:,ii),:), -1); %#ok<PFBNS>
     Rec(ii,:) = real(ifft(r));
 end
-toc
-return
+
 % if discardBad flag set simdecf will return Nan arrays where it did not
 % find a minimum, the following strips NaNs out and strips out appropriate
 % Pslow indices.
@@ -83,6 +77,7 @@ if discardBad
     rec( ind  , : ) = [];
     pslow( ind ) = [];
 end
+
 
 %% 6) Filter Impulse Response
 numPoles = 2;
@@ -113,7 +108,6 @@ vp = json.(station).wm.Vp;
 % from stations.json database
 %[brec, pslow, Tps, t1, t2] = nlregression(brec, pslow, dt); 
 
-
 TTps = [];
 if strcmp(method, 'bostock')
     [results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);   
@@ -122,8 +116,20 @@ if strcmp(method, 'bostock')
 
 elseif strcmp(method, 'kanamori')      
     [ results ] = gridsearchKan(brec(:, 1:round(45/dt)), dt, pslow, vp);
+    [ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024, method, TTps', vp);        
     
+elseif strcmp(method, 'fullgrid')      
+    [ v, r, h, smaxss] = gridsearch3DC(brec(:, 1:round(45/dt))', dt, pslow, 150);
+    %[Vp, R, H, SMax] = bootstrap3D(brec(:, 1:round(45/dt)), dt, pslow, 150, 400);   
+    results.r = r;
+    results.v = v;
+    results.h = h;
+    %boot.Vp = Vp;
+    %boot.R = R;
+    %boot.H = H;
+    %boot.SMax = SMax;
+    boot = 0;
 end
 
 % Run Bootstrap
-[ boot ] = bootstrap(brec(:, 1:round(45/dt)), dt, pslow, 1024, method, TTps', vp);    
+

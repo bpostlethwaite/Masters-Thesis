@@ -1,4 +1,4 @@
-function [Vp, R, H] = bootstrap3D(rec, dt, pslow, lim3D, nmax)
+function [Vp, R, H, Smax] = bootstrap3D(rec, dt, pslow, lim3D, nmax)
 % Bootstap error calculation for grid search confidence.
 % [Vp, R, H, VpRmax, Hmax] = bootstrap(rec, Tps, dt, pslow, nmax)
 % Outputs are arrays of best estimates of Vp, R and H along with the
