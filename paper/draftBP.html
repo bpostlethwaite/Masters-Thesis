@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html --> 
 <meta name="src" content="draftBP.tex"> 
-<meta name="date" content="2013-07-10 14:37:00"> 
+<meta name="date" content="2013-08-06 15:26:00"> 
 <link rel="stylesheet" type="text/css" href="draftBP.css"> 
 </head><body 
 >
@@ -22,103 +22,90 @@ class="cmbx-10x-x-109">Abstract</span></div>
 </div>
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
  id="x1-10001"></a>Introduction</h3>
-<!--l. 24--><p class="noindent" >Seismic studies of the Canadian continental crust predominately analyze specific
-geological features or regions rather than taking a comprehensive and
-comparative inter-regional analysis. The primary reason for this is the poor
-resolution afforded by the seismic networks currently and historically deployed
-across Canada. The Canadian continental landmass is composed of at
-least fifteen large geological provinces as recognized by the Geological
-Survey of Canada (GSC). Each of these regions is itself complex and
-heterogeneous and often larger than most European nations. On top of this
-there is poor seismic coverage, roughly one seismic station per 25,000
-<span 
-class="cmmi-12">km</span><sup><span 
-class="cmr-8">2</span></sup>. Many of these stations are clustered near areas of geologic interest
-such as the Cascadia Subduction zone or population and research centres
-such as Southern Ontario or areas of significant resource interest like
-the diamondiferous Great Slave Lake area. This leaves vast areas of the
-Canadian landmass completely unsampled. Despite these limitations, a low
-resolution comprehensive and comparative study is still feasible for some of
-the geological regions comprising the Canadian continental crust. Direct
-comparison between the bulk average seismic properties of geological
-regions and between aggregated regions and global averages provide some
-new insight into the crustal composition of the Canadian landmass. The
-accumulated dataset also affords investigations into variations of bulk crustal
-parameters such as Poisson&#8217;s Ratio and crustal thickness with age and tectonic
-environment as well as some basic statistical data on interesting crustal
-features.
-                                                                          
-
-                                                                          
-<!--l. 26--><p class="indent" >   This paper presents a comparative tour through the dataset accumulated from
-processing more than a decade worth of data from all available Canadian seismic
-stations. It begins with a discussion of the raw data itself followed by a review
-of the receiver function method and a more detailed explanation of the
-inversion algorithms used to produce the dataset. Three previous publications
-utilizing similar processing schemes provide unique subsets of data to
-compare with the values computed in this survey for quality assurance.
-...
 <!--l. 29--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">1.1   </span> <a 
  id="x1-20001.1"></a>Geological and tectonic summary</h4>
-<!--l. 32--><p class="noindent" >
+      <ul class="itemize1">
+      <li class="itemize">Large scale overview/summary of regions under study
+      </li>
+      <li class="itemize">Justification for selecting these regions?
+      </li></ul>
+<!--l. 37--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">1.2   </span> <a 
  id="x1-30001.2"></a>Previous geophysical studies</h4>
-<!--l. 35--><p class="noindent" >
-   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-40002"></a>Data and methods</h3>
-<!--l. 36--><p class="noindent" >Our analysis of bulk Canadian continental crust is based on estimates of crustal
-properties that can be accessed via seismic techniques, namely seismic wave
-velocities (or velocity ratio) and crustal thickness. This study draws on three
-sources for these crustal properties. The first and primary source are teleseismic
-receiver functions (hereafter RFs). The remaining two datasets are Crust 2.0, a
-widely published statistical average of similar regions with a global two degree
-resolution and a compilation of pre-processed active source data (Mooney, 2012).
-Both Crust 2.0 and the active source compilation are used to qualify and compare
-with the primary dataset.
-<!--l. 38--><p class="noindent" >
-   <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
- id="x1-50002.1"></a>Teleseismic Data Set</h4>
-<!--l. 39--><p class="noindent" >The primary data utilized in this study are computed from teleseismic
-P-wave seismograms originating from more than 700 earthquake sources.
-These earthquakes occurred between the years 2000 and 2012 at and
+      <ul class="itemize1">
+      <li class="itemize">Lithoprobe and attendent papers
+      </li>
+      <li class="itemize">Teleseismic studies
+      </li></ul>
                                                                           
 
                                                                           
-were recorded on subsets of 343 broadband seismic stations distributed
-across Canada. Seismic stations are selected from all available regional
-and national networks including CNSN, Polaris, FedNor and Chasme.
-Seismograms are included for analysis if they within a 30 to 100<sup><span 
-class="cmsy-8">&#x2218;</span></sup> epicentral
-distance window. Quality control is performed by admitting only those
-seismograms with high enough signal to noise ratios to permit visual
-observation of the dominant P-wave energy and with sufficient impulsive
-first arrivals that allow arrival times to be accurately measured. After
+<!--l. 45--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-40002"></a>Data and methods</h3>
+<!--l. 46--><p class="noindent" >Our analysis of bulk Canadian continental crust is based on estimates of crustal
+properties that can be accessed via seismic techniques, namely seismic wave
+velocities (or velocity ratio) and crustal thickness. This study draws on three
+sources for these crustal properties. The first and primary source is teleseismic
+receiver function (hereafter RF) analysis. The remaining two datasets are Crust
+2.0, a widely published statistical average of similar regions with a global two
+degree resolution, and a compilation of pre-processed active source data (Mooney,
+2012). Both Crust 2.0 and the active source compilation are used to qualify and
+compare with the primary dataset.
+<!--l. 48--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
+ id="x1-50002.1"></a>Teleseismic Data Set</h4>
+<!--l. 49--><p class="noindent" >The primary data utilized in this study are computed from teleseismic <span 
+class="cmti-12">P </span>wave
+seismograms originating from more than 700 earthquake sources. These
+earthquakes occurred between 2000 and 2012 and were recorded on subsets of 343
+broadband seismic stations distributed across Canada. Seismic stations are
+selected from all available regional and national networks including CNSN,
+POLARIS, FedNor and Chasme. Seismograms are included for analysis if they fall
+within a 30 to 100<sup><span 
+class="cmsy-8">&#x2218;</span></sup> epicentral distance window. Quality control is performed by
+admitting only those seismograms with sufficiently high signal to noise ratios to
+permit visual observation of the dominant <span 
+class="cmti-12">P </span>wave energy and with sufficiently
+impulsive first arrivals to allow arrival onsets to be accurately measured. After
 selection and filtering more than 80,000 events are available for further
 processing.
-<!--l. 41--><p class="indent" >   The first stage of processing requires the transformation of teleseismic data
+<!--l. 51--><p class="indent" >   The first stage of processing requires the transformation of teleseismic data
 into receiver functions. In general terms, this transformation involves
 deconvolving an approximation of the earthquake source from horizontal
 recordings of ground motion [Langston, 1979]. The resulting waveforms
-contain discrete pulses corresponding to the S-wave arrivals scattered
-from subsurface discontinuities including the base of the crust, or Moho.
-Confident identification of these peaks to the estimate of crustal parameters,
-and improved results can be obtained by transforming the seismogram
-channels into P and S contributions based on a 1-D model of propagation.
+contain discrete pulses corresponding to <span 
+class="cmti-12">S </span>waves scattered from subsurface
+discontinuities including the base of the crust, or Moho. Confident identification of
+these peaks is required to estimate crustal parameters, and improved
+results can be obtained by transforming the displacement seismogram
+into their <span 
+class="cmti-12">P </span>and <span 
+class="cmti-12">S </span>contributions based on a 1-D model of propagation.
 This procedure is accomplished by first rotating the N and E coordinates
+                                                                          
+
+                                                                          
 into radial and transverse directions and then performing a wave field
-decomposition using the radial and vertical channels [Bostock, 1998]. The direct
-arrival of the signal on the resulting P wave component is used as an
-approximation to the source function as P-wave impulse response for
+decomposition using the radial and vertical channels [Kennet, 1991]. The direct <span 
+class="cmti-12">P</span>
+arrival of the signal on the resulting <span 
+class="cmti-12">P </span>wave component is used as an
+approximation to the source function as <span 
+class="cmti-12">P </span>component impulse response for
 teleseismic P approximates a delta function. This windowed source estimate is
-deconvolved from the S wave component computed from the wave field
+deconvolved from the <span 
+class="cmti-12">S </span>wave component computed from the wave field
 decomposition.
-<!--l. 43--><p class="indent" >   We employ <span 
+<!--l. 53--><p class="indent" >   We employ an <span 
 class="cmmi-12">L</span><sub><span 
 class="cmr-8">2</span></sub>, multichannel, frequency domain approach to perform the
-deconvolution which has the advantage of computational efficiency and does not
-require a priori assumptions about the noise in the data. More specifically,
-we employ a simultaneous deconvolution of <span 
+<span 
+class="cmti-12">deconvolution </span>that has the advantage of computational efficiency and does not
+require <span 
+class="cmti-12">a priori </span>assumptions concerning the noise levels in the data. More
+specifically, we employ a simultaneous deconvolution of <span 
 class="cmmi-12">N </span>seismograms sharing a
 similar slowness to compute a single impulse response or receiver function
 <span 
@@ -126,73 +113,73 @@ class="cmmi-12">r</span>(<span
 class="cmmi-12">t</span>).
    <table 
 class="equation"><tr><td>
-                                                                          
-
-                                                                          
    <center class="math-display" >
 <img 
-src="draftBP0x.png" alt="                         [  &sum;N          &lowast;     ]
-        &minus; 1           &minus;   ----n-Sn-(&omega;-)Pn(&omega;-)--
-r(t) = F   [G(&omega; )] = F 1  &sum;N  Pn (&omega;)P &lowast;(&omega; ) + &delta; ,
-                            n        n
+src="draftBP0x.png" alt="                         [  &sum;                 ]
+         &minus;1           &minus; 1 ----Nn-Sn-(&omega;-)P&lowast;n(&omega;-)--
+r(t) = F   [G (&omega; )] = F    &sum;N  P  (&omega; )P &lowast;(&omega; ) + &delta; ,
+                            n   n    n
 " class="math-display" ><a 
  id="x1-5001r1"></a></center></td><td class="equation-label">(1)</td></tr></table>
-<!--l. 49--><p class="nopar" >
-<!--l. 51--><p class="indent" >   where <span 
-class="cmmi-12">F</span><sup><span 
+<!--l. 59--><p class="nopar" >
+<!--l. 61--><p class="noindent" >where <span 
+class="cmsy-10x-x-120"><img 
+src="cmsy10-c-46.png" alt="F" class="10-120x-x-46" /></span><sup><span 
 class="cmsy-8">&minus;</span><span 
 class="cmr-8">1</span></sup> is the inverse Fourier transform, <span 
 class="cmmi-12">S</span><sub>
 <span 
 class="cmmi-8">n</span></sub> represents the <span 
 class="cmmi-12">n</span><sup><span 
-class="cmmi-8">th</span></sup> S wave
-component, <span 
+class="cmmi-8">th</span></sup> <span 
+class="cmti-12">S </span>wave
+seismogram, <span 
 class="cmmi-12">P</span><sub><span 
-class="cmmi-8">n</span></sub> is the windowed P wave component, <sup><span 
-class="cmsy-8">&lowast;</span></sup> denotes the complex
-conjugate and <span 
-class="cmmi-12">&delta; </span>is the regularization parameter controlling the trade off between
-model smoothness and data misfit. The parameter <span 
-class="cmmi-12">&delta; </span>is chosen programatically by
-minimizing the general cross validation function <span 
+class="cmmi-8">n</span></sub> is the corresponding windowed <span 
+class="cmti-12">P </span>wave seismogram, <sup><span 
+class="cmsy-8">&lowast;</span></sup> denotes
+complex conjugation and <span 
+class="cmmi-12">&delta; </span>is the regularization parameter controlling the trade
+off between model smoothness and data misfit. The parameter <span 
+class="cmmi-12">&delta; </span>which is chosen
+programatically by minimizing the general cross validation function <span 
 class="cmmi-12">GCV </span>(<span 
-class="cmmi-12">&delta;</span>) which is given
-by
+class="cmmi-12">&delta;</span>) is
+given by
    <table 
 class="equation"><tr><td>
+                                                                          
+
+                                                                          
    <center class="math-display" >
 <img 
-src="draftBP1x.png" alt="           &sum;N  &sum;M  (Sn (&omega;m ) &minus; Pn (&omega;m )G (&omega;m ))2
-GCV  (&delta;) = --n---m(-------&sum;----------)2-------,
-                   N M  &minus;   Mm X (&omega;m )
+src="draftBP1x.png" alt="           &sum;N  &sum;M                            2
+GCV  (&delta;) = --n---m((Sn-(&omega;m-)-&minus;-Pn-(&omega;m-)G)-(&omega;m-))-,
+                   N M  &minus; &sum;M  X (&omega;m ) 2
+                            m
 " class="math-display" ><a 
  id="x1-5002r2"></a></center></td><td class="equation-label">(2)</td></tr></table>
-<!--l. 56--><p class="nopar" >
-<!--l. 58--><p class="indent" >   where
+<!--l. 66--><p class="nopar" >
+<!--l. 68--><p class="noindent" >where
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP2x.png" alt="          &sum;N  P  (&omega; )P&lowast;(&omega; )
-X (&omega;) = &sum;N--n--n-----n------,
-          n Pn (&omega; )Pn&lowast;(&omega; ) + &delta;
+src="draftBP2x.png" alt="            &sum;N  P  (&omega;  )P &lowast;(&omega;  )
+X  (&omega;m ) = &sum;N--n---n--m-&lowast;-n--m----,
+            n Pn (&omega;m )Pn(&omega;m ) + &delta;
 " class="math-display" ><a 
  id="x1-5003r3"></a></center></td><td class="equation-label">(3)</td></tr></table>
-<!--l. 62--><p class="nopar" >
-<!--l. 64--><p class="indent" >   and <span 
-class="cmmi-12">&omega;</span><sub><span 
-class="cmmi-8">m</span></sub> is the <span 
-class="cmmi-12">m</span><sup><span 
-class="cmmi-8">th</span></sup> frequency bin in the discrete Fourier transform.
-<!--l. 66--><p class="indent" >   All resulting receiver functions, <span 
+<!--l. 72--><p class="nopar" >
+<!--l. 74--><p class="noindent" >and <span 
+class="cmmi-12">&omega; </span>is the frequency bin in the discrete Fourier transform. All resulting receiver
+functions, <span 
 class="cmmi-12">r</span>(<span 
-class="cmmi-12">t</span>), are filtered between 0.04Hz and
-3.0Hz.
-<!--l. 68--><p class="noindent" >
+class="cmmi-12">t</span>), are filtered between 0.04Hz and 3.0Hz.
+<!--l. 76--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">2.2   </span> <a 
  id="x1-60002.2"></a>Vp/Vs method</h4>
-<!--l. 70--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 78--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                           
 
@@ -203,7 +190,7 @@ class="cmmi-12">t</span>), are filtered between 0.04Hz and
 
                                                                           
 
-<!--l. 72--><p class="noindent" ><img 
+<!--l. 80--><p class="noindent" ><img 
 src="figures/reflectedPhases.png" alt="PIC"  
 >
 <br /> <div class="caption" 
@@ -213,146 +200,110 @@ contrast representing the Moho</span></div><!--tex4ht:label?: x1-60011 -->
                                                                           
 
                                                                           
-<!--l. 75--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 78--><p class="indent" >   A well tested and widely published method for extracting the <span 
-class="cmmi-12">frac</span><span 
+<!--l. 83--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 86--><p class="indent" >   A well tested and widely published method for extracting the ratio of <span 
+class="cmti-12">P</span>
+velocity <span 
 class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub><span 
+class="cmmi-8">P</span> </sub> to <span 
+class="cmti-12">S </span>velocity <span 
 class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">S</span></sub> ratio
-<span 
-class="cmmi-12">R </span>(where <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> is P wave velocity and <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">S</span></sub> is S-wave velocity) and crustal
-thickness (or depth to Moho) <span 
-class="cmmi-12">H</span>, is outlined by Zhu and Kanamori [2000],
-hereafter ZK. This method takes advantage of the differential arrival times
-between the S-wave reflected phases <span 
+class="cmmi-8">S</span></sub>, herafter referred to as <span 
+class="cmmi-12">R</span>, and crustal thickness (or
+depth to Moho) <span 
+class="cmmi-12">H</span>, is outlined by Zhu and Kanamori [2000], hereafter ZK. This
+method exploits the dependence of these parameters to the differential arrival
+times between the <span 
+class="cmti-12">S </span>wave reflected phases <span 
 class="cmmi-12">Ps</span>, <span 
-class="cmmi-12">PpPs PsPs</span>, <span 
+class="cmmi-12">PpPs</span>, <span 
+class="cmmi-12">PsPs</span>, <span 
 class="cmmi-12">PpSs </span>and <span 
 class="cmmi-12">PsSs</span>
-and the direct P-wave arrival <span 
+and the direct <span 
+class="cmti-12">P </span>wave arrival <span 
 class="cmmi-12">Pp </span>(Fig <a 
 href="#x1-60011">1<!--tex4ht:ref: fig:reflectedPhases --></a>). Note that <span 
 class="cmmi-12">PsPs </span>and <span 
 class="cmmi-12">PpSs </span>are
 kinematic analogues, such that the energy for these two phases arrive
-simultaneously for a 1-D model <span 
-class="cmti-12">COMMENT: note that the first phase is 2nd order</span>
-<span 
-class="cmti-12">whereas the 2nd is first order in scattering strength, which is hwy PsPs is</span>
-<span 
-class="cmti-12">not always considered</span>. For a range of slowness values, <span 
-class="cmmi-12">p</span>, the differential
-arrival times, <span 
+simultaneously for a 1-D model. For a range of slowness values, <span 
+class="cmmi-12">p</span>, the
+differential arrival times, <span 
 class="cmmi-12">t</span>(<span 
-class="cmmi-12">p</span>), trace moveout curves for each phase arrival given by
-ve
+class="cmmi-12">p</span>), trace moveout curves for each phase arrival given
+by
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP3x.png" alt="           &lfloor; &#x250C; ------------            &rfloor;
-             &#x2502;&#x2502; ( R )2        &#x2218; -1------
-tP s(pi) = H |&lceil; &#x2218;  ---   &minus; p2i &minus;  --2 &minus; p2i|&rceil;
-                VP             V P
+src="draftBP3x.png" alt="           H  [&#x2218; -----------  &#x2218; ---------]
+tP s(pn) =  ---   R2 &minus; VP2p2n &minus;   1 &minus; V2Pp2n
+           VP
 " class="math-display" ><a 
  id="x1-6002r4"></a></center></td><td class="equation-label">(4)</td></tr></table>
-<!--l. 85--><p class="nopar" >
+<!--l. 91--><p class="nopar" >
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP4x.png" alt="             &lfloor;&#x250C;&#x2502; (----)2-----   &#x2218; -------&rfloor;
-             |&#x2502;&#x2218;   R--      2     -1-    2|
-tPps(pi) = H &lceil;    VP    &minus; pi +   V 2&minus; p i&rceil;
-                                  P
+src="draftBP4x.png" alt="           H  [&#x2218; -----------  &#x2218; ---------]
+tPps(pn) = ---   R2 &minus;  V2Pp2n +   1 &minus; VP2p2n
+           VP
 " class="math-display" ><a 
  id="x1-6003r5"></a></center></td><td class="equation-label">(5)</td></tr></table>
-<!--l. 89--><p class="nopar" >
+                                                                          
+
+                                                                          
+<!--l. 95--><p class="nopar" >
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP5x.png" alt="             &#x250C;&#x2502; (---)2------
-             &#x2502;&#x2218;  -R-       2
-tP ss(pi) = 2H    VP    &minus; p i
+src="draftBP5x.png" alt="              &#x2218; -----------
+tPss(pn ) = 2H-- R2 &minus; V 2Pp2n
+           VP
 " class="math-display" ><a 
  id="x1-6004r6"></a></center></td><td class="equation-label">(6)</td></tr></table>
-<!--l. 93--><p class="nopar" >
-<!--l. 95--><p class="indent" >   where <span 
+<!--l. 99--><p class="nopar" >
+<!--l. 101--><p class="noindent" >where <span 
 class="cmmi-12">p</span><sub><span 
-class="cmmi-8">i</span></sub> is the slowness for the <span 
-class="cmmi-12">i</span><sup><span 
-class="cmmi-8">th</span></sup> receiver function. Since strong reflected
-phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK,
-tends to be well represented on most RF&#8217;s.
-<!--l. 97--><p class="indent" >   The travel time equations, as employed by ZK, assume a value for crustal
-P-wave velocity, <span 
+class="cmmi-8">n</span></sub> is the slowness for the <span 
+class="cmmi-12">n</span><sup><span 
+class="cmmi-8">th</span></sup> receiver function. Since strong reflected phases
+occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends
+to be well represented on most RF&#8217;s.
+<!--l. 103--><p class="indent" >   The travel time equations, as employed by ZK, assume a value for crustal <span 
+class="cmti-12">P</span>
+wave velocity, <span 
 class="cmmi-12">V</span> <sub><span 
 class="cmmi-8">P</span> </sub>, that in practice will trade-off to some degree with crustal
 thickness <span 
-class="cmmi-12">H</span>. In our implementation of the ZK approac, each station is assigned a
+class="cmmi-12">H</span>. In our implementation of the ZK approach, each station is assigned a
 <span 
 class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> value corrisponding to the Crust 2.0 value for the 2<sup><span 
-class="cmsy-8">&#x2218;</span></sup> containing cell. In the
-specific cases where data are being compared to previously published results for
-quality control, <span 
+class="cmmi-8">P</span> </sub> value corresponding to the Crust 2.0 value for the corrisponding 2<sup><span 
+class="cmsy-8">&#x2218;</span></sup> containing
+cell. In the specific cases where data are being compared to previously published
+results for quality control, <span 
 class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> values are chosen to match the values in the published
-study.
-<!--l. 100--><p class="indent" >   <hr class="figure"><div class="figure" 
->
-                                                                          
-
-                                                                          
-<a 
- id="x1-60052"></a>
-                                                                          
-
-                                                                          
-
-<!--l. 102--><p class="noindent" ><img 
-src="figures/kinematicRvsH.png" alt="PIC"  
->
-<br /> <div class="caption" 
-><span class="id">Figure&#x00A0;2: </span><span  
-class="content">Kinematic curves traced out by the stacking function, <span 
-class="cmmi-12">s</span>(<span 
-class="cmmi-12">H,R</span>),
-corrisponding to the mapping of fixed travel times <span 
-class="cmmi-12">t</span><sub><span 
-class="cmmi-8">Ps</span></sub>, <span 
-class="cmmi-12">t</span><sub><span 
-class="cmmi-8">PpPs</span></sub> and <span 
-class="cmmi-12">t</span><sub><span 
-class="cmmi-8">PsPs</span></sub> into
-<span 
-class="cmmi-12">H </span>and <span 
-class="cmmi-12">R </span>space.</span></div><!--tex4ht:label?: x1-60052 -->
-                                                                          
-
-                                                                          
-<!--l. 105--><p class="indent" >   </div><hr class="endfigure">
-<!--l. 107--><p class="indent" >   RFs are stacked along trial moveout curves for a range of candidate models of
+class="cmmi-8">P</span> </sub> values are chosen to match the values in the
+published study.
+<!--l. 105--><p class="indent" >   RFs are stacked along trial moveout curves for a range of candidate models of
 <span 
 class="cmmi-12">R </span>and <span 
 class="cmmi-12">H </span>to generate a fitness function <span 
 class="cmmi-12">s</span>(<span 
 class="cmmi-12">H,R</span>). Within the stacking procedure,
-each phase is assigned a weight to account for a general trend in the quality of the
-phases, with direct conversion <span 
-class="cmmi-12">Ps </span>usually characterized by the highest
-quality signal followed by <span 
+each phase is assigned a weight to account for the expected relative amplitudes of
+the phases for typical velocity contrasts, with the direct conversion <span 
+class="cmmi-12">Ps </span>usually
+characterized by the highest quality signal followed by <span 
 class="cmmi-12">PpPs </span>and <span 
-class="cmmi-12">PpSs</span>. We chose weights of <span 
+class="cmmi-12">PpSs</span>. We chose
+weights of <span 
 class="cmmi-12">w</span>1 = 0<span 
-class="cmmi-12">.</span>5,
-<span 
+class="cmmi-12">.</span>5, <span 
 class="cmmi-12">w</span>2 = 0<span 
 class="cmmi-12">.</span>3 , <span 
 class="cmmi-12">w</span>3 = <span 
@@ -360,106 +311,109 @@ class="cmsy-10x-x-120">&minus;</span>0<span
 class="cmmi-12">.</span>2 for the <span 
 class="cmmi-12">Ps</span>, <span 
 class="cmmi-12">PpPs </span>and <span 
-class="cmmi-12">PpSs </span>phases, respectively. A
-negative weight for the combined <span 
+class="cmmi-12">PpSs </span>phases,
+respectively. A negative weight for the combined <span 
 class="cmmi-12">PpSs </span>and <span 
-class="cmmi-12">PsPs </span>phases is required as the
-polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is
-employed to reduce the effect of spurious large amplitude noise in the
+class="cmmi-12">PsPs </span>phases is
+required as the polarity of the signal is reversed. Semblance weighting [Eaton,
+2006] is employed to reduce the effect of spurious large amplitude noise in the
 data. The semblance function assigns a weight between zero (incoherent
 noise) and one (coherent signal). The stacking function is therefore defined
+                                                                          
+
+                                                                          
 as
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP6x.png" alt="          &sum;3    N&sum;
-s(H,R ) =    Sj    wjri(tj)
-          j=1   i=1
+src="draftBP6x.png" alt="           &sum;3     N&sum;
+s(H, R) =     Sm     wmrn (tm)
+          m=1    n=1
 " class="math-display" ><a 
- id="x1-6006r7"></a></center></td><td class="equation-label">(7)</td></tr></table>
-<!--l. 111--><p class="nopar" >
-<!--l. 113--><p class="indent" >   where
+ id="x1-6005r7"></a></center></td><td class="equation-label">(7)</td></tr></table>
+<!--l. 109--><p class="nopar" >
+<!--l. 111--><p class="noindent" >where
    <table 
 class="equation"><tr><td>
    <center class="math-display" >
 <img 
-src="draftBP7x.png" alt="           [&sum;N        ]2
-           ---i=1ri(tj)-
-Sj(H, R) =   &sum;N   r2(tj)
-               i=1  i
+src="draftBP7x.png" alt="             [            ]2
+              &sum;Nn=1rn(tm )
+Sm (H, R ) = -&sum;N------------
+                n=1 r2n(tm)
 " class="math-display" ><a 
- id="x1-6007r8"></a></center></td><td class="equation-label">(8)</td></tr></table>
-<!--l. 118--><p class="nopar" >
-<!--l. 120--><p class="indent" >   is the semblance weight for the <span 
-class="cmmi-12">j</span><sup><span 
+ id="x1-6006r8"></a></center></td><td class="equation-label">(8)</td></tr></table>
+<!--l. 116--><p class="nopar" >
+<!--l. 118--><p class="noindent" >is the semblance weight for the <span 
+class="cmmi-12">m</span><sup><span 
 class="cmmi-8">th</span></sup> phase, time <span 
 class="cmmi-12">t</span><sub>
 <span 
-class="cmmi-8">j</span></sub> is calculated from the
+class="cmmi-8">m</span></sub> is calculated from the
 corresponding travel time function for a given <span 
 class="cmmi-12">H</span>, <span 
 class="cmmi-12">R </span>pair as a function of slowness
 <span 
 class="cmmi-12">p</span><sub><span 
-class="cmmi-8">i</span></sub> and <span 
-class="cmmi-12">N </span>is the total number of receiver functions. Multiplying by the
-semblance weighting sharpens the stacked image, <span 
+class="cmmi-8">n</span></sub> and <span 
+class="cmmi-12">N </span>is the total number of receiver functions. Multiplying by the semblance
+weighting sharpens the stacked image, <span 
 class="cmmi-12">s</span>(<span 
-class="cmmi-12">H,R</span>), and results in better
-resolution when discriminating between different models. The function
-<span 
+class="cmmi-12">H,R</span>), and results in better resolution
+when discriminating between different models. The function <span 
 class="cmmi-12">s</span>(<span 
-class="cmmi-12">H,R</span>) can be thought of as a transformation that maps the <span 
+class="cmmi-12">H,R</span>) can be
+thought of as a transformation that maps times of the <span 
 class="cmmi-12">Ps</span>, <span 
-class="cmmi-12">PpPs</span>
-and <span 
-class="cmmi-12">PpSs </span>+ <span 
-class="cmmi-12">PsPs </span>pulses of the receiver function, <span 
-class="cmmi-12">r</span>(<span 
-class="cmmi-12">t</span>), into <span 
-class="cmmi-12">R </span>and <span 
-class="cmmi-12">H</span>
-space as positive bands, via Eq. <a 
-href="#x1-6006r7">7<!--tex4ht:ref: eq:stack --></a>. Constructive interference where these
-bands intersect will produce a maximum in the stacking function (Fig <a 
-href="#x1-60052">2<!--tex4ht:ref: fig:kinematicRvsH --></a>).
-The model, <span 
-class="cmmi-12">R </span>and <span 
-class="cmmi-12">H</span>, which produce this maximum provides the best
-estimate for the bulk crustal parameters for a given seismic station. The
-elongate shape about the point of intersection, with the long axis tilted
-mostly in the <span 
-class="cmmi-12">R </span>coordinate, conveys the inherent trade-off between <span 
-class="cmmi-12">R</span>
-and <span 
-class="cmmi-12">H </span>and the lower resolution exhibited by the seismic velocity ratio
+class="cmmi-12">PpPs </span>and
 <span 
-class="cmmi-12">R</span>.
-   <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
- id="x1-70002.3"></a>Full Gridsearch Method</h4>
-<!--l. 125--><p class="noindent" >In addition to employing the ZK approach, we also investigate the feasibility of
-separately estimating <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> and <span 
-class="cmmi-12">H </span>through a full 3 parameter grid search involving
-these parameters and <span 
-class="cmmi-12">R</span>. The trade-off between <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> and <span 
-class="cmmi-12">H </span>(and other
-parameter combinations) and the effects of various errors, are quantified
-for both the full grid search and ZK methods by bootstrap resampling
-[Efron and Tibshirani, 1986]. Bootstrap standard deviations are produced
-using 1024 random selections of receiver functions, with replacement, per
-station.
-<!--l. 133--><p class="noindent" >
-   <h4 class="subsectionHead"><span class="titlemark">2.4   </span> <a 
- id="x1-80002.4"></a>Additional data</h4>
+class="cmmi-12">PpSs </span>+ <span 
+class="cmmi-12">PsPs </span>phases into <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H </span>space as positive bands, via Eq. <a 
+href="#x1-6005r7">7<!--tex4ht:ref: eq:stack --></a>.
                                                                           
 
                                                                           
-<!--l. 135--><p class="noindent" >We supplement receiver function estimates of crustal properties with data from
+Constructive interference where these bands intersect produce a maximum in the
+stacking function. The model, <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H</span>, that produces this maximum
+provides the best estimate for the bulk crustal parameters for a given seismic
+station.
+<!--l. 121--><p class="indent" >   A limitation of the ZK approach is the requirement of an initial <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> estimate.
+In principal we may compute the stacking function Eq. <a 
+href="#x1-6005r7">7<!--tex4ht:ref: eq:stack --></a>, as a function of all three
+seismic parameters, <span 
+class="cmmi-12">s</span>(<span 
+class="cmmi-12">H,R,V</span> <sub><span 
+class="cmmi-8">P</span> </sub>). Taking advantage of modern multi-core systems
+with reasonable quantities of data (fifty to a few hundred RFs) and a
+moderate search space (<span 
+class="cmmi-12">n</span><sup><span 
+class="cmr-8">3</span></sup>  parameter candidates where <span 
+class="cmmi-12">n </span><span 
+class="cmsy-10x-x-120">&asymp; </span>150) the
+computational time makes this method easily scalable to hundreds of stations.
+This &#8220;fullgrid&#8221; approach is analyzed to determine the viability of recovering
+<span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub>.
+<!--l. 123--><p class="indent" >   The trade-off between <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> and <span 
+class="cmmi-12">H </span>(and other parameter combinations) and
+error resulting from data quality are quantified for both the full parameter search
+and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An
+estimate for the error is calculated in a bootstrap resampling approach by taking
+the standard deviation of 1024 parameter estimates each produced with randomly
+selected RFs, with replacement.
+   <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
+ id="x1-70002.3"></a>Additional data</h4>
+<!--l. 127--><p class="noindent" >We supplement receiver function estimates of crustal properties with data from
 controlled source experiments collected and compiled from GSC (Geological
 Survey of Canada) references by Walter Mooney (personal communication, 2012).
 The active source data provide <span 
@@ -467,17 +421,17 @@ class="cmmi-12">V</span> <sub><span
 class="cmmi-8">P</span> </sub> and a few <span 
 class="cmmi-12">V</span> <sub><span 
 class="cmmi-8">S</span></sub> estimates for hundreds of
-locations across Canada, many along transects that cross geological provincial
+locations across Canada, many along transects that cross major geological
 boundaries, faults and discontinuities. Some of these data are located within
 reasonable (<span 
-class="cmmi-12">&#x003C;</span>100km??) proximity to seismic stations used in this study and can
-be used to compare with the <span 
+class="cmmi-12">&#x003C;</span>100 km) proximity to seismic stations used in this study and can be
+used to compare with the <span 
 class="cmmi-12">V</span> <sub><span 
 class="cmmi-8">P</span> </sub> and <span 
 class="cmmi-12">V</span> <sub><span 
 class="cmmi-8">S</span></sub> estimates resulting from the RF full
 gridsearch.
-<!--l. 137--><p class="indent" >   The Crust 2.0 model [Bassin, 2000] employs many of these same active source
+<!--l. 129--><p class="indent" >   The Crust 2.0 model [Bassin, 2000] employs many of these same active source
 data to provide regular, complete coverage across all of Canada. The model
 includes estimates of <span 
 class="cmmi-12">V</span> <sub><span 
@@ -489,40 +443,48 @@ latitude and longitude. In addition to employing local active source data, Crust
 2.0 is also constrained by statistically aggregated data from geographically distant
 but geologically similar regions. It therefore affords a somewhat independent
 dataset suited for comparison with the crustal estimates calculated in this
-study.
-<!--l. 141--><p class="noindent" >
-   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
- id="x1-90003"></a>Results</h3>
-<!--l. 143--><p class="noindent" >
-   <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
- id="x1-100003.1"></a>Comparisons</h4>
-<!--l. 145--><p class="noindent" >Several published regional studies utilizing the methods outlined in section <a 
-href="#x1-60002.2">2.2<!--tex4ht:ref: section:VpVsMethod --></a>,
-ZK + semblance weighting, provide parameter estimates for <span 
-class="cmmi-12">R </span>and <span 
-class="cmmi-12">H </span>for
-regionally grouped subsets of Canadian seismic stations. Comparisons between
-estimates for particular seismic stations are made for those values which have a
-corresponding standard error in <span 
-class="cmmi-12">R </span>of less than 0.06. This error value best
-partitions the data between those receiver function stacks with visually
-recognizable energy along phase moveout curves from those where lack of data or
-poor quality make these moveout curves difficult to resolve. For each study
-under comparison, data is reprocessed to use the <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> chosen by the study
-authors and both correlation and mean difference are calculated (Table
-<a 
-href="#x1-100011">1<!--tex4ht:ref: table:comparison --></a>).
                                                                           
 
                                                                           
+study.
+<!--l. 133--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-80003"></a>Results</h3>
+<!--l. 135--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-90003.1"></a>Comparisons</h4>
+<!--l. 137--><p class="noindent" >Three published studies have provided parameter estimates for <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H </span>for
+subsets of the seismic stations considered here. The most recent study
+[Thompson et. al., 2010] focused on the northern Canadian Shield and
+employs both the linear stacking approach used by ZK as well as a phase
+weighted method. A 2007 study of the Superior Province [Darbyshire et. al,
+2007] and a study of the Grenville Orogen [Eaton et. al., 2006] utilize the
+ZK + semblance approach outlined in section <a 
+href="#x1-60002.2">2.2<!--tex4ht:ref: section:VpVsMethod --></a>. Comparisons between
+crustal estimates of <span 
+class="cmmi-12">R </span>for particular seismic stations are made for those
+values with corresponding standard errors of less than <span 
+class="cmsy-10x-x-120">±</span>0.06. This error
+threshold is chosen empirically as that which best partitions those receiver
+function stacks with visually recognizable energy along phase moveout
+curves from those where lack of data or poor quality make these moveout
+curves difficult to distinguish. For each study under comparison, data are
+reprocessed using the <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> chosen by the study authors. For the 2006 and 2007
+studies the ZK + semblance method is used whereas for the Thompson et.
+al study the linear stacking ZK approach is employed. Both correlation
+coefficient and mean difference are provided in (Table <a 
+href="#x1-90011">1<!--tex4ht:ref: table:comparison --></a>) as measures of
+similarity.
    <div class="table">
                                                                           
 
                                                                           
-<!--l. 148--><p class="indent" >   <a 
- id="x1-100011"></a><hr class="float"><div class="float" 
+<!--l. 140--><p class="indent" >   <a 
+ id="x1-90011"></a><hr class="float"><div class="float" 
 >
                                                                           
 
@@ -559,27 +521,27 @@ class="cmmi-12">R      </span></td>
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-1"  
 class="td11">Thompson et. al. (2010)</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-2"  
-class="td11">27              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-3"  
+class="td11">29              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-3"  
 class="td11">0.97</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-4"  
-class="td11">0.49 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-5"  
-class="td11">3.36    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-6"  
-class="td11">0.024  </td>
+class="td11">0.70 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-5"  
+class="td11">0.49    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-6"  
+class="td11">0.012  </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-1"  
-class="td11">Eaton et. al. (2006)      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-2"  
-class="td11">26              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-3"  
-class="td11">0.90</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-4"  
-class="td11">0.61 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-5"  
-class="td11">2.65    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-6"  
-class="td11">0.04    </td>
+class="td11">Darbyshire et. al. (2007)</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-2"  
+class="td11">10              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-3"  
+class="td11">0.95</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-4"  
+class="td11">0.43 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-5"  
+class="td11">1.21    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-6"  
+class="td11">0.033  </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-1"  
-class="td11">Darbyshire et. al. (2007)</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-2"  
-class="td11">10              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-3"  
-class="td11">0.95</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-4"  
-class="td11">0.43 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-5"  
-class="td11">4.16    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-6"  
-class="td11">0.39    </td>
+class="td11">Eaton et. al. (2006)      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-2"  
+class="td11">26              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-3"  
+class="td11">0.90</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-4"  
+class="td11">0.61 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-5"  
+class="td11">0.79    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-6"  
+class="td11">0.025  </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-7-1"  
@@ -588,286 +550,786 @@ class="td11">                    </td></tr></table></div>
 ><span class="id">Table&#x00A0;1: </span><span  
 class="content">Comparison of <span 
 class="cmmi-12">R </span>and <span 
-class="cmmi-12">H </span>estimates with three published studies</span></div><!--tex4ht:label?: x1-100011 -->
+class="cmmi-12">H </span>estimates with three published studies</span></div><!--tex4ht:label?: x1-90011 -->
                                                                           
 
                                                                           
    </div><hr class="endfloat" />
    </div>
-<!--l. 164--><p class="indent" >   All three studies provide <span 
-class="cmmi-12">H </span>estimates that correlate strongly with the
-computed crustal thickness parameters. [[maximum mean difference, students
-ttest ? what would be a good stat for actual dataset difference? ]]. The
-correlation between the seismic velocity ratio is lower, though due to the
-lower resolution in <span 
-class="cmmi-12">R </span>this result is not unexpected. Overall there is good
-correlation between the estimates from the three studies and the computed
-estimates.
-<!--l. 166--><p class="indent" >   [[Comparison between <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> estimates Mooney Active Source estimates]]
+<!--l. 156--><p class="indent" >   All three studies reported <span 
+class="cmmi-12">H </span>estimates that correlate strongly with the crustal
+thickness parameters computed here. The data from the northern Canadian
+Shield shows strong correlation in both <span 
+class="cmmi-12">H </span>and <span 
+class="cmmi-12">R</span>. The lower correlation
+observed in estimates of <span 
+class="cmmi-12">R </span>than <span 
+class="cmmi-12">H </span>is not unexpected as the range of <span 
+class="cmmi-12">R </span>is
+relatively narrow and small changes (<span 
+class="cmsy-10x-x-120">&asymp; </span>2%) are physically meaningful. A
+corollary of this is greater sensitivity of <span 
+class="cmmi-12">R </span>to differences in procedure
+such as the choice of deconvolution algorithm and selection and scaling
+of data. The results from Thompson et. al. [2010] also corrispond most
+closely to the parameter estimates computed here, with the mean difference
+for both parameters being less than half of the averaged bootstrap error
+computed in this study. Results published by <span 
+class="cmti-12">Eaton et. al. </span>[2006] show
+reasonable correlations in both <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H </span>and a mean difference for both
+parameters that is roughly equal to the averaged uncertainty in the data.
+Parameter estimates from the Superior Province [Darbyshire et. al., 2007]
+show the lowest correlation in <span 
+class="cmmi-12">R </span>as well as the highest mean difference in
+both parameters. These differences are well over the averaged computed
+error, and can not be easily explained by deviation related to noise in the
+data.
    <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
- id="x1-110003.2"></a>Regional Bulk Crustal Parameters</h4>
-<!--l. 169--><p class="noindent" >[[ Move from ZK + semblance to Full Grid Search + semblance ]] Data from X
-seismic stations across Canada are analyzed, using only those stations with less
-than 0.06 standard error. To compensate for the uneven geographic distribution of
-seismic stations, weights are applied to all crustal parameter estimates before
-averaging over a given region. Weights are calculated by first projecting station
-locations onto the 2D plane using the Albers equal-area conic projection. A
-Voronoi diagram is calculated for all projected station locations. The ratio
-between the Voronoi cell surface encompassing each station and the total area of
-the convex hull bounding region is computed and used as the weighting
-value.
+ id="x1-100003.2"></a>Full Grid Search Analysis</h4>
+<!--l. 160--><p class="noindent" >We now proceed to compare our results computed using the ZK approach with
+those from the full grid search (Table <a 
+href="#x1-100012">2<!--tex4ht:ref: table:ZKvsFG --></a>). We note that the velocity ratio
+<span 
+class="cmmi-12">R </span>has a correlation between the two datasets of 0.76 whereas <span 
+class="cmmi-12">H </span>has a
+correlation of 0.51. The low correlation between crustal thickness estimates
+can be explained by the strong tradeoff between <span 
+class="cmmi-12">H </span>and <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> through the
+quantity
+<!--l. 162--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="draftBP8x.png" alt="tPps &minus; tPs   tPss         H &#x2218; ----------
+----------=  ----&minus; tPs =  --- 1 &minus; p2V 2P).
+    2         2           VP
+" class="math-display" ></center>
+<!--l. 164--><p class="noindent" >As a consequence, contours of the misfit surface <span 
+class="cmmi-12">s</span>(<span 
+class="cmmi-12">H,R,V</span> <sub><span 
+class="cmmi-8">P</span> </sub>) are highly extended
+along the kinematic curve in the <span 
+class="cmmi-12">H </span>- <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> space (Figure <a 
+href="#x1-100055">5<!--tex4ht:ref: fig:HVp_ULM --></a>). This trade-off
+contributes to the low correlation in <span 
+class="cmmi-12">H </span>between the two methods. Higher
+correlation in this quantity can be restored by dividing out <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> from <span 
+class="cmmi-12">H</span>. The
+trade-off between the other parameters is lower as there is greater dependence
+between them such that a small change in one necessitates a large change in an
+other to maintain travel-time equality, which has the result of a well defined misfit
+surface (Figures <a 
+href="#x1-100033">3<!--tex4ht:ref: fig:HR_ULM --></a>-<a 
+href="#x1-100044">4<!--tex4ht:ref: fig:RVp_ULM --></a>.
+<!--l. 166--><p class="indent" >   For all but the cleanest stations, the trade-off between <span 
+class="cmmi-12">H </span>and <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> renders
+recovery of <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> unfeasible using the full grid approach. A comparison
+between two stations, ULM, the station with the highest quality RFs,
+and DORN, a station exhibiting less resolution in the reflected phases,
+illustrates this difficulty. RFs are arranged vertically, ordered by increasing
+slowness, and shown in figures <a 
+href="#x1-100022">2<!--tex4ht:ref: fig:RF_ULM --></a> and <a 
+href="#x1-100066">6<!--tex4ht:ref: fig:RF_DORN --></a>. Cross sections of <span 
+class="cmmi-12">s</span>(<span 
+class="cmmi-12">H,R,V</span> <sub><span 
+class="cmmi-8">P</span> </sub>)
+through each coordinate plane are displayed for ULM and DORN in figures
+<a 
+href="#x1-100033">3<!--tex4ht:ref: fig:HR_ULM --></a>-<a 
+href="#x1-100055">5<!--tex4ht:ref: fig:HVp_ULM --></a>) and figures <a 
+href="#x1-100077">7<!--tex4ht:ref: fig:HR_DORN --></a>-<a 
+href="#x1-100099">9<!--tex4ht:ref: fig:HVp_DORN --></a>. The lower resolution apparent in the <span 
+class="cmmi-12">H </span>- <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> cross
+section for DORN translates into a bootstrap error of <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> <span 
+class="cmsy-10x-x-120">± </span>0<span 
+class="cmmi-12">.</span>64<span 
+class="cmmi-12">km&#x2215;s</span>.
+Station ULM, with cleaner data, has less trade-off between <span 
+class="cmmi-12">H </span>and <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> as
+indicated by the corresponding cross section and the lower bootstrap error of
+<span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> <span 
+class="cmsy-10x-x-120">± </span>0<span 
+class="cmmi-12">.</span>16<span 
+class="cmmi-12">km&#x2215;s</span>.
+<!--l. 168--><p class="indent" >   Active source experiments located near broadband seismic stations provide
+independent crustal thickness and <span 
+class="cmti-12">P </span>wave velocity estimates to test against data
+derived from the full parameter search method. We select stations with
+low error in <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> and active source experiment locations within a 100 km
+radius. If several active source experiments are located within this radius,
+estimates are averaged. Four stations (ARVN, TYNO, ULM and WHY)
+meet these criteria and the parameter estimates are presented in figure
+<a 
+href="#x1-1001010">10<!--tex4ht:ref: fig:activeVp --></a>-<a 
+href="#x1-1001111">11<!--tex4ht:ref: fig:activeH --></a>. Estimates computed from the full grid approach are roughly 0.25
+km/s higher than the active source data. This difference is consistent
+across all four stations and is exemplified by a 99% correlation, suggesting
+possible bias. However, the limited number of data means this bias is poorly
+constrained.
+<!--l. 170--><p class="indent" >   There is less correlation between the crustal thickness data, though this is
+largely attributed to an approximate 10 km difference between the ARVN
+                                                                          
+
+                                                                          
+estimates. The reason for this discrepancy is unknown though both the ZK
+method and and a published study [Thompson et. al., 2010] provide an estimate
+of near 41 km for ARVN, much nearer the full grid value of 42 km. Despite lower
+correlation the apparent bias towards higher values computed from teleseismic
+data is also maintained for <span 
+class="cmmi-12">H</span>. A positive bias in one parameter will tend to bias
+the other, owing to the relationship between thickness, velocity and times of a
+scattered phase. For a constant <span 
+class="cmmi-12">t</span><sub><span 
+class="cmmi-8">ps</span></sub> one may compute how much <span 
+class="cmmi-12">H </span>must
+change for a 0.25 km/s bias in <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> [Zhu and Kanamori, 2000]. Using an
+average of the parameter estimates from the two cleanest stations, ULM
+and WHY, <span 
+class="cmmi-12">&delta;H </span>will be 1.3 km, this fits well with the actual bias in the
+values.
+<!--l. 172--><p class="indent" >   [[ SOURCES REGARDING BIAS ]] [[ WHAT DOES THIS MEAN, IS VP
+USABLE FOR THE HIGHEST QUALITY STATIONS?]]
    <div class="table">
                                                                           
 
                                                                           
-<!--l. 173--><p class="indent" >   <a 
- id="x1-110012"></a><hr class="float"><div class="float" 
+<!--l. 176--><p class="indent" >   <a 
+ id="x1-100012"></a><hr class="float"><div class="float" 
 >
                                                                           
 
                                                                           
-<div class="tabular">         <table id="TBL-2" class="tabular" 
+<div class="tabular"> <table id="TBL-2" class="tabular" 
 cellspacing="0" cellpadding="0"  
 ><colgroup id="TBL-2-1g"><col 
 id="TBL-2-1"><col 
-id="TBL-2-2"><col 
-id="TBL-2-3"><col 
-id="TBL-2-4"><col 
-id="TBL-2-5"><col 
-id="TBL-2-6"></colgroup><tr 
-class="cline"><td></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+id="TBL-2-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-1"  
+class="td11">Parameter</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-2"  
+class="td11">correlation coeff</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-1"  
-class="td11"></td><td colspan="2" style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
-class="td11"><div class="multicolumn"  style="white-space:nowrap; text-align:center;">ZK + semblance</div></td><td colspan="2" style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
-class="td11">  <div class="multicolumn"  style="white-space:nowrap; text-align:center;">Crust 2.0</div>  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-6"  
+class="td11"><span 
+class="cmmi-12">R </span>(km)     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-2"  
+class="td11">0.76                </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-1"  
+class="td11"><span 
+class="cmmi-12">H          </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-2"  
+class="td11">0.51                </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-1"  
+class="td11"><span 
+class="cmmi-12">H&#x2215;V</span> <sub><span 
+class="cmmi-8">P</span> </sub>       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-2"  
+class="td11">0.96                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-1"  
+class="td11">         </td></tr></table></div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;2: </span><span  
+class="content">Correlation between parameters computed from ZK + semblance
+and full parameter search methods</span></div><!--tex4ht:label?: x1-100012 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 191--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100022"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 193--><p class="noindent" ><img 
+src="figures/RF_ULM.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100022 -->
+                                                                          
+
+                                                                          
+<!--l. 196--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 198--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100033"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 200--><p class="noindent" ><img 
+src="figures/stackHR_ULM.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100033 -->
+                                                                          
+
+                                                                          
+<!--l. 203--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 205--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100044"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 207--><p class="noindent" ><img 
+src="figures/stackRVp_ULM.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;4: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100044 -->
+                                                                          
+
+                                                                          
+<!--l. 210--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 212--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100055"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 214--><p class="noindent" ><img 
+src="figures/stackHVp_ULM.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;5: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100055 -->
+                                                                          
+
+                                                                          
+<!--l. 217--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 219--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100066"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 221--><p class="noindent" ><img 
+src="figures/RF_DORN.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;6: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100066 -->
+                                                                          
+
+                                                                          
+<!--l. 224--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 227--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100077"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 229--><p class="noindent" ><img 
+src="figures/stackHR_DORN.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;7: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100077 -->
+                                                                          
+
+                                                                          
+<!--l. 232--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 234--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100088"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 236--><p class="noindent" ><img 
+src="figures/stackRVp_DORN.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;8: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100088 -->
+                                                                          
+
+                                                                          
+<!--l. 239--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 241--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-100099"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 243--><p class="noindent" ><img 
+src="figures/stackHVp_DORN.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;9: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-100099 -->
+                                                                          
+
+                                                                          
+<!--l. 246--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 248--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-1001010"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 250--><p class="noindent" ><img 
+src="figures/activeSourceCompVp.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;10: </span><span  
+class="content"><span 
+class="cmti-12">P wave velocity estimates computed from the full parameter search</span>
+<span 
+class="cmti-12">method compared to active source data and values from Crust 2.0</span></span></div><!--tex4ht:label?: x1-1001010 -->
+                                                                          
+
+                                                                          
+<!--l. 253--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 255--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-1001111"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 257--><p class="noindent" ><img 
+src="figures/activeSourceCompH.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;11: </span><span  
+class="content">Crustal thickness estimates computed from the full parameter
+search method compared to active source data and values from Crust 2.0</span></div><!--tex4ht:label?: x1-1001111 -->
+                                                                          
+
+                                                                          
+<!--l. 260--><p class="indent" >   </div><hr class="endfigure">
+   <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-110003.3"></a>Crustal Discontinuities</h4>
+<!--l. 265--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x1-1100112"></a>
+                                                                          
+
+                                                                          
+
+<!--l. 267--><p class="noindent" ><img 
+src="figures/conradPCA.png" alt="PIC"  
+>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;12: </span><span  
+class="content">The SVD singular vectors (principal components) of the station
+depth  profile  matrix.  Each  principal  component  represents  a  mode  that
+captures some part of the total variance in the dataset. Vertical lines are the
+axis each profile and vector is normalized about. A grey horizontal window
+highlights a region of low energy.</span></div><!--tex4ht:label?: x1-1100112 -->
+                                                                          
+
+                                                                          
+<!--l. 270--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 272--><p class="indent" >   We now consider the average crustal structure across Canada. We produce a
+depth profile for each station by stacking receiver functions along traveltime
+curves corresponding to a range of values in <span 
+class="cmmi-12">H </span>(0 to 50 km in increments of 100
+metres) using the estimates for <span 
+class="cmmi-12">R </span>computed via the ZK + semblance method. The
+resulting profiles contain energy at depths corresponding to major velocity
+discontinuities. By assembling all depth profiles into a matrix, we may decompose
+the data via SVD into their principal components. Figure <a 
+href="#x1-1100112">12<!--tex4ht:ref: fig:conradPCA --></a> contains the
+first five singular vectors or modes normalized to unit magnitude that
+account for 78% of the variance in the profiles. Higher modes correspond to
+diminishing contributions to total variance. Each vector is normalized to unit
+magnitude. The first mode (blue) is effectively the average depth profile
+across all stations and captures 50% of the variance in the dataset. It
+features a maximum near 38.7 km that may be taken as an average Moho
+depth. The second and third modes are dominated by a high amplitude
+shallow structures (e.g. sedimentary layers) within the top 10 km and Moho
+variability between 30 and 46 km . The fourth and fifth modes account
+for a combined 11% of the variance in the dataset, contain energy at
+upper-mid crustal depths in the 10 km to 20 km range. All 5 modes display
+markedly lower energy within a depth window roughly between 20 km and 30
+km.
+   <h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-120003.4"></a>Regional Bulk Crustal Parameters</h4>
+<!--l. 276--><p class="noindent" >We proceed to consider crustal thickness <span 
+class="cmmi-12">H </span>and velocity ratio, <span 
+class="cmmi-12">R</span>, estimates for
+stations with assigned <span 
+class="cmmi-12">R </span>bootstrap errors below <span 
+class="cmsy-10x-x-120">±</span>0<span 
+class="cmmi-12">.</span>06 in a geographic context
+(figure <a 
+href="#x1-1200213">13<!--tex4ht:ref: map:stationMap --></a>). To compensate for the uneven distribution of seismic stations,
+weights are applied to both <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H </span>estimates before averaging over
+a given region. Weights are calculated by projecting station locations
+onto a 2D plane using the Albers equal-area conic projection. A Voronoi
+diagram is then computed using all projected station locations. The ratio
+between the Voronoi cell surface encompassing each station and the total
+area of the convex hull bounding region is employed as that station&#8217;s
+weight.
+<!--l. 278--><p class="indent" >   Table <a 
+href="#x1-120013">3<!--tex4ht:ref: table:regionParameters --></a> displays the results of our regionalization in <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">H</span>. The weighted
+average crustal thickness for all stations (Canada) is 37 km, about two kilometres
+thinner than the average for the Canadian Shield. Crust 2.0 provides a slightly
+                                                                          
+
+                                                                          
+thicker crustal average for Canada (38.2 km) and a slightly thinner average for the
+Shield (38.8 km). The Slave Province averages are similar to those for the
+Churchill province and a thicker crust than Crust2.0 and a smaller seismic
+velocity ratio. Moving south and east from the Churchill Province through
+the Superior Province into the Grenville Province, we note an increase
+in the ZK + semblance <span 
+class="cmmi-12">R </span>values as well as crustal thickness <span 
+class="cmmi-12">H</span>, figures
+<a 
+href="#x1-1200314">14<!--tex4ht:ref: map:Hmap --></a>-<a 
+href="#x1-1200415">15<!--tex4ht:ref: map:Rmap --></a>. The weighted <span 
+class="cmmi-12">R </span>average is 1.73 in the Churchill Province increasing
+slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. In a
+similar fashion, the weighted average of <span 
+class="cmmi-12">H </span>increases from 38.9 km in the
+Churchill Province to 39.7 in the Superior Province and 41.7 km in the
+Grenville Province. The southeastern trend towards increasing values is also
+expressed in weighted averaged active source <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">P</span> </sub> data. The Crust 2.0 model is
+characterized by slightly thinner crust though the southward thickening
+trend is noticeable. The trend in the seismic velocity is not, however, as
+apparent.
+   <div class="table">
+                                                                          
+
+                                                                          
+<!--l. 282--><p class="indent" >   <a 
+ id="x1-120013"></a><hr class="float"><div class="float" 
+>
+                                                                          
+
+                                                                          
+<div class="tabular">         <table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1"><col 
+id="TBL-3-2"><col 
+id="TBL-3-3"><col 
+id="TBL-3-4"><col 
+id="TBL-3-5"><col 
+id="TBL-3-6"></colgroup><tr 
+class="cline"><td></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-1"  
+class="td11"></td><td colspan="2" style="white-space:nowrap; text-align:center;" id="TBL-3-2-2"  
+class="td11"><div class="multicolumn"  style="white-space:nowrap; text-align:center;">ZK + semblance</div></td><td colspan="2" style="white-space:nowrap; text-align:center;" id="TBL-3-2-4"  
+class="td11">  <div class="multicolumn"  style="white-space:nowrap; text-align:center;">Crust 2.0</div>  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-6"  
 class="td11"><div class="multicolumn"  style="white-space:nowrap; text-align:center;">Active Source</div>
 </td></tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-1"  
-class="td11">Region   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-2"  
-class="td11"><span 
-class="cmmi-12">R   </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-3"  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-1"  
+class="td11">Region   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-2"  
 class="td11"><span 
 class="cmmi-12">H</span>[<span 
-class="cmmi-12">km</span>]     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-4"  
+class="cmmi-12">km</span>]</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-3"  
 class="td11"><span 
-class="cmmi-12">R   </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-5"  
+class="cmmi-12">R      </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-4"  
 class="td11"><span 
 class="cmmi-12">H</span>[<span 
-class="cmmi-12">km</span>]</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-6"  
+class="cmmi-12">km</span>]</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-5"  
+class="td11"><span 
+class="cmmi-12">R   </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-6"  
 class="td11"><span 
 class="cmmi-12">V</span> <sub><span 
 class="cmmi-8">P</span> </sub>[<span 
 class="cmmi-12">km&#x2215;s</span>]     </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-1"  
-class="td11">Canada  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-2"  
-class="td11">37.0</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-3"  
-class="td11">1.75        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-4"  
-class="td11">38.2</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-5"  
-class="td11">1.77   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-6"  
+ style="vertical-align:baseline;" id="TBL-3-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-1"  
+class="td11">Canada  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-2"  
+class="td11">37.0   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-3"  
+class="td11">1.75     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-4"  
+class="td11">38.2   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-5"  
+class="td11">1.77</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-6"  
 class="td11">6.33             </td></tr><tr  
- style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-1"  
-class="td11">Shield </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-2"  
-class="td11">39.2</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-3"  
-class="td11">1.74 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-4"  
-class="td11">38.8</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-5"  
-class="td11">1.77 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-6"  
+ style="vertical-align:baseline;" id="TBL-3-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-1"  
+class="td11">Shield </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-2"  
+class="td11">39.2 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-3"  
+class="td11">1.74 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-4"  
+class="td11">38.8 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-5"  
+class="td11">1.77</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-6"  
 class="td11">6.42</td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-1"  
-class="td11">Slave     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-2"  
-class="td11">38.2</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-3"  
-class="td11">1.74        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-4"  
-class="td11">37.0</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-5"  
-class="td11">1.76   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-6"  
+ style="vertical-align:baseline;" id="TBL-3-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-1"  
+class="td11">Slave     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-2"  
+class="td11">38.2   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-3"  
+class="td11">1.74     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-4"  
+class="td11">37.0   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-5"  
+class="td11">1.76</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-6"  
 class="td11">6.44             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-1"  
-class="td11">Churchill</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-2"  
-class="td11">38.9</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-3"  
-class="td11">1.73        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-4"  
-class="td11">37.8</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-5"  
-class="td11">1.77   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-6"  
+ style="vertical-align:baseline;" id="TBL-3-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-1"  
+class="td11">Churchill</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-2"  
+class="td11">38.9   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-3"  
+class="td11">1.73     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-4"  
+class="td11">37.8   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-5"  
+class="td11">1.77</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-6"  
 class="td11">6.39             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-1"  
-class="td11">Superior </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-2"  
-class="td11">39.7</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-3"  
-class="td11">1.74        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-4"  
-class="td11">39.1</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-5"  
-class="td11">1.76   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-6"  
+ style="vertical-align:baseline;" id="TBL-3-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-1"  
+class="td11">Superior </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-2"  
+class="td11">39.7   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-3"  
+class="td11">1.74     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-4"  
+class="td11">39.1   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-5"  
+class="td11">1.76</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-6"  
 class="td11">6.44             </td>
 </tr><tr  
- style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-1"  
-class="td11">Grenville</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-2"  
-class="td11">41.7</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-3"  
-class="td11">1.78        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-4"  
-class="td11">40.5</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-5"  
-class="td11">1.78   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-6"  
+ style="vertical-align:baseline;" id="TBL-3-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-1"  
+class="td11">Grenville</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-2"  
+class="td11">41.7   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-3"  
+class="td11">1.78     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-4"  
+class="td11">40.5   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-5"  
+class="td11">1.78</td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-6"  
 class="td11">6.48             </td>
 </tr><tr 
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-1"  
+ style="vertical-align:baseline;" id="TBL-3-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-1"  
 class="td11">        </td></tr></table></div>
 <br /> <div class="caption" 
-><span class="id">Table&#x00A0;2: </span><span  
+><span class="id">Table&#x00A0;3: </span><span  
 class="content">Comparison of <span 
 class="cmmi-12">R </span>and <span 
-class="cmmi-12">H </span>estimates with three published studies</span></div><!--tex4ht:label?: x1-110012 -->
+class="cmmi-12">H </span>estimates with three published studies</span></div><!--tex4ht:label?: x1-120013 -->
                                                                           
 
                                                                           
    </div><hr class="endfloat" />
    </div>
-<!--l. 192--><p class="indent" >   Moving South from the Churchill through the Superior and the Grenville there
-is an increase in the ZK + semblance computed seismic velocity ratio as well as
-crustal thickness. The trend in increasing values is also seen in the weighted
-averaged active source <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> data. Generally the Crust 2.0 values show a slightly
-thinner crust though the southward thickening trend is noticeable. The
-trend in the seismic velocity data is not as apparent in the Crust 2.0
-data.
-   <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
- id="x1-120003.3"></a>Conrad Discontinuity</h4>
-<!--l. 195--><p class="noindent" >Results and figures showing statistics regarding depth of crustal reflectors.
-<!--l. 197--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 302--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                           
 
                                                                           
 <a 
- id="x1-120013"></a>
+ id="x1-1200213"></a>
                                                                           
 
                                                                           
 
-<!--l. 199--><p class="noindent" ><img 
-src="figures/activeSourceComparison.png" alt="PIC"  
+<!--l. 304--><p class="noindent" ><img 
+src="figures/stationMap.png" alt="PIC"  
 >
 <br /> <div class="caption" 
-><span class="id">Figure&#x00A0;3: </span><span  
-class="content">Comparison of <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> estimates from the MB algorithm with active
-source <span 
-class="cmmi-12">V</span> <sub><span 
-class="cmmi-8">P</span> </sub> recordings. Stations selected if active source experiment locations
-within 1 degree of latitude / longitude.</span></div><!--tex4ht:label?: x1-120013 -->
+><span class="id">Figure&#x00A0;13: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-1200213 -->
                                                                           
 
                                                                           
-<!--l. 202--><p class="indent" >   </div><hr class="endfigure">
-<!--l. 204--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 307--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 309--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                           
 
                                                                           
 <a 
- id="x1-120024"></a>
+ id="x1-1200314"></a>
                                                                           
 
                                                                           
 
-<!--l. 206--><p class="noindent" ><img 
-src="figures/VpVsMap.png" alt="PIC"  
+<!--l. 311--><p class="noindent" ><img 
+src="figures/Hmap.png" alt="PIC"  
 >
 <br /> <div class="caption" 
-><span class="id">Figure&#x00A0;4: </span><span  
-class="content"></span></div><!--tex4ht:label?: x1-120024 -->
+><span class="id">Figure&#x00A0;14: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-1200314 -->
                                                                           
 
                                                                           
-<!--l. 209--><p class="indent" >   </div><hr class="endfigure">
-<!--l. 211--><p class="indent" >   <hr class="figure"><div class="figure" 
+<!--l. 314--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 316--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
                                                                           
 
                                                                           
 <a 
- id="x1-120035"></a>
+ id="x1-1200415"></a>
                                                                           
 
                                                                           
 
-<!--l. 213--><p class="noindent" ><img 
-src="figures/VpVsMapCrust.png" alt="PIC"  
+<!--l. 318--><p class="noindent" ><img 
+src="figures/Rmap.png" alt="PIC"  
 >
 <br /> <div class="caption" 
-><span class="id">Figure&#x00A0;5: </span><span  
-class="content"></span></div><!--tex4ht:label?: x1-120035 -->
+><span class="id">Figure&#x00A0;15: </span><span  
+class="content"></span></div><!--tex4ht:label?: x1-1200415 -->
                                                                           
 
                                                                           
-<!--l. 216--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 321--><p class="indent" >   </div><hr class="endfigure">
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
  id="x1-130004"></a>Discussion</h3>
-<!--l. 221--><p class="noindent" >
+<!--l. 327--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
  id="x1-140004.1"></a>Canada</h4>
-<!--l. 223--><p class="noindent" >- Comparison Discussion - Crustal Thickness - Very good correlation in thickness
-estimates with all three datasets. - Vp/Vs - Lower correlation with the Vp/Vs
-values. - Expect lower correlation with Vp/Vs since the travel time equations are
-less sensitive to seismic velocities than they are to crustal thickness. This means
-that there will be more uncertainty during the parameter search for Vp/Vs and
-hence higher degree of relative error. - ??? Utilizing different sources, applying
-different deconvolution and filtering techniques will therefore have a greater
-impact on the uncertainty of picking Vp/Vs than that of crustal thickness H.
-???
-<!--l. 236--><p class="indent" >   - Explanation of results - Canada H and Vp/Vs - Lith5.0 (Perry, 2002)
-estimates for Canadian crustal averages is 38 km. The Crust 2.0 average is 38km
-as well, however this is expected since Crust2.0 data for Canada is based on the
-same data as that of Lith5.0 - ??? Make some comparison to global average
-???
-<!--l. 245--><p class="noindent" >
-   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
- id="x1-150005"></a>Conclusions</h3>
-<!--l. 246--><p class="noindent" >Conclusions here
-<!--l. 252--><p class="indent" >   assin, C., G. Laske, G. Masters (2000), The Current Limits of Resolution for
-Surface Wave Tomography in North America, EOS Trans AGU, 81.
-<!--l. 254--><p class="indent" >   Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave
-province, J. Geophys. Res., 103, 21,183-21,200.
-<!--l. 256--><p class="indent" >   Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal
-properties, J. Geophys. Int., 182, 403-407.
-<!--l. 258--><p class="indent" >   Christensen, N. I. (1996), Poisson&#8217;s ratio and crustal seismology, J. Geophys.
-Res., 101, 31393156.
+      <ul class="itemize1">
+      <li class="itemize">Quiet zone in discontinuity data
+      </li>
+      <li class="itemize">Compare data to Crust 2.0. What do the differences mean.
+           <ul class="itemize2">
+           <li class="itemize">Lith 5.0 data?</li></ul>
+      </li>
+      <li class="itemize">Discuss spatial trends -¿ high R -¿ Low R moving North West through
+      Ontario
+           <ul class="itemize2">
+           <li class="itemize">this is part of larger trend of changing R values as we move from
+           Churchill to Grenville
+           </li>
+           <li class="itemize">in the literature? Yes. See notes on lithoprobe studies</li></ul>
+      </li>
+      <li class="itemize">Secular variation in NE Churchill from thinner crusts to thicker as we move
+      East
+           <ul class="itemize2">
+           <li class="itemize">in the literature? See Lith 5.0: A revised crustal model for Canada
+           based on lithoprobe results.</li></ul>
+      </li>
+      <li class="itemize">Explanation of results
                                                                           
 
                                                                           
-<!--l. 260--><p class="indent" >   Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New
-insights into the lithosphere beneath the Superior Province from Rayleigh
-wave dispersion and receiver function analysis, J. Geophys. Int., 169,
-1043-1068.
-<!--l. 262--><p class="indent" >   Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal
-evolution, Geology, 19, 606-609.
-<!--l. 264--><p class="indent" >   Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs
-variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic
-receiver functions, Tectonophysics, 420, 223-238.
-<!--l. 266--><p class="indent" >   Efron, B., R. Tibshirani (1986), Bootstrap Methods for Standard Errors,
-Confidence Intervals, and Other Measures of Statistical Accuracy, Statistical
-Science, 1, 54-75.
-<!--l. 268--><p class="indent" >   Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a
-method for choosing a good ridge parameter, Technometrics, 21, 215-223. Mooney,
-W. D. (2012), Personal communication. Compiled GSC active source data for the
-Canada.
-<!--l. 271--><p class="indent" >   Langston, C. A. (1979), Structure under Mount Rainier, Washington,
-inferred from teleseismic body waves, J. Geophys. Res., 84(B9), 47494762,
-doi:10.1029/JB084iB09p04749.
-<!--l. 273--><p class="indent" >   Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal
-model for Canada based on Lithoprobe results, J. Geophys. Int., 150,
-285-294.
-<!--l. 275--><p class="indent" >   Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B.
-Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints
-from the Canadian Shield, Earth and Planetary Science Letters, 297,
-655666.
-<!--l. 277--><p class="indent" >   Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California
-from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
-<!--l. 279--><p class="indent" >   Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by
-measurements of crustal Poisson&#8217;s ratio, Nature, 374, 152-154.
+      </li>
+      <li class="itemize">Canada H and Vp/Vs
+      </li>
+      <li class="itemize">Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The
+      Crust 2.0 average is 38 km as well, however this is expected since Crust2.0
+      data for Canada is based on the same data as that of Lith5.0 .... is it
+      definately?
+      </li>
+      <li class="itemize">Make some comparison to global average?
+      </li></ul>
+<!--l. 362--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-150005"></a>Conclusions</h3>
+<!--l. 367--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-160005"></a>References</h3>
+<!--l. 367--><p class="noindent" >
+     <!--l. 369--><p class="noindent" >Bassin,  C.,  G.  Laske,  G.  Masters  (2000),  The  Current  Limits  of
+     Resolution for Surface Wave Tomography in North America, EOS Trans
+     AGU, 81. Bostock, M. G. (1998), Mantle stratigraphy and the evolution
+     of  the  Slave  province,  J.  Geophys.  Res.,  103,  21183-21200.  Bostock,
+     M.  G.,  M.  R.  Kumar  (2010),  Bias  in  seismic  estimates  of  crustal
+     properties, J. Geophys. Int., 182, 403-407. Christensen, N. I. (1996),
+     Poisson&#8217;s ratio and crustal seismology, J. Geophys. Res., 101, 31393156.
+     Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006),
+     New insights into the lithosphere beneath the Superior Province from
+     Rayleigh wave dispersion and receiver function analysis, J. Geophys.
+     Int., 169, 1043-1068. Durrheim, R. J., W. D. Mooney (1991), Archean
+     and Proterozoic crustal evolution, Geology, 19, 606-609. Eaton, D. W.,
+     S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations
+     in the Grenville orogen (Ontario, Canada) from analysis of teleseismic
+                                                                          
+
+                                                                          
+     receiver functions, Tectonophysics, 420, 223-238. Efron, B., R. Tibshirani
+     (1986), Bootstrap Methods for Standard Errors, Confidence Intervals,
+     and Other Measures of Statistical Accuracy, Statistical Science, 1, 54-75.
+     Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation
+     as a method for choosing a good ridge parameter, Technometrics, 21,
+     215-223.  Mooney,  W.  D.  (2012),  Personal  communication.  Compiled
+     GSC active source data for the Canada. Kennet, B. L. N., (1991), The
+     removal of free surface interactions from three-component seismograms,
+     J. Geophys. Int., 104, 153-163. Langston, C. A. (1979), Structure under
+     Mount Rainier, Washington, inferred from teleseismic body waves, J.
+     Geophys. Res., 84(B9), 47494762, doi:10.1029/JB084iB09p04749. Perry,
+     H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal
+     model for Canada based on Lithoprobe results, J. Geophys. Int., 150,
+     285-294. Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall,
+     J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal
+     evolution:  Seismic  constraints  from  the  Canadian  Shield,  Earth  and
+     Planetary Science Letters, 297, 655666. Zhu, L., H. Kanamori (2000),
+     Moho depth variation in Southern California from teleseismic receiver
+     functions, J. Geophys. Res., 105, 2969-2980. Zandt, G., C. J. Ammon
+     (1995), Continental crust composition constrained by measurements of
+     crustal Poisson&#8217;s ratio, Nature, 374, 152-154.
     
 </body></html> 
 

@@ -21,47 +21,57 @@
 %% -----------------------------------------------%%
 \section{Introduction}
 
-Seismic studies of the Canadian continental crust predominately analyze specific geological features or regions rather than taking a comprehensive and comparative inter-regional analysis. The primary reason for this is the poor resolution afforded by the seismic networks currently and historically deployed across Canada. The Canadian continental landmass is composed of at least fifteen large geological provinces as recognized by the Geological Survey of Canada (GSC). Each of these regions is itself complex and heterogeneous and often larger than most European nations. On top of this there is poor seismic coverage, roughly one seismic station per 25,000 $km^2$. Many of these stations are clustered near areas of geologic interest such as the Cascadia Subduction zone or population and research centres such as Southern Ontario or areas of significant resource interest like the diamondiferous Great Slave Lake area. This leaves vast areas of the Canadian landmass completely unsampled. Despite these limitations, a low resolution comprehensive and comparative study is still feasible for some of the geological regions comprising the Canadian continental crust. Direct comparison between the bulk average seismic properties of geological regions and between aggregated regions and global averages provide some new insight into the crustal composition of the Canadian landmass. The accumulated dataset also affords investigations into variations of bulk crustal parameters such as Poisson's Ratio and crustal thickness with age and tectonic environment as well as some basic statistical data on interesting crustal features.
+%% Seismic studies of the Canadian continental crust predominately analyze specific geological features or regions rather than taking a comprehensive and comparative inter-regional analysis. The primary reason for this is the poor resolution afforded by the seismic networks currently and historically deployed across Canada. The Canadian continental landmass is composed of at least fifteen large geological provinces as recognized by the Geological Survey of Canada (GSC). Each of these regions is itself complex and heterogeneous and often larger than most European nations. On top of this there is poor seismic coverage, roughly one seismic station per 25,000 $km^2$. Many of these stations are clustered near areas of geologic interest such as the Cascadia Subduction zone or population and research centres such as Southern Ontario or areas of significant resource interest like the diamondiferous Great Slave Lake area. This leaves vast areas of the Canadian landmass completely unsampled. Despite these limitations, a low resolution comprehensive and comparative study is still feasible for some of the geological regions comprising the Canadian continental crust. Direct comparison between the bulk average seismic properties of geological regions and between aggregated regions and global averages provide some new insight into the crustal composition of the Canadian landmass. The accumulated dataset also affords investigations into variations of bulk crustal parameters such as Poisson's Ratio and crustal thickness with age and tectonic environment as well as some basic statistical data on interesting crustal features.
 
-This paper presents a comparative tour through the dataset accumulated from processing more than a decade worth of data from all available Canadian seismic stations. It begins with a discussion of the raw data itself followed by a review of the receiver function method and a more detailed explanation of the inversion algorithms used to produce the dataset. Three previous publications utilizing similar processing schemes provide unique subsets of data to compare with the values computed in this survey for quality assurance. ...
+%% This paper presents a comparative tour through the dataset accumulated from processing more than a decade worth of data from all available Canadian seismic stations. It begins with a discussion of the raw data itself followed by a review of the receiver function method and a more detailed explanation of the inversion algorithms used to produce the dataset. Three previous publications utilizing similar processing schemes provide unique subsets of data to compare with the values computed in this survey for quality assurance. ...
 
 
 \subsection{Geological and tectonic summary}
+\begin{itemize}
 
+\item Large scale overview/summary of regions under study
+\item Justification for selecting these regions?
+
+\end{itemize}
 
 \subsection{Previous geophysical studies}
+\begin{itemize}
 
+\item Lithoprobe and attendent papers
+\item Teleseismic studies
+
+\end{itemize}
 %% -----------------------------------------------%%
 \section{Data and methods}
-Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source are teleseismic receiver functions (hereafter RFs). The remaining two datasets are Crust 2.0, a widely published statistical average of similar regions with a global two degree resolution and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 2.0 and the active source compilation are used to qualify and compare with the primary dataset.
+Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source is teleseismic receiver function (hereafter RF) analysis. The remaining two datasets are Crust 2.0, a widely published statistical average of similar regions with a global two degree resolution, and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 2.0 and the active source compilation are used to qualify and compare with the primary dataset.
 
 \subsection{Teleseismic Data Set}
-The primary data utilized in this study are computed from teleseismic P-wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between the years 2000 and 2012 and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, Polaris, FedNor and Chasme. Seismograms are included for analysis if they within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with high enough signal to noise ratios to permit visual observation of the dominant P-wave energy and with sufficient impulsive first arrivals that allow arrival times to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
+The primary data utilized in this study are computed from teleseismic {\it P} wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between 2000 and 2012 and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, POLARIS, FedNor and Chasme. Seismograms are included for analysis if they fall within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with sufficiently high signal to noise ratios to permit visual observation of the dominant {\it P} wave energy and with sufficiently impulsive first arrivals to allow arrival onsets to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
 
-The first stage of processing requires the transformation of teleseismic data into receiver functions. In general terms, this transformation involves deconvolving an approximation of the earthquake source from horizontal recordings of ground motion [Langston, 1979]. The resulting waveforms contain discrete pulses corresponding to the S-wave arrivals scattered from subsurface discontinuities including the base of the crust, or Moho. Confident identification of these peaks to the estimate of crustal parameters, and improved results can be obtained by transforming the seismogram channels into P and S contributions based on a 1-D model of propagation. This procedure is accomplished by first rotating the N and E coordinates into radial and transverse directions and then performing a wave field decomposition using the radial and vertical channels [Bostock, 1998]. The direct arrival of the signal on the resulting P wave component is used as an approximation to the source function as P-wave impulse response for teleseismic P approximates a delta function. This windowed source estimate is deconvolved from the S wave component computed from the wave field decomposition.
+The first stage of processing requires the transformation of teleseismic data into receiver functions. In general terms, this transformation involves deconvolving an approximation of the earthquake source from horizontal recordings of ground motion [Langston, 1979]. The resulting waveforms contain discrete pulses corresponding to {\it S} waves scattered from subsurface discontinuities including the base of the crust, or Moho. Confident identification of these peaks is required to estimate crustal parameters, and improved results can be obtained by transforming the displacement seismogram into their {\it P} and {\it S} contributions based on a 1-D model of propagation. This procedure is accomplished by first rotating the N and E coordinates into radial and transverse directions and then performing a wave field decomposition using the radial and vertical channels [Kennet, 1991]. The direct {\it P} arrival of the signal on the resulting {\it P} wave component is used as an approximation to the source function as {\it P} component impulse response for teleseismic P approximates a delta function. This windowed source estimate is deconvolved from the {\it S} wave component computed from the wave field decomposition.
 
-We employ $L_2$, multichannel, frequency domain approach to perform the deconvolution which has the advantage of computational efficiency and does not require a priori assumptions about the noise in the data. More specifically, we employ a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $r(t)$.
+We employ an $L_2$, multichannel, frequency domain approach to perform the deconvolution that has the advantage of computational efficiency and does not require {\it a priori} assumptions concerning the noise levels in the data. More specifically, we employ a simultaneous deconvolution of $N$ seismograms sharing a similar slowness to compute a single impulse response or receiver function $r(t)$.
 
 % Deconvolution equations
 \begin{equation}
-  r(t) = F^{-1} \left[ G(\omega) \right] = F^{-1}
+  r(t) = {\cal F}^{-1} \left[ G(\omega) \right] = {\cal F}^{-1}
  \left[ \frac {\sum_n^N S_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta} \right ],
 \end{equation}
 
-where $F^{-1}$ is the inverse Fourier transform, $S_n$ represents the $n^{th}$ S wave component, $P_n$ is the windowed P wave component, $^*$ denotes the complex conjugate and $\delta$ is the regularization parameter controlling the trade off between model smoothness and data misfit. The parameter $\delta$ is chosen programatically by minimizing the general cross validation function $GCV(\delta)$ which is given by
+\noindent where $F^{-1}$ is the inverse Fourier transform, $S_n$ represents the $n^{th}$ {\it S} wave seismogram, $P_n$ is the corresponding windowed {\it P} wave seismogram, $^*$ denotes complex conjugation and $\delta$ is the regularization parameter controlling the trade off between model smoothness and data misfit. The parameter $\delta$ which is chosen programatically by minimizing the general cross validation function $GCV(\delta)$ is given by
 
 \begin{equation}
   GCV(\delta) = \frac {\sum_n^N\sum_m^M \left( S_n(\omega_m) - P_n(\omega_m)G(\omega_m) \right)^2 }
                       { \left( NM - \sum_m^M X(\omega_m) \right)^2 },
 \end{equation}
 
-where
+\noindent where
 
 \begin{equation}
-  X(\omega) = \frac {\sum_n^N P_n(\omega)P_n^*(\omega)} {\sum_n^N P_n(\omega)P_n^*(\omega) + \delta},
+  X(\omega_m) = \frac {\sum_n^N P_n(\omega_m)P_n^*(\omega_m)} {\sum_n^N P_n(\omega_m)P_n^*(\omega_m) + \delta},
 \end{equation}
 
-and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform. All resulting receiver functions, $r(t)$, are filtered between 0.04Hz and 3.0Hz.
+\noindent and $\omega$ is the frequency bin in the discrete Fourier transform. All resulting receiver functions, $r(t)$, are filtered between 0.04Hz and 3.0Hz.
 
 \subsection{Vp/Vs method} \label{section:VpVsMethod}
 
@@ -73,49 +83,48 @@ and $\omega_m$ is the $m^{th}$ frequency bin in the discrete Fourier transform. 
 \end{figure}
 
 
-A well tested and widely published method for extracting the $\frac{V_P}{V_S}$ ratio $R$ (where $V_P$ is P wave velocity and $V_S$ is S-wave velocity) and crustal thickness (or depth to Moho) $H$, is outlined by Zhu and Kanamori [2000], hereafter ZK. This method takes advantage of the differential arrival times between the S-wave reflected phases $Ps$, $PpPs$, $PsPs$, $PpSs$ and $PsSs$ and the direct P-wave arrival $Pp$ (Fig \ref{fig:reflectedPhases}). Note that $PsPs$ and $PpSs$ are kinematic analogues, such that the energy for these two phases arrive simultaneously for a 1-D model. For a range of slowness values, $p$, the differential arrival times, $t(p)$, trace moveout curves for each phase arrival given by
-ve
+A well tested and widely published method for extracting the ratio of {\it P} velocity $V_P$ to {\it S} velocity $V_S$, herafter referred to as $R$, and crustal thickness (or depth to Moho) $H$, is outlined by Zhu and Kanamori [2000], hereafter ZK. This method exploits the dependence of these parameters to the differential arrival times between the {\it S} wave reflected phases $Ps$, $PpPs$, $PsPs$, $PpSs$ and $PsSs$ and the direct {\it P} wave arrival $Pp$ (Fig \ref{fig:reflectedPhases}). Note that $PsPs$ and $PpSs$ are kinematic analogues, such that the energy for these two phases arrive simultaneously for a 1-D model. For a range of slowness values, $p$, the differential arrival times, $t(p)$, trace moveout curves for each phase arrival given by
 
 % Travel time equations
 \begin{equation} \label{eq:tps}
-t_{Ps}(p_i)=H \left[ \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2} - \sqrt{\frac{1}{V_P^2} - p_i^2} \right]
+t_{Ps}(p_n) = \frac{H}{V_P} \left[ \sqrt{ R^2 - V_P^2p_n^2} - \sqrt{1 - V_P^2p_n^2} \right]
 \end{equation}
 
 \begin{equation}
-t_{Pps}(p_i)=H \left[ \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2} + \sqrt{\frac{1}{V_P^2} - p_i^2} \right]
+t_{Pps}(p_n) = \frac{H}{V_P} \left[ \sqrt{ R^2 - V_P^2p_n^2} + \sqrt{1 - V_P^2p_n^2} \right]
 \end{equation}
 
 \begin{equation}
-t_{Pss}(p_i)= 2H  \sqrt{ \left(\frac{R}{V_P}\right)^2 - p_i^2}
+t_{Pss}(p_n)= \frac{2H}{V_P} \sqrt{ R^2 - V_P^2p_n^2}
 \end{equation}
 
-where $p_i$ is the slowness for the $i^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
+\noindent where $p_n$ is the slowness for the $n^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
-The travel time equations, as employed by ZK, assume a value for crustal P-wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corresponding to the Crust 2.0 value for the $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
+The travel time equations, as employed by ZK, assume a value for crustal {\it P} wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corresponding to the Crust 2.0 value for the corrisponding $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
-RFs are stacked along trial moveout curves for a range of candidate models of $R$ and $H$ to generate a fitness function $s(H,R)$.  Within the stacking procedure, each phase is assigned a weight to account for a general trend in the quality of the phases, with direct conversion $Ps$ usually characterized by the highest quality signal followed by $PpPs$ and $PpSs$. We chose weights of $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases, respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
+RFs are stacked along trial moveout curves for a range of candidate models of $R$ and $H$ to generate a fitness function $s(H,R)$.  Within the stacking procedure, each phase is assigned a weight to account for the expected relative amplitudes of the phases for typical velocity contrasts, with the direct conversion $Ps$ usually characterized by the highest quality signal followed by $PpPs$ and $PpSs$. We chose weights of $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases, respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
 \begin{equation}  \label{eq:stack}
-s(H,R) = \sum_{j=1}^{3} S_j \sum_{i=1}^N w_jr_i(t_j)
+s(H,R) = \sum_{m=1}^{3} S_m \sum_{n=1}^N w_mr_n(t_m)
 \end{equation}
 
-where
+\noindent where
 
 \begin{equation}
-S_j(H,R) = \frac {\left[ \sum_{i=1}^N r_i(t_j) \right]^2}
-                 { \sum_{i=1}^N r_i^2(t_j) }
+S_m(H,R) = \frac {\left[ \sum_{n=1}^N r_n(t_m) \right]^2}
+                 { \sum_{n=1}^N r_n^2(t_m) }
 \end{equation}
 
-is the semblance weight for the $j^{th}$ phase, time $t_j$ is calculated from the corresponding travel time function for a given $H$, $R$ pair as a function of slowness $p_i$ and $N$ is the total number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and results in better resolution when discriminating between different models. The function $s(H,R)$ can be thought of as a transformation that maps the $Ps$, $PpPs$ and $PpSs+PsPs$ pulses of the receiver function, $r(t)$, into $R$ and $H$ space as positive bands, via Eq. \ref{eq:stack}. Constructive interference where these bands intersect will produce a maximum in the stacking function. The model, $R$ and $H$, which produce this maximum provides the best estimate for the bulk crustal parameters for a given seismic station.
+\noindent is the semblance weight for the $m^{th}$ phase, time $t_m$ is calculated from the corresponding travel time function for a given $H$, $R$ pair as a function of slowness $p_n$ and $N$ is the total number of receiver functions. Multiplying by the semblance weighting sharpens the stacked image, $s(H,R)$, and results in better resolution when discriminating between different models. The function $s(H,R)$ can be thought of as a transformation that maps times of the $Ps$, $PpPs$ and $PpSs+PsPs$ phases into $R$ and $H$ space as positive bands, via Eq. \ref{eq:stack}. Constructive interference where these bands intersect produce a maximum in the stacking function. The model, $R$ and $H$, that produces this maximum provides the best estimate for the bulk crustal parameters for a given seismic station.
 
 %% [[\subsection{Full Parameter Method}]]
-A limitation of the ZK approach is the requirement for an initial $V_P$ estimate. This can be resolved by computing the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time makes this method easily scalable to hundreds of stations. This approach, denoted FG, is analyzed to determine the viability of recovering $V_P$.
+A limitation of the ZK approach is the requirement of an initial $V_P$ estimate. In principal we may compute the stacking function Eq. \ref{eq:stack}, as a function of all three seismic parameters, $s(H,R,V_P)$. Taking advantage of modern multi-core systems with reasonable quantities of data (fifty to a few hundred RFs) and a moderate search space ($n^3$ parameter candidates where $n \approx 150$) the computational time makes this method easily scalable to hundreds of stations. This ``fullgrid'' approach is analyzed to determine the viability of recovering $V_P$.
 
 The trade-off between $V_P$ and $H$ (and other parameter combinations) and error resulting from data quality are quantified for both the full parameter search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An estimate for the error is calculated in a bootstrap resampling approach by taking the standard deviation of 1024 parameter estimates each produced with randomly selected RFs, with replacement.
 
 \subsection{Additional data}
 
-We supplement receiver function estimates of crustal properties with data from controlled source experiments collected and compiled from GSC (Geological Survey of Canada) references by Walter Mooney (personal communication, 2012). The active source data provide $V_P$ and a few $V_S$ estimates for hundreds of locations across Canada, many along transects that cross geological provincial boundaries, faults and discontinuities. Some of these data are located within reasonable ($<$100km) proximity to seismic stations used in this study and can be used to compare with the $V_P$ and $V_S$ estimates resulting from the RF full gridsearch.
+We supplement receiver function estimates of crustal properties with data from controlled source experiments collected and compiled from GSC (Geological Survey of Canada) references by Walter Mooney (personal communication, 2012). The active source data provide $V_P$ and a few $V_S$ estimates for hundreds of locations across Canada, many along transects that cross major geological boundaries, faults and discontinuities. Some of these data are located within reasonable ($<$100 km) proximity to seismic stations used in this study and can be used to compare with the $V_P$ and $V_S$ estimates resulting from the RF full gridsearch.
 
 The Crust 2.0 model [Bassin, 2000] employs many of these same active source data to provide regular, complete coverage across all of Canada. The model includes estimates of $V_P$ and $V_S$ information with depth at
 $2^\circ$ resolution in latitude and longitude. In addition to employing local active source data, Crust 2.0 is also constrained by statistically aggregated data from geographically distant but geologically similar regions. It therefore affords a somewhat independent dataset suited for comparison with the crustal estimates calculated in this study.
@@ -125,7 +134,7 @@ $2^\circ$ resolution in latitude and longitude. In addition to employing local a
 
 \subsection{Comparisons}
 
-Three published studies have provided parameter estimates for $R$ and $H$ for subsets of the seismic stations considered here. The most recent, a study [Thompson et. al., 2010] focused on the Northern Canadian Shield, employs both the linear stacking approach used by ZK as well as a phase weighted method. A 2007 study of the Superior Province [Darbyshire et. al, 2007] and a study of the Grenville Orogen [Eaton et. al., 2006] utilize the ZK + semblance approach outlined in section \ref{section:VpVsMethod}.  Comparisons between crustal $R$ estimates for particular seismic stations are made for those values with a corresponding standard error of less than $\pm$0.06. This error threshold is chosen empirically as that which best partitions those receiver function stacks with visually recognizable energy along phase moveout curves from those where lack of data or poor quality make these moveout curves difficult to distinguish. For each study under comparison, data are reprocessed using the $V_P$ chosen by the study authors. For the 2006 and 2007 studies the ZK + semblance method is used, for the Thompson et. al study the linear stacking ZK apprach is employed. Both correlation coefficient and mean difference are provided in (Table \ref{table:comparison}) as measures of similarity.
+Three published studies have provided parameter estimates for $R$ and $H$ for subsets of the seismic stations considered here. The most recent study [Thompson et. al., 2010] focused on the northern Canadian Shield and employs both the linear stacking approach used by ZK as well as a phase weighted method. A 2007 study of the Superior Province [Darbyshire et. al, 2007] and a study of the Grenville Orogen [Eaton et. al., 2006] utilize the ZK + semblance approach outlined in section \ref{section:VpVsMethod}.  Comparisons between crustal estimates of $R$ for particular seismic stations are made for those values with corresponding standard errors of less than $\pm$0.06. This error threshold is chosen empirically as that which best partitions those receiver function stacks with visually recognizable energy along phase moveout curves from those where lack of data or poor quality make these moveout curves difficult to distinguish. For each study under comparison, data are reprocessed using the $V_P$ chosen by the study authors. For the 2006 and 2007 studies the ZK + semblance method is used whereas for the Thompson et. al study the linear stacking ZK approach is employed. Both correlation coefficient and mean difference are provided in (Table \ref{table:comparison}) as measures of similarity.
 
 \begin{table}
   \begin{tabular}{ l l l l l l }
@@ -144,19 +153,23 @@ Three published studies have provided parameter estimates for $R$ and $H$ for su
 
 \end{table}
 
-All three studies provide $H$ estimates that correlate strongly with the crustal thickness parameters computed here. The data from the Northern Canadian Shield most closely correlates in both $H$ and $R$. The lower correlation in $R$ than $H$ may be attributed to a number of factors such as the choice of deconvolution algorithm and selection and scaling of data. The greater uncertainty in $R$ inherent in the ZK method will cause larger fluctuations in computed estimates for differences in procedure. The data from Thompson et. al. [2010] also align most closely to the parameter estimates computed here, with the mean difference for both parameters being less than half of the averaged bootstrap error computed in this study. Results published by Eaton show reasonable correlations in both $R$ and $H$ and a mean difference for both parameters that are roughly equal to the averaged uncertainty in the data. Parameter estimates from the Superior Province [Darbyshire et. al., 2007] show the lowest correlation in $R$ as well as the highest mean difference in both parameters. These differences are well over the averaged computed error, and can not be easily explained by deviation related to noise in the data.
+All three studies reported $H$ estimates that correlate strongly with the crustal thickness parameters computed here. The data from the northern Canadian Shield shows strong correlation in both $H$ and $R$. The lower correlation observed in estimates of $R$ than $H$ is not unexpected as the range of $R$ is relatively narrow and small changes ($\approx 2\%$) are physically meaningful. A corollary of this is greater sensitivity of $R$ to differences in procedure such as the choice of deconvolution algorithm and selection and scaling of data. The results from Thompson et. al. [2010] also corrispond most closely to the parameter estimates computed here, with the mean difference for both parameters being less than half of the averaged bootstrap error computed in this study. Results published by {\it Eaton et. al.} [2006] show reasonable correlations in both $R$ and $H$ and a mean difference for both parameters that is roughly equal to the averaged uncertainty in the data. Parameter estimates from the Superior Province [Darbyshire et. al., 2007] show the lowest correlation in $R$ as well as the highest mean difference in both parameters. These differences are well over the averaged computed error, and can not be easily explained by deviation related to noise in the data.
 
-\subsection{Full Parameter Search Analysis}
+\subsection{Full Grid Search Analysis}
 
-We now proceed to compare our results computed using the ZK approach with those from the full parameter search (Table \ref{table:ZKvsFG}). We note that the velocity ratio $R$ has a correlation between the two datasets of 0.76 whereas $H$ has a correlation of 0.51. The low correlation between crustal thickness estimates can be explained by the strong tradeoff between $H$ and $V_P$ through the quantity $(t_{Pps}-t_{Ps})/2=t_{Pss}/2-t_{Ps}=H\sqrt{1-p^2V^2_P)}/V_P$. As a consequence, contours of the misfit surface $s(H,R,V_P)$ are highly extended along the kinematic curve in the $H$ - $V_P$ space (Figure \ref{fig:HVp_ULM}). This trade-off contributes to the low correlation in $H$ between the two methods. Higher correlation in this quantity can be restored by dividing out $V_P$ from $H$. The trade-off between the other parameters is lower as there is greater dependence between the parameters in the travel time equations (Figures \ref{fig:HR_ULM}-\ref{fig:RVp_ULM}.
+We now proceed to compare our results computed using the ZK approach with those from the full grid search (Table \ref{table:ZKvsFG}). We note that the velocity ratio $R$ has a correlation between the two datasets of 0.76 whereas $H$ has a correlation of 0.51. The low correlation between crustal thickness estimates can be explained by the strong tradeoff between $H$ and $V_P$ through the quantity
 
-For all but the cleanest stations, the trade-off between $H$ and $V_P$ renders recovery of $V_P$ infeasible using the FG approach. A comparison between two stations, ULM, the station with the highest quality RFs, and DORN, a station exhibiting less resolution in the reflected phases, illustrates this difficulty. RFs are arranged vertically, ordered by increasing slowness, for both stations and are shown in figures \ref{fig:RF_ULM} and \ref{fig:RF_DORN}. Cross sections of the three dimensional stacks $s(H,R,V_P)$  are displayed for ULM and DORN in figures \ref{fig:HR_ULM}-\ref{fig:HVp_ULM}) and figures \ref{fig:HR_DORN}-\ref{fig:HVp_DORN}. The lower resolution apparent in the $H$ - $V_P$ cross section for DORN translates into a bootstrap error of $V_P +/- 0.64 km/s$. The station ULM, with cleaner data has a lower absolute trade-off between $H$ and $V_P$ as indicated by the corresponding cross section and the lower bootstrap error of $V_P +/- 0.16 km/s$.
+$$\frac{t_{Pps}-t_{Ps}}{2}=\frac{t_{Pss}}{2} - t_{Ps}= \frac{H}{V_P}\sqrt{1-p^2V^2_P)}.$$
 
-Active source experiments located near broadband seismic stations provide independant crustal thickness and P-wave velocity estimates to test against data derived from the full parameter search method. We select stations with low error in $V_P$ and active source experiment locations within a 100km radius. If several active source experiments are located within this radius estimates are averaged. Four stations (ARVN, TYNO, ULM and WHY) meet these criteria and are presented in figure \ref{fig:activeVp}-\ref{fig:activeH}. Estimates computed from the FG approach are roughly 0.25 km/s higher than the active source data. This difference is consistent across all four stations and is exemplified by a 99\% correlation, suggesting a bias. However, the limited number of data means this bias is poorly constrained.
+\noindent As a consequence, contours of the misfit surface $s(H,R,V_P)$ are highly extended along the kinematic curve in the $H$ - $V_P$ space (Figure \ref{fig:HVp_ULM}). This trade-off contributes to the low correlation in $H$ between the two methods. Higher correlation in this quantity can be restored by dividing out $V_P$ from $H$. The trade-off between the other parameters is lower as there is greater dependence between them such that a small change in one necessitates a large change in an other to maintain travel-time equality, which has the result of a well defined misfit surface (Figures \ref{fig:HR_ULM}-\ref{fig:RVp_ULM}.
 
-There is less correlation between the crustal thickness data, owing largely to a single station ARVN. The reason for this discrepency, roughly 10km, is unknown though both the ZK method and and a published study [Thompson et. al., 2010] provide estimates for ARVN of around 41km, much nearer the FG value of 42km. Despite the lower correlation the apparent bias towards higher values computed from teleseismic data is maintained. A positive bias in one parameter will tend to bias the other, owing to the $H/Vp$ relationship in $t_{ps}$. Taking the average active source estimates from the two best stations, ULM and WHY, a $V_P$ of 6.3 km/s, a $V_P/V_S$ of 1.75 and a 36km thick crust, a 0.25 km/s change in $V_P$ will result in a 1.3km change in $H$. The actual mean difference for the two stations, 1.9km, is close but slightly greater than this value.
+For all but the cleanest stations, the trade-off between $H$ and $V_P$ renders recovery of $V_P$ unfeasible using the full grid approach. A comparison between two stations, ULM, the station with the highest quality RFs, and DORN, a station exhibiting less resolution in the reflected phases, illustrates this difficulty. RFs are arranged vertically, ordered by increasing slowness, and shown in figures \ref{fig:RF_ULM} and \ref{fig:RF_DORN}. Cross sections of $s(H,R,V_P)$ through each coordinate plane are displayed for ULM and DORN in figures \ref{fig:HR_ULM}-\ref{fig:HVp_ULM}) and figures \ref{fig:HR_DORN}-\ref{fig:HVp_DORN}. The lower resolution apparent in the $H$ - $V_P$ cross section for DORN translates into a bootstrap error of $V_P \pm 0.64 {\rm km/s}$. Station ULM, with cleaner data, has less trade-off between $H$ and $V_P$ as indicated by the corresponding cross section and the lower bootstrap error of $V_P \pm 0.16 {\rm km/s}$.
 
-[[ SOURCES REGARDING BIAS ]] [[ WHAT DOES THIS MEAN, IS VP USEABLE FOR THE HIGHEST QUALITY STATIONS?]]
+Active source experiments located near broadband seismic stations provide independent crustal thickness and {\it P} wave velocity estimates to test against data derived from the full parameter search method. We select stations with low error in $V_P$ and active source experiment locations within a 100 km radius. If several active source experiments are located within this radius, estimates are averaged. Four stations (ARVN, TYNO, ULM and WHY) meet these criteria and the parameter estimates are presented in figure \ref{fig:activeVp}-\ref{fig:activeH}. Estimates computed from the full grid approach are roughly 0.25 km/s higher than the active source data. This difference is consistent across all four stations and is exemplified by a 99\% correlation, suggesting possible bias. However, the limited number of data means this bias is poorly constrained.
+
+There is less correlation between the crustal thickness data, though this is largely attributed to an approximate 10 km difference between the ARVN estimates. The reason for this discrepancy is unknown though both the ZK method and and a published study [Thompson et. al., 2010] provide an estimate of near 41 km for ARVN, much nearer the full grid value of 42 km. Despite lower correlation the apparent bias towards higher values computed from teleseismic data is also maintained for $H$. A positive bias in one parameter will tend to bias the other, owing to the relationship between thickness, velocity and times of a scattered phase. For a constant $t_{ps}$ one may compute how much $H$ must change for a 0.25 km/s bias in $V_P$ [Zhu and Kanamori, 2000]. Using an average of the parameter estimates from the two cleanest stations, ULM and WHY, $\delta H$ will be 1.3 km, this fits well with the actual bias in the values.
+
+[[ SOURCES REGARDING BIAS ]] [[ WHAT DOES THIS MEAN, IS VP USABLE FOR THE HIGHEST QUALITY STATIONS?]]
 
 
 \begin{table}
@@ -235,7 +248,7 @@ There is less correlation between the crustal thickness data, owing largely to a
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{activeSourceCompVp}
-  \caption{P-wave velocity estimates computed from the full parameter search method compared to active source data and values from Crust 2.0}
+  \caption{\it{P} wave velocity estimates computed from the full parameter search method compared to active source data and values from Crust 2.0}
   \label{fig:activeVp}
 \end{figure}
 
@@ -256,13 +269,13 @@ There is less correlation between the crustal thickness data, owing largely to a
   \label{fig:conradPCA}
 \end{figure}
 
-We first consider the average crustal structure across Canada. We produce a depth profile for each station by stacking receiver functions along traveltime curves corresponding to a range of values in $H$ (0 to XX km in increments of DX km)  using the estimates for $R$ computed via the ZK + semblance method. The resulting profiles contain energy at depths corresponding to velocity discontinuities. By assembling all depth profiles into a matrix, we may decompose the data via SVD into its principal components. Figure \ref{fig:conradPCA} contains the first five singular vectors or modes normalized to unit magnitude that account for 78\% of the variance in the profiles. Higher modes corresponding to diminishing contributions to total variance. Each vector is normalized to unit magnitude. The first mode (blue) is effectively the average depth profile across all stations and captures 50\% of the variance in the dataset. It features a maximum near 38.7 km that may be taken as an average Moho depth. The second and third modes are dominated by a high amplitude shallow structures (e.g. sedimentary layers) within the top 10 km and Moho variability between 30 and 46 km . The fourth and fifth modes account for a combined 11\% of the variance in the dataset, contain energy at upper-mid crustal depths in the 10km to 20km range. All 5 modes display markedly lower energy within a depth window roughly between 20km and 30km.
+We now consider the average crustal structure across Canada. We produce a depth profile for each station by stacking receiver functions along traveltime curves corresponding to a range of values in $H$ (0 to 50 km in increments of 100 metres) using the estimates for $R$ computed via the ZK + semblance method. The resulting profiles contain energy at depths corresponding to major velocity discontinuities. By assembling all depth profiles into a matrix, we may decompose the data via SVD into their principal components. Figure \ref{fig:conradPCA} contains the first five singular vectors or modes normalized to unit magnitude that account for 78\% of the variance in the profiles. Higher modes correspond to diminishing contributions to total variance. Each vector is normalized to unit magnitude. The first mode (blue) is effectively the average depth profile across all stations and captures 50\% of the variance in the dataset. It features a maximum near 38.7 km that may be taken as an average Moho depth. The second and third modes are dominated by a high amplitude shallow structures (e.g. sedimentary layers) within the top 10 km and Moho variability between 30 and 46 km . The fourth and fifth modes account for a combined 11\% of the variance in the dataset, contain energy at upper-mid crustal depths in the 10 km to 20 km range. All 5 modes display markedly lower energy within a depth window roughly between 20 km and 30 km.
 
 \subsection{Regional Bulk Crustal Parameters}
 
-We proceed to consider velocity ratio, $R$, estimates for stations with assigned bootstrap errors below $\pm 0.06$ in a geographic context. To compensate for the uneven distribution of seismic stations, weights are applied to both $R$ and $H$ estimates before averaging over a given region. Weights are calculated by projecting station locations onto a 2D plane using the Albers equal-area conic projection. A Voronoi diagram is then computed using all projected station locations. The ratio between the Voronoi cell surface encompassing each station and the total area of the convex hull bounding region is employed as that station's weight.
+We proceed to consider crustal thickness $H$ and velocity ratio, $R$, estimates for stations with assigned $R$ bootstrap errors below $\pm 0.06$ in a geographic context (figure \ref{map:stationMap}). To compensate for the uneven distribution of seismic stations, weights are applied to both $R$ and $H$ estimates before averaging over a given region. Weights are calculated by projecting station locations onto a 2D plane using the Albers equal-area conic projection. A Voronoi diagram is then computed using all projected station locations. The ratio between the Voronoi cell surface encompassing each station and the total area of the convex hull bounding region is employed as that station's weight.
 
-Table \ref{table:regionParameters} displays the results of our regionalization in $R$ and $H$. The weighted average crustal thickness for all stations (Canada) is 37km, about two kilometres thinner than the average for the Canadian Shield. Crust 2.0 provides slightly thicker crustal average for Canada (38.2km) and a slightly thinner average for the Shield (38.8km). The Slave Province averages are similar to those for the Churchill province and has a deeper crust than Crust2.0 and a smaller seismic velocity ratio. Moving south and east from the Churchill Province through the Superior Province into the Grenville, we note an increase in the ZK + semblance $R$ values as well as crustal thickness $H$. The weighted $R$ average is 1.73 in the Churchill Province increasing slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. In a similar fashion, weighted average of $H$ increases from 38.9 km in the Churchill Province  to 39.7 in the Superior Province and 41.7km in the Grenville Province. The southeastern trend towards increasing values is also expressed in weighted averaged active source $V_P$ data.  The Crust 2.0 model is characterized by slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity is not, however, as apparent.
+Table \ref{table:regionParameters} displays the results of our regionalization in $R$ and $H$. The weighted average crustal thickness for all stations (Canada) is 37 km, about two kilometres thinner than the average for the Canadian Shield. Crust 2.0 provides a slightly thicker crustal average for Canada (38.2 km) and a slightly thinner average for the Shield (38.8 km). The Slave Province averages are similar to those for the Churchill province and a thicker crust than Crust2.0 and a smaller seismic velocity ratio. Moving south and east from the Churchill Province through the Superior Province into the Grenville Province, we note an increase in the ZK + semblance $R$ values as well as crustal thickness $H$, figures \ref{map:Hmap}-\ref{map:Rmap}. The weighted $R$ average is 1.73 in the Churchill Province increasing slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. In a similar fashion, the weighted average of $H$ increases from 38.9 km in the Churchill Province  to 39.7 in the Superior Province and 41.7 km in the Grenville Province. The southeastern trend towards increasing values is also expressed in weighted averaged active source $V_P$ data.  The Crust 2.0 model is characterized by slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity is not, however, as apparent.
 
 
 \begin{table}
@@ -286,57 +299,76 @@ Table \ref{table:regionParameters} displays the results of our regionalization i
 \end{table}
 
 
- %% \begin{figure}
-%%   \centering
-%%   \includegraphics[width=\textwidth]{VpVsMap}
-%%   \caption{}
-%%   \label{fig:VpVsMap}
-%% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{stationMap}
+  \caption{}
+  \label{map:stationMap}
+\end{figure}
 
-%% \begin{figure}
-%%   \centering
-%%   \includegraphics[width=\textwidth]{VpVsMapCrust}
-%%   \caption{}
-%%   \label{fig:VpVsMapCrust}
-%% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Hmap}
+  \caption{}
+  \label{map:Hmap}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Rmap}
+  \caption{}
+  \label{map:Rmap}
+\end{figure}
+
 
 
 %% -----------------------------------------------%%
 \section{Discussion}
 \subsection{Canada}
 
-  - Comparison Discussion
-    - Crustal Thickness
-      - Very good correlation in thickness estimates with all three datasets.
-    - Vp/Vs
-      - Lower correlation with the Vp/Vs values.
-        - Expect lower correlation with Vp/Vs since the travel time equations are
-          less sensitive to seismic velocities than they are to crustal thickness.
-          This means that there will be more uncertainty during the parameter
-          search for Vp/Vs and hence higher degree of relative error.
-        - ??? Utilizing different sources, applying different deconvolution and
-          filtering techniques will therefore have a greater impact on the
-          uncertainty of picking Vp/Vs than that of crustal thickness H. ???
+\begin{itemize}
 
-   - Explanation of results
-    - Canada H and Vp/Vs
-      - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust
-        2.0 average is 38km as well, however this is expected since Crust2.0 data for
-        Canada is based on the same data as that of Lith5.0
-      - ??? Make some comparison to global average ???
+\item Quiet zone in discontinuity data
 
+\item Compare data to Crust 2.0. What do the differences mean.
+  \begin{itemize}
+  \item Lith 5.0 data?
+  \end{itemize}
+
+\item Discuss spatial trends -> high R -> Low R moving North West through Ontario
+  \begin{itemize}
+  \item this is part of larger trend of changing R values as we move from Churchill to Grenville
+  \item in the literature? Yes. See notes on lithoprobe studies
+  \end{itemize}
+
+\item Secular variation in NE Churchill from thinner crusts to thicker as we move East
+  \begin{itemize}
+  \item in the literature? See Lith 5.0: A revised crustal model for Canada based on lithoprobe results.
+  \end{itemize}
+
+ \item Explanation of results
+
+ \item Canada H and Vp/Vs
+
+ \item Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust
+   2.0 average is 38 km as well, however this is expected since Crust2.0 data for
+   Canada is based on the same data as that of Lith5.0 .... is it definately?
+
+ \item Make some comparison to global average?
+
+\end{itemize}
 
 %% -----------------------------------------------%%
 \section{Conclusions}
-Conclusions here
 
 %% ------------------------------------------------------------------------ %%
 
 
-\begin{bibliography}
+\section{bibliography}
+
 Bassin, C., G. Laske, G. Masters (2000), The Current Limits of Resolution for Surface Wave Tomography in North America, EOS Trans AGU, 81.
 
-Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21,183-21,200.
+Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21183-21200.
 
 Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
 
@@ -353,6 +385,8 @@ Efron, B., R. Tibshirani (1986), Bootstrap Methods for Standard Errors, Confiden
 Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
 Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
 
+Kennet, B. L. N., (1991), The removal of free surface interactions from three-component seismograms, J. Geophys. Int., 104, 153-163.
+
 Langston, C. A. (1979), Structure under Mount Rainier, Washington, inferred from teleseismic body waves, J. Geophys. Res., 84(B9), 4749–4762, doi:10.1029/JB084iB09p04749.
 
 Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002) LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
@@ -363,7 +397,7 @@ Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from te
 
 Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
 
-\end{bibliography}
+
 
 
 \end{document}
