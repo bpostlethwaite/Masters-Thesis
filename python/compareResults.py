@@ -66,7 +66,7 @@ for i in range(0,3):
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
 
-    arg = Args().addQuery("stdR", "lt", 0.06)
+    arg = Args().addQuery("stdR", "lt", 0.08)
 
     p0 = Params(pro, ["H", "R", "stdR", "stdH"], arg)
     p2 = Params(pub, ["H", "R", "stdR", "stdH"], arg)
@@ -146,7 +146,7 @@ for i in range(0,3):
     plt.axis("tight")
 
 
-#plt.show()
+plt.show()
 
 
 

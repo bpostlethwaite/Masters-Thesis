@@ -19,8 +19,8 @@ pfile = 'stack_P.sac';
 sfile = 'stack_S.sac';
 load stnsjson.mat
 %%  Select Station to Process and load station data
-method = 'fullgrid';
-station = 'ARVN'; %
+method = 'kanamori';
+station = 'STCO'; %
 
 %{
 

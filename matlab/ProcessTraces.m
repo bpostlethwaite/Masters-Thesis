@@ -6,8 +6,8 @@ npb = 2; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 fLow = 0.04; % Lower frequency cutoff
-fHigh = 2.7; % Upper frequency cutoff
-snrlim = .99;
+fHigh = 3; % Upper frequency cutoff
+snrlim = .90;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results

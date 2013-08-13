@@ -280,7 +280,7 @@ def setStatus(s, stdict):
             status = "picked"
         # CHANGE THIS BELOW TO A KANAMORI STATISTIC
         if 'hk' in s[k]: # Set processing status by Kan R result
-            if (s[k]['hk']['stdR'] < 0.06) and s[k]['usable']:
+            if (s[k]['hk']['stdR'] < 0.08):
                 status = "processed-ok"
             else:
                 status = "processed-notok"
