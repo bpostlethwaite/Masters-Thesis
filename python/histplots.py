@@ -20,7 +20,7 @@ import ternplots as tern
 
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 moonfile = os.environ['HOME'] + '/thesis/data/moonvpGeology.json'
-vfile = os.environ['HOME'] + '/thesis/data/voronoi.data'
+vfile = os.environ['HOME'] + '/thesis/data/voronoi.json'
 
 parameterType = 'velocity'
 
@@ -231,7 +231,7 @@ class Ptype(object):
     def settitle(self, prefix):
         self.title = prefix + "\n" + self.histlabel + " Histogram"
 
-vdict = json.loads( open(vfile).read() )
+
 
 if __name__  == "__main__":
 
@@ -248,6 +248,8 @@ if __name__  == "__main__":
     plots.py 5  Archean vs Proterozoic
     ######################
     '''
+
+    vdict = json.loads( open(vfile).read() )
 
     plotnum = [False for i in range(15)]
     if len(sys.argv) < 2:

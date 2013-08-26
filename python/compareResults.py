@@ -50,15 +50,14 @@ title = 18 / ratio
 leg = 16 / ratio
 
 
-
-def meanDifference(x, y):
+def rmsDifference(x, y):
     assert (len(x) == len(y))
     n = len(x)
     md = 0
     for i in range(n):
-        md += abs(x[i] - y[i])
+        md += (x[i] - y[i])**2
 
-    return md/(n)
+    return np.sqrt(md/(n))
 
 
 for i in range(0,3):
@@ -66,7 +65,7 @@ for i in range(0,3):
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
 
-    arg = Args().addQuery("stdR", "lt", 0.08)
+    arg = Args().addQuery("stdR", "lt", 0.06)
 
     p0 = Params(pro, ["H", "R", "stdR", "stdH"], arg)
     p2 = Params(pub, ["H", "R", "stdR", "stdH"], arg)
@@ -94,11 +93,11 @@ for i in range(0,3):
 
     Hcorr = pearsonr(H1, H2)
 
-    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
-    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
+#    print "Correlation between", leglabel[i], "H datasets is {0:.2f}".format(Hcorr[0]), "using", len(p2.stns), "stations"
+#    print "Correlation between", leglabel[i], "Vp/Vs datasets is {0:.2f}".format(Rcorr[0]), "using", len(p2.stns), "stations"
 
-    print "Mean Difference between", leglabel[i], "H datasets is {0:.2f}".format(meanDifference(H1,H2)), "using", len(p2.stns), "stations"
-    print "Mean Difference between", leglabel[i], "Vp/Vs datasets is {0:.3f}".format(meanDifference(R1,R2)), "using", len(p2.stns), "stations"
+    print "RMS Difference between", leglabel[i], "H datasets is {0:.2f}".format(rmsDifference(H1,H2)), "using", len(p2.stns), "stations"
+    print "RMS Difference between", leglabel[i], "Vp/Vs datasets is {0:.3f}".format(rmsDifference(R1,R2)), "using", len(p2.stns), "stations"
 
     t = np.arange(len(R1))
 
@@ -146,7 +145,7 @@ for i in range(0,3):
     plt.axis("tight")
 
 
-plt.show()
+#plt.show()
 
 
 

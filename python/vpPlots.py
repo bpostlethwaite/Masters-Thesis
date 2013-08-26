@@ -16,14 +16,14 @@ stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
 csfile = os.environ['HOME'] + '/thesis/data/csStations.json'
 
 
-def meanDifference(x, y):
+def RMSDifference(x, y):
     assert (len(x) == len(y))
     n = len(x)
     md = 0
     for i in range(n):
-        md += abs(x[i] - y[i])
+        md += (x[i] - y[i])**2
 
-    return md/(n)
+    return np.sqrt(md/(n))
 
 
 def princomp(A,numpc=0):
@@ -199,8 +199,8 @@ if __name__  == "__main__":
         corr = pearsonr(f.fg_Vp, c.Vp)
         print "Active Source vs FG Vp with {} stations: correlation = {}".format(len(f.stns), corr[0])
 
-        md = meanDifference(f.fg_Vp, c.Vp)
-        print "Active Source vs FG Vp with {} stations: Mean Difference = {}".format(len(f.stns), md)
+        md = RMSDifference(f.fg_Vp, c.Vp)
+        print "Active Source vs FG Vp with {} stations: RMS Difference = {}".format(len(f.stns), md)
 
         fig = plt.figure( figsize = (figwidth, figheight) )
         ax = plt.subplot(111)
