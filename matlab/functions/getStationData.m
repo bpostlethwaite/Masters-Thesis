@@ -2,7 +2,6 @@ function [data] = getStationData(json, regions)
 % GETSTATIONDATA gets json data for specifed region and json file.
 
 data.lat = []; data.lon = [];
-data.R = []; data.H = [];
 data.stn = {};
 
 s = loadjson(json);
@@ -10,6 +9,8 @@ fn = fieldnames(s);
 
 %% Get stations.json data 
 if ~isempty(strfind(json, 'stations.json'))
+
+    data.R = []; data.H = [];
     
     for strng = fn'
         str = char(strng);
@@ -43,6 +44,9 @@ if ~isempty(strfind(json, 'stations.json'))
     %% Get Mooney Vp shot data R = Vp
     %
 elseif ~isempty(strfind(json, 'moonvpGeology.json'))
+    
+    data.R = []; data.H = [];
+    
     for strng = fn'
         str = char(strng);
         % All stns should have geoprov field (ie within Canada)
@@ -57,13 +61,14 @@ elseif ~isempty(strfind(json, 'moonvpGeology.json'))
         data.stn{end+1} = str;
         data.lat(end+1) = s.(str).lat;
         data.lon(end+1) = s.(str).lon;
-        data.R(end + 1) = s.(str).Vp; % Yes this is on purpose, main script
+        data.R(end+1) = s.(str).Vp; %This is because it has NO R
         % is just setup to work on two variables - might change it though
         data.H(end+1) = s.(str).H;
     end
     
-    %% Get Crust 2.0 Data
+    %% Get Crust 2.0 / 1.0 Data
 else
+    data.Vp = []; data.H = []; data.R = [];
      for strng = fn'
         str = char(strng);
         % All stns should have geoprov field (ie within Canada)
@@ -80,6 +85,7 @@ else
         data.lon(end+1) = s.(str).lon;
         data.R(end + 1) = s.(str).R;
         data.H(end+1) = s.(str).H;
+        data.Vp(end+1) = s.(str).Vp;
     end
 end
 

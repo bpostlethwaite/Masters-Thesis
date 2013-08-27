@@ -17,7 +17,7 @@ from histplots import poisson
 
 
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
-regionf = os.environ['HOME'] + '/thesis/data/voronoi.json'
+regionf = os.environ['HOME'] + '/thesis/data/voronoi.data'
 
 def lithVp(vs, poisson):
     return vs * np.sqrt( (2 - 2*poisson) / (1 - 2 * poisson)  )
@@ -31,6 +31,7 @@ top = bottom + height
 def addtext(ax, x, y, text, rotation):
     ax.text(x-0.02, y, text,
             color = 'black',
+            size = 'large',
             horizontalalignment = 'left',
             verticalalignment = 'bottom',
             rotation = rotation,
@@ -73,7 +74,14 @@ liths = {
         "Vs": 4.144,
         "R": 1.752,
         "poisson": 0.258
+        },
+    "Diorite": {
+        "Vp": 6.611,
+        "Vs": 3.733,
+        "R": 1.771,
+        "poisson": 0.266
         }
+
     }
 
 
@@ -83,7 +91,7 @@ if __name__  == "__main__":
     ## Figure Properties #######
     figwidth = 12
     figheight = figwidth / 1.4
-    ratio = 1.5
+    ratio = 1
     lw = 4 / ratio# line width
     ms = 12 / ratio# marker size
     caplen = 7 / ratio
@@ -92,7 +100,7 @@ if __name__  == "__main__":
     ticks = 16 / ratio
     label = 16 / ratio
     title = 18 / ratio
-    leg = 16 / ratio
+    leg = 14 / ratio
 
 
 
@@ -108,8 +116,8 @@ if __name__  == "__main__":
         ax = plt.subplot(111)
 
         vs = np.linspace(2.5, 5., 100)
-        sigmas = [0.35, 0.3, 0.25, 0.2, 0.15]
-        px = [3.5, 3.75, 4.0, 4.25, 4.4, 4.6]
+        sigmas = [0.3, 0.25, 0.2]
+        px = [3.7, 3.9, 4.1]
 
         rd = {}
 
@@ -119,34 +127,42 @@ if __name__  == "__main__":
             for k in j.keys():
                 rd[k] = {}
                 rd[k]['H'] = j[k]['kanamori']['H']
-                rd[k]['Vp'] = j[k]['mooney']['Vp']
+                rd[k]['Vp'] = j[k]['crust1']['Vp']
                 rd[k]['R'] = j[k]['kanamori']['R']
                 rd[k]['Vs'] = rd[k]['Vp'] / rd[k]['R']
                 rd[k]['poisson'] = poisson(rd[k]['R'])
+
                 #print '['+'"'+k+'"'+','+'np.array(['+str(rd[k]['Vp'])+','+str(rd[k]['poisson'])+'])],'
 
 
         for i in range(len(sigmas)):
             vp = lithVp(vs, sigmas[i])
-            text = 'poisson={}'.format(sigmas[i])
-            plt.plot(vs, vp, 'k', lw = lw, ms = ms)
-            addtext(ax, px[i], lithVp(px[i], sigmas[i]), text, 45 - 2*i)
+            text = r'$\sigma$ = {}'.format(sigmas[i])
+            plt.plot(vs, vp, ':k', lw = lw, ms = ms, label = "constant Poisson's Ratio" if i == 0 else None)
+            addtext(ax, px[i], lithVp(px[i], sigmas[i]), text, 45 - 10)
 
 
         for k in rd:
-            plt.plot(rd[k]['Vs'], rd[k]['Vp'], '*', label = k, markersize = 12)
+            plt.plot(rd[k]['Vs'], rd[k]['Vp'], '^', label = k, markersize = 12)
 
         for l in liths:
-            plt.plot(liths[l]['Vs'], liths[l]['Vp'], 'o', label = l, markersize = 12)
+            plt.plot(liths[l]['Vs'], liths[l]['Vp'], 'ok', markersize = 10)
+            plt.text(liths[l]['Vs'], liths[l]['Vp'] + 0.05, l,
+                     color = 'black',
+                     horizontalalignment = 'center',
+                     verticalalignment = 'center'
+                    )
 
-        plt.legend(loc= 2, prop={'size': leg})
+
+
+        plt.legend(loc= 2, prop={'size': leg}, numpoints=1)
         #plt.title(r'$\alpha=')#.format(sigmas[1]))
         plt.ylabel("Vp [km/s]", size = label)
         plt.xlabel("Vs [km/s]", size = label)
         plt.grid(True)
-        plt.grid(False)
-        plt.xlim( (3, 4.5) )
-        plt.ylim( (5.5, 8.0) )
+        #plt.grid(False)
+        plt.xlim( (3.4, 4.2) )
+        plt.ylim( (6, 7.5) )
 
     plt.show()
     #plt.savefig('myfig')

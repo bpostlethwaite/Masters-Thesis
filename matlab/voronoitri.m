@@ -59,23 +59,20 @@ despace = @(str) str(str ~= ' ');
 plotbounds = 0;
 plotvoronoi = 0;
 
-json = struct();
+json = struct();%loadjson( [userdir,'/thesis/data/voronoi.json'] );
 
 %% Get Data
 datafiles = {
     '../data/stations.json'
     '../data/moonvpGeology.json'
     '../data/crust2.json'
+    '../data/crust1.json'
     };
 dsource = {
     'kanamori'
     'mooney'
     'crust2'
-    };
-dtype = {
-    'R'
-    'Vp'
-    'R'
+    'crust1'
     };
 
 for jj = 1:size(region, 1)
@@ -85,91 +82,115 @@ for jj = 1:size(region, 1)
     VB = [y(degtorad(bound(:,1)), degtorad(bound(:,2))), ...
         x(degtorad(bound(:,1)), degtorad(bound(:,2)))];
     
-    for qq = 1:3
+    for qq = 1:4
         
         data = getStationData( datafiles{qq}, region{jj,1} );
         
-        %% Perform conversions, computations
-        vects = [y(degtorad(data.lat'), degtorad(data.lon')), ...
-            x(degtorad(data.lat'), degtorad(data.lon'))];
-        %vects = vect(degtorad([data.lat', data.lon']));
-        %VB = vect(deg2rad(bound));
-                
-        if plotbounds
-            figure()
-            plot(vects(:,1), vects(:,2), '.')
-            hold on
-            % Plot Convex Hull of Bounding, to make sure it IS convex
-            K = convhull(VB(:,1), VB(:,2));
-            plot(VB(K, 1), VB(K, 2),'k')
-            % Overplot Bounding
-            plot(VB(:,1), VB(:,2), 'r--')
-
-            nump = size(VB,1);
-            % Label vertices
-            plabels = arrayfun(@(n) {sprintf('B%d', n)}, (1:nump)');
-            Hpl = text(VB(:,1), VB(:,2), plabels, 'FontWeight', ...
-                'bold', 'HorizontalAlignment','center', ...
-                'BackgroundColor', 'none');
-            % label stations
-            Hpl = text(vects(:,1), vects(:,2), char(data.stn), 'FontWeight', ...
-                'bold', 'HorizontalAlignment','center', ...
-                'BackgroundColor', 'none');
+        
+        if qq == 4
+            json.( despace(region{jj,2}) ).(dsource{qq}).Vp = mean(data.Vp);
+            json.( despace(region{jj,2}) ).(dsource{qq}).R = mean(data.R);
+            json.( despace(region{jj,2}) ).(dsource{qq}).H = mean(data.H);
+        else
             
-            title('Initial Bounding Box')
-            hold off
-        end
-        % Remove Points outside boundary. Only do if it really isn't worth
-        % extending the boundary.
-        out = ~inpolygon(vects(:,1), vects(:,2), VB(:,1), VB(:,2));
-        if any(out)
-            fprintf('Cutting out %i stations\n', sum(out))
-            data.R(out) = [];
-            data.H(out) = [];
-            data.stn(out) = [];
-            data.lat(out) = [];
-            data.lon(out) = [];
+            %% Perform conversions, computations
             vects = [y(degtorad(data.lat'), degtorad(data.lon')), ...
                 x(degtorad(data.lat'), degtorad(data.lon'))];
-            %             %vects = vect(degtorad([data.lat', data.lon']));
-        end
-        
-        [X,IA,IC] = unique(vects, 'rows');
+            %vects = vect(degtorad([data.lat', data.lon']));
+            %VB = vect(deg2rad(bound));
             
-        % Convex Hull Bounding
-        if (jj == 6) && (qq == 1)% For some reason chosen Shield 
-            % bounding doesn't work even though I am quite sure it's convex
-            % So we will just use the convex hull operation for Shield region
-            dt = DelaunayTri(X(:,1:2));
-            k = convexHull(dt);
-            cvx = [dt.X(k,1), dt.X(k,2)];
-            options.pbound = polytope( cvx );
-        else
-            % User supplied bounding
-            options.pbound = polytope( VB(:,1:2) );
+            if plotbounds
+                figure()
+                plot(vects(:,1), vects(:,2), '.')
+                hold on
+                % Plot Convex Hull of Bounding, to make sure it IS convex
+                K = convhull(VB(:,1), VB(:,2));
+                plot(VB(K, 1), VB(K, 2),'k')
+                % Overplot Bounding
+                plot(VB(:,1), VB(:,2), 'r--')
+                
+                nump = size(VB,1);
+                % Label vertices
+                plabels = arrayfun(@(n) {sprintf('B%d', n)}, (1:nump)');
+                Hpl = text(VB(:,1), VB(:,2), plabels, 'FontWeight', ...
+                    'bold', 'HorizontalAlignment','center', ...
+                    'BackgroundColor', 'none');
+                % label stations
+                Hpl = text(vects(:,1), vects(:,2), char(data.stn), 'FontWeight', ...
+                    'bold', 'HorizontalAlignment','center', ...
+                    'BackgroundColor', 'none');
+                
+                title('Initial Bounding Box')
+                hold off
+            end
+            % Remove Points outside boundary. Only do if it really isn't worth
+            % extending the boundary.
+            out = ~inpolygon(vects(:,1), vects(:,2), VB(:,1), VB(:,2));
+            if any(out)
+                fprintf('Cutting out %i stations\n', sum(out))
+                data.R(out) = [];
+                data.H(out) = [];
+                if isfield(data, 'Vp')
+                    data.Vp(out) = [];
+                end
+                data.stn(out) = [];
+                data.lat(out) = [];
+                data.lon(out) = [];
+                vects = [y(degtorad(data.lat'), degtorad(data.lon')), ...
+                    x(degtorad(data.lat'), degtorad(data.lon'))];
+                %             %vects = vect(degtorad([data.lat', data.lon']));
+            end
+            
+            
+            [X,IA,IC] = unique(vects, 'rows');
+            
+            % Convex Hull Bounding
+            if (jj == 6) && (qq == 1)% For some reason chosen Shield
+                % bounding doesn't work even though I am quite sure it's convex
+                % So we will just use the convex hull operation for Shield region
+                dt = DelaunayTri(X(:,1:2));
+                k = convexHull(dt);
+                cvx = [dt.X(k,1), dt.X(k,2)];
+                options.pbound = polytope( cvx );
+            else
+                % User supplied bounding
+                options.pbound = polytope( VB(:,1:2) );
+            end
+            options.plot = 0;
+            V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
+            area = volume(V);
+            area = area./sum(area);
+            Rv = data.R(IA) * area;
+            Hv = data.H(IA) * area;
+            Vpv = [];
+            if isfield(data, 'Vp')
+                Vpv = data.Vp(IA) * area;
+            end
+            
+            
+            if plotvoronoi
+                figure()
+                plot(V)
+                hold on
+                arealabel = arrayfun(@(n) {sprintf(' %2.3f', n)}, area*100);
+                plabel = strcat(data.stn(IA)', arealabel);
+                Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
+                    'bold', 'HorizontalAlignment','center', ...
+                    'BackgroundColor', 'none');
+                hold off
+            end
+            
+            json.( despace(region{jj,2}) ).(dsource{qq}).H = Hv;
+            if strcmp(dsource{qq}, 'mooney')
+                json.( despace(region{jj,2}) ).(dsource{qq}).Vp = Rv;
+            else
+                json.( despace(region{jj,2}) ).(dsource{qq}).R = Rv;
+            end
+            
+            if isfield(data, 'Vp')
+                json.( despace(region{jj,2}) ).(dsource{qq}).Vp = Vpv;
+            end
         end
-        options.plot = 0;
-        V = mpt_voronoi(X(:,1:2), options); % compute voronoi cells
-        area = volume(V);
-        area = area./sum(area);
-        Rv = data.R(IA) * area;
-        Hv = data.H(IA) * area;
-        
-        if plotvoronoi
-            figure()
-            plot(V)
-            hold on
-            arealabel = arrayfun(@(n) {sprintf(' %2.3f', n)}, area*100);
-            plabel = strcat(data.stn(IA)', arealabel);
-            Hpl = text(X(:,1), X(:,2), plabel, 'FontWeight', ...
-                'bold', 'HorizontalAlignment','center', ...
-                'BackgroundColor', 'none');
-            hold off
-        end
-        
-        json.( despace(region{jj,2}) ).(dsource{qq}).(dtype{qq}) = Rv;
-        json.( despace(region{jj,2}) ).(dsource{qq}).H = Hv;
-        
     end
 end
 
