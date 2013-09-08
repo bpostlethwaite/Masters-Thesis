@@ -221,26 +221,66 @@ BEGIN OUTLINE
 
 - Discussion
 
-  - Comparison Discussion
-    - Crustal Thickness
-      - Very good correlation in thickness estimates with all three datasets.
-    - Vp/Vs
-      - Lower correlation with the Vp/Vs values.
-        - Expect lower correlation with Vp/Vs since the travel time equations are
-          less sensitive to seismic velocities than they are to crustal thickness.
-          This means that there will be more uncertainty during the parameter
-          search for Vp/Vs and hence higher degree of relative error.
-        - ??? Utilizing different sources, applying different deconvolution and
-          filtering techniques will therefore have a greater impact on the
-          uncertainty of picking Vp/Vs than that of crustal thickness H. ???
+- Bulk crustal parameters can give estimates of bulk crustal composition.
+  - explain bulk crustal composition
+  - Roy Johnson and Rudnicks papers
+- Crustal Composition allows us to say X about crustal evolution
+- Previously work, a,b,c has used Y methods to get bulk estimates
+- We use X to get results
+- Lithology Figure
+- Why choose these rock types: Pericval and kapuskasing
+- Granodiorite, tonalite gneiss and Diorite
 
-  - Explanation of results
-    - Canada H & Vp/Vs
-      - Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust
-        2.0 average is 38km as well, however this is expected since Crust2.0 data for
-        Canada is based on the same data as that of Lith5.0
-      - ??? Make some comparison to global average ???
 
+
+\begin{itemize}
+
+
+
+% \item Crustal Evolution
+  \begin{itemize}
+    \item Archean vs Proterozoic
+    \item Canada Averages
+    \item Regional Averages
+    \item Compare data to Crust 2.0. What do the differences mean.
+      \begin{itemize}
+      \item Lith 5.0 data?
+      \item Lith5.0 (Perry, 2002) estimates for Canadian crustal averages is 38 km. The Crust
+        2.0 average is 38 km as well, however this is expected since Crust2.0 data for
+        Canada is based on the same data as that of Lith5.0 .... is it definately?
+
+      \end{itemize}
+
+    \item Discuss spatial trends -> high R -> Low R moving North West through Ontario
+      \begin{itemize}
+      \item this is part of larger trend of changing R values as we move from Churchill to Grenville
+      \item in the literature? Yes. See notes on lithoprobe studies
+      \end{itemize}
+
+    \item Secular variation in NE Churchill from thinner crusts to thicker as we move East
+      \begin{itemize}
+      \item in the literature? See Lith 5.0: A revised crustal model for Canada based on lithoprobe results.
+      \end{itemize}
+  \end{itemize}
+
+
+
+\item Analysis of the discontuity data for the Canadian crust indicates a heterogenous crust with a
+\item Crustal discontinuities
+  \begin{itemize}
+
+    \item Upper crust appears to have more consistent structure, though only marginally... 4th and 5th principal components
+    \item Lower crust appears more heterogenous (Fewer consistent structure throughout Canada)
+    \item Brittle Ductile transition? See Roy Hynmann
+    \item Conrad may be last reflector in an more reflective upper crust, similar to the reflection moho. This interpretation may be more consistent with the dataset
+
+  \end{itemize}
+
+
+
+
+
+\end{itemize}
 
 
 
