@@ -14,6 +14,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided cambrian", 
+      "era": "paleozoic", 
+      "period": "cambrian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 27.1356783919598, 
@@ -71,6 +76,11 @@
       "stdS": 246.00071379528436, 
       "stdVp": 0.544316216432115
     }, 
+    "geochron": {
+      "epoch": "undivided cambrian", 
+      "era": "paleozoic", 
+      "period": "cambrian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 41.959798994974875, 
@@ -119,6 +129,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.66834170854271, 
@@ -172,6 +187,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 41.20603015075377, 
@@ -234,6 +254,11 @@
       "stdS": 0.551130920062276, 
       "stdVp": 0.6167518038927768
     }, 
+    "geochron": {
+      "epoch": "early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 43.09045226130653, 
@@ -293,6 +318,11 @@
       "stdS": 0.9202789859291465, 
       "stdVp": 0.7815123731199526
     }, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 39.07035175879397, 
@@ -351,6 +381,11 @@
       "stdS": 528.3549363810843, 
       "stdVp": 0.5491407629243493
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 39.19597989949749, 
@@ -406,6 +441,11 @@
       "stdS": 1.7051719981648796, 
       "stdVp": 0.5195224185050962
     }, 
+    "geochron": {
+      "epoch": "lower silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.20603015075377, 
@@ -443,6 +483,11 @@
     }
   }, 
   "AHCB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.9325, 
     "lon": -123.7373, 
@@ -471,6 +516,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 45.85427135678392, 
@@ -527,6 +577,11 @@
       "stdR": 0.0359958363836036, 
       "stdS": 1.6029639031645166, 
       "stdVp": 0.4476559875623545
+    }, 
+    "geochron": {
+      "epoch": "undivided silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
     }, 
     "geoprov": "Innuitian Orogen", 
     "hk": {
@@ -586,6 +641,11 @@
       "stdS": 629.6470392449097, 
       "stdVp": 1.015132316672848
     }, 
+    "geochron": {
+      "epoch": "late mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.69849246231156, 
@@ -644,6 +704,11 @@
       "stdS": 0.9051679143782577, 
       "stdVp": 1.0017449473747524
     }, 
+    "geochron": {
+      "epoch": "late paleoproterozoic-early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic-mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 44.597989949748744, 
@@ -699,6 +764,11 @@
       "stdS": 0.4831994506968878, 
       "stdVp": 0.7895180229447992
     }, 
+    "geochron": {
+      "epoch": "neogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 31.78391959798995, 
@@ -731,6 +801,11 @@
     "badCompEvents": 0, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.09045226130653, 
@@ -777,6 +852,11 @@
       "stdR": 0.029135438125913522, 
       "stdS": 1.1861128728770156, 
       "stdVp": 1.1077502853192163
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -828,6 +908,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 31.281407035175878, 
@@ -877,6 +962,11 @@
       "stdR": 0.007495966085398492, 
       "stdS": 1.1977666162065501, 
       "stdVp": 0.18380915034087048
+    }, 
+    "geochron": {
+      "epoch": "undivided archean-proterozoic", 
+      "era": "precambrian", 
+      "period": "archean-proterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -938,6 +1028,11 @@
       "stdS": 0.5127653244329173, 
       "stdVp": 0.431962981899309
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 42.58793969849246, 
@@ -975,6 +1070,11 @@
     }
   }, 
   "ATLB": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.21837, 
     "lon": -127.05998, 
@@ -1009,6 +1109,11 @@
       "stdR": 0.01326210108136657, 
       "stdS": 0.4198232714461281, 
       "stdVp": 0.5776904384690107
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -1061,6 +1166,11 @@
       "stdS": 0.8355348794855432, 
       "stdVp": 0.6431251736790154
     }, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 42.462311557788944, 
@@ -1107,6 +1217,11 @@
       "stdR": 0.009845667224092825, 
       "stdS": 0.913008538828601, 
       "stdVp": 0.37886892145233947
+    }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -1157,6 +1272,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 39.19597989949749, 
@@ -1216,6 +1336,11 @@
       "stdS": 491.9575645289732, 
       "stdVp": 0.40279112555374064
     }, 
+    "geochron": {
+      "epoch": "undivided ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.040201005025125, 
@@ -1273,6 +1398,11 @@
       "stdS": 1.948711786276419, 
       "stdVp": 0.6018698269241691
     }, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.0, 
@@ -1303,6 +1433,11 @@
   }, 
   "BCBC": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 52.372, 
     "lon": -126.755, 
@@ -1333,6 +1468,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 36.18090452261306, 
@@ -1384,6 +1524,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.93467336683417, 
@@ -1431,6 +1576,11 @@
       "stdS": 0.262236000824816, 
       "stdVp": 0.8477996404514752
     }, 
+    "geochron": {
+      "epoch": "upper silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 44.221105527638194, 
@@ -1468,6 +1618,11 @@
     }
   }, 
   "BMSB": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.8356, 
     "lon": -125.1355, 
@@ -1500,6 +1655,11 @@
       "stdR": 0.030635765360643115, 
       "stdS": 0.4866160996832284, 
       "stdVp": 0.6298300730381122
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -1538,6 +1698,11 @@
     }
   }, 
   "BPCB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.92358, 
     "lon": -123.70447, 
@@ -1565,6 +1730,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 26.256281407035175, 
@@ -1603,6 +1773,11 @@
   }, 
   "BRPO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "lat": 45.65059, 
     "lon": -77.5061, 
@@ -1621,6 +1796,11 @@
     }
   }, 
   "BTB": {
+    "geochron": {
+      "epoch": "undivided devonian-permian", 
+      "era": "paleozoic", 
+      "period": "devonian-permian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.4683, 
     "lon": -125.5214, 
@@ -1655,6 +1835,11 @@
       "stdR": 0.03874549805739151, 
       "stdS": 688.144025801252, 
       "stdVp": 0.6996509912548271
+    }, 
+    "geochron": {
+      "epoch": "late paleoproterozoic-early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic-mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -1713,6 +1898,11 @@
       "stdS": 1.4381191241755034, 
       "stdVp": 0.3713512912327152
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 37.185929648241206, 
@@ -1764,6 +1954,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided devonian-cretaceous", 
+      "era": "paleozoic-mesozoic", 
+      "period": "devonian-cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.0, 
@@ -1812,6 +2007,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "upper silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 49.62311557788945, 
@@ -1869,6 +2069,11 @@
       "stdS": 376.5906444978007, 
       "stdVp": 0.6810477765413306
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 38.69346733668342, 
@@ -1916,6 +2121,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.763819095477388, 
@@ -1966,6 +2176,11 @@
       "stdR": 0.03149919333919606, 
       "stdS": 0.09584588418606634, 
       "stdVp": 0.8166593458478336
+    }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -2025,6 +2240,11 @@
       "stdS": 375.68443547427097, 
       "stdVp": 0.7167379312117471
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 41.33165829145729, 
@@ -2075,6 +2295,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoproterozoic-silurian", 
+      "era": "precambrian-paleozoic", 
+      "period": "neoproterozoic-silurian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 41.834170854271356, 
@@ -2133,6 +2358,11 @@
       "stdS": 493.98690025739796, 
       "stdVp": 0.701299344881462
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 34.42211055276382, 
@@ -2170,6 +2400,11 @@
     }
   }, 
   "CLAP": {
+    "geochron": {
+      "epoch": "undivided quaternary", 
+      "era": "cenozoic", 
+      "period": "quaternary"
+    }, 
     "geoprov": "Pacific Continental Shelf", 
     "lat": 53.3217, 
     "lon": -132.411, 
@@ -2202,6 +2437,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.321608040201006, 
@@ -2250,6 +2490,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 25.0, 
@@ -2302,6 +2547,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.381909547738694, 
@@ -2344,6 +2594,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 35.175879396984925, 
@@ -2388,6 +2643,11 @@
       "stdR": 0.05819364765442214, 
       "stdS": 0.27356898595743623, 
       "stdVp": 0.764743883078697
+    }, 
+    "geochron": {
+      "epoch": "lower-middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
     }, 
     "geoprov": "Interior Platform", 
     "hk": {
@@ -2436,6 +2696,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 45.22613065326633, 
@@ -2485,6 +2750,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 32.914572864321606, 
@@ -2535,6 +2805,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided carboniferous", 
+      "era": "paleozoic", 
+      "period": "carboniferous"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 25.376884422110553, 
@@ -2585,6 +2860,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 35.80402010050251, 
@@ -2634,6 +2914,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.763819095477388, 
@@ -2685,6 +2970,11 @@
       "stdS": 624.9305912973604, 
       "stdVp": 0.5556488131163819
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 39.57286432160804, 
@@ -2722,6 +3012,11 @@
     }
   }, 
   "CPLB": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.61181, 
     "lon": -124.75119, 
@@ -2758,6 +3053,11 @@
       "stdR": 0.02388285257836827, 
       "stdS": 1.0499504479989044, 
       "stdVp": 0.829131429618567
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -2814,6 +3114,11 @@
       "stdR": 0.018176913437121755, 
       "stdS": 1.114505476945907, 
       "stdVp": 0.5171395652663338
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Bear Province", 
     "hk": {
@@ -2872,6 +3177,11 @@
       "stdS": 1.7825156236169342, 
       "stdVp": 0.615266348132854
     }, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 35.92964824120603, 
@@ -2908,6 +3218,11 @@
     }
   }, 
   "DAWS": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.234, 
     "lon": -132.4782, 
@@ -2942,6 +3257,11 @@
       "stdR": 0.01161804391507602, 
       "stdS": 0.8300746674915924, 
       "stdVp": 0.22631045656883148
+    }, 
+    "geochron": {
+      "epoch": "undivided devonian-permian", 
+      "era": "paleozoic", 
+      "period": "devonian-permian"
     }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
@@ -3000,6 +3320,11 @@
       "stdS": 700.6317708601719, 
       "stdVp": 0.5563798758119572
     }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.69849246231156, 
@@ -3037,6 +3362,11 @@
     }
   }, 
   "DHLB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.9915, 
     "lon": -123.8152, 
@@ -3072,6 +3402,11 @@
       "stdR": 0.03182158790008216, 
       "stdS": 531.3503934740943, 
       "stdVp": 0.6222328394331037
+    }, 
+    "geochron": {
+      "epoch": "early-middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Arctic Platform", 
     "hk": {
@@ -3110,6 +3445,11 @@
     }
   }, 
   "DIB": {
+    "geochron": {
+      "epoch": "neogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.20247, 
     "lon": -132.47666, 
@@ -3145,6 +3485,11 @@
       "stdR": 0.026637500687419036, 
       "stdS": 792.3486877608724, 
       "stdVp": 0.9819821314983975
+    }, 
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
     }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
@@ -3204,6 +3549,11 @@
       "stdS": 0.5921711621319384, 
       "stdVp": 0.9211313355058831
     }, 
+    "geochron": {
+      "epoch": "late paleoproterozoic-early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic-mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 37.06030150753769, 
@@ -3260,6 +3610,11 @@
       "stdR": 0.019067003464791676, 
       "stdS": 0.5202584355888878, 
       "stdVp": 0.640128491707804
+    }, 
+    "geochron": {
+      "epoch": "undivided archean-proterozoic", 
+      "era": "precambrian", 
+      "period": "archean-proterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -3318,6 +3673,11 @@
       "stdS": 0.8468526338579455, 
       "stdVp": 0.7504221419298954
     }, 
+    "geochron": {
+      "epoch": "late paleoproterozoic-early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic-mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.57286432160804, 
@@ -3346,6 +3706,11 @@
   }, 
   "DRCO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 43.87658, 
     "lon": -78.70228, 
@@ -3365,6 +3730,11 @@
   }, 
   "DREO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 43.87244, 
     "lon": -78.70396, 
@@ -3396,6 +3766,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided carboniferous", 
+      "era": "paleozoic", 
+      "period": "carboniferous"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.175879396984925, 
@@ -3434,6 +3809,11 @@
   }, 
   "DRWO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 43.871897, 
     "lon": -78.729983, 
@@ -3471,6 +3851,11 @@
       "stdR": 0.02794666882355938, 
       "stdS": 135.36202259511526, 
       "stdVp": 0.73476727534645
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -3510,6 +3895,11 @@
   }, 
   "DSNO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "early paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Southern Province", 
     "lat": 46.4715, 
     "lon": -81.187, 
@@ -3548,6 +3938,11 @@
       "stdR": 0.030843103683880334, 
       "stdS": 248.3125685214318, 
       "stdVp": 0.8325300309780026
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -3599,6 +3994,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 43.09045226130653, 
@@ -3628,6 +4028,11 @@
     }
   }, 
   "EDB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.8737, 
     "lon": -127.1198, 
@@ -3656,6 +4061,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "maastrichtian-campanian", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 31.90954773869347, 
@@ -3706,6 +4116,11 @@
       "stdR": 0.019526645895567744, 
       "stdS": 0.19183435193818646, 
       "stdVp": 0.44855546065527535
+    }, 
+    "geochron": {
+      "epoch": "undivided cambrian", 
+      "era": "paleozoic", 
+      "period": "cambrian"
     }, 
     "geoprov": "Interior Platform", 
     "hk": {
@@ -3766,6 +4181,11 @@
       "stdS": 522.1329418105759, 
       "stdVp": 0.875108368022051
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 38.94472361809045, 
@@ -3816,6 +4236,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided cretaceous-tertiary", 
+      "era": "mesozoic-cenozoic", 
+      "period": "cretaceous-tertiary"
+    }, 
     "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 29.14572864321608, 
@@ -3862,6 +4287,11 @@
       "stdR": 0.09328850275077984, 
       "stdS": 0.6248231455709528, 
       "stdVp": 0.4188663210808566
+    }, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -3918,6 +4348,11 @@
       "stdS": 100.0581202333504, 
       "stdVp": 0.7239198728058202
     }, 
+    "geochron": {
+      "epoch": "upper silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.834170854271356, 
@@ -3955,6 +4390,11 @@
     }
   }, 
   "ENGB": {
+    "geochron": {
+      "epoch": "undivided quaternary", 
+      "era": "cenozoic", 
+      "period": "quaternary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.008, 
     "lon": -123.08893, 
@@ -3991,6 +4431,11 @@
       "stdR": 0.04325342697003244, 
       "stdS": 0.9302175513349157, 
       "stdVp": 0.6710891954930818
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Superior Province", 
     "hk": {
@@ -4042,6 +4487,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided triassic-jurassic", 
+      "era": "mesozoic", 
+      "period": "triassic-jurassic"
+    }, 
     "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 29.77386934673367, 
@@ -4079,6 +4529,11 @@
     }
   }, 
   "FALL": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.278, 
     "lon": -132.4601, 
@@ -4094,6 +4549,11 @@
     }
   }, 
   "FCBC": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.97418, 
     "lon": -124.73576, 
@@ -4132,6 +4592,11 @@
       "stdR": 0.024464285272749547, 
       "stdS": 1.289338544555954, 
       "stdVp": 0.6611225433753184
+    }, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
     }, 
     "geoprov": "Hudson Bay Lowlands", 
     "hk": {
@@ -4192,6 +4657,11 @@
       "stdS": 1.2965813766988392, 
       "stdVp": 0.28412578952934436
     }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.07537688442211, 
@@ -4228,6 +4698,11 @@
     }
   }, 
   "FHRB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.0537, 
     "lon": -127.1186, 
@@ -4256,6 +4731,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "neogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.51256281407035, 
@@ -4298,6 +4778,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 32.663316582914575, 
@@ -4349,6 +4834,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 36.80904522613065, 
@@ -4379,6 +4869,11 @@
   }, 
   "FPLB": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "neogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 52.95406, 
     "lon": -123.77904, 
@@ -4417,6 +4912,11 @@
       "stdR": 0.009200863704827382, 
       "stdS": 638.8141384620112, 
       "stdVp": 0.35409464022915144
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -4469,6 +4969,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower-middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 41.08040201005025, 
@@ -4527,6 +5032,11 @@
       "stdS": 0.784403002986822, 
       "stdVp": 0.7889632092276202
     }, 
+    "geochron": {
+      "epoch": "undivided mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.321608040201006, 
@@ -4573,6 +5083,11 @@
       "stdR": 0.009494635297405973, 
       "stdS": 561.7631942949137, 
       "stdVp": 0.40926129381732135
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Bear Province", 
     "hk": {
@@ -4627,6 +5142,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided cambrian-ordovician", 
+      "era": "paleozoic", 
+      "period": "cambrian-ordovician"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 42.71356783919598, 
@@ -4684,6 +5204,11 @@
       "stdS": 1.0515291350450293, 
       "stdVp": 1.043309717427793
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 35.42713567839196, 
@@ -4734,6 +5259,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided cambrian-devonian", 
+      "era": "paleozoic", 
+      "period": "cambrian-devonian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 50.0, 
@@ -4791,6 +5321,11 @@
       "stdS": 448.402713923782, 
       "stdVp": 0.596371910208834
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 43.84422110552764, 
@@ -4844,6 +5379,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided archean-proterozoic", 
+      "era": "precambrian", 
+      "period": "archean-proterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.93467336683417, 
@@ -4892,6 +5432,11 @@
       "stdS": 465.72403883460765, 
       "stdVp": 0.9160788186775122
     }, 
+    "geochron": {
+      "epoch": "undivided silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.050251256281406, 
@@ -4929,6 +5474,11 @@
     }
   }, 
   "GHNB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.3065, 
     "lon": -124.2364, 
@@ -4963,6 +5513,11 @@
       "stdR": 0.006787023429098051, 
       "stdS": 0.8308052060036034, 
       "stdVp": 0.21611854268278424
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -5001,6 +5556,11 @@
     }
   }, 
   "GLBC": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.39599, 
     "lon": -123.63631, 
@@ -5036,6 +5596,11 @@
       "stdR": 0.03613575573500254, 
       "stdS": 397.03570390125526, 
       "stdVp": 0.5881715456029648
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -5074,6 +5639,11 @@
     }
   }, 
   "GOWB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.73688, 
     "lon": -123.18478, 
@@ -5109,6 +5679,11 @@
       "stdR": 0.013543925397697705, 
       "stdS": 0.7298036495086948, 
       "stdVp": 0.5597625134330445
+    }, 
+    "geochron": {
+      "epoch": "undivided cambrian-devonian", 
+      "era": "paleozoic", 
+      "period": "cambrian-devonian"
     }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
@@ -5148,6 +5723,11 @@
   }, 
   "HBDB": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "late jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.16972, 
     "lon": -122.21348, 
@@ -5179,6 +5759,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 36.30653266331658, 
@@ -5226,6 +5811,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 41.45728643216081, 
@@ -5276,6 +5866,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 25.0, 
@@ -5314,6 +5909,11 @@
   }, 
   "HLSB": {
     "badCompEvents": 1, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.28365, 
     "lon": -121.72493, 
@@ -5352,6 +5952,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoproterozoic"
+    }, 
     "geoprov": "Bear Province", 
     "hk": {
       "H": 43.84422110552764, 
@@ -5412,6 +6017,11 @@
       "stdS": 0.6706174481344593, 
       "stdVp": 1.0129867240451056
     }, 
+    "geochron": {
+      "epoch": "late jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 41.70854271356784, 
@@ -5441,6 +6051,11 @@
     }
   }, 
   "HOLB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.6405, 
     "lon": -128.1318, 
@@ -5471,6 +6086,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "late cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 44.095477386934675, 
@@ -5513,6 +6133,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 49.49748743718593, 
@@ -5564,6 +6189,11 @@
       "stdS": 0.4026458434848094, 
       "stdVp": 0.6198478133799257
     }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Bear Province", 
     "hk": {
       "H": 39.69849246231156, 
@@ -5602,6 +6232,11 @@
   }, 
   "HRMB": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.2446, 
     "lon": -121.9391, 
@@ -5620,6 +6255,11 @@
     }
   }, 
   "HSMO": {
+    "geochron": {
+      "epoch": "early paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Southern Province", 
     "lat": 47.37082, 
     "lon": -79.66566, 
@@ -5656,6 +6296,11 @@
       "stdS": 407.57706581173835, 
       "stdVp": 0.8553949460023943
     }, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 35.92964824120603, 
@@ -5685,6 +6330,11 @@
     }
   }, 
   "I10H1": {
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "lat": 50.2015, 
     "lon": -96.0269, 
@@ -5719,6 +6369,11 @@
       "stdR": 0.028315381729112604, 
       "stdS": 589.5695531521784, 
       "stdVp": 0.7938504898165667
+    }, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -5779,6 +6434,11 @@
       "stdS": 0.16150563788418731, 
       "stdVp": 0.7779480544719569
     }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Arctic Platform", 
     "hk": {
       "H": 37.311557788944725, 
@@ -5827,6 +6487,11 @@
       "stdR": 0.03196722160825832, 
       "stdS": 362.4976240155229, 
       "stdVp": 0.759869392792814
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -5885,6 +6550,11 @@
       "stdR": 0.03049099267030446, 
       "stdS": 446.6581847437665, 
       "stdVp": 0.939739632376056
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -5945,6 +6615,11 @@
       "stdS": 0.8801319059490457, 
       "stdVp": 0.20134230878756854
     }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Arctic Platform", 
     "hk": {
       "H": 37.311557788944725, 
@@ -5996,6 +6671,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "late mesoproterozoic-neoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic-neoproterozoic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 29.14572864321608, 
@@ -6054,6 +6734,11 @@
       "stdS": 0.9463607644066637, 
       "stdVp": 0.7907170458786804
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 41.33165829145729, 
@@ -6094,6 +6779,11 @@
     "badCompEvents": 0, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 35.92964824120603, 
@@ -6142,6 +6832,11 @@
       "stdR": 0.026734212419656962, 
       "stdS": 326.76399998884864, 
       "stdVp": 1.200589196388233
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -6193,6 +6888,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 25.12562814070352, 
@@ -6230,6 +6930,11 @@
     }
   }, 
   "JRBB": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.43002, 
     "lon": -124.05218, 
@@ -6245,6 +6950,11 @@
     }
   }, 
   "JRBC": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.39572, 
     "lon": -123.96005, 
@@ -6283,6 +6993,11 @@
       "stdS": 173.50256842936793, 
       "stdVp": 0.837005838360147
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.18090452261306, 
@@ -6320,6 +7035,11 @@
     }
   }, 
   "KANO": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.2883, 
     "lon": -132.6175, 
@@ -6355,6 +7075,11 @@
       "stdR": 0.07974324974347755, 
       "stdS": 0.5427555321598574, 
       "stdVp": 1.0411934788440091
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Superior Province", 
     "hk": {
@@ -6416,6 +7141,11 @@
       "stdS": 0.7114250971562631, 
       "stdVp": 0.8450874307483484
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 39.19597989949749, 
@@ -6445,6 +7175,11 @@
     }
   }, 
   "KELB": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.66107, 
     "lon": -123.57007, 
@@ -6480,6 +7215,11 @@
       "stdR": 0.0639302728827051, 
       "stdS": 0.9963490622366461, 
       "stdVp": 0.9108261787506245
+    }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -6518,6 +7258,11 @@
     }
   }, 
   "KHVB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.5688, 
     "lon": -123.4663, 
@@ -6548,6 +7293,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 39.57286432160804, 
@@ -6605,6 +7355,11 @@
       "stdS": 0.827654430144042, 
       "stdVp": 0.6538034078267589
     }, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 46.984924623115575, 
@@ -6658,6 +7413,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided archean", 
+      "era": "precambrian", 
+      "period": "archean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 50.0, 
@@ -6706,6 +7466,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "", 
+      "era": "", 
+      "period": ""
+    }, 
     "hk": {
       "H": 43.5929648241206, 
       "R": 1.8625628140703516, 
@@ -6742,6 +7507,11 @@
     }
   }, 
   "KLNB": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.66107, 
     "lon": -123.57063, 
@@ -6771,6 +7541,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 39.07035175879397, 
@@ -6824,6 +7599,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 48.36683417085427, 
@@ -6875,6 +7655,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 43.21608040201005, 
@@ -6922,6 +7707,11 @@
       "stdR": 0.030216467662736383, 
       "stdS": 0.41207893668892076, 
       "stdVp": 0.8169782476399998
+    }, 
+    "geochron": {
+      "epoch": "middle-late mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -6981,6 +7771,11 @@
       "stdS": 332.66323684133675, 
       "stdVp": 0.4787923143076604
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 34.92462311557789, 
@@ -7028,6 +7823,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "late mesoproterozoic-neoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic-neoproterozoic"
+    }, 
     "geoprov": "Bear Province", 
     "hk": {
       "H": 25.376884422110553, 
@@ -7086,6 +7886,11 @@
       "stdS": 352.41884505041236, 
       "stdVp": 0.4973982322478297
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 38.5678391959799, 
@@ -7124,6 +7929,11 @@
   }, 
   "LATQ": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "late paleoproterozoic-early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic-mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "lat": 47.38355, 
     "lon": -72.781933, 
@@ -7142,6 +7952,11 @@
     }
   }, 
   "LCBC": {
+    "geochron": {
+      "epoch": "undivided jurassic-cretaceous", 
+      "era": "mesozoic", 
+      "period": "jurassic-cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.48337, 
     "lon": -124.2619, 
@@ -7157,6 +7972,11 @@
     }
   }, 
   "LDBN": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "lat": 66.72194, 
     "lon": -124.94306, 
@@ -7191,6 +8011,11 @@
       "stdR": 0.016916717323988282, 
       "stdS": 353.4766862258389, 
       "stdVp": 0.8465234155888398
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -7253,6 +8078,11 @@
       "stdS": 0.5845306067594505, 
       "stdVp": 1.080887218975041
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 42.462311557788944, 
@@ -7301,6 +8131,11 @@
       "stdR": 0.03125186145700097, 
       "stdS": 0.4567236929851087, 
       "stdVp": 0.6353615246005991
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -7361,6 +8196,11 @@
       "stdS": 350.81540580974143, 
       "stdVp": 0.3732146598779039
     }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.07537688442211, 
@@ -7412,6 +8252,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mississippian-jurassic", 
+      "era": "paleozoic-mesozoic", 
+      "period": "mississippian-jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.30653266331658, 
@@ -7460,6 +8305,11 @@
       "stdR": 0.0075853113009870495, 
       "stdS": 1.139649033854499, 
       "stdVp": 0.24482773683587505
+    }, 
+    "geochron": {
+      "epoch": "undivided neoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoproterozoic"
     }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
@@ -7512,6 +8362,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 48.99497487437186, 
@@ -7550,6 +8405,11 @@
   }, 
   "LSQQ": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "lat": 49.058017, 
     "lon": -76.979567, 
@@ -7589,6 +8449,11 @@
       "stdS": 314.85846993527497, 
       "stdVp": 1.2565998312342745
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 36.55778894472362, 
@@ -7626,6 +8491,11 @@
     }
   }, 
   "LZB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.6117, 
     "lon": -123.8236, 
@@ -7656,6 +8526,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided carboniferous-permian", 
+      "era": "paleozoic", 
+      "period": "carboniferous-permian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 33.79396984924623, 
@@ -7708,6 +8583,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided carboniferous", 
+      "era": "paleozoic", 
+      "period": "carboniferous"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 36.68341708542714, 
@@ -7768,6 +8648,11 @@
       "stdS": 538.8300693555711, 
       "stdVp": 0.8391795144755417
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 39.07035175879397, 
@@ -7824,6 +8709,11 @@
       "stdR": 0.07024012085735645, 
       "stdS": 142.57597212558716, 
       "stdVp": 0.9157704869193666
+    }, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
     }, 
     "geoprov": "Interior Platform", 
     "hk": {
@@ -7882,6 +8772,11 @@
       "stdS": 360.20830745166694, 
       "stdVp": 0.36919799740529524
     }, 
+    "geochron": {
+      "epoch": "lower silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 34.54773869346734, 
@@ -7929,6 +8824,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 35.30150753768844, 
@@ -7987,6 +8887,11 @@
       "stdS": 0.8151447146678953, 
       "stdVp": 0.3563636902730221
     }, 
+    "geochron": {
+      "epoch": "upper devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "Innuitian Orogen", 
     "hk": {
       "H": 28.894472361809044, 
@@ -8043,6 +8948,11 @@
       "stdS": 337.0749065997709, 
       "stdVp": 0.906016294060626
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 37.814070351758794, 
@@ -8081,6 +8991,11 @@
   }, 
   "MCMB1": {
     "badCompEvents": 58, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 52.8217, 
     "lon": -123.81895, 
@@ -8118,6 +9033,11 @@
       "stdR": 0.031217518485087612, 
       "stdS": 414.82656810796044, 
       "stdVp": 0.9398334481945055
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -8169,6 +9089,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "maastrichtian-campanian", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 34.2964824120603, 
@@ -8197,61 +9122,12 @@
       "type": "early/mid Proter. shield, Africa"
     }
   }, 
-  "MEDO": {
-    "badCompEvents": 0, 
-    "conrad": {
-      "hdisc": [
-        2.705052
-      ], 
-      "hdiscp": [
-        2.705052
-      ]
-    }, 
-    "fg": {
-      "H": 36.241610738255055, 
-      "R": 1.950000000000011, 
-      "Vp": 6.973154362416137, 
-      "stdH": 3.862443966854573, 
-      "stdR": 0.08386933559380017, 
-      "stdS": 423.0605973933834, 
-      "stdVp": 0.6283838669659535
-    }, 
-    "hk": {
-      "H": 41.70854271356784, 
-      "R": 1.772110552763819, 
-      "c0R": 1.800753768844221, 
-      "c1R": 1.7615577889447236, 
-      "stdH": 0.5868430599528048, 
-      "stdR": 0.010494291355306301
-    }, 
-    "km": {}, 
-    "lat": 43.1646, 
-    "lon": -78.45462, 
-    "mb": {
-      "H": 44.34673366834171, 
-      "R": 1.7359296482412059, 
-      "Vp": 6.597989949748744, 
-      "stdH": 4.788587716626092, 
-      "stdR": 0.034517007756194824, 
-      "stdVp": 0.5960499482846096
-    }, 
-    "network": "POLARIS", 
-    "numEvents": 438, 
-    "poorEvents": 203, 
-    "processnotes": "", 
-    "start": 20040507.21, 
-    "status": "processed-ok", 
-    "stop": 0, 
-    "usable": 1, 
-    "usableEvents": 204, 
-    "wm": {
-      "H": 41.5, 
-      "R": 1.7621768707482994, 
-      "Vp": 6.476, 
-      "type": "orogen/41.5km"
-    }
-  }, 
   "MGB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.99986, 
     "lon": -124.6975, 
@@ -8277,6 +9153,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 39.69849246231156, 
@@ -8327,6 +9208,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 25.753768844221106, 
@@ -8373,6 +9259,11 @@
       "stdR": 0.03184042210601532, 
       "stdS": 499.01719024154136, 
       "stdVp": 0.5642560897837388
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -8433,6 +9324,11 @@
       "stdS": 447.99877256448406, 
       "stdVp": 0.5730083120477032
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 40.57788944723618, 
@@ -8490,6 +9386,11 @@
       "stdS": 1.1444280398277626, 
       "stdVp": 1.0126959750570013
     }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 33.91959798994975, 
@@ -8530,6 +9431,11 @@
     "badCompEvents": 52, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 31.155778894472363, 
@@ -8585,6 +9491,11 @@
       "stdR": 0.037613558373275194, 
       "stdS": 1.2168799799658954, 
       "stdVp": 0.5436172360390373
+    }, 
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
     }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
@@ -8644,6 +9555,11 @@
       "stdS": 477.3548048304925, 
       "stdVp": 0.6932582790645203
     }, 
+    "geochron": {
+      "epoch": "undivided cambrian-ordovician", 
+      "era": "paleozoic", 
+      "period": "cambrian-ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.57788944723618, 
@@ -8701,6 +9617,11 @@
       "stdR": 0.04790320503631354, 
       "stdS": 366.2287141274479, 
       "stdVp": 0.9043700474836343
+    }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -8761,6 +9682,11 @@
       "stdS": 344.53906353510854, 
       "stdVp": 0.8524313573811007
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 39.824120603015075, 
@@ -8799,6 +9725,11 @@
   }, 
   "MSNO": {
     "badCompEvents": 1, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "Hudson Bay Lowlands", 
     "lat": 51.2913, 
     "lon": -80.6151, 
@@ -8839,6 +9770,11 @@
       "stdS": 0.3928085982397222, 
       "stdVp": 0.4098690497620785
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 38.5678391959799, 
@@ -8868,6 +9804,11 @@
     }
   }, 
   "MWAB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.74111, 
     "lon": -125.3032, 
@@ -8897,6 +9838,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 27.63819095477387, 
@@ -8946,6 +9892,11 @@
       "stdS": 0.6977334435914192, 
       "stdVp": 0.9292456149216304
     }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 45.47738693467337, 
@@ -8984,6 +9935,11 @@
   }, 
   "NEMQ": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "lat": 51.6837, 
     "lon": -76.25757, 
@@ -9002,6 +9958,11 @@
     }
   }, 
   "NLLB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.2274, 
     "lon": -123.9881, 
@@ -9036,6 +9997,11 @@
       "stdR": 0.03087783000363535, 
       "stdS": 0.4303885086555903, 
       "stdVp": 0.6224333524726556
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Superior Province", 
     "hk": {
@@ -9093,6 +10059,11 @@
       "stdR": 0.031129876355740417, 
       "stdS": 305.44300092555306, 
       "stdVp": 0.8043645563425195
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -9153,6 +10124,11 @@
       "stdS": 300.61707479137925, 
       "stdVp": 0.6909355611635292
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.55778894472362, 
@@ -9209,6 +10185,11 @@
       "stdS": 281.75587672104234, 
       "stdVp": 0.706960902585623
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 40.82914572864322, 
@@ -9260,6 +10241,11 @@
       "stdS": 0.46269091026131387, 
       "stdVp": 0.570160529597952
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.30653266331658, 
@@ -9298,6 +10284,11 @@
   }, 
   "NWRL": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "", 
+      "era": "", 
+      "period": ""
+    }, 
     "lat": 53.52526, 
     "lon": -60.14245, 
     "network": "POLARIS", 
@@ -9316,6 +10307,11 @@
   }, 
   "ORHO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 45.456333, 
     "lon": -75.536667, 
@@ -9356,6 +10352,11 @@
       "stdS": 0.5139534363184616, 
       "stdVp": 0.2171676962476965
     }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 38.44221105527638, 
@@ -9394,6 +10395,11 @@
   }, 
   "OTRO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "lat": 50.1818, 
     "lon": -81.6286, 
@@ -9413,6 +10419,11 @@
   }, 
   "OTT": {
     "badCompEvents": 30, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 45.3942, 
     "lon": -75.7167, 
@@ -9445,6 +10456,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided triassic-jurassic", 
+      "era": "mesozoic", 
+      "period": "triassic-jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 25.12562814070352, 
@@ -9474,6 +10490,11 @@
     }
   }, 
   "PA01": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.6526, 
     "lon": -123.44695, 
@@ -9489,6 +10510,11 @@
     }
   }, 
   "PA02": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.65182, 
     "lon": -123.44893, 
@@ -9504,6 +10530,11 @@
     }
   }, 
   "PA03": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.65175, 
     "lon": -123.44477, 
@@ -9519,6 +10550,11 @@
     }
   }, 
   "PA04": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.65097, 
     "lon": -123.44617, 
@@ -9534,6 +10570,11 @@
     }
   }, 
   "PA05": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.64973, 
     "lon": -123.44385, 
@@ -9549,6 +10590,11 @@
     }
   }, 
   "PA12": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.6482, 
     "lon": -123.44962, 
@@ -9564,6 +10610,11 @@
     }
   }, 
   "PACB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.43553, 
     "lon": -127.4925, 
@@ -9599,6 +10650,11 @@
       "stdR": 0.057553524589357946, 
       "stdS": 1.0611579961760806, 
       "stdVp": 0.8666742865720071
+    }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -9657,6 +10713,11 @@
       "stdS": 0.6381688750636522, 
       "stdVp": 0.7148370509583505
     }, 
+    "geochron": {
+      "epoch": "early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 38.31658291457286, 
@@ -9694,6 +10755,11 @@
     }
   }, 
   "PFB": {
+    "geochron": {
+      "epoch": "undivided jurassic-cretaceous", 
+      "era": "paleozoic", 
+      "period": "jurassic-cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.5717, 
     "lon": -124.44, 
@@ -9731,6 +10797,11 @@
       "stdS": 1.6139425757434804, 
       "stdVp": 0.5271398841637213
     }, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.46733668341709, 
@@ -9767,6 +10838,11 @@
     }
   }, 
   "PGCB": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.6498, 
     "lon": -123.4522, 
@@ -9795,6 +10871,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 31.281407035175878, 
@@ -9824,6 +10905,11 @@
     }
   }, 
   "PHYB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.0828, 
     "lon": -123.8431, 
@@ -9855,6 +10941,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "late jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.1356783919598, 
@@ -9904,6 +10995,11 @@
       "stdR": 0.05510414752979813, 
       "stdS": 395.32668483513766, 
       "stdVp": 0.28845590132567817
+    }, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
     }, 
     "geoprov": "Arctic Platform", 
     "hk": {
@@ -9956,6 +11052,11 @@
       "stdS": 595.6295024453332, 
       "stdVp": 0.5727735398830427
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 38.5678391959799, 
@@ -10005,6 +11106,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 40.95477386934674, 
@@ -10056,6 +11162,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided ordovician-triassic", 
+      "era": "paleozoic", 
+      "period": "ordovician-triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 35.678391959798994, 
@@ -10110,6 +11221,11 @@
       "stdR": 0.05452567161752907, 
       "stdS": 0.5340057870815074, 
       "stdVp": 0.21601919888189497
+    }, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -10170,6 +11286,11 @@
       "stdS": 0.6038417419607367, 
       "stdVp": 0.327261130352022
     }, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 39.447236180904525, 
@@ -10229,6 +11350,11 @@
       "stdS": 1.8971197419806445, 
       "stdVp": 0.720477101011243
     }, 
+    "geochron": {
+      "epoch": "late jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.93467336683417, 
@@ -10280,6 +11406,11 @@
       "stdS": 0.699348278487821, 
       "stdVp": 1.0834169604370179
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 34.798994974874375, 
@@ -10330,6 +11461,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 40.95477386934674, 
@@ -10382,6 +11518,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 37.311557788944725, 
@@ -10411,6 +11552,11 @@
     }
   }, 
   "PPSB": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.39558, 
     "lon": -123.67676, 
@@ -10441,6 +11587,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 48.618090452261306, 
@@ -10488,6 +11639,11 @@
       "stdS": 0.3992226514650055, 
       "stdVp": 0.3302387927686334
     }, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 44.72361809045226, 
@@ -10526,6 +11682,11 @@
   }, 
   "QCQ": {
     "badCompEvents": 569, 
+    "geochron": {
+      "epoch": "undivided cambrian", 
+      "era": "paleozoic", 
+      "period": "cambrian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "lat": 46.7791, 
     "lon": -71.276, 
@@ -10561,6 +11722,11 @@
       "stdR": 0.018083244637793122, 
       "stdS": 0.703366424450606, 
       "stdVp": 0.6014378833655638
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -10599,6 +11765,11 @@
     }
   }, 
   "QURY": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.3763, 
     "lon": -132.2225, 
@@ -10627,6 +11798,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 30.15075376884422, 
@@ -10657,6 +11833,11 @@
   }, 
   "RAYA": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "maastrichtian-campanian", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "lat": 49.386267, 
     "lon": -112.6873, 
@@ -10676,6 +11857,11 @@
   }, 
   "RDEA": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "lat": 56.55125, 
     "lon": -115.3179, 
@@ -10695,6 +11881,11 @@
   }, 
   "RDLO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "undivided mesoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "lat": 50.97448, 
     "lon": -93.91244, 
@@ -10731,6 +11922,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided ordovician-silurian", 
+      "era": "paleozoic", 
+      "period": "ordovician-silurian"
+    }, 
     "geoprov": "Arctic Platform", 
     "hk": {
       "H": 29.14572864321608, 
@@ -10790,6 +11986,11 @@
       "stdS": 0.24881936029723703, 
       "stdVp": 0.572463041130298
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 42.21105527638191, 
@@ -10836,6 +12037,11 @@
       "stdR": 0.013025512105173026, 
       "stdS": 169.87594806708483, 
       "stdVp": 0.5811676383430603
+    }, 
+    "geochron": {
+      "epoch": "undivided ordovician-silurian", 
+      "era": "paleozoic", 
+      "period": "ordovician-silurian"
     }, 
     "geoprov": "Interior Platform", 
     "hk": {
@@ -10895,6 +12101,11 @@
       "stdS": 0.9234900526853839, 
       "stdVp": 0.9847396912515363
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 35.80402010050251, 
@@ -10945,6 +12156,11 @@
       "stdS": 0.2416654578114518, 
       "stdVp": 0.7816187772051624
     }, 
+    "geochron": {
+      "epoch": "undivided paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 34.92462311557789, 
@@ -10982,6 +12198,11 @@
     }
   }, 
   "RUBB": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 54.3262, 
     "lon": -130.2523, 
@@ -10998,6 +12219,11 @@
   }, 
   "SABG": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "undivided quaternary", 
+      "era": "cenozoic", 
+      "period": "quaternary"
+    }, 
     "geoprov": "Atlantic Continental Shelf", 
     "lat": 43.93124, 
     "lon": -60.00843, 
@@ -11037,6 +12263,11 @@
       "stdR": 0.020374966536390753, 
       "stdS": 496.6489575362685, 
       "stdVp": 0.6725267896117122
+    }, 
+    "geochron": {
+      "epoch": "early mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
     }, 
     "geoprov": "Grenville Province", 
     "hk": {
@@ -11097,6 +12328,11 @@
       "stdS": 0.33198038671254626, 
       "stdVp": 0.548948824045572
     }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 35.552763819095475, 
@@ -11127,6 +12363,11 @@
   }, 
   "SCH": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "lat": 54.8183, 
     "lon": -66.7833, 
@@ -11148,6 +12389,11 @@
     "badCompEvents": 680, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "early-middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 50.0, 
@@ -11196,6 +12442,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.05527638190955, 
@@ -11249,6 +12500,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 43.09045226130653, 
@@ -11278,6 +12534,11 @@
     }
   }, 
   "SHDB": {
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.797, 
     "lon": -123.636, 
@@ -11315,6 +12576,11 @@
       "stdS": 398.22930695013383, 
       "stdVp": 0.9092936506163216
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean-paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoarchean-paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 36.80904522613065, 
@@ -11351,6 +12617,11 @@
     }
   }, 
   "SHVB": {
+    "geochron": {
+      "epoch": "undivided jurassic-cretaceous", 
+      "era": "mesozoic", 
+      "period": "jurassic-cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.4723, 
     "lon": -123.636, 
@@ -11385,6 +12656,11 @@
       "stdR": 0.020790405822598453, 
       "stdS": 342.654457445847, 
       "stdVp": 0.6755328496963212
+    }, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
     }, 
     "geoprov": "Hudson Bay Lowlands", 
     "hk": {
@@ -11422,6 +12698,11 @@
     }
   }, 
   "SILB": {
+    "geochron": {
+      "epoch": "middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.60198, 
     "lon": -123.28147, 
@@ -11456,6 +12737,11 @@
       "stdR": 0.007545948743890888, 
       "stdS": 412.5624684308984, 
       "stdVp": 0.2629638483772611
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -11514,6 +12800,11 @@
       "stdS": 0.9480865188803159, 
       "stdVp": 0.7090386583231391
     }, 
+    "geochron": {
+      "epoch": "undivided neoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoproterozoic"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 36.4321608040201, 
@@ -11562,6 +12853,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "late cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 27.51256281407035, 
@@ -11609,6 +12905,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 30.904522613065325, 
@@ -11660,6 +12961,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Interior Platform", 
     "hk": {
       "H": 37.93969849246231, 
@@ -11698,6 +13004,11 @@
   }, 
   "SNB": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "upper cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.775, 
     "lon": -123.1708, 
@@ -11717,6 +13028,11 @@
   }, 
   "SNKN": {
     "badCompEvents": 2, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "lat": 56.53624, 
     "lon": -79.23153, 
@@ -11755,6 +13071,11 @@
       "stdR": 0.04531029924788618, 
       "stdS": 331.00309475207297, 
       "stdVp": 0.5564573008727118
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -11813,6 +13134,11 @@
       "stdS": 311.5536851524945, 
       "stdVp": 0.4004658948764513
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 38.69346733668342, 
@@ -11865,6 +13191,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Churchill Province", 
     "hk": {
       "H": 49.246231155778894, 
@@ -11902,6 +13233,11 @@
     }
   }, 
   "SOKB": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.3947, 
     "lon": -123.67314, 
@@ -11917,6 +13253,11 @@
     }
   }, 
   "SPLB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.8921, 
     "lon": -125.6526, 
@@ -11953,6 +13294,11 @@
       "stdR": 0.008425302207987501, 
       "stdS": 0.7088884621467838, 
       "stdVp": 0.3319012686036592
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -11991,6 +13337,11 @@
     }
   }, 
   "SSIB": {
+    "geochron": {
+      "epoch": "undivided devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.75577, 
     "lon": -123.38748, 
@@ -12007,6 +13358,11 @@
   }, 
   "SSNO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "early paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Southern Province", 
     "lat": 46.4715, 
     "lon": -81.187, 
@@ -12028,6 +13384,11 @@
     "badCompEvents": 0, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
       "H": 42.8391959798995, 
@@ -12074,6 +13435,11 @@
       "stdR": 0.010460672061469624, 
       "stdS": 0.9110521725704617, 
       "stdVp": 0.3108002142968963
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -12133,6 +13499,11 @@
       "stdS": 0.5186119166404819, 
       "stdVp": 0.8601621104129913
     }, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.30653266331658, 
@@ -12179,6 +13550,11 @@
       "stdR": 0.04265515337887521, 
       "stdS": 0.9553330340451727, 
       "stdVp": 0.35315475587074
+    }, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
     }, 
     "geoprov": "Southern Province", 
     "hk": {
@@ -12237,6 +13613,11 @@
       "stdS": 289.5592192290262, 
       "stdVp": 0.8177226243399703
     }, 
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 28.894472361809044, 
@@ -12266,6 +13647,11 @@
     }
   }, 
   "TASB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.9266, 
     "lon": -126.6513, 
@@ -12281,6 +13667,11 @@
     }
   }, 
   "TFRB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.93322, 
     "lon": -124.6363, 
@@ -12296,6 +13687,11 @@
     }
   }, 
   "THAB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.28, 
     "lon": -124.9184, 
@@ -12327,6 +13723,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.633165829145728, 
@@ -12375,6 +13776,11 @@
       "stdS": 0.2379944136469397, 
       "stdVp": 0.7876634232717754
     }, 
+    "geochron": {
+      "epoch": "undivided carboniferous-permian", 
+      "era": "paleozoic", 
+      "period": "carboniferous-permian"
+    }, 
     "geoprov": "Appalachian Orogen", 
     "hk": {
       "H": 35.32663316582915, 
@@ -12412,6 +13818,11 @@
     }
   }, 
   "TLCB": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.546, 
     "lon": -126.8324, 
@@ -12444,6 +13855,11 @@
       "stdR": 0.07854846617097212, 
       "stdS": 0.46634940369058403, 
       "stdVp": 0.6206799480659294
+    }, 
+    "geochron": {
+      "epoch": "upper silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -12482,6 +13898,11 @@
     }
   }, 
   "TOFB": {
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 49.154317, 
     "lon": -125.907817, 
@@ -12498,6 +13919,11 @@
   }, 
   "TORO": {
     "badCompEvents": 1, 
+    "geochron": {
+      "epoch": "upper ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 43.61363, 
     "lon": -79.3433, 
@@ -12516,6 +13942,11 @@
     }
   }, 
   "TSJB": {
+    "geochron": {
+      "epoch": "lower-middle jurassic", 
+      "era": "mesozoic", 
+      "period": "jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.60128, 
     "lon": -123.98852, 
@@ -12530,49 +13961,12 @@
       "type": "thin continental arc, Cordilleras"
     }
   }, 
-  "TULEG": {
-    "badCompEvents": 0, 
-    "conrad": {
-      "hdisc": [
-        2.78122441, 
-        9.84518653, 
-        25.56051798
-      ], 
-      "hdiscp": [
-        0.0, 
-        0.0, 
-        8.0
-      ]
-    }, 
-    "fg": {}, 
-    "hk": {
-      "H": 37.688442211055275, 
-      "R": 1.7645728643216079, 
-      "c0R": 1.7630653266331657, 
-      "c1R": 1.95, 
-      "stdH": 3.1613005905293603, 
-      "stdR": 0.07958066247375664
-    }, 
-    "lat": 76.5374, 
-    "lon": -68.8237, 
-    "mb": {}, 
-    "network": "CHASME", 
-    "numEvents": 210, 
-    "poorEvents": 120, 
-    "processnotes": "", 
-    "start": 20000926.16, 
-    "status": "processed-ok", 
-    "stop": 0, 
-    "usable": 1, 
-    "usableEvents": 67, 
-    "wm": {
-      "H": 37.0, 
-      "R": 1.7623465211459752, 
-      "Vp": 6.459, 
-      "type": "Archean"
-    }
-  }, 
   "TWGB": {
+    "geochron": {
+      "epoch": "undivided triassic-jurassic", 
+      "era": "mesozoic", 
+      "period": "triassic-jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.60757, 
     "lon": -124.25585, 
@@ -12588,6 +13982,11 @@
     }
   }, 
   "TWKB": {
+    "geochron": {
+      "epoch": "undivided devonian-permian", 
+      "era": "paleozoic", 
+      "period": "devonian-permian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.64485, 
     "lon": -123.7332, 
@@ -12620,6 +14019,11 @@
       "stdR": 0.00814300252062253, 
       "stdS": 0.43714862613573685, 
       "stdVp": 0.19225389277251811
+    }, 
+    "geochron": {
+      "epoch": "upper silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -12679,6 +14083,11 @@
       "stdS": 421.62368251932804, 
       "stdVp": 0.7871567521331315
     }, 
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.18090452261306, 
@@ -12729,6 +14138,11 @@
       "stdR": 0.005406162651417728, 
       "stdS": 0.8506112161889853, 
       "stdVp": 0.15605554348021564
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Superior Province", 
     "hk": {
@@ -12789,6 +14203,11 @@
       "stdS": 0.659313879830864, 
       "stdVp": 0.22789143627639943
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 34.42211055276382, 
@@ -12824,47 +14243,13 @@
       "type": "Archean"
     }
   }, 
-  "UPNG": {
-    "badCompEvents": 0, 
-    "conrad": {
-      "hdisc": [
-        0.35622095, 
-        14.87701561
-      ], 
-      "hdiscp": [
-        0.0, 
-        0.0, 
-        8.0
-      ]
-    }, 
-    "fg": {}, 
-    "hk": {
-      "H": 30.276381909547737, 
-      "R": 1.8836683417085427, 
-      "stdH": 2.81187494409518, 
-      "stdR": 0.07013773640212462
-    }, 
-    "lat": 72.7848, 
-    "lon": -56.1408, 
-    "mb": {}, 
-    "network": "CHASME", 
-    "numEvents": 15, 
-    "poorEvents": 7, 
-    "processnotes": "", 
-    "start": 20000719.2238, 
-    "status": "processed-ok", 
-    "stop": "20001127.0719", 
-    "usable": 1, 
-    "usableEvents": 8, 
-    "wm": {
-      "H": 37.0, 
-      "R": 1.7623465211459752, 
-      "Vp": 6.459, 
-      "type": "Archean"
-    }
-  }, 
   "UWOO": {
     "badCompEvents": 0, 
+    "geochron": {
+      "epoch": "middle devonian", 
+      "era": "paleozoic", 
+      "period": "devonian"
+    }, 
     "geoprov": "St. Lawrence Platform", 
     "lat": 43.011, 
     "lon": -81.2724, 
@@ -12901,6 +14286,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 41.70854271356784, 
@@ -12939,6 +14329,11 @@
   }, 
   "VDBQ": {
     "badCompEvents": 18, 
+    "geochron": {
+      "epoch": "middle mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "lat": 45.92769, 
     "lon": -75.56966, 
@@ -12957,6 +14352,11 @@
     }
   }, 
   "VGZ": {
+    "geochron": {
+      "epoch": "undivided triassic-jurassic", 
+      "era": "mesozoic", 
+      "period": "triassic-jurassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.4139, 
     "lon": -123.3244, 
@@ -12972,6 +14372,11 @@
     }
   }, 
   "VIB": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 53.2522, 
     "lon": -132.5406, 
@@ -12997,6 +14402,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "lower silurian", 
+      "era": "paleozoic", 
+      "period": "silurian"
+    }, 
     "geoprov": "Hudson Bay Lowlands", 
     "hk": {
       "H": 46.231155778894475, 
@@ -13054,6 +14464,11 @@
       "stdS": 1.0028506112768627, 
       "stdVp": 0.7067379614702858
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 33.040201005025125, 
@@ -13103,6 +14518,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoproterozoic", 
+      "era": "precambrian", 
+      "period": "neoproterozoic"
+    }, 
     "geoprov": "Bear Province", 
     "hk": {
       "H": 25.87939698492462, 
@@ -13152,6 +14572,11 @@
       "stdR": 0.02906976342716261, 
       "stdS": 0.49350593702783985, 
       "stdVp": 0.9082444648674955
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -13203,6 +14628,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided mesoproterozoic", 
+      "era": "precambrian", 
+      "period": "mesoproterozoic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 39.447236180904525, 
@@ -13249,6 +14679,11 @@
       "stdR": 0.07416621073769468, 
       "stdS": 0.5798531243197753, 
       "stdVp": 0.9803820467688833
+    }, 
+    "geochron": {
+      "epoch": "maastrichtian-campanian", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
     }, 
     "geoprov": "Interior Platform", 
     "hk": {
@@ -13298,6 +14733,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "middle paleoproterozoic", 
+      "era": "precambrian", 
+      "period": "paleoproterozoic"
+    }, 
     "geoprov": "Grenville Province", 
     "hk": {
       "H": 48.99497487437186, 
@@ -13328,6 +14768,11 @@
     "badCompEvents": 6, 
     "conrad": {}, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 40.201005025125625, 
@@ -13376,6 +14821,11 @@
       "stdR": 0.0760667831801703, 
       "stdS": 588.1148061826739, 
       "stdVp": 1.1428117342883342
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -13433,6 +14883,11 @@
       "stdS": 0.7397112569369308, 
       "stdVp": 0.20998724792931064
     }, 
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.4321608040201, 
@@ -13470,6 +14925,11 @@
     }
   }, 
   "WISB": {
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.1265, 
     "lon": -122.9212, 
@@ -13506,6 +14966,11 @@
       "stdR": 0.010389281015277141, 
       "stdS": 740.054634461002, 
       "stdVp": 0.2646064210884336
+    }, 
+    "geochron": {
+      "epoch": "middle ordovician", 
+      "era": "paleozoic", 
+      "period": "ordovician"
     }, 
     "geoprov": "St. Lawrence Platform", 
     "hk": {
@@ -13568,6 +15033,11 @@
       "stdS": 2.224512537562203, 
       "stdVp": 0.3675424865907803
     }, 
+    "geochron": {
+      "epoch": "lower cretaceous", 
+      "era": "mesozoic", 
+      "period": "cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 36.68341708542714, 
@@ -13604,6 +15074,11 @@
     }
   }, 
   "WTRB": {
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 50.12979, 
     "lon": -126.03526, 
@@ -13638,6 +15113,11 @@
       "stdR": 0.008086529423532758, 
       "stdS": 0.7094207167236563, 
       "stdVp": 0.263251274090259
+    }, 
+    "geochron": {
+      "epoch": "undivided mesoarchean-neoarchean", 
+      "era": "precambrian", 
+      "period": "mesoarchean-neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -13697,6 +15177,11 @@
       "stdS": 1.8750903385900755, 
       "stdVp": 0.2869222227291505
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 37.93969849246231, 
@@ -13753,6 +15238,11 @@
       "stdS": 358.75169756389465, 
       "stdVp": 0.6724531341470071
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 35.552763819095475, 
@@ -13791,6 +15281,11 @@
   }, 
   "YKW3": {
     "badCompEvents": 4, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "lat": 62.49322, 
     "lon": -114.60528, 
@@ -13828,6 +15323,11 @@
       "stdR": 0.020765160164973633, 
       "stdS": 1.3462252611237826, 
       "stdVp": 0.46474561479852905
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -13879,6 +15379,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 33.040201005025125, 
@@ -13930,6 +15435,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Slave Province", 
     "hk": {
       "H": 36.55778894472362, 
@@ -13987,6 +15497,11 @@
       "stdR": 0.039064723502214266, 
       "stdS": 398.1354986831348, 
       "stdVp": 0.989640478692004
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Slave Province", 
     "hk": {
@@ -14046,6 +15561,11 @@
       "stdS": 1.7743477326698027, 
       "stdVp": 0.6233245504124639
     }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
+    }, 
     "geoprov": "Superior Province", 
     "hk": {
       "H": 39.07035175879397, 
@@ -14083,6 +15603,11 @@
     }
   }, 
   "YOUB": {
+    "geochron": {
+      "epoch": "undivided devonian-permian", 
+      "era": "paleozoic", 
+      "period": "devonian-permian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 48.90095, 
     "lon": -124.26183, 
@@ -14117,6 +15642,11 @@
       "stdR": 0.07810575269498628, 
       "stdS": 0.5784519909785595, 
       "stdVp": 0.7065123975411775
+    }, 
+    "geochron": {
+      "epoch": "undivided neoarchean", 
+      "era": "precambrian", 
+      "period": "neoarchean"
     }, 
     "geoprov": "Churchill Province", 
     "hk": {
@@ -14169,6 +15699,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided devonian-cretaceous", 
+      "era": "paleozoic-mesozoic", 
+      "period": "devonian-cretaceous"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 40.32663316582915, 
@@ -14219,6 +15754,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided pennsylvanian-permian", 
+      "era": "paleozoic", 
+      "period": "pennsylvanian-permian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 45.22613065326633, 
@@ -14270,6 +15810,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided pennsylvanian-permian", 
+      "era": "paleozoic", 
+      "period": "pennsylvanian-permian"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 34.04522613065326, 
@@ -14307,6 +15852,11 @@
     }
   }, 
   "YUK4": {
+    "geochron": {
+      "epoch": "paleogene", 
+      "era": "cenozoic", 
+      "period": "tertiary"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "lat": 61.4348, 
     "lon": -138.5463, 
@@ -14337,6 +15887,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "unknown", 
+      "era": "unknown", 
+      "period": "unknown"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 37.93969849246231, 
@@ -14386,6 +15941,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided triassic", 
+      "era": "mesozoic", 
+      "period": "triassic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 28.266331658291456, 
@@ -14435,6 +15995,11 @@
       ]
     }, 
     "fg": {}, 
+    "geochron": {
+      "epoch": "undivided cenozoic", 
+      "era": "cenozoic", 
+      "period": "undivided cenozoic"
+    }, 
     "geoprov": "Cordilleran Orogen", 
     "hk": {
       "H": 26.256281407035175, 

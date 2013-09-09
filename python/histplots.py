@@ -167,7 +167,7 @@ def getdata(dtype, d, m, vdict, vdictregion):
             bins = np.arange(vpmin, vpmax, dvp)
             if vdictregion in vdict:
                 pt.avgmethod = "weighted"
-                avgd = vdict[vdictregion]['mooney']['Vp']
+                avgd = vdict[vdictregion]['crust1']['Vp']
             else:
                 avgd = np.mean(m.Vp)
     if pt.H:
@@ -184,7 +184,7 @@ def getdata(dtype, d, m, vdict, vdictregion):
             bins = np.arange(hmin, hmax, dh)
             if vdictregion in vdict:
                 pt.avgmethod = "weighted"
-                avgd = vdict[vdictregion]['mooney']['H']
+                avgd = vdict[vdictregion]['crust1']['H']
             else:
                 avgd = np.mean(m.H)
 
@@ -552,10 +552,10 @@ if __name__  == "__main__":
     if plotnum[5]:
         plt.figure( figsize = (width, height) )
         arg = Args()
-        arg.addQuery("wm::type", "in", "Archean")
+        arg.addQuery("geochron::period", "in", "archean")
         d2 = copy.deepcopy(d)
         arg2 = Args()
-        arg2.addQuery("wm::type", "in", "Proter")
+        arg2.addQuery("geochron::period", "in", "proterozoic")
 
         d.filter(arg)
         d2.filter(arg2)
@@ -583,20 +583,25 @@ if __name__  == "__main__":
 
         #plt.figure( figsize = (width, height) )
         ax = plt.subplot(122)
+
         arg = Args()
-        arg.addQuery("wm::type", "in", "Archean")
+        arg.addQuery("period", "in", "archean")
+
+        arg2 = Args()
+
+        crustfile = os.environ['HOME'] + '/thesis/data/crust1.json'
+        m = Params(crustfile, ["H","Vp"])
 
         m2 = copy.deepcopy(m)
 
-        arg2 = Args()
-        arg2.addQuery("wm::type", "in", "Proter")
-
         m.filter(arg)
-        m2.filter(arg2)
 
-        dm, avgdm, bins, ptype= getdata("moon", d, m, vdict, "Archean")
+        m2.filter(arg2.addQuery("period", "not in", "archean"))
+        m2.filter(arg2.addQuery("period", "in", "proterozoic"))
+
+        dm, avgdm, bins, ptype= getdata("moon", d, m, vdict, "archean")
         ptype.settitle("Archean and Proterozoic")
-        d2m, avgd2m, dum1, dum2 = getdata("moon", d2, m2, vdict, "Proter")
+        d2m, avgd2m, dum1, dum2 = getdata("moon", d2, m2, vdict, "proterozoic")
 
         n, bins, patches = plt.hist(dm, bins = bins, facecolor='green', alpha=1, label= "Archean")
         n2, bins, patches = plt.hist(d2m, bins = bins, facecolor='blue', alpha=0.65, label="Proterozoic")
@@ -689,3 +694,77 @@ if __name__  == "__main__":
             plt.show()      #
                             #
 #############################
+
+
+
+
+
+
+#     # F5 Archean vs Proterozoic
+#     if plotnum[5]:
+#         plt.figure( figsize = (width, height) )
+#         arg = Args()
+#         arg.addQuery("wm::type", "in", "Archean")
+#         d2 = copy.deepcopy(d)
+#         arg2 = Args()
+#         arg2.addQuery("wm::type", "in", "Proter")
+
+#         d.filter(arg)
+#         d2.filter(arg2)
+
+#         dk, avgdk, bins, ptype = getdata("kan", d, m, vdict, 'Archean')
+#         ptype.settitle("Archean and Proterozoic")
+#         d2k, avgd2k, dum1, ptype2 = getdata("kan", d2, [], vdict, 'Proter')
+
+#         ax = plt.subplot(121)
+#         n, bins, patches = plt.hist(dk, bins = bins, facecolor='green', alpha=1, label= "Archean")
+#         n2, bins2, patches2 = plt.hist(d2k, bins = bins, facecolor='blue', alpha=0.65, label= "Proterozoic")
+#         # add a 'best fit' line
+#         y = distfunc(dk, bins, n)
+#         y2 = distfunc(d2k, bins, n2)
+#         plt.plot(bins, y, 'r--', linewidth=2, label='Archean Distribution')
+#         plt.plot(bins, y2, 'b--', linewidth=2, label='Proter. Distribution')
+#         ptype.avglabel = "Geometric Avg.\nArchean"
+#         plotlines(plt, avgdk, ptype)
+#         plt.axvline(x = avgd2k, linewidth = 4, color = 'b', label = "Geometric Avg.\n" + "Proterozoic" )
+#         #ptype.title = "Archean and Proterozoic\n Crustal Thickness from Processed Station Data"
+#         formatplot(plt, ax, legsize, ptype)
+#         addtext([avgdk, avgd2k], ax, n, 0.3)
+
+# #############    # Mooney Vp histogram ###############
+
+#         #plt.figure( figsize = (width, height) )
+#         ax = plt.subplot(122)
+#         arg = Args()
+#         arg.addQuery("wm::type", "in", "Archean")
+
+#         m2 = copy.deepcopy(m)
+
+#         arg2 = Args()
+#         arg2.addQuery("wm::type", "in", "Proter")
+
+#         m.filter(arg)
+#         m2.filter(arg2)
+
+#         dm, avgdm, bins, ptype= getdata("moon", d, m, vdict, "Archean")
+#         ptype.settitle("Archean and Proterozoic")
+#         d2m, avgd2m, dum1, dum2 = getdata("moon", d2, m2, vdict, "Proter")
+
+#         n, bins, patches = plt.hist(dm, bins = bins, facecolor='green', alpha=1, label= "Archean")
+#         n2, bins, patches = plt.hist(d2m, bins = bins, facecolor='blue', alpha=0.65, label="Proterozoic")
+
+#         # add a 'best fit' line
+#         y = distfunc(dm, bins, n)
+#         y2 = distfunc(d2m, bins, n2)
+#         plt.plot(bins, y, 'r--', linewidth=2, label='Archean curve')
+#         plt.plot(bins, y2, 'b--', linewidth=2, label='Proter. Distribution')
+#         ptype.avglabel = "Geometric Avg.\nArchean"
+#         plotlines(plt, avgdm, ptype)
+#         plt.axvline(x = avgd2m, linewidth = 4, color = 'b', label = "Geometric Avg.\n" + "Proterozoic" )
+#         #ptype.title = "Archean and Proterozoic\n Crustal Thickness from W. Mooney et. al. (2004) Data"
+#         formatplot(plt, ax, legsize, ptype)
+#         addtext([avgdm, avgd2m], ax, n, 0.3)
+
+
+
+#     ###################################################

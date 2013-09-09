@@ -15,7 +15,7 @@ import json, os, argparse, sys
 
 
 # CONFIGS
-dbfile = os.environ['HOME'] + '/thesis/stations.json'
+dbfile = os.environ['HOME'] + '/thesis/data/stations.json'
 
 
 def mergeJson(target, source, pfx):
@@ -36,7 +36,7 @@ if __name__== '__main__' :
     group = parser.add_mutually_exclusive_group()
 
     # Create query parser
-    parser.add_argument('prefix', nargs = 1,
+    parser.add_argument('-p','--prefix', nargs = 1,
                         help = 'The prefix to use to to merge dictionary')
 
     parser.add_argument('mergeFile', nargs = '?',

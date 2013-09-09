@@ -17,7 +17,7 @@ from histplots import poisson
 
 
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
-regionf = os.environ['HOME'] + '/thesis/data/voronoi.data'
+regionf = os.environ['HOME'] + '/thesis/data/voronoi.json'
 
 def lithVp(vs, poisson):
     return vs * np.sqrt( (2 - 2*poisson) / (1 - 2 * poisson)  )

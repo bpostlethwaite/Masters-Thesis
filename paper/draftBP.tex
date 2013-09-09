@@ -43,7 +43,7 @@
 \end{itemize}
 %% -----------------------------------------------%%
 \section{Data and methods}
-Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source is teleseismic receiver function (hereafter RF) analysis. The remaining two datasets are Crust 2.0, a widely published statistical average of similar regions with a global two degree resolution, and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 2.0 and the active source compilation are used to qualify and compare with the primary dataset.
+Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source is teleseismic receiver function (hereafter RF) analysis. The remaining two datasets are Crust 1.0, a widely published statistical average of similar regions with a global two degree resolution, and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 1.0 and the active source compilation are used to qualify and compare with the primary dataset.
 
 \subsection{Teleseismic Data Set}
 The primary data utilized in this study are computed from teleseismic {\it P} wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between 2000 and 2012 and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, POLARIS, FedNor and Chasme. Seismograms are included for analysis if they fall within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with sufficiently high signal to noise ratios to permit visual observation of the dominant {\it P} wave energy and with sufficiently impulsive first arrivals to allow arrival onsets to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
@@ -100,7 +100,7 @@ t_{Pss}(p_n)= \frac{2H}{V_P} \sqrt{ R^2 - V_P^2p_n^2}
 
 \noindent where $p_n$ is the slowness for the $n^{th}$ receiver function. Since strong reflected phases occur at sharp velocity contrasts, the Moho, the boundary targeted by ZK, tends to be well represented on most RF's.
 
-The travel time equations, as employed by ZK, assume a value for crustal {\it P} wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corresponding to the Crust 2.0 value for the corrisponding $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
+The travel time equations, as employed by ZK, assume a value for crustal {\it P} wave velocity, $V_P$, that in practice will trade-off to some degree with crustal thickness $H$. In our implementation of the ZK approach, each station is assigned a $V_P$ value corresponding to the Crust 1.0 value for the corrisponding $2^\circ$ containing cell. In the specific cases where data are being compared to previously published results for quality control, $V_P$  values are chosen to match the values in the published study.
 
 RFs are stacked along trial moveout curves for a range of candidate models of $R$ and $H$ to generate a fitness function $s(H,R)$.  Within the stacking procedure, each phase is assigned a weight to account for the expected relative amplitudes of the phases for typical velocity contrasts, with the direct conversion $Ps$ usually characterized by the highest quality signal followed by $PpPs$ and $PpSs$. We chose weights of $w1 = 0.5$, $w2 = 0.3$ , $w3 = -0.2$ for the $Ps$, $PpPs$ and $PpSs$ phases, respectively. A negative weight for the combined $PpSs$ and $PsPs$ phases is required as the polarity of the signal is reversed. Semblance weighting [Eaton, 2006] is employed to reduce the effect of spurious large amplitude noise in the data. The semblance function assigns a weight between zero (incoherent noise) and one (coherent signal). The stacking function is therefore defined as
 
@@ -126,8 +126,7 @@ The trade-off between $V_P$ and $H$ (and other parameter combinations) and error
 
 We supplement receiver function estimates of crustal properties with data from controlled source experiments collected and compiled from GSC (Geological Survey of Canada) references by Walter Mooney (personal communication, 2012). The active source data provide $V_P$ and a few $V_S$ estimates for hundreds of locations across Canada, many along transects that cross major geological boundaries, faults and discontinuities. Some of these data are located within reasonable ($<$100 km) proximity to seismic stations used in this study and can be used to compare with the $V_P$ and $V_S$ estimates resulting from the RF full gridsearch.
 
-The Crust 2.0 model [Bassin, 2000] employs many of these same active source data to provide regular, complete coverage across all of Canada. The model includes estimates of $V_P$ and $V_S$ information with depth at
-$2^\circ$ resolution in latitude and longitude. In addition to employing local active source data, Crust 2.0 is also constrained by statistically aggregated data from geographically distant but geologically similar regions. It therefore affords a somewhat independent dataset suited for comparison with the crustal estimates calculated in this study.
+The Crust 1.0 model [Laske et. al., 2013] employs many of these same active source data to provide regular, complete coverage across all of Canada. The model includes estimates of $V_P$ and $V_S$ information with depth at $1^\circ$ resolution in latitude and longitude. In addition to employing local active source data, Crust 1.0 is also constrained by statistically aggregated data from geographically distant but geologically similar regions. It therefore affords a somewhat independent dataset suited for comparison with the crustal estimates calculated in this study.
 
 %% -----------------------------------------------%%
 \section{Results}
@@ -248,14 +247,14 @@ There is less correlation between the crustal thickness data, though this is lar
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{activeSourceCompVp}
-  \caption{\it{P} wave velocity estimates computed from the full parameter search method compared to active source data and values from Crust 2.0}
+  \caption{\it{P} wave velocity estimates computed from the full parameter search method compared to active source data and values from Crust 1.0}
   \label{fig:activeVp}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{activeSourceCompH}
-  \caption{Crustal thickness estimates computed from the full parameter search method compared to active source data and values from Crust 2.0}
+  \caption{Crustal thickness estimates computed from the full parameter search method compared to active source data and values from Crust 1.0}
   \label{fig:activeH}
 \end{figure}
 
@@ -275,22 +274,22 @@ We now consider the average crustal structure across Canada. We produce a depth 
 
 We proceed to consider crustal thickness $H$ and velocity ratio, $R$, estimates for stations with assigned $R$ bootstrap errors below $\pm 0.06$ in a geographic context (figure \ref{map:stationMap}). To compensate for the uneven distribution of seismic stations, weights are applied to both $R$ and $H$ estimates before averaging over a given region. Weights are calculated by projecting station locations onto a 2D plane using the Albers equal-area conic projection. A Voronoi diagram is then computed using all projected station locations. The ratio between the Voronoi cell surface encompassing each station and the total area of the convex hull bounding region is employed as that station's weight.
 
-Table \ref{table:regionParameters} displays the results of our regionalization in $R$ and $H$. The weighted average crustal thickness for all stations (Canada) is 37 km, about two kilometres thinner than the average for the Canadian Shield. Crust 2.0 provides a slightly thicker crustal average for Canada (38.2 km) and a slightly thinner average for the Shield (38.8 km). The Slave Province averages are similar to those for the Churchill province and a thicker crust than Crust2.0 and a smaller seismic velocity ratio. Moving south and east from the Churchill Province through the Superior Province into the Grenville Province, we note an increase in the ZK + semblance $R$ values as well as crustal thickness $H$, figures \ref{map:Hmap}-\ref{map:Rmap}. The weighted $R$ average is 1.73 in the Churchill Province increasing slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. In a similar fashion, the weighted average of $H$ increases from 38.9 km in the Churchill Province  to 39.7 in the Superior Province and 41.7 km in the Grenville Province. The southeastern trend towards increasing values is also expressed in weighted averaged active source $V_P$ data.  The Crust 2.0 model is characterized by slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity is not, however, as apparent.
+Table \ref{table:regionParameters} displays the results of our regionalization in $R$ and $H$. The weighted average crustal thickness for all stations (Canada) is 37 km, about two kilometres thinner than the average for the Canadian Shield. Crust 1.0 provides a slightly thicker crustal average for Canada (38.1 km) and a slightly thinner average for the Shield (38.3 km). The Slave Province averages are similar to those for the Churchill province with a crustal thickness and seismic velocity ratio comparable to Crust 1.0. Moving south and east from the Churchill Province through the Superior Province into the Grenville Province, we note an increase in the ZK + semblance $R$ values as well as crustal thickness $H$, figures \ref{map:Hmap}-\ref{map:Rmap}. The weighted $R$ average is 1.73 in the Churchill Province increasing slightly to 1.74 in the Superior and jumping to 1.78 in the Grenville. In a similar fashion, the weighted average of $H$ increases from 38.9 km in the Churchill Province  to 39.7 in the Superior Province and 41.7 km in the Grenville Province. The southeastern trend towards increasing values is also expressed in weighted averaged active source $V_P$ data as well as as the Crust 1.0 $V_P$ data.  The Crust 1.0 model is characterized by slightly thinner crust though the southward thickening trend is noticeable. The trend in the seismic velocity ratio is not, however, as apparent.
 
 
 \begin{table}
-  \begin{tabular}{ l l l l l l }
-    \cline{2-6}
-    & \multicolumn{2}{ c }{ZK + semblance} & \multicolumn{2}{ c }{Crust 2.0} & \multicolumn{1}{ c }{Active Source} \\
+  \begin{tabular}{ l l l l l l l }
+    \cline{2-7}
+    & \multicolumn{2}{ c }{ZK + semblance} & \multicolumn{3}{ c }{Crust 1.0} & \multicolumn{1}{ c }{Active Source} \\
     \hline
-    Region  & $H [km]$ &$R$ & $H [km]$&$R$ &$V_P [km/s]$ \\
+    Region  & $H [km]$& $R$ &$H [km]$& $R$  &$V_P [km/s]$&$V_P [km/s]$ \\
     \hline
-    Canada     & 37.0 & 1.75 & 38.2 & 1.77 & 6.33\\
-    Shield     & 39.2 & 1.74 & 38.8 & 1.77 & 6.42\\
-    Slave      & 38.2 & 1.74 & 37.0 & 1.76 & 6.44\\
-    Churchill  & 38.9 & 1.73 & 37.8 & 1.77 & 6.39\\
-    Superior   & 39.7 & 1.74 & 39.1 & 1.76 & 6.44\\
-    Grenville  & 41.7 & 1.78 & 40.5 & 1.78 & 6.48\\
+    Canada    & 37.0 & 1.75 & 38.1   & 1.74 &   6.41     & 6.33\\
+    Shield    & 39.2 & 1.74 & 38.3   & 1.74 &   6.47     & 6.42\\
+    Slave     & 38.2 & 1.74 & 38.0   & 1.73 &   6.47     & 6.44\\
+    Churchill & 38.9 & 1.73 & 37.9   & 1.74 &   6.46     & 6.39\\
+    Superior  & 39.7 & 1.74 & 38.9   & 1.74 &   6.49     & 6.44\\
+    Grenville & 41.7 & 1.78 & 39.7   & 1.74 &   6.50     & 6.48\\
     \hline
   \end{tabular}
   \caption{Comparison of $R$ and $H$ estimates with three published studies}
@@ -325,7 +324,7 @@ Table \ref{table:regionParameters} displays the results of our regionalization i
 %% -----------------------------------------------%%
 \section{Discussion}
 
-Mean crustal composition is an important parameter in the literature studying the continental crust. Mean composition should not be confused as an estimate of real physical crustal lithological and mineral assemblages. Rather, mean crustal composition is a representative quantity that is useful for constraining crustal genesis and evolution in space and time. Early attempts at estimating mean crustal composition were largely accomplished through extrapolations of upper crustal rocks [Rudnick and Gao, 2003]. After the plate-tectonic revolution, Taylor [1967, 1977], developed the 'island arc' or 'andesite' model which posited that bulk crustal composition should be equivalent to the average convergent-margin andesite. Several problems with this theory, such as the fact that island arcs are more basaltic than andesitic and therefore produce basaltic crustal accretions and cannot account for the intermediate composition of post-Archean crust, led to the introduction of seismic methods to estimate mid and lower crustal composition [Christensen and Mooney, 1995; Rudnick and Fountain, 1995]. This study differs from these later efforts in that it follows more closely to the complete crustal seismic analysis in the work of Smithson et. al. [1981] and Zandt and Ammon [1995].
+Mean crustal composition is an important parameter in the literature studying the continental crust. Mean composition should not be confused as an estimate of real physical crustal lithological and mineral assemblages. Rather, mean crustal composition is a representative quantity that is useful for constraining crustal genesis and evolution in space and time. Early attempts at estimating mean crustal composition were largely accomplished through extrapolations of upper crustal rocks [Rudnick and Gao, 2003]. After the plate-tectonic revolution, Taylor [1967, 1977], developed the 'island arc' or 'andesite' model which posited that bulk crustal composition should be equivalent to the average convergent-margin andesite. Several problems with this theory, such as the fact that island arcs are more basaltic than andesitic and therefore produce basaltic crustal accretions and cannot account for the intermediate composition of post-Archean crust, led to the introduction of seismic methods to estimate mid and lower crustal composition [Christensen and Mooney, 1995; Rudnick and Fountain, 1995]. This study differs from these later efforts in that it follows more closely to the complete crustal seismic analysis in the work of Smithson et. al. [1981].
 
 \begin{figure}
   \centering
@@ -337,7 +336,22 @@ Mean crustal composition is an important parameter in the literature studying th
 
 The mean seismic velocity ratio computed in this study is combined with values for $V_P$ from the Crust 1.0 model to enable estimates for $V_P$ and $V_S$ to be used to estimate mean crustal composition. Figure \ref{fig:lith} shows mineral assemblages and weighted Canadian Shield estimates plotted against $V_P$ and $V_S$. Mineral assemblages are chosen as useful representations of common crustal rocks and, specifically, for crust in Shield-like regions. Examples of common shield lithologies can be seen in the 30km of paleo-depth represented in the Kapuskasing uplift in the Superior province [Percival and West, 1994]. This uplift is largely comprised of Archean granite-greenstone terranes dominated by granitoid and gneissic rocks, and contains supracrustal assemblages generally metamorphosed to greenschist to amphibolite facies (hence the inclusion of hornblendite and amphibolite) and early plutonic structures comprised largely of tonalites. Tonalites and granodiorites are also part of the TGG suite (for tonalite-trondhjemite-granodiorite) which dominate Archaean cratons [Rudnick, 1995]. Seismic velocity values for these lithologies are taken from the work of Christensen [1996] and are selected at average crustal pressures of 600 MPa. Lines of constant Poisson's Ratio are plotted for reference.
 
-The Slave, Superior and Churchill provinces share similar mean crustal compositions, with the Slave province being slightly more tonalitic in composition. These three provinces cluster around the average for the Canadian Shield. The Grenville Province on the other hand differs significantly in mean composition. One interpretation is that the crust in the Grenville province has a mean crustal composition corrisponding to a more mafic lower crustal composition than other Shield provinces. This interpretation consistent with a current model for the tectonic evolution of the central region of the Grenville Province that
+The Slave, Superior and Churchill provinces share similar mean crustal compositions, with the Slave province being slightly more tonalitic in average composition. These three provinces cluster around the average for the Canadian Shield. The Grenville Province on the other hand differs significantly in mean composition. One interpretation is that the crust in the Grenville province has a mean crustal composition corresponding to a more mafic lower crustal composition than other Shield provinces. This interpretation is consistent with a tectonic model for the the central Grenville Province which suggests that the mid-crust has been completely excised locally [Eaton et. al., 2005; Rivers, 2008]. However, many stations in the South-East of the province also have seismic ratios greater than 1.78, similar to the high values common in the adjacent St. Lawrence Platform (where the geometric mean seismic ratio is 1.79).
+
+ [Any other reasons why Grenville and St. Lawrence Platform have higher R values than rest of Shield???]
+
+[ Continue with crustal composition discussion ]
+[ Note: I should include Platforms and Orogens in this paper: will work on this ]
+
+Other researchers have focused on Poisson's Ratio [Zandt and Ammon, 1995] as an indicator of bulk crustal composition as well as crustal thickness [Durrheim and Mooney, 1991] to constrain models of crustal formation. Durrheim and Mooney [1991] compile crustal thickness data and P-wave velocity data for crustal units divided into geochronological ages. They show that Proterozoic crust is thicker than Archean crust and has a higher P-wave velocity. The crustal thickness data attained in this study also show thicker crusts for Proterozoic units (38.9 km) than Archean units (38.0 km) though this difference is not as drastic as the greater than 5km difference reported by Durrheim and Mooney. Though $Vp$ data was not explicity estimated in this study, the higher seismic velocity ratio in the Proterozoic units (1.76) than in Archean units (1.74) aligns with their argument for a thicker basal layer in Proterozoic crustal units.
+
+In contrast, Zandt and Ammon [1995] report high Poisson's Ratio values for Archean Shields and conclude that no systematic difference between Archaean and Proterozoic crust exists. Their average, transformed into $Vp/Vs$, is 1.84, much higher than the wieghted average for the Canadian Shield of 1.74 computed herein. The Authors also report a low $V_P/V_S$ value for Cenozoic-Mesozoic crust, 1.73 compared to the value calculated here of 1.77. Zandt and Ammon interpret these results showing high values for older crust and lower values for younger crust as indicating two end member scenarios. In the uniformitarian model, a delamination type process operates to remove mafic lower crust during continental collisions and is subsequently followed by a stabilizing process involving basaltic underplating. This implies that younger crust has not yet completed the crustal genesis cycle. In their second scenario, Precambrian cratons evolve through unique processes and younger orogens involve recycling and reworking existing material with little crustal growth.
+
+Whereas Zandt and Ammon show increasing $V_P/V_S$ values with crustal age the estimates computed in this study indicate an opposite trend, that is lower seismic velocity ratios with crustal age. This aligns more closely to the results of Durrheim and Mooney [1991] and seems to provide evidence for an evolution of crustal processes throughout geological time. Though Durrheim and Mooney accept the hypothesis that Proterozoic crust is more prone to basaltic underplating, thereby explaining higher velocities and thicker crust, Roberta Rudnick [1995; Rucknick and Gao, 2003] has argued persuasively that a range of possible processes may explain this data.
+
+[ Use crustal composition plus increasing Vp/Vs with younger crust result to make ``best'' pick among the 4 main processes Rudnick proposes to complete section.]
+
+
 
 
 %% -----------------------------------------------%%
@@ -347,8 +361,6 @@ The Slave, Superior and Churchill provinces share similar mean crustal compositi
 
 
 \section{bibliography}
-
-Bassin, C., G. Laske, G. Masters (2000), The Current Limits of Resolution for Surface Wave Tomography in North America, EOS Trans AGU, 81.
 
 Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21183-21200.
 
@@ -366,6 +378,8 @@ Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations
 
 Efron, B., R. Tibshirani (1986), Bootstrap Methods for Standard Errors, Confidence Intervals, and Other Measures of Statistical Accuracy, Statistical Science, 1, 54-75.
 
+Laske, G., G. Masters, Z. Ma, M. Pasyanos (2013), Update on CRUST1.0 - A 1-degree Global Model of Earth's Crust, Geophys. Res. Abstracts, 15, Abstract EGU2013-2658.
+
 Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
 Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
 
@@ -376,6 +390,8 @@ Langston, C. A. (1979), Structure under Mount Rainier, Washington, inferred from
 Percival, J. A., Gordon F. W. (1994), The Kapuskasing uplift: a geological and geophysical synthesis, Canadian. J. of Earth Sciences, 31, 1256-1286.
 
 Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002), LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
+
+Rudnick, R. L. (1995), Making Continental Crust, Nature, 378, 571-578.
 
 Rudnick, R. L., D. M. Fountain (1995), Nature and composition of the continental crust: A lower crustal perspective, Rev. Geophys., 33(3), 267–309, doi:10.1029/95RG01302.
 

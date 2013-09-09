@@ -22,6 +22,8 @@ def shape2json(shapeRecs):
         m[ix]["R"] = shapeRec.record[1]
         m[ix]["H"] = shapeRec.record[2]
         m[ix]["geoprov"] = shapeRec.record[3]
+        m[ix]["era"] = shapeRec.record[4].lower()
+        m[ix]["period"] = shapeRec.record[5].lower()
         (lon, lat) = lonlatbbox(shapeRec.shape.bbox)
         m[ix]["lat"] = lat
         m[ix]["lon"] = lon
@@ -34,7 +36,7 @@ def lonlatbbox(bbox):
 if __name__== '__main__' :
 
     c2jfile = os.environ['HOME'] + '/thesis/data/crust1.json'
-    sf = shapefile.Reader(os.environ['HOME'] + '/thesis/mapping/crust1/crust1geology')
+    sf = shapefile.Reader(os.environ['HOME'] + '/thesis/mapping/crust1GeoChron')
     shapeRecs = sf.shapeRecords()
 
     jdict = shape2json(shapeRecs)

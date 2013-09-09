@@ -60,7 +60,7 @@ def rmsDifference(x, y):
     return np.sqrt(md/(n))
 
 
-for i in range(0,3):
+for i in range(1,2):
 
     pro = os.environ['HOME'] + data[2*i + 1]
     pub = os.environ['HOME'] + data[2*i]
@@ -98,6 +98,8 @@ for i in range(0,3):
 
     print "RMS Difference between", leglabel[i], "H datasets is {0:.2f}".format(rmsDifference(H1,H2)), "using", len(p2.stns), "stations"
     print "RMS Difference between", leglabel[i], "Vp/Vs datasets is {0:.3f}".format(rmsDifference(R1,R2)), "using", len(p2.stns), "stations"
+
+    print np.mean(R1), np.mean(R2)
 
     t = np.arange(len(R1))
 
