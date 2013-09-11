@@ -19,7 +19,7 @@ from ternarytools import terntransform, baryIntersect
 import ternplots as tern
 
 stnfile = os.environ['HOME'] + '/thesis/data/stations.json'
-moonfile = os.environ['HOME'] + '/thesis/data/moonvpGeology.json'
+moonfile = os.environ['HOME'] + '/thesis/data/crust1.json'
 vfile = os.environ['HOME'] + '/thesis/data/voronoi.json'
 
 parameterType = 'velocity'
@@ -422,13 +422,13 @@ if __name__  == "__main__":
         plt.setp( ax.get_xticklabels(), visible= True)
         plt.suptitle(ptype.histlabel + ' Histogram\n Major Canadian Shield Provinces', size = 22)
 
-        if not ptype.H:
-            plt.figure(figsize = (width, height))
-            ii = 0
-            for p, v in zip(avgp, avgv):
-                plt.subplot(2,2,ii)
-                plottern(plt, p, v)
-                ii += 1
+        # if not ptype.H:
+        #     plt.figure(figsize = (width, height))
+        #     ii = 0
+        #     for p, v in zip(avgp, avgv):
+        #         plt.subplot(2,2,ii)
+        #         plottern(plt, p, v)
+        #         ii += 1
 
     #######################################################################
     # F2 Sheild as a whole

@@ -1,0 +1,5178 @@
+{
+  "100": {
+    "H": 30.39, 
+    "Vp": 6.361, 
+    "epoch": "undivided ordovician-triassic", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "ordovician-triassic"
+  }, 
+  "101": {
+    "H": 51.2, 
+    "Vp": 6.642, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "102": {
+    "H": 35.6, 
+    "Vp": 6.326, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "103": {
+    "H": 37.5, 
+    "Vp": 6.309, 
+    "epoch": "undivided triassic-jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic-jurassic"
+  }, 
+  "104": {
+    "H": 43.4, 
+    "Vp": 6.406, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "105": {
+    "H": 46.0, 
+    "Vp": 6.491, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "106": {
+    "H": 44.0, 
+    "Vp": 6.575, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "107": {
+    "H": 47.3, 
+    "Vp": 6.593, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "108": {
+    "H": 47.5, 
+    "Vp": 6.466, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "1087": {
+    "H": 8.94, 
+    "Vp": 6.058, 
+    "epoch": "pleistocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "quaternary"
+  }, 
+  "1089": {
+    "H": 7.13, 
+    "Vp": 5.643, 
+    "epoch": "pleistocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "quaternary"
+  }, 
+  "109": {
+    "H": 48.2, 
+    "Vp": 6.59, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "11": {
+    "H": 48.5, 
+    "Vp": 6.601, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "110": {
+    "H": 34.0, 
+    "Vp": 6.51, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "111": {
+    "H": 38.6, 
+    "Vp": 6.568, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "112": {
+    "H": 31.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "114": {
+    "H": 38.0, 
+    "Vp": 6.416, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "1144": {
+    "H": 5.98, 
+    "Vp": 5.511, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1145": {
+    "H": 6.53, 
+    "Vp": 5.47, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1146": {
+    "H": 6.97, 
+    "Vp": 5.289, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1147": {
+    "H": 8.96, 
+    "Vp": 5.36, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "115": {
+    "H": 26.46, 
+    "Vp": 6.462, 
+    "epoch": "undivided ordovician-silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "ordovician-silurian"
+  }, 
+  "1150": {
+    "H": 9.27, 
+    "Vp": 4.996, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1151": {
+    "H": 11.58, 
+    "Vp": 5.773, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "11612": {
+    "H": 6.69, 
+    "Vp": 5.381, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "11613": {
+    "H": 6.37, 
+    "Vp": 5.556, 
+    "epoch": "miocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1176": {
+    "H": 12.33, 
+    "Vp": 5.301, 
+    "epoch": "oligocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "120": {
+    "H": 33.8, 
+    "Vp": 6.296, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "12059": {
+    "H": 36.0, 
+    "Vp": 6.306, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "121": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cambrian"
+  }, 
+  "122": {
+    "H": 37.8, 
+    "Vp": 6.121, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "12349": {
+    "H": 35.0, 
+    "Vp": 6.594, 
+    "epoch": "middle-late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12350": {
+    "H": 35.0, 
+    "Vp": 6.543, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12353": {
+    "H": 40.0, 
+    "Vp": 6.55, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "12354": {
+    "H": 40.0, 
+    "Vp": 6.525, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12356": {
+    "H": 35.0, 
+    "Vp": 6.4, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12370": {
+    "H": 41.0, 
+    "Vp": 6.5, 
+    "epoch": "undivided neoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "neoproterozoic"
+  }, 
+  "12402": {
+    "H": 41.0, 
+    "Vp": 6.6, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12403": {
+    "H": 33.0, 
+    "Vp": 6.6, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12486": {
+    "H": 35.0, 
+    "Vp": 6.38, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12615": {
+    "H": 36.9, 
+    "Vp": 6.51, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12643": {
+    "H": 32.0, 
+    "Vp": 6.275, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "12645": {
+    "H": 35.3, 
+    "Vp": 6.6, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12662": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "epoch": "undivided paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12668": {
+    "H": 35.0, 
+    "Vp": 6.464, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "12669": {
+    "H": 41.31, 
+    "Vp": 6.66, 
+    "epoch": "late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12672": {
+    "H": 39.2, 
+    "Vp": 6.92, 
+    "epoch": "undivided ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "ordovician"
+  }, 
+  "12674": {
+    "H": 38.1, 
+    "Vp": 6.695, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "12676": {
+    "H": 32.7, 
+    "Vp": 6.524, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "12678": {
+    "H": 40.6, 
+    "Vp": 6.794, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12679": {
+    "H": 43.3, 
+    "Vp": 6.524, 
+    "epoch": "undivided neoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "neoproterozoic"
+  }, 
+  "12680": {
+    "H": 35.0, 
+    "Vp": 6.243, 
+    "epoch": "late mesoproterozoic-neoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "mesoproterozoic-neoproterozoic"
+  }, 
+  "12681": {
+    "H": 44.5, 
+    "Vp": 6.792, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "12682": {
+    "H": 37.0, 
+    "Vp": 6.323, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12683": {
+    "H": 37.0, 
+    "Vp": 6.232, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12731": {
+    "H": 37.0, 
+    "Vp": 6.52, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12732": {
+    "H": 33.1, 
+    "Vp": 6.429, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12733": {
+    "H": 33.4, 
+    "Vp": 6.353, 
+    "epoch": "undivided mesoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "mesoarchean"
+  }, 
+  "12734": {
+    "H": 30.9, 
+    "Vp": 6.313, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12735": {
+    "H": 36.8, 
+    "Vp": 6.348, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12736": {
+    "H": 37.0, 
+    "Vp": 6.395, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12737": {
+    "H": 31.2, 
+    "Vp": 6.363, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12738": {
+    "H": 31.1, 
+    "Vp": 6.438, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12739": {
+    "H": 33.6, 
+    "Vp": 6.483, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12740": {
+    "H": 30.0, 
+    "Vp": 6.482, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12741": {
+    "H": 30.95, 
+    "Vp": 6.431, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12742": {
+    "H": 32.44, 
+    "Vp": 6.542, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12743": {
+    "H": 32.55, 
+    "Vp": 6.474, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12744": {
+    "H": 33.45, 
+    "Vp": 6.489, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "12745": {
+    "H": 33.85, 
+    "Vp": 6.5, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12746": {
+    "H": 30.95, 
+    "Vp": 6.453, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12747": {
+    "H": 31.65, 
+    "Vp": 6.431, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12748": {
+    "H": 31.35, 
+    "Vp": 6.44, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12749": {
+    "H": 34.95, 
+    "Vp": 6.397, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12750": {
+    "H": 35.45, 
+    "Vp": 6.417, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12751": {
+    "H": 34.05, 
+    "Vp": 6.435, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12752": {
+    "H": 31.65, 
+    "Vp": 6.413, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "12753": {
+    "H": 34.0, 
+    "Vp": 6.475, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "12789": {
+    "H": 40.0, 
+    "Vp": 6.547, 
+    "epoch": "undivided ordovician-silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "ordovician-silurian"
+  }, 
+  "12790": {
+    "H": 50.0, 
+    "Vp": 6.63, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12791": {
+    "H": 54.0, 
+    "Vp": 6.662, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12794": {
+    "H": 44.0, 
+    "Vp": 6.543, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12795": {
+    "H": 42.0, 
+    "Vp": 6.245, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12797": {
+    "H": 44.0, 
+    "Vp": 6.528, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "12798": {
+    "H": 40.0, 
+    "Vp": 6.469, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "12799": {
+    "H": 38.0, 
+    "Vp": 6.325, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "12801": {
+    "H": 40.0, 
+    "Vp": 6.447, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12809": {
+    "H": 39.4, 
+    "Vp": 6.536, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12810": {
+    "H": 46.0, 
+    "Vp": 6.632, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "12817": {
+    "H": 24.0, 
+    "Vp": 5.167, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "12818": {
+    "H": 16.0, 
+    "Vp": 5.453, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "12826": {
+    "H": 37.1, 
+    "Vp": 6.033, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12827": {
+    "H": 37.2, 
+    "Vp": 6.264, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12828": {
+    "H": 42.2, 
+    "Vp": 6.588, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12829": {
+    "H": 40.2, 
+    "Vp": 6.018, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12830": {
+    "H": 42.3, 
+    "Vp": 6.034, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12831": {
+    "H": 43.95, 
+    "Vp": 6.321, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12832": {
+    "H": 44.6, 
+    "Vp": 6.516, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12833": {
+    "H": 46.6, 
+    "Vp": 6.247, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12834": {
+    "H": 42.8, 
+    "Vp": 6.333, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12835": {
+    "H": 38.1, 
+    "Vp": 6.222, 
+    "epoch": "pre-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12836": {
+    "H": 40.7, 
+    "Vp": 6.173, 
+    "epoch": "pre-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12837": {
+    "H": 38.5, 
+    "Vp": 6.16, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12838": {
+    "H": 46.6, 
+    "Vp": 6.32, 
+    "epoch": "pre-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12839": {
+    "H": 47.5, 
+    "Vp": 6.375, 
+    "epoch": "pre-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12840": {
+    "H": 52.0, 
+    "Vp": 6.385, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12841": {
+    "H": 42.1, 
+    "Vp": 6.278, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12842": {
+    "H": 39.4, 
+    "Vp": 5.987, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12843": {
+    "H": 47.6, 
+    "Vp": 6.234, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12844": {
+    "H": 41.5, 
+    "Vp": 5.99, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "12847": {
+    "H": 42.0, 
+    "Vp": 6.586, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "12910": {
+    "H": 35.2, 
+    "Vp": 6.302, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12919": {
+    "H": 42.2, 
+    "Vp": 6.548, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12920": {
+    "H": 72.6, 
+    "Vp": 7.181, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "12950": {
+    "H": 38.0, 
+    "Vp": 6.57, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12951": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "epoch": "lower ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12952": {
+    "H": 35.0, 
+    "Vp": 6.57, 
+    "epoch": "lower ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "12953": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Province de Grenville", 
+    "period": "mesoproterozoic"
+  }, 
+  "12954": {
+    "H": 39.0, 
+    "Vp": 6.57, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "12955": {
+    "H": 42.0, 
+    "Vp": 6.57, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "12956": {
+    "H": 35.0, 
+    "Vp": 6.508, 
+    "epoch": "late paleoproterozoic-mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "13056": {
+    "H": 40.0, 
+    "Vp": 6.2, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "13072": {
+    "H": 43.0, 
+    "Vp": 6.242, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "13073": {
+    "H": 35.0, 
+    "Vp": 6.229, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "neoarchean"
+  }, 
+  "13074": {
+    "H": 38.0, 
+    "Vp": 6.263, 
+    "epoch": "cenomanian-santonian", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "cretaceous"
+  }, 
+  "13075": {
+    "H": 44.0, 
+    "Vp": 6.57, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "13076": {
+    "H": 30.0, 
+    "Vp": 5.92, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "13090": {
+    "H": 42.7, 
+    "Vp": 6.691, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian"
+  }, 
+  "13091": {
+    "H": 41.1, 
+    "Vp": 6.659, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian"
+  }, 
+  "13105": {
+    "H": 37.0, 
+    "Vp": 6.356, 
+    "epoch": "undivided mesoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "mesoarchean"
+  }, 
+  "13106": {
+    "H": 37.3, 
+    "Vp": 6.24, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "1408": {
+    "H": 50.0, 
+    "Vp": 6.525, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "1409": {
+    "H": 44.0, 
+    "Vp": 6.494, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "1410": {
+    "H": 50.0, 
+    "Vp": 6.525, 
+    "epoch": "undivided neoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "neoproterozoic"
+  }, 
+  "1415": {
+    "H": 32.0, 
+    "Vp": 6.05, 
+    "epoch": "undivided neoarchean-paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "neoarchean-paleoproterozoic"
+  }, 
+  "1416": {
+    "H": 17.0, 
+    "Vp": 5.338, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "1417": {
+    "H": 13.0, 
+    "Vp": 5.405, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "1418": {
+    "H": 11.8, 
+    "Vp": 5.732, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1419": {
+    "H": 8.5, 
+    "Vp": 4.774, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1420": {
+    "H": 8.5, 
+    "Vp": 4.777, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1430": {
+    "H": 12.0, 
+    "Vp": 6.335, 
+    "epoch": "pleistocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "quaternary"
+  }, 
+  "1476": {
+    "H": 48.3, 
+    "Vp": 6.438, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "1508": {
+    "H": 6.7, 
+    "Vp": 5.658, 
+    "epoch": "pliocene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "1532": {
+    "H": 36.0, 
+    "Vp": 6.144, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "1581": {
+    "H": 38.57, 
+    "Vp": 6.816, 
+    "epoch": "undivided mississippian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "mississippian"
+  }, 
+  "1582": {
+    "H": 30.0, 
+    "Vp": 6.1, 
+    "epoch": "lower ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "1583": {
+    "H": 32.3, 
+    "Vp": 6.598, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "silurian"
+  }, 
+  "1584": {
+    "H": 43.43, 
+    "Vp": 6.505, 
+    "epoch": "undivided carboniferous-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous-permian"
+  }, 
+  "1585": {
+    "H": 39.43, 
+    "Vp": 6.578, 
+    "epoch": "upper mississippian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "mississippian"
+  }, 
+  "1644": {
+    "H": 19.0, 
+    "Vp": 6.0, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "1993": {
+    "H": 36.0, 
+    "Vp": 6.28, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "1994": {
+    "H": 34.8, 
+    "Vp": 6.43, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "2081": {
+    "H": 32.0, 
+    "Vp": 6.13, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "2150": {
+    "H": 46.0, 
+    "Vp": 6.47, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2151": {
+    "H": 46.5, 
+    "Vp": 6.486, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2152": {
+    "H": 35.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2153": {
+    "H": 32.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2154": {
+    "H": 30.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2155": {
+    "H": 28.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2156": {
+    "H": 31.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2157": {
+    "H": 32.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "2158": {
+    "H": 34.0, 
+    "Vp": 6.3, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2159": {
+    "H": 42.0, 
+    "Vp": 6.3, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2160": {
+    "H": 41.0, 
+    "Vp": 6.3, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2161": {
+    "H": 49.0, 
+    "Vp": 6.3, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2162": {
+    "H": 45.0, 
+    "Vp": 6.3, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2163": {
+    "H": 34.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2164": {
+    "H": 40.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2165": {
+    "H": 40.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2166": {
+    "H": 38.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2167": {
+    "H": 33.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian-devonian"
+  }, 
+  "2168": {
+    "H": 26.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2169": {
+    "H": 26.0, 
+    "Vp": 6.3, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2186": {
+    "H": 38.1, 
+    "Vp": 6.293, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "jurassic"
+  }, 
+  "2187": {
+    "H": 40.3, 
+    "Vp": 6.369, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2188": {
+    "H": 46.5, 
+    "Vp": 6.519, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2189": {
+    "H": 47.8, 
+    "Vp": 6.433, 
+    "epoch": "paleocene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "2230": {
+    "H": 37.6, 
+    "Vp": 6.47, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "2231": {
+    "H": 31.1, 
+    "Vp": 6.367, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2232": {
+    "H": 34.9, 
+    "Vp": 6.374, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2233": {
+    "H": 37.7, 
+    "Vp": 6.378, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "2234": {
+    "H": 32.3, 
+    "Vp": 6.369, 
+    "epoch": "late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "2297": {
+    "H": 25.0, 
+    "Vp": 5.8, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2299": {
+    "H": 30.0, 
+    "Vp": 5.95, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2301": {
+    "H": 34.0, 
+    "Vp": 6.038, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2381": {
+    "H": 13.26, 
+    "Vp": 4.937, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "2382": {
+    "H": 21.88, 
+    "Vp": 5.861, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "2383": {
+    "H": 22.32, 
+    "Vp": 5.473, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2384": {
+    "H": 23.36, 
+    "Vp": 5.561, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2385": {
+    "H": 22.8, 
+    "Vp": 5.215, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2386": {
+    "H": 14.94, 
+    "Vp": 4.447, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2387": {
+    "H": 21.23, 
+    "Vp": 5.021, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2388": {
+    "H": 15.06, 
+    "Vp": 4.33, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "2391": {
+    "H": 8.92, 
+    "Vp": 5.224, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "2392": {
+    "H": 6.86, 
+    "Vp": 4.612, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "2393": {
+    "H": 9.37, 
+    "Vp": 4.497, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "2394": {
+    "H": 10.49, 
+    "Vp": 4.628, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "2407": {
+    "H": 44.73, 
+    "Vp": 6.421, 
+    "epoch": "early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "2408": {
+    "H": 43.0, 
+    "Vp": 6.822, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "2409": {
+    "H": 41.5, 
+    "Vp": 6.693, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian"
+  }, 
+  "2414": {
+    "H": 30.6, 
+    "Vp": 6.031, 
+    "epoch": "lower-middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "devonian"
+  }, 
+  "2415": {
+    "H": 37.9, 
+    "Vp": 6.045, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "2416": {
+    "H": 34.5, 
+    "Vp": 6.039, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2417": {
+    "H": 34.0, 
+    "Vp": 6.288, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "2424": {
+    "H": 48.1, 
+    "Vp": 6.546, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2425": {
+    "H": 39.7, 
+    "Vp": 6.419, 
+    "epoch": "late paleoproterozoic-mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "2426": {
+    "H": 44.1, 
+    "Vp": 6.602, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "2427": {
+    "H": 41.8, 
+    "Vp": 6.662, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "2428": {
+    "H": 38.1, 
+    "Vp": 6.586, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2429": {
+    "H": 47.7, 
+    "Vp": 6.77, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2430": {
+    "H": 29.2, 
+    "Vp": 6.335, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "2431": {
+    "H": 28.3, 
+    "Vp": 6.28, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2432": {
+    "H": 26.0, 
+    "Vp": 6.32, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2433": {
+    "H": 26.4, 
+    "Vp": 6.33, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2434": {
+    "H": 30.6, 
+    "Vp": 6.266, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2435": {
+    "H": 29.4, 
+    "Vp": 6.305, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2436": {
+    "H": 34.1, 
+    "Vp": 6.317, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2446": {
+    "H": 34.8, 
+    "Vp": 6.264, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2447": {
+    "H": 36.0, 
+    "Vp": 6.304, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2448": {
+    "H": 39.4, 
+    "Vp": 6.316, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2449": {
+    "H": 33.2, 
+    "Vp": 6.257, 
+    "epoch": "lower devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2450": {
+    "H": 34.2, 
+    "Vp": 6.297, 
+    "epoch": "lower devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2451": {
+    "H": 37.9, 
+    "Vp": 6.309, 
+    "epoch": "lower devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2452": {
+    "H": 39.9, 
+    "Vp": 6.242, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2453": {
+    "H": 41.9, 
+    "Vp": 6.283, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2454": {
+    "H": 42.0, 
+    "Vp": 6.292, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2455": {
+    "H": 39.4, 
+    "Vp": 6.231, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2456": {
+    "H": 39.4, 
+    "Vp": 6.269, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2457": {
+    "H": 42.5, 
+    "Vp": 6.282, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2465": {
+    "H": 36.5, 
+    "Vp": 6.227, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2466": {
+    "H": 36.4, 
+    "Vp": 6.265, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2467": {
+    "H": 39.7, 
+    "Vp": 6.279, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2468": {
+    "H": 33.7, 
+    "Vp": 6.219, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2469": {
+    "H": 32.8, 
+    "Vp": 6.255, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2470": {
+    "H": 35.0, 
+    "Vp": 6.269, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2471": {
+    "H": 37.2, 
+    "Vp": 6.277, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2472": {
+    "H": 35.3, 
+    "Vp": 6.317, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2473": {
+    "H": 35.9, 
+    "Vp": 6.327, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2474": {
+    "H": 41.3, 
+    "Vp": 6.28, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "ordovician"
+  }, 
+  "2475": {
+    "H": 40.9, 
+    "Vp": 6.32, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "ordovician"
+  }, 
+  "2476": {
+    "H": 40.4, 
+    "Vp": 6.33, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "ordovician"
+  }, 
+  "2477": {
+    "H": 38.2, 
+    "Vp": 6.257, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2478": {
+    "H": 38.6, 
+    "Vp": 6.297, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2479": {
+    "H": 40.9, 
+    "Vp": 6.308, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2480": {
+    "H": 32.2, 
+    "Vp": 6.243, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2481": {
+    "H": 34.7, 
+    "Vp": 6.284, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2482": {
+    "H": 38.1, 
+    "Vp": 6.297, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2483": {
+    "H": 34.5, 
+    "Vp": 6.214, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2484": {
+    "H": 34.4, 
+    "Vp": 6.252, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2485": {
+    "H": 38.2, 
+    "Vp": 6.268, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2486": {
+    "H": 37.4, 
+    "Vp": 6.216, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2487": {
+    "H": 37.9, 
+    "Vp": 6.255, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2488": {
+    "H": 41.1, 
+    "Vp": 6.27, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "cretaceous"
+  }, 
+  "2489": {
+    "H": 31.9, 
+    "Vp": 6.226, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2490": {
+    "H": 35.2, 
+    "Vp": 6.269, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2491": {
+    "H": 33.7, 
+    "Vp": 6.276, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2492": {
+    "H": 30.6, 
+    "Vp": 6.231, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2493": {
+    "H": 27.7, 
+    "Vp": 6.263, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2494": {
+    "H": 34.9, 
+    "Vp": 6.285, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "devonian"
+  }, 
+  "2541": {
+    "H": 29.0, 
+    "Vp": 6.265, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2542": {
+    "H": 28.1, 
+    "Vp": 6.304, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2543": {
+    "H": 31.6, 
+    "Vp": 6.316, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2544": {
+    "H": 38.2, 
+    "Vp": 6.28, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2545": {
+    "H": 38.0, 
+    "Vp": 6.32, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2546": {
+    "H": 36.8, 
+    "Vp": 6.33, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "2547": {
+    "H": 41.0, 
+    "Vp": 6.28, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2548": {
+    "H": 40.8, 
+    "Vp": 6.32, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2549": {
+    "H": 39.6, 
+    "Vp": 6.33, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "2550": {
+    "H": 34.0, 
+    "Vp": 6.27, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2551": {
+    "H": 33.0, 
+    "Vp": 6.31, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2552": {
+    "H": 31.3, 
+    "Vp": 6.319, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Hudson Bay Lowlands", 
+    "period": "silurian"
+  }, 
+  "2553": {
+    "H": 33.1, 
+    "Vp": 6.28, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2554": {
+    "H": 32.2, 
+    "Vp": 6.32, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2555": {
+    "H": 30.1, 
+    "Vp": 6.33, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "2556": {
+    "H": 35.2, 
+    "Vp": 6.306, 
+    "epoch": "undivided devonian-mississippian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "devonian-mississippian"
+  }, 
+  "2557": {
+    "H": 28.2, 
+    "Vp": 6.006, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "2558": {
+    "H": 28.1, 
+    "Vp": 6.006, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "2559": {
+    "H": 30.5, 
+    "Vp": 6.028, 
+    "epoch": "undivided triassic-jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic-jurassic"
+  }, 
+  "2560": {
+    "H": 31.2, 
+    "Vp": 6.029, 
+    "epoch": "undivided triassic-jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic-jurassic"
+  }, 
+  "2561": {
+    "H": 30.4, 
+    "Vp": 6.1, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "2562": {
+    "H": 34.0, 
+    "Vp": 6.1, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "2563": {
+    "H": 32.0, 
+    "Vp": 6.06, 
+    "epoch": "undivided triassic-jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic-jurassic"
+  }, 
+  "2564": {
+    "H": 33.0, 
+    "Vp": 6.1, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "2565": {
+    "H": 32.5, 
+    "Vp": 6.1, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "2566": {
+    "H": 26.0, 
+    "Vp": 6.1, 
+    "epoch": "late jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "2567": {
+    "H": 28.0, 
+    "Vp": 6.1, 
+    "epoch": "late jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "2582": {
+    "H": 48.7, 
+    "Vp": 6.545, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2583": {
+    "H": 46.7, 
+    "Vp": 6.678, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2584": {
+    "H": 45.3, 
+    "Vp": 6.482, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2585": {
+    "H": 44.4, 
+    "Vp": 6.486, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2586": {
+    "H": 47.1, 
+    "Vp": 6.561, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2587": {
+    "H": 46.0, 
+    "Vp": 6.486, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2588": {
+    "H": 42.6, 
+    "Vp": 6.41, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2589": {
+    "H": 44.4, 
+    "Vp": 6.429, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2590": {
+    "H": 41.8, 
+    "Vp": 6.433, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2591": {
+    "H": 44.9, 
+    "Vp": 6.426, 
+    "epoch": "paleocene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "2592": {
+    "H": 42.7, 
+    "Vp": 6.359, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2593": {
+    "H": 41.6, 
+    "Vp": 6.383, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "jurassic"
+  }, 
+  "2594": {
+    "H": 44.0, 
+    "Vp": 6.443, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "2595": {
+    "H": 42.5, 
+    "Vp": 6.382, 
+    "epoch": "paleocene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "2596": {
+    "H": 44.3, 
+    "Vp": 6.411, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "297": {
+    "H": 33.9, 
+    "Vp": 6.038, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Slave Province", 
+    "period": "neoarchean"
+  }, 
+  "300": {
+    "H": 32.5, 
+    "Vp": 6.634, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "silurian"
+  }, 
+  "3002": {
+    "H": 56.8, 
+    "Vp": 6.631, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3003": {
+    "H": 55.3, 
+    "Vp": 6.583, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "301": {
+    "H": 42.3, 
+    "Vp": 6.491, 
+    "epoch": "middle cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3011": {
+    "H": 47.93, 
+    "Vp": 6.518, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3018": {
+    "H": 45.6, 
+    "Vp": 6.643, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "302": {
+    "H": 46.3, 
+    "Vp": 6.522, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "3023": {
+    "H": 50.6, 
+    "Vp": 6.505, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3024": {
+    "H": 55.0, 
+    "Vp": 6.382, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3025": {
+    "H": 54.9, 
+    "Vp": 6.593, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "303": {
+    "H": 43.3, 
+    "Vp": 6.613, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "304": {
+    "H": 34.7, 
+    "Vp": 6.246, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "305": {
+    "H": 31.3, 
+    "Vp": 6.14, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "cambrian"
+  }, 
+  "306": {
+    "H": 30.1, 
+    "Vp": 6.01, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian"
+  }, 
+  "307": {
+    "H": 41.5, 
+    "Vp": 6.865, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "308": {
+    "H": 31.0, 
+    "Vp": 6.019, 
+    "epoch": "undivided neoproterozoic-paleozoic", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "neoproterozoic-paleozoic"
+  }, 
+  "309": {
+    "H": 58.0, 
+    "Vp": 6.928, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cambrian"
+  }, 
+  "310": {
+    "H": 51.0, 
+    "Vp": 7.071, 
+    "epoch": "undivided ordovician-silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "ordovician-silurian"
+  }, 
+  "3135": {
+    "H": 52.4, 
+    "Vp": 6.548, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3136": {
+    "H": 50.0, 
+    "Vp": 6.661, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3137": {
+    "H": 38.3, 
+    "Vp": 6.246, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "jurassic"
+  }, 
+  "3138": {
+    "H": 41.7, 
+    "Vp": 6.29, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3139": {
+    "H": 44.2, 
+    "Vp": 6.288, 
+    "epoch": "paleocene", 
+    "era": "cenozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "tertiary"
+  }, 
+  "314": {
+    "H": 30.0, 
+    "Vp": 6.19, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "3140": {
+    "H": 41.8, 
+    "Vp": 6.339, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3144": {
+    "H": 49.1, 
+    "Vp": 6.87, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3145": {
+    "H": 49.1, 
+    "Vp": 6.912, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3146": {
+    "H": 47.8, 
+    "Vp": 6.914, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3147": {
+    "H": 51.5, 
+    "Vp": 6.852, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3148": {
+    "H": 43.7, 
+    "Vp": 6.846, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3149": {
+    "H": 39.6, 
+    "Vp": 6.785, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3150": {
+    "H": 43.8, 
+    "Vp": 6.713, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3151": {
+    "H": 42.6, 
+    "Vp": 6.856, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3152": {
+    "H": 53.7, 
+    "Vp": 6.983, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3153": {
+    "H": 45.6, 
+    "Vp": 6.816, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3154": {
+    "H": 47.0, 
+    "Vp": 6.502, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3157": {
+    "H": 37.6, 
+    "Vp": 6.648, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3159": {
+    "H": 38.0, 
+    "Vp": 6.717, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3160": {
+    "H": 38.0, 
+    "Vp": 6.648, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3162": {
+    "H": 37.7, 
+    "Vp": 6.557, 
+    "epoch": "undivided mesoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "mesoarchean"
+  }, 
+  "3164": {
+    "H": 38.6, 
+    "Vp": 6.514, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3165": {
+    "H": 33.3, 
+    "Vp": 6.401, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3166": {
+    "H": 32.5, 
+    "Vp": 6.308, 
+    "epoch": "undivided mesoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "mesoarchean"
+  }, 
+  "3167": {
+    "H": 33.1, 
+    "Vp": 6.318, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3168": {
+    "H": 33.1, 
+    "Vp": 6.318, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3169": {
+    "H": 32.6, 
+    "Vp": 6.322, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3170": {
+    "H": 31.7, 
+    "Vp": 6.239, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3171": {
+    "H": 32.1, 
+    "Vp": 6.214, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3172": {
+    "H": 33.1, 
+    "Vp": 6.335, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3173": {
+    "H": 32.4, 
+    "Vp": 6.373, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3174": {
+    "H": 33.2, 
+    "Vp": 6.385, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3175": {
+    "H": 33.4, 
+    "Vp": 6.318, 
+    "epoch": "undivided mesoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "mesoarchean"
+  }, 
+  "3176": {
+    "H": 33.2, 
+    "Vp": 6.298, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3177": {
+    "H": 38.5, 
+    "Vp": 6.474, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3178": {
+    "H": 40.1, 
+    "Vp": 6.683, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3179": {
+    "H": 48.7, 
+    "Vp": 6.471, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "3181": {
+    "H": 35.0, 
+    "Vp": 6.434, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3182": {
+    "H": 36.0, 
+    "Vp": 6.443, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3183": {
+    "H": 42.7, 
+    "Vp": 6.498, 
+    "epoch": "early paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3184": {
+    "H": 43.9, 
+    "Vp": 6.541, 
+    "epoch": "undivided neoarchean-paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean-paleoproterozoic"
+  }, 
+  "3186": {
+    "H": 37.6, 
+    "Vp": 6.565, 
+    "epoch": "upper silurian", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "silurian"
+  }, 
+  "3187": {
+    "H": 41.2, 
+    "Vp": 6.586, 
+    "epoch": "upper silurian", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "silurian"
+  }, 
+  "3188": {
+    "H": 44.6, 
+    "Vp": 6.611, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "3189": {
+    "H": 40.0, 
+    "Vp": 6.546, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "319": {
+    "H": 36.0, 
+    "Vp": 5.996, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Arctic Platform", 
+    "period": "devonian"
+  }, 
+  "3190": {
+    "H": 39.6, 
+    "Vp": 6.512, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "320": {
+    "H": 36.5, 
+    "Vp": 5.976, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "jurassic"
+  }, 
+  "3203": {
+    "H": 35.6, 
+    "Vp": 6.21, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3204": {
+    "H": 32.1, 
+    "Vp": 6.376, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian"
+  }, 
+  "3205": {
+    "H": 34.4, 
+    "Vp": 6.399, 
+    "epoch": "late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3206": {
+    "H": 34.8, 
+    "Vp": 6.353, 
+    "epoch": "undivided devonian-carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian-carboniferous"
+  }, 
+  "3207": {
+    "H": 35.0, 
+    "Vp": 6.391, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "3208": {
+    "H": 36.6, 
+    "Vp": 6.428, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "3209": {
+    "H": 43.0, 
+    "Vp": 6.706, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "321": {
+    "H": 36.0, 
+    "Vp": 5.99, 
+    "epoch": "undivided jurassic-cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "jurassic-cretaceous"
+  }, 
+  "3210": {
+    "H": 31.2, 
+    "Vp": 6.574, 
+    "epoch": "late jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3211": {
+    "H": 36.1, 
+    "Vp": 6.524, 
+    "epoch": "lower-middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3212": {
+    "H": 40.0, 
+    "Vp": 6.225, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3213": {
+    "H": 39.5, 
+    "Vp": 6.29, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3214": {
+    "H": 35.9, 
+    "Vp": 6.221, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3215": {
+    "H": 41.0, 
+    "Vp": 6.297, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3216": {
+    "H": 37.5, 
+    "Vp": 6.307, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3217": {
+    "H": 33.3, 
+    "Vp": 6.27, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3218": {
+    "H": 44.0, 
+    "Vp": 6.775, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "3219": {
+    "H": 44.9, 
+    "Vp": 6.753, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Grenville Province", 
+    "period": "cambrian-ordovician"
+  }, 
+  "3220": {
+    "H": 40.8, 
+    "Vp": 6.573, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "3224": {
+    "H": 40.0, 
+    "Vp": 6.556, 
+    "epoch": "undivided neoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "neoproterozoic"
+  }, 
+  "3225": {
+    "H": 40.0, 
+    "Vp": 6.676, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "3226": {
+    "H": 39.1, 
+    "Vp": 6.758, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3227": {
+    "H": 39.1, 
+    "Vp": 6.738, 
+    "epoch": "late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3228": {
+    "H": 38.9, 
+    "Vp": 6.487, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "3231": {
+    "H": 47.0, 
+    "Vp": 6.913, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "3232": {
+    "H": 39.0, 
+    "Vp": 6.292, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3233": {
+    "H": 38.0, 
+    "Vp": 6.445, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "jurassic"
+  }, 
+  "3234": {
+    "H": 38.0, 
+    "Vp": 6.38, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3242": {
+    "H": 41.95, 
+    "Vp": 6.632, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3243": {
+    "H": 44.75, 
+    "Vp": 6.781, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3244": {
+    "H": 40.43, 
+    "Vp": 6.772, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3245": {
+    "H": 46.57, 
+    "Vp": 6.885, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3246": {
+    "H": 46.0, 
+    "Vp": 6.835, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3294": {
+    "H": 35.0, 
+    "Vp": 5.546, 
+    "epoch": "undivided quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "period": "quaternary"
+  }, 
+  "3295": {
+    "H": 37.5, 
+    "Vp": 5.936, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "3296": {
+    "H": 35.0, 
+    "Vp": 6.137, 
+    "epoch": "middle cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3297": {
+    "H": 36.0, 
+    "Vp": 6.238, 
+    "epoch": "undivided devonian-mississippian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "devonian-mississippian"
+  }, 
+  "3298": {
+    "H": 34.0, 
+    "Vp": 6.421, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3299": {
+    "H": 35.0, 
+    "Vp": 6.141, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "3300": {
+    "H": 37.5, 
+    "Vp": 6.317, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3301": {
+    "H": 35.0, 
+    "Vp": 6.103, 
+    "epoch": "late cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3302": {
+    "H": 36.0, 
+    "Vp": 6.287, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "3303": {
+    "H": 33.0, 
+    "Vp": 6.261, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3304": {
+    "H": 31.0, 
+    "Vp": 6.377, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3305": {
+    "H": 34.5, 
+    "Vp": 6.367, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3306": {
+    "H": 35.5, 
+    "Vp": 6.393, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3309": {
+    "H": 40.0, 
+    "Vp": 6.724, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3310": {
+    "H": 45.0, 
+    "Vp": 6.776, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3311": {
+    "H": 32.0, 
+    "Vp": 6.275, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3312": {
+    "H": 34.5, 
+    "Vp": 6.178, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3313": {
+    "H": 36.0, 
+    "Vp": 6.086, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3314": {
+    "H": 32.5, 
+    "Vp": 6.617, 
+    "epoch": "late jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3315": {
+    "H": 36.0, 
+    "Vp": 6.767, 
+    "epoch": "upper jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3316": {
+    "H": 35.0, 
+    "Vp": 6.357, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "3317": {
+    "H": 34.0, 
+    "Vp": 6.156, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "mesoproterozoic"
+  }, 
+  "3318": {
+    "H": 40.0, 
+    "Vp": 6.247, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3319": {
+    "H": 35.5, 
+    "Vp": 6.715, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "3320": {
+    "H": 39.0, 
+    "Vp": 6.583, 
+    "epoch": "middle cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3321": {
+    "H": 34.0, 
+    "Vp": 6.483, 
+    "epoch": "middle cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3322": {
+    "H": 34.5, 
+    "Vp": 6.446, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "3323": {
+    "H": 45.0, 
+    "Vp": 6.277, 
+    "epoch": "undivided mississippian-jurassic", 
+    "era": "paleozoic-mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "mississippian-jurassic"
+  }, 
+  "3324": {
+    "H": 37.5, 
+    "Vp": 6.375, 
+    "epoch": "undivided permian", 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "permian"
+  }, 
+  "3325": {
+    "H": 37.5, 
+    "Vp": 6.468, 
+    "epoch": "lower-middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Arctic Platform", 
+    "period": "devonian"
+  }, 
+  "3446": {
+    "H": 36.0, 
+    "Vp": 6.2, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3448": {
+    "H": 34.6, 
+    "Vp": 6.194, 
+    "epoch": "undivided devonian-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "devonian-permian"
+  }, 
+  "3449": {
+    "H": 38.5, 
+    "Vp": 6.197, 
+    "epoch": "undivided triassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "triassic"
+  }, 
+  "3472": {
+    "H": 42.3, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3473": {
+    "H": 42.7, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3474": {
+    "H": 40.5, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3475": {
+    "H": 44.5, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3476": {
+    "H": 43.1, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3477": {
+    "H": 41.0, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3478": {
+    "H": 40.6, 
+    "Vp": 6.5, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "3479": {
+    "H": 40.7, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3480": {
+    "H": 41.9, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3481": {
+    "H": 43.3, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3482": {
+    "H": 44.3, 
+    "Vp": 6.5, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "3483": {
+    "H": 45.3, 
+    "Vp": 6.5, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "3484": {
+    "H": 45.1, 
+    "Vp": 6.5, 
+    "epoch": "undivided archean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "archean"
+  }, 
+  "3485": {
+    "H": 45.2, 
+    "Vp": 6.5, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "3486": {
+    "H": 40.6, 
+    "Vp": 6.5, 
+    "epoch": "pre-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3487": {
+    "H": 41.4, 
+    "Vp": 6.5, 
+    "epoch": "upper devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "devonian"
+  }, 
+  "3488": {
+    "H": 42.7, 
+    "Vp": 6.5, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "devonian"
+  }, 
+  "3489": {
+    "H": 43.3, 
+    "Vp": 6.5, 
+    "epoch": "lower silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "silurian"
+  }, 
+  "3490": {
+    "H": 43.1, 
+    "Vp": 6.5, 
+    "epoch": "upper ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "ordovician"
+  }, 
+  "3491": {
+    "H": 43.8, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3492": {
+    "H": 43.9, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3493": {
+    "H": 43.9, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3494": {
+    "H": 49.6, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3495": {
+    "H": 52.0, 
+    "Vp": 6.5, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3496": {
+    "H": 49.2, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3497": {
+    "H": 46.9, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3498": {
+    "H": 41.8, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3499": {
+    "H": 38.2, 
+    "Vp": 6.5, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3500": {
+    "H": 41.5, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3501": {
+    "H": 46.1, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3502": {
+    "H": 48.5, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3503": {
+    "H": 44.6, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3504": {
+    "H": 42.6, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3505": {
+    "H": 43.0, 
+    "Vp": 6.5, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3506": {
+    "H": 41.2, 
+    "Vp": 6.5, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "3507": {
+    "H": 39.6, 
+    "Vp": 6.5, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "3508": {
+    "H": 42.2, 
+    "Vp": 6.079, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "3511": {
+    "H": 20.9, 
+    "Vp": 6.007, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "3516": {
+    "H": 20.6, 
+    "Vp": 6.082, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "3519": {
+    "H": 22.3, 
+    "Vp": 5.763, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Arctic Platform", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "3520": {
+    "H": 14.7, 
+    "Vp": 5.058, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Arctic Platform", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "3521": {
+    "H": 14.4, 
+    "Vp": 4.63, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "3782": {
+    "H": 42.94, 
+    "Vp": 6.792, 
+    "epoch": "early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3783": {
+    "H": 39.77, 
+    "Vp": 6.665, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "3784": {
+    "H": 38.8, 
+    "Vp": 6.672, 
+    "epoch": "late mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3785": {
+    "H": 38.22, 
+    "Vp": 6.562, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3786": {
+    "H": 35.56, 
+    "Vp": 6.531, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "3787": {
+    "H": 40.0, 
+    "Vp": 6.386, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "3788": {
+    "H": 37.16, 
+    "Vp": 6.683, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "3789": {
+    "H": 35.33, 
+    "Vp": 6.674, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "3790": {
+    "H": 37.25, 
+    "Vp": 6.561, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "4236": {
+    "H": 40.2, 
+    "Vp": 6.489, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "4268": {
+    "H": 37.27, 
+    "Vp": 6.111, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "devonian"
+  }, 
+  "4269": {
+    "H": 39.27, 
+    "Vp": 6.035, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "devonian"
+  }, 
+  "4270": {
+    "H": 35.45, 
+    "Vp": 6.088, 
+    "epoch": "undivided jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "jurassic"
+  }, 
+  "4271": {
+    "H": 34.36, 
+    "Vp": 6.176, 
+    "epoch": "middle devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "devonian"
+  }, 
+  "4272": {
+    "H": 38.18, 
+    "Vp": 5.997, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "cretaceous"
+  }, 
+  "4273": {
+    "H": 38.18, 
+    "Vp": 5.893, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "cretaceous"
+  }, 
+  "4310": {
+    "H": 38.7, 
+    "Vp": 6.464, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "4311": {
+    "H": 43.8, 
+    "Vp": 6.645, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "4312": {
+    "H": 47.5, 
+    "Vp": 6.669, 
+    "epoch": "undivided paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "4313": {
+    "H": 46.9, 
+    "Vp": 6.496, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "4841": {
+    "H": 37.0, 
+    "Vp": 6.173, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4842": {
+    "H": 40.0, 
+    "Vp": 6.182, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4843": {
+    "H": 37.5, 
+    "Vp": 6.175, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4844": {
+    "H": 44.0, 
+    "Vp": 6.145, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4845": {
+    "H": 44.0, 
+    "Vp": 6.145, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4846": {
+    "H": 46.0, 
+    "Vp": 6.238, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4847": {
+    "H": 44.0, 
+    "Vp": 6.136, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4848": {
+    "H": 50.0, 
+    "Vp": 6.666, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4849": {
+    "H": 47.5, 
+    "Vp": 6.647, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "4851": {
+    "H": 49.5, 
+    "Vp": 6.686, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "508": {
+    "H": 29.7, 
+    "Vp": 5.878, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "5214": {
+    "H": 38.7, 
+    "Vp": 6.452, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "5215": {
+    "H": 40.2, 
+    "Vp": 6.578, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Nain Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "5216": {
+    "H": 40.7, 
+    "Vp": 6.543, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Nain Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "5217": {
+    "H": 48.3, 
+    "Vp": 6.624, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "5218": {
+    "H": 38.6, 
+    "Vp": 6.594, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "5219": {
+    "H": 43.5, 
+    "Vp": 6.587, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "5220": {
+    "H": 51.4, 
+    "Vp": 6.641, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "5222": {
+    "H": 39.2, 
+    "Vp": 6.473, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian"
+  }, 
+  "5223": {
+    "H": 39.3, 
+    "Vp": 6.507, 
+    "epoch": "undivided ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "ordovician"
+  }, 
+  "5224": {
+    "H": 39.4, 
+    "Vp": 6.42, 
+    "epoch": "undivided ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "ordovician"
+  }, 
+  "5225": {
+    "H": 39.2, 
+    "Vp": 6.424, 
+    "epoch": "undivided devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "devonian"
+  }, 
+  "5226": {
+    "H": 31.0, 
+    "Vp": 6.363, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "5227": {
+    "H": 30.4, 
+    "Vp": 6.264, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "5228": {
+    "H": 32.0, 
+    "Vp": 6.402, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "5229": {
+    "H": 30.0, 
+    "Vp": 6.13, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "cretaceous"
+  }, 
+  "5230": {
+    "H": 34.5, 
+    "Vp": 6.439, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "5231": {
+    "H": 35.2, 
+    "Vp": 6.466, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "5232": {
+    "H": 30.1, 
+    "Vp": 6.339, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "5233": {
+    "H": 33.7, 
+    "Vp": 6.435, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian"
+  }, 
+  "5234": {
+    "H": 39.5, 
+    "Vp": 6.512, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "5235": {
+    "H": 39.7, 
+    "Vp": 6.516, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "5236": {
+    "H": 39.4, 
+    "Vp": 6.409, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "5237": {
+    "H": 45.0, 
+    "Vp": 6.487, 
+    "epoch": "middle ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "St. Lawrence Platform", 
+    "period": "ordovician"
+  }, 
+  "6484": {
+    "H": 40.0, 
+    "Vp": 6.536, 
+    "epoch": "undivided neoarchean-paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "neoarchean-paleoproterozoic"
+  }, 
+  "6485": {
+    "H": 40.0, 
+    "Vp": 6.536, 
+    "epoch": "undivided mesoarchean-neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "mesoarchean-neoarchean"
+  }, 
+  "6486": {
+    "H": 34.0, 
+    "Vp": 6.56, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "6487": {
+    "H": 33.0, 
+    "Vp": 6.638, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "6488": {
+    "H": 31.5, 
+    "Vp": 6.565, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "6500": {
+    "H": 38.0, 
+    "Vp": 6.292, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "6501": {
+    "H": 36.0, 
+    "Vp": 6.322, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "tertiary"
+  }, 
+  "6502": {
+    "H": 34.0, 
+    "Vp": 6.218, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "6503": {
+    "H": 37.0, 
+    "Vp": 6.124, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "mesoproterozoic"
+  }, 
+  "6504": {
+    "H": 40.0, 
+    "Vp": 6.08, 
+    "epoch": "undivided mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "mesoproterozoic"
+  }, 
+  "6505": {
+    "H": 41.0, 
+    "Vp": 6.289, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous"
+  }, 
+  "6515": {
+    "H": 30.0, 
+    "Vp": 6.416, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "unknown"
+  }, 
+  "6516": {
+    "H": 31.6, 
+    "Vp": 6.525, 
+    "epoch": "undivided cretaceous-tertiary", 
+    "era": "mesozoic-cenozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cretaceous-tertiary"
+  }, 
+  "6517": {
+    "H": 27.0, 
+    "Vp": 6.416, 
+    "epoch": "undivided permian-cretaceous", 
+    "era": "paleozoic-mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "permian-cretaceous"
+  }, 
+  "6595": {
+    "H": 22.0, 
+    "Vp": 6.164, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "66": {
+    "H": 34.8, 
+    "Vp": 6.73, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "67": {
+    "H": 36.3, 
+    "Vp": 6.071, 
+    "epoch": "undivided cambrian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-devonian"
+  }, 
+  "68": {
+    "H": 32.8, 
+    "Vp": 5.933, 
+    "epoch": "undivided cambrian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-devonian"
+  }, 
+  "6960": {
+    "H": 40.0, 
+    "Vp": 6.48, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6961": {
+    "H": 40.0, 
+    "Vp": 6.571, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6962": {
+    "H": 43.0, 
+    "Vp": 6.148, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6963": {
+    "H": 43.5, 
+    "Vp": 6.664, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6964": {
+    "H": 40.0, 
+    "Vp": 6.259, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6965": {
+    "H": 43.5, 
+    "Vp": 6.456, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6966": {
+    "H": 37.5, 
+    "Vp": 6.283, 
+    "epoch": "maastrichtian-campanian", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6967": {
+    "H": 38.0, 
+    "Vp": 6.543, 
+    "epoch": "upper cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "6987": {
+    "H": 42.0, 
+    "Vp": 6.346, 
+    "epoch": "undivided carboniferous-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous-permian"
+  }, 
+  "6988": {
+    "H": 42.0, 
+    "Vp": 6.366, 
+    "epoch": "undivided carboniferous-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous-permian"
+  }, 
+  "6989": {
+    "H": 36.7, 
+    "Vp": 6.063, 
+    "epoch": "undivided carboniferous-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous-permian"
+  }, 
+  "6990": {
+    "H": 37.0, 
+    "Vp": 6.181, 
+    "epoch": "undivided carboniferous-permian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous-permian"
+  }, 
+  "7003": {
+    "H": 38.0, 
+    "Vp": 6.726, 
+    "epoch": "undivided cambrian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian"
+  }, 
+  "7005": {
+    "H": 32.0, 
+    "Vp": 6.448, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7006": {
+    "H": 33.0, 
+    "Vp": 6.425, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "7007": {
+    "H": 36.0, 
+    "Vp": 6.44, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "72": {
+    "H": 32.5, 
+    "Vp": 6.13, 
+    "epoch": "middle jurassic", 
+    "era": "mesozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "jurassic"
+  }, 
+  "7312": {
+    "H": 35.0, 
+    "Vp": 6.322, 
+    "epoch": "undivided devonian-triassic", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "devonian-triassic"
+  }, 
+  "7313": {
+    "H": 36.0, 
+    "Vp": 6.352, 
+    "epoch": "undivided neoproterozoic-cambrian", 
+    "era": "precambrian-paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "neoproterozoic-cambrian"
+  }, 
+  "7314": {
+    "H": 36.0, 
+    "Vp": 6.29, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7315": {
+    "H": 37.0, 
+    "Vp": 6.568, 
+    "epoch": "undivided devonian-mississippian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "devonian-mississippian"
+  }, 
+  "7316": {
+    "H": 39.8, 
+    "Vp": 6.448, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7317": {
+    "H": 35.1, 
+    "Vp": 6.474, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Cordilleran Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "7318": {
+    "H": 37.7, 
+    "Vp": 5.923, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "7319": {
+    "H": 41.2, 
+    "Vp": 6.38, 
+    "epoch": "lower cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "Interior Platform", 
+    "period": "cretaceous"
+  }, 
+  "7529": {
+    "H": 39.1, 
+    "Vp": 6.554, 
+    "epoch": "early-middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7530": {
+    "H": 34.8, 
+    "Vp": 6.662, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "7545": {
+    "H": 37.3, 
+    "Vp": 6.434, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7546": {
+    "H": 36.9, 
+    "Vp": 6.409, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7547": {
+    "H": 35.4, 
+    "Vp": 6.418, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7549": {
+    "H": 33.6, 
+    "Vp": 6.42, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "7550": {
+    "H": 35.8, 
+    "Vp": 6.466, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian"
+  }, 
+  "7551": {
+    "H": 36.3, 
+    "Vp": 6.427, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian"
+  }, 
+  "7552": {
+    "H": 34.9, 
+    "Vp": 6.301, 
+    "epoch": "undivided silurian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "silurian-devonian"
+  }, 
+  "7553": {
+    "H": 34.6, 
+    "Vp": 6.309, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }, 
+  "7558": {
+    "H": 27.5, 
+    "Vp": 6.148, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7559": {
+    "H": 28.7, 
+    "Vp": 6.568, 
+    "epoch": "unknown", 
+    "era": "unknown", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "unknown"
+  }, 
+  "7561": {
+    "H": 26.4, 
+    "Vp": 6.113, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7562": {
+    "H": 25.9, 
+    "Vp": 6.181, 
+    "epoch": "undivided quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "quaternary"
+  }, 
+  "7564": {
+    "H": 26.3, 
+    "Vp": 6.451, 
+    "epoch": "undivided quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Pacific Continental Shelf", 
+    "period": "quaternary"
+  }, 
+  "7565": {
+    "H": 25.0, 
+    "Vp": 5.253, 
+    "epoch": "undivided neogene-quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "period": "neogene-quaternary"
+  }, 
+  "7566": {
+    "H": 25.0, 
+    "Vp": 5.56, 
+    "epoch": "undivided neogene-quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Arctic Continental Shelf", 
+    "period": "neogene-quaternary"
+  }, 
+  "7569": {
+    "H": 27.3, 
+    "Vp": 6.568, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7571": {
+    "H": 27.5, 
+    "Vp": 6.311, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7572": {
+    "H": 23.8, 
+    "Vp": 6.344, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "7574": {
+    "H": 8.5, 
+    "Vp": 5.58, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7575": {
+    "H": 8.5, 
+    "Vp": 5.184, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7578": {
+    "H": 8.74, 
+    "Vp": 5.685, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "7589": {
+    "H": 38.2, 
+    "Vp": 6.547, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "7590": {
+    "H": 38.4, 
+    "Vp": 6.551, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "7591": {
+    "H": 38.0, 
+    "Vp": 6.571, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "7592": {
+    "H": 36.7, 
+    "Vp": 6.549, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Churchill Province", 
+    "period": "archean-proterozoic"
+  }, 
+  "7593": {
+    "H": 36.2, 
+    "Vp": 6.546, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "7594": {
+    "H": 18.3, 
+    "Vp": 5.501, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7595": {
+    "H": 16.8, 
+    "Vp": 5.044, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7596": {
+    "H": 17.1, 
+    "Vp": 4.892, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7597": {
+    "H": 13.0, 
+    "Vp": 4.526, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7598": {
+    "H": 12.6, 
+    "Vp": 4.559, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7599": {
+    "H": 13.4, 
+    "Vp": 4.553, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7600": {
+    "H": 19.4, 
+    "Vp": 5.563, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7601": {
+    "H": 16.9, 
+    "Vp": 4.843, 
+    "epoch": "neogene", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "tertiary"
+  }, 
+  "7602": {
+    "H": 13.3, 
+    "Vp": 4.421, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7603": {
+    "H": 11.2, 
+    "Vp": 4.79, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7604": {
+    "H": 10.9, 
+    "Vp": 5.015, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7605": {
+    "H": 9.3, 
+    "Vp": 4.947, 
+    "epoch": "undivided cretaceous", 
+    "era": "mesozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "cretaceous"
+  }, 
+  "7606": {
+    "H": 7.8, 
+    "Vp": 5.287, 
+    "epoch": "paleogene", 
+    "era": "cenozoic", 
+    "geoprov": "oceanic crust", 
+    "period": "tertiary"
+  }, 
+  "7823": {
+    "H": 41.0, 
+    "Vp": 6.607, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "7824": {
+    "H": 40.8, 
+    "Vp": 6.702, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "7825": {
+    "H": 40.8, 
+    "Vp": 6.728, 
+    "epoch": "early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "7826": {
+    "H": 45.2, 
+    "Vp": 6.755, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "7827": {
+    "H": 46.0, 
+    "Vp": 6.731, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "7828": {
+    "H": 39.5, 
+    "Vp": 6.526, 
+    "epoch": "late paleoproterozoic-early mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic-mesoproterozoic"
+  }, 
+  "7829": {
+    "H": 35.4, 
+    "Vp": 6.368, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean"
+  }, 
+  "7830": {
+    "H": 38.3, 
+    "Vp": 6.402, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7831": {
+    "H": 42.1, 
+    "Vp": 6.468, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7832": {
+    "H": 39.9, 
+    "Vp": 6.484, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7833": {
+    "H": 38.1, 
+    "Vp": 6.475, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7834": {
+    "H": 37.7, 
+    "Vp": 6.488, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7835": {
+    "H": 40.7, 
+    "Vp": 6.556, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7836": {
+    "H": 50.3, 
+    "Vp": 6.84, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7837": {
+    "H": 40.7, 
+    "Vp": 6.598, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7838": {
+    "H": 40.6, 
+    "Vp": 6.615, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7839": {
+    "H": 46.7, 
+    "Vp": 6.741, 
+    "epoch": "undivided paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7840": {
+    "H": 46.1, 
+    "Vp": 6.721, 
+    "epoch": "undivided neoarchean-paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "neoarchean-paleoproterozoic"
+  }, 
+  "7841": {
+    "H": 40.6, 
+    "Vp": 6.474, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7842": {
+    "H": 37.1, 
+    "Vp": 6.491, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7843": {
+    "H": 37.2, 
+    "Vp": 6.526, 
+    "epoch": "undivided neoarchean", 
+    "era": "precambrian", 
+    "geoprov": "Superior Province", 
+    "period": "neoarchean"
+  }, 
+  "7844": {
+    "H": 39.3, 
+    "Vp": 6.576, 
+    "epoch": "early paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7845": {
+    "H": 39.4, 
+    "Vp": 6.486, 
+    "epoch": "middle paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7846": {
+    "H": 39.5, 
+    "Vp": 6.588, 
+    "epoch": "early paleoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Southern Province", 
+    "period": "paleoproterozoic"
+  }, 
+  "7892": {
+    "H": 25.0, 
+    "Vp": 6.5, 
+    "epoch": "undivided silurian", 
+    "era": "paleozoic", 
+    "geoprov": "Innuitian Orogen", 
+    "period": "silurian"
+  }, 
+  "8387": {
+    "H": 35.0, 
+    "Vp": 6.38, 
+    "epoch": "middle mesoproterozoic", 
+    "era": "precambrian", 
+    "geoprov": "Grenville Province", 
+    "period": "mesoproterozoic"
+  }, 
+  "89": {
+    "H": 52.5, 
+    "Vp": 6.709, 
+    "epoch": "undivided archean-proterozoic", 
+    "era": "precambrian", 
+    "geoprov": "", 
+    "period": "archean-proterozoic"
+  }, 
+  "93": {
+    "H": 32.6, 
+    "Vp": 6.046, 
+    "epoch": "undivided cambrian-devonian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-devonian"
+  }, 
+  "94": {
+    "H": 45.0, 
+    "Vp": 6.524, 
+    "epoch": "undivided carboniferous", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "carboniferous"
+  }, 
+  "95": {
+    "H": 35.0, 
+    "Vp": 5.608, 
+    "epoch": "undivided quaternary", 
+    "era": "cenozoic", 
+    "geoprov": "Atlantic Continental Shelf", 
+    "period": "quaternary"
+  }, 
+  "97": {
+    "H": 30.9, 
+    "Vp": 6.225, 
+    "epoch": "undivided pennsylvanian", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "pennsylvanian"
+  }, 
+  "98": {
+    "H": 36.7, 
+    "Vp": 6.334, 
+    "epoch": "undivided cambrian-ordovician", 
+    "era": "paleozoic", 
+    "geoprov": "Appalachian Orogen", 
+    "period": "cambrian-ordovician"
+  }
+}

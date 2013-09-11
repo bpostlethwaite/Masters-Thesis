@@ -2,12 +2,12 @@
 % Script to load up sac files, extract out some info, p-value etc
 % Rotate traces, deconvolve traces -> then off to be stacked.
 %% Main Control
-npb = 2; % Average number of traces per bin
+npb = 4; % Average number of traces per bin
 discardBad = 1; % Discard traces that do not find minimum during decon
 pscale = @(pslow) wrev(1./pslow.^2 ./ max(1./pslow.^2) )'; % Weight higher slowness traces
 fLow = 0.04; % Lower frequency cutoff
 fHigh = 3; % Upper frequency cutoff
-snrlim = .90;
+snrlim = .97;
 %% 1) Filter Event Directories
 %
 printinfo = 0; % On and off flag to print out processing results

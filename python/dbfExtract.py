@@ -45,41 +45,41 @@ import dbf
 
 
 ##Extracting Station Chrons
-datafile = os.environ['HOME'] + "/thesis/data/stnChrons.json"
-epochdata = open(datafile)
-stndict = json.loads( open(os.environ['HOME'] + "/thesis/data/stations.json").read() )
+# datafile = os.environ['HOME'] + "/thesis/data/stnChrons.json"
+# epochdata = open(datafile)
+# stndict = json.loads( open(os.environ['HOME'] + "/thesis/data/stations.json").read() )
 
-##     #Load geological time data
-db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeoChron.dbf")
+# ##     #Load geological time data
+# db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/stationGeoChron.dbf")
 
-stnChrons = {}
-for rec in db:
-    stnChrons[rec[0]] = {}
-    stnChrons[rec[0]]["era"] = rec[11].lower()
-    stnChrons[rec[0]]["period"] = rec[12].lower()
-    stnChrons[rec[0]]["epoch"] = rec[13].lower()
-
-# open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
-print json.dumps(stnChrons, sort_keys = True, indent = 2 )
-
-
-# # Extracting VpmoonGeology data -> VpmoonShots.json
-# moonvpGeology = os.environ['HOME'] + "/thesis/data/moonvpGeology.json"
-# moonjson = os.environ['HOME'] + "/thesis/data/moonShots.json"
-# d = json.loads( open(moonjson).read() )
-
-# #Load geological time data
-
-# db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/moonVpGeology.dbf")
-# m = {}
+# stnChrons = {}
 # for rec in db:
-#     m[rec['mcode']] = d[rec['mcode']]
-#     m[rec['mcode']]['geoprov'] = rec['geolprov']
-#     m[rec["mcode"]]["lower"] = epochdict[rec["epoch"]][0]
-#     m[rec["mcode"]]["upper"] = epochdict[rec["epoch"]][1]
-#     m[rec["mcode"]]["era"] = rec["era"].lower()
-#     m[rec["mcode"]]['wm'] = {}
-#     m[rec["mcode"]]['wm']['type'] = rec['geotype']
+#     stnChrons[rec[0]] = {}
+#     stnChrons[rec[0]]["era"] = rec[11].lower()
+#     stnChrons[rec[0]]["period"] = rec[12].lower()
+#     stnChrons[rec[0]]["epoch"] = rec[13].lower()
 
-# #print json.dumps(m, sort_keys = True, indent = 2 )
-# open(moonvpGeology,'w').write( json.dumps(m, sort_keys = True, indent = 2 ))
+# # open(datafile,'w').write( json.dumps(stnChrons, sort_keys = True, indent = 2 ))
+# print json.dumps(stnChrons, sort_keys = True, indent = 2 )
+
+
+# Extracting VpmoonGeology data -> VpmoonShots.json
+moonvpGeology = os.environ['HOME'] + "/thesis/data/moonvpGeology.json"
+moonvpGeoChron = os.environ['HOME'] + "/thesis/data/moonvpGeoChron.json"
+
+#Load geological time data
+
+db = dbf.Table(os.environ['HOME'] + "/thesis/mapping/moonVpGeoChron.dbf")
+m = {}
+for rec in db:
+    mc = rec["mcode"]
+    m[mc] = {}
+    m[mc]["Vp"] = rec["mvp"]
+    m[mc]["H"] = rec["mh"]
+    m[mc]["geoprov"] = rec["geolprov"]
+    m[mc]["era"] = rec["era"].lower()
+    m[mc]["period"] = rec["period"].lower()
+    m[mc]["epoch"] = rec["epoch"].lower()
+
+#print json.dumps(m, sort_keys = True, indent = 2 )
+open(moonvpGeoChron,'w').write( json.dumps(m, sort_keys = True, indent = 2 ))

@@ -147,7 +147,7 @@ for i in range(1,2):
     plt.axis("tight")
 
 
-#plt.show()
+plt.show()
 
 
 
