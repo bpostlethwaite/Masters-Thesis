@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-150.120797</xmin>
-            <ymin>31.288798</ymin>
-            <xmax>-54.170554</xmax>
-            <ymax>90.232054</ymax>
+            <xmin>-89.348461</xmin>
+            <ymin>41.726697</ymin>
+            <xmax>-73.339939</xmax>
+            <ymax>51.560903</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -29,9 +29,9 @@
                 <legendlayerfile isInOverview="0" layerid="crust1geology20130826190422676" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="crust1" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="crust120130826190012667" visible="1"/>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="crust1" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="crust120130826190012667" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Stations Thompson" showFeatureCount="0">
@@ -39,9 +39,9 @@
                 <legendlayerfile isInOverview="0" layerid="stationsThompson20130218155618165" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stations" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stations20130530115531732" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="stations20130530115531732" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="0" open="false" checked="Qt::Unchecked" name="Seismic Station Data" showFeatureCount="0">
@@ -49,9 +49,9 @@
                 <legendlayerfile isInOverview="0" layerid="stationsOK20130218151944721" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="moonVpGeology" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="moonVpGeology" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="moonVpGeology20130226130236273" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="moonVpGeology20130226130236273" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="3" open="true" checked="Qt::Unchecked" name="stationGeology" showFeatureCount="0">
@@ -64,9 +64,9 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="7" open="false" checked="Qt::Checked" name="politicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="7" open="false" checked="Qt::Unchecked" name="politicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="crust2geology" showFeatureCount="0">
@@ -89,14 +89,14 @@
                 <legendlayerfile isInOverview="0" layerid="VoronoiTest20121111132921846" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="9" open="false" checked="Qt::Checked" name="Geological Provinces" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
+        <legendlayer drawingOrder="9" open="true" checked="Qt::Checked" name="Geological Provinces" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="GeolProv20120712142034661" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="10" open="false" checked="Qt::Checked" name="bedrockGeology" showFeatureCount="0">
+        <legendlayer drawingOrder="10" open="false" checked="Qt::Unchecked" name="bedrockGeology" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="BedrockGeology20120712135336011" visible="0"/>
             </filegroup>
         </legendlayer>
     </legend>
@@ -3434,7 +3434,7 @@
                 <edittype type="0" name="wm::R"/>
                 <edittype type="0" name="wm::Vp"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
             <attributeactions/>
@@ -3458,7 +3458,7 @@
                 </spatialrefsys>
             </srs>
             <transparencyLevelInt>255</transparencyLevelInt>
-            <provider encoding="System">ogr</provider>
+            <provider encoding="UTF-8">ogr</provider>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
@@ -3477,7 +3477,7 @@
                 <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield></displayfield>
+            <displayfield>cVp</displayfield>
             <label>0</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
@@ -3499,9 +3499,9 @@
                 <multilineenabled fieldname="" on=""/>
                 <selectedonly on=""/>
             </labelattributes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">

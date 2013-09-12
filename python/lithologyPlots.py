@@ -48,7 +48,6 @@ def addtext(ax, x, y, text, rotation):
             rotation = rotation,
             zorder = 10)
 
-
 liths = {
     "granite gneiss": {
         "Vp": 6.208,
@@ -94,6 +93,59 @@ liths = {
         }
 
     }
+
+
+def RMSDifference(x, y):
+    assert (len(x) == len(y))
+    n = len(x)
+    md = 0
+    for i in range(n):
+        md += (x[i] - y[i])**2
+
+    return np.sqrt(md/(n))
+
+
+def minimizeRatio(lith1, lith2):
+
+    RF = np.array([52.6, 0.8, 16.6, np.nan, 6.6, 0.11,
+                   4.4, 6.4, 3.2, 1.88, np.nan, 0.2, np.nan])
+    CM = np.array([61.7, 0.9, 14.7, 1.9, 5.1, 0.1, 3.1,
+                   5.7, 3.6, 2.1, 0.8, 0.2, np.nan])
+    RG = np.array([60.6, 0.7, 15.9, np.nan, 6.7, 0.1,
+                   4.7, 6.4, 3.1, 1.8, np.nan, 0.1, np.nan])
+    Sm = np.array([63.0, 0.7, 15.8, 2.0, 3.4, 0.1, 2.8, 4.6,
+                   4.0, 2.7, np.nan, np.nan, np.nan])
+
+
+    index = [0, 2, 4, 6, 7, 8, 9]
+
+    rf = RF[index]
+    cs = CS[index]
+    cs[2] += CS[3]
+    cm = CM[index]
+    cm[2] += CM[3]
+    rg = RG[index]
+    sm = Sm[index]
+    sm[2] += Sm[3]
+
+
+    dists = np.linspace(0.5, 1, 100)
+    for q in range(len(dists)):
+        rms = 0
+        dist = dists[q]
+    #plt.plot(pvs, pvp, 'xr', markersize = 16)
+        PB = dist * lith2 + (1 - dist) * lith1  # Canada
+        pb = PB[index]
+        pb[2] += PB[3]
+
+        A = np.vstack((rf, cs, cm, rg, sm, pb))
+
+
+
+        for i in range(5):
+            rms += RMSDifference(A[5,:], A[i,:])
+
+        print dist, rms / 5
 
 
 if __name__  == "__main__":
@@ -200,9 +252,19 @@ if __name__  == "__main__":
                                , rd["Canada"]["Vp"])
 
 
+    (pvs, pvp, dist2) = project(liths["granite gneiss"]['Vs']
+                               , liths["granite gneiss"]['Vp']
+                               , liths["diorite"]['Vs']
+                               , liths["diorite"]['Vp']
+                               , rd["Canadian Shield"]["Vs"]
+                               , rd["Canadian Shield"]["Vp"])
+
+
     #plt.plot(pvs, pvp, 'xr', markersize = 16)
-    #dist = 0.8
+
     print "Canada is", round(dist*100), "% diorite"
+    print "Canadian Shield is", round(dist2*100), "% diorite"
+
 
     compounds = ["SiO2", "TiO2", "Al2O3", "Fe2O3", "FeO", "MnO",
                  "MgO", "CaO", "Na2O", "K2O", "H2O", "P2O5", "CO2"]
@@ -212,8 +274,9 @@ if __name__  == "__main__":
     diorite = np.array([57.48, 0.95, 16.67, 2.5, 4.92, 0.12,
                3.71, 6.58, 3.54, 1.76, 1.36, 0.29, 0.1])
 
-    PB = dist * diorite + (1 - dist) * granite
+    PB = dist * diorite + (1 - dist) * granite  # Canada
 
+    CS = dist2 * diorite + (1 - dist2) * granite  # Canadian Shield
 
     RF = np.array([52.6, 0.8, 16.6, np.nan, 6.6, 0.11,
                    4.4, 6.4, 3.2, 1.88, np.nan, 0.2, np.nan])
@@ -225,8 +288,13 @@ if __name__  == "__main__":
                    4.0, 2.7, np.nan, np.nan, np.nan])
 
 
-    for ind, comp in enumerate(PB):
-        print "{}: {:2.2f}%".format(compounds[ind], comp)
+    minimizeRatio(granite, diorite)
+
+    for i in range(len(PB)):
+        print "{} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} \\\\".format(compounds[i],
+                                                                               Sm[i], RF[i],
+                                                                               CM[i], RG[i],
+                                                                               PB[i])
 
 
     ########################################################
@@ -237,6 +305,8 @@ if __name__  == "__main__":
     index = [0, 2, 4, 6, 7, 8, 9]
 
     rf = RF[index]
+    cs = CS[index]
+    cs[2] += CS[3]
     cm = CM[index]
     cm[2] += CM[3]
     rg = RG[index]
@@ -251,7 +321,7 @@ if __name__  == "__main__":
 
     plt.plot(x, rf/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Rudnick and Fountain")
     plt.plot(x, rg/pb, "-D", ms = 12, c = "gray", mfc = "gray", label = "Rudnick and Gao")
-    #plt.plot(x, rf, "s", mfc = "gray", label = "Gao et al.")
+    plt.plot(x, cs/pb, "-s", ms = 12, c = "gray", mfc = "gray", label = "This study, Canadian Shield")
     plt.plot(x, cm/pb, "-o", ms = 12, c = "gray", mfc = "white", label = "Christensen and Mooney")
     plt.plot(x, sm/pb, "-^", ms = 12, c = "gray", mfc = "white", label = "Smithson")
     plt.xticks(x, labels, size = 14)
@@ -261,7 +331,7 @@ if __name__  == "__main__":
         top='off')         # ticks along the top edge are off
 
     plt.plot(np.arange(0,9), np.ones(9), "k", lw = 2)
-    plt.axhspan(0.9, 1.1, xmin=0, xmax=8, zorder=-1, color="lightgray")
+    plt.axhspan(0.7, 1.3, xmin=0, xmax=8, zorder=-1, color="lightgray")
     plt.xlim( (0, 8) )
     plt.ylim( (0.4, 2.2) )
 
