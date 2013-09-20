@@ -24,7 +24,7 @@ for ii = 1 : length(s)
     
     dbfile = fullfile(databasedir, [station,'.mat'] );
     
-    if  numel(strfind(json.(station).status, 'processed-ok'))
+    if  numel(strfind(json.(station).status, 'processed'))
         if exist(dbfile, 'file')
             disp(station)
             load(dbfile)
@@ -153,7 +153,7 @@ hwin2 = H(end);
 
 win1 = find(H >= hwin1, 1, 'first');
 win2 = find(H <= hwin2, 1, 'last');
-
+%{
 for ii = 1:length(stations)
     mask(ii, ii) = S(ii, ii);
     
@@ -172,6 +172,92 @@ for ii = 1:length(stations)
         title(sprintf('adding %i modes capturing %2.1f%% variance', ii, var))
     pause()
 end
+%}
+%% Interpolate and Stretch
+
+midx = zeros(1, length(moho));
+
+ninterp = 500;
+
+xi = 1:500; % Set for xor'ing later
+
+XI = zeros(length(stations), ninterp);
+
+maxq = 1;
+
+for qq = 1:maxq
+    
+    for ii = 1:length(moho)
+        midx(ii) = find(H >= moho(ii), 1, 'first');
+    end
+
+    for ii = 1:length(midx)
+
+        ntoshift = ninterp - midx(ii);
+        x = 1:midx(ii); % Vector representing indicies of profile
+        vx = X(ii, 1:midx(ii));
+
+        for jj = 1:ntoshift
+            ridx = randi([2, midx(ii) - 1], 1);
+            x(ridx:end) = x(ridx:end) + 1; % Shift indices one for each insert
+        end
+
+        qx = setxor(x, xi);
+
+        vq = interp1(x, vx, qx);
+
+        XI(ii, x) = XI(ii, x) + vx;
+        XI(ii, qx) = XI(ii, qx) + vq;
+
+    end
+end
+
+
+profile =  sum(sqrt(XI.^2),1)';
+profile =  sum(abs(XI),1)';
+
+profile = profile;
+
+figure(23)
+h(1) = subplot(1,2,1);
+    imagesc(XI')
+
+    set(gca, 'XTick', []);
+    set(gca, 'YTick', []);
+    set(gca,'YTickLabel','')
+    set(gca,'XTickLabel','')
+    %set(gca, 'TickDir', 'out')
+
+h(2) = subplot(1,2,2);
+    plot(profile, xi, 'LineWidth', 2)
+    hold on
+    line([mean(profile), mean(profile)],[xi(1), xi(end)], 'Color', [0.7,0.7,0.7])
+    hold off
+    set(gca,'YDir','reverse');
+    ylim([xi(1), xi(end)])
+    set(gca,'YTickLabel','')
+    set(gca,'XTickLabel','')
+    set(gca, 'YAxisLocation', 'right')
+    %set(gca, 'TickDir', 'out')
+    set(gca, 'XTick', []);
+    set(gca, 'YTick', []);
+    
+pos=get(h,'position');
+leftedge = pos{1}(1) + pos{1}(3);
+pos{2}(1) = leftedge;
+pos{2}(3) = 0.7 * pos{2}(3);
+set(h(1),'position',pos{1});
+set(h(2),'position',pos{2});
+
+
+% figure()
+% subplot(1,2,1)
+%     imagesc(XI')
+% subplot(1,2,2)
+%     plot( sum(sqrt(XI.^2),1)', 'LineWidth', 2)
+figure()
+    imagesc(X')
+
 %% Plot Modes
 
 ne = 10;

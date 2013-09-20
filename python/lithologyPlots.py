@@ -174,7 +174,7 @@ if __name__  == "__main__":
     ax = plt.subplot(111)
 
     vs = np.linspace(2.5, 5., 100)
-    vpvs = [1.88, 1.73, 1.63]
+    vpvs = [1.81, 1.73, 1.65]
     px = [3.7, 3.9, 4.1]
 
     rd = {}
