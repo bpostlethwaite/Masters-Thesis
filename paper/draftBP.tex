@@ -42,8 +42,16 @@
 
 \end{itemize}
 %% -----------------------------------------------%%
+
+
+
+
+
 \section{Data and methods}
 Our analysis of bulk Canadian continental crust is based on estimates of crustal properties that can be accessed via seismic techniques, namely seismic wave velocities (or velocity ratio) and crustal thickness. This study draws on three sources for these crustal properties. The first and primary source is teleseismic receiver function (hereafter RF) analysis. The remaining two datasets are Crust 1.0, a widely published statistical average of similar regions with a global two degree resolution, and a compilation of pre-processed active source data (Mooney, 2012). Both Crust 1.0 and the active source compilation are used to qualify and compare with the primary dataset.
+
+
+
 
 \subsection{Teleseismic Data Set}
 The primary data utilized in this study are computed from teleseismic {\it P} wave seismograms originating from more than 700 earthquake sources. These earthquakes occurred between 2000 and 2012 and were recorded on subsets of 343 broadband seismic stations distributed across Canada. Seismic stations are selected from all available regional and national networks including CNSN, POLARIS, FedNor and Chasme. Seismograms are included for analysis if they fall within a 30 to 100$^\circ$ epicentral distance window. Quality control is performed by admitting only those seismograms with sufficiently high signal to noise ratios to permit visual observation of the dominant {\it P} wave energy and with sufficiently impulsive first arrivals to allow arrival onsets to be accurately measured. After selection and filtering more than 80,000 events are available for further processing.
@@ -72,6 +80,12 @@ We employ an $L_2$, multichannel, frequency domain approach to perform the decon
 \end{equation}
 
 \noindent and $\omega$ is the frequency bin in the discrete Fourier transform. All resulting receiver functions, $r(t)$, are filtered between 0.04Hz and 3.0Hz.
+
+
+
+
+
+
 
 \subsection{Vp/Vs method} \label{section:VpVsMethod}
 
@@ -122,6 +136,9 @@ A limitation of the ZK approach is the requirement of an initial $V_P$ estimate.
 
 The trade-off between $V_P$ and $H$ (and other parameter combinations) and error resulting from data quality are quantified for both the full parameter search and ZK methods by bootstrap resampling [Efron and Tibshirani, 1986]. An estimate for the error is calculated in a bootstrap resampling approach by taking the standard deviation of 1024 parameter estimates each produced with randomly selected RFs, with replacement.
 
+
+
+
 \subsection{Additional data}
 
 We supplement receiver function estimates of crustal properties with data from controlled source experiments collected and compiled from GSC (Geological Survey of Canada) references by Walter Mooney (personal communication, 2012). The active source data provide $V_P$ and a few $V_S$ estimates for hundreds of locations across Canada, many along transects that cross major geological boundaries, faults and discontinuities. Some of these data are located within reasonable ($<$100 km) proximity to seismic stations used in this study and can be used to compare with the $V_P$ and $V_S$ estimates resulting from the RF full gridsearch.
@@ -129,7 +146,14 @@ We supplement receiver function estimates of crustal properties with data from c
 The Crust 1.0 model [Laske et. al., 2013] employs many of these same active source data to provide regular, complete coverage across all of Canada. The model includes estimates of $V_P$ and $V_S$ information with depth at $1^\circ$ resolution in latitude and longitude. In addition to employing local active source data, Crust 1.0 is also constrained by statistically aggregated data from geographically distant but geologically similar regions. It therefore affords a somewhat independent dataset suited for comparison with the crustal estimates calculated in this study.
 
 %% -----------------------------------------------%%
+
+
+
+
+
+
 \section{Results}
+
 
 \subsection{Comparisons}
 
@@ -153,6 +177,10 @@ Three published studies have provided parameter estimates for $R$ and $H$ for su
 \end{table}
 
 All three studies reported $H$ estimates that correlate strongly with the crustal thickness parameters computed here. The data from the northern Canadian Shield shows strong correlation in both $H$ and $R$. The lower correlation observed in estimates of $R$ than $H$ is not unexpected as the range of $R$ is relatively narrow and small changes ($\approx 2\%$) are physically meaningful. A corollary of this is greater sensitivity of $R$ to differences in procedure such as the choice of deconvolution algorithm and selection and scaling of data. The results from Thompson et. al. [2010] also corrispond most closely to the parameter estimates computed here, with the mean difference for both parameters being less than half of the averaged bootstrap error computed in this study. Results published by {\it Eaton et. al.} [2006] show reasonable correlations in both $R$ and $H$ and a mean difference for both parameters that is roughly equal to the averaged uncertainty in the data. Parameter estimates from the Superior Province [Darbyshire et. al., 2007] show the lowest correlation in $R$ as well as the highest mean difference in both parameters. These differences are well over the averaged computed error, and can not be easily explained by deviation related to noise in the data.
+
+
+
+
 
 \subsection{Full Grid Search Analysis}
 
@@ -259,7 +287,11 @@ There is less correlation between the crustal thickness data, though this is lar
 \end{figure}
 
 
-\subsection{Crustal Discontinuities}
+
+
+
+
+\subsection{Crustal Discontinuities} \label{section:discontinuities}
 
 \begin{figure}
   \centering
@@ -268,7 +300,19 @@ There is less correlation between the crustal thickness data, though this is lar
   \label{fig:conradPCA}
 \end{figure}
 
-We now consider the average crustal structure across Canada. We produce a depth profile for each station by stacking receiver functions along traveltime curves corresponding to a range of values in $H$ (0 to 50 km in increments of 100 metres) using the estimates for $R$ computed via the ZK + semblance method. The resulting profiles contain energy at depths corresponding to major velocity discontinuities. By assembling all depth profiles into a matrix, we may decompose the data via SVD into their principal components. Figure \ref{fig:conradPCA} contains the first five singular vectors or modes normalized to unit magnitude that account for 78\% of the variance in the profiles. Higher modes correspond to diminishing contributions to total variance. Each vector is normalized to unit magnitude. The first mode (blue) is effectively the average depth profile across all stations and captures 50\% of the variance in the dataset. It features a maximum near 38.7 km that may be taken as an average Moho depth. The second and third modes are dominated by a high amplitude shallow structures (e.g. sedimentary layers) within the top 10 km and Moho variability between 30 and 46 km . The fourth and fifth modes account for a combined 11\% of the variance in the dataset, contain energy at upper-mid crustal depths in the 10 km to 20 km range. All 5 modes display markedly lower energy within a depth window roughly between 20 km and 30 km.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{discontinuities}
+  \caption{}
+  \label{fig:disc}
+\end{figure}
+
+We now consider the average crustal structure across Canada. We produce a depth profile for each station by stacking receiver functions along traveltime curves corresponding to a range of values in $H$ (0 to 50 km in increments of 100 metres) using the estimates for $R$ computed via the ZK + semblance method. The resulting profiles contain energy at depths corresponding to major velocity discontinuities and are shown in figure \ref{fig:disc} arranged by increasing crustal thickness. By assembling all depth profiles into a matrix, we may decompose the data via SVD into their principal components. Figure \ref{fig:conradPCA} contains the first five singular vectors or modes normalized to unit magnitude that account for 78\% of the variance in the profiles. Higher modes correspond to diminishing contributions to total variance. Each vector is normalized to unit magnitude. The first mode (blue) is effectively the average depth profile across all stations and captures 50\% of the variance in the dataset. It features a maximum near 38.7 km that may be taken as an average Moho depth. The second and third modes are dominated by a high amplitude shallow structures (e.g. sedimentary layers) within the top 10 km and Moho variability between 30 and 46 km . The fourth and fifth modes account for a combined 11\% of the variance in the dataset, contain energy at upper-mid crustal depths in the 10 km to 20 km range. All 5 modes display markedly lower energy within a depth window roughly between 20 km and 30 km.
+
+
+
+
+
 
 \subsection{Regional Bulk Crustal Parameters}
 
@@ -324,13 +368,20 @@ Table \ref{table:regionParameters} displays the results of our regionalization i
 %% -----------------------------------------------%%
 \section{Discussion}
 
-Seismic reflectivity of the continental crust is a valuable constraint on the processes governing crustal evolution. Research into the Mohoveric discontinuity and crustal thickness is ongoing and providing new insights into ...
+Seismic reflectivity of the continental crust is a valuable constraint on the processes governing crustal evolution. Early efforts to characterize continental crust revolved around a slab model with a lower velocity upper crust and a higher velocity lower crust [Conrad, 1925; Jeffreys, 1926]. Evidence for this model was originally put forth by Conrad [1925] who suggested observable P arrivals were propogating along a mid-crustal interface similar to the deeper crust-mantle interface imaged by Andrija Mohorovičić [Litak and Brown, 1989]. Both the crustal slab model and the Conrad Discontinuity, as the mid-crustal interface became known, persisted in the literature but were increasingly criticized as being too simplistic, in the case of the slab model, or, for the Conrad Discontinuity, lacking consistent evidence [Litak and Brown, 1989]. The development of reflection seismology allowed workers to further argue for a complex heterogenous crust and propose a model whereby smooth random lateral inhomogenities superimposed on a linearly increasing velocity gradient could produce seismic responses similar to that of a simple two layer model [Litak and Brown, 1989; Mereu and Ojo, 1981].
 
-1. introductory paragraph along the lines of the one you did for crustal composition, identifying the
-importance of 1-D crustal structure for models of evolution. Introduce Conrad discontinuity and
-general seismic reflection subdivision of crust into more transparent upper half and reflective
-lower half, ie, summarize basic ideas from Brown EOS article on Conrad and Brocher and Mooney
-GJRAS article
+Despite the fading support for the Conrad Discontinuity as a discrete geological phenomena the generalization of the crust into seismically distinguishable upper and lower components continued. Mooney and Brocher [1987] argued for a model of the continental crust seperated into a seismically reflective lower crust overlain by transparent upper crust. Their physical interpretion is of a poorly laminated upper crust dominated by features of short length scale contrasted with a lower crust composed of thin (100 metre) lamellae of significant length scales. Supporting evidence for a reflective lower crust [Ito, 1998; Mayer, 1996; Meissner et. al., 2006] indicate that this is likely regional and representational of extented as well as thicker warmer crusts.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{discontinuityInterp}
+  \caption{Left: Vertical station depth profiles interpolated to a common Moho. Right: Normalized stack of depth profiles, grey line shows mean}
+  \label{fig:discInterp}
+\end{figure}
+
+The lower energy noted in Section \ref{section:discontinuities} in the 20 to 30 km depth window for the station profiles given in figure \ref{fig:disc} provides some evidence for seismically distinguishable crustal layers. To investigate this further we stretch and interpolate the profiles so that the Moho of each profile lines up on a common axis (Figure \ref{fig:discInterp}, left) and then take the magnitude of each profile and stack (Figure \ref{fig:discInterp}, right). The energy of the stack is most pronounced near the surface, associated with sedimentary layers, and at the Moho. There is a marked decrease in energy in the bottom third of the profile.
+
+(Jackson 2002 - strength of lithosphere - mirrors decrease in energy)
 
 2. cite station sorted figure + perhaps normalized stack figure (as per above) and discuss where
 energy lies, most pronounced near surface and Moho, lower energy levels in bottom 1/3
@@ -340,10 +391,6 @@ reflection) reflectivity, explain effect of frequency in different response
 
 4. discuss evidence for Conrad as distinct discontinuity (doesn't appear to be) versus the more
 general subdivision of upper and lower crusts with distinct properties.
-
-
-
-
 
 
 Mean crustal composition is an important parameter characterizing continental crust that should not be confused with actual lithological or mineralogical state of the crust. Rather, mean crustal composition is a representative average quantity that serves as a constraint on crustal structure and evolution in space and time. Early attempts at estimating mean crustal composition were largely performed through extrapolations based on the surface sampling of upper crustal rocks [Rudnick and Gao, 2003]. After the plate-tectonic revolution, Taylor [1967, 1977], proposed the 'island arc' or 'andesite' model which posited that bulk crustal composition is equivalent to the average convergent-margin andesite. Several problems with this theory subsequently emerged; for example, average surficial island arc composition is more basaltic than andesitic and any crustal growth via basaltic basal accretion will only serve to magnify this compositional contrast. Hence this model cannot account for the intermediate composition of post-Archean crust. Recognition of these shortcomings led to the analysis of data from crustal refraction seismic surveys to interrogate middle and lower crustal levels and place constraints on their composition [Christensen and Mooney, 1995; Rudnick and Fountain, 1995]. Unlike these latter studies, the present work adopts a bulk crustal seismic analysis along the lines of Smithson et. al. [1981] that combines $V_P/V_S$ from teleseismic measurements with contraints on $V_P$ from previous active source studies as presented in the crust 1.0 model.
@@ -409,6 +456,8 @@ This study provides results that are in general agreement with other recent crus
 
 
 \section{bibliography}
+
+[[ADD GRANITE DIORITE REFERENCE]]
 
 Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21183-21200.
 

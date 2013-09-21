@@ -29,7 +29,7 @@ for ii = 1 : length(s)
             disp(station)
             load(dbfile)
             
-            if db.hk.stdR > 0.06
+            if db.hk.stdR > 0.07
                 fprintf('skipping %s\n', station)
                 continue
             end
@@ -161,7 +161,7 @@ for ii = 1:length(stations)
     %Xproj = spdiags(1./sqrt(sum(Xproj.^2,2)),0,idx-1,idx-1)*Xproj;
     
     var = sum( E(1:ii) / sum(E) ) * 100;
-    
+    stack
     figure(1234)
     subplot(2,1,1)
         imagesc(1:nh, H(win1:win2), X(:, win1:win2)')
@@ -231,7 +231,7 @@ h(1) = subplot(1,2,1);
 h(2) = subplot(1,2,2);
     plot(profile, xi, 'LineWidth', 2)
     hold on
-    line([mean(profile), mean(profile)],[xi(1), xi(end)], 'Color', [0.7,0.7,0.7])
+    line([mean(profile)-0.5, mean(profile)-0.5],[xi(1), xi(end)], 'Color', [0.7,0.7,0.7])
     hold off
     set(gca,'YDir','reverse');
     ylim([xi(1), xi(end)])
@@ -255,9 +255,14 @@ set(h(2),'position',pos{2});
 %     imagesc(XI')
 % subplot(1,2,2)
 %     plot( sum(sqrt(XI.^2),1)', 'LineWidth', 2)
-figure()
-    imagesc(X')
-
+figure(19)
+    imagesc(1:size(X,1), H, X')
+    xlabel('station depth profiles')
+    ylabel('Depth [km]')
+    set(gca,'XTickLabel','')
+    set(gca, 'XTick', []);
+    set(gca,'TickDir','Out')
+    
 %% Plot Modes
 
 ne = 10;
