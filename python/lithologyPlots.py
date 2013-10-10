@@ -291,10 +291,10 @@ if __name__  == "__main__":
     minimizeRatio(granite, diorite)
 
     for i in range(len(PB)):
-        print "{} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} \\\\".format(compounds[i],
+        print "{} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} \\\\".format(compounds[i],
                                                                                Sm[i], RF[i],
                                                                                CM[i], RG[i],
-                                                                               PB[i])
+                                                                               PB[i], CS[i])
 
 
     ########################################################
