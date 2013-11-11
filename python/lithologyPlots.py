@@ -53,43 +53,57 @@ liths = {
         "Vp": 6.208,
         "Vs": 3.583,
         "R": 1.732,
-        "poisson": 0.250
+        "poisson": 0.250,
+        "x": -0.08,
+        "y": 0.0
         },
     "tonalite gneiss": {
         "Vp": 6.302,
         "Vs": 3.606,
         "R": 1.747,
-        "poisson": 0.257
+        "poisson": 0.257,
+        "x": 0.11,
+        "y": 0.
         },
     "mafic granulite": {
         "Vp": 6.942,
         "Vs": 3.820,
         "R": 1.817,
-        "poisson": 0.283
+        "poisson": 0.283,
+        "x": -0.08,
+        "y": 0.05
         },
     "mafic garnet granulite": {
         "Vp": 7.249,
         "Vs": 4.026,
         "R": 1.801,
-        "poisson": 0.277
+        "poisson": 0.277,
+        "x": -0.15,
+        "y": 0.0
         },
     "amphibolite": {
         "Vp": 6.983,
         "Vs": 3.959,
         "R": 1.764,
-        "poisson": 0.263
+        "poisson": 0.263,
+        "x": 0.,
+        "y": 0.05
         },
     "hornblendite": {
         "Vp": 7.261,
         "Vs": 4.144,
         "R": 1.752,
-        "poisson": 0.258
+        "poisson": 0.258,
+        "x": 0.,
+        "y": 0.05
         },
     "diorite": {
         "Vp": 6.611,
         "Vs": 3.733,
         "R": 1.771,
-        "poisson": 0.266
+        "poisson": 0.266,
+        "x": 0.,
+        "y": 0.05
         }
 
     }
@@ -105,28 +119,23 @@ def RMSDifference(x, y):
     return np.sqrt(md/(n))
 
 
-def minimizeRatio(lith1, lith2):
-
-    RF = np.array([52.6, 0.8, 16.6, np.nan, 6.6, 0.11,
-                   4.4, 6.4, 3.2, 1.88, np.nan, 0.2, np.nan])
-    CM = np.array([61.7, 0.9, 14.7, 1.9, 5.1, 0.1, 3.1,
-                   5.7, 3.6, 2.1, 0.8, 0.2, np.nan])
-    RG = np.array([60.6, 0.7, 15.9, np.nan, 6.7, 0.1,
-                   4.7, 6.4, 3.1, 1.8, np.nan, 0.1, np.nan])
-    Sm = np.array([63.0, 0.7, 15.8, 2.0, 3.4, 0.1, 2.8, 4.6,
-                   4.0, 2.7, np.nan, np.nan, np.nan])
+def minimizeRatio(lith1, lith2, CS, CM, RG, Sm, PR):
+    # compounds = ["SiO2", "TiO2", "Al2O3", "Fe2O3", "FeO", "MnO",
+    #              "MgO", "CaO", "Na2O", "K2O", "H2O", "P2O5", "CO2"]
 
 
     index = [0, 2, 4, 6, 7, 8, 9]
-
-    rf = RF[index]
+    feratio = 0.8998
     cs = CS[index]
-    cs[2] += CS[3]
+    cs[2] += feratio * CS[3]
     cm = CM[index]
-    cm[2] += CM[3]
+    cm[2] += feratio * CM[3]
     rg = RG[index]
     sm = Sm[index]
-    sm[2] += Sm[3]
+    sm[2] += feratio * Sm[3]
+    pr = PR[index]
+    pr[2] += feratio * PR[3]
+
 
 
     dists = np.linspace(0.5, 1, 100)
@@ -136,9 +145,9 @@ def minimizeRatio(lith1, lith2):
     #plt.plot(pvs, pvp, 'xr', markersize = 16)
         PB = dist * lith2 + (1 - dist) * lith1  # Canada
         pb = PB[index]
-        pb[2] += PB[3]
+        pb[2] += feratio * PB[3]
 
-        A = np.vstack((rf, cs, cm, rg, sm, pb))
+        A = np.vstack((cs, pr, cm, rg, sm, pb))
 
 
 
@@ -220,10 +229,13 @@ if __name__  == "__main__":
 
     for l in liths:
         plt.plot(liths[l]['Vs'], liths[l]['Vp'], 'ok', markersize = 10)
-        plt.text(liths[l]['Vs'], liths[l]['Vp'] + 0.05, l,
+        plt.text(liths[l]['Vs'] + liths[l]["x"],
+                 liths[l]['Vp'] + liths[l]["y"],
+                 l,
                  color = 'black',
-                 horizontalalignment = 'right',
-                 verticalalignment = 'center'
+                 horizontalalignment = "center",
+                 verticalalignment = "center",
+                 fontsize = 14
                  )
 
 
@@ -266,8 +278,8 @@ if __name__  == "__main__":
     print "Canadian Shield is", round(dist2*100), "% diorite"
 
 
-    compounds = ["SiO2", "TiO2", "Al2O3", "Fe2O3", "FeO", "MnO",
-                 "MgO", "CaO", "Na2O", "K2O", "H2O", "P2O5", "CO2"]
+    compounds = ["$SiO_2$", "$TiO_2$", "$Al_2O_3$", "$Fe_2O_3$", "$FeO$", "$MnO$",
+                 "$MgO$", "$CaO$", "$Na_2O$", "$K_2O$", "$H_2O$", "$P_2O_5$", "$CO_2$"]
 
     granite = np.array([71.3, 0.31, 14.32, 1.21, 1.64, 0.05,
                0.71, 1.84, 3.68, 4.07, 0.77, 0.12, 0.05])
@@ -278,21 +290,22 @@ if __name__  == "__main__":
 
     CS = dist2 * diorite + (1 - dist2) * granite  # Canadian Shield
 
-    RF = np.array([52.6, 0.8, 16.6, np.nan, 6.6, 0.11,
-                   4.4, 6.4, 3.2, 1.88, np.nan, 0.2, np.nan])
+    # RF = np.array([52.6, 0.8, 16.6, np.nan, 6.6, 0.11,
+    #                4.4, 6.4, 3.2, 1.88, np.nan, 0.2, np.nan])
     CM = np.array([61.7, 0.9, 14.7, 1.9, 5.1, 0.1, 3.1,
                    5.7, 3.6, 2.1, 0.8, 0.2, np.nan])
     RG = np.array([60.6, 0.7, 15.9, np.nan, 6.7, 0.1,
                    4.7, 6.4, 3.1, 1.8, np.nan, 0.1, np.nan])
     Sm = np.array([63.0, 0.7, 15.8, 2.0, 3.4, 0.1, 2.8, 4.6,
                    4.0, 2.7, np.nan, np.nan, np.nan])
+    PR = np.array([57.9, 1.2, 15.2, 2.3, 5.5, 0.2, 5.3, 7.1,
+                   3.0, 2.1, np.nan, 0.3, np.nan])
 
-
-    minimizeRatio(granite, diorite)
+    minimizeRatio(granite, diorite, CS, CM, RG, Sm, PR)
 
     for i in range(len(PB)):
         print "{} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} & {:2.1f} \\\\".format(compounds[i],
-                                                                               Sm[i], RF[i],
+                                                                               PR[i], Sm[i],
                                                                                CM[i], RG[i],
                                                                                PB[i], CS[i])
 
@@ -301,29 +314,33 @@ if __name__  == "__main__":
     # Rudnick and Gao figure                               #
     ########################################################
 
-    labels = ["Si", "Al", "Fe", "Mg", "Ca", "Na", "K"]
+    labels = [r'$SiO_2$', r'$Al_2O_3$', r'$FeO$', r'$MgO$', r'$CaO$', r"$Na_2O$", r"$K_2O$"]
     index = [0, 2, 4, 6, 7, 8, 9]
-
-    rf = RF[index]
+    feratio = 0.8998
+    # rf = RF[index]
     cs = CS[index]
-    cs[2] += CS[3]
+    cs[2] += feratio * CS[3]
     cm = CM[index]
-    cm[2] += CM[3]
+    cm[2] += feratio * CM[3]
     rg = RG[index]
     sm = Sm[index]
-    sm[2] += Sm[3]
+    sm[2] += feratio * Sm[3]
+    pr = PR[index]
+    pr[2] += feratio * PR[3]
     pb = PB[index]
-    pb[2] += PB[3]
+    pb[2] += feratio * PB[3]
 
     x = np.arange(1,8)
 
     plt.figure()
 
-    plt.plot(x, rf/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Rudnick and Fountain")
-    plt.plot(x, rg/pb, "-D", ms = 12, c = "gray", mfc = "gray", label = "Rudnick and Gao")
-    plt.plot(x, cs/pb, "-s", ms = 12, c = "gray", mfc = "gray", label = "This study, Canadian Shield")
-    plt.plot(x, cm/pb, "-o", ms = 12, c = "gray", mfc = "white", label = "Christensen and Mooney")
+    # plt.plot(x, rf/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Rudnick and Fountain")
+    plt.plot(x, pr/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Pakiser and Robinson")
     plt.plot(x, sm/pb, "-^", ms = 12, c = "gray", mfc = "white", label = "Smithson")
+    plt.plot(x, cm/pb, "-o", ms = 12, c = "gray", mfc = "white", label = "Christensen and Mooney")
+    plt.plot(x, rg/pb, "-D", ms = 12, c = "gray", mfc = "gray", label = "Rudnick and Gao")
+    plt.plot(x, cs/pb, "-s", ms = 12, c = "gray", mfc = "gray", label = "This study, Can. Shield")
+
     plt.xticks(x, labels, size = 14)
     plt.tick_params(
         axis='x',          # changes apply to the x-axis
@@ -333,7 +350,7 @@ if __name__  == "__main__":
     plt.plot(np.arange(0,9), np.ones(9), "k", lw = 2)
     plt.axhspan(0.7, 1.3, xmin=0, xmax=8, zorder=-1, color="lightgray")
     plt.xlim( (0, 8) )
-    plt.ylim( (0.4, 2.2) )
+    plt.ylim( (0.4, 2.5) )
 
     plt.legend(loc = 2, prop={'size': 12}, frameon= False, numpoints=1)
 
