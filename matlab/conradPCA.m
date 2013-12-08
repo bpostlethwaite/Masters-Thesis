@@ -226,8 +226,13 @@ h(1) = subplot(1,2,1);
     set(gca, 'YTick', []);
     set(gca,'YTickLabel','')
     set(gca,'XTickLabel','')
+    %set(gca,'position',[0.1 0.1 0.6 0.6]);
     %set(gca, 'TickDir', 'out')
-
+    xlabel('interpolated station depth profiles', 'FontSize', 14)
+    ylabel('Depth [km]', 'FontSize', 14)
+    
+    
+    
 h(2) = subplot(1,2,2);
     plot(profile, xi, 'LineWidth', 2)
     hold on
@@ -241,11 +246,14 @@ h(2) = subplot(1,2,2);
     %set(gca, 'TickDir', 'out')
     set(gca, 'XTick', []);
     set(gca, 'YTick', []);
+    xlabel('profile stack', 'FontSize', 14)
+    
     
 pos=get(h,'position');
+pos{1}(3) = 1.5*pos{1}(3);
 leftedge = pos{1}(1) + pos{1}(3);
 pos{2}(1) = leftedge;
-pos{2}(3) = 0.7 * pos{2}(3);
+pos{2}(3) = 0.8 * pos{2}(3);
 set(h(1),'position',pos{1});
 set(h(2),'position',pos{2});
 
@@ -257,15 +265,15 @@ set(h(2),'position',pos{2});
 %     plot( sum(sqrt(XI.^2),1)', 'LineWidth', 2)
 figure(19)
     imagesc(1:size(X,1), H, X')
-    xlabel('station depth profiles')
-    ylabel('Depth [km]')
+    xlabel('station depth profiles', 'FontSize', 14)
+    ylabel('Depth [km]', 'FontSize', 14)
     set(gca,'XTickLabel','')
     set(gca, 'XTick', []);
     set(gca,'TickDir','Out')
     
 %% Plot Modes
 
-ne = 10;
+ne = 5;
 
 Vs = V(:, 1:ne);
 vmax = max(max(abs(Vs)));
@@ -281,10 +289,10 @@ Xs = Xs/max(abs(Xs));
 
 figure(34)
 
-plot(Vs + shift, H, 'LineWidth', 2)
+plot(Vs + shift, H, 'Color', [0.25,0.25,0.25], 'LineWidth', 2)
 
 axis tight
-ylabel('H [km]')
+ylabel('H [km]', 'FontSize',14)
 set(gca,'YDir','reverse');
 set(gca,'TickLength', [0 0]);
 
@@ -313,7 +321,7 @@ for ii = 1:ne
 end
 
 % Set xtick points
-Xt = shift(1,:) + 0.2*vmax;
+Xt = shift(1,:) + 0.2*vmax + 0.05;
 set(gca,'XTick',Xt);
 
 ax = axis; % Current axis limits

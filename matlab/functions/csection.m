@@ -58,6 +58,6 @@ if aflag > 0
 end
 ylab=ylabel('Time [seconds]');
 xlab=xlabel('Bin #');
-set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
-set(xlab,'FontName','Helvetica','FontSize',16);
-set(ylab,'FontName','Helvetica','FontSize',16);
+% set(gca,'FontName','Helvetica','FontSize',16,'Clipping','off','layer','top');
+% set(xlab,'FontName','Helvetica','FontSize',16);
+% set(ylab,'FontName','Helvetica','FontSize',16);

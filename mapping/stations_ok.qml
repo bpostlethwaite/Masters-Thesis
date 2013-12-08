@@ -9,11 +9,11 @@
       <symbol outputUnit="MM" alpha="1" type="marker" name="0">
         <layer pass="0" class="SimpleMarker" locked="0">
           <prop k="angle" v="0"/>
-          <prop k="color" v="0,229,0,255"/>
+          <prop k="color" v="255,255,255,255"/>
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="equilateral_triangle"/>
           <prop k="offset" v="0,0"/>
-          <prop k="size" v="3"/>
+          <prop k="size" v="4"/>
         </layer>
       </symbol>
     </symbols>
@@ -45,6 +45,8 @@
     <edittype type="0" name="H"/>
     <edittype type="0" name="R"/>
     <edittype type="0" name="Vp"/>
+    <edittype type="0" name="hdisc"/>
+    <edittype type="0" name="hdiscp"/>
     <edittype type="0" name="hk::H"/>
     <edittype type="0" name="hk::R"/>
     <edittype type="0" name="hk::stdH"/>

@@ -1,0 +1,94 @@
+<Composer title="Composer 9" visible="1">
+ <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+  <Extent ymin="40.7209" xmin="-141.623" ymax="85.9768" xmax="-50.183"/>
+  <LayerSet/>
+  <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
+   <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
+  </Grid>
+  <ComposerItem width="360.713" x="1.83103" y="1.37327" rotation="0" height="178.525" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerMap>
+ <ComposerLabel valign="32" labelText="Slave Province" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="56.7619" x="111.235" y="69.5791" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Interior Platform" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="56.7619" x="104.826" y="123.137" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Hudson Bay Lowlands" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="63.1705" x="188.596" y="99.3333" rotation="0" height="10.9862" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Processed Seismic Stations" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="0" blue="0" green="0"/>
+  <ComposerItem width="76.4455" x="24.7189" y="11.9017" rotation="0" height="12.8172" frame="false" outlineWidth="0.3" zValue="14" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerShape shapeType="2" shapeWidth="8.23963" outlineWidth="1" transparentFill="1" shapeHeight="6.86636">
+  <OutlineColor alpha="255" red="0" blue="0" green="0"/>
+  <FillColor alpha="255" red="0" blue="0" green="0"/>
+  <ComposerItem width="8.23963" x="11.4439" y="12.8172" rotation="0" height="6.86636" frame="true" outlineWidth="0" zValue="13" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="0" red="255" blue="255" green="255"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerShape>
+ <ComposerLabel valign="32" labelText="Superior Province" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="56.7619" x="247.189" y="122.221" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Grenville Province" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="56.7619" x="281.063" y="133.207" rotation="0" height="10.0707" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Cordilleran Orogen" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="56.7619" x="17.3948" y="85.6006" rotation="0" height="10.0707" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Churchill Province" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="54.4731" x="129.545" y="105.284" rotation="0" height="7.78187" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <ComposerLabel valign="32" labelText="Appalachian Province" halign="1" margin="1">
+  <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+  <FontColor red="255" blue="255" green="255"/>
+  <ComposerItem width="65.0015" x="298.916" y="144.194" rotation="0" height="9.61293" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+   <FrameColor alpha="255" red="0" blue="0" green="0"/>
+   <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+  </ComposerItem>
+ </ComposerLabel>
+ <Composition printResolution="300" paperWidth="365" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="181" printAsRaster="0"/>
+</Composer>

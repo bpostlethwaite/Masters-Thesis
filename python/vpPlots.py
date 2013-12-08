@@ -64,7 +64,7 @@ if __name__  == "__main__":
     ## Figure Properties #######
     figwidth = 12
     figheight = figwidth / 1.618
-    ratio = 1.5
+    ratio = 1.3
     lw = 4 / ratio# line width
     ms = 12 / ratio# marker size
     caplen = 7 / ratio
@@ -73,7 +73,7 @@ if __name__  == "__main__":
     ticks = 16 / ratio
     label = 16 / ratio
     title = 18 / ratio
-    leg = 16 / ratio
+    leg = 14 / ratio
 
 
     #############################################################################
@@ -185,15 +185,14 @@ if __name__  == "__main__":
         arg = Args().addQuery("fg::stdVp", "lt", str(maxerr))
         f = Params(stnfile, ["fg::H","fg::Vp", "fg::stdH", "fg::stdVp", "hk::stdR"], arg)
         w = Params(stnfile, ["wm::Vp","wm::H"])
-
-
         c = Params(csfile, ["H","Vp"])
-        c.sync(f)
 
+        f.sync(w)
+        c.sync(f)
         w.sync(c)
 
-        stdVp = 2 * f.fg_stdVp # 2 stdError
-        stdH = 2 * f.fg_stdH
+        stdVp = 2*f.fg_stdVp # 2 stdError
+        stdH = 2*f.fg_stdH
         t = np.arange(len(f.fg_Vp))
 
         corr = pearsonr(f.fg_Vp, c.Vp)
@@ -202,57 +201,65 @@ if __name__  == "__main__":
         md = RMSDifference(f.fg_Vp, c.Vp)
         print "Active Source vs FG Vp with {} stations: RMS Difference = {}".format(len(f.stns), md)
 
-        fig = plt.figure( figsize = (figwidth, figheight) )
-        ax = plt.subplot(111)
-
-        plt.plot(t, f.fg_Vp, '-ob', lw = lw, ms = ms, label = "Full Gridsearch Vp estimate")
-        plt.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor = 'blue',
+        #fig = plt.figure( figsize = (figwidth, figheight) )
+        fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize = (figwidth, figheight))
+        color = "0.25"
+        ax1.plot(t, f.fg_Vp, '-o', color=color, lw = lw, ms = ms, label = "Full Gridsearch estimate")
+        ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor=color,
                      elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        plt.plot(t, c.Vp, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
-        plt.plot(t, w.wm_Vp, '-or', lw = lw, ms = ms, label = "Crust 2.0 Vp estimate")
+        ax1.plot(t, c.Vp, '--o', color=color, lw = lw, ms = ms, label = "Proximal active source estimate")
+        ax1.plot(t, w.wm_Vp, ':o', color=color, lw = lw, ms = ms, label = "Crust 2.0 estimate")
 
-        plt.axis("tight")
+#        ax1.axis("tight")
 
-        for tick in ax.xaxis.get_major_ticks():
+        # for tick in ax1.xaxis.get_major_ticks():
+        #     tick.label.set_fontsize( ticks )
+        #     # specify integer or one of preset strings, e.g.
+        #     #tick.label.set_fontsize('x-small')
+        #     tick.label.set_rotation('vertical')
+
+#        ax1.set_xticks(t, c.stns, size = ticks)
+#        ax1.grid(True)
+
+        ax1.legend(loc=2, handlelength=4,prop={'size': leg})
+#        ax1.xlabel("Stations", size = label)
+        ax1.set_ylabel("Vp [km/s]", size = label)
+        ax1.set_ylim([6,7.6])
+
+
+        ax2.plot(t, f.fg_H, '-o',color=color, lw = lw, ms = ms, label = "Full Gridsearch H estimate")
+        ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = color,
+                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
+        ax2.plot(t, c.H, '--o', color=color, lw = lw, ms = ms, label = "Proximal active source estimate")
+        ax2.plot(t, w.wm_H, ':o', color=color, lw = lw, ms = ms, label = "Crust 2.0 H estimate")
+
+
+        for tick in ax2.xaxis.get_major_ticks():
             tick.label.set_fontsize( ticks )
             # specify integer or one of preset strings, e.g.
             #tick.label.set_fontsize('x-small')
             tick.label.set_rotation('vertical')
 
-        plt.xticks(t, c.stns, size = ticks)
-        plt.grid(True)
+        ax1.tick_params(axis="x",which="both",bottom="off")
+#        ax1.set_xlim([-0.1,3.1])
+        ax2.tick_params(axis="x",which="both",bottom="off")
+        ax2.set_xlim([-0.1,3.1])
 
-        plt.legend(prop={'size': leg})
-        plt.xlabel("Stations", size = label)
-        plt.ylabel("Vp [km/s]", size = label)
-
-
-
-        fig = plt.figure( figsize = (figwidth, figheight) )
-        ax = plt.subplot(111)
-
-
-        plt.plot(t, f.fg_H, '-ob', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
-        plt.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'blue',
-                     elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        plt.plot(t, c.H, '-og', lw = lw, ms = ms, label = "Proximal active source estimate")
-        plt.plot(t, w.wm_H, '-or', lw = lw, ms = ms, label = "Crust 2.0 H estimate")
+        labels = [item.get_text() for item in ax2.get_xticklabels()]
+        labels[1] = f.stns[0]
+        labels[3] = f.stns[1]
+        labels[5] = f.stns[2]
+        labels[7] = f.stns[3]
+        ax2.set_xticklabels(labels)
+#        ax2.grid(True)
 
 
-        for tick in ax.xaxis.get_major_ticks():
-            tick.label.set_fontsize( ticks )
-            # specify integer or one of preset strings, e.g.
-            #tick.label.set_fontsize('x-small')
-            tick.label.set_rotation('vertical')
+#        ax2.legend(prop={'size': leg})
+        ax2.set_xlabel("Stations", size = label)
+        ax2.set_ylabel("H [km]", size = label)
 
-        plt.xticks(t, c.stns, size = ticks)
-        plt.grid(True)
+#        ax2.axis("tight")
 
-
-        plt.legend(prop={'size': leg})
-        plt.xlabel("Stations", size = label)
-        plt.ylabel("H [km]", size = label)
-        plt.axis("tight")
 
 #############################################################################
     # FIG 3: FG Vp/Vs versus Kan Vp/Vs

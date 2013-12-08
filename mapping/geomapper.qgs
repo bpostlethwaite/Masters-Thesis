@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>-89.348461</xmin>
-            <ymin>41.726697</ymin>
-            <xmax>-73.339939</xmax>
-            <ymax>51.560903</ymax>
+            <xmin>-145.821930</xmin>
+            <ymin>29.997146</ymin>
+            <xmax>-44.914830</xmax>
+            <ymax>95.387282</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -39,8 +39,8 @@
                 <legendlayerfile isInOverview="0" layerid="stationsThompson20130218155618165" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stations" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="stations" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="stations20130530115531732" visible="1"/>
             </filegroup>
         </legendlayer>
@@ -64,9 +64,9 @@
                 <legendlayerfile isInOverview="0" layerid="Cities20120712142305657" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="7" open="false" checked="Qt::Unchecked" name="politicalProvinces" showFeatureCount="0">
+        <legendlayer drawingOrder="7" open="false" checked="Qt::Checked" name="politicalProvinces" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="prov07min_basemap_ply20120713164009352" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="crust2geology" showFeatureCount="0">
@@ -100,370 +100,6 @@
             </filegroup>
         </legendlayer>
     </legend>
-    <Composer title="Composer 10" visible="0">
-        <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="40.91" xmin="-141.653" ymax="84.4641" xmax="-48.7308"/>
-            <LayerSet/>
-            <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
-                <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
-            </Grid>
-            <ComposerItem width="911" x="1" y="1" rotation="0" height="427" frame="false" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="1.66266" id="" positionLock="false">
-                <FrameColor alpha="255" red="0" blue="0" green="0"/>
-                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
-            </ComposerItem>
-        </ComposerMap>
-        <ComposerLegend symbolWidth="8" title="Legend" boxSpace="2" titleFont="Ubuntu,22,-1,5,75,1,0,0,0,0" map="0" groupFont="Ubuntu,14,-1,5,50,0,0,0,0,0" layerFont="Ubuntu,12,-1,5,50,0,0,0,0,0" groupSpace="2" symbolSpace="2" symbolHeight="7" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,20,-1,5,75,1,0,0,0,0">
-            <Model autoUpdate="1">
-                <LayerItem layerId="GeolProv20120712142034661" text="">
-                    <VectorClassificationItemNg text="Appalachian Orogen">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="255,170,0,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Arctic Platform">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="126,126,188,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Bear Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="240,229,255,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Churchill Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="62,97,249,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Cordilleran Orogen">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="193,112,113,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Grenville Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="255,251,120,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Hudson Bay Lowlands">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="170,166,119,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Innuitian Orogen">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="162,175,120,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Interior Platform">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="190,157,90,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Nain Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="255,189,247,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Slave Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="252,137,255,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Southern Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="0,255,255,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="St. Lawrence Platform">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="207,135,243,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                    <VectorClassificationItemNg text="Superior Province">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="101,182,92,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="INDEXMAP_GEOLOGY20130206123534156" text="INDEXMAP_GEOLOGY">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="94,43,180,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="stationsOK20130218151944721" text="stationsOK">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="232,223,154,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust2layer20130218152924374" text="crust2layer">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="242,209,99,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="stationsThompson20130218155618165" text="stationsThompson">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="83,128,99,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="moonVpGeology20130226130236273" text="moonVpGeology">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="85,193,90,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust2geology20130226140546451" text="crust2geology">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="164,149,122,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="stations20130530115531732" text="stations">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="137,220,169,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust120130826190012667" text="crust1">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="165,123,105,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust1geology20130826190422676" text="crust1geology">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="189,36,31,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-            </Model>
-            <ComposerItem width="4" x="819.442" y="3.45173" rotation="0" height="261.5" frame="true" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="1.66266" id="" positionLock="false">
-                <FrameColor alpha="255" red="255" blue="255" green="255"/>
-                <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-            </ComposerItem>
-        </ComposerLegend>
-        <Composition printResolution="300" paperWidth="914.4" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="431.8" printAsRaster="0"/>
-    </Composer>
     <Composer title="Plain Map" visible="0">
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
             <Extent ymin="39.6684" xmin="-144.583" ymax="86.307" xmax="-48.2629"/>
@@ -868,82 +504,106 @@
                     </VectorClassificationItemNg>
                 </LayerItem>
             </Model>
-            <ComposerItem width="4" x="324.55" y="3.2043" rotation="0" height="203.5" frame="false" outlineWidth="0.3" zValue="2" lastValidViewScaleFactor="2.63939" id="" positionLock="false">
+            <ComposerItem width="64" x="324.55" y="3.2043" rotation="0" height="242" frame="false" outlineWidth="0.3" zValue="2" lastValidViewScaleFactor="2.63939" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
         </ComposerLegend>
         <Composition printResolution="300" paperWidth="390" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="180" printAsRaster="0"/>
     </Composer>
-    <Composer title="Composer 4" visible="0">
+    <Composer title="Composer 9" visible="0">
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="60.5625" xmin="-117.038" ymax="69.6075" xmax="-103.943"/>
+            <Extent ymin="40.7209" xmin="-141.623" ymax="85.9768" xmax="-50.183"/>
             <LayerSet/>
             <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
                 <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
             </Grid>
-            <ComposerItem width="291" x="2.69943" y="3.69943" rotation="0" height="201" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="3.32701" id="" positionLock="false">
+            <ComposerItem width="360.713" x="1.83103" y="1.37327" rotation="0" height="178.525" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
         </ComposerMap>
-        <ComposerLegend symbolWidth="10" title="Legend" boxSpace="2" titleFont="Ubuntu,16,-1,5,50,0,0,0,0,0" map="0" groupFont="Ubuntu,14,-1,5,50,0,0,0,0,0" layerFont="Ubuntu,12,-1,5,50,0,0,0,0,0" groupSpace="2" symbolSpace="2" symbolHeight="6" layerSpace="2" iconLabelSpace="2" wrapChar="" itemFont="Ubuntu,12,-1,5,50,0,0,0,0,0">
-            <Model autoUpdate="1">
-                <LayerItem layerId="stations20130530115531732" text="stations">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="marker" name="classificationSymbol">
-                                <layer pass="0" class="SimpleMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="color" v="137,220,169,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="name" v="circle"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="size" v="2"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust120130826190012667" text="crust1">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="165,123,105,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-                <LayerItem layerId="crust1geology20130826190422676" text="crust1geology">
-                    <VectorClassificationItemNg text="">
-                        <symbols>
-                            <symbol outputUnit="MM" alpha="1" type="fill" name="classificationSymbol">
-                                <layer pass="0" class="SimpleFill" locked="0">
-                                    <prop k="color" v="189,36,31,255"/>
-                                    <prop k="color_border" v="0,0,0,255"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="style" v="solid"/>
-                                    <prop k="style_border" v="solid"/>
-                                    <prop k="width_border" v="0.26"/>
-                                </layer>
-                            </symbol>
-                        </symbols>
-                    </VectorClassificationItemNg>
-                </LayerItem>
-            </Model>
-            <ComposerItem width="4" x="239.254" y="11.7222" rotation="0" height="36.5" frame="true" outlineWidth="0.3" zValue="3" lastValidViewScaleFactor="3.32701" id="" positionLock="false">
+        <ComposerLabel valign="32" labelText="Slave Province" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="56.7619" x="111.235" y="69.5791" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Interior Platform" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="56.7619" x="104.826" y="123.137" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Hudson Bay Lowlands" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="63.1705" x="188.596" y="99.3333" rotation="0" height="10.9862" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Processed Seismic Stations" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="0" blue="0" green="0"/>
+            <ComposerItem width="76.4455" x="24.7189" y="11.9017" rotation="0" height="12.8172" frame="false" outlineWidth="0.3" zValue="14" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
                 <FrameColor alpha="255" red="0" blue="0" green="0"/>
                 <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
             </ComposerItem>
-        </ComposerLegend>
-        <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="210" printAsRaster="0"/>
+        </ComposerLabel>
+        <ComposerShape shapeType="2" shapeWidth="8.23963" outlineWidth="1" transparentFill="1" shapeHeight="6.86636">
+            <OutlineColor alpha="255" red="0" blue="0" green="0"/>
+            <FillColor alpha="255" red="0" blue="0" green="0"/>
+            <ComposerItem width="8.23963" x="11.4439" y="12.8172" rotation="0" height="6.86636" frame="true" outlineWidth="0" zValue="13" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="0" red="255" blue="255" green="255"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerShape>
+        <ComposerLabel valign="32" labelText="Superior Province" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="56.7619" x="247.189" y="122.221" rotation="0" height="14.1905" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Grenville Province" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="56.7619" x="281.063" y="133.207" rotation="0" height="10.0707" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Cordilleran Orogen" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="56.7619" x="17.3948" y="85.6006" rotation="0" height="10.0707" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Churchill Province" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="54.4731" x="129.545" y="105.284" rotation="0" height="7.78187" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <ComposerLabel valign="32" labelText="Appalachian Province" halign="1" margin="1">
+            <LabelFont description="Ubuntu,16,-1,5,75,0,0,0,0,0"/>
+            <FontColor red="255" blue="255" green="255"/>
+            <ComposerItem width="65.0015" x="298.916" y="144.194" rotation="0" height="9.61293" frame="false" outlineWidth="0.3" zValue="4" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerLabel>
+        <Composition printResolution="300" paperWidth="365" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="181" printAsRaster="0"/>
     </Composer>
     <projectlayers layercount="15">
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
@@ -2791,29 +2451,26 @@
             <renderer-v2 attr="GEOLPROV" symbollevels="0" type="categorizedSymbol">
                 <categories>
                     <category symbol="0" value="Appalachian Orogen" label="Appalachian Orogen"/>
-                    <category symbol="1" value="Arctic Continental Shelf" label="Arctic Continental Shelf"/>
-                    <category symbol="2" value="Arctic Platform" label="Arctic Platform"/>
-                    <category symbol="3" value="Atlantic Continental Shelf" label="Atlantic Continental Shelf"/>
-                    <category symbol="4" value="Bear Province" label="Bear Province"/>
-                    <category symbol="5" value="Churchill" label="Churchill"/>
-                    <category symbol="6" value="Churchill Province" label="Churchill Province"/>
-                    <category symbol="7" value="Cordilleran Orogen" label="Cordilleran Orogen"/>
-                    <category symbol="8" value="Grenville Province" label="Grenville Province"/>
-                    <category symbol="9" value="Hudson Bay Lowlands" label="Hudson Bay Lowlands"/>
-                    <category symbol="10" value="Innuitian Orogen" label="Innuitian Orogen"/>
-                    <category symbol="11" value="Interior Platform" label="Interior Platform"/>
-                    <category symbol="12" value="Nain Province" label="Nain Province"/>
-                    <category symbol="13" value="Pacific Continental Shelf" label="Pacific Continental Shelf"/>
-                    <category symbol="14" value="Province de Grenville" label="Province de Grenville"/>
-                    <category symbol="15" value="Slave Province" label="Slave Province"/>
-                    <category symbol="16" value="Southern Province" label="Southern Province"/>
-                    <category symbol="17" value="St. Lawrence Platform" label="St. Lawrence Platform"/>
-                    <category symbol="18" value="Superior Province" label="Superior Province"/>
+                    <category symbol="1" value="Arctic Platform" label="Arctic Platform"/>
+                    <category symbol="2" value="Bear Province" label="Bear Province"/>
+                    <category symbol="3" value="Churchill" label="Churchill"/>
+                    <category symbol="4" value="Churchill Province" label="Churchill Province"/>
+                    <category symbol="5" value="Cordilleran Orogen" label="Cordilleran Orogen"/>
+                    <category symbol="6" value="Grenville Province" label="Grenville Province"/>
+                    <category symbol="7" value="Hudson Bay Lowlands" label="Hudson Bay Lowlands"/>
+                    <category symbol="8" value="Innuitian Orogen" label="Innuitian Orogen"/>
+                    <category symbol="9" value="Interior Platform" label="Interior Platform"/>
+                    <category symbol="10" value="Nain Province" label="Nain Province"/>
+                    <category symbol="11" value="Province de Grenville" label="Province de Grenville"/>
+                    <category symbol="12" value="Slave Province" label="Slave Province"/>
+                    <category symbol="13" value="Southern Province" label="Southern Province"/>
+                    <category symbol="14" value="St. Lawrence Platform" label="St. Lawrence Platform"/>
+                    <category symbol="15" value="Superior Province" label="Superior Province"/>
                 </categories>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="255,170,0,255"/>
+                            <prop k="color" v="99,99,99,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2823,7 +2480,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="1">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="206,206,206,255"/>
+                            <prop k="color" v="111,111,111,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2833,7 +2490,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="10">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="162,175,120,255"/>
+                            <prop k="color" v="168,168,168,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2843,7 +2500,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="11">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="190,157,90,255"/>
+                            <prop k="color" v="185,185,185,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2853,7 +2510,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="12">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="255,189,247,255"/>
+                            <prop k="color" v="191,191,191,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2863,7 +2520,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="13">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="206,206,206,255"/>
+                            <prop k="color" v="196,196,196,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2873,7 +2530,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="14">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="6,181,146,255"/>
+                            <prop k="color" v="202,202,202,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2883,37 +2540,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="15">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="252,137,255,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="16">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="0,255,255,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="17">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="207,135,243,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="18">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="101,182,92,255"/>
+                            <prop k="color" v="208,208,208,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2923,7 +2550,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="2">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="126,126,188,255"/>
+                            <prop k="color" v="122,122,122,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2933,7 +2560,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="3">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="206,206,206,255"/>
+                            <prop k="color" v="128,128,128,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2943,7 +2570,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="4">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="240,229,255,255"/>
+                            <prop k="color" v="134,134,134,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2953,7 +2580,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="5">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="191,115,116,255"/>
+                            <prop k="color" v="139,139,139,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2963,7 +2590,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="6">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="62,97,249,255"/>
+                            <prop k="color" v="145,145,145,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2973,7 +2600,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="7">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="193,112,113,255"/>
+                            <prop k="color" v="151,151,151,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2983,7 +2610,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="8">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="255,251,120,255"/>
+                            <prop k="color" v="156,156,156,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -2993,7 +2620,7 @@
                     </symbol>
                     <symbol outputUnit="MM" alpha="1" type="fill" name="9">
                         <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="color" v="170,166,119,255"/>
+                            <prop k="color" v="162,162,162,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="style" v="solid"/>
@@ -3014,14 +2641,9 @@
                         </layer>
                     </symbol>
                 </source-symbol>
-                <colorramp type="random" name="[source]">
-                    <prop k="count" v="19"/>
-                    <prop k="hueMax" v="359"/>
-                    <prop k="hueMin" v="0"/>
-                    <prop k="satMax" v="255"/>
-                    <prop k="satMin" v="0"/>
-                    <prop k="valMax" v="255"/>
-                    <prop k="valMin" v="0"/>
+                <colorramp type="gradient" name="[source]">
+                    <prop k="color1" v="94,94,94,255"/>
+                    <prop k="color2" v="214,214,214,255"/>
                 </colorramp>
                 <rotation field=""/>
                 <sizescale field=""/>
@@ -3032,7 +2654,7 @@
                 <property key="labeling/bufferColorB" value="255"/>
                 <property key="labeling/bufferColorG" value="255"/>
                 <property key="labeling/bufferColorR" value="255"/>
-                <property key="labeling/bufferSize" value="3"/>
+                <property key="labeling/bufferSize" value="0"/>
                 <property key="labeling/dataDefinedProperty0" value=""/>
                 <property key="labeling/dataDefinedProperty1" value=""/>
                 <property key="labeling/dataDefinedProperty10" value=""/>
@@ -3055,30 +2677,30 @@
                 <property key="labeling/fieldName" value="GEOLPROV"/>
                 <property key="labeling/fontFamily" value="Ubuntu"/>
                 <property key="labeling/fontItalic" value="false"/>
-                <property key="labeling/fontSize" value="20"/>
+                <property key="labeling/fontSize" value="14"/>
                 <property key="labeling/fontSizeInMapUnits" value="false"/>
                 <property key="labeling/fontStrikeout" value="false"/>
                 <property key="labeling/fontUnderline" value="false"/>
-                <property key="labeling/fontWeight" value="50"/>
+                <property key="labeling/fontWeight" value="75"/>
                 <property key="labeling/formatNumbers" value="false"/>
                 <property key="labeling/isExpression" value="false"/>
-                <property key="labeling/labelPerPart" value="true"/>
+                <property key="labeling/labelPerPart" value="false"/>
                 <property key="labeling/mergeLines" value="false"/>
                 <property key="labeling/minFeatureSize" value="4"/>
                 <property key="labeling/obstacle" value="true"/>
-                <property key="labeling/placement" value="1"/>
+                <property key="labeling/placement" value="4"/>
                 <property key="labeling/placementFlags" value="0"/>
                 <property key="labeling/plussign" value="true"/>
-                <property key="labeling/priority" value="2"/>
+                <property key="labeling/priority" value="10"/>
                 <property key="labeling/scaleMax" value="10000"/>
                 <property key="labeling/scaleMin" value="1"/>
                 <property key="labeling/textColorB" value="0"/>
                 <property key="labeling/textColorG" value="0"/>
-                <property key="labeling/textColorR" value="0"/>
+                <property key="labeling/textColorR" value="255"/>
                 <property key="labeling/wrapChar" value=""/>
             </customproperties>
             <displayfield>GEOLPROV</displayfield>
-            <label>0</label>
+            <label>1</label>
             <labelfield>GEOLPROV</labelfield>
             <labelattributes>
                 <label fieldname="GEOLPROV" text="Label"/>
@@ -3098,7 +2720,7 @@
                 <buffersize fieldname="" units="pt" value="2"/>
                 <bufferenabled fieldname="" on="1"/>
                 <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
+                <selectedonly on="1"/>
             </labelattributes>
             <edittypes>
                 <edittype type="0" name="AREA"/>
@@ -4081,7 +3703,7 @@
                             <prop k="offset" v="0"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="1.5"/>
+                            <prop k="width" v="1"/>
                         </layer>
                     </symbol>
                 </symbols>
@@ -4317,122 +3939,26 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 attr="hk::R" symbollevels="0" type="graduatedSymbol">
-                <ranges>
-                    <range symbol="0" lower="1.6756" upper="1.7103" label="1.6756 - 1.7103"/>
-                    <range symbol="1" lower="1.7103" upper="1.7254" label="1.7103 - 1.7254"/>
-                    <range symbol="2" lower="1.7254" upper="1.7389" label="1.7254 - 1.7389"/>
-                    <range symbol="3" lower="1.7389" upper="1.7555" label="1.7389 - 1.7555"/>
-                    <range symbol="4" lower="1.7555" upper="1.7691" label="1.7555 - 1.7691"/>
-                    <range symbol="5" lower="1.7691" upper="1.7887" label="1.7691 - 1.7887"/>
-                    <range symbol="6" lower="1.7887" upper="1.8143" label="1.7887 - 1.8143"/>
-                    <range symbol="7" lower="1.8143" upper="1.843" label="1.8143 - 1.8430"/>
-                </ranges>
+            <renderer-v2 symbollevels="0" type="RuleRenderer">
+                <rules>
+                    <rule filter=" &quot;status&quot;  = 'processed-ok'" symbol="0" label="Processed Seismic Stations"/>
+                </rules>
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="0,0,255,255"/>
+                            <prop k="color" v="255,255,255,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
+                            <prop k="name" v="equilateral_triangle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="1">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="36,0,218,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="2">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="72,0,182,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="3">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="109,0,145,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="4">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="145,0,109,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="5">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="182,0,72,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="6">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="218,0,36,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="7">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="255,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
+                            <prop k="size" v="5"/>
                         </layer>
                     </symbol>
                 </symbols>
-                <source-symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="211,61,27,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="rectangle"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4"/>
-                        </layer>
-                    </symbol>
-                </source-symbol>
-                <colorramp type="gradient" name="[source]">
-                    <prop k="color1" v="0,0,255,255"/>
-                    <prop k="color2" v="255,0,0,255"/>
-                </colorramp>
-                <mode name="jenks"/>
-                <rotation field=""/>
-                <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
-            <displayfield>station</displayfield>
-            <label>0</label>
+            <displayfield>network</displayfield>
+            <label>1</label>
             <labelattributes>
                 <label fieldname="" text="Label"/>
                 <family fieldname="" name="Ubuntu"/>
@@ -4441,19 +3967,22 @@
                 <italic fieldname="" on="0"/>
                 <underline fieldname="" on="0"/>
                 <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
+                <color fieldname="" red="255" blue="0" green="255"/>
                 <x fieldname=""/>
                 <y fieldname=""/>
                 <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
                 <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
+                <alignment fieldname="" value="above"/>
                 <buffercolor fieldname="" red="255" blue="255" green="255"/>
                 <buffersize fieldname="" units="pt" value="1"/>
                 <bufferenabled fieldname="" on=""/>
                 <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
+                <selectedonly on="1"/>
             </labelattributes>
             <edittypes>
+                <edittype type="0" name="H"/>
+                <edittype type="0" name="R"/>
+                <edittype type="0" name="Vp"/>
                 <edittype type="0" name="hdisc"/>
                 <edittype type="0" name="hdiscp"/>
                 <edittype type="0" name="hk::H"/>
@@ -4463,6 +3992,9 @@
                 <edittype type="0" name="network"/>
                 <edittype type="0" name="station"/>
                 <edittype type="0" name="status"/>
+                <edittype type="0" name="stdH"/>
+                <edittype type="0" name="stdR"/>
+                <edittype type="0" name="stdVp"/>
                 <edittype type="0" name="wm::R"/>
                 <edittype type="0" name="wm::Vp"/>
             </edittypes>
