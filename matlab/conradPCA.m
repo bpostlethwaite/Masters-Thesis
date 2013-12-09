@@ -220,21 +220,17 @@ profile = profile;
 
 figure(23)
 h(1) = subplot(1,2,1);
-    imagesc(XI')
-
-    set(gca, 'XTick', []);
-    set(gca, 'YTick', []);
-    set(gca,'YTickLabel','')
+    imagesc(1:size(X,1), H, XI')
     set(gca,'XTickLabel','')
-    %set(gca,'position',[0.1 0.1 0.6 0.6]);
-    %set(gca, 'TickDir', 'out')
+    set(gca, 'XTick', []);
+    set(gca,'TickDir','Out')
     xlabel('interpolated station depth profiles', 'FontSize', 14)
     ylabel('Depth [km]', 'FontSize', 14)
     
     
     
 h(2) = subplot(1,2,2);
-    plot(profile, xi, 'LineWidth', 2)
+    plot(profile, xi, 'LineWidth', 2, 'Color',[0.25,0.25,0.25])
     hold on
     line([mean(profile)-0.5, mean(profile)-0.5],[xi(1), xi(end)], 'Color', [0.7,0.7,0.7])
     hold off
@@ -257,19 +253,12 @@ pos{2}(3) = 0.8 * pos{2}(3);
 set(h(1),'position',pos{1});
 set(h(2),'position',pos{2});
 
-
+colormap(flipud(colormap('gray')))
 % figure()
 % subplot(1,2,1)
 %     imagesc(XI')
 % subplot(1,2,2)
 %     plot( sum(sqrt(XI.^2),1)', 'LineWidth', 2)
-figure(19)
-    imagesc(1:size(X,1), H, X')
-    xlabel('station depth profiles', 'FontSize', 14)
-    ylabel('Depth [km]', 'FontSize', 14)
-    set(gca,'XTickLabel','')
-    set(gca, 'XTick', []);
-    set(gca,'TickDir','Out')
     
 %% Plot Modes
 
@@ -287,50 +276,75 @@ var = E./sum(E);
 Xs = sum(X);
 Xs = Xs/max(abs(Xs));
 
-figure(34)
 
-plot(Vs + shift, H, 'Color', [0.25,0.25,0.25], 'LineWidth', 2)
+figure()
+h(1) = subplot(1,2,1);
+    imagesc(1:size(X,1), H, X')
+    xlabel('station depth profiles', 'FontSize', 14)
+    ylabel('Depth [km]', 'FontSize', 14)
+    set(gca,'XTickLabel','')
+    set(gca, 'XTick', []);
+    set(gca,'TickDir','Out')
 
-axis tight
-ylabel('H [km]', 'FontSize',14)
-set(gca,'YDir','reverse');
-set(gca,'TickLength', [0 0]);
+    
+    
+    
+h(2) = subplot(1,2,2);
+    plot(Vs + shift, H, 'Color', [0.25,0.25,0.25], 'LineWidth', 2)
+    axis tight
+    set(gca,'YDir','reverse');
+    set(gca,'TickLength', [0 0]);
+    set(gca,'YTickLabel','')
+    set(gca,'XTickLabel','')
+    %set(gca, 'TickDir', 'out')
+    set(gca, 'XTick', []);
+    set(gca, 'YTick', []);
 
-hold on
-% Box 
-lim = xlim;
-H1 = 20;
-H2 = 30;
-p=patch([lim(1) lim(1) lim(2) lim(2)],[H1 H2 H2 H1],'k',...
-     'EdgeColor', 'none','FaceColor',[0.9, 0.9, 0.9],...
-    'FaceAlpha',0.5);
+    hold on
+    % Box 
+    lim = xlim;
+    H1 = 20;
+    H2 = 30;
+    p=patch([lim(1) lim(1) lim(2) lim(2)],[H1 H2 H2 H1],'k',...
+         'EdgeColor', 'none','FaceColor',[0.75, 0.75, 0.75],...
+        'FaceAlpha',0.5);
+    for ii = 1:ne
+      line([shift(1,ii),shift(1,ii)],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
+    end
+    hold off
+    %pos = get(gca,'Position');
+    %set(gca,'Position',[pos(1), .15, pos(3) .75])
 
+    clear tickLabels
+    for ii = 1:ne
+        tickLabels{ii} = sprintf('PC %1.0d \n %2.1f%%', ii, var(ii) *100);
+    end
 
-for ii = 1:ne
-  line([shift(1,ii),shift(1,ii)],[H(1), H(end)], 'Color', [0.7,0.7,0.7])
-end
-hold off
+    % Set xtick points
+    Xt = shift(1,:) + 0.2*vmax + 0.05;
+    set(gca,'XTick',Xt);
 
+    ax = axis; % Current axis limits
+    axis(axis); % Set the axis limit modes (e.g. XLimMode) to manual
+    Yl = ax(3:4); % Y-axis limits
 
-pos = get(gca,'Position');
-set(gca,'Position',[pos(1), .15, pos(3) .75])
+    % Place the text labels
+    t = text(Xt,Yl(2)*ones(1,length(Xt)),tickLabels,'FontSize',8);
+    set(t,'HorizontalAlignment','right','VerticalAlignment','top');% ...
 
-clear tickLabels
-for ii = 1:ne
-    tickLabels{ii} = sprintf('PC %1.0d \n %2.1f%%', ii, var(ii) *100);
-end
+    % Remove the default labels
+    set(gca,'XTickLabel','')
 
-% Set xtick points
-Xt = shift(1,:) + 0.2*vmax + 0.05;
-set(gca,'XTick',Xt);
+    
+    
+pos=get(h,'position');
+pos{1}(3) = 1.5*pos{1}(3);
+leftedge = pos{1}(1) + pos{1}(3);
+pos{2}(1) = leftedge;
+pos{2}(3) = 0.8 * pos{2}(3);
+set(h(1),'position',pos{1});
+set(h(2),'position',pos{2});
 
-ax = axis; % Current axis limits
-axis(axis); % Set the axis limit modes (e.g. XLimMode) to manual
-Yl = ax(3:4); % Y-axis limits
+colormap(flipud(colormap('gray')))
+%colormap('gray')
 
-% Place the text labels
-t = text(Xt,Yl(2)*ones(1,length(Xt)),tickLabels,'FontSize',14);
-set(t,'HorizontalAlignment','right','VerticalAlignment','top');% ...
-
-% Remove the default labels
-set(gca,'XTickLabel','')
