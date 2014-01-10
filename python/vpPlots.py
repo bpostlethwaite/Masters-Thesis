@@ -204,11 +204,11 @@ if __name__  == "__main__":
         #fig = plt.figure( figsize = (figwidth, figheight) )
         fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize = (figwidth, figheight))
         color = "0.25"
-        ax1.plot(t, f.fg_Vp, '-o', color=color, lw = lw, ms = ms, label = "Full Gridsearch estimate")
-        ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor=color,
+        ax1.plot(t, f.fg_Vp, '-o', color='blue', lw = lw, ms = ms, label = "Full Gridsearch estimate")
+        ax1.errorbar(t, f.fg_Vp, yerr=stdVp, xerr=None, fmt=None, ecolor='blue',
                      elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        ax1.plot(t, c.Vp, '--o', color=color, lw = lw, ms = ms, label = "Proximal active source estimate")
-        ax1.plot(t, w.wm_Vp, ':o', color=color, lw = lw, ms = ms, label = "Crust 2.0 estimate")
+        ax1.plot(t, c.Vp, '--o', color='green', lw = lw, ms = ms, label = "Proximal active source estimate")
+        ax1.plot(t, w.wm_Vp, ':o', color='red', lw = lw, ms = ms, label = "Crust 2.0 estimate")
 
 #        ax1.axis("tight")
 
@@ -221,17 +221,20 @@ if __name__  == "__main__":
 #        ax1.set_xticks(t, c.stns, size = ticks)
 #        ax1.grid(True)
 
-        ax1.legend(loc=2, handlelength=4,prop={'size': leg})
+        ax1.legend(loc=2, handlelength=4, frameon=False, prop={'size': leg})
 #        ax1.xlabel("Stations", size = label)
         ax1.set_ylabel("Vp [km/s]", size = label)
         ax1.set_ylim([6,7.6])
 
+        ax1.yaxis.set_ticks_position('left')
 
-        ax2.plot(t, f.fg_H, '-o',color=color, lw = lw, ms = ms, label = "Full Gridsearch H estimate")
-        ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = color,
+        ax2.plot(t, f.fg_H, '-o',color='blue', lw = lw, ms = ms, label = "Full Gridsearch H estimate")
+        ax2.errorbar(t, f.fg_H, yerr=stdH, xerr=None, fmt=None, ecolor = 'blue',
                      elinewidth = elw, capsize = caplen, mew = capwid, label = "2 std dev Bootstrap")
-        ax2.plot(t, c.H, '--o', color=color, lw = lw, ms = ms, label = "Proximal active source estimate")
-        ax2.plot(t, w.wm_H, ':o', color=color, lw = lw, ms = ms, label = "Crust 2.0 H estimate")
+        ax2.plot(t, c.H, '--o', color='green', lw = lw, ms = ms, label = "Proximal active source estimate")
+        ax2.plot(t, w.wm_H, ':o', color='red', lw = lw, ms = ms, label = "Crust 2.0 H estimate")
+
+        ax2.yaxis.set_ticks_position('left')
 
 
         for tick in ax2.xaxis.get_major_ticks():

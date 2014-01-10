@@ -9,8 +9,8 @@ shading interp
 hold on
 plot(x, y, 'w+')
 plot(x, y, 'ko')
-[~, H] = contour(X, Y, slice, [s - sstd, s - sstd], 'w-');
-set (H, 'LineWidth', 1.2);
+[~, H] = contour(X, Y, slice, [s - sstd, s - sstd], 'k-');
+set(H, 'LineWidth', 1.6);
 hold off
 if ~isempty(xl)
     xlab=xlabel(xl);

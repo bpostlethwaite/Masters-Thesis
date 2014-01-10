@@ -201,16 +201,16 @@ if __name__  == "__main__":
 
                 #print '['+'"'+k+'"'+','+'np.array(['+str(rd[k]['Vp'])+','+str(rd[k]['poisson'])+'])],'
 
-    legc = {"Canada": "o",
-            "Slave Province": "^",
-            "Grenville Province": "v",
-            "Churchill Province": "<",
-            "Superior Province": ">",
-            "Canadian Shield":"*",
-            "Platforms": "p",
-            "Orogens": "h",
-            "Proterozoic": "h",
-            "Archean": "H"}
+    legc = {"Canada": ["o","b"],
+            "Slave Province": ["^","b"],
+            "Grenville Province": ["^","g"],
+            "Churchill Province": ["^","r"],
+            "Superior Province": ["^","c"],
+            "Canadian Shield":["o","g"],
+            "Platforms": ["o","r"],
+            "Orogens": ["o","c"],
+            "Proterozoic": ["D","b"],
+            "Archean": ["D","g"]}
 
     order = ["Canada", "Slave Province", "Grenville Province",
              "Churchill Province", "Superior Province", "Canadian Shield",
@@ -225,7 +225,7 @@ if __name__  == "__main__":
 
 
     for k in order:
-        plt.plot(rd[k]['Vs'], rd[k]['Vp'], legc[k], color="0.4"
+        plt.plot(rd[k]['Vs'], rd[k]['Vp'], legc[k][0], color=legc[k][1]
                  , label = k, markersize = 16, markeredgecolor = 'black', mew = 1.6)
 
     for l in liths:

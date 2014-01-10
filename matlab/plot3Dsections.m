@@ -195,7 +195,13 @@ caxis manual
 caxis([bottom top]);
 
 axes('Position', [0.05 0.15 0.95 0.7], 'Visible', 'off');
-colormap(flipud(colormap('gray')))
+% Set colormap.
+r1=[(0:31)/31,ones(1,32)];
+g1=[(0:31)/31,(31:-1:0)/31];
+b1=[ones(1,32),(31:-1:0)/31];
+rwb=[r1',g1',b1'];
+colormap(rwb);
+%colormap(flipud(colormap('jet')))
 colorbar;
 
 

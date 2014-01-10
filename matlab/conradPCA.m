@@ -253,12 +253,13 @@ pos{2}(3) = 0.8 * pos{2}(3);
 set(h(1),'position',pos{1});
 set(h(2),'position',pos{2});
 
-colormap(flipud(colormap('gray')))
-% figure()
-% subplot(1,2,1)
-%     imagesc(XI')
-% subplot(1,2,2)
-%     plot( sum(sqrt(XI.^2),1)', 'LineWidth', 2)
+% Set colormap.
+r1=[(0:31)/31,ones(1,32)];
+g1=[(0:31)/31,(31:-1:0)/31];
+b1=[ones(1,32),(31:-1:0)/31];
+rwb=[r1',g1',b1'];
+colormap(rwb);
+%colormap(flipud(colormap('gray')))
     
 %% Plot Modes
 
@@ -345,6 +346,7 @@ pos{2}(3) = 0.8 * pos{2}(3);
 set(h(1),'position',pos{1});
 set(h(2),'position',pos{2});
 
-colormap(flipud(colormap('gray')))
-%colormap('gray')
+%colormap(flipud(colormap('gray')))
+colormap(rwb);
+
 
