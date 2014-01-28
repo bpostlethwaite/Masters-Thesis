@@ -1,5 +1,28 @@
 \documentclass[review]{elsarticle}
 \usepackage{graphicx,multirow,color,natbib,amssymb}
+\usepackage[margin=1in]{geometry}
+
+
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\renewenvironment{thebibliography}[1]
+     {\section*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{}%
+           {\leftmargin0pt
+            \@openbib@code
+            \usecounter{enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+
 \journal{Tectonophysics}
 
 \graphicspath{ {figures/} }
@@ -93,7 +116,7 @@ We employ an $L_2$, multichannel, frequency domain approach to perform the decon
 
 \begin{figure}
   \centering
-    \includegraphics[width=\textwidth]{reflectedPhases.pdf}
+    \includegraphics[width=0.7\textwidth]{reflectedPhases.pdf}
   \caption{Schematic diagram illustrating geometry of phases for the velocity contrast representing the Moho}
   \label{fig:reflectedPhases}
 \end{figure}
@@ -156,7 +179,7 @@ The Crust 1.0 model (Laske et al., 2013) employs many of these same active sourc
 Three published studies have provided parameter estimates for $R$ and $H$ for subsets of the seismic stations considered here. The most recent study (Thompson et al., 2010) focused on the northern Canadian Shield and employs both the linear stacking approach used by ZK as well as a phase weighted method. A 2007 study of the Superior Province (Darbyshire et al, 2007) and a study of the Grenville Orogen (Eaton et al., 2006) utilize the ZK + semblance approach outlined in section \ref{section:VpVsMethod}.  Comparisons between crustal estimates of $R$ for particular seismic stations are made for those values with corresponding standard errors of less than $\pm$0.06. This error threshold is chosen empirically as that which best partitions those receiver function stacks with visually recognizable energy along phase moveout curves from those where lack of data or poor quality make these moveout curves difficult to distinguish. For each study under comparison, data are reprocessed using the $V_P$ chosen by the study authors. For the 2006 and 2007 studies the ZK + semblance method is used whereas for the Thompson et al. study the linear stacking ZK approach is employed. Both correlation coefficient and mean difference are provided in (Table \ref{table:comparison}) as measures of similarity.
 
 \begin{table}
-  \begin{tabular}{ p{3cm} p{2cm} p{1cm} p{0.5cm} p{0.5cm} p{0.5cm} p{0.5cm}}
+  \begin{tabular}{ p{3.8cm} p{3cm} p{2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm}}
     & & & \multicolumn{2}{ c }{Corr. Coeff.} & \multicolumn{2}{ c }{RMS difference} \\
     \hline
     Study Authors & Region & Num. Stns &  $H$ & $R$  &$H$ (km)& $R$ \\
@@ -256,7 +279,7 @@ Table \ref{table:regionParameters} displays the results of our regionalization i
 %% -----------------------------------------------%%
 \section{Discussion and Conclusions}
 
-Seismic refraction and reflection studies of continental crust have afforded valuable constraints on the processes governing crustal evolution. Early efforts to characterize continental crust invoked a 2-layer, slab model comprising lower velocity upper crust and a higher velocity lower crust (Conrad, 1925; Jeffreys, 1926). Evidence supporting this model was originally presented by {\it Conrad} (1925) who cited observations of P arrivals propagating along a mid-crustal interface similar to but shallower than the deeper crust-mantle interface imaged by Andrija Mohorovi\v{c}i\'{c} in 1909 (Litak and Brown, 1989). Interpretations of seismic data invoking both the crustal slab model and the Conrad Discontinuity, as the mid-crustal interface became known, persisted in the literature but were increasingly criticized as being too simplistic, in the case of the slab model, or, for the Conrad Discontinuity, lacking consistent evidence (Litak and Brown, 1989). Technological improvements in reflection seismology allowed researchers to further argue for a complex heterogeneous crust and propose models wherein smooth random lateral inhomogeneities are superimposed on simple velocity gradient models to reproduce the range of seismic observations (Litak and Brown, 1989; Mereu and Ojo, 1981).
+Seismic refraction and reflection studies of continental crust have afforded valuable constraints on the processes governing crustal evolution. Early efforts to characterize continental crust invoked a 2-layer, slab model comprising lower velocity upper crust and a higher velocity lower crust (Conrad, 1925; Jeffreys, 1926). Evidence supporting this model was originally presented by {\it Conrad} (1925) which cites observations of P arrivals propagating along a mid-crustal interface similar to but shallower than the deeper crust-mantle interface imaged by Andrija Mohorovi\v{c}i\'{c} in 1909 (Litak and Brown, 1989). Interpretations of seismic data invoking both the crustal slab model and the Conrad Discontinuity, as the mid-crustal interface became known, persisted in the literature but were increasingly criticized as being too simplistic, in the case of the slab model, or, for the Conrad Discontinuity, lacking consistent evidence (Litak and Brown, 1989). Technological improvements in reflection seismology allowed researchers to further argue for a complex heterogeneous crust and propose models wherein smooth random lateral inhomogeneities are superimposed on simple velocity gradient models to reproduce the range of seismic observations (Litak and Brown, 1989; Mereu and Ojo, 1981).
 
 Despite diminishing support in recent years for the Conrad Discontinuity as a universal crustal feature, the division of the crust into seismically distinguishable upper and lower components remains a common assertion. In their review, Mooney and Brocher (1987) argue for a model of the continental crust separated into a seismically reflective lower crust overlain by transparent upper crust. Their physical interpretation is that of a poorly laminated upper crust dominated by features of short length scale that contrasts with a lower crust composed of thin ($\sim$ 100 m) lamellae of significantly longer horizontal length scale. The inference of a laminated lower crust has since found support in studies of regions with extended or thicker, warmer crust (e.g. Ito, 1998; Mayer, 1996; Meissner et al., 2006).
 
@@ -267,9 +290,9 @@ Despite diminishing support in recent years for the Conrad Discontinuity as a un
  \label{fig:discInterp}
 \end{figure}
 
-The lower energy in the 20-30 km depth window noted in Section \ref{section:discontinuities} for the station profiles given in Figure \ref{fig:discPCA} (left) provides some supporting evidence for seismically distinct upper and lower crustal layers. To better compare results across stations, we normalize each depth profile such that the Moho falls on a common ordinate (Figure \ref{fig:discInterp}, left) and stack the absolute values (Figure \ref{fig:discInterp}, right). The stacked signal has highest amplitude near the surface, where energy is associated with sedimentary layers, and at the Moho. There is a steady and marked decrease in energy over the bottom third of the profile that cannot be ascribed to sidelobe structure associated with the Moho pulse. This observation is ostensibly at odds with the {\it Mooney and Brocher} (1987) high reflectivity lower crustal model. Moreover, reflection profiles from {\sc Lithoprobe} transects (Hammer et al., 2010) frequently display significant reflected energy through the crust with some transects including the Western Superior transect and the Cassiar in the Western Cordillera displaying pronounced reflectivity within the lower crust. We reconcile the teleseismic and active source observations of transparent versus reflective lower crust by considering the scale of vertical heterogeneity to which the methods are sensitive. Teleseismic body waves include both direct and reflected conversions that can originate from layering with velocity gradients over scale lengths of the order of $\lambda/2$ and $\lambda/4$, respectively, where $\lambda$ is the {\it P}-wavelength (Bostock, 1999). For 1 Hz teleseismic waves, crustal layering with scale lengths of $\approx$ 800-2000 m should be resolvable. Higher frequency active source data (10-40 Hz) employing {\it P}-wave sources are sensitive to finer scale vertical structure with scales of $\approx$ 75-300 m. We infer then that the vertical scales of lower crustal reflectivity are better represented by scale lengths under $\approx$ 800 m yielding a lower crustal structure that is relatively transparent to teleseismic waves but can yield strongly reflective signatures to near-vertical, active-source seismic profiling.  Some authors, for example {\it Mayer et al.} (1996) in their study of the Rhine Graben, have employed the term Conrad Discontinuity to refer to an interface or transition between transparent upper crust and reflective lower crust. It is possible in this context that the higher energy levels between 15 and 20 km on the 5th principal component in Figure 12, is a manifestation of such signals, but the lower energy levels ($<5\%$) in this mode would indicate that Conrad Discontinuity so-defined is at best weakly represented within the Canadian crust. This finding is supported by crustal models characterized by a first order continuously increasing velocity profile such as the gradual transition from a more silicic uppercrust to a more mafic lower crust in shields and platforms observed by Rolf Meissner (Meissner, 1986). It is also supported by the lack of evidence for a consistent mid-crustal reflection boundary in lithoprobe data (Hammer et al., 2010). The increased transparency of the lower crust would appear to be better defined and relate to changes in rheology. Studies of crustal strength (Jackson, 2002), deformation (Burov and Watts, 2006; Meissner et al., 2006) and the observed $\sim$ 100 m lower crustal lamallae reported by Mooney and Brocher (1987) as well as the widely noted reduced seismicity of the lower crust indicate changes would support this contention; though see (Deichmann, 1991; Handy and Brun, 2004; Simpson, 1999) for competing evidence.
+The lower energy in the 20-30 km depth window noted in Section \ref{section:discontinuities} for the station profiles given in Figure \ref{fig:discPCA} (left) provides some supporting evidence for seismically distinct upper and lower crustal layers. To better compare results across stations, we normalize each depth profile such that the Moho falls on a common ordinate (Figure \ref{fig:discInterp}, left) and stack the absolute values (Figure \ref{fig:discInterp}, right). The stacked signal has highest amplitude near the surface, where energy is associated with sedimentary layers, and at the Moho. There is a steady and marked decrease in energy over the bottom third of the profile that cannot be ascribed to sidelobe structure associated with the Moho pulse. This observation is ostensibly at odds with the {\it Mooney and Brocher} (1987) high reflectivity lower crustal model. Moreover, reflection profiles from {\sc Lithoprobe} transects (Hammer et al., 2010) frequently display significant reflected energy through the crust with some transects including the Western Superior transect and the Cassiar in the Western Cordillera displaying pronounced reflectivity within the lower crust. We reconcile the teleseismic and active source observations of transparent versus reflective lower crust by considering the scale of vertical heterogeneity to which the methods are sensitive. Teleseismic body waves include both direct and reflected conversions that can originate from layering with velocity gradients over scale lengths of the order of $\lambda/2$ and $\lambda/4$, respectively, where $\lambda$ is the {\it P}-wavelength (Bostock, 1999). For 1 Hz teleseismic waves, crustal layering with scale lengths of $\approx$ 800-2000 m should be resolvable. Higher frequency active source data (10-40 Hz) employing {\it P}-wave sources are sensitive to finer scale vertical structure with scales of $\approx$ 75-300 m. We infer then that the vertical scales of lower crustal reflectivity are better represented by scale lengths under $\approx$ 800 m yielding a lower crustal structure that is relatively transparent to teleseismic waves but can yield strongly reflective signatures to near-vertical, active-source seismic profiling.  Some authors, for example Mayer et al. (1996) in their study of the Rhine Graben, have employed the term Conrad Discontinuity to refer to an interface or transition between transparent upper crust and reflective lower crust. It is possible in this context that the higher energy levels between 15 and 20 km on the 5th principal component in Figure 12, is a manifestation of such signals, but the lower energy levels ($<5\%$) in this mode would indicate that Conrad Discontinuity so-defined is at best weakly represented within the Canadian crust. This finding is supported by crustal models characterized by a first order continuously increasing velocity profile such as the gradual transition from a more silicic uppercrust to a more mafic lower crust in shields and platforms observed by {\it Meissner} (1986). It is also supported by the lack of evidence for a consistent mid-crustal reflection boundary in lithoprobe data (Hammer et al., 2010). The increased transparency of the lower crust would appear to be better defined and relate to changes in rheology. Studies of crustal strength (Jackson, 2002), deformation (Burov and Watts, 2006; Meissner et al., 2006) and the observed $\sim$ 100 m lower crustal lamallae reported by Mooney and Brocher (1987) as well as the widely noted reduced seismicity of the lower crust indicate changes would support this contention; though see (Deichmann, 1991; Handy and Brun, 2004; Simpson, 1999) for competing evidence.
 
-Mean crustal composition is another important parameter characterizing continental crust though it is important to distinguish it from actual lithological or mineralogical state of the crust. It serves as a representative, average quantity that affords constraint on crustal structure and evolution in space and time. Early attempts at estimating mean crustal composition were largely performed through extrapolations based on the surface sampling of upper crustal rocks (Rudnick and Gao, 2003). After the plate-tectonic revolution, {\it Taylor} (1967, 1977), proposed the `island arc' or `andesite' model which posited that bulk crustal chemical composition is equivalent to the average convergent-margin andesite. Several problems with this theory subsequently emerged; for example, average surficial island arc composition is more basaltic than andesitic and any crustal growth via basaltic basal accretion will only serve to magnify this compositional contrast. Hence this model cannot account for the intermediate composition of post-Archean crust. Recognition of these shortcomings led to the analysis of data from crustal refraction seismic surveys to interrogate middle and lower crustal levels and place constraints on their composition (Christensen and Mooney, 1995; Rudnick and Fountain, 1995). Unlike these latter studies, which also utilize surface and exposed upper-crust geological information, the present work adopts a bulk crustal seismic analysis along the lines of {\it Smithson et al.} (1981) although, whereas {\it Smithson et al.} utilizes mean crustal $V_P$, this study combines $V_P/V_S$ from teleseismic measurements with constraints on $V_P$ from previous active source studies as presented in the Crust 1.0 model.
+Mean crustal composition is another important parameter characterizing continental crust though it is important to distinguish it from actual lithological or mineralogical state of the crust. It serves as a representative, average quantity that affords constraint on crustal structure and evolution in space and time. Early attempts at estimating mean crustal composition were largely performed through extrapolations based on the surface sampling of upper crustal rocks (Rudnick and Gao, 2003). After the plate-tectonic revolution, Taylor (1967, 1977), proposed the `island arc' or `andesite' model which posited that bulk crustal chemical composition is equivalent to the average convergent-margin andesite. Several problems with this theory subsequently emerged; for example, average surficial island arc composition is more basaltic than andesitic and any crustal growth via basaltic basal accretion will only serve to magnify this compositional contrast. Hence this model cannot account for the intermediate composition of post-Archean crust. Recognition of these shortcomings led to the analysis of data from crustal refraction seismic surveys to interrogate middle and lower crustal levels and place constraints on their composition (Christensen and Mooney, 1995; Rudnick and Fountain, 1995). Unlike these latter studies, which also utilize surface and exposed upper-crust geological information, the present work adopts a bulk crustal seismic analysis along the lines of {\it Smithson et al.} (1981) although, whereas {\it Smithson et al.} utilizes mean crustal $V_P$, this study combines $V_P/V_S$ from teleseismic measurements with constraints on $V_P$ from previous active source studies as presented in the Crust 1.0 model.
 
 \begin{figure}
   \centering
@@ -284,7 +307,7 @@ Seismic velocity estimates for Canada and the Canadian Shield fall, to a first-o
 
 
 \begin{table}
-  \begin{tabular}{ p{1.4cm} p{1.4cm} p{1.4cm} p{1.4cm} p{1.4cm} p{1.4cm} p{1.4cm}}
+  \begin{tabular}{ p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
     \hline
     Oxide, wt\% & Pakiser and Robinson (1966) & Smithson (1978) & Christensen and Mooney (1995) & Rudnick and Gao (2003) & This Work: Canada & This Work: Canadian Shield\\
     \hline
@@ -313,7 +336,7 @@ Seismic velocity estimates for Canada and the Canadian Shield fall, to a first-o
   \label{fig:composition}
 \end{figure}
 
-Since our average seismic velocity estimates for the entire Canadian crust lie on a line connecting diorite with granite gneiss (Figure \ref{fig:lith}), we may estimate bulk crustal composition in proportion to these lithologies as 51\% diorite and 49\% granite. A similar estimate for the Canadian Shield is 68\% diorite and 32\% granite. This lithological ratio is applied to the chemical compositions of diorite and granite using chemical averages calculated from 141 diorite and 197 granite samples compiled by {\it Le Maitre} (1976) to produce an estimate of bulk crustal composition. The resulting chemical breakdown is provided in table \ref{table:composition} along with selected previous estimates from global crustal studies. Our analysis reveals a crust with marginally higher average $SiO_2$ composition and lower $MgO$ content than these previous studies. Figure \ref{fig:composition} displays the major crustal oxide contributions from the data in table \ref{table:composition} normalized to our average Canadian crustal composition. The gray-shaded region indicates the $\pm 30\%$ range from our reference average Canadian crustal model.  Also included in this figure is our average crustal composition estimate for the Canadian Shield. Its values closely track the global crustal estimates of {\it Christensen \& Mooney} (1995) and {\it Smithson} (1978). These data imply that the extensive platform and orogenic regions of Canada skew the average composition away from the global estimates of previous studies through incorporation of a higher proportion of granite gneiss. In contrast, the Canadian Shield crust aligns more closely with these previous global estimates.
+Since our average seismic velocity estimates for the entire Canadian crust lie on a line connecting diorite with granite gneiss (Figure \ref{fig:lith}), we may estimate bulk crustal composition in proportion to these lithologies as 51\% diorite and 49\% granite. A similar estimate for the Canadian Shield is 68\% diorite and 32\% granite. This lithological ratio is applied to the chemical compositions of diorite and granite using chemical averages calculated from 141 diorite and 197 granite samples compiled by {\it Le Maitre} (1976) to produce an estimate of bulk crustal composition. The resulting chemical breakdown is provided in table \ref{table:composition} along with selected previous estimates from global crustal studies. Our analysis reveals a crust with marginally higher average $SiO_2$ composition and lower $MgO$ content than these previous studies. Figure \ref{fig:composition} displays the major crustal oxide contributions from the data in table \ref{table:composition} normalized to our average Canadian crustal composition. The gray-shaded region indicates the $\pm 30\%$ range from our reference average Canadian crustal model.  Also included in this figure is our average crustal composition estimate for the Canadian Shield. Its values closely track the global crustal estimates of {\it Christensen and Mooney} (1995) and {\it Smithson} (1978). These data imply that the extensive platform and orogenic regions of Canada skew the average composition away from the global estimates of previous studies through incorporation of a higher proportion of granite gneiss. In contrast, the Canadian Shield crust aligns more closely with these previous global estimates.
 
 Other researchers have employed Poisson's ratio (Zandt and Ammon, 1995) alone as an indicator of bulk crustal composition, and crustal thickness and {\it P}-wave velocity (Durrheim and Mooney, 1991) to constrain models of crustal formation. Zandt and Ammon (1995) report high $V_P/V_S$ values for Archean Shields and concluded that no systematic difference between Archean and Proterozoic crust exists. Their average, $V_P/V_S=1.84$, is much higher than our weighted average for the Canadian Shield of 1.74. These authors also report a low $V_P/V_S$ value for Cenozoic-Mesozoic crust (1.73) compared to the corresponding value for our data of 1.77. They interpret these high values for older crust and low values for younger crust as favouring either of two limiting models. In the uniformitarian model, a delamination type process operates to remove mafic lower crust during continental collisions and is subsequently followed by a stabilizing process involving basaltic underplating. This model implies that younger crust has yet to complete the full crustal genesis cycle. In their second model, Precambrian cratons evolve through unique processes and younger orogens involve the recycling and reworking of existing material with little net crustal growth.
 
@@ -324,110 +347,109 @@ In summary, the teleseismic dataset employed in this study has provided an oppor
 %% ------------------------------------------------------------------------ %%
 
 
-\section{References}
+\begin{thebibliography}{1}
 
-Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21183-21200.
+\bibitem{} Bostock, M. G. (1998), Mantle stratigraphy and the evolution of the Slave province, J. Geophys. Res., 103, 21183-21200.
 
-Bostock, M. G. (1999), Seismic waves converted from velocity gradient anomalies in the Earth’s upper mantle, Geophys. J. Int., 138, 747-756.
+\bibitem{} Bostock, M. G. (1999), Seismic waves converted from velocity gradient anomalies in the Earth’s upper mantle, Geophys. J. Int., 138, 747-756.
 
-Bostock, M. G., D. W. Eaton, D. B. Snyder (2010), Teleseismic studies of the Canadian landmass: Lithoprobe and its legacy, Can. J. Earth Sci., 47, 445-461.
+\bibitem{} Bostock, M. G., D. W. Eaton, D. B. Snyder (2010), Teleseismic studies of the Canadian landmass: Lithoprobe and its legacy, Can. J. Earth Sci., 47, 445-461.
 
-Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
+\bibitem{} Bostock, M. G., M. R. Kumar (2010), Bias in seismic estimates of crustal properties, J. Geophys. Int., 182, 403-407.
 
-Burov, E. B., A. B. Watts (2006), The long-term strength of continental lithosphere: jelly sandwich or crème brûlée?, GSA today, 16, 4.
+\bibitem{} Burov, E. B., A. B. Watts (2006), The long-term strength of continental lithosphere: jelly sandwich or crème brûlée?, GSA today, 16, 4.
 
-Christensen, N. I. (1996), Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156.
+\bibitem{} Christensen, N. I. (1996), Poisson's ratio and crustal seismology, J. Geophys. Res., 101, 3139–3156.
 
-Christensen, N. I., W. D. Mooney (1995), Seismic velocity structure and composition of the continental crust: A global view, J. Geophys. Res., 100, 9761-9788.
+\bibitem{} Christensen, N. I., W. D. Mooney (1995), Seismic velocity structure and composition of the continental crust: A global view, J. Geophys. Res., 100, 9761-9788.
 
-Clowes, R. M., F. Cook, Z. Hajnal, J. Hall, J. Lewry, S. Lucas, R. Wardle (1999), Canada's Lithoprobe Project (collaborative, multidisciplinary geoscience research leads to new understanding of continental evolution), Episodes, 22, 3-20.
+\bibitem{} Clowes, R. M., F. Cook, Z. Hajnal, J. Hall, J. Lewry, S. Lucas, R. Wardle (1999), Canada's Lithoprobe Project (collaborative, multidisciplinary geoscience research leads to new understanding of continental evolution), Episodes, 22, 3-20.
 
-Clowes, R. M., C. A. Zelt, J. R. Amor, R. M. Ellis (1995), Lithospheric structure in the southern Canadian Cordillera from a network of seismic refraction lines, Can. J. Earth Sci., 32, 1485-1513.
+\bibitem{} Clowes, R. M., C. A. Zelt, J. R. Amor, R. M. Ellis (1995), Lithospheric structure in the southern Canadian Cordillera from a network of seismic refraction lines, Can. J. Earth Sci., 32, 1485-1513.
 
-Conrad, V. (1925), Laufzeitkurven des Tauernbebens vom 28. November 1923, Mitt. Erdb. Komm. Wiener Akad. Wiss., 59, 1–23.
+\bibitem{} Conrad, V. (1925), Laufzeitkurven des Tauernbebens vom 28. November 1923, Mitt. Erdb. Komm. Wiener Akad. Wiss., 59, 1–23.
 
-Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New insights into the lithosphere beneath the Superior Province from Rayleigh wave dispersion and receiver function analysis, J. Geophys. Int., 169, 1043-1068.
+\bibitem{} Darbyshire, F. A., D. W. Eaton, A. W. Frederiksen, E. Leila (2006), New insights into the lithosphere beneath the Superior Province from Rayleigh wave dispersion and receiver function analysis, J. Geophys. Int., 169, 1043-1068.
 
-Deichmann, N. (1992), Structural and rheological implications of lower-crustal earthquakes below northern Switzerland, Physics of the earth and planetary interiors, 69, 270-280.
+\bibitem{} Deichmann, N. (1992), Structural and rheological implications of lower-crustal earthquakes below northern Switzerland, Physics of the earth and planetary interiors, 69, 270-280.
 
-Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
+\bibitem{} Durrheim, R. J., W. D. Mooney (1991), Archean and Proterozoic crustal evolution, Geology, 19, 606-609.
 
-Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic receiver functions, Tectonophysics, 420, 223-238.
+\bibitem{} Eaton, D. W., S. Dineva, R. Mereu (2005), Crustal thickness and Vp/Vs variations in the Grenville orogen (Ontario, Canada) from analysis of teleseismic receiver functions, Tectonophysics, 420, 223-238.
 
-Efron, B., R. Tibshirani (1986), Bootstrap methods for standard errors, confidence intervals, and other measures of statistical accuracy, Statistical Science, 1, 54-75.
+\bibitem{} Efron, B., R. Tibshirani (1986), Bootstrap methods for standard errors, confidence intervals, and other measures of statistical accuracy, Statistical Science, 1, 54-75.
 
-Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
+\bibitem{} Golub, G. H., M. Heath, G. Wahba (1979), Generalized cross-validation as a method for choosing a good ridge parameter, Technometrics, 21, 215-223.
 
-Hammer, P. T., R. M. Clowes, F. A. Cook, A. J. van der Velden, K. Vasudevan (2010), The Lithoprobe trans-continental lithospheric cross sections: imaging the internal structure of the North American continent, Can. J. of Earth Sciences, 47, 821-857.
+\bibitem{} Hammer, P. T., R. M. Clowes, F. A. Cook, A. J. van der Velden, K. Vasudevan (2010), The Lithoprobe trans-continental lithospheric cross sections: imaging the internal structure of the North American continent, Can. J. of Earth Sciences, 47, 821-857.
 
-Hammer, P. T., R. M. Clowes (2011), The big picture: a lithospheric cross section of the North American continent, GSA Today, 21, 4-9.
+\bibitem{} Hammer, P. T., R. M. Clowes (2011), The big picture: a lithospheric cross section of the North American continent, GSA Today, 21, 4-9.
 
-Handy, M. R.,  J. P. Brun (2004), Seismicity, structure and strength of the continental lithosphere, Earth and Planetary Science Letters, 223, 427-441.
+\bibitem{} Handy, M. R.,  J. P. Brun (2004), Seismicity, structure and strength of the continental lithosphere, Earth and Planetary Science Letters, 223, 427-441.
 
-Hoffman, P. F. (1998), United plates of America, the birth of a craton: Early Proterozoic Assembly and Growth of Laurentia, Ann. Rev. Earth Planet, 16, 543-603.
+\bibitem{} Hoffman, P. F. (1998), United plates of America, the birth of a craton: Early Proterozoic Assembly and Growth of Laurentia, Ann. Rev. Earth Planet, 16, 543-603.
 
-Ito, K. (1999), Seismogenic layer, reflective lower crust, surface heat flow and large inland earthquakes, Tectonophysics, 306, 423-433.
+\bibitem{} Ito, K. (1999), Seismogenic layer, reflective lower crust, surface heat flow and large inland earthquakes, Tectonophysics, 306, 423-433.
 
-Jackson, J. (2002), Strength of the continental lithosphere: Time to abandon the jelly sandwich?, GSA today, 12, 4-9.
+\bibitem{} Jackson, J. (2002), Strength of the continental lithosphere: Time to abandon the jelly sandwich?, GSA today, 12, 4-9.
 
-Jeffreys, H. (1926), On compressional waves in two superposed layers, Proc. Cambridge Philos. Soc., 23, 472–481.
+\bibitem{} Jeffreys, H. (1926), On compressional waves in two superposed layers, Proc. Cambridge Philos. Soc., 23, 472–481.
 
-Kennet, B. L. N. (1991), The removal of free surface interactions from three-component seismograms, J. Geophys. Int., 104, 153-163.
+\bibitem{} Kennet, B. L. N. (1991), The removal of free surface interactions from three-component seismograms, J. Geophys. Int., 104, 153-163.
 
-Kusky, T. M. (1989), Accretion of the Archean Slave province Geology, 17, 63-67.
+\bibitem{} Kusky, T. M. (1989), Accretion of the Archean Slave province Geology, 17, 63-67.
 
-Langston, C. A. (1979), Structure under Mount Rainier, Washington, inferred from teleseismic body waves, J. Geophys. Res., 84(B9), 4749–4762, doi:10.1029/JB084iB09p04749.
+\bibitem{} Langston, C. A. (1979), Structure under Mount Rainier, Washington, inferred from teleseismic body waves, J. Geophys. Res., 84(B9), 4749–4762, doi:10.1029/JB084iB09p04749.
 
-Laske, G., G. Masters, Z. Ma, M. Pasyanos (2013), Update on CRUST1.0 - A 1-degree Global Model of Earth's Crust, Geophys. Res. Abstracts, 15, Abstract EGU2013-2658.
+\bibitem{} Laske, G., G. Masters, Z. Ma, M. Pasyanos (2013), Update on CRUST1.0 - A 1-degree Global Model of Earth's Crust, Geophys. Res. Abstracts, 15, Abstract EGU2013-2658.
 
-Le Maitre, R. W. (1976), The chemical variability of some common igneous rocks, Journal of Petrology, 17, 589-637.
+\bibitem{} Le Maitre, R. W. (1976), The chemical variability of some common igneous rocks, Journal of Petrology, 17, 589-637.
 
-Litak, R. K., L. D. Brown (1989), A modern perspective on the Conrad discontinuity, Eos, 70, 713-725.
+\bibitem{} Litak, R. K., L. D. Brown (1989), A modern perspective on the Conrad discontinuity, Eos, 70, 713-725.
 
-Mayer, G., P. M. Mai, T. Plenefisch, H. Echtler, E. Lüschen, V. Wehrle, B. Müller, K-P. Bonjer, C. Prodehl, K. Fuchs (1997), The deep crust of the Southern Rhine Graben: reflectivity and seismicity as images of dynamic processes, Tectonophysics, 275, 15-40.
+\bibitem{} Mayer, G., P. M. Mai, T. Plenefisch, H. Echtler, E. Lüschen, V. Wehrle, B. Müller, K-P. Bonjer, C. Prodehl, K. Fuchs (1997), The deep crust of the Southern Rhine Graben: reflectivity and seismicity as images of dynamic processes, Tectonophysics, 275, 15-40.
 
-Meissner, R., (Ed.) (1986) {\it The Continental Crust: A Geophysical Approach}, 426, Academic, San Diego, Calif.
+\bibitem{} Meissner, R., (Ed.) (1986) {\it The Continental Crust: A Geophysical Approach}, 426, Academic, San Diego, Calif.
 
-Meissner, R., W. Rabbel, H. Kern (2006), Seismic lamination and anisotropy of the lower continental crust, Tectonophysics, 416, 81-99.
+\bibitem{} Meissner, R., W. Rabbel, H. Kern (2006), Seismic lamination and anisotropy of the lower continental crust, Tectonophysics, 416, 81-99.
 
-Mereu, R. F., S. B. Ojo (1981), The scattering of seismic waves through a crust and upper mantle with random lateral and vertical inhomogeneities, Physics of the Earth and Planetary Interiors, 26, 233-240.
+\bibitem{} Mereu, R. F., S. B. Ojo (1981), The scattering of seismic waves through a crust and upper mantle with random lateral and vertical inhomogeneities, Physics of the Earth and Planetary Interiors, 26, 233-240.
 
-Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
+\bibitem{} Mooney, W. D. (2012), Personal communication. Compiled GSC active source data for the Canada.
 
-Mooney, W. D., T. M. Brocher (1987) Coincident seismic reflection/refraction studies of the continental lithosphere: A global review, Rev. Geophys., 25, 723 – 742.
+\bibitem{} Mooney, W. D., T. M. Brocher (1987) Coincident seismic reflection/refraction studies of the continental lithosphere: A global review, Rev. Geophys., 25, 723 – 742.
 
-Percival, J. A., G. F. West (1994), The Kapuskasing uplift: a geological and geophysical synthesis, Can. J. of Earth Sciences, 31, 1256-1286.
+\bibitem{} Percival, J. A., G. F. West (1994), The Kapuskasing uplift: a geological and geophysical synthesis, Can. J. of Earth Sciences, 31, 1256-1286.
 
-Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002), LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
+\bibitem{} Perry, H. K. C., D. W. S. Eaton, A. M. Forte (2002), LITH5.0: a revised crustal model for Canada based on Lithoprobe results,  J. Geophys. Int., 150, 285-294.
 
-Rivers, T. (2008) Assembly and preservation of lower, mid, and upper orogenic crust in the Grenville Province: Implications for the evolution of large hot long-duration orogens, Precambrian Research, 167, 237–259.
+\bibitem{} Rivers, T. (2008) Assembly and preservation of lower, mid, and upper orogenic crust in the Grenville Province: Implications for the evolution of large hot long-duration orogens, Precambrian Research, 167, 237–259.
 
-Rudnick, R. L. (1995), Making Continental Crust, Nature, 378, 571-578.
+\bibitem{} Rudnick, R. L. (1995), Making Continental Crust, Nature, 378, 571-578.
 
-Rudnick, R. L., D. M. Fountain (1995), Nature and composition of the continental crust: A lower crustal perspective, Rev. Geophys., 33(3), 267–309, doi:10.1029/95RG01302.
+\bibitem{} Rudnick, R. L., D. M. Fountain (1995), Nature and composition of the continental crust: A lower crustal perspective, Rev. Geophys., 33(3), 267–309, doi:10.1029/95RG01302.
 
-Rudnick, R. L., S. Gao (2003), Composition of the Continental Crust, Treatise on Geochem., 3, 1-64.
+\bibitem{} Rudnick, R. L., S. Gao (2003), Composition of the Continental Crust, Treatise on Geochem., 3, 1-64.
 
-Simpson, F. (1999), Stress and seismicity in the lower continental crust: A challenge to simple ductility and implications for electrical conductivity mechanisms. Surveys in Geophysics, 20, 201-227.
+\bibitem{} Simpson, F. (1999), Stress and seismicity in the lower continental crust: A challenge to simple ductility and implications for electrical conductivity mechanisms. Surveys in Geophysics, 20, 201-227.
 
-Smithson, S. B. (1978) Modeling continental crust-structural and chemical constraints, Geophys. Res. Lett. 5(9), 749-775.
+\bibitem{} Smithson, S. B. (1978) Modeling continental crust-structural and chemical constraints, Geophys. Res. Lett. 5(9), 749-775.
 
-Smithson, S. B., R. A. Johnson, Y. K. Wong (1981), Mean crustal velocity: a critical parameter for interpreting crustal structure and crustal growth, Earth and Planetary Science Letters, 53, 323-332.
+\bibitem{} Smithson, S. B., R. A. Johnson, Y. K. Wong (1981), Mean crustal velocity: a critical parameter for interpreting crustal structure and crustal growth, Earth and Planetary Science Letters, 53, 323-332.
 
-Taylor, S. R. (1967), The origin and growth of continents, Tectonophysics, 4, 17–34.
+\bibitem{} Taylor, S. R. (1967), The origin and growth of continents, Tectonophysics, 4, 17–34.
 
-Taylor, S. R. (1977), Island arc models and the composition of the continental crust, in Island Arcs, Deep Sea Trenches and Back-Arc Basins, Maurice Ewing Ser., vol. 1, edited by M. Talwani and W. C. Pitman III, pp. 325–335, AGU, Washington, D. C., doi:10.1029/ME001p0325.
+\bibitem{} Taylor, S. R. (1977), Island arc models and the composition of the continental crust, in Island Arcs, Deep Sea Trenches and Back-Arc Basins, Maurice Ewing Ser., vol. 1, edited by M. Talwani and W. C. Pitman III, pp. 325–335, AGU, Washington, D. C., doi:10.1029/ME001p0325.
 
-Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, 297, 655–666.
+\bibitem{} Thompson, D. A., I. D. Bastow, G. Helffrich, J.-M. Kendall, J. Wookey, D. B. Snyder, D. W. Eaton (2010), Precambrian crustal evolution: Seismic constraints from the Canadian Shield, Earth and Planetary Science Letters, 297, 655–666.
 
-Thurston, P. C., H. R. Williams, R. H. Sutcliffe, G. M. Scott (Eds.) (1991), Geology of Ontario, Ontario Geological Survey Special, 4.
+\bibitem{} Thurston, P. C., H. R. Williams, R. H. Sutcliffe, G. M. Scott (Eds.) (1991), Geology of Ontario, Ontario Geological Survey Special, 4.
 
-Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
+\bibitem{} Zhu, L., H. Kanamori (2000), Moho depth variation in Southern California from teleseismic receiver functions, J. Geophys. Res., 105, 2969-2980.
 
-Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
+\bibitem{} Zandt, G., C. J. Ammon (1995), Continental crust composition constrained by measurements of crustal Poisson's ratio, Nature, 374, 152-154.
 
-
-
+\end{thebibliography}
 
 \end{document}
 

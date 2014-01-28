@@ -336,11 +336,11 @@ if __name__  == "__main__":
     plt.figure()
 
     # plt.plot(x, rf/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Rudnick and Fountain")
-    plt.plot(x, pr/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Pakiser and Robinson")
-    plt.plot(x, sm/pb, "-^", ms = 12, c = "gray", mfc = "white", label = "Smithson")
-    plt.plot(x, cm/pb, "-o", ms = 12, c = "gray", mfc = "white", label = "Christensen and Mooney")
-    plt.plot(x, rg/pb, "-D", ms = 12, c = "gray", mfc = "gray", label = "Rudnick and Gao")
-    plt.plot(x, cs/pb, "-s", ms = 12, c = "gray", mfc = "gray", label = "This study, Can. Shield")
+    plt.plot(x, pr/pb, "-o", ms = 12, c = "gray", mfc = "black", label = "Pakiser and Robinson (1966)")
+    plt.plot(x, sm/pb, "-^", ms = 12, c = "gray", mfc = "white", label = "Smithson (1978)")
+    plt.plot(x, cm/pb, "-o", ms = 12, c = "gray", mfc = "white", label = "Christensen and Mooney (1995)")
+    plt.plot(x, rg/pb, "-D", ms = 12, c = "gray", mfc = "gray", label = "Rudnick and Gao (1995)")
+    plt.plot(x, cs/pb, "-s", ms = 12, c = "gray", mfc = "gray", label = "This study, Canadian Shield")
 
     plt.xticks(x, labels, size = 14)
     plt.tick_params(
