@@ -1,0 +1,4754 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass ubcthesis
+\begin_preamble
+%%
+%% This is file `ubcsample.tex',
+%% generated with the docstrip utility.
+%
+% The original source files were:
+%
+% ubcthesis.dtx  (with options: `ubcsampletex')
+%% 
+%% This file was generated from the ubcthesis package.
+%% --------------------------------------------------------------
+%% 
+%% Copyright (C) 2001
+%% Michael McNeil Forbes
+%% mforbes@alum.mit.edu
+%% 
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.2
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% LaTeX Project Public License for more details.
+%% 
+%% This program consists of the files ubcthesis.dtx, ubcthesis.ins, and
+%% the sample figures fig.eps and fig.fig.
+%% 
+%% This file may be modified and used as a base for your thesis without
+%% including the licence agreement as long as the content (i.e. textual
+%% body) of the file is completely rewritten. You must, however, change
+%% the name of the file.
+%% 
+%% This file may only be distributed together with a copy of this
+%% program. You may, however, distribute this program without generated
+%% files such as this one.
+%% 
+
+% This Sample thesis requires \LaTeX2e
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesFile{ubcsample.tex}[2010/06/13 v1.66 ^^J
+ University of British Columbia Sample Thesis]
+% This is the \documentclass[]{} command.  The manditory argument
+% specifies the "flavour" of thesis (ubcthesis for UBC).  The
+% optional arguments (in []) specify options that affect how the
+% thesis is displayed.  Please see the ubcthesis documentation for
+% details about the options.
+
+%
+% To compile this sample thesis, issue the following commands:
+% latex ubcsample
+% bibtex ubcsample
+% latex ubcsample
+% latex ubcsample
+% latex ubcsample
+%
+% To view use xdvi (on unix systems):
+% xdvi ubcsample.dvi
+%
+% To make a postscript file, use dvips:
+% dvips -o ubcsample.ps ubcsample.dvi
+%
+% To view the postscript file, use ghostview or gv (on unix systems):
+% gv ubcsample.ps
+%
+%************************************************
+% Optional packages.
+%
+% The use of these packages is optional, but they provide various
+% tools for more flexible formating.  The sample thesis uses these,
+% but if you remove the example code, you should be able to exclude
+% these packages.  Only standard packages have been described here;
+% they should be installed with any complete LaTeX instalation, but
+% if not, you can find them at the Comprehensive TeX Archive Network
+% (CTAN): http://www.ctan.org/
+%
+
+%******** afterpage ***************************
+% This package allows you to issue commands at the end of the current
+% page.  A good use for this is to use the command
+% \afterpage{\clearpage} right after a figure.  This will cause the
+% figure to be inserted on the page following the current one (or on
+% the current page if it will fit) but will not break the page in the
+% middle.
+\usepackage{afterpage}
+
+%******** float *********************************
+% This package allows you to customize the style of
+% "floats"---floating objects such as figures and tables.  In
+% addition, it allows you to define additional floating objects which
+% may be included in a list similar to that produces by \listoftables
+% and \listoffigures.  Common uses include introducing floats for
+% programs and other code bits in Compute Science and Chemical Schema.
+\usepackage{float}
+
+%******** tocloft *******************************
+% This package allows you to customize and define custom lists such
+% as a list of programs or Chemical Scheme.  Note: if you use the
+% subfigure package, you must specify that you do as an option here.
+% The title option uses the default formatting.  We do not use this
+% here as the default formatting is acceptable.  Use the float
+% package instead unless you need the extra formatting control
+% provided by tocloft.
+%\usepackage[subfigure, titles]{tocloft}
+
+%******** alltt *********************************
+% The alltt package allows you to include files and have them
+% formatted in a verbatim fashion.  This is useful for including
+% source code from an additional file.
+%\usepackage{alltt}
+
+%******** listings ******************************
+% The listings package may be used to include chunks of source code
+% and has facilities for pretty-printing many languages.
+%\usepackage{listings}
+
+%******** longtable *****************************
+% The longtable package allows you to define tables that span
+% multiple pages.
+\usepackage{longtable}
+
+%******** graphics and graphicx *****************
+% This allows you to include encapsulated postscript files.  If you
+% don't have this, comment the \includegraphics{} line following the
+% comment "%includegraphics" later in this file.
+
+
+%******** subfigure *****************************
+% The subfigure package allows you to include multiple figures and
+% captions within a single figure environment.
+%\usepackage{subfigure}
+
+%******** here **********************************
+% The here package gives you more control over the placement of
+% figures and tables.  In particular, you can specify the placement
+% "H" which means "Put the figure here" rather than [h] which means
+% "I would suggest that you put the figure here if you think it looks
+% good."
+%\usepackage{here}
+
+%******** pdflscape ********************************
+% This allows you to include landscape layout pages by using the
+% |landscape| environment.  The use of |pdflscape| is preferred over
+% the standard |lscape| package because it automatically rotates the
+% page in the pdf file for easier reading.  (Thanks to Joseph Shea
+% for pointing this out.)
+\usepackage{pdflscape}
+
+%******** natbib ********************************
+% This is a very nice package for bibliographies.  It includes options
+% for sorting and compressing bibliographic entries.
+
+
+%******** psfrag ******************************
+% This allows you to replace text in postscript pictures with formated
+% latex text.  This allows you to use math in graph labels
+% etc. Uncomment the psfrag lines following the "%psfrag" comment
+% later in this file if you don't have this package.  The replacements
+% will only be visible in the final postscript file: they will be
+% listed in the .dvi file but not performed.
+\usepackage{psfrag}
+
+%******** hyperref *****************************
+% Please read the manual:
+% http://www.tug.org/applications/hyperref/manual.html
+%
+% This adds hyperlinks to your document: with the right viewers (later
+% versions of xdvi, acrobat with pdftex, latex2html etc.) this will
+% make your equation, figure, citation references etc. hyperlinks so
+% that you can click on them.  Also, your table of contents will be
+% able to take you to the appropriate sections.  In the viewers that
+% support this, the links often appear with an underscore.  This
+% underscore will not appear in printed versions.
+%
+% Note: if you do not use the hypertex option, then the dvips driver
+% may be loaded by default.  This will cause the entries in the list
+% of figures and list of tables to be on a single line because dvips
+% does not deal with hyperlinks on broken lines properly.
+%
+% NOTE: HYPERREF is sensitive to the ORDER in which it is LOADED.
+% For example, it must be loaded AFTER natbib but BEFORE newly
+% defined float environments.  See the README file with the hyperref
+% for some help with this.  If you have some very obscure errors, try
+% first disabling hyperref.  If that fixes the problem, try various
+% orderings.
+%
+% Note also that there is a bug with versions before 2003/11/30
+% v6.74m that cause the float package to not function correctly.
+% Please ensure you have a current version of this package.  A
+% warning will be issued if you leave the date below but do not have
+% a current version installed.
+%
+% Some notes on options: depending on how you build your files, you
+% may need to choose the appropriate option (such as [pdftex]) for the
+% backend driver (see the hyperref manual for a complete list).  Also,
+% the default here is to make links from the page numbers in the table
+% of contents and lists of figures etc.  There are other options:
+% excluding the [linktocpage] option will make the entire text a
+% hyperref, but for some backends will prevent the text from wrapping
+% which can look terrible.  There is a [breaklinks=true] option that
+% will be set if the backend supports (dvipdfm for example supports
+% it but does not work with psfrag.)
+%
+% Finally, there are many options for choosing the colours of the
+% links.  These will be included by default in future versions but
+% you should probably consider changing some now for the electronic
+% version of your thesis.
+\usepackage[unicode=true,
+  linktocpage,
+  linkbordercolor={0.5 0.5 1},
+  citebordercolor={0.5 1 0.5},
+  linkcolor=blue]{hyperref}
+
+% If you would like to compile this sample thesis without the
+% hyperref package, then you will need to comment out the previous
+% \usepackage command and uncomment the following command which will
+% put the URL's in a typewriter font but not link them.
+%\newcommand\url[1]{\texttt{#1}}
+
+%******** setspace *******************************
+% The setspace package allows you to manually set the spacing of the
+% file.  UBC may require 1.5 spacing for microfilming of theses.  In
+% this case you may obtain this by including this package and issuing
+% one of the following commands:
+%\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+
+% These commands are optional.  The defaults are shown.  You only
+% need to include them if you need a different value
+\institution{The University Of British Columbia}
+
+% If you are at the Okanagan campus, then you should specify these
+% instead.
+%\faculty{The College of Graduate Studies}
+%\institutionaddress{Okanagan}
+\faculty{The Faculty of Graduate Studies}
+\institutionaddress{Vancouver}
+
+% You can issue as many of these as you have...
+\previousdegree{B.Sc., The University of British Columbia, 1999}
+\previousdegree{M.Sc., The University of British Columbia, 2001}
+\previousdegree{Ph.D., Massachusetts Institute of Technology, 2005}
+
+% You can override the option setting here.
+% \degreetitle{Jack of All Trades}
+
+% These commands are required.
+\title{A Sample UBC Thesis in LyX}
+\subtitle{With a Subtitle}
+\author{Michael M$^{\rm c}$Neil Forbes}
+\copyrightyear{2000}
+\submitdate{\monthname\ \number\year} % The "\ " is required after
+                                      % \monthname to prevent the
+                                      % command from eating the space.
+\program{Physics}
+
+% These commands are presently not required for UBC theses as the
+% advisor's name and title are not presently required anywhere.
+%\advisor{Ariel R.~Zhitnitsky}
+%\advisortitle{Professor of Physics}
+
+% One might want to override the format of the section and chapter
+% numbers.  This shows you how to do it.  Note that the current
+% format is acceptable for submission to the FoGS: If you wish to modify
+% these, you should check with the FoGS explicity. prior to making
+% the modifications.
+\renewcommand{\thepart}{\Roman{part}}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\theparagraph}{\thesubsubsection.\arabic{paragraph}}
+\renewcommand{\thesubparagraph}{\theparagraph.\arabic{subparagraph}}
+
+
+
+
+% Here is an example of a "Program" environment defined with the
+% "float" package.  The list of programs will be stored in the file
+% ubcsample.lop and the numbering will start with the chapter
+% number.  The style will be "ruled".
+\floatstyle{ruled}
+\newfloat{Program}{htbp}{lop}[chapter]
+
+% Here is the start of the document.
+
+\end_preamble
+\options msc
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% This starts numbering in Roman numerals as required for the thesis
+\backslash
+frontmatter
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+The 
+\family typewriter
+genthesis.cls
+\family default
+ LaTeX class file and accompanying ddocuments, such as this sample thesis,
+ are distributed in the hope that it will be useful but without any warranty
+ (without even the implied warranty of fitness for a particular purpose).
+ For a description of this file's purpose, and instructions on its use,
+ see below.
+\end_layout
+
+\begin_layout Abstract
+These files are distributed under the GPL which should be included here
+ in the future.
+ Please let the author know of any changes or improvements that should be
+ made.
+\end_layout
+
+\begin_layout Abstract
+Michael Forbes.
+ mforbes@physics.ubc.ca 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+January
+\begin_inset space ~
+\end_inset
+
+2010: The LyX version of these files is maintained by:
+\begin_inset Newline newline
+\end_inset
+
+Christopher Barrington-Leigh, cpbl
+\begin_inset Formula $\circledcirc$
+\end_inset
+
+wellbeing
+\begin_inset Formula $\cdot$
+\end_inset
+
+econ
+\begin_inset Formula $\cdot$
+\end_inset
+
+ubc
+\begin_inset Formula $\cdot$
+\end_inset
+
+ca
+\begin_inset Newline newline
+\end_inset
+
+Please send improvements and comments there.
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+listof{Program}{List of Programs}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Optional
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+This is the place to thank professional colleagues and people who have given
+ you the most help during the course of your graduate work.
+\end_layout
+
+\begin_layout Chapter
+Dedication
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Optional
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+The dedication is usually quite short, and is a personal rather than an
+ academic recognition.
+ The 
+\emph on
+Dedication
+\emph default
+ does not have to be titled, but it must appear in the table of contents.
+ If you want to skip the chapter title but still enter it into the Table
+ of Contents, use this command 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+chapter[Dedication]{}|
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Statement of Co-Authorship
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Manditory if thesis co-written
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+If any part of your thesis was co-written, you must include a Co-Authorship
+ statement which gives details of your contribution to the following areas:
+\end_layout
+
+\begin_layout Itemize
+identification and design of research program 
+\end_layout
+
+\begin_layout Itemize
+performing the research 
+\end_layout
+
+\begin_layout Itemize
+data analyses 
+\end_layout
+
+\begin_layout Itemize
+manuscript preparation 
+\end_layout
+
+\begin_layout Standard
+Note that this section is the last of the preliminary pages (with lowercase
+ Roman numeral page numbers).
+ It must be placed 
+\emph on
+before
+\emph default
+ the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+mainmatter|
+\end_layout
+
+\end_inset
+
+ command.
+ After that, Arabic numbered pages will begin.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Any other unusual prefactory material should come here before the
+\end_layout
+
+\begin_layout Plain Layout
+
+% main body.
+\end_layout
+
+\begin_layout Plain Layout
+
+% Now regular page numbering begins.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mainmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Parts are the largest structural units, but are optional.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+part{Thesis}
+\end_layout
+
+\begin_layout Standard
+
+% Chapters are the next main unit.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+This is a Chapter
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Sections are a sub-unit
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A Section
+\end_layout
+
+\begin_layout Standard
+Here is a section with some text.
+ Equations look like this 
+\begin_inset Formula $y=x$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Here is a footnote.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is an example of a second paragraph in a section so you can see how
+ much it is indented by.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Subsections follow
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+This is a Subsection
+\end_layout
+
+\begin_layout Standard
+Here is an example of a citation: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Forbes:2006ba"
+
+\end_inset
+
+.
+ The actual form of the citation is governed by the bibliographystyle.
+ These citations are maintained in a BIBTeX file 
+\family typewriter
+sample.bib
+\family default
+.
+ You could type these directly into the file.
+ For an example of the format to use look at the file 
+\family typewriter
+ubcsample.bbl
+\family default
+ after you compile this file.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Here is another footnote.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is an example of a second paragraph in a subsection so you can see
+ how much it is indented by.
+\end_layout
+
+\begin_layout Subsubsection
+This is a Subsubsection
+\end_layout
+
+\begin_layout Standard
+Here are some more citations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LL3:1977,Peccei:1989,Turner:1999"
+
+\end_inset
+
+.
+ If you use the 
+\family typewriter
+natbib
+\family default
+ package with the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb+sort&compress+
+\end_layout
+
+\end_inset
+
+ option, then the following citation will look the same as the first citation
+ in this section: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Turner:1999,Peccei:1989,LL3:1977"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This is an example of a second paragraph in a subsubsection so you can see
+ how much it is indented by.
+\end_layout
+
+\begin_layout Paragraph
+This is a Paragraph
+\end_layout
+
+\begin_layout Standard
+Paragraphs and subparagraphs are the smallest units of text.
+ There is no subsubsubsection etc.
+\end_layout
+
+\begin_layout Subparagraph
+This is a Subparagraph
+\end_layout
+
+\begin_layout Standard
+This is the last level of organisation.
+ If you need more than this, you should consider reorganizing your work
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+dots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+\mathrm{f}(x)=\int_{-\infty}^{\int_{-\infty}^{x}e^{-\frac{y^{2}}{2}}\mathrm{d}{y}}e^{-z^{2}}\mathrm{d}z\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to show you what a separate page would look like (i.e.
+ without a chapter heading) I must type some more text.
+ Thus I will babble a bit and keep babbling for at least one more page\SpecialChar \ldots{}
+ What
+ you should notice is that the chapter titles appear substantially lower
+ than the continuing text.
+ Babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble.
+\end_layout
+
+\begin_layout Standard
+Babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble babble babble babble babble babble babble babble babble
+ babble babble babble.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%optional [t, b or h];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features>
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="none" valignment="top" width="0" special="@{.}l">
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Phoenix 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$960
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calgary 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset OptArg
+status collapsed
+
+\begin_layout Plain Layout
+Here is the caption for this wonderful table\SpecialChar \ldots{}
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Table1"
+
+\end_inset
+
+ Here is the caption for this wonderful table.
+ It has not been centered and the positioning has been specified to be at
+ the top of the page.
+ Thus it appears above the babble rather than below where it is defined
+ in the source file.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Force a new page: without this, the quote would appear on the
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% previous page.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quote
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% It is centered
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\align center
+This is a small poem,
+\begin_inset Newline newline
+\end_inset
+
+ a little poem, a Haiku,
+\begin_inset Newline newline
+\end_inset
+
+ to show you how to.
+\begin_inset Newline newline
+\end_inset
+
+ ---Michael M
+\begin_inset Formula $^{{\rm c}}$
+\end_inset
+
+Neil Forbes.
+ 
+\end_layout
+
+\begin_layout Standard
+This small poem shows several features: 
+\end_layout
+
+\begin_layout Itemize
+The use of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|quote|
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|center|
+\end_layout
+
+\end_inset
+
+ environments.
+ 
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+newpage|
+\end_layout
+
+\end_inset
+
+ command has been used to force a page break.
+ (Sections do not usually start on a new page.) 
+\end_layout
+
+\begin_layout Itemize
+The pagestyle has been set to suppress the headers using the command 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+thispagestyle{plain}|
+\end_layout
+
+\end_inset
+
+.
+ Note that using 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+pagestyle{plain}|
+\end_layout
+
+\end_inset
+
+ would have affected all of the subsequent pages.
+ 
+\end_layout
+
+\begin_layout Section
+Programs
+\end_layout
+
+\begin_layout Standard
+Here we give an example of a new float as defined using the 
+\family typewriter
+float
+\family default
+ package.
+ In the preamble we have use the commands 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+floatstyle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ruled
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newfloat
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Program
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+htbp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+lop
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+[chapter] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+ This creates a 
+\begin_inset Quotes eld
+\end_inset
+
+Program
+\begin_inset Quotes erd
+\end_inset
+
+ environment that may be use for program fragments.
+ A sample 
+\family typewriter
+python
+\family default
+ program is show as Program
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prog:fib"
+
+\end_inset
+
+.
+ (Note that Python places a fairly restrictive limit on recursion so trying
+ to call this with a large 
+\begin_inset Formula $n$
+\end_inset
+
+ before building up the cache is likely to fail unless you increase the
+ recursion depth.) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Program}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{
+\backslash
+label{prog:fib}Python program that computes the  Fibonacci number using
+ memoization.
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+def fib(n,_cache={}):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n < 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n in _cache:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return _cache[n]
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        result = fib(n-1)+fib(n-2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        _cache[n] = result
+\end_layout
+
+\begin_layout Plain Layout
+
+        return result
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Program}
+\end_layout
+
+\end_inset
+
+Instead of using a 
+\family typewriter
+verbatim
+\family default
+ environment for your program chunks, you might like to 
+\family typewriter
+include
+\family default
+ them within an 
+\family typewriter
+alltt
+\family default
+ envrironment by including the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+usepackage{alltt}|
+\end_layout
+
+\end_inset
+
+ package (see page 187 of the LaTeX book).
+ Another useful package is the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+usepackage{listings}|
+\end_layout
+
+\end_inset
+
+ which can pretty-print many different types of source code.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Force a new page
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Here we provide a short optional argument to 
+\backslash
+chapter[]{}.
+  This
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% optional argument will appear in the table of contents.
+  For long
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% titles, one should use this to give a single-line entry to the
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% table of contents.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset OptArg
+status collapsed
+
+\begin_layout Plain Layout
+Another Chapter\SpecialChar \ldots{}
+
+\end_layout
+
+\end_inset
+
+Another Chapter with a Very Long Chapter-name that will Probably Cause Problems
+\end_layout
+
+\begin_layout Standard
+This chapter name is very long and does not display properly in the running
+ headers or in the table of contents.
+ To deal with this, we provide a shorter version of the title as the optional
+ argument to the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+chapter[]{}|
+\end_layout
+
+\end_inset
+
+ command.
+\end_layout
+
+\begin_layout Standard
+For example, this chapter's title and associated table of contents heading
+ and running header was created with
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+chapter[Another Chapter
+\backslash
+ldots]{Another Chapter with a Very Long|
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|Chapter-name that will Probably Cause Problems}|
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that, according to the thesis regulations, the heading included in
+ the table of contents must be a truncation of the actual heading.
+ 
+\end_layout
+
+\begin_layout Section
+Another Section
+\end_layout
+
+\begin_layout Standard
+Another bunch of text to demonstrate what this file does.
+ You might want a list for example:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Here is a footnote in a different chapter.
+ Footnotes should come after punctuation.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+An item in a list.
+ 
+\end_layout
+
+\begin_layout Itemize
+Another item in a list.
+ 
+\end_layout
+
+\begin_layout Section*
+An Unnumbered Section That is Not Included in the Table of Contents
+\end_layout
+
+\begin_layout Standard
+Here is an example of a figure environment.
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%psfrag: comment the following line if not using the psfrag package
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+psfrag{pie makes me happy!}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\pi$
+\end_inset
+
+ makes me happy!
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%includegraphics: comment the following if not using the graphicx package
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig.eps
+	width 40text%
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset OptArg
+status collapsed
+
+\begin_layout Plain Layout
+Happy Face: figure example.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:happy"
+
+\end_inset
+
+ This is a figure of a happy face with a 
+\family typewriter
+psfrag
+\family default
+ replacement.
+ The original figure (drawn in xfig and exported to a .eps file) has the
+ text 
+\begin_inset Quotes eld
+\end_inset
+
+pie makes me happy!
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The 
+\family typewriter
+psfrag
+\family default
+ package replaces this with 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\pi$
+\end_inset
+
+ makes me happy!
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Note that we have used the optional argument for the caption command so
+ that only a short version of this caption occurs in the list of figures.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Perhaps I should say that the example of a figure can be seen in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:happy"
+
+\end_inset
+
+.
+ Figure placement can be tricky with LaTeX
+\begin_inset space \space{}
+\end_inset
+
+because figures and tables are treated as 
+\begin_inset Quotes eld
+\end_inset
+
+floats
+\begin_inset Quotes erd
+\end_inset
+
+: text can flow around them, but if there is not enough space, they will
+ appear later.
+ To prevent figures from going too far, the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+afterpage{
+\backslash
+clearpage}|
+\end_layout
+
+\end_inset
+
+ command can be used.
+ This makes sure that the figure appears on the following page.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+clearpage|
+\end_layout
+
+\end_inset
+
+ forces a page break so that the figure can be placed, but without the the
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+afterpage{}|
+\end_layout
+
+\end_inset
+
+ command, the page would be broken too early (at the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+clearpage|
+\end_layout
+
+\end_inset
+
+ statement).
+ The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+afterpage{}|
+\end_layout
+
+\end_inset
+
+ command tells LaTeX to issue the command after the present page has been
+ rendered.
+\end_layout
+
+\begin_layout Standard
+Figures can make a document more enjoyable as demonstrated by Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:happy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Tables
+\end_layout
+
+\begin_layout Standard
+We have already included one table:
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table1"
+
+\end_inset
+
+.
+ Another table is plopped right here.
+ 
+\begin_inset Float table
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="l|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Singular
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="l|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Plural
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+English
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Gaeilge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+English
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Gaeilge
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st Person
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at me
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+agam
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at us
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+againn
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2nd Person
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at you
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+agat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at you
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+agaibh
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3rd Person
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at him
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+aige
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at them
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+acu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+at her
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+aici
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Table2"
+
+\end_inset
+
+ Another table.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Well, actually, as with Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:happy"
+
+\end_inset
+
+, the table does not necessarily appear right 
+\begin_inset Quotes eld
+\end_inset
+
+here
+\begin_inset Quotes erd
+\end_inset
+
+ because tables are also 
+\begin_inset Quotes eld
+\end_inset
+
+floats
+\begin_inset Quotes erd
+\end_inset
+
+.
+ LaTeX puts them where it can.
+ Becuase of this, one should refer to floats by their labels rather than
+ by their location.
+ This example is demonstrated by Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table2"
+
+\end_inset
+
+.
+ This one is pretty close, however.
+\end_layout
+
+\begin_layout Standard
+Another useful package is 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+usepackage{longtable}|
+\end_layout
+
+\end_inset
+
+ which provides the 
+\family typewriter
+longtable
+\family default
+ environment.
+ This is nice because it allows tables to span multiple pages.
+ Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:longtable"
+
+\end_inset
+
+ has been formatted this way.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="66" columns="3">
+<features islongtable="true">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:longtable"
+
+\end_inset
+
+Feasible triples for highly variable Grid
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endfirsthead="true">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="|c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Time (s)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Triple chosen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Other feasible triples
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endhead="true">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endhead="true">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" usebox="none" special="|c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Time (s)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" usebox="none" special="c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Triple chosen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" usebox="none" special="c|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Other feasible triples
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endfoot="true">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" usebox="none" special="|r|">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Continued on next page
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 11, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 10980), (1, 13, 8235), (2, 2, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+274 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 10980) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 8235), (2, 2, 0), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5490 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8235 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10980 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13725 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16470 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19215 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21960 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24705 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27450 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30195 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32940 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35685 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38430 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 10980) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41175 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43920 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 10980) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+46665 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49410 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52155 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54900 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57645 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60390 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63135 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65880 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+68625 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71370 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74115 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76860 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79605 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82350 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+85095 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+87840 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90585 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+93330 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96075 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+98820 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101565 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+104310 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+107055 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+109800 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+112545 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+115290 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+118035 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+120780 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123525 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+126270 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+129015 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+131760 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+134505 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+137250 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+139995 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+142740 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+145485 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+148230 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150975 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+153720 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 12, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+156465 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+159210 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+161955 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 16470) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+164700 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1, 13, 13725) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2, 2, 2745), (2, 3, 0), (3, 1, 0) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+An Unnumbered Subsection
+\end_layout
+
+\begin_layout Standard
+Note that if you use subsections or further divisions under an unnumbered
+ section, then you should make them unnumbered as well otherwise you will
+ end up with zeros in the section numbering.
+\end_layout
+
+\begin_layout Chapter
+Landscape Mode
+\end_layout
+
+\begin_layout Standard
+The landscape mode allows you to rotate a page through 90 degrees.
+ It is generally not a good idea to make the chapter heading landscape,
+ but it can be useful for long tables etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{landscape}
+\end_layout
+
+\end_inset
+
+ This text should appear rotated, allowing for formatting of very wide tables
+ etc.
+ Note that this might only work after you convert the 
+\family typewriter
+dvi
+\family default
+ file to a postscript (
+\family typewriter
+ps
+\family default
+) or 
+\family typewriter
+pdf
+\family default
+ file using 
+\family typewriter
+dvips
+\family default
+ or 
+\family typewriter
+dvipdf
+\family default
+ etc.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Standard
+This file is setup to use a bibtex file sample.bib and uses the
+\end_layout
+
+\begin_layout Standard
+plain style.
+  Other styles may be used depending on the conventions of your field of
+ study.
+ Note: the bibliography must come before the appendices.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "sample"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Standard
+Use this to reset the appendix counter.
+  Note that the FoGS requires that the word ``Appendices'' appear in the
+ table of contents either before each appendix lable or as a division denoting
+ the start of the appendices.
+  We take the latter option
+\end_layout
+
+\begin_layout Standard
+here.
+  This is ensured by making the 
+\backslash
+texttt{appendicestoc} option
+\end_layout
+
+\begin_layout Standard
+ a default option to the UBC thesis class.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not
+ empty
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+First Appendix
+\end_layout
+
+\begin_layout Standard
+Here you can have your appendices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+% Indices come here.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Chapter*
+Additional Information
+\end_layout
+
+\begin_layout Standard
+This chapter shows you how to include additional information in your thesis,
+ the removal of which will not affect the submission.
+ Such material should be removed before the thesis is actually submitted.
+\end_layout
+
+\begin_layout Standard
+First, the chapter is unnumbered and not included in the Table of Contents.
+ Second, it is the last section of the thesis, so its removal will not alter
+ any of the page numbering etc.
+ for the previous sections.
+ Do not include any floats, however, as these will appear in the initial
+ lists.
+\end_layout
+
+\begin_layout Standard
+The 
+\family typewriter
+ubcthesis
+\family default
+ LaTeX class has been designed to aid you in producing a thesis that conforms
+ to the requirements of The University of British Columbia Faculty of Graduate
+ Studies (FoGS).
+\end_layout
+
+\begin_layout Standard
+Proper use of this class and sample is highly recommended---and should produce
+ a well formatted document that meets the FoGS requirement.
+ Notwithstanding, complex theses may require additional formatting that
+ may conflict with some of the requirements.
+ We therefore 
+\emph on
+highly recommend
+\emph default
+ that you consult one of the FoGS staff for assistance and an assessment
+ of potential problems 
+\emph on
+before
+\emph default
+ starting final draft.
+\end_layout
+
+\begin_layout Standard
+While we have attemped to address most of the thesis formatting requirements
+ in these files, they do not constitute an official set of thesis requirements.
+ The official requirements are available at the following section of the
+ FoGS web site: 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features>
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+href{http://www.grad.ubc.ca/students/thesis/}{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+http://www.grad.ubc.ca/students/thesis/
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We recommend that you review these instructions carefully.
+\end_layout
+
+\end_body
+\end_document

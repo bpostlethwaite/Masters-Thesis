@@ -1,0 +1,11 @@
+#% Do not delete the line below; configure depends on this      
+#  \DeclareLaTeXClass[ubcthesis]{UBC Thesis}
+
+# Read the definitions from article.layout
+#Input report.layout
+# 2010 July: try following instead:
+
+Format 4
+Input stdclass.inc
+Input numreport.inc
+

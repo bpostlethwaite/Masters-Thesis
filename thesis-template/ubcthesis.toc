@@ -1,0 +1,161 @@
+\contentsline {part}{I\hspace {1em}User Guide: For those writing theses}{6}{part.1}
+\contentsline {section}{\numberline {1}Introduction}{6}{section.1}
+\contentsline {subsection}{\numberline {1.1}Disclaimer}{6}{subsection.1.1}
+\contentsline {paragraph}{UBC:}{6}{section*.2}
+\contentsline {paragraph}{MIT:}{6}{section*.3}
+\contentsline {subsection}{\numberline {1.2}Versions}{7}{subsection.1.2}
+\contentsline {paragraph}{Manual Version:}{7}{section*.4}
+\contentsline {paragraph}{HG Version:}{7}{section*.5}
+\contentsline {section}{\numberline {2}Getting Started}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Obtaining the \texttt {ubcthesis} package}{7}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Bleeding Edge Development Version}{8}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Files}{8}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Installing the \texttt {ubcthesis} package}{8}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Documentation}{9}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Generating the \texttt {.cls} class files}{9}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Sample Thesis}{10}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Using with LyX}{11}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Warning}{11}{subsubsection.2.3.1}
+\contentsline {section}{\numberline {3}Writing a Thesis}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}University Flavour}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Page Style}{12}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Headers and Footers}{12}{subsubsection.3.2.1}
+\contentsline {subsection}{\numberline {3.3}Class Options}{12}{subsection.3.3}
+\contentsline {section}{\numberline {4}Interface Guidelines}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Options}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Counters}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Lengths}{15}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Commands}{16}{subsection.4.4}
+\contentsline {section}{\numberline {5}Contributions}{17}{section.5}
+\contentsline {section}{\numberline {6}To Do (including bugs)}{18}{section.6}
+\contentsline {section}{\numberline {7}Acknowledgements}{20}{section.7}
+\contentsline {section}{\numberline {8}Description of the files}{21}{section.8}
+\contentsline {subsection}{\numberline {8.1}The \textsc {docstrip} modules}{22}{subsection.8.1}
+\contentsline {part}{II\hspace {1em}Documentation Driver: For thesis class maintainers}{23}{part.2}
+\contentsline {section}{\numberline {9}Identification}{23}{section.9}
+\contentsline {section}{\numberline {10}Document Class}{23}{section.10}
+\contentsline {section}{\numberline {11}End of Document}{24}{section.11}
+\contentsline {part}{III\hspace {1em}Sample Theses: For thesis class maintainers}{24}{part.3}
+\contentsline {section}{\numberline {12}Sample UBC Thesis}{24}{section.12}
+\contentsline {subsection}{\numberline {12.1}Identification}{25}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Document Structure}{25}{subsection.12.2}
+\contentsline {subsubsection}{\numberline {12.2.1}Chapter and section counter formats}{30}{subsubsection.12.2.1}
+\contentsline {subsection}{\numberline {12.3}End of Document}{41}{subsection.12.3}
+\contentsline {section}{\numberline {13}Sample MIT Thesis}{42}{section.13}
+\contentsline {subsection}{\numberline {13.1}Identification}{42}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Document Structure}{42}{subsection.13.2}
+\contentsline {subsubsection}{\numberline {13.2.1}Chapter and section counter formats}{45}{subsubsection.13.2.1}
+\contentsline {subsection}{\numberline {13.3}End of Document}{52}{subsection.13.3}
+\contentsline {section}{\numberline {14}Sample Bibliographic Database (BIBTeX)}{52}{section.14}
+\contentsline {subsection}{\numberline {14.1}Identification}{52}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Document Structure}{52}{subsection.14.2}
+\contentsline {part}{IV\hspace {1em}The \texttt {genthesis} Document Class: For thesis class maintainers}{56}{part.4}
+\contentsline {section}{\numberline {15}Notes about Writing Classes}{56}{section.15}
+\contentsline {section}{\numberline {16}Identification}{57}{section.16}
+\contentsline {section}{\numberline {17}Initial Code}{57}{section.17}
+\contentsline {subsection}{\numberline {17.1}Tools}{57}{subsection.17.1}
+\contentsline {section}{\numberline {18}Document Markup Functions}{62}{section.18}
+\contentsline {subsection}{\numberline {18.1}Title Page}{62}{subsection.18.1}
+\contentsline {subsection}{\numberline {18.2}Fonts}{65}{subsection.18.2}
+\contentsline {subsection}{\numberline {18.3}Spacing}{66}{subsection.18.3}
+\contentsline {section}{\numberline {19}Declaration of Options}{67}{section.19}
+\contentsline {subsection}{\numberline {19.1}Setting Paper Sizes}{67}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}Choosing the type size}{68}{subsection.19.2}
+\contentsline {subsection}{\numberline {19.3}Two-side or one-side printing}{68}{subsection.19.3}
+\contentsline {subsection}{\numberline {19.4}Page number placement}{68}{subsection.19.4}
+\contentsline {subsection}{\numberline {19.5}Draft and committee options}{68}{subsection.19.5}
+\contentsline {subsection}{\numberline {19.6}openright option}{69}{subsection.19.6}
+\contentsline {subsection}{\numberline {19.7}Two-column printing}{69}{subsection.19.7}
+\contentsline {subsection}{\numberline {19.8}Running headers}{69}{subsection.19.8}
+\contentsline {subsection}{\numberline {19.9}Equation numbering on the left}{70}{subsection.19.9}
+\contentsline {subsection}{\numberline {19.10}Flush left displays}{70}{subsection.19.10}
+\contentsline {subsection}{\numberline {19.11}Title page}{70}{subsection.19.11}
+\contentsline {subsection}{\numberline {19.12}Headings}{71}{subsection.19.12}
+\contentsline {subsection}{\numberline {19.13}Figures and Tables}{72}{subsection.19.13}
+\contentsline {subsection}{\numberline {19.14}Footnotes}{73}{subsection.19.14}
+\contentsline {subsection}{\numberline {19.15}Bibliography}{73}{subsection.19.15}
+\contentsline {subsection}{\numberline {19.16}Appendix}{73}{subsection.19.16}
+\contentsline {subsection}{\numberline {19.17}Open bibliography}{74}{subsection.19.17}
+\contentsline {subsection}{\numberline {19.18}Crosshairs on empty pages.}{74}{subsection.19.18}
+\contentsline {subsection}{\numberline {19.19}Font Options}{74}{subsection.19.19}
+\contentsline {section}{\numberline {20}Executing Options}{78}{section.20}
+\contentsline {section}{\numberline {21}Loading Packages}{79}{section.21}
+\contentsline {section}{\numberline {22}Document Layout}{79}{section.22}
+\contentsline {subsection}{\numberline {22.1}Pagination}{79}{subsection.22.1}
+\contentsline {subsection}{\numberline {22.2}Paragraphing}{79}{subsection.22.2}
+\contentsline {subsection}{\numberline {22.3}Page Layout}{80}{subsection.22.3}
+\contentsline {subsubsection}{\numberline {22.3.1}Float placement parameters}{80}{subsubsection.22.3.1}
+\contentsline {paragraph}{Limits for the placement of floating objects}{80}{section*.6}
+\contentsline {subsection}{\numberline {22.4}Page Styles}{81}{subsection.22.4}
+\contentsline {subsubsection}{\numberline {22.4.1}Marking conventions}{82}{subsubsection.22.4.1}
+\contentsline {subsubsection}{\numberline {22.4.2}Pagestyle Options}{82}{subsubsection.22.4.2}
+\contentsline {subsubsection}{\numberline {22.4.3}Defining the page styles}{83}{subsubsection.22.4.3}
+\contentsline {subsection}{\numberline {22.5}Blank Page}{90}{subsection.22.5}
+\contentsline {section}{\numberline {23}Document Markup}{91}{section.23}
+\contentsline {subsection}{\numberline {23.1}Hooks}{91}{subsection.23.1}
+\contentsline {subsection}{\numberline {23.2}Title Page}{92}{subsection.23.2}
+\contentsline {subsubsection}{\numberline {23.2.1}Margins}{92}{subsubsection.23.2.1}
+\contentsline {subsection}{\numberline {23.3}Authorization Form}{97}{subsection.23.3}
+\contentsline {subsection}{\numberline {23.4}Parts, Chapters, Sections, Paragraphs etc.}{98}{subsection.23.4}
+\contentsline {subsubsection}{\numberline {23.4.1}Building blocks}{98}{subsubsection.23.4.1}
+\contentsline {subsubsection}{\numberline {23.4.2}Mark commands}{99}{subsubsection.23.4.2}
+\contentsline {subsubsection}{\numberline {23.4.3}Define Counters}{100}{subsubsection.23.4.3}
+\contentsline {subsection}{\numberline {23.5}Formatting}{101}{subsection.23.5}
+\contentsline {subsubsection}{\numberline {23.5.1}Fonts and Styles}{101}{subsubsection.23.5.1}
+\contentsline {subsubsection}{\numberline {23.5.2}Messages}{101}{subsubsection.23.5.2}
+\contentsline {subsubsection}{\numberline {23.5.3}Front Matter, Main Matter, and Back Matter}{102}{subsubsection.23.5.3}
+\contentsline {subsubsection}{\numberline {23.5.4}Parts}{102}{subsubsection.23.5.4}
+\contentsline {subsubsection}{\numberline {23.5.5}Chapters}{104}{subsubsection.23.5.5}
+\contentsline {subsubsection}{\numberline {23.5.6}Lower level headings}{108}{subsubsection.23.5.6}
+\contentsline {subsection}{\numberline {23.6}Lists}{110}{subsection.23.6}
+\contentsline {subsubsection}{\numberline {23.6.1}General List Parameters}{110}{subsubsection.23.6.1}
+\contentsline {subsubsection}{\numberline {23.6.2}Enumerate}{111}{subsubsection.23.6.2}
+\contentsline {subsubsection}{\numberline {23.6.3}Itemize}{112}{subsubsection.23.6.3}
+\contentsline {subsubsection}{\numberline {23.6.4}Description}{112}{subsubsection.23.6.4}
+\contentsline {subsection}{\numberline {23.7}Defining new environments}{112}{subsection.23.7}
+\contentsline {subsubsection}{\numberline {23.7.1}Abstract}{112}{subsubsection.23.7.1}
+\contentsline {subsubsection}{\numberline {23.7.2}Verse}{113}{subsubsection.23.7.2}
+\contentsline {subsubsection}{\numberline {23.7.3}Quotation}{113}{subsubsection.23.7.3}
+\contentsline {subsubsection}{\numberline {23.7.4}Quote}{113}{subsubsection.23.7.4}
+\contentsline {subsubsection}{\numberline {23.7.5}Theorem}{113}{subsubsection.23.7.5}
+\contentsline {subsubsection}{\numberline {23.7.6}Appendix}{113}{subsubsection.23.7.6}
+\contentsline {subsection}{\numberline {23.8}Setting parameters for existing environments}{114}{subsection.23.8}
+\contentsline {subsubsection}{\numberline {23.8.1}Array and tabular}{114}{subsubsection.23.8.1}
+\contentsline {subsubsection}{\numberline {23.8.2}Tabbing}{115}{subsubsection.23.8.2}
+\contentsline {subsubsection}{\numberline {23.8.3}Minipage}{115}{subsubsection.23.8.3}
+\contentsline {subsubsection}{\numberline {23.8.4}Framed boxes}{115}{subsubsection.23.8.4}
+\contentsline {subsubsection}{\numberline {23.8.5}Equation and eqnarray}{115}{subsubsection.23.8.5}
+\contentsline {subsection}{\numberline {23.9}Floating objects}{116}{subsection.23.9}
+\contentsline {subsubsection}{\numberline {23.9.1}Figure}{116}{subsubsection.23.9.1}
+\contentsline {subsubsection}{\numberline {23.9.2}Table}{117}{subsubsection.23.9.2}
+\contentsline {subsubsection}{\numberline {23.9.3}Captions}{117}{subsubsection.23.9.3}
+\contentsline {subsection}{\numberline {23.10}Font changing}{118}{subsection.23.10}
+\contentsline {section}{\numberline {24}Cross Referencing}{119}{section.24}
+\contentsline {subsection}{\numberline {24.1}Table of Contents, etc.}{119}{subsection.24.1}
+\contentsline {subsubsection}{\numberline {24.1.1}Table of Contents}{120}{subsubsection.24.1.1}
+\contentsline {subsubsection}{\numberline {24.1.2}List of figures}{123}{subsubsection.24.1.2}
+\contentsline {subsubsection}{\numberline {24.1.3}List of tables}{123}{subsubsection.24.1.3}
+\contentsline {subsection}{\numberline {24.2}Bibliography}{124}{subsection.24.2}
+\contentsline {subsection}{\numberline {24.3}The index}{125}{subsection.24.3}
+\contentsline {subsection}{\numberline {24.4}Footnotes}{126}{subsection.24.4}
+\contentsline {section}{\numberline {25}Initialization}{128}{section.25}
+\contentsline {subsection}{\numberline {25.1}Words}{128}{subsection.25.1}
+\contentsline {subsection}{\numberline {25.2}Date}{129}{subsection.25.2}
+\contentsline {subsection}{\numberline {25.3}Two column mode}{129}{subsection.25.3}
+\contentsline {subsection}{\numberline {25.4}The page style}{129}{subsection.25.4}
+\contentsline {subsection}{\numberline {25.5}Single or double sided printing}{129}{subsection.25.5}
+\contentsline {subsection}{\numberline {25.6}Single or double spacing}{130}{subsection.25.6}
+\contentsline {part}{V\hspace {1em}Flavours: For thesis class maintainers}{130}{part.5}
+\contentsline {section}{\numberline {26}UBC: \texttt {ubcthesis.cls}}{130}{section.26}
+\contentsline {subsection}{\numberline {26.1}Identification}{130}{subsection.26.1}
+\contentsline {subsection}{\numberline {26.2}Options}{131}{subsection.26.2}
+\contentsline {subsection}{\numberline {26.3}Loading classes and packages}{131}{subsection.26.3}
+\contentsline {subsection}{\numberline {26.4}Title Page}{132}{subsection.26.4}
+\contentsline {section}{\numberline {27}MIT: \texttt {mitthesis.cls}}{134}{section.27}
+\contentsline {subsection}{\numberline {27.1}Identification}{134}{subsection.27.1}
+\contentsline {subsection}{\numberline {27.2}Initial Code}{135}{subsection.27.2}
+\contentsline {subsection}{\numberline {27.3}Declaration of Options}{135}{subsection.27.3}
+\contentsline {subsection}{\numberline {27.4}Backwards Compatibility}{135}{subsection.27.4}
+\contentsline {subsection}{\numberline {27.5}Title Page}{135}{subsection.27.5}
+\contentsline {subsection}{\numberline {27.6}Abstract}{137}{subsection.27.6}
+\contentsline {part}{VI\hspace {1em}Change Log}{138}{part.6}

@@ -1,0 +1,234 @@
+%%
+%% This file will generate fast loadable files and documentation
+%% driver files from the doc files in this package when run through
+%% LaTeX or TeX.
+%%
+%% ubcthesis.ins source for ubcthesis LaTeX2e class.
+%% $Id: ubcthesis.ins 1115 2005-11-16 07:19:34Z mforbes $
+%% Copyright (C) 2001
+%% Michael McNeil Forbes
+%% mforbes@alum.mit.edu
+%% 
+%% This file was derived from classes.ins Version 2001/04/21 v1.4e
+%% which is part of the LaTeX base system.  The original file is
+%% availible from 
+%%    http://www.ctan.org
+%% For information on the LaTeX project, see  
+%%    http://www.latex-project.org/
+%%
+%% This file may be distributed under the conditions of the LaTeX
+%% Project Public License, either version 1.2 of this license or (at
+%% your option) any later version. The latest version of this license
+%% is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX 
+%% version 1999/12/01 or later.
+%% 
+%% In particular, NO PERMISSION is granted to modify the contents of this
+%% file since it contains the legal notices that are placed in the files
+%% it generates.
+%% 
+%% This program consists of the files ubcthesis.dtx, ubcthesis.ins and
+%% the sample figures fig.eps and fig.fig.
+%% 
+%% To denerate the ubcthesis class file and sample thesis, pass this
+%% file through LaTeX as follows:
+%%
+%% latex ubcthesis.ins
+%%
+%% To produce the documentation for this class, pass the ubcthesis.dtx
+%% file through LaTeX as follows:
+%%
+%% latex ubcthesis.dtx
+%% latex ubcthesis.dtx
+%% latex ubcthesis.dtx
+%%
+%%
+%%
+%%
+%% --------------- start of docstrip commands ------------------
+%%
+
+\input docstrip
+
+\preamble
+
+This file was generated from the ubcthesis package.
+--------------------------------------------------------------
+
+Copyright (C) 2001
+Michael McNeil Forbes
+mforbes@alum.mit.edu
+
+This file may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.2
+of this license or (at your option) any later version.
+The latest version of this license is in
+   http://www.latex-project.org/lppl.txt
+and version 1.2 or later is part of all distributions of LaTeX 
+version 1999/12/01 or later.
+
+This program consists of the files ubcthesis.dtx, ubcthesis.ins, and
+the sample figures fig.eps and fig.fig.  
+
+This file may only be distributed together with a copy of this
+program. You may, however, distribute this program without generated
+files such as this one.
+
+\endpreamble
+
+\declarepreamble\presample
+
+This file was generated from the ubcthesis package.
+--------------------------------------------------------------
+
+Copyright (C) 2001
+Michael McNeil Forbes
+mforbes@alum.mit.edu
+
+This file may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.2
+of this license or (at your option) any later version.
+The latest version of this license is in
+   http://www.latex-project.org/lppl.txt
+and version 1.2 or later is part of all distributions of LaTeX 
+version 1999/12/01 or later.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+LaTeX Project Public License for more details.
+
+This program consists of the files ubcthesis.dtx, ubcthesis.ins, and
+the sample figures fig.eps and fig.fig.  
+
+This file may be modified and used as a base for your thesis without
+including the licence agreement as long as the content (i.e. textual
+body) of the file is completely rewritten. You must, however, change
+the name of the file.
+
+This file may only be distributed together with a copy of this
+program. You may, however, distribute this program without generated
+files such as this one.
+
+\endpreamble
+
+\declarepreamble\presamplebib
+
+This file was generated from the ubcthesis package.
+--------------------------------------------------------------
+
+Copyright (C) 2001
+Michael McNeil Forbes
+mforbes AT alum.mit.edu
+
+(Note that the AT symbol cannot be used in a comment in a bibtex file,
+hence the lack of a proper email address above.)
+
+This file may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.2
+of this license or (at your option) any later version.
+The latest version of this license is in
+   http://www.latex-project.org/lppl.txt
+and version 1.2 or later is part of all distributions of LaTeX 
+version 1999/12/01 or later.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+LaTeX Project Public License for more details.
+
+This program consists of the files ubcthesis.dtx, ubcthesis.ins, and
+the sample figures fig.eps and fig.fig.  
+
+This file may be modified and used as a base for your thesis without
+including the licence agreement as long as the content (i.e. textual
+body) of the file is completely rewritten. You must, however, change
+the name of the file.
+
+This file may only be distributed together with a copy of this
+program. You may, however, distribute this program without generated
+files such as this one.
+
+\endpreamble
+\keepsilent
+\askforoverwritefalse
+
+\Msg{*** Generating genthesis class file ***}
+
+\generate{\file{genthesis.cls}{\from{ubcthesis.dtx}{genthesis}}}
+%\generate{\file{ubcthesis.drv}{\from{ubcthesis.dtx}{driver}}}
+
+\Msg{*** Generating ubcthesis class file ***}
+
+\generate{\file{ubcthesis.cls}{\from{ubcthesis.dtx}{ubcthesis}}}
+%\generate{\file{ubcthesis.drv}{\from{ubcthesis.dtx}{driver}}}
+
+\Msg{*** Generating mitthesis class file ***}
+
+\generate{\file{mitthesis.cls}{\from{ubcthesis.dtx}{mitthesis}}}
+
+\Msg{*** Generating ubcthesis sample files ***}
+\usepreamble\presamplebib
+
+\generate{\file{sample.bib}{\from{ubcthesis.dtx}{samplebib}}}
+
+\usepreamble\presample
+
+% Put comments in sample files with one percent sign.
+\def\MetaPrefix{\perCent}
+\generate{\file{ubcsample.tex}{\from{ubcthesis.dtx}{ubcsampletex}}}
+\generate{\file{mitsample.tex}{\from{ubcthesis.dtx}{mitsampletex}}}
+
+
+\ifToplevel{
+\Msg{***********************************************************}
+\Msg{*}
+\Msg{* To finish the installation you have to move the following}
+\Msg{* files into a directory searched by TeX:}
+\Msg{*}
+\Msg{* \space\space ubcthesis.cls}
+\Msg{*}
+\Msg{* To produce the documentation run the file `ubcthesis.dtx'}
+\Msg{* through LaTeX three times:}
+\Msg{*}
+\Msg{* latex ubcthesis.dtx}
+\Msg{* latex ubcthesis.dtx}
+\Msg{* latex ubcthesis.dtx}
+\Msg{*}
+\Msg{* Happy Writing!}
+\Msg{***********************************************************}
+}
+
+\endbatchfile
+% This is the change log for the file
+%
+% $Log$
+% Revision 1.8  2005/11/16 07:19:34  mforbes
+% Updated email anc website info to alum.mit.edu
+%
+% Revision 1.7  2005/03/27 19:33:58  mforbes
+% Added [hypertex] option as default for hyperref.
+% MIT thesis page numbering okay now.
+% Default hangingcaptions option fixed (none).
+% Some major titlepage cleanup.
+%
+% Revision 1.6  2005/02/10 02:41:34  mforbes
+% The new UBC Faculty of Graduate Studies rules forbid signatures from the
+% cover and change some of its content, most notably that the department
+% is now your program.  Title page now reflects this, although macros are
+% retained.  Thanks to Darren Peets for these changes.
+%
+% This also respesents the start of a restructuring to move the
+% university dependant information into smaller .cls files.  The general
+% class will be called genthesis.cls and the university specific ones
+% ubcthesis.cls, mitthesis.cls etc.
+%
+% Revision 1.5  2002/01/15 19:42:31  mforbes
+% Removed generation of documentation driver as this is never needed.
+% (Simply processing the dtx file with latex has the same effect).
+%
+% Revision 1.4  2002/01/14 02:38:35  mforbes
+% Added CVS Id and Log.
+%
+

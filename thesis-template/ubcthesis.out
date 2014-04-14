@@ -1,0 +1,156 @@
+\BOOKMARK [0][-]{part.1}{I User Guide: For those writing theses}{}% 1
+\BOOKMARK [1][-]{section.1}{Introduction}{part.1}% 2
+\BOOKMARK [2][-]{subsection.1.1}{Disclaimer}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.2}{Versions}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Getting Started}{part.1}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Obtaining the ubcthesis package}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Bleeding Edge Development Version}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Files}{subsection.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Installing the ubcthesis package}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Documentation}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Generating the .cls class files}{subsection.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Sample Thesis}{subsection.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.3}{Using with LyX}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Warning}{subsection.2.3}% 14
+\BOOKMARK [1][-]{section.3}{Writing a Thesis}{part.1}% 15
+\BOOKMARK [2][-]{subsection.3.1}{University Flavour}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Page Style}{section.3}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Headers and Footers}{subsection.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.3}{Class Options}{section.3}% 19
+\BOOKMARK [1][-]{section.4}{Interface Guidelines}{part.1}% 20
+\BOOKMARK [2][-]{subsection.4.1}{Options}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Counters}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Lengths}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{Commands}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Contributions}{part.1}% 25
+\BOOKMARK [1][-]{section.6}{To Do \(including bugs\)}{part.1}% 26
+\BOOKMARK [1][-]{section.7}{Acknowledgements}{part.1}% 27
+\BOOKMARK [1][-]{section.8}{Description of the files}{part.1}% 28
+\BOOKMARK [2][-]{subsection.8.1}{The docstrip modules}{section.8}% 29
+\BOOKMARK [0][-]{part.2}{II Documentation Driver: For thesis class maintainers}{}% 30
+\BOOKMARK [1][-]{section.9}{Identification}{part.2}% 31
+\BOOKMARK [1][-]{section.10}{Document Class}{part.2}% 32
+\BOOKMARK [1][-]{section.11}{End of Document}{part.2}% 33
+\BOOKMARK [0][-]{part.3}{III Sample Theses: For thesis class maintainers}{}% 34
+\BOOKMARK [1][-]{section.12}{Sample UBC Thesis}{part.3}% 35
+\BOOKMARK [2][-]{subsection.12.1}{Identification}{section.12}% 36
+\BOOKMARK [2][-]{subsection.12.2}{Document Structure}{section.12}% 37
+\BOOKMARK [3][-]{subsubsection.12.2.1}{Chapter and section counter formats}{subsection.12.2}% 38
+\BOOKMARK [2][-]{subsection.12.3}{End of Document}{section.12}% 39
+\BOOKMARK [1][-]{section.13}{Sample MIT Thesis}{part.3}% 40
+\BOOKMARK [2][-]{subsection.13.1}{Identification}{section.13}% 41
+\BOOKMARK [2][-]{subsection.13.2}{Document Structure}{section.13}% 42
+\BOOKMARK [3][-]{subsubsection.13.2.1}{Chapter and section counter formats}{subsection.13.2}% 43
+\BOOKMARK [2][-]{subsection.13.3}{End of Document}{section.13}% 44
+\BOOKMARK [1][-]{section.14}{Sample Bibliographic Database \(BIBTeX\)}{part.3}% 45
+\BOOKMARK [2][-]{subsection.14.1}{Identification}{section.14}% 46
+\BOOKMARK [2][-]{subsection.14.2}{Document Structure}{section.14}% 47
+\BOOKMARK [0][-]{part.4}{IV The genthesis Document Class: For thesis class maintainers}{}% 48
+\BOOKMARK [1][-]{section.15}{Notes about Writing Classes}{part.4}% 49
+\BOOKMARK [1][-]{section.16}{Identification}{part.4}% 50
+\BOOKMARK [1][-]{section.17}{Initial Code}{part.4}% 51
+\BOOKMARK [2][-]{subsection.17.1}{Tools}{section.17}% 52
+\BOOKMARK [1][-]{section.18}{Document Markup Functions}{part.4}% 53
+\BOOKMARK [2][-]{subsection.18.1}{Title Page}{section.18}% 54
+\BOOKMARK [2][-]{subsection.18.2}{Fonts}{section.18}% 55
+\BOOKMARK [2][-]{subsection.18.3}{Spacing}{section.18}% 56
+\BOOKMARK [1][-]{section.19}{Declaration of Options}{part.4}% 57
+\BOOKMARK [2][-]{subsection.19.1}{Setting Paper Sizes}{section.19}% 58
+\BOOKMARK [2][-]{subsection.19.2}{Choosing the type size}{section.19}% 59
+\BOOKMARK [2][-]{subsection.19.3}{Two-side or one-side printing}{section.19}% 60
+\BOOKMARK [2][-]{subsection.19.4}{Page number placement}{section.19}% 61
+\BOOKMARK [2][-]{subsection.19.5}{Draft and committee options}{section.19}% 62
+\BOOKMARK [2][-]{subsection.19.6}{openright option}{section.19}% 63
+\BOOKMARK [2][-]{subsection.19.7}{Two-column printing}{section.19}% 64
+\BOOKMARK [2][-]{subsection.19.8}{Running headers}{section.19}% 65
+\BOOKMARK [2][-]{subsection.19.9}{Equation numbering on the left}{section.19}% 66
+\BOOKMARK [2][-]{subsection.19.10}{Flush left displays}{section.19}% 67
+\BOOKMARK [2][-]{subsection.19.11}{Title page}{section.19}% 68
+\BOOKMARK [2][-]{subsection.19.12}{Headings}{section.19}% 69
+\BOOKMARK [2][-]{subsection.19.13}{Figures and Tables}{section.19}% 70
+\BOOKMARK [2][-]{subsection.19.14}{Footnotes}{section.19}% 71
+\BOOKMARK [2][-]{subsection.19.15}{Bibliography}{section.19}% 72
+\BOOKMARK [2][-]{subsection.19.16}{Appendix}{section.19}% 73
+\BOOKMARK [2][-]{subsection.19.17}{Open bibliography}{section.19}% 74
+\BOOKMARK [2][-]{subsection.19.18}{Crosshairs on empty pages.}{section.19}% 75
+\BOOKMARK [2][-]{subsection.19.19}{Font Options}{section.19}% 76
+\BOOKMARK [1][-]{section.20}{Executing Options}{part.4}% 77
+\BOOKMARK [1][-]{section.21}{Loading Packages}{part.4}% 78
+\BOOKMARK [1][-]{section.22}{Document Layout}{part.4}% 79
+\BOOKMARK [2][-]{subsection.22.1}{Pagination}{section.22}% 80
+\BOOKMARK [2][-]{subsection.22.2}{Paragraphing}{section.22}% 81
+\BOOKMARK [2][-]{subsection.22.3}{Page Layout}{section.22}% 82
+\BOOKMARK [3][-]{subsubsection.22.3.1}{Float placement parameters}{subsection.22.3}% 83
+\BOOKMARK [2][-]{subsection.22.4}{Page Styles}{section.22}% 84
+\BOOKMARK [3][-]{subsubsection.22.4.1}{Marking conventions}{subsection.22.4}% 85
+\BOOKMARK [3][-]{subsubsection.22.4.2}{Pagestyle Options}{subsection.22.4}% 86
+\BOOKMARK [3][-]{subsubsection.22.4.3}{Defining the page styles}{subsection.22.4}% 87
+\BOOKMARK [2][-]{subsection.22.5}{Blank Page}{section.22}% 88
+\BOOKMARK [1][-]{section.23}{Document Markup}{part.4}% 89
+\BOOKMARK [2][-]{subsection.23.1}{Hooks}{section.23}% 90
+\BOOKMARK [2][-]{subsection.23.2}{Title Page}{section.23}% 91
+\BOOKMARK [3][-]{subsubsection.23.2.1}{Margins}{subsection.23.2}% 92
+\BOOKMARK [2][-]{subsection.23.3}{Authorization Form}{section.23}% 93
+\BOOKMARK [2][-]{subsection.23.4}{Parts, Chapters, Sections, Paragraphs etc.}{section.23}% 94
+\BOOKMARK [3][-]{subsubsection.23.4.1}{Building blocks}{subsection.23.4}% 95
+\BOOKMARK [3][-]{subsubsection.23.4.2}{Mark commands}{subsection.23.4}% 96
+\BOOKMARK [3][-]{subsubsection.23.4.3}{Define Counters}{subsection.23.4}% 97
+\BOOKMARK [2][-]{subsection.23.5}{Formatting}{section.23}% 98
+\BOOKMARK [3][-]{subsubsection.23.5.1}{Fonts and Styles}{subsection.23.5}% 99
+\BOOKMARK [3][-]{subsubsection.23.5.2}{Messages}{subsection.23.5}% 100
+\BOOKMARK [3][-]{subsubsection.23.5.3}{Front Matter, Main Matter, and Back Matter}{subsection.23.5}% 101
+\BOOKMARK [3][-]{subsubsection.23.5.4}{Parts}{subsection.23.5}% 102
+\BOOKMARK [3][-]{subsubsection.23.5.5}{Chapters}{subsection.23.5}% 103
+\BOOKMARK [3][-]{subsubsection.23.5.6}{Lower level headings}{subsection.23.5}% 104
+\BOOKMARK [2][-]{subsection.23.6}{Lists}{section.23}% 105
+\BOOKMARK [3][-]{subsubsection.23.6.1}{General List Parameters}{subsection.23.6}% 106
+\BOOKMARK [3][-]{subsubsection.23.6.2}{Enumerate}{subsection.23.6}% 107
+\BOOKMARK [3][-]{subsubsection.23.6.3}{Itemize}{subsection.23.6}% 108
+\BOOKMARK [3][-]{subsubsection.23.6.4}{Description}{subsection.23.6}% 109
+\BOOKMARK [2][-]{subsection.23.7}{Defining new environments}{section.23}% 110
+\BOOKMARK [3][-]{subsubsection.23.7.1}{Abstract}{subsection.23.7}% 111
+\BOOKMARK [3][-]{subsubsection.23.7.2}{Verse}{subsection.23.7}% 112
+\BOOKMARK [3][-]{subsubsection.23.7.3}{Quotation}{subsection.23.7}% 113
+\BOOKMARK [3][-]{subsubsection.23.7.4}{Quote}{subsection.23.7}% 114
+\BOOKMARK [3][-]{subsubsection.23.7.5}{Theorem}{subsection.23.7}% 115
+\BOOKMARK [3][-]{subsubsection.23.7.6}{Appendix}{subsection.23.7}% 116
+\BOOKMARK [2][-]{subsection.23.8}{Setting parameters for existing environments}{section.23}% 117
+\BOOKMARK [3][-]{subsubsection.23.8.1}{Array and tabular}{subsection.23.8}% 118
+\BOOKMARK [3][-]{subsubsection.23.8.2}{Tabbing}{subsection.23.8}% 119
+\BOOKMARK [3][-]{subsubsection.23.8.3}{Minipage}{subsection.23.8}% 120
+\BOOKMARK [3][-]{subsubsection.23.8.4}{Framed boxes}{subsection.23.8}% 121
+\BOOKMARK [3][-]{subsubsection.23.8.5}{Equation and eqnarray}{subsection.23.8}% 122
+\BOOKMARK [2][-]{subsection.23.9}{Floating objects}{section.23}% 123
+\BOOKMARK [3][-]{subsubsection.23.9.1}{Figure}{subsection.23.9}% 124
+\BOOKMARK [3][-]{subsubsection.23.9.2}{Table}{subsection.23.9}% 125
+\BOOKMARK [3][-]{subsubsection.23.9.3}{Captions}{subsection.23.9}% 126
+\BOOKMARK [2][-]{subsection.23.10}{Font changing}{section.23}% 127
+\BOOKMARK [1][-]{section.24}{Cross Referencing}{part.4}% 128
+\BOOKMARK [2][-]{subsection.24.1}{Table of Contents, etc.}{section.24}% 129
+\BOOKMARK [3][-]{subsubsection.24.1.1}{Table of Contents}{subsection.24.1}% 130
+\BOOKMARK [3][-]{subsubsection.24.1.2}{List of figures}{subsection.24.1}% 131
+\BOOKMARK [3][-]{subsubsection.24.1.3}{List of tables}{subsection.24.1}% 132
+\BOOKMARK [2][-]{subsection.24.2}{Bibliography}{section.24}% 133
+\BOOKMARK [2][-]{subsection.24.3}{The index}{section.24}% 134
+\BOOKMARK [2][-]{subsection.24.4}{Footnotes}{section.24}% 135
+\BOOKMARK [1][-]{section.25}{Initialization}{part.4}% 136
+\BOOKMARK [2][-]{subsection.25.1}{Words}{section.25}% 137
+\BOOKMARK [2][-]{subsection.25.2}{Date}{section.25}% 138
+\BOOKMARK [2][-]{subsection.25.3}{Two column mode}{section.25}% 139
+\BOOKMARK [2][-]{subsection.25.4}{The page style}{section.25}% 140
+\BOOKMARK [2][-]{subsection.25.5}{Single or double sided printing}{section.25}% 141
+\BOOKMARK [2][-]{subsection.25.6}{Single or double spacing}{section.25}% 142
+\BOOKMARK [0][-]{part.5}{V Flavours: For thesis class maintainers}{}% 143
+\BOOKMARK [1][-]{section.26}{UBC: ubcthesis.cls}{part.5}% 144
+\BOOKMARK [2][-]{subsection.26.1}{Identification}{section.26}% 145
+\BOOKMARK [2][-]{subsection.26.2}{Options}{section.26}% 146
+\BOOKMARK [2][-]{subsection.26.3}{Loading classes and packages}{section.26}% 147
+\BOOKMARK [2][-]{subsection.26.4}{Title Page}{section.26}% 148
+\BOOKMARK [1][-]{section.27}{MIT: mitthesis.cls}{part.5}% 149
+\BOOKMARK [2][-]{subsection.27.1}{Identification}{section.27}% 150
+\BOOKMARK [2][-]{subsection.27.2}{Initial Code}{section.27}% 151
+\BOOKMARK [2][-]{subsection.27.3}{Declaration of Options}{section.27}% 152
+\BOOKMARK [2][-]{subsection.27.4}{Backwards Compatibility}{section.27}% 153
+\BOOKMARK [2][-]{subsection.27.5}{Title Page}{section.27}% 154
+\BOOKMARK [2][-]{subsection.27.6}{Abstract}{section.27}% 155
+\BOOKMARK [0][-]{part.6}{VI Change Log}{}% 156

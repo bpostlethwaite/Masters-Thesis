@@ -607,7 +607,7 @@
     </Composer>
     <Composer title="Composer 4" visible="0">
         <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-            <Extent ymin="40.9366" xmin="-141.307" ymax="86.003" xmax="-37.0306"/>
+            <Extent ymin="40.9366" xmin="-141.307" ymax="86.0032" xmax="-37.0306"/>
             <LayerSet/>
             <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
                 <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
@@ -886,6 +886,20 @@
             </ComposerItem>
         </ComposerLegend>
         <Composition printResolution="289" paperWidth="399" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="178" printAsRaster="0"/>
+    </Composer>
+    <Composer title="Composer 5" visible="0">
+        <ComposerMap keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+            <Extent ymin="38.9121" xmin="-142.354" ymax="89.0881" xmax="-49.5543"/>
+            <LayerSet/>
+            <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
+                <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
+            </Grid>
+            <ComposerItem width="290" x="4.28879" y="1.54224" rotation="0" height="156.8" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.18456" id="" positionLock="false">
+                <FrameColor alpha="255" red="255" blue="255" green="255"/>
+                <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+            </ComposerItem>
+        </ComposerMap>
+        <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="160" printAsRaster="0"/>
     </Composer>
     <projectlayers layercount="15">
         <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
@@ -4221,22 +4235,21 @@
             <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">ogr</provider>
             <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="RuleRenderer">
-                <rules>
-                    <rule filter=" &quot;status&quot;  = 'processed-ok'" symbol="0" label="Processed Seismic Stations"/>
-                </rules>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
                     <symbol outputUnit="MM" alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
-                            <prop k="color" v="255,250,80,255"/>
+                            <prop k="color" v="255,255,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="equilateral_triangle"/>
+                            <prop k="name" v="triangle"/>
                             <prop k="offset" v="0,0"/>
-                            <prop k="size" v="5"/>
+                            <prop k="size" v="4"/>
                         </layer>
                     </symbol>
                 </symbols>
+                <rotation field=""/>
+                <sizescale field=""/>
             </renderer-v2>
             <customproperties/>
             <displayfield>network</displayfield>
