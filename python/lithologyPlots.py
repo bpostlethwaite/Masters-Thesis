@@ -40,7 +40,7 @@ def project(ax, ay, bx, by, cx, cy):
 
 
 def addtext(ax, x, y, text, rotation):
-    ax.text(x-0.02, y, text,
+    ax.text(x, y, text,
             color = 'black',
             size = 'large',
             horizontalalignment = 'left',
@@ -54,7 +54,7 @@ liths = {
         "Vs": 3.583,
         "R": 1.732,
         "poisson": 0.250,
-        "x": -0.08,
+        "x": -0.0,
         "y": 0.0
         },
     "tonalite gneiss": {
@@ -62,7 +62,7 @@ liths = {
         "Vs": 3.606,
         "R": 1.747,
         "poisson": 0.257,
-        "x": 0.11,
+        "x": 0.0,
         "y": 0.
         },
     "mafic granulite": {
@@ -70,40 +70,40 @@ liths = {
         "Vs": 3.820,
         "R": 1.817,
         "poisson": 0.283,
-        "x": -0.08,
-        "y": 0.05
-        },
-    "mafic garnet granulite": {
-        "Vp": 7.249,
-        "Vs": 4.026,
-        "R": 1.801,
-        "poisson": 0.277,
-        "x": -0.15,
+        "x": -0.0,
         "y": 0.0
         },
-    "amphibolite": {
-        "Vp": 6.983,
-        "Vs": 3.959,
-        "R": 1.764,
-        "poisson": 0.263,
-        "x": 0.,
-        "y": 0.05
-        },
-    "hornblendite": {
-        "Vp": 7.261,
-        "Vs": 4.144,
-        "R": 1.752,
-        "poisson": 0.258,
-        "x": 0.,
-        "y": 0.05
-        },
+    # "mafic garnet granulite": {
+    #     "Vp": 7.249,
+    #     "Vs": 4.026,
+    #     "R": 1.801,
+    #     "poisson": 0.277,
+    #     "x": -0.15,
+    #     "y": 0.0
+    #     },
+    # "amphibolite": {
+    #     "Vp": 6.983,
+    #     "Vs": 3.959,
+    #     "R": 1.764,
+    #     "poisson": 0.263,
+    #     "x": 0.,
+    #     "y": 0.0
+    #     },
+    # "hornblendite": {
+    #     "Vp": 7.261,
+    #     "Vs": 4.144,
+    #     "R": 1.752,
+    #     "poisson": 0.258,
+    #     "x": 0.,
+    #     "y": 0.0
+    #     },
     "diorite": {
         "Vp": 6.611,
         "Vs": 3.733,
         "R": 1.771,
         "poisson": 0.266,
         "x": 0.,
-        "y": 0.05
+        "y": 0.0
         }
 
     }
@@ -184,7 +184,7 @@ if __name__  == "__main__":
 
     vs = np.linspace(2.5, 5., 100)
     vpvs = [1.81, 1.73, 1.65]
-    px = [3.7, 3.9, 4.1]
+    px = [3.7, 3.8, 3.75]
 
     rd = {}
 
@@ -221,7 +221,7 @@ if __name__  == "__main__":
         vp = vpvs[i] * vs
         text = 'Vp/Vs = {}'.format(vpvs[i])
         plt.plot(vs, vp, ':k', lw = lw, ms = ms, label = "constant Vp/Vs" if i == 0 else None)
-        addtext(ax, px[i], vpvs[i] * px[i], text, 45 - 10)
+        addtext(ax, px[i], vpvs[i] * px[i] + 0.01, text, 30)
 
 
     for k in order:
@@ -230,11 +230,11 @@ if __name__  == "__main__":
 
     for l in liths:
         plt.plot(liths[l]['Vs'], liths[l]['Vp'], 'ok', markersize = 10)
-        plt.text(liths[l]['Vs'] + liths[l]["x"],
+        plt.text(liths[l]['Vs'] + liths[l]["x"] - 0.008,
                  liths[l]['Vp'] + liths[l]["y"],
                  l,
                  color = 'black',
-                 horizontalalignment = "center",
+                 horizontalalignment = "right",
                  verticalalignment = "center",
                  fontsize = 14
                  )
@@ -246,8 +246,8 @@ if __name__  == "__main__":
     plt.xlabel("Vs [km/s]", size = label)
     plt.grid(True)
     #plt.grid(False)
-    plt.xlim( (3.4, 4.2) )
-    plt.ylim( (6, 7.5) )
+    plt.xlim( (3.5, 3.9) )
+    plt.ylim( (6, 7.0) )
 
 
     #plt.savefig('myfig')
